@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Recognition with Grammar </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Recognition with Grammar ">
+    <meta name="generator" content="docfx 2.1.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <a href="https://github.com/SynHub/Syn-Documentation/blob/master/tutorial/speech/recognition-with-grammar.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
+              <h1 id="recognition-with-grammar">Recognition with Grammar</h1>
+              
+<p>Grammar based speech recognition is fast because the speech recognition process is within a limited domain of keywords that are already known to the Engine. Syn Speech supports JSGF (<em>JSpeech Grammar Format</em>) files which are pretty easy to write and have a very simple and precise syntax.</p>
+<p>Browse within the <code>Models</code> directory and you’ll find the <code>Hello.gram</code> file. This file contains all the keywords/sentences declared within it.</p>
+<pre><code class="lang-xml">#JSGF V1.0;
+grammar Hello;
+public &lt;command&gt; = ( the time is now exactly twenty five to one | this three left on the left side the one closest to us );
+</code></pre>
+<p>For more information regarding JSGF and its syntax visit the <a href="http://www.w3.org/TR/jsgf/">W3C JSGF Page</a></p>
+<p>Now to force the <code>StreamSpeechRecognizer</code> to use the Grammar file we’ll have to specify 3 important properties in the <code>Configuration</code> class.</p>
+<pre><code class="lang-csharp">_configuration = new Configuration
+{
+    AcousticModelPath = modelsDirectory,
+    DictionaryPath = Path.Combine(modelsDirectory, &quot;cmudict-en-us.dict&quot;),
+    LanguageModelPath = Path.Combine(modelsDirectory, &quot;en-us.lm.dmp&quot;),
+    UseGrammar = true,
+    GrammarPath = modelsDirectory,
+    GrammarName = &quot;Hello&quot;
+};
+</code></pre>
+<p>Firstly the <code>UseGrammar</code> property has to be set to <code>true</code>, secondly the <code>GrammarPath</code> should point towards the directory (not the file) where the grammar file is located and lastly the name of the Grammar to use. Though in Windows environment the grammar name maybe case-insensitive in Linux the grammar file and its name are usually case-sensitive.</p>
+<p>Once you’ve specified the Grammar options just run the Console application and the Audio file <code>Test.wav</code> will be transcribed in milliseconds</p>
+<h2 id="overall-code">Overall Code</h2>
+<pre><code class="lang-csharp" name="Main">using System;
+using System.IO;
+using Syn.Logging;
+using Syn.Speech.Api;
+namespace Syn.Speech.Demo
+{
+    class Program
+    {
+        private static Configuration _configuration;
+        private static StreamSpeechRecognizer _speechRecognizer;
+
+        static void Main(string[] args)
+        {
+            Logger.LogReceived += Logger_LogReceived;
+            var modelsDirectory = Path.Combine(Directory.GetCurrentDirectory(), &quot;Models&quot;);
+
+            _configuration = new Configuration
+            {
+                AcousticModelPath = modelsDirectory,
+                DictionaryPath = Path.Combine(modelsDirectory, &quot;cmudict-en-us.dict&quot;),
+                LanguageModelPath = Path.Combine(modelsDirectory, &quot;en-us.lm.dmp&quot;),
+                UseGrammar = true,
+                GrammarPath = modelsDirectory,
+                GrammarName = &quot;Hello&quot;
+            };
+
+            _speechRecognizer = new StreamSpeechRecognizer(_configuration);
+            _speechRecognizer.StartRecognition(new FileStream(&quot;test.wav&quot;, FileMode.Open));
+
+            var result = _speechRecognizer.GetResult();
+            _speechRecognizer.StopRecognition();
+            if (result != null)
+            {
+                Console.WriteLine(&quot;Speech Recognized: &quot; + result.GetHypothesis());
+            }
+
+            Console.ReadLine();
+        }
+
+        static void Logger_LogReceived(object sender, LogReceivedEventArgs e)
+        {
+            Console.WriteLine(e.Message);
+        }
+    }
+}
+</code></pre>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2016 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>File Explorer </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="File Explorer ">
+    <meta name="generator" content="docfx 2.1.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <a href="https://github.com/SynHub/Syn-Documentation/blob/master/tutorial/bot_studio/file-explorer.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
+              <h1 id="file-explorer">File Explorer</h1>
+              
+<p>A Project is a collection of important SIML files. Their order is important for SIML Bot as the SIML Bot requires that the <code>Settings</code> files are loaded before SIML files with Concepts in them.</p>
+<h2 id="settings-folder">Settings Folder</h2>
+<p>On the right hand-side under the <code>File Explorer</code> you will see the <code>Settings</code> Folder ( we call it Folder because of the project structure ). Click on the Settings folder to expand the list. Under it you will find the following files</p>
+<ul>
+<li>Bot-Settings</li>
+<li>EmotionML</li>
+<li>Filters</li>
+<li>Maps</li>
+<li>Repetition</li>
+<li>Pattern Reductions</li>
+<li>Random Responses</li>
+<li>Regular Expressions</li>
+<li>Scripts</li>
+<li>Sets</li>
+<li>Splitters</li>
+<li>User-Settings</li>
+</ul>
+<p>All of the above files play an important structural role for SIML Bot creation. If you do not need any of the settings file <strong>DO NOT DELETE THE FILE</strong> instead replace the entire content of the file with <siml></siml> this will tell the SIML Interpretor to just ignore the file.</p>
+<h2 id="bot-settings">Bot-Settings</h2>
+<p>This file holds all static information that will be used to configure the Bot. For simplicity we have removed the XML Comments in the files but whenever you create a new project you will see detailed XML comments giving you information about the File and important XML elements used within the file. In this case the Bot-Settings file shows us some key variables and their values stored with BotSettings element. The variables declared in this file should NOT be changed during runtime as they are meant to be static in nature which means that their values are considered only once.</p>
+<p><img src="images/bot-settings.jpg" alt="Bot Settings Image"></p>
+<p>To check how Bot variables are used click on ”’Hello Assistant”’ file and add in the following code.</p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
+  &lt;Pattern&gt;WHAT IS YOUR NAME&lt;/Pattern&gt;
+  &lt;Response&gt;My name is &lt;Bot Get=&quot;name&quot;/&gt;&lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre>
+<p>Now press <code>Ctrl+R</code> to refresh the project. Everytime you make changes to any SIML file you should Refresh the project for the changes to take effect. Now click on the <code>Console</code> tab and type what is your Name ? the bot will respond <em>My name is Sarah</em>. The name Sarah was retrieved using the Bot variable defined in the Bot-Settings file</p>
+<h2 id="emotionml">EmotionML</h2>
+<p>One of the many important features of SIML Bot is the internal EmotionML parser which can parse EmotionML elements and set values for developers to use. Unlike many of the existing Chatbot architectures that think emotions can be defined as a single state of mind EmotionML brings in the true essence of details required to simulate emotions. The EmotionML file consists of some predefined emotions with their values and dimensions.</p>
+<p>To set emotion for the Bot or the user you can use the BotEmotion and UserEmotion tags.</p>
+<h2 id="filter">Filter</h2>
+<p>This file consists of Filters that are used to filter out or replace parts or words from user inputs and bot outputs. You will see <strong>Filter</strong> elements consisting of <em>Text, Word and Regex</em> tags each of which have a different normalization behaviour.</p>
+<p>To add your own filter, say you wish to replace the word <strong>coz</strong> with <strong>because</strong> the code may look like the following.</p>
+<pre><code class="lang-xml">&lt;Filter Value=&quot;because&quot;&gt;
+  &lt;Word&gt;coz&lt;/Word&gt;
+  &lt;Word&gt;bcoz&lt;/Word&gt;
+&lt;/Filter&gt;
+</code></pre>
+<p>A typical <strong>Filter</strong> file may look like the following with lots of filters in it. Since filtration requires that individual words and characters are studied there can be a performance penalty if lots of filters are used. The best way to create a specific filter is by studying how your users actually interact with your Bot and then creating necessary filters.</p>
+<p><img src="images/filter.jpg" alt="Filter Image"></p>
+<h2 id="splitters">Splitters</h2>
+<p>Splitting a user message into multiple inputs isn’t an easy task. The developer has to consider a lot of things before simply deciding to split the sentence using (Period) or (Comma) but whatever the idea of splitting be you should always keep them inside this file and, if possible, create an XML comment stating why you have decided to split the sentence using certain characters, words or regular expressions</p>
+<p><img src="images/splitter.jpg" alt="Filter Image"></p>
+<h2 id="maps">Maps</h2>
+<p>The <strong>Maps</strong> file stores all sorts of mapping that will be required to transform a fragment of text from one set into an element of another. You will probably not need to change anything within file as Synthetic Intelligence Network will create them for you and upload them immediately as templates on our GitHub repository.</p>
+<h2 id="pattern-reductions">Pattern Reductions</h2>
+<p>Under this SIML file you can store recurring patterns and given them a special name using the hashtag convention. For example you can define multiple patterns for the sentence <strong>what is your name?</strong> and give it a unique name <strong>#BotName</strong>. This simplifies pattern usage and avoids redundancy to a great extent.</p>
+<h2 id="random-responses">Random Responses</h2>
+<p>Sometimes the developer spends hours in total writing the same response for different patterns. The <strong>Random Responses</strong> file is meant to store repetitive random responses and giving them a special id so whenever you are to repeat yourself with a random response you could just use the one previously saved within this file.</p>
+<h2 id="regular-expressions">Regular Expressions</h2>
+<p>You will definitely come across a situation where SETS will no longer be enough to capture a particular word or sentence. SIML handles regular expressions flawlessly and as Regular Expressions are available globally the file <strong>Regular Expressions</strong> is used to contain them under the same shelter.</p>
+<h2 id="scripts">Scripts</h2>
+<p>SIML Bot 1.0 supports JavaScript as its main scripting language ( discussions are already being made regarding more scripting engine integration ). The Scripts file contains Global scripts i.e. scripts that are available throughout the bot session. As more scripting engines are to be integrated its important that you define your scripts indicating what language the script is written in.</p>
+<p><img src="images/script.jpg" alt="Filter Image"></p>
+<p><strong>Example</strong></p>
+<pre><code class="lang-xml">&lt;Script Type=&quot;javascript&quot;&gt;
+function square(num){
+return num*num;
+}
+&lt;/Script&gt;
+</code></pre>
+<h2 id="sets">Sets</h2>
+<p>A Set is a powerful entity it consists of words and phrases that are addressed using a unique name much like a color can have values like Red, Green, Blue and so on. Sets in SIML are fast and greedy. By greedy what is meant is that Sets will try to match maximum number of words/tokens possible. Example: if your set has 2 values say <em>United States</em> and <em>United States of America</em> the set will match the latter.</p>
+<p>Take a look at the image below to get an idea as to how to declare Sets.</p>
+<p><img src="images/sets.jpg" alt="Filter Image"></p>
+<h2 id="user-settings">User-Settings</h2>
+<p>The <code>User-Settings</code> file stores values for variable names that will be used to initialize variables for every new user that interacts with the Bot. Once the default variables and their values are loaded for a user any changes made to the variable will affect that particular user as every user is given their own instance of variables.</p>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2016 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

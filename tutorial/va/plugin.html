@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Plugin System </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Plugin System ">
+    <meta name="generator" content="docfx 2.1.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <a href="https://github.com/SynHub/Syn-Documentation/blob/master/tutorial/va/plugin.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
+              <h1 id="plugin-system">Plugin System</h1>
+              
+<p><code>VA Framework</code> provides an easy inter-component interaction mechanism via the Plugin interface. Developers can either implement the <code>IPlugin</code> interface or inherit <code>Plugin</code> class to create their own plugin.</p>
+<h2 id="parts-of-a-plugin">Parts of a Plugin</h2>
+<ul>
+<li><code>VA</code> gets the <code>VirtualAssistant.Instance</code></li>
+<li><code>Settings</code> gets the Settings instance that belongs to this plugin</li>
+<li><code>Name</code> the name of the Plugin</li>
+<li><code>SpecialName</code> name used for displaying the Plugin to users</li>
+<li><code>GetPanel&lt;T&gt;</code> function called to retrieve a GUI settings panel</li>
+</ul>
+<h2 id="general-plugin">General Plugin</h2>
+<p>By convention the first plugin that is to be loaded into the VA Framework is the <code>General</code> plugin. This plugin is supposed to give the VA a functional architecture.</p>
+<p><em>For example Syn Virtual Assistant loads the <strong>Syn.VA.Plugins.General.dll</strong> plugin from the <code>Plugins</code> directory which ensures all SIML based plugins are loaded properly into the VA Framework</em></p>
+<h2 id="getpanel">GetPanel&lt;&gt;</h2>
+<p>A Plugin is itself responsible for providing a <em>GUI</em> that enables its user to change the internal values or settings of the plugin. For this, the method <code>GetPanel&lt;T&gt;</code> is called by the Virtual Assistant&#39;s <em>Settings Window</em> whenever the <em>Settings Window</em> is opened.</p>
+<p>The type <strong>T</strong> depends on the calling application. The <code>SettingsWindow</code> in Syn Virtual Assistant calls the <code>GetPanel</code> function with <strong>T</strong> of the type <code>UserControl</code></p>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2016 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

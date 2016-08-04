@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>SIML vs AIML </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="SIML vs AIML ">
+    <meta name="generator" content="docfx 2.1.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <a href="https://github.com/SynHub/Syn-Documentation/blob/master/tutorial/siml/siml-aiml.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
+              <h3 id="siml-vs-aiml">SIML vs AIML</h3>
+              
+<ul>
+<li>Extensible Markup Language (XML) 1.0 (Fifth Edition)</li>
+<li>Emotion Markup Language (EmotionML) 1.0</li>
+<li>Standard ECMA-262 5.1 Edition for JavaScript</li>
+</ul>
+<h4 id="disclaimer">Disclaimer</h4>
+<p>The following comparisons has been done just to reflect the architectural differences. We have no intention of proving the opponent architecture as inferior or to degrade any of its features. At Syn we believe in a humble approach to AI and will never criticise any effort towards improving the current state of AI. Both SIML and AIML server their purpose(s) best. If you are a beginner and can live with simple Chatbot features we ourself encourage you to check AIML but if are an experienced Chatbot developer and wish to use advanced Chatbot technologies in your work then you may try SIML.</p>
+<h4 id="firstly-the-generic-comparison">Firstly the Generic Comparison</h4>
+<ul>
+<li>SIML loads 5X faster than AIML</li>
+<li>SIML Package is extremely small – Network pressure is negligible</li>
+<li>SIML Set operations are super fast operations – Which implies that larger Sets have no impact on SIML Bot</li>
+<li>SIML Regular Expression processor uses state of the art computation algorithms for faster string match</li>
+<li>SIML allows Templates – You can use multiple projects as templates to create Task-Specific Bots</li>
+<li>SIML Bots can internally share their knowledge – This helps in creating Superior Bots</li>
+<li>SIML Bot comes with a Cache Manager – Helps in maintaining optimum memory usage</li>
+<li>SIML has its own official Chatbot Studio to help develop multilingual Chatbots</li>
+<li>SIML is powered by SynBot- Which is a Portable Class Library written in pure C#</li>
+</ul>
+<h4 id="markup-language-comparision">Markup Language Comparision</h4>
+<ul>
+<li><h5 id="multi-patterns">Multi-Patterns</h5>
+<p>SIML allows pattern grouping using Item tags. Syn Chatbot Studio by default comes with an Analyser to ensure there is no pattern conflicts while developing complicated bots.</p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml" name="Main">&lt;Model&gt;
+  &lt;Pattern&gt;
+    &lt;Item&gt;A BIT *&lt;/Item&gt;
+    &lt;Item&gt;A BIT OF *&lt;/Item&gt;
+    &lt;Item&gt;A GREAT DEAL *&lt;/Item&gt;
+    &lt;Item&gt;A LITTLE *&lt;/Item&gt;
+  &lt;/Pattern&gt;
+  &lt;Response&gt;
+    &lt;GotoMatch /&gt;
+  &lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre><p><strong>AIML</strong></p>
+<pre><code class="lang-xml" name="Main">&lt;category&gt;
+&lt;pattern&gt;A BIT *&lt;/pattern&gt;
+&lt;template&gt;
+&lt;sr /&gt;
+&lt;/template&gt;
+&lt;/category&gt;
+
+&lt;category&gt;
+&lt;pattern&gt;A BIT OF *&lt;/pattern&gt;
+&lt;template&gt;
+&lt;sr /&gt;
+&lt;/template&gt;
+&lt;/category&gt;
+
+&lt;category&gt;
+&lt;pattern&gt;A GREAT DEAL *&lt;/pattern&gt;
+&lt;template&gt;
+&lt;sr /&gt;
+&lt;/template&gt;
+&lt;/category&gt;
+
+&lt;category&gt;
+&lt;pattern&gt;A LITTLE *&lt;/pattern&gt;
+&lt;template&gt;
+&lt;sr /&gt;
+&lt;/template&gt;
+&lt;/category&gt;
+</code></pre></li>
+</ul>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2016 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

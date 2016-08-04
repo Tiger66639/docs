@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Speech Recognition without Grammar </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Speech Recognition without Grammar ">
+    <meta name="generator" content="docfx 2.1.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <a href="https://github.com/SynHub/Syn-Documentation/blob/master/tutorial/speech/recognition-without-grammar.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
+              <h1 id="speech-recognition-without-grammar">Speech Recognition without Grammar</h1>
+              
+<p>Launch Visual Studio, select <strong>FILE – &gt; New – &gt; Project – &gt; Console Application</strong> and name your project <code>Syn.Speech.Demo</code> and click OK. Now that you’ve created your project you will have to import the Syn.Speech library.</p>
+<h2 id="importing-syn-speech-library">Importing Syn.Speech Library</h2>
+<p>To use Syn Speech in your project you should first download the Syn Speech library from NuGet.org. To do so in Visual Studio click on <strong>Tools – &gt; NuGet Package Manager – &gt; Package Manager Console</strong> and type the following and press Enter.</p>
+<p><code>PM&gt; Install-Package Syn.Speech</code></p>
+<h2 id="getting-the-model-files">Getting the Model files</h2>
+<p>Once you have imported the Syn Speech library into you project you will need the Acoustic Models for Syn Speech library which is included in the Demo Application. To download the demo application visit <code>https://github.com/synhub</code></p>
+<p>In the Bin directory of the Demo application there is the <strong>Models</strong> folder which includes  everything from Acoustic &amp; Language Models, Phonetic Dictionary and optionally a Grammar file named <code>hello.gram</code>. Copy this folder to your project’s root directory it is usually the Debug/Release directory.</p>
+<h2 id="getting-the-audio-file-to-transcribe">Getting the Audio File to Transcribe</h2>
+<p>In the Audio folder of the demo application there’s the <code>Test.wav</code> file. Place this Audio file within the <em>Debug/Release</em> directory of your Console application.</p>
+<h2 id="coding">Coding</h2>
+<p>You current application C# console application should look something like the following.</p>
+<pre><code class="lang-csharp">namespace Syn.Speech.Demo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+        }
+    }
+}
+</code></pre>
+<p>Add the using <em>Syn.Speech.Api</em> statement and declare 2 private static variables as follows.</p>
+<pre><code class="lang-csharp">using Syn.Speech.Api;
+</code></pre>
+<pre><code class="lang-csharp">private static Configuration _configuration;
+private static StreamSpeechRecognizer _speechRecognizer;
+</code></pre>
+<p>The <strong>Configuration</strong> class is used to specify some simple yet crucial settings for the speech Recognizer. Add the following C# code within your static void <code>Main(string[] args)</code> method.</p>
+<pre><code class="lang-csharp">var modelsDirectory = Path.Combine(Directory.GetCurrentDirectory(), &quot;Models&quot;);
+_configuration = new Configuration
+{
+    AcousticModelPath = modelsDirectory,
+    DictionaryPath = Path.Combine(modelsDirectory, &quot;cmudict-en-us.dict&quot;),
+    LanguageModelPath = Path.Combine(modelsDirectory, &quot;en-us.lm.dmp&quot;),
+};
+</code></pre>
+<p>In the above we create a single variable called <code>modelsDirectory</code> and make sure that this variable points to the Models (previously copied) folder in the root directory of our application.</p>
+<p>Later the <code>AcousticModelPath</code> is set to point to the Models directory because many of the required Acoustics files are present within this directory and will automatically be fetched at run-time.</p>
+<p>Next the <code>DictionaryPath</code> property, this should point to the dictionary file (not folder) and finally the <code>LanguageModelPath</code> property is set to point to the Language Model file. As both the files are placed within the Models directory we’ve used <em>Path.Combine</em> method.</p>
+<h2 id="transcribing-the-audio-file">Transcribing the Audio File</h2>
+<p>Once the configuration is complete we’ll instantiate a <code>StreamSpeechRecognizer</code> class which will use the settings we specified in the Configuration class. Speech recognition in Syn Speech, whether we use Grammar or not, almost always relies on the <code>StreamSpeechRecognizer</code> class.</p>
+<p>To start transcribing the Audio file we’ll then use the same <code>StreamSpeechRecognizer</code> class and submit the file as a FileStream. To do so paste the following code within the <em>Main</em> method.</p>
+<pre><code class="lang-csharp">_speechRecognizer = new StreamSpeechRecognizer(_configuration);
+_speechRecognizer.StartRecognition(new FileStream(&quot;test.wav&quot;, FileMode.Open));
+</code></pre>
+<p>Starting the Speech recognition is just half the part. The real computation begins after you call the <code>GetResult()</code> method on the <code>StreamSpeechRecognizer</code> class. If no result is generated a null value is returned otherwise it returns a SpeechResult class that contains a possible set of hypothesis. In the following code we call the <code>GetResult()</code> and then call <code>StopRecognition()</code>. Then we check if the result variable is null or not if not then we print the Hypothesis in the Console using the <code>GetHypothesis()</code> method.</p>
+<pre><code class="lang-csharp">var result = _speechRecognizer.GetResult();
+_speechRecognizer.StopRecognition();
+
+if (result != null)
+{
+   Console.WriteLine(&quot;Speech Recognized: &quot; + result.GetHypothesis());
+}
+
+Console.ReadLine();
+</code></pre>
+<h2 id="get-the-internal-log-information">Get the internal Log information</h2>
+<p>It is always convenient to have some log information displayed while the speech recognition process is being carried out. To catch all the logs generated by the Engine we’ll add a handler to the Logger class’s <code>LogReceived</code> event. The following line should be added at the very beginning of the static Main function.</p>
+<pre><code class="lang-csharp">Logger.LogReceived += Logger_LogReceived;
+</code></pre>
+<p>Once you’ve added the above line create a new function with the right signature to print all the log information onto the Console.</p>
+<pre><code class="lang-csharp">static void Logger_LogReceived(object sender, LogReceivedEventArgs e)
+{
+    Console.WriteLine(e.Message);
+}
+</code></pre>
+<h2 id="the-overall-code">The overall Code</h2>
+<pre><code class="lang-csharp" name="Main">using System;
+using System.IO;
+using Syn.Logging;
+using Syn.Speech.Api;
+namespace Syn.Speech.Demo
+{
+    class Program
+    {
+        private static Configuration _configuration;
+        private static StreamSpeechRecognizer _speechRecognizer;
+
+        static void Main(string[] args)
+        {
+            Logger.LogReceived += Logger_LogReceived;
+            var modelsDirectory = Path.Combine(Directory.GetCurrentDirectory(), &quot;Models&quot;);
+
+            _configuration = new Configuration
+            {
+                AcousticModelPath = modelsDirectory,
+                DictionaryPath = Path.Combine(modelsDirectory, &quot;cmudict-en-us.dict&quot;),
+                LanguageModelPath = Path.Combine(modelsDirectory, &quot;en-us.lm.dmp&quot;),
+            };
+
+            _speechRecognizer = new StreamSpeechRecognizer(_configuration);
+            _speechRecognizer.StartRecognition(new FileStream(&quot;test.wav&quot;, FileMode.Open));
+
+            var result = _speechRecognizer.GetResult();
+            _speechRecognizer.StopRecognition();
+            if (result != null)
+            {
+                Console.WriteLine(&quot;Speech Recognized: &quot; + result.GetHypothesis());
+            }
+
+            Console.ReadLine();
+        }
+
+        static void Logger_LogReceived(object sender, LogReceivedEventArgs e)
+        {
+            Console.WriteLine(e.Message);
+        }
+    }
+}
+</code></pre>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2016 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

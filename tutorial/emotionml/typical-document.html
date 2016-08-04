@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Typical EmotionML Document with Emotions </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Typical EmotionML Document with Emotions ">
+    <meta name="generator" content="docfx 2.1.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <a href="https://github.com/SynHub/Syn-Documentation/blob/master/tutorial/emotionml/typical-document.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
+              <h1 id="typical-emotionml-document-with-emotions">Typical EmotionML Document with Emotions</h1>
+              
+<p><em>A typical EmotionML document consisting of a few emotion elements</em></p>
+<pre><code class="lang-xml" name="Main">&lt;emotionml version=&quot;1.0&quot; xmlns=&quot;http://www.w3.org/2009/10/emotionml&quot; xmlns:Siml=&quot;http://syn.co.in/2014/siml&quot; dimension-set=&quot;http://www.w3.org/TR/emotion-voc/xml#pad-dimensions&quot;&gt;
+  &lt;emotion id=&quot;pleased&quot; category-set=&quot;http://www.w3.org/TR/emotion-voc/xml#everyday-categories&quot;&gt;
+    &lt;info&gt;
+      &lt;Siml:Emotion Name=&quot;very pleased&quot; /&gt;
+    &lt;/info&gt;
+    &lt;category name=&quot;pleased&quot; /&gt;
+    &lt;dimension name=&quot;pleasure&quot; value=&quot;0.6&quot; /&gt;
+    &lt;dimension name=&quot;arousal&quot; value=&quot;0.4&quot; /&gt;
+    &lt;dimension name=&quot;dominance&quot; value=&quot;0.4&quot; /&gt;
+  &lt;/emotion&gt;
+  &lt;emotion id=&quot;extremely-happy&quot; category-set=&quot;http://www.w3.org/TR/emotion-voc/xml#fsre-categories&quot;&gt;
+    &lt;info&gt;
+      &lt;Siml:Emotion Name=&quot;extremely happy&quot; /&gt;
+    &lt;/info&gt;
+    &lt;category name=&quot;happiness&quot; /&gt;
+    &lt;dimension name=&quot;pleasure&quot; value=&quot;0.9&quot; /&gt;
+    &lt;dimension name=&quot;arousal&quot; value=&quot;0.9&quot; /&gt;
+    &lt;dimension name=&quot;dominance&quot; value=&quot;1.0&quot; /&gt;
+  &lt;/emotion&gt;
+  &lt;emotion id=&quot;very-happy&quot; category-set=&quot;http://www.w3.org/TR/emotion-voc/xml#fsre-categories&quot;&gt;
+    &lt;info&gt;
+      &lt;Siml:Emotion Name=&quot;very happy&quot; /&gt;
+    &lt;/info&gt;
+    &lt;category name=&quot;happiness&quot; /&gt;
+    &lt;dimension name=&quot;pleasure&quot; value=&quot;0.9&quot; /&gt;
+    &lt;dimension name=&quot;arousal&quot; value=&quot;0.9&quot; /&gt;
+    &lt;dimension name=&quot;dominance&quot; value=&quot;0.0&quot; /&gt;
+  &lt;/emotion&gt;
+  &lt;emotion id=&quot;happy3&quot; category-set=&quot;http://www.w3.org/TR/emotion-voc/xml#fsre-categories&quot;&gt;
+    &lt;category name=&quot;happiness&quot; /&gt;
+    &lt;dimension name=&quot;pleasure&quot; value=&quot;0.75&quot; /&gt;
+    &lt;dimension name=&quot;arousal&quot; value=&quot;0.5&quot; /&gt;
+    &lt;dimension name=&quot;dominance&quot; value=&quot;1.0&quot; /&gt;
+  &lt;/emotion&gt;
+  &lt;emotion id=&quot;happy&quot; category-set=&quot;http://www.w3.org/TR/emotion-voc/xml#fsre-categories&quot;&gt;
+    &lt;info&gt;
+      &lt;Siml:Emotion Name=&quot;happy&quot; /&gt;
+    &lt;/info&gt;
+    &lt;category name=&quot;happiness&quot; /&gt;
+    &lt;dimension name=&quot;pleasure&quot; value=&quot;0.75&quot; /&gt;
+    &lt;dimension name=&quot;arousal&quot; value=&quot;0.5&quot; /&gt;
+    &lt;dimension name=&quot;dominance&quot; value=&quot;0.0&quot; /&gt;
+  &lt;/emotion&gt;
+  &lt;emotion id=&quot;sad&quot; category-set=&quot;http://www.w3.org/TR/emotion-voc/xml#fsre-categories&quot;&gt;
+    &lt;info&gt;
+      &lt;Siml:Emotion Name=&quot;sad&quot; /&gt;
+    &lt;/info&gt;
+    &lt;category name=&quot;sadness&quot; /&gt;
+    &lt;dimension name=&quot;pleasure&quot; value=&quot;0.25&quot; /&gt;
+    &lt;dimension name=&quot;arousal&quot; value=&quot;0.5&quot; /&gt;
+    &lt;dimension name=&quot;dominance&quot; value=&quot;0.0&quot; /&gt;
+  &lt;/emotion&gt;
+  &lt;emotion id=&quot;surprised&quot; category-set=&quot;http://www.w3.org/TR/emotion-voc/xml#fsre-categories&quot;&gt;
+    &lt;info&gt;
+      &lt;Siml:Emotion Name=&quot;surprised&quot; /&gt;
+    &lt;/info&gt;
+    &lt;category name=&quot;surprise&quot; /&gt;
+    &lt;dimension name=&quot;pleasure&quot; value=&quot;0.55&quot; /&gt;
+    &lt;dimension name=&quot;arousal&quot; value=&quot;0.9&quot; /&gt;
+    &lt;dimension name=&quot;dominance&quot; value=&quot;0.0&quot; /&gt;
+  &lt;/emotion&gt;
+  &lt;emotion id=&quot;hope&quot; category-set=&quot;http://www.w3.org/TR/emotion-voc/xml#occ-categories&quot;&gt;
+    &lt;info&gt;
+      &lt;Siml:Emotion Name=&quot;hopeful&quot; /&gt;
+    &lt;/info&gt;
+    &lt;category name=&quot;hope&quot; /&gt;
+    &lt;dimension name=&quot;pleasure&quot; value=&quot;0.0&quot; /&gt;
+    &lt;dimension name=&quot;arousal&quot; value=&quot;0.5&quot; /&gt;
+    &lt;dimension name=&quot;dominance&quot; value=&quot;1.0&quot; /&gt;
+  &lt;/emotion&gt;
+  &lt;emotion id=&quot;relief&quot; category-set=&quot;http://www.w3.org/TR/emotion-voc/xml#occ-categories&quot;&gt;
+    &lt;info&gt;
+      &lt;Siml:Emotion Name=&quot;relieved&quot; /&gt;
+    &lt;/info&gt;
+    &lt;category name=&quot;relief&quot; /&gt;
+    &lt;dimension name=&quot;pleasure&quot; value=&quot;1.0&quot; /&gt;
+    &lt;dimension name=&quot;arousal&quot; value=&quot;0.85&quot; /&gt;
+    &lt;dimension name=&quot;dominance&quot; value=&quot;1.0&quot; /&gt;
+  &lt;/emotion&gt;
+&lt;/emotionml&gt;
+</code></pre><p>To get the first emotion and its ID from the above document an index value on the Emotions list would suffice as shown below.</p>
+<pre><code class="lang-csharp">var firstEmotion = emotionDoc.Emotions[0];
+var emotionID = firstEmotion.ID;
+</code></pre>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2016 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Avatar System </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Avatar System ">
+    <meta name="generator" content="docfx 2.1.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <a href="https://github.com/SynHub/Syn-Documentation/blob/master/tutorial/assistant/avatar-system.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
+              <h1 id="avatar-system">Avatar System</h1>
+              
+<p>It took a major portion of development time to create a new <em>Graphic Engine</em> from scratch for <em>Syn Virtual Assistant Prototype 8.5</em>. The goal was to have better <em>lighting</em> and support for true <em>morph targets</em>. Though these features have now been implemented in-turn the Graphic Requirements has increased and support for 2D Avatar has been retired.</p>
+<h2 id="virtual-file-system">Virtual File System</h2>
+<p>All avatars are saved within the <code>Content.zip</code> file and use the <code>.xnb</code> file format supported by the MonoGame 3D engine. However, the 3D Avatar configuration files are placed outside the <code>zip</code> files under the directory <code>Syn/Avatars</code>.</p>
+<h2 id="avatar-configuration-file">Avatar Configuration File</h2>
+<p>3D Avatar configuration files are used by the Graphic Engine to initialize important variables and set properties. A typical configuration file looks like the following.</p>
+<pre><code class="lang-xml">&lt;Avatar Name=&quot;Madonna&quot; Gender=&quot;Female&quot;&gt;
+  &lt;CameraPosition Value=&quot;0, 0.5, 4.5&quot; /&gt;
+  &lt;CanBlink Value=&quot;True&quot;/&gt;
+  &lt;CanRotate Value=&quot;True&quot;/&gt;
+  &lt;Model&gt;
+    &lt;Item&gt;Avatar_Base&lt;/Item&gt;
+    &lt;Item&gt;Hair&lt;/Item&gt;
+    &lt;Item&gt;Eye&lt;/Item&gt;
+  &lt;/Model&gt;
+  &lt;Expression ID=&quot;0&quot; Morph=&quot;Idle&quot; /&gt;
+  &lt;Expression ID=&quot;1&quot; Morph=&quot;AEI&quot; /&gt;
+  &lt;Expression ID=&quot;2&quot; Morph=&quot;AEI&quot; /&gt;
+  &lt;Expression ID=&quot;3&quot; Morph=&quot;O&quot; /&gt;
+  &lt;Expression ID=&quot;4&quot; Morph=&quot;AEI&quot; /&gt;
+  &lt;Expression ID=&quot;5&quot; Morph=&quot;AEI&quot; /&gt;
+  &lt;Expression ID=&quot;6&quot; Morph=&quot;FV&quot; /&gt;
+....
+&lt;/Avatar&gt;
+</code></pre>
+<h4 id="avatar">Avatar</h4>
+<p>The root <em>Avatar</em> element has 2 attributes, <code>Name</code> and <code>Gender</code>. The value of the <code>Name</code> attribute can be any desired name for the 3D avatar. This name will be displayed under the drop-down list of the Avatar settings panel. The <code>Gender</code> attribute can have the values <code>Male</code>, <code>Female</code>, <code>Neutral</code> or <code>NotSet</code>. This value is also used by the <em>Speech Synthesis</em> engine to determine and select the Gender of the <em>Speech Synthesizer</em> if the <em>VoiceName</em>  specified is unavailable.</p>
+<h4 id="cameraposition">CameraPosition</h4>
+<p>The default camera placed in the 3D environment always faces the 3D Avatar placed within this 3D environment. The position attributes <code>X</code>, <code>Y</code> and <code>Z</code> can be set using comma separted values.</p>
+<h4 id="canblink">CanBlink</h4>
+<p>This element determines if the 3D Avatar can blink. The Blink morph sequence is triggered randomly by the Avatar Engine. Possible values are <code>True</code> and <code>False</code>.</p>
+<h4 id="canrotate">CanRotate</h4>
+<p>This element determines if the default camera placed in the 3D environment should make rotations around the 3D Avatar. This has been a traditional animation for the camera used since <em>Prototype 6.0</em> to give a hint to the user if the <em>3D Virtual Assistant&#39;s Window</em> is responsive.</p>
+<h4 id="expression">Expression</h4>
+<p>The <em>Expression</em> element has 2 attributes, <code>ID</code> and <code>Morph</code>. The <code>ID</code> part is usually the viseme ID used the <em>Speech Synthesis</em> engine and the <code>Morph</code> value determines what <em>morph target</em> is to be used when the specified viseme <code>ID</code> is reached by the <em>Speech Synthesis</em> engine. The reached viseme ID is mapped to one-or-many Phonemes. By default there are 21 viseme IDs.</p>
+<ul>
+<li>0 = silence</li>
+<li>1 = ae, ax , ah</li>
+<li>2 = aa</li>
+<li>3 = ao</li>
+<li>4 = ey, eh , uh</li>
+<li>5 = er</li>
+<li>6 = y, iy, ih, ix</li>
+<li>7 = w, uw</li>
+<li>8 = ow</li>
+<li>9 = aw</li>
+<li>10 = oy</li>
+<li>11 = ay</li>
+<li>12 = h</li>
+<li>13 = r</li>
+<li>14 = l</li>
+<li>15 = s, z</li>
+<li>16 = sh, ch, jh, zh</li>
+<li>17 = th, dh</li>
+<li>18 = f, v</li>
+<li>19 = d, t, n</li>
+<li>20 = k, g, ng</li>
+<li>21 = p, b, m</li>
+</ul>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2016 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
