@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Script </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Script ">
+    <meta name="generator" content="docfx 2.1.0.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <a href="https://github.com/SynHub/syn-documentation/blob/master/tutorial/siml/elements/script.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
+              <h1 id="script">Script</h1>
+              
+<table>
+<thead>
+<tr>
+<th><strong>Annotation</strong></th>
+<th style="text-align:left"><code>&lt;Script&gt;</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Definition</strong></td>
+<td style="text-align:left">Used to declare a Script that is initialized at Bot startup.</td>
+</tr>
+<tr>
+<td><strong>Attributes</strong></td>
+<td style="text-align:left"><strong>Required:</strong> MUST contain a <code>Type</code> attribute that specifies the language of the script used within the element.</td>
+</tr>
+<tr>
+<td><strong>Occurrence</strong></td>
+<td style="text-align:left">One or more <code>&lt;Script&gt;</code> elements MAY occur as children of an <code>&lt;Siml&gt;</code> element.</td>
+</tr>
+</tbody>
+</table>
+<p>Allows developers to declare global scripts ( scripts that are available throughout user session ) in their respective scripting language.</p>
+<p><em>Example</em></p>
+<pre><code class="lang-xml">&lt;Siml&gt;
+
+&lt;Script Type=&quot;javascript&quot;&gt;
+ function square(num){
+  return num*num;
+ }
+&lt;/Script&gt;
+
+&lt;/Siml&gt;
+</code></pre>
+<p><em>Example</em></p>
+<p>Once declared the script and its functions can be used throughout your bot project.</p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
+ &lt;Pattern&gt;WHAT IS THE SQUARE OF *&lt;/Pattern&gt;
+ &lt;Response&gt;
+  &lt;Js&gt;square(&lt;Match /&gt;);&lt;/Js&gt;
+ &lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre>
+<p><strong>User Input</strong></p>
+<p><em>What is the Square of 4?</em></p>
+<p><strong>Bot Output</strong></p>
+<p><em>16</em></p>
+<p><strong>Explanation</strong></p>
+<blockquote><p>The <code>Js</code> element represents a JavaScript element. The inner content of the element is replaced with <em>square(4)</em> where the number 4 is the result from the Match element. Once the inner content have been processed the Script Engine executes the JavaScript and returns the value.</p>
+</blockquote>
+<p>To test your script before deployment you can always use the Script Evaluator available in Syn Bot Studio.</p>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2016 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

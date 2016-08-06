@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Goto </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Goto ">
+    <meta name="generator" content="docfx 2.1.0.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <a href="https://github.com/SynHub/syn-documentation/blob/master/tutorial/siml/elements/goto.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
+              <h1 id="goto">Goto</h1>
+              
+<table>
+<thead>
+<tr>
+<th><strong>Annotation</strong></th>
+<th style="text-align:left"><code>&lt;Goto&gt;</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Definition</strong></td>
+<td style="text-align:left">Redirects pattern-search to a new value</td>
+</tr>
+<tr>
+<td><strong>Children</strong></td>
+<td style="text-align:left">This element MAY contain one or more <code>&lt;Match&gt;</code> elements ( Recommended ) or any other valid SIML element that returns a value.</td>
+</tr>
+<tr>
+<td><strong>Occurrence</strong></td>
+<td style="text-align:left">One or more <code>&lt;Goto&gt;</code> elements MAY occur as children of <code>&lt;Response&gt;</code> element.</td>
+</tr>
+</tbody>
+</table>
+<p>Once you have caught a pattern at some point you may want to redirect the pattern-search to a different value. The value of the <code>Goto</code> element tells the Bot that it should recursively use the pattern defined within it and search for a response. <code>Goto</code> element plays a major role in breaking down complex sentences into simpler ones.</p>
+<p><em>Example</em></p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
+ &lt;Pattern&gt;WHAT DO YOU THINK OF SIML&lt;/Pattern&gt;
+ &lt;Response&gt;I think it&#39;s awesome.&lt;/Response&gt;
+&lt;/Model&gt;
+
+&lt;Model&gt;
+  &lt;Pattern&gt;_ TOTALLY *&lt;/Pattern&gt;
+  &lt;Response&gt;
+    &lt;Goto xml:space=&quot;preserve&quot;&gt;
+      &lt;Match /&gt; &lt;Match Index=&quot;2&quot; /&gt;&lt;/Goto&gt;
+  &lt;/Response&gt;
+&lt;/Model&gt;
+
+&lt;Model&gt;
+ &lt;Pattern&gt;I AGREE&lt;/Pattern&gt;
+ &lt;Response&gt;Fantastic!&lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre>
+<p><strong>User Input</strong></p>
+<ol>
+<li><em>What do you think of SIML?</em></li>
+<li><em>I Totally Agree</em></li>
+</ol>
+<p><strong>Bot Output</strong></p>
+<ol>
+<li><em>I think it’s awesome</em></li>
+<li><em>Fantastic!</em></li>
+</ol>
+<p><strong>Explanation</strong></p>
+<blockquote><p>When the user says <strong><em>I totally agree</em></strong>. It matches the second Model’s pattern which in-turn tells the Bot that it should redirect the pattern search to <strong><em>I Agree</em></strong>.</p>
+</blockquote>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2016 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

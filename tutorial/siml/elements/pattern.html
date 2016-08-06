@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Pattern </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Pattern ">
+    <meta name="generator" content="docfx 2.1.0.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <a href="https://github.com/SynHub/syn-documentation/blob/master/tutorial/siml/elements/pattern.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
+              <h1 id="pattern">Pattern</h1>
+              
+<table>
+<thead>
+<tr>
+<th><strong>Annotation</strong></th>
+<th style="text-align:left"><code>&lt;Pattern&gt;</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Definition</strong></td>
+<td style="text-align:left">Used to declare an SIML Pattern used to activate a Model</td>
+</tr>
+<tr>
+<td><strong>Children</strong></td>
+<td style="text-align:left">This element MAY contain one or more <code>&lt;Item&gt;</code> elements the values of which SHOULD be a valid SIML pattern. It MAY contain one <code>&lt;If&gt;</code> or <code>&lt;Js&gt;</code> element. If no children elements are specified a <code>&lt;Pattern&gt;</code> element MUST contain a valid SIML pattern as an arbitrary text.</td>
+</tr>
+<tr>
+<td><strong>Occurrence</strong></td>
+<td style="text-align:left">This <code>&lt;Pattern&gt;</code> element MUST occur as a child of <model> element.</model></td>
+</tr>
+</tbody>
+</table>
+<p>A <code>&lt;Pattern&gt;</code> element is used to declare an SIML pattern. The above pattern in the Model section is called an atomic pattern because the pattern comprises of only words and no symbols. In SIML there are a number of ways of declaring a valid pattern by either using wildcards, sets, regular expressions, variable state comparison (conditionals) or even JavaScript.</p>
+<h2 id="symbols-in-pattern">Symbols in Pattern</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Symbol</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>^</td>
+<td>Top priority word match</td>
+</tr>
+<tr>
+<td>%</td>
+<td>Zero or more word wildcard match</td>
+</tr>
+<tr>
+<td>_</td>
+<td>One or more word wildcard match</td>
+</tr>
+<tr>
+<td><em>word</em></td>
+<td>Exact word match</td>
+</tr>
+<tr>
+<td><em>[word]</em></td>
+<td>Match found in SIML Set</td>
+</tr>
+<tr>
+<td><em>(Word1&#124;Word2&#124;Word3)</em></td>
+<td>Dynamic Set declaration</td>
+</tr>
+<tr>
+<td>@</td>
+<td>Match found in SIML Regular Expression Set</td>
+</tr>
+<tr>
+<td>$</td>
+<td>Zero or more word wildcard match</td>
+</tr>
+<tr>
+<td>{Word1 Word2}</td>
+<td>Sentence Match</td>
+</tr>
+<tr>
+<td>*</td>
+<td>One or more word wildcard match</td>
+</tr>
+</tbody>
+</table>
+<h3 id="caret">Caret</h3>
+<p>Firstly the ^ symbol. This symbols ensures that the word after the symbol is to be evaluated ( or looked for ) before any other word or symbol.</p>
+<p><em>Example</em></p>
+<p><strong>SIML Code</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
+ &lt;Pattern&gt;HI THERE&lt;/Pattern&gt;
+ &lt;Response&gt;Heya user&lt;/Response&gt;
+&lt;/Model&gt;
+
+&lt;Model&gt;
+ &lt;Pattern&gt;^HI THERE&lt;/Pattern&gt;
+ &lt;Response&gt;Hello user&lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre>
+<p><strong>User Input</strong></p>
+<p><em>Hi there</em></p>
+<p><strong>Bot Output</strong></p>
+<p><em>Heya User</em></p>
+<p><strong>Explanation</strong></p>
+<blockquote><p>The symbol ^ in the above example speaks for itself by pointing upwards which implies that the word Hi in the first pattern declared in the first Model has the highest priority. So if the user says Hi there the bot will respond Hello user despite the fact that the pattern HI THERE has been defined before the pattern ^HI THERE.</p>
+</blockquote>
+<h3 id="percent">Percent</h3>
+<p>The <strong>%</strong> symbol is used to denote a pattern that will match zero or more words.</p>
+<p><em>Example</em></p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
+ &lt;Pattern&gt;HELLO SIML&lt;/Pattern&gt;
+ &lt;Response&gt;Life is awesome!&lt;/Response&gt;
+&lt;/Model&gt;
+
+&lt;Model&gt;
+ &lt;Pattern&gt;% SIML&lt;/Pattern&gt;
+ &lt;Response&gt;You Rock!&lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre>
+<p><strong>User Input</strong></p>
+<p><em>Hello Siml</em></p>
+<p><strong>Bot Output</strong></p>
+<p><em>You Rock!</em></p>
+<p><strong>Explanation</strong></p>
+<blockquote><p>Since % has higher priority than an exact word SIML Bot will accept the second model with the pattern % SIML and generate a response.Note: If the user says SIML the response will still be <em>You Rock!</em> this is because the Percent symbol accepts 0 or more words.</p>
+</blockquote>
+<h3 id="underscore">Underscore</h3>
+<p>The underscore symbol matches one or more words unlike the percent symbol that matches zero or more words.</p>
+<p><em>Example</em></p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
+ &lt;Pattern&gt;_ MY NAME IS LESLIE&lt;/Pattern&gt;
+ &lt;Response&gt;Good to meet you.&lt;/Response&gt;
+&lt;/Model&gt;
+
+&lt;Model&gt;
+ &lt;Pattern&gt;HI MY NAME IS LESLIE&lt;/Pattern&gt;
+ &lt;Response&gt;Well, Hi there.&lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre>
+<p><strong>User Input</strong></p>
+<p><em>Hi my name is Leslie</em></p>
+<p><strong>Bot Output</strong></p>
+<p><em>Good to meet you.</em></p>
+<p><strong>Explanation</strong></p>
+<blockquote><p>The _ symbol has a priority lesser than % but higher than an exact word. This symbol is useful if you wish to ignore a word or sentence especially the name of the Bot when declaring commands.</p>
+</blockquote>
+<h3 id="a-word">A Word</h3>
+<p>A word in any language ranks 4 under the evaluation tree in SIML. Words are matched as such and no match indexing is generated. SIML uses UTF-8 encoding to address multiple languages.</p>
+<p><em>Example</em></p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
+ &lt;Pattern&gt;HOW ARE YOU&lt;/Pattern&gt;
+ &lt;Response&gt;I am fine.&lt;/Response&gt;
+&lt;/Model&gt;
+
+&lt;Model&gt;
+ &lt;Pattern&gt;HOW ARE YOU DOING TODAY&lt;/Pattern&gt;
+ &lt;Response&gt;I am doing great.&lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre>
+<p><strong>User Input</strong></p>
+<p><em>How are you</em></p>
+<p><strong>Bot Output</strong></p>
+<p><em>How are you</em></p>
+<p><strong>Explanation</strong></p>
+<blockquote><p>Words and their locations are matched as such. If you remove the Model with the Pattern How are you SIML won’t activate the second Model containing the pattern <em>How are you today</em></p>
+</blockquote>
+<h3 id="set">Set</h3>
+<p>A Set is a collection of words or sentences. SIML Interpreter uses state-of-the-art technology to make sure large sets do not affect the performance of matching text fragments against a collection of words in a set.</p>
+<p>A set declaration requires that you give the set a unique name. A set is addressed using Square Brackets so to use a set of colors with the name <em>COLOR</em> you would use <strong>[COLOR]</strong></p>
+<p><em>Example</em></p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
+ &lt;Pattern&gt;I LIKE THE COLOR [COLOR]&lt;/Pattern&gt;
+ &lt;Response&gt;Me too!&lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre>
+<p><strong>User Input</strong></p>
+<p><em>I like the color blue</em></p>
+<p><strong>Bot Output</strong></p>
+<p><em>Me too!</em></p>
+<p><strong>Explanation</strong></p>
+<blockquote><p><strong>[COLOR]</strong> is a collection of colors (names of colors)</p>
+</blockquote>
+<p>Sets in SIML can be declared in using the <code>&lt;Set&gt;</code> Tag and can be accessed ( once declared ) using <em>Round Brackets</em> around their names.</p>
+<h4 id="set-declaration">Set Declaration</h4>
+<table>
+<thead>
+<tr>
+<th><strong>Annotation</strong></th>
+<th style="text-align:left"><code>&lt;Set&gt;</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Definition</strong></td>
+<td style="text-align:left">Declares an SIML Set</td>
+</tr>
+<tr>
+<td><strong>Children</strong></td>
+<td style="text-align:left">The element MUST contain one or more <code>&lt;Item&gt;</code> element.</td>
+</tr>
+<tr>
+<td><strong>Attributes</strong></td>
+<td style="text-align:left"><strong>Required</strong> <code>Name</code> Unique name given to the Set.</td>
+</tr>
+<tr>
+<td><strong>Occurrence</strong></td>
+<td style="text-align:left">One or more of this element MAY occur as children of <code>&lt;Siml&gt;</code> element</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-xml">&lt;Set Name=&quot;Color&quot;&gt;
+ &lt;Item&gt;RED&lt;/Item&gt;
+ &lt;Item&gt;GREEN&lt;/Item&gt;
+ &lt;Item&gt;BLUE&lt;/Item&gt;
+ &lt;Item&gt;ORANGE&lt;/Item&gt;
+&lt;/Set&gt;
+</code></pre>
+<h4 id="reserved-sets">Reserved Sets</h4>
+<p>SIML comes with reserved Set names that can help developers address Bot, User and Map items directly within a Pattern. The name of the Set and the parameter part are separated using a colon.</p>
+<p>Like all set names, the name and the parameter part of the reserved variables are case-insensitive. Reserved sets are also dynamic. Hence, at run-time if the value of any variable is changed the pattern will then match the new value.</p>
+<h5 id="bot-set">Bot Set</h5>
+<p>To indicate a bot variable the set name Bot is followed by the name of the bot variable.</p>
+<p><em>Example</em></p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
+  &lt;Pattern&gt;Is your name [Bot:Name]&lt;/Pattern&gt;
+  &lt;Response&gt;
+    Yes, my name is &lt;Match /&gt;
+  &lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre>
+<p><strong>User Input</strong></p>
+<p><em>Is your name Maya?</em></p>
+<p><strong>Bot Output</strong></p>
+<p><em>Yes, my name is Maya</em></p>
+<p><strong>Explanation</strong></p>
+<blockquote><p>At run-time the pattern is evaluated after replacing the value of <code>[Bot:Name]</code> with the name of the Bot as <em>Is your name Maya</em>.</p>
+</blockquote>
+<h5 id="user-set">User Set</h5>
+<p><em>Example</em></p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
+  &lt;Pattern&gt;Is my name [User:Name]&lt;/Pattern&gt;
+  &lt;Response&gt;
+    Yes, your name is &lt;Match /&gt;
+  &lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre>
+<p><strong>User Input</strong></p>
+<p><em>Is my name Leslie?</em></p>
+<p><strong>Bot Output</strong></p>
+<p><em>Yes, your name is Leslie</em></p>
+<p><strong>Explanation</strong></p>
+<blockquote><p>At run-time the pattern is evaluated after replacing the value of <code>[User:Name]</code> with the name of the user as <em>Is your name Leslie</em>.</p>
+</blockquote>
+<h5 id="map-set">Map Set</h5>
+<p><em>Example</em></p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
+  &lt;Pattern&gt;Is your [Map:Family-Gender] a researcher&lt;/Pattern&gt;
+  &lt;Response&gt;
+    Yes, my &lt;Match /&gt; is a researcher.
+  &lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre>
+<p><strong>User Input</strong></p>
+<p><em>Is your father a researcher?</em></p>
+<p><strong>Bot Output</strong></p>
+<p><em>Yes, my father is a researcher</em></p>
+<p><strong>Explanation</strong></p>
+<blockquote><p>The family-gender Map may contain <code>father</code>, <code>mother</code>, <code>brother</code> and <code>sister</code> and their gender values. While parsing the Content value of the <code>&lt;MapItem&gt;</code> is treated as a Set value.</p>
+</blockquote>
+<h3 id="choices">Choices</h3>
+<p><em>Example</em></p>
+<pre><code class="lang-xml">&lt;Model&gt;
+ &lt;Pattern&gt;I LIKE THE COLOR (RED|GREEN|BLUE)&lt;/Pattern&gt;
+ &lt;Response&gt;Me too!&lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre>
+<blockquote><p>Priority of Choices and Normal Sets are the same. Conflicts between choices and listed sets can be ignored as the former serves the same purpose but within a limited domain.</p>
+</blockquote>
+<h3 id="ampersat">Ampersat</h3>
+<p>The <strong>@</strong> symbol is used to denote a Regular Expression in SIML. Every regular expression a user creates is stored in an optimized manner for speed and consistency. Bot developers will find regular expression in SIML to be extremely fast.</p>
+<p><em>Example</em></p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
+ &lt;Pattern&gt;I LIKE THE COLOR @COLOR&lt;/Pattern&gt;
+ &lt;Response&gt;Me too!&lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre>
+<p><strong>User Input</strong></p>
+<p><em>I like the color blue</em></p>
+<p><strong>Bot Output</strong></p>
+<p><em>Me too!</em></p>
+<p><strong>Explanation</strong></p>
+<blockquote><p><em>@Color</em> is a regular expression with the unique name <em>COLOR</em></p>
+</blockquote>
+<h3 id="dollar">Dollar</h3>
+<p>The <strong>$</strong> symbol matches 0 or more words and has less priority than its sibling symbol <strong>%</strong>.</p>
+<p><em>Example</em></p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
+ &lt;Pattern&gt;YOU ARE $ COOL&lt;/Pattern&gt;
+ &lt;Response&gt;Yes, I am.&lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre>
+<p><strong>User Input</strong></p>
+<p><em>You are so cool</em></p>
+<p><strong>Bot Output</strong></p>
+<p><em>Yes, I am.</em></p>
+<p><strong>Explanation</strong></p>
+<blockquote><p>The dollar symbol will match so. If the user writes You are cool the pattern will still hold as the symbol matches 0 or more words.</p>
+</blockquote>
+<h3 id="curly-brackets">Curly Brackets</h3>
+<p><strong>{}</strong> allows developers to define a set of words that should exist in a sentence. Any number of words can exist before, between and even after the specified collection of words but the order of appearance of these words should match their orders defined within the curly brackets.</p>
+<p><em>Example</em></p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
+ &lt;Pattern&gt;{CONTACT NUMBER}&lt;/Pattern&gt;
+ &lt;Response&gt;+1-000-00-0000&lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre>
+<p><strong>User Input</strong></p>
+<p><em>So what is your contact  number?</em></p>
+<p><strong>Bot Output</strong></p>
+<p><em>1-000-00-0000</em></p>
+<p><strong>Explanation</strong></p>
+<blockquote><p>The pattern contains 2 important words <em>contact</em> and <em>number</em> and even if the user adds a word in this case phone the pattern will still hold and a response will be generated.</p>
+</blockquote>
+<h3 id="asterisk">Asterisk</h3>
+<p>The * symbol is a wildcard that matches 1 or more words and has the least priority in the evaluation tree. This symbol is the most widely used wildcard symbol in knowledge base development.</p>
+<p><em>Example</em></p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
+ &lt;Pattern&gt;ARE YOU A ROBOT&lt;/Pattern&gt;
+ &lt;Response&gt;Maybe I am.&lt;/Response&gt;
+&lt;/Model&gt;
+
+&lt;Model&gt;
+ &lt;Pattern&gt;ARE YOU * ROBOT&lt;/Pattern&gt;
+ &lt;Response&gt;I am an intelligent entity.&lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre>
+<p><strong>User Input</strong></p>
+<p><em>Are you some robot?</em></p>
+<p><strong>Bot Output</strong></p>
+<p><em>I am an intelligent entity.</em></p>
+<p><strong>Explanation</strong></p>
+<blockquote><p>Since there is no exact pattern for Are you some robot the * wildcard matches the input <em>Are you some robot</em>. The word some is then stored in the Match list which can later be retrieved using the <code>&lt;Match /&gt;</code> tag.</p>
+</blockquote>
+<h2 id="behavior-of-zero-wildcards">Behavior of Zero+ wildcards</h2>
+<p>When zero+ wildcards are used the match value for the wildcard may or may not contain a value. If the length of match is 0 and the <code>&lt;Match&gt;</code> element or any of its derivative elements are used to retrieve this value. The interpreter checks for the value of the reserved Bot variable <code>Empty-Match</code>. If a value is specified for the variable then the value is used otherwise an <em>empty</em> string is returned.</p>
+<h3 id="ranged-wildcards">Ranged Wildcards</h3>
+<p>Ranged wildcards allow developers to set a fixed or a variable length capture on any SIML wildcard aforementioned. A ranged wildcard will always maintain its evaluation index based on the symbol used.</p>
+<h4 id="fixed-length">Fixed Length</h4>
+<p>If you wish to capture an exact number of words from user input then add the required number as a suffix to the type of wildcard symbol of your choice.</p>
+<p><em>Example</em></p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
+  &lt;Pattern&gt;CALL ME *2&lt;/Pattern&gt;
+  &lt;Response&gt;Nice to meet you, &lt;Match /&gt;&lt;/Response&gt;
+&lt;/Model&gt;
+
+&lt;Model&gt;
+  &lt;Pattern&gt;CALL ME *&lt;/Pattern&gt;
+  &lt;Response&gt;Well, hello there &lt;Match /&gt;&lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre>
+<p><strong>User Input</strong></p>
+<ol>
+<li><em>Call me Sean Gates</em></li>
+<li><em>Call me Sean William Gates</em></li>
+</ol>
+<p><strong>Bot Output</strong></p>
+<ol>
+<li><em>Nice to meet you, Sean Gates</em></li>
+<li><em>Well, hello there Sean William Gates</em></li>
+</ol>
+<p><strong>Explanation</strong></p>
+<blockquote><p>The star * wildcard is suffixed with 2 making sure that the wildcard captures exactly 2 words from user input.</p>
+</blockquote>
+<p>Likewise developers can make use of any other SIML wildcard symbol and suffix it with a number to specify the exact number of words it should capture.</p>
+<blockquote><p>Suffixing a Zero+ wildcard with a number forces the wildcard to act as a One+ wildcard that captures the exact number of words specified.</p>
+</blockquote>
+<h4 id="variable-length">Variable Length</h4>
+<p>A variable length wildcard can be used to specify the <em>maximum</em> number of words a wildcard may capture. To create a variable length wildcard prefix the number with a tilde.</p>
+<p><em>Example</em></p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
+  &lt;Pattern&gt;CALL ME *~2&lt;/Pattern&gt;
+  &lt;Response&gt;It&#39;s a pleasure to meet you, &lt;Match /&gt;&lt;/Response&gt;
+&lt;/Model&gt;
+
+&lt;Model&gt;
+  &lt;Pattern&gt;CALL ME *&lt;/Pattern&gt;
+  &lt;Response&gt;Well, hello there &lt;Match /&gt;&lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre>
+<p><strong>User Input</strong></p>
+<ol>
+<li><em>Call me Sean</em></li>
+<li><em>Call me Sean Gates</em></li>
+<li><em>Call me Sean William Gates</em></li>
+</ol>
+<p><strong>Bot Output</strong></p>
+<ol>
+<li><em>It’s a please to meet you, Sean</em></li>
+<li><em>It’s a pleasure to meet you, Sean Gates</em></li>
+<li><em>Well, hello there Sean William Gates</em></li>
+</ol>
+<p><strong>Explanation</strong></p>
+<blockquote><p>The star * wildcard is suffixed with tilde symbol followed by 2 making sure that the wildcard captures a maximum of 2 words from user input.</p>
+</blockquote>
+<h4 id="priority-index">Priority Index</h4>
+<p>Every wildcard in SIML is evaluated based on a priority index. The evaluation sequence of a Wildcard symbol is as follows.</p>
+<ol>
+<li>Fixed Length – <em>Example</em> <code>*2</code></li>
+<li>Variable Length – <em>Example</em> <code>*~2</code></li>
+<li>Atomic Symbol – <em>Example</em> <code>*</code></li>
+</ol>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2016 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Map </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Map ">
+    <meta name="generator" content="docfx 2.1.0.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <a href="https://github.com/SynHub/syn-documentation/blob/master/tutorial/siml/elements/map.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
+              <h1 id="map">Map</h1>
+              
+<table>
+<thead>
+<tr>
+<th><strong>Annotation</strong></th>
+<th style="text-align:left"><code>&lt;Map&gt;</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Definition</strong></td>
+<td style="text-align:left">Transforms a fragment of text that belongs to one set into an element of another.</td>
+</tr>
+<tr>
+<td><strong>Children</strong></td>
+<td style="text-align:left">MUST contain one or more <code>&lt;MapItem&gt;</code> elements if being used to declare a set of <code>&lt;MapItem&gt;</code> elements.</td>
+</tr>
+<tr>
+<td><strong>Attributes</strong></td>
+<td style="text-align:left"><strong>Required:</strong> MUST contain either <code>Get</code> or <code>Name</code> attribute depending on the context of usage.</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left"><strong>Optional:</strong> MAY contain a <code>Reverse</code> attribute</td>
+</tr>
+<tr>
+<td><strong>Occurrence</strong></td>
+<td style="text-align:left">One or more <code>&lt;Map&gt;</code> elements MAY occur as children of <code>&lt;Response&gt;</code> element. One or more of this element MAY occur as children of <code>&lt;Siml&gt;</code> element if being used to define a set of <code>&lt;MapItem&gt;</code> elements.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mapitem">MapItem</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Annotation</strong></th>
+<th style="text-align:left"><code>&lt;MapItem&gt;</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Definition</strong></td>
+<td style="text-align:left">Represents a single mapping element.</td>
+</tr>
+<tr>
+<td><strong>Attributes</strong></td>
+<td style="text-align:left"><strong>Required:</strong> MUST contain one <code>Content</code> attribute and one <code>Value</code> attribute.</td>
+</tr>
+<tr>
+<td><strong>Occurrence</strong></td>
+<td style="text-align:left">One or more <code>&lt;MapItem&gt;</code> elements MUST occur as children of <code>&lt;Map&gt;</code> element.</td>
+</tr>
+</tbody>
+</table>
+<p>Mapping allows the bot developer to transform a fragment of one set into an element of another. SIML uses Maps for gender, person and other substitution.</p>
+<pre><code class="lang-xml">&lt;Siml&gt;
+
+&lt;Map Name=&quot;gender&quot;&gt;
+ &lt;MapItem Content=&quot;he&quot; Value=&quot;she&quot; /&gt;
+ &lt;MapItem Content=&quot;she&quot; Value=&quot;he&quot; /&gt;
+ &lt;MapItem Content=&quot;to him&quot; Value=&quot;to her&quot; /&gt;
+ &lt;MapItem Content=&quot;for him&quot; Value=&quot;for her&quot; /&gt;
+ &lt;MapItem Content=&quot;with him&quot; Value=&quot;with her&quot; /&gt;
+ &lt;!--And so on...--&gt;
+&lt;/Map&gt;
+
+&lt;Map Name=&quot;person&quot;&gt;
+ &lt;MapItem Content=&quot;i was&quot; Value=&quot;he or she was&quot; /&gt;
+ &lt;MapItem Content=&quot;i am&quot; Value=&quot;he or she is&quot; /&gt;
+ &lt;MapItem Content=&quot;i&quot; Value=&quot;he or she&quot; /&gt;
+ &lt;MapItem Content=&quot;he was&quot; Value=&quot;i was&quot; /&gt;
+ &lt;!--And so on...--&gt;
+&lt;/Map&gt;
+
+&lt;Map Name=&quot;person2&quot;&gt;
+ &lt;MapItem Content=&quot;with you&quot; Value=&quot;with me&quot; /&gt;
+ &lt;MapItem Content=&quot;with me&quot; Value=&quot;with you&quot; /&gt;
+ &lt;MapItem Content=&quot;to you&quot; Value=&quot;to me&quot; /&gt;
+ &lt;MapItem Content=&quot;to me&quot; Value=&quot;to you&quot; /&gt;
+ &lt;!--And so on...--&gt;
+&lt;/Map&gt;
+
+&lt;/Siml&gt;
+</code></pre>
+<p><em>Example</em></p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
+ &lt;Pattern&gt;I like chatbots like you&lt;/Pattern&gt;
+ &lt;Response&gt;Good to know that you like &lt;Map Get=&quot;person2&quot;&gt;&lt;Match/&gt;&lt;/Map&gt;&lt;/Response&gt;
+ &lt;!--&lt;Map Get=&quot;person2&quot;&gt;&lt;Match /&gt;&lt;/Map&gt; can also be written as &lt;Map Get=&quot;person2&quot; /&gt;--&gt;
+&lt;/Model&gt;
+</code></pre>
+<p><strong>User Input</strong></p>
+<p><em> I like chatbots like you</em></p>
+<p><strong>Bot Output</strong></p>
+<p><em> Good to know that you like chatbots like me</em></p>
+<p><strong>Explanation</strong></p>
+<blockquote><p>The <code>Map</code> element searches for the right transformation under the Map named <code>person2</code> and returns the transformed value.</p>
+</blockquote>
+<p>If you wish to use a reverse sequence of an already declared Map you can do so by using the Reverse attribute. A Reverse attribute along with a special name for the reversed map should be provided to store reversed sequence of the Map under consideration.</p>
+<pre><code class="lang-xml">&lt;Siml&gt;
+  &lt;Map Name=&quot;number2word&quot; Reverse=&quot;word2number&quot;&gt;
+    &lt;MapItem Content=&quot;one&quot; Value=&quot;1&quot; /&gt;
+    &lt;MapItem Content=&quot;two&quot; Value=&quot;2&quot; /&gt;
+    &lt;MapItem Content=&quot;three&quot; Value=&quot;3&quot; /&gt;
+  &lt;/Map&gt;
+&lt;/Siml&gt;
+</code></pre>
+<p><em>The above code is equivalent to writing:</em></p>
+<pre><code class="lang-xml">&lt;Siml&gt;
+  &lt;Map Name=&quot;number2word&quot;&gt;
+    &lt;MapItem Content=&quot;one&quot; Value=&quot;1&quot; /&gt;
+    &lt;MapItem Content=&quot;two&quot; Value=&quot;2&quot; /&gt;
+    &lt;MapItem Content=&quot;three&quot; Value=&quot;3&quot; /&gt;
+  &lt;/Map&gt;
+  &lt;Map Name=&quot;word2number&quot;&gt;
+    &lt;MapItem Content=&quot;1&quot; Value=&quot;one&quot; /&gt;
+    &lt;MapItem Content=&quot;2&quot; Value=&quot;two&quot; /&gt;
+    &lt;MapItem Content=&quot;3&quot; Value=&quot;three&quot; /&gt;
+  &lt;/Map&gt;
+&lt;/Siml&gt;
+</code></pre>
+<p>A reversed map can be used just like a normal Map during run-time which no special changes in behavior. There is no performance impact while using reversed maps as they are stored just like normal maps but in the reverse sequence.</p>
+<blockquote><p>As the Value attribute in a MapItem can have duplicate entries reversed Map always store 1 unique value per Content.</p>
+</blockquote>
+<p><em>Example</em></p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
+  &lt;Pattern&gt;CHANGE * TO NUMBER&lt;/Pattern&gt;
+  &lt;Response&gt;
+    &lt;Map Get=&quot;word2number&quot;&gt;
+      &lt;Match /&gt;
+    &lt;/Map&gt;
+  &lt;/Response&gt;
+&lt;/Model&gt;
+
+&lt;Model&gt;
+  &lt;Pattern&gt;CHANGE * TO WORD&lt;/Pattern&gt;
+  &lt;Response&gt;
+    &lt;Map Get=&quot;number2word&quot;&gt;
+      &lt;Match /&gt;
+    &lt;/Map&gt;
+  &lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre>
+<p><strong>User Input</strong></p>
+<ol>
+<li><em>Change one to number</em></li>
+<li><em>Change 2 to word</em></li>
+</ol>
+<p><strong>Bot Output</strong></p>
+<ol>
+<li><em>1</em></li>
+<li><em>two</em></li>
+</ol>
+<p><strong>Explanation</strong></p>
+<blockquote><p>The interpreter gets the values for both the Maps at run-time without any change in behavior.</p>
+</blockquote>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2016 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

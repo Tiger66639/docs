@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Filter </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Filter ">
+    <meta name="generator" content="docfx 2.1.0.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <a href="https://github.com/SynHub/syn-documentation/blob/master/tutorial/siml/elements/filter.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
+              <h1 id="filter">Filter</h1>
+              
+<table>
+<thead>
+<tr>
+<th><strong>Annotation</strong></th>
+<th style="text-align:left"><code>&lt;Filter&gt;</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Definition</strong></td>
+<td style="text-align:left">Filters out texts, words or fragments of text that match specified regular expressions and replaces them with the value specified.</td>
+</tr>
+<tr>
+<td><strong>Children</strong></td>
+<td style="text-align:left">This element MUST contain one or more <code>&lt;Text&gt;</code>, <code>&lt;Word&gt;</code> or <code>&lt;Regex&gt;</code> elements.</td>
+</tr>
+<tr>
+<td><strong>Attributes</strong></td>
+<td style="text-align:left"><strong>Required:</strong> <code>Value</code> Value used to replace the plain text in children elements.</td>
+</tr>
+<tr>
+<td><strong>Attributes</strong></td>
+<td style="text-align:left"><strong>Optional:</strong> <code>Target</code> Specifies the target type for filtration.</td>
+</tr>
+<tr>
+<td><strong>Occurrence</strong></td>
+<td style="text-align:left">One or more <code>&lt;Filter&gt;</code> elements MAY occur as children of <code>&lt;Siml&gt;</code> element.</td>
+</tr>
+</tbody>
+</table>
+<p>The Filter element has been introduced to help filter out words or fragments of text from user input and bot output. Filtration helps a lot in creation of Synonyms ( without having to create Sets), address internet/SMS slang and to fix some common typos.</p>
+<pre><code class="lang-xml">&lt;Siml&gt;
+
+&lt;Filter Value=&quot;because&quot;&gt;
+ &lt;Word&gt;becaus&lt;/Word&gt;
+ &lt;Word&gt;becasue&lt;/Word&gt;
+ &lt;Word&gt;becuase&lt;/Word&gt;
+ &lt;Word&gt;becouse&lt;/Word&gt;
+ &lt;Word&gt;becoz&lt;/Word&gt;
+ &lt;Word&gt;bcoz&lt;/Word&gt;
+ &lt;Word&gt;coz&lt;/Word&gt;
+&lt;/Filter&gt;
+
+&lt;Filter Value=&quot;i am&quot;&gt;
+ &lt;Word&gt;iam&lt;/Word&gt;
+ &lt;Word&gt;i&#39;m&lt;/Word&gt;
+ &lt;Word&gt;i m&lt;/Word&gt;
+&lt;/Filter&gt;
+
+&lt;Filter Text=&quot;.edu&quot; Value=&quot;dot edu&quot; /&gt;
+&lt;Filter Text=&quot;.uk&quot; Value=&quot;dot uk&quot; /&gt;
+&lt;Filter Text=&quot;.jp&quot; Value=&quot;dot jp&quot; /&gt;
+&lt;Filter Text=&quot;.au&quot; Value=&quot;dot au&quot; /&gt;
+&lt;Filter Text=&quot;.co&quot; Value=&quot;dot co&quot; /&gt;
+&lt;Filter Text=&quot;.ac&quot; Value=&quot;dot ac&quot; /&gt;
+
+&lt;/Siml&gt;
+</code></pre>
+<p>The <code>Filter</code> element accepts 3 special children elements that have different meaning when nested inside the Filter tag. The Word <em>tag/attribute</em>, Text <em>tag/attribute</em> and finally the Regex <em>tag/attribute</em>. If a filtration requires just 1 word to be filtered out we encourage you to use the Word attribute but if it requires more than one word to be filtered out you can then use <code>&lt;Word&gt;</code> elements .</p>
+<p>In the example above you can see that the Value attribute tells the bot what value of the text or word will have to be replaced. A Filter has just 1 Single replacement value (ofcourse).</p>
+<p>So using the above filtration if the user types iam it will be filtered out as I am and if the user ends a website address with .edu it will be filtered out as dot edu</p>
+<p>There are 3 types of Filters in SIML:</p>
+<ul>
+<li>Input – Filters the user message</li>
+<li>Output – Filters the output message that the Bot generates</li>
+<li>Both – Filters both User Input and Bot Output</li>
+</ul>
+<p>This mechanism of filtration has been directly imported from <em>Syn Engine</em>.</p>
+<p>To target an input or output you should add the <code>Target</code> attribute to your Filter element. If no <code>Target</code> attribute is specified the SIML Bot will assume it as an <em>Input</em> Filter.</p>
+<pre><code class="lang-xml">&lt;Siml&gt;
+
+&lt;Filter Value=&quot;okay&quot; Target=&quot;output&quot;&gt;
+ &lt;Word&gt;ok&lt;/Word&gt;
+ &lt;Text&gt;o.k.&lt;/Text&gt;
+&lt;/Filter&gt;
+
+&lt;!--Not specifying the Target attribute will have the same effect--&gt;
+
+&lt;Filter Value=&quot;because&quot; Target=&quot;input&quot;&gt;
+ &lt;Word&gt;becaus&lt;/Word&gt;
+ &lt;Word&gt;becoz&lt;/Word&gt;
+ &lt;Word&gt;bcoz&lt;/Word&gt;
+ &lt;Word&gt;coz&lt;/Word&gt;
+&lt;/Filter&gt;
+
+&lt;Filter Value=&quot;did not&quot; Target=&quot;both&quot;&gt;
+ &lt;Word&gt;didnt&lt;/Word&gt;
+ &lt;Word&gt;didn t&lt;/Word&gt;
+ &lt;Word&gt;did&#39;nt&lt;/Word&gt;
+ &lt;Word&gt;didn&#39;t&lt;/Word&gt;
+&lt;/Filter&gt;
+
+&lt;/Siml&gt;
+</code></pre>
+<p>It’s important to note that the Input filters do play a role in Bot messages as well ( internally ). When a bot output is generated a filtered version of the output is stored as the value for the <code>Previous</code> elemen</p>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2016 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

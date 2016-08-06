@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>BotSettings </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="BotSettings ">
+    <meta name="generator" content="docfx 2.1.0.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <a href="https://github.com/SynHub/syn-documentation/blob/master/tutorial/siml/elements/botsettings.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
+              <h1 id="botsettings">BotSettings</h1>
+              
+<table>
+<thead>
+<tr>
+<th><strong>Annotation</strong></th>
+<th style="text-align:left"><code>&lt;BotSettings&gt;</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Definition</strong></td>
+<td style="text-align:left">Groups variables that belong to the Bot.</td>
+</tr>
+<tr>
+<td><strong>Children</strong></td>
+<td style="text-align:left">MUST contain one or more <code>&lt;Variable&gt;</code> elements</td>
+</tr>
+<tr>
+<td><strong>Occurrence</strong></td>
+<td style="text-align:left">One <code>&lt;BotSettings&gt;</code> element MAY occur within an <code>&lt;Siml&gt;</code> element.</td>
+</tr>
+</tbody>
+</table>
+<p>This element stores internal values for the <em>Bot</em>. Many of the values are used during Bot initialization and tells the Bot in what environment its supposed to run. In <em>Syn Bot Framework</em> We have optimized retrieval of stored values to great extent ensuring that a large collection of Bot settings will not affect the Bot’s performance.</p>
+<p><code>BotSettings</code> element takes one or more <code>Variable</code> element as its children and every child element stores single or multiple values.</p>
+<pre><code class="lang-xml">&lt;Siml Version=&quot;1.0&quot;&gt;
+ &lt;BotSettings&gt;
+  &lt;Variable Name=&quot;Favorite_Movies&quot;&gt;
+   &lt;Value&gt;Contact&lt;/Value&gt;
+   &lt;Value&gt;God Father&lt;/Value&gt;
+   &lt;Value&gt;Life Is Beautiful&lt;/Value&gt;
+   &lt;Value&gt;Green Miles&lt;/Value&gt;
+  &lt;/Variable&gt;
+  &lt;Variable Name=&quot;Version&quot; Value=&quot;1.0&quot;/&gt;
+  &lt;Variable Name=&quot;Name&quot; Value=&quot;Unknown&quot; /&gt;
+  &lt;Variable Name=&quot;Location&quot; Value=&quot;Bangalore, India&quot; /&gt;
+  &lt;Variable Name=&quot;Gender&quot; Value=&quot;Female&quot; /&gt;
+  &lt;Variable Name=&quot;Culture&quot; Value=&quot;en-US&quot; /&gt;
+ &lt;/BotSettings&gt;
+&lt;/Siml&gt;
+</code></pre>
+<p><em>Example</em></p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
+ &lt;Pattern&gt;What version are you&lt;/Pattern&gt;
+ &lt;Response&gt;
+  I am version &lt;Bot Get=&quot;version&quot;/&gt;
+ &lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre>
+<p><strong>User Input</strong></p>
+<p><em>What version are you?</em></p>
+<p><strong>Bot Output</strong></p>
+<p><em>I am version 1.0</em></p>
+<p><strong>Explanation</strong></p>
+<blockquote><p>The <code>Bot</code> element is used to retrieve bot related settings/predicates and their values. The value of the Getattribute represents the Settings name.</p>
+</blockquote>
+<h2 id="reserved-bot-variables">Reserved Bot Variables</h2>
+<p>Certain Bot Variables are reserved to help the developer customize the behavior of the interpreter without having to hard-code them in a .Net Application.</p>
+<table>
+<thead>
+<tr>
+<th>Variable Name</th>
+<th style="text-align:left">Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Empty-Response</td>
+<td style="text-align:left">The value of this variable is submitted to the user if the Bot for some unknown reason is not able to generate an output. If this is due to an error then the <code>LogAdded</code> event of the Bot will also be fired along with the response.</td>
+</tr>
+<tr>
+<td>Empty-Match</td>
+<td style="text-align:left">The value of this variable is used when a match element (<code>&lt;Match&gt;</code>, <code>&lt;PreviousMatch&gt;</code>, <code>&lt;ConceptMatch&gt;</code>) is present in a Model but the length of the value matched by the element is zero.</td>
+</tr>
+<tr>
+<td>Timeout</td>
+<td style="text-align:left">The time in milliseconds to stop evaluating the chat request if no response is generated.</td>
+</tr>
+<tr>
+<td>Timeout-Response</td>
+<td style="text-align:left">The value of this variable is submitted to the user if the chat request is timed out. Currently, this response is also used when long or infinite loops are encountered.</td>
+</tr>
+<tr>
+<td>Culture</td>
+<td style="text-align:left">The value of this variable should be a valid culture name as specified in National Language Support (NLS) API Reference. This value is used by the interpreter to make internal modifications when working with strings.</td>
+</tr>
+<tr>
+<td>Max-Request-Length</td>
+<td style="text-align:left">The value of this variable is the maximum number of individual characters that are allowed in a Chat request. If exceeded then a Timedout-Response is sent to the user. The default value for this variable is 250 characters.</td>
+</tr>
+<tr>
+<td>Emotion</td>
+<td style="text-align:left">The value of this variable is the default emotion a Bot attains when it’s initialized. The value should a valid emotion name declared within the <strong>emotionml</strong> document using the SIML namespace.</td>
+</tr>
+<tr>
+<td>List-Separator</td>
+<td style="text-align:left">The value of this variable is used as a delimiter when the List attribute is used on a variable.</td>
+</tr>
+<tr>
+<td>List-End</td>
+<td style="text-align:left">The value of this variable is used as the last delimiter when the List attribute is used on a variable.</td>
+</tr>
+<tr>
+<td>Default</td>
+<td style="text-align:left">The value of this variable is used when a <code>Get</code> attribute is used to retrieve the value of a non-existent variable.</td>
+</tr>
+<tr>
+<td>Undefined</td>
+<td style="text-align:left">The value of this variable is used to determine if a variable is defined or not. If a variable has the same value as the value of the Undefined variable then the variable is considered undefined. The default value of this variable is an empty string.</td>
+</tr>
+<tr>
+<td>While-Limit</td>
+<td style="text-align:left">The integer value of this variable is used to determine the maximum number of while loops allowed.</td>
+</tr>
+<tr>
+<td>Initial-Concept</td>
+<td style="text-align:left">Sets the initial private concept for all bot users.</td>
+</tr>
+</tbody>
+</table>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2016 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>User </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="User ">
+    <meta name="generator" content="docfx 2.1.0.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <a href="https://github.com/SynHub/syn-documentation/blob/master/tutorial/siml/elements/user.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
+              <h1 id="user">User</h1>
+              
+<table>
+<thead>
+<tr>
+<th><strong>Annotation</strong></th>
+<th style="text-align:left"><code>&lt;User&gt;</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Definition</strong></td>
+<td style="text-align:left">Used to get or set User related variables</td>
+</tr>
+<tr>
+<td><strong>Attributes</strong></td>
+<td style="text-align:left">MUST either contain a <code>Get</code> or a <code>Set</code> attribute</td>
+</tr>
+<tr>
+<td><strong>Occurrence</strong></td>
+<td style="text-align:left">One or more <code>&lt;User&gt;</code> elements MAY either occur as descendants of</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left"><code>&lt;Pattern&gt;</code> element or any of its children i.e. <code>&lt;Item&gt;</code></td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left"><code>&lt;Response&gt;</code> element or any of its children elements.</td>
+</tr>
+</tbody>
+</table>
+<p>Just like the Bot tag the <strong>User</strong> tag is used to retrieve user related predicates/settings. The user related predicates are evaluated during run-time and if a value or the variable doesn’t exist then a default value specified by the bot developer is returned.</p>
+<pre><code class="lang-xml">&lt;Model&gt;
+ &lt;Pattern&gt;MY NAME IS *&lt;/Pattern&gt;
+ &lt;Response&gt;Good to meet you &lt;User Set=&quot;name&quot;&gt;&lt;Match /&gt;&lt;/User&gt;&lt;/Response&gt;
+&lt;/Model&gt;
+
+&lt;Model&gt;
+ &lt;Pattern&gt;WHAT IS MY NAME&lt;/Pattern&gt;
+ &lt;Response&gt;Your name is &lt;User Get=&quot;name&quot;/&gt;&lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre>
+<p>In the above example we firstly extract the User name and later when the user asks what is my name we retrieve the user name specifying the variable name ‘name within the <code>&lt;User&gt;</code> Tag.</p>
+<p>Just like the Bot element User element can be evaluated within the Pattern element using the parameterized Set syntax. The value of the User set with the parameter <code>name</code> is the run-time value of the variable <code>name</code> that belongs to the user. Any change in the variable’s value automatically updates the pattern.</p>
+<p><em>Example</em></p>
+<pre><code class="lang-xml">&lt;Model&gt;
+ &lt;Pattern&gt;IS MY [User:Name]&lt;/Pattern&gt;
+ &lt;Response&gt;Yes, Your name is &lt;Match /&gt;&lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2016 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

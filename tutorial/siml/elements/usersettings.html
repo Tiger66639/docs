@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>UserSettings </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="UserSettings ">
+    <meta name="generator" content="docfx 2.1.0.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <a href="https://github.com/SynHub/syn-documentation/blob/master/tutorial/siml/elements/usersettings.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
+              <h1 id="usersettings">UserSettings</h1>
+              
+<table>
+<thead>
+<tr>
+<th><strong>Annotation</strong></th>
+<th style="text-align:left"><code>&lt;UserSettings&gt;</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Definition</strong></td>
+<td style="text-align:left">Groups predicates that belong to a User.</td>
+</tr>
+<tr>
+<td><strong>Children</strong></td>
+<td style="text-align:left">MUST contain one or more <code>&lt;Variable&gt;</code> elements</td>
+</tr>
+<tr>
+<td><strong>Occurrence</strong></td>
+<td style="text-align:left">One instance of this element MAY occur within an <code>&lt;Siml&gt;</code> element.</td>
+</tr>
+</tbody>
+</table>
+<p>Just like <code>BotSettings</code> the <code>UserSettings</code> element is used to define settings for the User. This element also takes one or more <code>Variable</code> elements as its children and the child element may store one or more values.</p>
+<pre><code class="lang-xml">&lt;Siml version=&quot;1.0&quot;&gt;
+
+&lt;UserSettings&gt;
+ &lt;Variable Name=&quot;Favorite-Sports&quot; Value=&quot;Nascar&quot; /&gt;
+ &lt;Variable Name=&quot;Name&quot; Value=&quot;Leslie&quot; /&gt;
+ &lt;Variable Name=&quot;Location&quot; Value=&quot;Bangalore&quot; /&gt;
+ &lt;Variable Name=&quot;Favorite-Movies&quot;&gt;
+  &lt;Value&gt;Life Is Beautiful&lt;/Value&gt;
+  &lt;Value&gt;Green Miles&lt;/Value&gt;
+ &lt;/Variable&gt;
+ &lt;Variable Name=&quot;Language&quot; Value=&quot;English&quot; /&gt;
+&lt;/UserSettings&gt;
+
+&lt;/Siml&gt;
+</code></pre>
+<p><em>Example</em></p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
+ &lt;Pattern&gt;DO YOU KNOW MY NAME&lt;/Pattern&gt;
+ &lt;Response&gt;
+  Your name is &lt;User Get=&quot;name&quot; /&gt;
+ &lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre>
+<p><strong>User Input</strong></p>
+<p><em>Do you know my name?</em></p>
+<p><strong>Bot Output</strong></p>
+<p><em>Your name is Leslie</em></p>
+<p><strong>Explanation</strong></p>
+<blockquote><p>The <code>User</code> element retrieves settings/predicates values stored for the User. The value of the <code>Get</code> attribute should be a valid Settings name.</p>
+</blockquote>
+<p>Most of the values of variables are stored/created during run-time ( while the bot interacts with the user ). If you explicitly write down predicate values under UserSettings then the variables will be used to initialize settings for new users.</p>
+<p>There are a few reserved variable under <code>UserSettings</code>. Some of the user variables mentioned below will not change their values even if the bot developer explicitly tried to change their values during a chat session.</p>
+<h2 id="reserved-user-variables">Reserved User Variables</h2>
+<table>
+<thead>
+<tr>
+<th>Variable Name</th>
+<th style="text-align:left">Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Message</td>
+<td style="text-align:left">The value of this variable represents the current user message</td>
+</tr>
+<tr>
+<td>Is-Main</td>
+<td style="text-align:left">A variable that returns true if the current user is the main Bot user.</td>
+</tr>
+<tr>
+<td>ID</td>
+<td style="text-align:left">Gets the unique GUID of the current user.</td>
+</tr>
+<tr>
+<td>Concept</td>
+<td style="text-align:left">Used to get the name of the SIML Concept from which the last response was generated or to set the next private Concept.</td>
+</tr>
+<tr>
+<td>Partial-Repeat</td>
+<td style="text-align:left">Determines if the current Result contains at-least a few unique responses.</td>
+</tr>
+<tr>
+<td>Repeat:Count</td>
+<td style="text-align:left">Gets the number of responses that were generated by non-repeatable Models</td>
+</tr>
+<tr>
+<td>Request:Type</td>
+<td style="text-align:left">Gets the type of the chat request</td>
+</tr>
+<tr>
+<td>Request:Is-Internal</td>
+<td style="text-align:left">Gets a value that indicates if the current chat request is internal or not.</td>
+</tr>
+<tr>
+<td>Request:Is-Task</td>
+<td style="text-align:left">Gets a value that indicates if the current chat request was triggered by a bot Task.</td>
+</tr>
+</tbody>
+</table>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2016 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

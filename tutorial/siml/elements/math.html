@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Math </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Math ">
+    <meta name="generator" content="docfx 2.1.0.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <a href="https://github.com/SynHub/syn-documentation/blob/master/tutorial/siml/elements/math.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
+              <h1 id="math">Math</h1>
+              
+<table>
+<thead>
+<tr>
+<th><strong>Annotation</strong></th>
+<th style="text-align:left"><code>&lt;Math&gt;</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Definition</strong></td>
+<td style="text-align:left">Returns a textual value after performing the specified mathematical operation on its children.</td>
+</tr>
+<tr>
+<td><strong>Attributes</strong></td>
+<td style="text-align:left"><strong>Optional:</strong> MAY contain a <code>Get</code> attribute. If left off then the element acts as a Math Expression Evaluator.</td>
+</tr>
+<tr>
+<td><strong>Occurrence</strong></td>
+<td style="text-align:left">One or more <code>&lt;Math&gt;</code> elements MAY occur within a <code>&lt;Response&gt;</code> element.</td>
+</tr>
+</tbody>
+</table>
+<p>The Math element allows mathematical operations to be performed using the variable provided as its inner value.</p>
+<p>The following Get operations are available as of SIML 1.0</p>
+<ul>
+<li>log</li>
+<li>log10</li>
+<li>abs</li>
+<li>sqrt</li>
+<li>sin</li>
+<li>cos</li>
+<li>tan</li>
+<li>acos</li>
+<li>asin</li>
+<li>atan</li>
+<li>cosh</li>
+<li>sinh</li>
+<li>tanh</li>
+<li>exp</li>
+<li>sign</li>
+<li>floor</li>
+<li>pi</li>
+<li>e</li>
+<li>random</li>
+<li>evaluate</li>
+<li>increment</li>
+<li>decrement</li>
+</ul>
+<p><em>Example</em></p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
+ &lt;Pattern&gt;GET SINE OF *&lt;/Pattern&gt;
+ &lt;Response&gt;
+  &lt;Math Get=&quot;sin&quot;&gt;&lt;Match /&gt;&lt;/Math&gt;
+ &lt;/Response&gt;
+&lt;/Model&gt;
+
+&lt;Model&gt;
+ &lt;Pattern&gt;WHAT IS THE VALUE OF PI&lt;/Pattern&gt;
+ &lt;Response&gt;
+  &lt;Math Get=&quot;pi&quot; /&gt;
+ &lt;/Response&gt;
+&lt;/Model&gt;
+
+&lt;Model&gt;
+ &lt;Pattern&gt;GIVE ME A RANDOM NUMBER&lt;/Pattern&gt;
+ &lt;Response&gt;
+  &lt;Math Get=&quot;random&quot; Min=&quot;0&quot; Max=&quot;10&quot; /&gt;
+ &lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre>
+<p><strong>User Input</strong></p>
+<ol>
+<li><em>Get sine of 10</em></li>
+<li><em>What is the value of PI</em></li>
+<li><em>Give me a random number</em></li>
+<li><em>Give me a random number</em></li>
+</ol>
+<p><strong>Bot Output</strong></p>
+<ol>
+<li><em>0.17364817766693034885171662676931</em></li>
+<li><em>3.1415926535897932384626433832795</em></li>
+<li><em>24</em></li>
+<li><em>5</em></li>
+</ol>
+<p><strong>Explanation</strong></p>
+<blockquote><p>The first Math element gets the Sine value for 10, the second gives you the value of the constant PI and finally the Random attribute value is used to get a random number. The Min attribute is optional ( defaults to 0 ).</p>
+</blockquote>
+<p>Another special feature of the Math element in SIML is that it’s internally a Math expression evaluator thus if you do not specify the <code>Get</code> attribute the element behaves as a Math expression evaluator and returns the evaluated value.</p>
+<p><em>Example</em></p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
+ &lt;Pattern&gt;Evaluate *&lt;/Pattern&gt;
+ &lt;Response&gt;
+  &lt;Math Get=&quot;evaluate&quot;&gt;&lt;Match /&gt;&lt;/Math&gt;
+  &lt;!-- Or even &lt;Math&gt;&lt;Match /&gt;&lt;Math&gt;--&gt;
+ &lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre>
+<p><strong>User Input</strong></p>
+<p><em>Evaluate sqrt(4)</em></p>
+<p><strong>Bot Output</strong></p>
+<p><em>2</em></p>
+<p><strong>Explanation</strong></p>
+<blockquote><p>The Math element takes its inner value as a mathematical expression and evaluates the expression and finally returns the value. Math element can also evaluate slightly complex expressions like <em>sin(sqrt(4))</em></p>
+</blockquote>
+<p>Besides the <code>Get</code> attribute there is also a <code>Round</code> attribute. The <code>Round</code> attribute takes an integer value and rounds the content of the Math element to a specified number of fractional digits. A Round attribute can be used alongside the Get attribute or as the only attribute when the Math element is used for evaluating a Mathematical expression.</p>
+<blockquote><p>The specified value for the Round attribute should not be less than 0 or greater than 15.</p>
+</blockquote>
+<p><em>Example</em></p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
+ &lt;Pattern&gt;WHAT IS THE VALUE OF PI&lt;/Pattern&gt;
+ &lt;Response&gt;
+  &lt;Math Get=&quot;pi&quot; Round=&quot;2&quot; /&gt;
+ &lt;/Response&gt;
+&lt;/Model&gt;
+
+&lt;Model&gt;
+ &lt;Pattern&gt;COS OF *&lt;/Pattern&gt;
+ &lt;Response&gt;
+  &lt;Math Round=&quot;4&quot;&gt;cos(&lt;Match /&gt;)&lt;/Math&gt;
+ &lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre>
+<p><strong>User Input</strong></p>
+<ol>
+<li><em>what is the value of pi.</em></li>
+<li><em>cos of 6</em></li>
+</ol>
+<p><strong>Bot Output</strong></p>
+<ol>
+<li><em>3.14</em></li>
+<li><em>0.9602</em></li>
+</ol>
+<p><strong>Explanation</strong></p>
+<blockquote><p><code>Round</code> attribute takes affect only after a value is generated by the Math element. Once a value is generated the <code>Round</code> attribute rounds the given value using the Integer number specified.</p>
+</blockquote>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2016 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

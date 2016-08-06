@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>SIML Best Practices </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="SIML Best Practices ">
+    <meta name="generator" content="docfx 2.1.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <a href="https://github.com/SynHub/syn-documentation/blob/master/tutorial/siml/best-practices.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
+              <h1 id="siml-best-practices">SIML Best Practices</h1>
+              
+<p>Writing an intelligent Chatbot requires planning and optimization. The following tips and tricks should guide you while you develop your Chatbot for any application.</p>
+<h3 id="step-by-step-migration-from-simple-to-complex-patterns">Step-by-step migration from Simple to Complex Patterns</h3>
+<p>When writing patterns for SIML Models make sure that you first include the simpler patterns ( without symbols ) and then move towards using SIML Wildcards and finally keyword based patterns. This ensures speed and consistency.</p>
+<h3 id="consider-filtration-while-writing-patterns">Consider filtration while writing Patterns</h3>
+<p>A usual tendency of a developer is to capture every possible pattern of input in doing a developer may flaw into reduandant pattern declartion to avoid such cases use/consider SIML filtration system.</p>
+<p>If your filters convert the word whats to what is then declaring a Pattern in an SIML Model say Whats the time will never be matched as the input would always be filtered to What is the time.</p>
+<h3 id="lower-usage-of-keywords">Lower usage of Keywords</h3>
+<p>Always sticking with SIML Keyword based patterns is not encouraged as they are supposed to be the last resort when dealing with Patterns. However keywords in patterns maybe used to enquire the user if he actually meant something that is already known to the bot.</p>
+<h3 id="sets-instead-of-regular-expressions">Sets instead of Regular Expressions</h3>
+<p>Though SIML supports Regular Expression it is recommended that Sets are used instead of Regex wherever possible. Instead of creating a regular expression say b(red|green|blue)b a developer should use an SIML Set with items Red, Green and Blue. Doing so a developer can take advantage of the operations provided SIML Sets that are optimized for such scenarios.</p>
+<h3 id="frequent-code-analysis-and-test">Frequent Code-Analysis and Test</h3>
+<p>Small and medium SIML Project should always be analysed before being deployed as production bots. Apart from analysis a developer must test the SIML Concept by using the Console to see if the desired output is being generated.</p>
+<h3 id="maintaining-the-depth-of-nested-models">Maintaining the depth of Nested Models</h3>
+<p>Though nesting saves time and eliminates the need of declaring indefinite number of <previous> elements care should be taken that the depth of nesting is always kept between 1 and 4. Nesting beyond such depths would make maintenance of code harder and may lead to confusions when debugging your Chatbot.<p>
+<h3 id="check-your-goto">Check your <code>&lt;Goto&gt;</code></h3>
+<p><goto> and its derivative elements are used to reduce the pattern in user input to its minimalistic form but its upto the developer to check if the value to which the <goto> element redirects to actually exists within your SIML project.<p>
+<h3 id="don-t-repeat-yourself">Don’t repeat yourself</h3>
+<p>Declaring multiple Models for multiple patterns would simply defeat the purpose of using an advanced Chatbot architecture. For multiple patterns always use the <item> element within the <pattern> element and the same should be applied to <previous> element.<p>
+<h3 id="smaller-dynamic-sets">Smaller Dynamic Sets</h3>
+<p>Dynamics sets have very low impact on the performance of your SIML code but for brevity if the dynamic sets are to be used frequently or the size of the dynamic sets are small and constant then the developer should save them as a static Set and give it a unique name. This reduces redundancy and ensures re-usability of your SIML code.</p>
+</previous></pattern></item></goto></goto></previous>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2016 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

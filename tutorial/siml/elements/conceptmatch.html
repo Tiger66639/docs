@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>ConceptMatch </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="ConceptMatch ">
+    <meta name="generator" content="docfx 2.1.0.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <a href="https://github.com/SynHub/syn-documentation/blob/master/tutorial/siml/elements/conceptmatch.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
+              <h1 id="conceptmatch">ConceptMatch</h1>
+              
+<table>
+<thead>
+<tr>
+<th><strong>Annotation</strong></th>
+<th style="text-align:left"><code>&lt;ConceptMatch&gt;</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Definition</strong></td>
+<td style="text-align:left">Returns the value captured by a wildcard that targets the Concept name.</td>
+</tr>
+<tr>
+<td><strong>Attributes</strong></td>
+<td style="text-align:left"><strong>Optional:</strong> <code>Index</code> If specified returns the text fragment matching the <em>nth</em> pattern in a Concept name.</td>
+</tr>
+<tr>
+<td><strong>Occurrence</strong></td>
+<td style="text-align:left">One or more of <code>&lt;ConceptMatch&gt;</code> elements MAY occur as children of <code>&lt;Response&gt;</code> element.</td>
+</tr>
+</tbody>
+</table>
+<p>This is also a type of <code>Match</code> element that will return a text fragment matching the <em>nth</em> pattern <code>*</code> contained in a in <code>&lt;Concept&gt;</code> tag. This element maybe the least used <code>Match</code> element in knowledge base development but may come in handy for many test purposes.</p>
+<p><em>Example</em></p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml">&lt;Siml&gt;
+ &lt;Concept Type=&quot;public&quot; Name=&quot;General&quot;&gt;
+  &lt;Model&gt;
+   &lt;Pattern&gt;CHANGE CONCEPT&lt;/Pattern&gt;
+   &lt;Response&gt;This is a public concept. Concept changed to
+    &quot;&lt;User Set=&quot;Concept&quot;&gt;new concept about cars&lt;/User&gt;&quot;
+   &lt;/Response&gt;
+  &lt;/Model&gt;
+ &lt;/Concept&gt;
+
+ &lt;Concept Type=&quot;private&quot; Name=&quot;new concept about *&quot;&gt;
+  &lt;Model&gt;
+   &lt;Pattern&gt;CHANGE CONCEPT AGAIN&lt;/Pattern&gt;
+   &lt;Response&gt;This concept is about &lt;ConceptMatch /&gt;.Concept changed to
+    &quot;&lt;User Set=&quot;Concept&quot;&gt;new concept about cars and bikes&lt;/User&gt;&quot;
+   &lt;/Response&gt;
+  &lt;/Model&gt;
+ &lt;/Concept&gt;
+
+ &lt;Concept Type=&quot;private&quot; Name=&quot;new concept about * and *&quot;&gt;
+  &lt;Model&gt;
+   &lt;Pattern&gt;WHAT CONCEPT ARE WE IN&lt;/Pattern&gt;
+   &lt;Response&gt;
+    The concept is about &lt;ConceptMatch /&gt; and &lt;ConceptMatch Index=&quot;2&quot; /&gt;.
+   &lt;/Response&gt;
+  &lt;/Model&gt;
+ &lt;/Concept&gt;
+
+&lt;/Siml&gt;
+</code></pre>
+<p><strong>User Input</strong></p>
+<ol>
+<li><em>Change Concept.</em></li>
+<li><em>Change concept again</em></li>
+<li><em>What concept are we in?</em></li>
+</ol>
+<p><strong>Bot Output</strong></p>
+<ol>
+<li><em>This is a public concept. Concept changed to &quot;new concepts about cars&quot;</em></li>
+<li><em>This concept is about cars. Concept changed to &quot;new concept about cars and bikes&quot;</em></li>
+<li><em>The concept is about cars and bikes</em></li>
+</ol>
+<p><strong>Explanation</strong></p>
+<blockquote><p>The <code>ConceptMatch</code> element can help a bot developer reduce redundancy when dealing with concepts of similar essence.</p>
+</blockquote>
+<p>Like all Match elements you can use the <code>Index=&quot;n&quot;</code> attribute to get the text fragment matching the <em>nth</em> pattern.</p>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2016 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

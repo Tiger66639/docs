@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Concept </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Concept ">
+    <meta name="generator" content="docfx 2.1.0.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <a href="https://github.com/SynHub/syn-documentation/blob/master/tutorial/siml/elements/concept.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
+              <h1 id="concept">Concept</h1>
+              
+<table>
+<thead>
+<tr>
+<th><strong>Annotation</strong></th>
+<th style="text-align:left"><code>&lt;Concept&gt;</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Definition</strong></td>
+<td style="text-align:left">Groups Models belonging to a particular subject</td>
+</tr>
+<tr>
+<td><strong>Children</strong></td>
+<td style="text-align:left">The element MUST contain one or more <code>&lt;Model&gt;</code> elements.</td>
+</tr>
+<tr>
+<td><strong>Attributes</strong></td>
+<td style="text-align:left"><strong>Required</strong> <code>Name</code> Name of the Concept</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left"><strong>Optional</strong> <code>Type</code> Type of Concept. If not present the Concept is assumed to be a public concept</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left"><strong>Optional</strong> <code>Repeat</code> Determines if a Concept allows repetitive activation of its Models. If not present the value is assumed to be <code>True</code></td>
+</tr>
+<tr>
+<td><strong>Occurrence</strong></td>
+<td style="text-align:left">As a child of <code>&lt;Siml&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<p>An SIML knowledge base starts with a Concept. A Concept is the topic under consideration and is used to differentiate between similar Models. A Model in SIML is a unit of knowledge that contains a response for any pattern that might match the user input.</p>
+<p>Say, that we would like to talk to the user about <em>his likes and dislikes</em>. For this it’s important that we catch most ( if not all ) of the inputs the user might submit if the current topic is about likes and dislikes.</p>
+<p>To declare a concept use the <code>Concept</code> element and declare the name of the <code>Concept</code> using the <code>Name</code> attribute. In the code below you can see how one can create a concept and provide a concept name. Besides the Name attribute there’s the <code>Type</code> and the <code>Repeat</code> attribute. The <code>Type</code> attribute is an important attribute that tells the interpreter ( SIML Bot ) how Models within this Concept will be activated if any of their pattern’s match. Whereas the <code>Repeat</code> attribute takes 2 values <code>True</code> or <code>False</code> and if set to True the Models within the Concept are allowed to be activated even if the user repeats his input.</p>
+<pre><code class="lang-xml">&lt;Siml&gt;
+ &lt;Concept Type=&quot;public&quot; Name=&quot;User likes and dislikes&quot;&gt;
+  &lt;!--SIML Models go within a Concept--&gt;
+ &lt;/Concept&gt;
+&lt;/Siml&gt;
+</code></pre>
+<p>There are 2 types of Concepts.</p>
+<ul>
+<li><strong>Public</strong> – Models within public Concept will get activated if their patterns are matched.</li>
+<li><strong>Private</strong> – Models within a private concept will only be evaluated if the current concept names matches the name of the private concept.</li>
+</ul>
+<p>Private concepts are kept hidden from the user and have to enabled by the developer using the Set attribute on the User element.</p>
+<p>All SIML responses are Conceptual in nature which makes a pattern in a Public Concept unique to the Concept in which the pattern has been declared.</p>
+<h2 id="user-specific-concepts">User Specific Concepts</h2>
+<p>Concepts can directly be stored for a particular user using the User attribute and specifying the ID of the user as the attribute value. If a user with the specified ID is found then the Concept is loaded into the isolated Graph of the user.</p>
+<pre><code class="lang-xml">  &lt;Concept Name=&quot;Controlling Lights&quot; Type=&quot;Public&quot; User=&quot;ec82e3ee-5355-427b-be5c-658ed4933943&quot;&gt;
+    &lt;Model&gt;
+      &lt;Pattern&gt;SWITCH ON THE LIGHTS&lt;/Pattern&gt;
+      &lt;Response&gt;Switching on lights in drawing room.&lt;/Response&gt;
+    &lt;/Model&gt;
+  &lt;/Concept&gt;
+  &lt;Concept Name=&quot;Public controlling lights&quot; Type=&quot;Public&quot;&gt;
+    &lt;Model&gt;
+      &lt;Pattern&gt;SWITCH ON THE LIGHTS&lt;/Pattern&gt;
+      &lt;Response&gt;I am sorry the request has been denied.&lt;/Response&gt;
+    &lt;/Model&gt;
+  &lt;/Concept&gt;
+</code></pre>
+<p>In the above SIML code the first Concept specifies a User ID. If a user with the specified ID is found then the Concept is loaded within the Isolated Graph of the User instead of the main Graph used by the Bot by default. This ensures that during a chat session if and only if the user with the specified ID requests the Bot to Switch on the lights the request will be granted. If the same request is made by another user then the response will be entirely different.</p>
+<p>Developers can use <strong>Main</strong> as a value for the User attribute to specify the Main user.</p>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2016 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

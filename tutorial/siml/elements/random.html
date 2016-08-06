@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Random </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Random ">
+    <meta name="generator" content="docfx 2.1.0.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <a href="https://github.com/SynHub/syn-documentation/blob/master/tutorial/siml/elements/random.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
+              <h1 id="random">Random</h1>
+              
+<table>
+<thead>
+<tr>
+<th><strong>Annotation</strong></th>
+<th style="text-align:left"><code>&lt;Random&gt;</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Definition</strong></td>
+<td style="text-align:left">Returns one randomly selected item from a list of specified elements.</td>
+</tr>
+<tr>
+<td><strong>Children</strong></td>
+<td style="text-align:left">This element MUST contain one or more <code>&lt;Item&gt;</code> elements if the Get attribute is not specified</td>
+</tr>
+<tr>
+<td><strong>Attributes</strong></td>
+<td style="text-align:left"><strong>Optional:</strong> <code>Get</code> This attribute is used to retrieve a globally declared <random> element.</random></td>
+</tr>
+<tr>
+<td><strong>Occurrence</strong></td>
+<td style="text-align:left">One or more <code>&lt;Random&gt;</code> elements MAY occur as children of Response element.</td>
+</tr>
+</tbody>
+</table>
+<p>Randomness is important as it avoids users from guessing the Bot’s response for a particular entry and keeps the interaction alive and interesting. To add random answers for a pattern the <code>Random</code> element should be used with two or more <code>Item</code> element that hold a value.</p>
+<p><em>Example</em></p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
+ &lt;Pattern&gt;Hi&lt;/Pattern&gt;
+ &lt;Response&gt;
+  &lt;Random&gt;
+   &lt;Item&gt;Hello there.&lt;/Item&gt;
+   &lt;Item&gt;Well, Hi there!&lt;/Item&gt;
+   &lt;Item&gt;Heya&lt;/Item&gt;
+   &lt;Item&gt;Hi User.&lt;/Item&gt;
+  &lt;/Random&gt;
+ &lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre>
+<p><strong>User Input</strong></p>
+<ol>
+<li><em>Hi</em></li>
+<li><em>Hi</em></li>
+</ol>
+<p><strong>Bot Output</strong></p>
+<ol>
+<li><em>Hello there.</em></li>
+<li><em>Well, Hi there!</em></li>
+</ol>
+<p><strong>Explanation</strong></p>
+<blockquote><p>The <code>Random</code> element scans it children <code>Item</code> elements and randomly returns anyone of them.</p>
+</blockquote>
+<p>The above highlights pure randomness but SIML Bot offers casting of Random values to user input which in layman’s term means that the bot will choose the output most like the user’s input.</p>
+<p>Each <code>&lt;Item&gt;</code> element within a Random element can be assigned a Weight to control the probability of occurrence at run-time. The sum of these weights may or may not be equal to 1.</p>
+<p><em>Example</em></p>
+<pre><code class="lang-xml">&lt;Model&gt;
+  &lt;Pattern&gt;HI&lt;/Pattern&gt;
+  &lt;Response&gt;
+    &lt;Random&gt;
+      &lt;Item Weight=&quot;0.125&quot;&gt;Hello there.&lt;/Item&gt;
+      &lt;Item Weight=&quot;0.125&quot;&gt;Hi there!&lt;/Item&gt;
+      &lt;Item Weight=&quot;0.25&quot;&gt;Hey&lt;/Item&gt;
+      &lt;Item Weight=&quot;0.5&quot;&gt;Hola!&lt;/Item&gt;
+    &lt;/Random&gt;
+  &lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre>
+<p>In the above SIML code every Item element has been assigned a unique probability. In this way a develop can control the occurrence of the Item at run-time. The above code ensures that most of the time the word Hola! will used as response whenever the user says <strong><em>hi</em></strong>.</p>
+<p>It’s not mandatory that to change the probability of occurrence of one item every other item has to be assigned a weight. If 1 or more items are assigned a weight then the rest of the existing items receive an equally distributed probability.</p>
+<p>The above SIML code can also be written as:</p>
+<pre><code class="lang-xml">&lt;Model&gt;
+  &lt;Pattern&gt;HI&lt;/Pattern&gt;
+  &lt;Response&gt;
+    &lt;Random&gt;
+      &lt;Item&gt;Hello there.&lt;/Item&gt;
+      &lt;Item&gt;Hi there!&lt;/Item&gt;
+      &lt;Item Weight=&quot;0.25&quot;&gt;Hey&lt;/Item&gt;
+      &lt;Item Weight=&quot;0.5&quot;&gt;Hola!&lt;/Item&gt;
+    &lt;/Random&gt;
+  &lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre>
+<p>In the above the 2 Item elements <code>&lt;Item&gt;Hello there.&lt;/Item&gt;</code> and <code>&lt;Item&gt;Hi there!&lt;/Item&gt;</code> will automatically receive a probability of 0.125.</p>
+<h2 id="chaining">Chaining</h2>
+<p>The Chain syntax allows developers to chain random response using a single text value. Words or sentence can be separated using a vertical bar as shown below. The entire text MUST be enclosed within a single <code>&lt;Random&gt;</code> tag instead of multiple <code>&lt;Item&gt;</code> tags.</p>
+<p><em>Example</em></p>
+<pre><code class="lang-xml">&lt;Model&gt;
+  &lt;Pattern&gt;HOW DO YOU FEEL&lt;/Pattern&gt;
+  &lt;Response&gt;
+    &lt;Random&gt;I feel great|I feel awesome!|I feel metallic&lt;/Random&gt;
+  &lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre>
+<p><em>Example</em></p>
+<pre><code class="lang-xml">&lt;Model&gt;
+  &lt;Pattern&gt;HOW DO YOU FEEL&lt;/Pattern&gt;
+  &lt;Response&gt;
+    &lt;Random&gt;I feel (great|awesome!|metallic)&lt;/Random&gt;
+  &lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre>
+<p>The output of both the examples above will be similar.</p>
+<p><em>Example</em></p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
+  &lt;Pattern&gt;HOW DO YOU FEEL&lt;/Pattern&gt;
+  &lt;Response&gt;
+    &lt;Random&gt;I feel (great|awesome!|metallic)&lt;/Random&gt;
+  &lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre>
+<p><strong>User Input</strong></p>
+<ol>
+<li><em>How do you feel?</em></li>
+<li><em>How do you feel?</em></li>
+</ol>
+<p><strong>Bot Output</strong></p>
+<ol>
+<li><em>I feel great</em></li>
+<li><em>I feel awesome!</em></li>
+</ol>
+<p><strong>Explanation</strong></p>
+<blockquote><p>Chained syntax within the Random tag automatically parses separate words and sentences and generates a single random text value.</p>
+</blockquote>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2016 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
