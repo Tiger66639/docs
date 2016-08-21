@@ -4824,11 +4824,6 @@ references:
   href: api/Syn.Bot.Siml.Helper.Tag.html#Syn_Bot_Siml_Helper_Tag_SimlPackage
   commentId: F:Syn.Bot.Siml.Helper.Tag.SimlPackage
   fullName: Syn.Bot.Siml.Helper.Tag.SimlPackage
-- uid: Syn.Bot.Siml.Helper.Tag.SpecialName
-  name: SpecialName
-  href: api/Syn.Bot.Siml.Helper.Tag.html#Syn_Bot_Siml_Helper_Tag_SpecialName
-  commentId: F:Syn.Bot.Siml.Helper.Tag.SpecialName
-  fullName: Syn.Bot.Siml.Helper.Tag.SpecialName
 - uid: Syn.Bot.Siml.Helper.Tag.Splitter
   name: Splitter
   href: api/Syn.Bot.Siml.Helper.Tag.html#Syn_Bot_Siml_Helper_Tag_Splitter
@@ -5615,26 +5610,6 @@ references:
   href: api/Syn.Bot.Siml.RepeatManager.html#Syn_Bot_Siml_RepeatManager_CheckRepetition_Syn_Bot_Siml_ChatResult_Syn_Bot_Siml_ChatRequest_
   commentId: M:Syn.Bot.Siml.RepeatManager.CheckRepetition(Syn.Bot.Siml.ChatResult,Syn.Bot.Siml.ChatRequest)
   fullName: Syn.Bot.Siml.RepeatManager.CheckRepetition(Syn.Bot.Siml.ChatResult, Syn.Bot.Siml.ChatRequest)
-- uid: Syn.Bot.Siml.RequestType
-  name: RequestType
-  href: api/Syn.Bot.Siml.RequestType.html#Syn_Bot_Siml_RequestType
-  commentId: T:Syn.Bot.Siml.RequestType
-  fullName: Syn.Bot.Siml.RequestType
-- uid: Syn.Bot.Siml.RequestType.EventMessage
-  name: EventMessage
-  href: api/Syn.Bot.Siml.RequestType.html#Syn_Bot_Siml_RequestType_EventMessage
-  commentId: F:Syn.Bot.Siml.RequestType.EventMessage
-  fullName: Syn.Bot.Siml.RequestType.EventMessage
-- uid: Syn.Bot.Siml.RequestType.None
-  name: None
-  href: api/Syn.Bot.Siml.RequestType.html#Syn_Bot_Siml_RequestType_None
-  commentId: F:Syn.Bot.Siml.RequestType.None
-  fullName: Syn.Bot.Siml.RequestType.None
-- uid: Syn.Bot.Siml.RequestType.UserMessage
-  name: UserMessage
-  href: api/Syn.Bot.Siml.RequestType.html#Syn_Bot_Siml_RequestType_UserMessage
-  commentId: F:Syn.Bot.Siml.RequestType.UserMessage
-  fullName: Syn.Bot.Siml.RequestType.UserMessage
 - uid: Syn.Bot.Siml.ResultType
   name: ResultType
   href: api/Syn.Bot.Siml.ResultType.html#Syn_Bot_Siml_ResultType
@@ -7191,51 +7166,6 @@ references:
   href: api/Syn.Bot.Utility.Format.WebSuggestionFormatter.html#Syn_Bot_Utility_Format_WebSuggestionFormatter_Format_Syn_Bot_Siml_Collections_SuggestionCollection_
   commentId: M:Syn.Bot.Utility.Format.WebSuggestionFormatter.Format(Syn.Bot.Siml.Collections.SuggestionCollection)
   fullName: Syn.Bot.Utility.Format.WebSuggestionFormatter.Format(Syn.Bot.Siml.Collections.SuggestionCollection)
-- uid: Syn.Bot.Utility.Plugins
-  name: Syn.Bot.Utility.Plugins
-  href: api/Syn.Bot.Utility.Plugins.html#Syn_Bot_Utility_Plugins
-  commentId: N:Syn.Bot.Utility.Plugins
-  fullName: Syn.Bot.Utility.Plugins
-- uid: Syn.Bot.Utility.Plugins.DisplayMessageEventArgs
-  name: DisplayMessageEventArgs
-  href: api/Syn.Bot.Utility.Plugins.DisplayMessageEventArgs.html#Syn_Bot_Utility_Plugins_DisplayMessageEventArgs
-  commentId: T:Syn.Bot.Utility.Plugins.DisplayMessageEventArgs
-  fullName: Syn.Bot.Utility.Plugins.DisplayMessageEventArgs
-- uid: Syn.Bot.Utility.Plugins.DisplayMessageEventArgs.#ctor(System.String)
-  name: DisplayMessageEventArgs(String)
-  href: api/Syn.Bot.Utility.Plugins.DisplayMessageEventArgs.html#Syn_Bot_Utility_Plugins_DisplayMessageEventArgs__ctor_System_String_
-  commentId: M:Syn.Bot.Utility.Plugins.DisplayMessageEventArgs.#ctor(System.String)
-  fullName: Syn.Bot.Utility.Plugins.DisplayMessageEventArgs.DisplayMessageEventArgs(System.String)
-- uid: Syn.Bot.Utility.Plugins.DisplayMessageEventArgs.Message
-  name: Message
-  href: api/Syn.Bot.Utility.Plugins.DisplayMessageEventArgs.html#Syn_Bot_Utility_Plugins_DisplayMessageEventArgs_Message
-  commentId: P:Syn.Bot.Utility.Plugins.DisplayMessageEventArgs.Message
-  fullName: Syn.Bot.Utility.Plugins.DisplayMessageEventArgs.Message
-- uid: Syn.Bot.Utility.Plugins.SavingFileEventArgs
-  name: SavingFileEventArgs
-  href: api/Syn.Bot.Utility.Plugins.SavingFileEventArgs.html#Syn_Bot_Utility_Plugins_SavingFileEventArgs
-  commentId: T:Syn.Bot.Utility.Plugins.SavingFileEventArgs
-  fullName: Syn.Bot.Utility.Plugins.SavingFileEventArgs
-- uid: Syn.Bot.Utility.Plugins.SavingFileEventArgs.#ctor(System.Xml.Linq.XDocument,System.String,System.String)
-  name: SavingFileEventArgs(XDocument, String, String)
-  href: api/Syn.Bot.Utility.Plugins.SavingFileEventArgs.html#Syn_Bot_Utility_Plugins_SavingFileEventArgs__ctor_System_Xml_Linq_XDocument_System_String_System_String_
-  commentId: M:Syn.Bot.Utility.Plugins.SavingFileEventArgs.#ctor(System.Xml.Linq.XDocument,System.String,System.String)
-  fullName: Syn.Bot.Utility.Plugins.SavingFileEventArgs.SavingFileEventArgs(System.Xml.Linq.XDocument, System.String, System.String)
-- uid: Syn.Bot.Utility.Plugins.SavingFileEventArgs.Document
-  name: Document
-  href: api/Syn.Bot.Utility.Plugins.SavingFileEventArgs.html#Syn_Bot_Utility_Plugins_SavingFileEventArgs_Document
-  commentId: P:Syn.Bot.Utility.Plugins.SavingFileEventArgs.Document
-  fullName: Syn.Bot.Utility.Plugins.SavingFileEventArgs.Document
-- uid: Syn.Bot.Utility.Plugins.SavingFileEventArgs.FileId
-  name: FileId
-  href: api/Syn.Bot.Utility.Plugins.SavingFileEventArgs.html#Syn_Bot_Utility_Plugins_SavingFileEventArgs_FileId
-  commentId: P:Syn.Bot.Utility.Plugins.SavingFileEventArgs.FileId
-  fullName: Syn.Bot.Utility.Plugins.SavingFileEventArgs.FileId
-- uid: Syn.Bot.Utility.Plugins.SavingFileEventArgs.Name
-  name: Name
-  href: api/Syn.Bot.Utility.Plugins.SavingFileEventArgs.html#Syn_Bot_Utility_Plugins_SavingFileEventArgs_Name
-  commentId: P:Syn.Bot.Utility.Plugins.SavingFileEventArgs.Name
-  fullName: Syn.Bot.Utility.Plugins.SavingFileEventArgs.Name
 - uid: Syn.Bot.Utility.ProjectManager
   name: ProjectManager
   href: api/Syn.Bot.Utility.ProjectManager.html#Syn_Bot_Utility_ProjectManager
@@ -7356,6 +7286,21 @@ references:
   href: api/Syn.Bot.Utility.ProjectManager.html#Syn_Bot_Utility_ProjectManager_Templates
   commentId: P:Syn.Bot.Utility.ProjectManager.Templates
   fullName: Syn.Bot.Utility.ProjectManager.Templates
+- uid: Syn.Bot.Utility.SimlFileManager
+  name: SimlFileManager
+  href: api/Syn.Bot.Utility.SimlFileManager.html#Syn_Bot_Utility_SimlFileManager
+  commentId: T:Syn.Bot.Utility.SimlFileManager
+  fullName: Syn.Bot.Utility.SimlFileManager
+- uid: Syn.Bot.Utility.SimlFileManager.#ctor(System.String)
+  name: SimlFileManager(String)
+  href: api/Syn.Bot.Utility.SimlFileManager.html#Syn_Bot_Utility_SimlFileManager__ctor_System_String_
+  commentId: M:Syn.Bot.Utility.SimlFileManager.#ctor(System.String)
+  fullName: Syn.Bot.Utility.SimlFileManager.SimlFileManager(System.String)
+- uid: Syn.Bot.Utility.SimlFileManager.SaveDocument(System.String,System.Xml.Linq.XDocument)
+  name: SaveDocument(String, XDocument)
+  href: api/Syn.Bot.Utility.SimlFileManager.html#Syn_Bot_Utility_SimlFileManager_SaveDocument_System_String_System_Xml_Linq_XDocument_
+  commentId: M:Syn.Bot.Utility.SimlFileManager.SaveDocument(System.String,System.Xml.Linq.XDocument)
+  fullName: Syn.Bot.Utility.SimlFileManager.SaveDocument(System.String, System.Xml.Linq.XDocument)
 - uid: Syn.EmotionML
   name: Syn.EmotionML
   href: api/Syn.EmotionML.html#Syn_EmotionML
@@ -8869,6 +8814,11 @@ references:
   href: api/Syn.Utility.SynUtility.html#Syn_Utility_SynUtility_JavaScript
   commentId: P:Syn.Utility.SynUtility.JavaScript
   fullName: Syn.Utility.SynUtility.JavaScript
+- uid: Syn.Utility.SynUtility.List
+  name: List
+  href: api/Syn.Utility.SynUtility.html#Syn_Utility_SynUtility_List
+  commentId: P:Syn.Utility.SynUtility.List
+  fullName: Syn.Utility.SynUtility.List
 - uid: Syn.Utility.SynUtility.Math
   name: Math
   href: api/Syn.Utility.SynUtility.html#Syn_Utility_SynUtility_Math
@@ -9186,6 +9136,16 @@ references:
   href: api/Syn.Utility.Utilities.ComputerUtility.html#Syn_Utility_Utilities_ComputerUtility_ExitWindowsEx_System_UInt32_System_UInt32_
   commentId: M:Syn.Utility.Utilities.ComputerUtility.ExitWindowsEx(System.UInt32,System.UInt32)
   fullName: Syn.Utility.Utilities.ComputerUtility.ExitWindowsEx(System.UInt32, System.UInt32)
+- uid: Syn.Utility.Utilities.ComputerUtility.GetUserTileImagePath(System.String)
+  name: GetUserTileImagePath(String)
+  href: api/Syn.Utility.Utilities.ComputerUtility.html#Syn_Utility_Utilities_ComputerUtility_GetUserTileImagePath_System_String_
+  commentId: M:Syn.Utility.Utilities.ComputerUtility.GetUserTileImagePath(System.String)
+  fullName: Syn.Utility.Utilities.ComputerUtility.GetUserTileImagePath(System.String)
+- uid: Syn.Utility.Utilities.ComputerUtility.GetUserTilePath(System.String,System.UInt32,System.Text.StringBuilder,System.Int32)
+  name: GetUserTilePath(String, UInt32, StringBuilder, Int32)
+  href: api/Syn.Utility.Utilities.ComputerUtility.html#Syn_Utility_Utilities_ComputerUtility_GetUserTilePath_System_String_System_UInt32_System_Text_StringBuilder_System_Int32_
+  commentId: M:Syn.Utility.Utilities.ComputerUtility.GetUserTilePath(System.String,System.UInt32,System.Text.StringBuilder,System.Int32)
+  fullName: Syn.Utility.Utilities.ComputerUtility.GetUserTilePath(System.String, System.UInt32, System.Text.StringBuilder, System.Int32)
 - uid: Syn.Utility.Utilities.ComputerUtility.Lock
   name: Lock()
   href: api/Syn.Utility.Utilities.ComputerUtility.html#Syn_Utility_Utilities_ComputerUtility_Lock
@@ -9281,6 +9241,11 @@ references:
   href: api/Syn.Utility.Utilities.FileUtility.html#Syn_Utility_Utilities_FileUtility_GetAbsolutePath_System_String_
   commentId: M:Syn.Utility.Utilities.FileUtility.GetAbsolutePath(System.String)
   fullName: Syn.Utility.Utilities.FileUtility.GetAbsolutePath(System.String)
+- uid: Syn.Utility.Utilities.FileUtility.GetTempFileName(System.String)
+  name: GetTempFileName(String)
+  href: api/Syn.Utility.Utilities.FileUtility.html#Syn_Utility_Utilities_FileUtility_GetTempFileName_System_String_
+  commentId: M:Syn.Utility.Utilities.FileUtility.GetTempFileName(System.String)
+  fullName: Syn.Utility.Utilities.FileUtility.GetTempFileName(System.String)
 - uid: Syn.Utility.Utilities.ImageUtility
   name: ImageUtility
   href: api/Syn.Utility.Utilities.ImageUtility.html#Syn_Utility_Utilities_ImageUtility
@@ -9311,11 +9276,35 @@ references:
   href: api/Syn.Utility.Utilities.JavaScriptUtility.html#Syn_Utility_Utilities_JavaScriptUtility_Beautify_System_String_Syn_Utility_Internal_JsBeautifyOptions_
   commentId: M:Syn.Utility.Utilities.JavaScriptUtility.Beautify(System.String,Syn.Utility.Internal.JsBeautifyOptions)
   fullName: Syn.Utility.Utilities.JavaScriptUtility.Beautify(System.String, Syn.Utility.Internal.JsBeautifyOptions)
+- uid: Syn.Utility.Utilities.ListUtility
+  name: ListUtility
+  href: api/Syn.Utility.Utilities.ListUtility.html#Syn_Utility_Utilities_ListUtility
+  commentId: T:Syn.Utility.Utilities.ListUtility
+  fullName: Syn.Utility.Utilities.ListUtility
+- uid: Syn.Utility.Utilities.ListUtility.Arrange``1(System.Collections.Generic.List{``0},System.Func{``0,System.String},System.String[])
+  name: Arrange<T>(List<T>, Func<T, String>, String[])
+  href: api/Syn.Utility.Utilities.ListUtility.html#Syn_Utility_Utilities_ListUtility_Arrange__1_System_Collections_Generic_List___0__System_Func___0_System_String__System_String___
+  commentId: M:Syn.Utility.Utilities.ListUtility.Arrange``1(System.Collections.Generic.List{``0},System.Func{``0,System.String},System.String[])
+  name.vb: Arrange(Of T)(List(Of T), Func(Of T, String), String())
+  fullName: Syn.Utility.Utilities.ListUtility.Arrange<T>(System.Collections.Generic.List<T>, System.Func<T, System.String>, System.String[])
+  fullName.vb: Syn.Utility.Utilities.ListUtility.Arrange(Of T)(System.Collections.Generic.List(Of T), System.Func(Of T, System.String), System.String())
+- uid: Syn.Utility.Utilities.ListUtility.Shuffle``1(System.Collections.Generic.IList{``0})
+  name: Shuffle<T>(IList<T>)
+  href: api/Syn.Utility.Utilities.ListUtility.html#Syn_Utility_Utilities_ListUtility_Shuffle__1_System_Collections_Generic_IList___0__
+  commentId: M:Syn.Utility.Utilities.ListUtility.Shuffle``1(System.Collections.Generic.IList{``0})
+  name.vb: Shuffle(Of T)(IList(Of T))
+  fullName: Syn.Utility.Utilities.ListUtility.Shuffle<T>(System.Collections.Generic.IList<T>)
+  fullName.vb: Syn.Utility.Utilities.ListUtility.Shuffle(Of T)(System.Collections.Generic.IList(Of T))
 - uid: Syn.Utility.Utilities.MathUtility
   name: MathUtility
   href: api/Syn.Utility.Utilities.MathUtility.html#Syn_Utility_Utilities_MathUtility
   commentId: T:Syn.Utility.Utilities.MathUtility
   fullName: Syn.Utility.Utilities.MathUtility
+- uid: Syn.Utility.Utilities.MathUtility.Random
+  name: Random
+  href: api/Syn.Utility.Utilities.MathUtility.html#Syn_Utility_Utilities_MathUtility_Random
+  commentId: P:Syn.Utility.Utilities.MathUtility.Random
+  fullName: Syn.Utility.Utilities.MathUtility.Random
 - uid: Syn.Utility.Utilities.MathUtility.Randomise(System.Int32,System.Int32)
   name: Randomise(Int32, Int32)
   href: api/Syn.Utility.Utilities.MathUtility.html#Syn_Utility_Utilities_MathUtility_Randomise_System_Int32_System_Int32_
@@ -9543,16 +9532,16 @@ references:
   href: api/Syn.Utility.Utilities.ScreenUtility.html#Syn_Utility_Utilities_ScreenUtility
   commentId: T:Syn.Utility.Utilities.ScreenUtility
   fullName: Syn.Utility.Utilities.ScreenUtility
-- uid: Syn.Utility.Utilities.ScreenUtility.BestWideWindowSize
-  name: BestWideWindowSize()
-  href: api/Syn.Utility.Utilities.ScreenUtility.html#Syn_Utility_Utilities_ScreenUtility_BestWideWindowSize
-  commentId: M:Syn.Utility.Utilities.ScreenUtility.BestWideWindowSize
-  fullName: Syn.Utility.Utilities.ScreenUtility.BestWideWindowSize()
-- uid: Syn.Utility.Utilities.ScreenUtility.BestWindowSize
-  name: BestWindowSize()
-  href: api/Syn.Utility.Utilities.ScreenUtility.html#Syn_Utility_Utilities_ScreenUtility_BestWindowSize
-  commentId: M:Syn.Utility.Utilities.ScreenUtility.BestWindowSize
-  fullName: Syn.Utility.Utilities.ScreenUtility.BestWindowSize()
+- uid: Syn.Utility.Utilities.ScreenUtility.GetScreenshot
+  name: GetScreenshot()
+  href: api/Syn.Utility.Utilities.ScreenUtility.html#Syn_Utility_Utilities_ScreenUtility_GetScreenshot
+  commentId: M:Syn.Utility.Utilities.ScreenUtility.GetScreenshot
+  fullName: Syn.Utility.Utilities.ScreenUtility.GetScreenshot()
+- uid: Syn.Utility.Utilities.ScreenUtility.GetWindowSize(Syn.Utility.Utilities.WindowSizeType)
+  name: GetWindowSize(WindowSizeType)
+  href: api/Syn.Utility.Utilities.ScreenUtility.html#Syn_Utility_Utilities_ScreenUtility_GetWindowSize_Syn_Utility_Utilities_WindowSizeType_
+  commentId: M:Syn.Utility.Utilities.ScreenUtility.GetWindowSize(Syn.Utility.Utilities.WindowSizeType)
+  fullName: Syn.Utility.Utilities.ScreenUtility.GetWindowSize(Syn.Utility.Utilities.WindowSizeType)
 - uid: Syn.Utility.Utilities.SecurityUtility
   name: SecurityUtility
   href: api/Syn.Utility.Utilities.SecurityUtility.html#Syn_Utility_Utilities_SecurityUtility
@@ -10227,6 +10216,26 @@ references:
   href: api/Syn.Utility.Utilities.Win32Utility.ZOrder.html#Syn_Utility_Utilities_Win32Utility_ZOrder_Topmost
   commentId: F:Syn.Utility.Utilities.Win32Utility.ZOrder.Topmost
   fullName: Syn.Utility.Utilities.Win32Utility.ZOrder.Topmost
+- uid: Syn.Utility.Utilities.WindowSizeType
+  name: WindowSizeType
+  href: api/Syn.Utility.Utilities.WindowSizeType.html#Syn_Utility_Utilities_WindowSizeType
+  commentId: T:Syn.Utility.Utilities.WindowSizeType
+  fullName: Syn.Utility.Utilities.WindowSizeType
+- uid: Syn.Utility.Utilities.WindowSizeType.Normal
+  name: Normal
+  href: api/Syn.Utility.Utilities.WindowSizeType.html#Syn_Utility_Utilities_WindowSizeType_Normal
+  commentId: F:Syn.Utility.Utilities.WindowSizeType.Normal
+  fullName: Syn.Utility.Utilities.WindowSizeType.Normal
+- uid: Syn.Utility.Utilities.WindowSizeType.Square
+  name: Square
+  href: api/Syn.Utility.Utilities.WindowSizeType.html#Syn_Utility_Utilities_WindowSizeType_Square
+  commentId: F:Syn.Utility.Utilities.WindowSizeType.Square
+  fullName: Syn.Utility.Utilities.WindowSizeType.Square
+- uid: Syn.Utility.Utilities.WindowSizeType.Wide
+  name: Wide
+  href: api/Syn.Utility.Utilities.WindowSizeType.html#Syn_Utility_Utilities_WindowSizeType_Wide
+  commentId: F:Syn.Utility.Utilities.WindowSizeType.Wide
+  fullName: Syn.Utility.Utilities.WindowSizeType.Wide
 - uid: Syn.Utility.Utilities.WpfUtility
   name: WpfUtility
   href: api/Syn.Utility.Utilities.WpfUtility.html#Syn_Utility_Utilities_WpfUtility
@@ -10359,6 +10368,84 @@ references:
   href: api/Syn.VA.Collections.html#Syn_VA_Collections
   commentId: N:Syn.VA.Collections
   fullName: Syn.VA.Collections
+- uid: Syn.VA.Collections.ChoiceCollection
+  name: ChoiceCollection
+  href: api/Syn.VA.Collections.ChoiceCollection.html#Syn_VA_Collections_ChoiceCollection
+  commentId: T:Syn.VA.Collections.ChoiceCollection
+  fullName: Syn.VA.Collections.ChoiceCollection
+- uid: Syn.VA.Collections.ChoiceCollection.#ctor
+  name: ChoiceCollection()
+  href: api/Syn.VA.Collections.ChoiceCollection.html#Syn_VA_Collections_ChoiceCollection__ctor
+  commentId: M:Syn.VA.Collections.ChoiceCollection.#ctor
+  fullName: Syn.VA.Collections.ChoiceCollection.ChoiceCollection()
+- uid: Syn.VA.Collections.ChoiceCollection.Add(Syn.VA.Interfaces.IChoiceItem)
+  name: Add(IChoiceItem)
+  href: api/Syn.VA.Collections.ChoiceCollection.html#Syn_VA_Collections_ChoiceCollection_Add_Syn_VA_Interfaces_IChoiceItem_
+  commentId: M:Syn.VA.Collections.ChoiceCollection.Add(Syn.VA.Interfaces.IChoiceItem)
+  fullName: Syn.VA.Collections.ChoiceCollection.Add(Syn.VA.Interfaces.IChoiceItem)
+- uid: Syn.VA.Collections.ChoiceCollection.Clear
+  name: Clear()
+  href: api/Syn.VA.Collections.ChoiceCollection.html#Syn_VA_Collections_ChoiceCollection_Clear
+  commentId: M:Syn.VA.Collections.ChoiceCollection.Clear
+  fullName: Syn.VA.Collections.ChoiceCollection.Clear()
+- uid: Syn.VA.Collections.ChoiceCollection.Contains(Syn.VA.Interfaces.IChoiceItem)
+  name: Contains(IChoiceItem)
+  href: api/Syn.VA.Collections.ChoiceCollection.html#Syn_VA_Collections_ChoiceCollection_Contains_Syn_VA_Interfaces_IChoiceItem_
+  commentId: M:Syn.VA.Collections.ChoiceCollection.Contains(Syn.VA.Interfaces.IChoiceItem)
+  fullName: Syn.VA.Collections.ChoiceCollection.Contains(Syn.VA.Interfaces.IChoiceItem)
+- uid: Syn.VA.Collections.ChoiceCollection.CopyTo(Syn.VA.Interfaces.IChoiceItem[],System.Int32)
+  name: CopyTo(IChoiceItem[], Int32)
+  href: api/Syn.VA.Collections.ChoiceCollection.html#Syn_VA_Collections_ChoiceCollection_CopyTo_Syn_VA_Interfaces_IChoiceItem___System_Int32_
+  commentId: M:Syn.VA.Collections.ChoiceCollection.CopyTo(Syn.VA.Interfaces.IChoiceItem[],System.Int32)
+  name.vb: CopyTo(IChoiceItem(), Int32)
+  fullName: Syn.VA.Collections.ChoiceCollection.CopyTo(Syn.VA.Interfaces.IChoiceItem[], System.Int32)
+  fullName.vb: Syn.VA.Collections.ChoiceCollection.CopyTo(Syn.VA.Interfaces.IChoiceItem(), System.Int32)
+- uid: Syn.VA.Collections.ChoiceCollection.Count
+  name: Count
+  href: api/Syn.VA.Collections.ChoiceCollection.html#Syn_VA_Collections_ChoiceCollection_Count
+  commentId: P:Syn.VA.Collections.ChoiceCollection.Count
+  fullName: Syn.VA.Collections.ChoiceCollection.Count
+- uid: Syn.VA.Collections.ChoiceCollection.GetEnumerator
+  name: GetEnumerator()
+  href: api/Syn.VA.Collections.ChoiceCollection.html#Syn_VA_Collections_ChoiceCollection_GetEnumerator
+  commentId: M:Syn.VA.Collections.ChoiceCollection.GetEnumerator
+  fullName: Syn.VA.Collections.ChoiceCollection.GetEnumerator()
+- uid: Syn.VA.Collections.ChoiceCollection.IsReadOnly
+  name: IsReadOnly
+  href: api/Syn.VA.Collections.ChoiceCollection.html#Syn_VA_Collections_ChoiceCollection_IsReadOnly
+  commentId: P:Syn.VA.Collections.ChoiceCollection.IsReadOnly
+  fullName: Syn.VA.Collections.ChoiceCollection.IsReadOnly
+- uid: Syn.VA.Collections.ChoiceCollection.Remove(Syn.VA.Interfaces.IChoiceItem)
+  name: Remove(IChoiceItem)
+  href: api/Syn.VA.Collections.ChoiceCollection.html#Syn_VA_Collections_ChoiceCollection_Remove_Syn_VA_Interfaces_IChoiceItem_
+  commentId: M:Syn.VA.Collections.ChoiceCollection.Remove(Syn.VA.Interfaces.IChoiceItem)
+  fullName: Syn.VA.Collections.ChoiceCollection.Remove(Syn.VA.Interfaces.IChoiceItem)
+- uid: Syn.VA.Collections.ChoiceCollection.System#Collections#IEnumerable#GetEnumerator
+  name: IEnumerable.GetEnumerator()
+  href: api/Syn.VA.Collections.ChoiceCollection.html#Syn_VA_Collections_ChoiceCollection_System_Collections_IEnumerable_GetEnumerator
+  commentId: M:Syn.VA.Collections.ChoiceCollection.System#Collections#IEnumerable#GetEnumerator
+  name.vb: System.Collections.IEnumerable.GetEnumerator()
+  fullName: Syn.VA.Collections.ChoiceCollection.System.Collections.IEnumerable.GetEnumerator()
+- uid: Syn.VA.Collections.ChoiceItem
+  name: ChoiceItem
+  href: api/Syn.VA.Collections.ChoiceItem.html#Syn_VA_Collections_ChoiceItem
+  commentId: T:Syn.VA.Collections.ChoiceItem
+  fullName: Syn.VA.Collections.ChoiceItem
+- uid: Syn.VA.Collections.ChoiceItem.#ctor(System.String,System.String)
+  name: ChoiceItem(String, String)
+  href: api/Syn.VA.Collections.ChoiceItem.html#Syn_VA_Collections_ChoiceItem__ctor_System_String_System_String_
+  commentId: M:Syn.VA.Collections.ChoiceItem.#ctor(System.String,System.String)
+  fullName: Syn.VA.Collections.ChoiceItem.ChoiceItem(System.String, System.String)
+- uid: Syn.VA.Collections.ChoiceItem.Category
+  name: Category
+  href: api/Syn.VA.Collections.ChoiceItem.html#Syn_VA_Collections_ChoiceItem_Category
+  commentId: P:Syn.VA.Collections.ChoiceItem.Category
+  fullName: Syn.VA.Collections.ChoiceItem.Category
+- uid: Syn.VA.Collections.ChoiceItem.Value
+  name: Value
+  href: api/Syn.VA.Collections.ChoiceItem.html#Syn_VA_Collections_ChoiceItem_Value
+  commentId: P:Syn.VA.Collections.ChoiceItem.Value
+  fullName: Syn.VA.Collections.ChoiceItem.Value
 - uid: Syn.VA.Collections.PluginCollection
   name: PluginCollection
   href: api/Syn.VA.Collections.PluginCollection.html#Syn_VA_Collections_PluginCollection
@@ -10718,6 +10805,11 @@ references:
   href: api/Syn.VA.EventType.html#Syn_VA_EventType
   commentId: T:Syn.VA.EventType
   fullName: Syn.VA.EventType
+- uid: Syn.VA.EventType.Closing
+  name: Closing
+  href: api/Syn.VA.EventType.html#Syn_VA_EventType_Closing
+  commentId: F:Syn.VA.EventType.Closing
+  fullName: Syn.VA.EventType.Closing
 - uid: Syn.VA.EventType.FirstLoad
   name: FirstLoad
   href: api/Syn.VA.EventType.html#Syn_VA_EventType_FirstLoad
@@ -10728,11 +10820,11 @@ references:
   href: api/Syn.VA.EventType.html#Syn_VA_EventType_Loaded
   commentId: F:Syn.VA.EventType.Loaded
   fullName: Syn.VA.EventType.Loaded
-- uid: Syn.VA.EventType.Shutdown
-  name: Shutdown
-  href: api/Syn.VA.EventType.html#Syn_VA_EventType_Shutdown
-  commentId: F:Syn.VA.EventType.Shutdown
-  fullName: Syn.VA.EventType.Shutdown
+- uid: Syn.VA.EventType.Resetting
+  name: Resetting
+  href: api/Syn.VA.EventType.html#Syn_VA_EventType_Resetting
+  commentId: F:Syn.VA.EventType.Resetting
+  fullName: Syn.VA.EventType.Resetting
 - uid: Syn.VA.Extensions
   name: Syn.VA.Extensions
   href: api/Syn.VA.Extensions.html#Syn_VA_Extensions
@@ -10769,6 +10861,11 @@ references:
   href: api/Syn.VA.Extensions.StringExtensions.html#Syn_VA_Extensions_StringExtensions
   commentId: T:Syn.VA.Extensions.StringExtensions
   fullName: Syn.VA.Extensions.StringExtensions
+- uid: Syn.VA.Extensions.StringExtensions.ContainsWithoutCase(System.String,System.String)
+  name: ContainsWithoutCase(String, String)
+  href: api/Syn.VA.Extensions.StringExtensions.html#Syn_VA_Extensions_StringExtensions_ContainsWithoutCase_System_String_System_String_
+  commentId: M:Syn.VA.Extensions.StringExtensions.ContainsWithoutCase(System.String,System.String)
+  fullName: Syn.VA.Extensions.StringExtensions.ContainsWithoutCase(System.String, System.String)
 - uid: Syn.VA.Extensions.StringExtensions.EqualsWithoutCase(System.String,System.String)
   name: EqualsWithoutCase(String, String)
   href: api/Syn.VA.Extensions.StringExtensions.html#Syn_VA_Extensions_StringExtensions_EqualsWithoutCase_System_String_System_String_
@@ -10947,21 +11044,20 @@ references:
   name.vb: SetValue(Of T)(IVariable, T)
   fullName: Syn.VA.Extensions.VariableExtensions.SetValue<T>(Syn.VA.Interfaces.IVariable, T)
   fullName.vb: Syn.VA.Extensions.VariableExtensions.SetValue(Of T)(Syn.VA.Interfaces.IVariable, T)
-- uid: Syn.VA.FolderPath
-  name: FolderPath
-  href: api/Syn.VA.FolderPath.html#Syn_VA_FolderPath
-  commentId: T:Syn.VA.FolderPath
-  fullName: Syn.VA.FolderPath
-- uid: Syn.VA.FolderPath.Avatars
-  name: Avatars
-  href: api/Syn.VA.FolderPath.html#Syn_VA_FolderPath_Avatars
-  commentId: P:Syn.VA.FolderPath.Avatars
-  fullName: Syn.VA.FolderPath.Avatars
-- uid: Syn.VA.FolderPath.Resources
-  name: Resources
-  href: api/Syn.VA.FolderPath.html#Syn_VA_FolderPath_Resources
-  commentId: P:Syn.VA.FolderPath.Resources
-  fullName: Syn.VA.FolderPath.Resources
+- uid: Syn.VA.Extensions.VariableExtensions.ValueAs``1(Syn.VA.Interfaces.IVariable)
+  name: ValueAs<T>(IVariable)
+  href: api/Syn.VA.Extensions.VariableExtensions.html#Syn_VA_Extensions_VariableExtensions_ValueAs__1_Syn_VA_Interfaces_IVariable_
+  commentId: M:Syn.VA.Extensions.VariableExtensions.ValueAs``1(Syn.VA.Interfaces.IVariable)
+  name.vb: ValueAs(Of T)(IVariable)
+  fullName: Syn.VA.Extensions.VariableExtensions.ValueAs<T>(Syn.VA.Interfaces.IVariable)
+  fullName.vb: Syn.VA.Extensions.VariableExtensions.ValueAs(Of T)(Syn.VA.Interfaces.IVariable)
+- uid: Syn.VA.Extensions.VariableExtensions.ValueAs``1(Syn.VA.Interfaces.IVariable,``0)
+  name: ValueAs<T>(IVariable, T)
+  href: api/Syn.VA.Extensions.VariableExtensions.html#Syn_VA_Extensions_VariableExtensions_ValueAs__1_Syn_VA_Interfaces_IVariable___0_
+  commentId: M:Syn.VA.Extensions.VariableExtensions.ValueAs``1(Syn.VA.Interfaces.IVariable,``0)
+  name.vb: ValueAs(Of T)(IVariable, T)
+  fullName: Syn.VA.Extensions.VariableExtensions.ValueAs<T>(Syn.VA.Interfaces.IVariable, T)
+  fullName.vb: Syn.VA.Extensions.VariableExtensions.ValueAs(Of T)(Syn.VA.Interfaces.IVariable, T)
 - uid: Syn.VA.FunctionalVariable
   name: FunctionalVariable
   href: api/Syn.VA.FunctionalVariable.html#Syn_VA_FunctionalVariable
@@ -11151,6 +11247,11 @@ references:
   href: api/Syn.VA.Interaction.InteractionManager.html#Syn_VA_Interaction_InteractionManager__ctor
   commentId: M:Syn.VA.Interaction.InteractionManager.#ctor
   fullName: Syn.VA.Interaction.InteractionManager.InteractionManager()
+- uid: Syn.VA.Interaction.InteractionManager.Choices
+  name: Choices
+  href: api/Syn.VA.Interaction.InteractionManager.html#Syn_VA_Interaction_InteractionManager_Choices
+  commentId: P:Syn.VA.Interaction.InteractionManager.Choices
+  fullName: Syn.VA.Interaction.InteractionManager.Choices
 - uid: Syn.VA.Interaction.InteractionManager.LastMessage
   name: LastMessage
   href: api/Syn.VA.Interaction.InteractionManager.html#Syn_VA_Interaction_InteractionManager_LastMessage
@@ -11171,11 +11272,76 @@ references:
   href: api/Syn.VA.Interaction.InteractionManager.html#Syn_VA_Interaction_InteractionManager_ResponseReceived
   commentId: E:Syn.VA.Interaction.InteractionManager.ResponseReceived
   fullName: Syn.VA.Interaction.InteractionManager.ResponseReceived
+- uid: Syn.VA.Interaction.InteractionManager.SendMessage(Syn.VA.Interaction.Message)
+  name: SendMessage(Message)
+  href: api/Syn.VA.Interaction.InteractionManager.html#Syn_VA_Interaction_InteractionManager_SendMessage_Syn_VA_Interaction_Message_
+  commentId: M:Syn.VA.Interaction.InteractionManager.SendMessage(Syn.VA.Interaction.Message)
+  fullName: Syn.VA.Interaction.InteractionManager.SendMessage(Syn.VA.Interaction.Message)
 - uid: Syn.VA.Interaction.InteractionManager.SendMessage(System.String)
   name: SendMessage(String)
   href: api/Syn.VA.Interaction.InteractionManager.html#Syn_VA_Interaction_InteractionManager_SendMessage_System_String_
   commentId: M:Syn.VA.Interaction.InteractionManager.SendMessage(System.String)
   fullName: Syn.VA.Interaction.InteractionManager.SendMessage(System.String)
+- uid: Syn.VA.Interaction.Message
+  name: Message
+  href: api/Syn.VA.Interaction.Message.html#Syn_VA_Interaction_Message
+  commentId: T:Syn.VA.Interaction.Message
+  fullName: Syn.VA.Interaction.Message
+- uid: Syn.VA.Interaction.Message.#ctor
+  name: Message()
+  href: api/Syn.VA.Interaction.Message.html#Syn_VA_Interaction_Message__ctor
+  commentId: M:Syn.VA.Interaction.Message.#ctor
+  fullName: Syn.VA.Interaction.Message.Message()
+- uid: Syn.VA.Interaction.Message.Empty
+  name: Empty
+  href: api/Syn.VA.Interaction.Message.html#Syn_VA_Interaction_Message_Empty
+  commentId: F:Syn.VA.Interaction.Message.Empty
+  fullName: Syn.VA.Interaction.Message.Empty
+- uid: Syn.VA.Interaction.Message.From
+  name: From
+  href: api/Syn.VA.Interaction.Message.html#Syn_VA_Interaction_Message_From
+  commentId: P:Syn.VA.Interaction.Message.From
+  fullName: Syn.VA.Interaction.Message.From
+- uid: Syn.VA.Interaction.Message.IsEmpty
+  name: IsEmpty
+  href: api/Syn.VA.Interaction.Message.html#Syn_VA_Interaction_Message_IsEmpty
+  commentId: P:Syn.VA.Interaction.Message.IsEmpty
+  fullName: Syn.VA.Interaction.Message.IsEmpty
+- uid: Syn.VA.Interaction.Message.Text
+  name: Text
+  href: api/Syn.VA.Interaction.Message.html#Syn_VA_Interaction_Message_Text
+  commentId: P:Syn.VA.Interaction.Message.Text
+  fullName: Syn.VA.Interaction.Message.Text
+- uid: Syn.VA.Interaction.Message.Type
+  name: Type
+  href: api/Syn.VA.Interaction.Message.html#Syn_VA_Interaction_Message_Type
+  commentId: P:Syn.VA.Interaction.Message.Type
+  fullName: Syn.VA.Interaction.Message.Type
+- uid: Syn.VA.Interaction.Message.User
+  name: User
+  href: api/Syn.VA.Interaction.Message.html#Syn_VA_Interaction_Message_User
+  commentId: P:Syn.VA.Interaction.Message.User
+  fullName: Syn.VA.Interaction.Message.User
+- uid: Syn.VA.Interaction.MessageType
+  name: MessageType
+  href: api/Syn.VA.Interaction.MessageType.html#Syn_VA_Interaction_MessageType
+  commentId: T:Syn.VA.Interaction.MessageType
+  fullName: Syn.VA.Interaction.MessageType
+- uid: Syn.VA.Interaction.MessageType.EventMessage
+  name: EventMessage
+  href: api/Syn.VA.Interaction.MessageType.html#Syn_VA_Interaction_MessageType_EventMessage
+  commentId: F:Syn.VA.Interaction.MessageType.EventMessage
+  fullName: Syn.VA.Interaction.MessageType.EventMessage
+- uid: Syn.VA.Interaction.MessageType.None
+  name: None
+  href: api/Syn.VA.Interaction.MessageType.html#Syn_VA_Interaction_MessageType_None
+  commentId: F:Syn.VA.Interaction.MessageType.None
+  fullName: Syn.VA.Interaction.MessageType.None
+- uid: Syn.VA.Interaction.MessageType.UserMessage
+  name: UserMessage
+  href: api/Syn.VA.Interaction.MessageType.html#Syn_VA_Interaction_MessageType_UserMessage
+  commentId: F:Syn.VA.Interaction.MessageType.UserMessage
+  fullName: Syn.VA.Interaction.MessageType.UserMessage
 - uid: Syn.VA.Interaction.Response
   name: Response
   href: api/Syn.VA.Interaction.Response.html#Syn_VA_Interaction_Response
@@ -11186,6 +11352,11 @@ references:
   href: api/Syn.VA.Interaction.Response.html#Syn_VA_Interaction_Response__ctor
   commentId: M:Syn.VA.Interaction.Response.#ctor
   fullName: Syn.VA.Interaction.Response.Response()
+- uid: Syn.VA.Interaction.Response.From
+  name: From
+  href: api/Syn.VA.Interaction.Response.html#Syn_VA_Interaction_Response_From
+  commentId: P:Syn.VA.Interaction.Response.From
+  fullName: Syn.VA.Interaction.Response.From
 - uid: Syn.VA.Interaction.Response.Hint
   name: Hint
   href: api/Syn.VA.Interaction.Response.html#Syn_VA_Interaction_Response_Hint
@@ -11201,11 +11372,31 @@ references:
   href: api/Syn.VA.Interaction.Response.html#Syn_VA_Interaction_Response_Text
   commentId: P:Syn.VA.Interaction.Response.Text
   fullName: Syn.VA.Interaction.Response.Text
+- uid: Syn.VA.Interaction.Response.User
+  name: User
+  href: api/Syn.VA.Interaction.Response.html#Syn_VA_Interaction_Response_User
+  commentId: P:Syn.VA.Interaction.Response.User
+  fullName: Syn.VA.Interaction.Response.User
 - uid: Syn.VA.Interfaces
   name: Syn.VA.Interfaces
   href: api/Syn.VA.Interfaces.html#Syn_VA_Interfaces
   commentId: N:Syn.VA.Interfaces
   fullName: Syn.VA.Interfaces
+- uid: Syn.VA.Interfaces.IChoiceItem
+  name: IChoiceItem
+  href: api/Syn.VA.Interfaces.IChoiceItem.html#Syn_VA_Interfaces_IChoiceItem
+  commentId: T:Syn.VA.Interfaces.IChoiceItem
+  fullName: Syn.VA.Interfaces.IChoiceItem
+- uid: Syn.VA.Interfaces.IChoiceItem.Category
+  name: Category
+  href: api/Syn.VA.Interfaces.IChoiceItem.html#Syn_VA_Interfaces_IChoiceItem_Category
+  commentId: P:Syn.VA.Interfaces.IChoiceItem.Category
+  fullName: Syn.VA.Interfaces.IChoiceItem.Category
+- uid: Syn.VA.Interfaces.IChoiceItem.Value
+  name: Value
+  href: api/Syn.VA.Interfaces.IChoiceItem.html#Syn_VA_Interfaces_IChoiceItem_Value
+  commentId: P:Syn.VA.Interfaces.IChoiceItem.Value
+  fullName: Syn.VA.Interfaces.IChoiceItem.Value
 - uid: Syn.VA.Interfaces.IFunctionalVariable
   name: IFunctionalVariable
   href: api/Syn.VA.Interfaces.IFunctionalVariable.html#Syn_VA_Interfaces_IFunctionalVariable
@@ -11216,6 +11407,11 @@ references:
   href: api/Syn.VA.Interfaces.IPlugin.html#Syn_VA_Interfaces_IPlugin
   commentId: T:Syn.VA.Interfaces.IPlugin
   fullName: Syn.VA.Interfaces.IPlugin
+- uid: Syn.VA.Interfaces.IPlugin.DisplayName
+  name: DisplayName
+  href: api/Syn.VA.Interfaces.IPlugin.html#Syn_VA_Interfaces_IPlugin_DisplayName
+  commentId: P:Syn.VA.Interfaces.IPlugin.DisplayName
+  fullName: Syn.VA.Interfaces.IPlugin.DisplayName
 - uid: Syn.VA.Interfaces.IPlugin.GetPanel``1(System.Object[])
   name: GetPanel<T>(Object[])
   href: api/Syn.VA.Interfaces.IPlugin.html#Syn_VA_Interfaces_IPlugin_GetPanel__1_System_Object___
@@ -11233,11 +11429,6 @@ references:
   href: api/Syn.VA.Interfaces.IPlugin.html#Syn_VA_Interfaces_IPlugin_Settings
   commentId: P:Syn.VA.Interfaces.IPlugin.Settings
   fullName: Syn.VA.Interfaces.IPlugin.Settings
-- uid: Syn.VA.Interfaces.IPlugin.SpecialName
-  name: SpecialName
-  href: api/Syn.VA.Interfaces.IPlugin.html#Syn_VA_Interfaces_IPlugin_SpecialName
-  commentId: P:Syn.VA.Interfaces.IPlugin.SpecialName
-  fullName: Syn.VA.Interfaces.IPlugin.SpecialName
 - uid: Syn.VA.Interfaces.IVariable
   name: IVariable
   href: api/Syn.VA.Interfaces.IVariable.html#Syn_VA_Interfaces_IVariable
@@ -11347,6 +11538,11 @@ references:
   href: api/Syn.VA.Plugin.html#Syn_VA_Plugin
   commentId: T:Syn.VA.Plugin
   fullName: Syn.VA.Plugin
+- uid: Syn.VA.Plugin.DisplayName
+  name: DisplayName
+  href: api/Syn.VA.Plugin.html#Syn_VA_Plugin_DisplayName
+  commentId: P:Syn.VA.Plugin.DisplayName
+  fullName: Syn.VA.Plugin.DisplayName
 - uid: Syn.VA.Plugin.GetPanel``1(System.Object[])
   name: GetPanel<T>(Object[])
   href: api/Syn.VA.Plugin.html#Syn_VA_Plugin_GetPanel__1_System_Object___
@@ -11364,11 +11560,6 @@ references:
   href: api/Syn.VA.Plugin.html#Syn_VA_Plugin_Settings
   commentId: P:Syn.VA.Plugin.Settings
   fullName: Syn.VA.Plugin.Settings
-- uid: Syn.VA.Plugin.SpecialName
-  name: SpecialName
-  href: api/Syn.VA.Plugin.html#Syn_VA_Plugin_SpecialName
-  commentId: P:Syn.VA.Plugin.SpecialName
-  fullName: Syn.VA.Plugin.SpecialName
 - uid: Syn.VA.Plugin.VA
   name: VA
   href: api/Syn.VA.Plugin.html#Syn_VA_Plugin_VA
@@ -11573,6 +11764,11 @@ references:
   href: api/Syn.VA.SettingsManager.html#Syn_VA_SettingsManager_Contains_System_String_
   commentId: M:Syn.VA.SettingsManager.Contains(System.String)
   fullName: Syn.VA.SettingsManager.Contains(System.String)
+- uid: Syn.VA.SettingsManager.Create(System.String)
+  name: Create(String)
+  href: api/Syn.VA.SettingsManager.html#Syn_VA_SettingsManager_Create_System_String_
+  commentId: M:Syn.VA.SettingsManager.Create(System.String)
+  fullName: Syn.VA.SettingsManager.Create(System.String)
 - uid: Syn.VA.SettingsManager.Create(System.String,System.String)
   name: Create(String, String)
   href: api/Syn.VA.SettingsManager.html#Syn_VA_SettingsManager_Create_System_String_System_String_
@@ -11585,13 +11781,6 @@ references:
   name.vb: Item(String)
   fullName: Syn.VA.SettingsManager.Item[System.String]
   fullName.vb: Syn.VA.SettingsManager.Item(System.String)
-- uid: Syn.VA.SettingsManager.Item(System.String,System.String)
-  name: Item[String, String]
-  href: api/Syn.VA.SettingsManager.html#Syn_VA_SettingsManager_Item_System_String_System_String_
-  commentId: P:Syn.VA.SettingsManager.Item(System.String,System.String)
-  name.vb: Item(String, String)
-  fullName: Syn.VA.SettingsManager.Item[System.String, System.String]
-  fullName.vb: Syn.VA.SettingsManager.Item(System.String, System.String)
 - uid: Syn.VA.SettingsManager.SettingsSaved
   name: SettingsSaved
   href: api/Syn.VA.SettingsManager.html#Syn_VA_SettingsManager_SettingsSaved
@@ -11965,6 +12154,21 @@ references:
   href: api/Syn.VA.User.html#Syn_VA_User
   commentId: T:Syn.VA.User
   fullName: Syn.VA.User
+- uid: Syn.VA.User.#ctor
+  name: User()
+  href: api/Syn.VA.User.html#Syn_VA_User__ctor
+  commentId: M:Syn.VA.User.#ctor
+  fullName: Syn.VA.User.User()
+- uid: Syn.VA.User.#ctor(System.String)
+  name: User(String)
+  href: api/Syn.VA.User.html#Syn_VA_User__ctor_System_String_
+  commentId: M:Syn.VA.User.#ctor(System.String)
+  fullName: Syn.VA.User.User(System.String)
+- uid: Syn.VA.User.ID
+  name: ID
+  href: api/Syn.VA.User.html#Syn_VA_User_ID
+  commentId: P:Syn.VA.User.ID
+  fullName: Syn.VA.User.ID
 - uid: Syn.VA.Utility
   name: Syn.VA.Utility
   href: api/Syn.VA.Utility.html#Syn_VA_Utility
@@ -11980,11 +12184,13 @@ references:
   href: api/Syn.VA.Utility.Extensions.SettingsExtensions.html#Syn_VA_Utility_Extensions_SettingsExtensions
   commentId: T:Syn.VA.Utility.Extensions.SettingsExtensions
   fullName: Syn.VA.Utility.Extensions.SettingsExtensions
-- uid: Syn.VA.Utility.Extensions.SettingsExtensions.ApplyToProperties(Syn.VA.ISettings,System.Object)
-  name: ApplyToProperties(ISettings, Object)
-  href: api/Syn.VA.Utility.Extensions.SettingsExtensions.html#Syn_VA_Utility_Extensions_SettingsExtensions_ApplyToProperties_Syn_VA_ISettings_System_Object_
-  commentId: M:Syn.VA.Utility.Extensions.SettingsExtensions.ApplyToProperties(Syn.VA.ISettings,System.Object)
-  fullName: Syn.VA.Utility.Extensions.SettingsExtensions.ApplyToProperties(Syn.VA.ISettings, System.Object)
+- uid: Syn.VA.Utility.Extensions.SettingsExtensions.ApplyToProperties(Syn.VA.ISettings,System.Object,System.String[])
+  name: ApplyToProperties(ISettings, Object, String[])
+  href: api/Syn.VA.Utility.Extensions.SettingsExtensions.html#Syn_VA_Utility_Extensions_SettingsExtensions_ApplyToProperties_Syn_VA_ISettings_System_Object_System_String___
+  commentId: M:Syn.VA.Utility.Extensions.SettingsExtensions.ApplyToProperties(Syn.VA.ISettings,System.Object,System.String[])
+  name.vb: ApplyToProperties(ISettings, Object, String())
+  fullName: Syn.VA.Utility.Extensions.SettingsExtensions.ApplyToProperties(Syn.VA.ISettings, System.Object, System.String[])
+  fullName.vb: Syn.VA.Utility.Extensions.SettingsExtensions.ApplyToProperties(Syn.VA.ISettings, System.Object, System.String())
 - uid: Syn.VA.Utility.Extensions.SettingsExtensions.GetDocument(Syn.VA.ISettings)
   name: GetDocument(ISettings)
   href: api/Syn.VA.Utility.Extensions.SettingsExtensions.html#Syn_VA_Utility_Extensions_SettingsExtensions_GetDocument_Syn_VA_ISettings_
@@ -12005,11 +12211,11 @@ references:
   href: api/Syn.VA.Utility.Extensions.SettingsManagerExtensions.html#Syn_VA_Utility_Extensions_SettingsManagerExtensions_LoadFromFile_Syn_VA_SettingsManager_System_String_
   commentId: M:Syn.VA.Utility.Extensions.SettingsManagerExtensions.LoadFromFile(Syn.VA.SettingsManager,System.String)
   fullName: Syn.VA.Utility.Extensions.SettingsManagerExtensions.LoadFromFile(Syn.VA.SettingsManager, System.String)
-- uid: Syn.VA.Utility.Extensions.SettingsManagerExtensions.Save(Syn.VA.SettingsManager,Syn.VA.ISettings,System.Boolean)
-  name: Save(SettingsManager, ISettings, Boolean)
-  href: api/Syn.VA.Utility.Extensions.SettingsManagerExtensions.html#Syn_VA_Utility_Extensions_SettingsManagerExtensions_Save_Syn_VA_SettingsManager_Syn_VA_ISettings_System_Boolean_
-  commentId: M:Syn.VA.Utility.Extensions.SettingsManagerExtensions.Save(Syn.VA.SettingsManager,Syn.VA.ISettings,System.Boolean)
-  fullName: Syn.VA.Utility.Extensions.SettingsManagerExtensions.Save(Syn.VA.SettingsManager, Syn.VA.ISettings, System.Boolean)
+- uid: Syn.VA.Utility.Extensions.SettingsManagerExtensions.Save(Syn.VA.SettingsManager,Syn.VA.ISettings,System.String)
+  name: Save(SettingsManager, ISettings, String)
+  href: api/Syn.VA.Utility.Extensions.SettingsManagerExtensions.html#Syn_VA_Utility_Extensions_SettingsManagerExtensions_Save_Syn_VA_SettingsManager_Syn_VA_ISettings_System_String_
+  commentId: M:Syn.VA.Utility.Extensions.SettingsManagerExtensions.Save(Syn.VA.SettingsManager,Syn.VA.ISettings,System.String)
+  fullName: Syn.VA.Utility.Extensions.SettingsManagerExtensions.Save(Syn.VA.SettingsManager, Syn.VA.ISettings, System.String)
 - uid: Syn.VA.Utility.Extensions.StringConstructor
   name: StringConstructor
   href: api/Syn.VA.Utility.Extensions.StringConstructor.html#Syn_VA_Utility_Extensions_StringConstructor
@@ -12130,6 +12336,11 @@ references:
   href: api/Syn.VA.VirtualAssistant.html#Syn_VA_VirtualAssistant_Avatar
   commentId: P:Syn.VA.VirtualAssistant.Avatar
   fullName: Syn.VA.VirtualAssistant.Avatar
+- uid: Syn.VA.VirtualAssistant.Closing
+  name: Closing
+  href: api/Syn.VA.VirtualAssistant.html#Syn_VA_VirtualAssistant_Closing
+  commentId: E:Syn.VA.VirtualAssistant.Closing
+  fullName: Syn.VA.VirtualAssistant.Closing
 - uid: Syn.VA.VirtualAssistant.Components
   name: Components
   href: api/Syn.VA.VirtualAssistant.html#Syn_VA_VirtualAssistant_Components
@@ -12160,6 +12371,11 @@ references:
   href: api/Syn.VA.VirtualAssistant.html#Syn_VA_VirtualAssistant_Logger
   commentId: P:Syn.VA.VirtualAssistant.Logger
   fullName: Syn.VA.VirtualAssistant.Logger
+- uid: Syn.VA.VirtualAssistant.MainUser
+  name: MainUser
+  href: api/Syn.VA.VirtualAssistant.html#Syn_VA_VirtualAssistant_MainUser
+  commentId: P:Syn.VA.VirtualAssistant.MainUser
+  fullName: Syn.VA.VirtualAssistant.MainUser
 - uid: Syn.VA.VirtualAssistant.Name
   name: Name
   href: api/Syn.VA.VirtualAssistant.html#Syn_VA_VirtualAssistant_Name
@@ -12175,6 +12391,11 @@ references:
   href: api/Syn.VA.VirtualAssistant.html#Syn_VA_VirtualAssistant_RaiseEvent_Syn_VA_EventType_
   commentId: M:Syn.VA.VirtualAssistant.RaiseEvent(Syn.VA.EventType)
   fullName: Syn.VA.VirtualAssistant.RaiseEvent(Syn.VA.EventType)
+- uid: Syn.VA.VirtualAssistant.Resetting
+  name: Resetting
+  href: api/Syn.VA.VirtualAssistant.html#Syn_VA_VirtualAssistant_Resetting
+  commentId: E:Syn.VA.VirtualAssistant.Resetting
+  fullName: Syn.VA.VirtualAssistant.Resetting
 - uid: Syn.VA.VirtualAssistant.Services
   name: Services
   href: api/Syn.VA.VirtualAssistant.html#Syn_VA_VirtualAssistant_Services
@@ -12195,11 +12416,6 @@ references:
   href: api/Syn.VA.VirtualAssistant.html#Syn_VA_VirtualAssistant_Timer
   commentId: P:Syn.VA.VirtualAssistant.Timer
   fullName: Syn.VA.VirtualAssistant.Timer
-- uid: Syn.VA.VirtualAssistant.User
-  name: User
-  href: api/Syn.VA.VirtualAssistant.html#Syn_VA_VirtualAssistant_User
-  commentId: P:Syn.VA.VirtualAssistant.User
-  fullName: Syn.VA.VirtualAssistant.User
 - uid: Syn.VA.VirtualAssistant.Version
   name: Version
   href: api/Syn.VA.VirtualAssistant.html#Syn_VA_VirtualAssistant_Version

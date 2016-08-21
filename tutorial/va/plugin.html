@@ -68,6 +68,7 @@
               <h1 id="plugin-system">Plugin System</h1>
               
 <p><code>VA Framework</code> provides an easy inter-component interaction mechanism via the Plugin interface. Developers can either implement the <code>IPlugin</code> interface or inherit <code>Plugin</code> class to create their own plugin.</p>
+<p>Only the plugins with the <code>public</code> modifier will be loaded automatically by the Virtual Assistant. To avoid automatic loading of plugins set the modifier to <code>internal</code> and manually load the plugins.</p>
 <h2 id="parts-of-a-plugin">Parts of a Plugin</h2>
 <ul>
 <li><code>VA</code> gets the <code>VirtualAssistant.Instance</code></li>
@@ -78,10 +79,14 @@
 </ul>
 <h2 id="general-plugin">General Plugin</h2>
 <p>By convention the first plugin that is to be loaded into the VA Framework is the <code>General</code> plugin. This plugin is supposed to give the VA a functional architecture.</p>
-<p><em>For example Syn Virtual Assistant loads the <strong>Syn.VA.Plugins.General.dll</strong> plugin from the <code>Plugins</code> directory which ensures all SIML based plugins are loaded properly into the VA Framework</em></p>
-<h2 id="getpanel">GetPanel&lt;&gt;</h2>
+<p><em>For example Syn Virtual Assistant loads the <strong>Syn.VA.Plugins.General.dll</strong> plugin from the root directory which ensures all SIML based plugins are loaded properly into the VA Framework</em></p>
+<blockquote><p>The General Plugin is <strong>NOT</strong> placed in the <code>Plugins</code> Directory. It must reside in the <strong>root</strong> directory of the Virtual Assistant application.</p>
+</blockquote>
+<h2 id="getpanel">GetPanel()</h2>
 <p>A Plugin is itself responsible for providing a <em>GUI</em> that enables its user to change the internal values or settings of the plugin. For this, the method <code>GetPanel&lt;T&gt;</code> is called by the Virtual Assistant&#39;s <em>Settings Window</em> whenever the <em>Settings Window</em> is opened.</p>
 <p>The type <strong>T</strong> depends on the calling application. The <code>SettingsWindow</code> in Syn Virtual Assistant calls the <code>GetPanel</code> function with <strong>T</strong> of the type <code>UserControl</code></p>
+<h2 id="naming-convention">Naming Convention</h2>
+<p>Plugin names should end with the word <em>Plugin</em>. For example if your plugin works with email then the proper plugin name would be <code>EmailPlugin</code>.</p>
 
             </article>
           </div>
