@@ -77,10 +77,14 @@
               <div class="inheritance">
                 <h5>Inheritance</h5>
                   <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><span class="xref">BotUser</span></div>
+                  <div class="level1"><a class="xref" href="Syn.VA.User.html#Syn_VA_User">User</a></div>
+                  <div class="level2"><span class="xref">BotUser</span></div>
               </div>
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
+                <div>
+                  <a class="xref" href="Syn.VA.User.html#Syn_VA_User_ID">User.ID</a>
+                </div>
                 <div>
                   <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
                 </div>
@@ -104,78 +108,8 @@
               <h6><strong>Assembly</strong>:Syn.Bot.dll</h6>
               <h5 id="Syn_Bot_Siml_BotUser_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class BotUser</code></pre>
+                <pre><code class="lang-csharp hljs">public class BotUser : User</code></pre>
               </div>
-              <h3 id="constructors">Constructors
-              </h3>
-              <span class="small pull-right mobile-hide">
-                <span class="divider">|</span>
-                <a href="https://github.com/SynHub/syn-documentation/new/master/apispec/new?filename=Syn_Bot_Siml_BotUser__ctor_Syn_Bot_Siml_SimlBot_.md&amp;value=---%0Auid%3A%20Syn.Bot.Siml.BotUser.%23ctor(Syn.Bot.Siml.SimlBot)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-              </span>
-              
-              <h4 id="Syn_Bot_Siml_BotUser__ctor_Syn_Bot_Siml_SimlBot_" data-uid="Syn.Bot.Siml.BotUser.#ctor(Syn.Bot.Siml.SimlBot)">BotUser(SimlBot)</h4>
-              <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Syn.Bot.Siml.BotUser.html#Syn_Bot_Siml_BotUser">BotUser</a> class.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public BotUser(SimlBot bot)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot">SimlBot</a></td>
-                    <td><em>bot</em></td>
-                    <td><p>The bot.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
-              <span class="small pull-right mobile-hide">
-                <span class="divider">|</span>
-                <a href="https://github.com/SynHub/syn-documentation/new/master/apispec/new?filename=Syn_Bot_Siml_BotUser__ctor_Syn_Bot_Siml_SimlBot_System_String_.md&amp;value=---%0Auid%3A%20Syn.Bot.Siml.BotUser.%23ctor(Syn.Bot.Siml.SimlBot%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-              </span>
-              
-              <h4 id="Syn_Bot_Siml_BotUser__ctor_Syn_Bot_Siml_SimlBot_System_String_" data-uid="Syn.Bot.Siml.BotUser.#ctor(Syn.Bot.Siml.SimlBot,System.String)">BotUser(SimlBot, String)</h4>
-              <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Syn.Bot.Siml.BotUser.html#Syn_Bot_Siml_BotUser">BotUser</a> class.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public BotUser(SimlBot bot, string userId)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot">SimlBot</a></td>
-                    <td><em>bot</em></td>
-                    <td><p>The bot.</p>
-</td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><em>userId</em></td>
-                    <td><p>The user identifier.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
               <h3 id="properties">Properties
               </h3>
               <span class="small pull-right mobile-hide">
@@ -240,7 +174,7 @@
               </span>
               
               <h4 id="Syn_Bot_Siml_BotUser_HasHistory" data-uid="Syn.Bot.Siml.BotUser.HasHistory">HasHistory</h4>
-              <div class="markdown level1 summary"><p>Gets a value indicating whether this user has a history.</p>
+              <div class="markdown level1 summary"><p>Gets a value indicating whether this user has a chat history.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -258,36 +192,8 @@
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Boolean</span></td>
-                    <td><p><code>true</code> if this user has a history; otherwise, <code>false</code>.</p>
+                    <td><p><code>true</code> if this user has a chat history; otherwise, <code>false</code>.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <span class="small pull-right mobile-hide">
-                <span class="divider">|</span>
-                <a href="https://github.com/SynHub/syn-documentation/new/master/apispec/new?filename=Syn_Bot_Siml_BotUser_ID.md&amp;value=---%0Auid%3A%20Syn.Bot.Siml.BotUser.ID%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-              </span>
-              
-              <h4 id="Syn_Bot_Siml_BotUser_ID" data-uid="Syn.Bot.Siml.BotUser.ID">ID</h4>
-              <div class="markdown level1 summary"><p>Gets a <span class="xref">String</span> that uniquely identifies this user.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string ID { get; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
                   </tr>
                 </tbody>
               </table>
@@ -354,12 +260,12 @@
               </span>
               
               <h4 id="Syn_Bot_Siml_BotUser_IsMain" data-uid="Syn.Bot.Siml.BotUser.IsMain">IsMain</h4>
-              <div class="markdown level1 summary"><p>Gets a value indicating if this is the Main Bot user.</p>
+              <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is <a class="xref" href="Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot_MainUser">MainUser</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public bool IsMain { get; }</code></pre>
+                <pre><code class="lang-csharp hljs">public override bool IsMain { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -372,10 +278,13 @@
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Boolean</span></td>
-                    <td></td>
+                    <td><p><code>true</code> if this instance is <a class="xref" href="Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot_MainUser">MainUser</a>; otherwise, <code>false</code>.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Syn.VA.User.html#Syn_VA_User_IsMain">BotUser.IsMain</a></div>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
                 <a href="https://github.com/SynHub/syn-documentation/new/master/apispec/new?filename=Syn_Bot_Siml_BotUser_LastChatRequest.md&amp;value=---%0Auid%3A%20Syn.Bot.Siml.BotUser.LastChatRequest%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>

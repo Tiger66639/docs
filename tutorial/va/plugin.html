@@ -77,9 +77,9 @@
 <li><code>SpecialName</code> name used for displaying the Plugin to users</li>
 <li><code>GetPanel&lt;T&gt;</code> function called to retrieve a GUI settings panel</li>
 </ul>
-<h2 id="general-plugin">General Plugin</h2>
-<p>By convention the first plugin that is to be loaded into the VA Framework is the <code>General</code> plugin. This plugin is supposed to give the VA a functional architecture.</p>
-<p><em>For example Syn Virtual Assistant loads the <strong>Syn.VA.Plugins.General.dll</strong> plugin from the root directory which ensures all SIML based plugins are loaded properly into the VA Framework</em></p>
+<h2 id="start-plugin">Start Plugin</h2>
+<p>By convention the first plugin that is to be loaded into the VA Framework is the <code>Start</code> plugin. This plugin is supposed to give the VA a functional architecture.</p>
+<p><em>For example Syn Virtual Assistant loads the <strong>Syn.VA.Plugins.Start.dll</strong> plugin from the root directory which ensures all SIML based plugins are loaded properly into the VA Framework</em></p>
 <blockquote><p>The General Plugin is <strong>NOT</strong> placed in the <code>Plugins</code> Directory. It must reside in the <strong>root</strong> directory of the Virtual Assistant application.</p>
 </blockquote>
 <h2 id="getpanel">GetPanel()</h2>

@@ -92,7 +92,7 @@
 <p>The Match tag is used to retrieve words or sentences that are stored by SIML pattern symbols.</p>
 <blockquote><p>Wildcards are not stored for Priority words, Individual words and Keywords pattern defined using Curly Brackets.</p>
 </blockquote>
-<p><em>Example</em></p>
+<p><em>Example 1</em></p>
 <p><strong>SIML</strong></p>
 <pre><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;YOU ARE %&lt;/Pattern&gt;
@@ -104,10 +104,10 @@
 <p><strong>Bot Output</strong></p>
 <p><em>What makes you think that I am a chatbot?</em></p>
 <p><strong>Explanation</strong></p>
-<blockquote><p>Once a wildcard is matched the <code>&lt;Match/&gt;</code> tag can used to retrieve the matched fragment of text.</p>
+<blockquote><p>Once a wildcard is matched the <code>&lt;Match/&gt;</code> tag can used to retrieve the captured fragment of text.</p>
 </blockquote>
 <p>The <code>Index</code> attribute is used to retrieve a keyword at a particular index. Indices are stored in ascending order.</p>
-<p><em>Example</em></p>
+<p><em>Example 2</em></p>
 <p><strong>SIML</strong></p>
 <pre><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;* LIKES *&lt;/Pattern&gt;

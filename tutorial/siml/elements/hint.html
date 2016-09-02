@@ -80,12 +80,17 @@
 <td style="text-align:left">Sets a value indicating what the Bot expects in its next chat request from the user in concern.</td>
 </tr>
 <tr>
+<td><strong>Children</strong></td>
+<td style="text-align:left">MAY an arbitrary text or one XML element with one or more children.</td>
+</tr>
+<tr>
 <td><strong>Occurrence</strong></td>
 <td style="text-align:left">One <code>&lt;Hint&gt;</code> element MAY occur within a <code>&lt;Response&gt;</code> element.</td>
 </tr>
 </tbody>
 </table>
 <p>The Hint element is an interface for bot developers to explicitly give an application/program the opportunity to display the next possible value that the bot may expect. This element produces no textual value but sets the value for the Hint part when the response class object is de-serialized. This element is to be used by Syn Virtual Assistant to display the next possible input it expects from the user.</p>
+<p>If XML content is being specified within the <em>Hint</em> element, it is important to note that only one child element with one or more children is valid within the <em>Hint</em> element.</p>
 <blockquote><p>The <code>Hint</code> element returns an empty value and therefore DOES NOT require being enclosed within a <code>&lt;Think&gt;</code> element.</p>
 </blockquote>
 <p><em>Example</em></p>

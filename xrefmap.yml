@@ -1230,16 +1230,6 @@ references:
   href: api/Syn.Bot.Siml.BotUser.html#Syn_Bot_Siml_BotUser
   commentId: T:Syn.Bot.Siml.BotUser
   fullName: Syn.Bot.Siml.BotUser
-- uid: Syn.Bot.Siml.BotUser.#ctor(Syn.Bot.Siml.SimlBot)
-  name: BotUser(SimlBot)
-  href: api/Syn.Bot.Siml.BotUser.html#Syn_Bot_Siml_BotUser__ctor_Syn_Bot_Siml_SimlBot_
-  commentId: M:Syn.Bot.Siml.BotUser.#ctor(Syn.Bot.Siml.SimlBot)
-  fullName: Syn.Bot.Siml.BotUser.BotUser(Syn.Bot.Siml.SimlBot)
-- uid: Syn.Bot.Siml.BotUser.#ctor(Syn.Bot.Siml.SimlBot,System.String)
-  name: BotUser(SimlBot, String)
-  href: api/Syn.Bot.Siml.BotUser.html#Syn_Bot_Siml_BotUser__ctor_Syn_Bot_Siml_SimlBot_System_String_
-  commentId: M:Syn.Bot.Siml.BotUser.#ctor(Syn.Bot.Siml.SimlBot,System.String)
-  fullName: Syn.Bot.Siml.BotUser.BotUser(Syn.Bot.Siml.SimlBot, System.String)
 - uid: Syn.Bot.Siml.BotUser.Bot
   name: Bot
   href: api/Syn.Bot.Siml.BotUser.html#Syn_Bot_Siml_BotUser_Bot
@@ -1265,11 +1255,6 @@ references:
   href: api/Syn.Bot.Siml.BotUser.html#Syn_Bot_Siml_BotUser_HasHistory
   commentId: P:Syn.Bot.Siml.BotUser.HasHistory
   fullName: Syn.Bot.Siml.BotUser.HasHistory
-- uid: Syn.Bot.Siml.BotUser.ID
-  name: ID
-  href: api/Syn.Bot.Siml.BotUser.html#Syn_Bot_Siml_BotUser_ID
-  commentId: P:Syn.Bot.Siml.BotUser.ID
-  fullName: Syn.Bot.Siml.BotUser.ID
 - uid: Syn.Bot.Siml.BotUser.IdleTime
   name: IdleTime
   href: api/Syn.Bot.Siml.BotUser.html#Syn_Bot_Siml_BotUser_IdleTime
@@ -1450,6 +1435,11 @@ references:
   href: api/Syn.Bot.Siml.ChatResult.html#Syn_Bot_Siml_ChatResult_Type
   commentId: P:Syn.Bot.Siml.ChatResult.Type
   fullName: Syn.Bot.Siml.ChatResult.Type
+- uid: Syn.Bot.Siml.ChatResult.User
+  name: User
+  href: api/Syn.Bot.Siml.ChatResult.html#Syn_Bot_Siml_ChatResult_User
+  commentId: P:Syn.Bot.Siml.ChatResult.User
+  fullName: Syn.Bot.Siml.ChatResult.User
 - uid: Syn.Bot.Siml.ChatResult.UserEmotion
   name: UserEmotion
   href: api/Syn.Bot.Siml.ChatResult.html#Syn_Bot_Siml_ChatResult_UserEmotion
@@ -5899,6 +5889,11 @@ references:
   href: api/Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot_ID
   commentId: P:Syn.Bot.Siml.SimlBot.ID
   fullName: Syn.Bot.Siml.SimlBot.ID
+- uid: Syn.Bot.Siml.SimlBot.Instance
+  name: Instance
+  href: api/Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot_Instance
+  commentId: P:Syn.Bot.Siml.SimlBot.Instance
+  fullName: Syn.Bot.Siml.SimlBot.Instance
 - uid: Syn.Bot.Siml.SimlBot.Interactions
   name: Interactions
   href: api/Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot_Interactions
@@ -5919,11 +5914,6 @@ references:
   href: api/Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot_Logger
   commentId: P:Syn.Bot.Siml.SimlBot.Logger
   fullName: Syn.Bot.Siml.SimlBot.Logger
-- uid: Syn.Bot.Siml.SimlBot.Main
-  name: Main
-  href: api/Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot_Main
-  commentId: P:Syn.Bot.Siml.SimlBot.Main
-  fullName: Syn.Bot.Siml.SimlBot.Main
 - uid: Syn.Bot.Siml.SimlBot.MainUser
   name: MainUser
   href: api/Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot_MainUser
@@ -7196,11 +7186,6 @@ references:
   href: api/Syn.Bot.Utility.ProjectManager.html#Syn_Bot_Utility_ProjectManager_DirectoryName
   commentId: P:Syn.Bot.Utility.ProjectManager.DirectoryName
   fullName: Syn.Bot.Utility.ProjectManager.DirectoryName
-- uid: Syn.Bot.Utility.ProjectManager.DirectoryPath
-  name: DirectoryPath
-  href: api/Syn.Bot.Utility.ProjectManager.html#Syn_Bot_Utility_ProjectManager_DirectoryPath
-  commentId: P:Syn.Bot.Utility.ProjectManager.DirectoryPath
-  fullName: Syn.Bot.Utility.ProjectManager.DirectoryPath
 - uid: Syn.Bot.Utility.ProjectManager.DisplayName
   name: DisplayName
   href: api/Syn.Bot.Utility.ProjectManager.html#Syn_Bot_Utility_ProjectManager_DisplayName
@@ -9196,16 +9181,31 @@ references:
   href: api/Syn.Utility.Utilities.DirectoryUtility.html#Syn_Utility_Utilities_DirectoryUtility_Current
   commentId: M:Syn.Utility.Utilities.DirectoryUtility.Current
   fullName: Syn.Utility.Utilities.DirectoryUtility.Current()
+- uid: Syn.Utility.Utilities.DirectoryUtility.GetLevel(System.String)
+  name: GetLevel(String)
+  href: api/Syn.Utility.Utilities.DirectoryUtility.html#Syn_Utility_Utilities_DirectoryUtility_GetLevel_System_String_
+  commentId: M:Syn.Utility.Utilities.DirectoryUtility.GetLevel(System.String)
+  fullName: Syn.Utility.Utilities.DirectoryUtility.GetLevel(System.String)
 - uid: Syn.Utility.Utilities.DirectoryUtility.GetName(System.String)
   name: GetName(String)
   href: api/Syn.Utility.Utilities.DirectoryUtility.html#Syn_Utility_Utilities_DirectoryUtility_GetName_System_String_
   commentId: M:Syn.Utility.Utilities.DirectoryUtility.GetName(System.String)
   fullName: Syn.Utility.Utilities.DirectoryUtility.GetName(System.String)
+- uid: Syn.Utility.Utilities.DirectoryUtility.GetParentPath(System.String,System.Int32)
+  name: GetParentPath(String, Int32)
+  href: api/Syn.Utility.Utilities.DirectoryUtility.html#Syn_Utility_Utilities_DirectoryUtility_GetParentPath_System_String_System_Int32_
+  commentId: M:Syn.Utility.Utilities.DirectoryUtility.GetParentPath(System.String,System.Int32)
+  fullName: Syn.Utility.Utilities.DirectoryUtility.GetParentPath(System.String, System.Int32)
 - uid: Syn.Utility.Utilities.DirectoryUtility.GetPath(Syn.Utility.Enumerations.SpecialFolders)
   name: GetPath(SpecialFolders)
   href: api/Syn.Utility.Utilities.DirectoryUtility.html#Syn_Utility_Utilities_DirectoryUtility_GetPath_Syn_Utility_Enumerations_SpecialFolders_
   commentId: M:Syn.Utility.Utilities.DirectoryUtility.GetPath(Syn.Utility.Enumerations.SpecialFolders)
   fullName: Syn.Utility.Utilities.DirectoryUtility.GetPath(Syn.Utility.Enumerations.SpecialFolders)
+- uid: Syn.Utility.Utilities.DirectoryUtility.GetSafePath(System.String)
+  name: GetSafePath(String)
+  href: api/Syn.Utility.Utilities.DirectoryUtility.html#Syn_Utility_Utilities_DirectoryUtility_GetSafePath_System_String_
+  commentId: M:Syn.Utility.Utilities.DirectoryUtility.GetSafePath(System.String)
+  fullName: Syn.Utility.Utilities.DirectoryUtility.GetSafePath(System.String)
 - uid: Syn.Utility.Utilities.DirectoryUtility.GetSize(System.String)
   name: GetSize(String)
   href: api/Syn.Utility.Utilities.DirectoryUtility.html#Syn_Utility_Utilities_DirectoryUtility_GetSize_System_String_
@@ -9281,13 +9281,13 @@ references:
   href: api/Syn.Utility.Utilities.ListUtility.html#Syn_Utility_Utilities_ListUtility
   commentId: T:Syn.Utility.Utilities.ListUtility
   fullName: Syn.Utility.Utilities.ListUtility
-- uid: Syn.Utility.Utilities.ListUtility.Arrange``1(System.Collections.Generic.List{``0},System.Func{``0,System.String},System.String[])
-  name: Arrange<T>(List<T>, Func<T, String>, String[])
-  href: api/Syn.Utility.Utilities.ListUtility.html#Syn_Utility_Utilities_ListUtility_Arrange__1_System_Collections_Generic_List___0__System_Func___0_System_String__System_String___
-  commentId: M:Syn.Utility.Utilities.ListUtility.Arrange``1(System.Collections.Generic.List{``0},System.Func{``0,System.String},System.String[])
-  name.vb: Arrange(Of T)(List(Of T), Func(Of T, String), String())
-  fullName: Syn.Utility.Utilities.ListUtility.Arrange<T>(System.Collections.Generic.List<T>, System.Func<T, System.String>, System.String[])
-  fullName.vb: Syn.Utility.Utilities.ListUtility.Arrange(Of T)(System.Collections.Generic.List(Of T), System.Func(Of T, System.String), System.String())
+- uid: Syn.Utility.Utilities.ListUtility.Arrange``1(System.Collections.Generic.List{``0},System.Func{``0,System.String},System.Collections.Generic.IEnumerable{System.String})
+  name: Arrange<T>(List<T>, Func<T, String>, IEnumerable<String>)
+  href: api/Syn.Utility.Utilities.ListUtility.html#Syn_Utility_Utilities_ListUtility_Arrange__1_System_Collections_Generic_List___0__System_Func___0_System_String__System_Collections_Generic_IEnumerable_System_String__
+  commentId: M:Syn.Utility.Utilities.ListUtility.Arrange``1(System.Collections.Generic.List{``0},System.Func{``0,System.String},System.Collections.Generic.IEnumerable{System.String})
+  name.vb: Arrange(Of T)(List(Of T), Func(Of T, String), IEnumerable(Of String))
+  fullName: Syn.Utility.Utilities.ListUtility.Arrange<T>(System.Collections.Generic.List<T>, System.Func<T, System.String>, System.Collections.Generic.IEnumerable<System.String>)
+  fullName.vb: Syn.Utility.Utilities.ListUtility.Arrange(Of T)(System.Collections.Generic.List(Of T), System.Func(Of T, System.String), System.Collections.Generic.IEnumerable(Of System.String))
 - uid: Syn.Utility.Utilities.ListUtility.Shuffle``1(System.Collections.Generic.IList{``0})
   name: Shuffle<T>(IList<T>)
   href: api/Syn.Utility.Utilities.ListUtility.html#Syn_Utility_Utilities_ListUtility_Shuffle__1_System_Collections_Generic_IList___0__
@@ -10760,6 +10760,21 @@ references:
   href: api/Syn.VA.Events.SynthesizerChangedEventArgs.html#Syn_VA_Events_SynthesizerChangedEventArgs_Synthesizer
   commentId: P:Syn.VA.Events.SynthesizerChangedEventArgs.Synthesizer
   fullName: Syn.VA.Events.SynthesizerChangedEventArgs.Synthesizer
+- uid: Syn.VA.Events.UserIdChangedEventArgs
+  name: UserIdChangedEventArgs
+  href: api/Syn.VA.Events.UserIdChangedEventArgs.html#Syn_VA_Events_UserIdChangedEventArgs
+  commentId: T:Syn.VA.Events.UserIdChangedEventArgs
+  fullName: Syn.VA.Events.UserIdChangedEventArgs
+- uid: Syn.VA.Events.UserIdChangedEventArgs.CurrentId
+  name: CurrentId
+  href: api/Syn.VA.Events.UserIdChangedEventArgs.html#Syn_VA_Events_UserIdChangedEventArgs_CurrentId
+  commentId: P:Syn.VA.Events.UserIdChangedEventArgs.CurrentId
+  fullName: Syn.VA.Events.UserIdChangedEventArgs.CurrentId
+- uid: Syn.VA.Events.UserIdChangedEventArgs.PreviousId
+  name: PreviousId
+  href: api/Syn.VA.Events.UserIdChangedEventArgs.html#Syn_VA_Events_UserIdChangedEventArgs_PreviousId
+  commentId: P:Syn.VA.Events.UserIdChangedEventArgs.PreviousId
+  fullName: Syn.VA.Events.UserIdChangedEventArgs.PreviousId
 - uid: Syn.VA.Events.VariableChangedAction
   name: VariableChangedAction
   href: api/Syn.VA.Events.VariableChangedAction.html#Syn_VA_Events_VariableChangedAction
@@ -11063,6 +11078,13 @@ references:
   href: api/Syn.VA.FunctionalVariable.html#Syn_VA_FunctionalVariable
   commentId: T:Syn.VA.FunctionalVariable
   fullName: Syn.VA.FunctionalVariable
+- uid: Syn.VA.FunctionalVariable.#ctor(System.String,System.Func{System.String})
+  name: FunctionalVariable(String, Func<String>)
+  href: api/Syn.VA.FunctionalVariable.html#Syn_VA_FunctionalVariable__ctor_System_String_System_Func_System_String__
+  commentId: M:Syn.VA.FunctionalVariable.#ctor(System.String,System.Func{System.String})
+  name.vb: FunctionalVariable(String, Func(Of String))
+  fullName: Syn.VA.FunctionalVariable.FunctionalVariable(System.String, System.Func<System.String>)
+  fullName.vb: Syn.VA.FunctionalVariable.FunctionalVariable(System.String, System.Func(Of System.String))
 - uid: Syn.VA.FunctionalVariable.Add(System.String)
   name: Add(String)
   href: api/Syn.VA.FunctionalVariable.html#Syn_VA_FunctionalVariable_Add_System_String_
@@ -11118,73 +11140,6 @@ references:
   href: api/Syn.VA.FunctionalVariable.html#Syn_VA_FunctionalVariable_Value
   commentId: P:Syn.VA.FunctionalVariable.Value
   fullName: Syn.VA.FunctionalVariable.Value
-- uid: Syn.VA.FunctionalVariableContainer
-  name: FunctionalVariableContainer
-  href: api/Syn.VA.FunctionalVariableContainer.html#Syn_VA_FunctionalVariableContainer
-  commentId: T:Syn.VA.FunctionalVariableContainer
-  fullName: Syn.VA.FunctionalVariableContainer
-- uid: Syn.VA.FunctionalVariableContainer.#ctor(System.String,System.Func{System.String})
-  name: FunctionalVariableContainer(String, Func<String>)
-  href: api/Syn.VA.FunctionalVariableContainer.html#Syn_VA_FunctionalVariableContainer__ctor_System_String_System_Func_System_String__
-  commentId: M:Syn.VA.FunctionalVariableContainer.#ctor(System.String,System.Func{System.String})
-  name.vb: FunctionalVariableContainer(String, Func(Of String))
-  fullName: Syn.VA.FunctionalVariableContainer.FunctionalVariableContainer(System.String, System.Func<System.String>)
-  fullName.vb: Syn.VA.FunctionalVariableContainer.FunctionalVariableContainer(System.String, System.Func(Of System.String))
-- uid: Syn.VA.FunctionalVariableContainer.Add(System.String)
-  name: Add(String)
-  href: api/Syn.VA.FunctionalVariableContainer.html#Syn_VA_FunctionalVariableContainer_Add_System_String_
-  commentId: M:Syn.VA.FunctionalVariableContainer.Add(System.String)
-  fullName: Syn.VA.FunctionalVariableContainer.Add(System.String)
-- uid: Syn.VA.FunctionalVariableContainer.Changed
-  name: Changed
-  href: api/Syn.VA.FunctionalVariableContainer.html#Syn_VA_FunctionalVariableContainer_Changed
-  commentId: E:Syn.VA.FunctionalVariableContainer.Changed
-  fullName: Syn.VA.FunctionalVariableContainer.Changed
-- uid: Syn.VA.FunctionalVariableContainer.Clear
-  name: Clear()
-  href: api/Syn.VA.FunctionalVariableContainer.html#Syn_VA_FunctionalVariableContainer_Clear
-  commentId: M:Syn.VA.FunctionalVariableContainer.Clear
-  fullName: Syn.VA.FunctionalVariableContainer.Clear()
-- uid: Syn.VA.FunctionalVariableContainer.Clone
-  name: Clone
-  href: api/Syn.VA.FunctionalVariableContainer.html#Syn_VA_FunctionalVariableContainer_Clone
-  commentId: P:Syn.VA.FunctionalVariableContainer.Clone
-  fullName: Syn.VA.FunctionalVariableContainer.Clone
-- uid: Syn.VA.FunctionalVariableContainer.Contains(System.String)
-  name: Contains(String)
-  href: api/Syn.VA.FunctionalVariableContainer.html#Syn_VA_FunctionalVariableContainer_Contains_System_String_
-  commentId: M:Syn.VA.FunctionalVariableContainer.Contains(System.String)
-  fullName: Syn.VA.FunctionalVariableContainer.Contains(System.String)
-- uid: Syn.VA.FunctionalVariableContainer.Count
-  name: Count
-  href: api/Syn.VA.FunctionalVariableContainer.html#Syn_VA_FunctionalVariableContainer_Count
-  commentId: P:Syn.VA.FunctionalVariableContainer.Count
-  fullName: Syn.VA.FunctionalVariableContainer.Count
-- uid: Syn.VA.FunctionalVariableContainer.List
-  name: List
-  href: api/Syn.VA.FunctionalVariableContainer.html#Syn_VA_FunctionalVariableContainer_List
-  commentId: P:Syn.VA.FunctionalVariableContainer.List
-  fullName: Syn.VA.FunctionalVariableContainer.List
-- uid: Syn.VA.FunctionalVariableContainer.Name
-  name: Name
-  href: api/Syn.VA.FunctionalVariableContainer.html#Syn_VA_FunctionalVariableContainer_Name
-  commentId: P:Syn.VA.FunctionalVariableContainer.Name
-  fullName: Syn.VA.FunctionalVariableContainer.Name
-- uid: Syn.VA.FunctionalVariableContainer.Owner
-  name: Owner
-  href: api/Syn.VA.FunctionalVariableContainer.html#Syn_VA_FunctionalVariableContainer_Owner
-  commentId: P:Syn.VA.FunctionalVariableContainer.Owner
-  fullName: Syn.VA.FunctionalVariableContainer.Owner
-- uid: Syn.VA.FunctionalVariableContainer.Remove(System.String)
-  name: Remove(String)
-  href: api/Syn.VA.FunctionalVariableContainer.html#Syn_VA_FunctionalVariableContainer_Remove_System_String_
-  commentId: M:Syn.VA.FunctionalVariableContainer.Remove(System.String)
-  fullName: Syn.VA.FunctionalVariableContainer.Remove(System.String)
-- uid: Syn.VA.FunctionalVariableContainer.Value
-  name: Value
-  href: api/Syn.VA.FunctionalVariableContainer.html#Syn_VA_FunctionalVariableContainer_Value
-  commentId: P:Syn.VA.FunctionalVariableContainer.Value
-  fullName: Syn.VA.FunctionalVariableContainer.Value
 - uid: Syn.VA.FunctionManager
   name: FunctionManager
   href: api/Syn.VA.FunctionManager.html#Syn_VA_FunctionManager
@@ -11292,6 +11247,11 @@ references:
   href: api/Syn.VA.Interaction.Message.html#Syn_VA_Interaction_Message__ctor
   commentId: M:Syn.VA.Interaction.Message.#ctor
   fullName: Syn.VA.Interaction.Message.Message()
+- uid: Syn.VA.Interaction.Message.#ctor(System.String,Syn.VA.Interaction.MessageType)
+  name: Message(String, MessageType)
+  href: api/Syn.VA.Interaction.Message.html#Syn_VA_Interaction_Message__ctor_System_String_Syn_VA_Interaction_MessageType_
+  commentId: M:Syn.VA.Interaction.Message.#ctor(System.String,Syn.VA.Interaction.MessageType)
+  fullName: Syn.VA.Interaction.Message.Message(System.String, Syn.VA.Interaction.MessageType)
 - uid: Syn.VA.Interaction.Message.Empty
   name: Empty
   href: api/Syn.VA.Interaction.Message.html#Syn_VA_Interaction_Message_Empty
@@ -12154,11 +12114,6 @@ references:
   href: api/Syn.VA.User.html#Syn_VA_User
   commentId: T:Syn.VA.User
   fullName: Syn.VA.User
-- uid: Syn.VA.User.#ctor
-  name: User()
-  href: api/Syn.VA.User.html#Syn_VA_User__ctor
-  commentId: M:Syn.VA.User.#ctor
-  fullName: Syn.VA.User.User()
 - uid: Syn.VA.User.#ctor(System.String)
   name: User(String)
   href: api/Syn.VA.User.html#Syn_VA_User__ctor_System_String_
@@ -12169,6 +12124,11 @@ references:
   href: api/Syn.VA.User.html#Syn_VA_User_ID
   commentId: P:Syn.VA.User.ID
   fullName: Syn.VA.User.ID
+- uid: Syn.VA.User.IsMain
+  name: IsMain
+  href: api/Syn.VA.User.html#Syn_VA_User_IsMain
+  commentId: P:Syn.VA.User.IsMain
+  fullName: Syn.VA.User.IsMain
 - uid: Syn.VA.Utility
   name: Syn.VA.Utility
   href: api/Syn.VA.Utility.html#Syn_VA_Utility
@@ -12421,3 +12381,18 @@ references:
   href: api/Syn.VA.VirtualAssistant.html#Syn_VA_VirtualAssistant_Version
   commentId: P:Syn.VA.VirtualAssistant.Version
   fullName: Syn.VA.VirtualAssistant.Version
+- uid: Syn.VA.VolatileVariable
+  name: VolatileVariable
+  href: api/Syn.VA.VolatileVariable.html#Syn_VA_VolatileVariable
+  commentId: T:Syn.VA.VolatileVariable
+  fullName: Syn.VA.VolatileVariable
+- uid: Syn.VA.VolatileVariable.#ctor(System.String)
+  name: VolatileVariable(String)
+  href: api/Syn.VA.VolatileVariable.html#Syn_VA_VolatileVariable__ctor_System_String_
+  commentId: M:Syn.VA.VolatileVariable.#ctor(System.String)
+  fullName: Syn.VA.VolatileVariable.VolatileVariable(System.String)
+- uid: Syn.VA.VolatileVariable.#ctor(System.String,System.String)
+  name: VolatileVariable(String, String)
+  href: api/Syn.VA.VolatileVariable.html#Syn_VA_VolatileVariable__ctor_System_String_System_String_
+  commentId: M:Syn.VA.VolatileVariable.#ctor(System.String,System.String)
+  fullName: Syn.VA.VolatileVariable.VolatileVariable(System.String, System.String)

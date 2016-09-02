@@ -67,7 +67,7 @@
               <a href="https://github.com/SynHub/syn-documentation/blob/master/tutorial/siml/best-practices.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
               <h1 id="siml-best-practices">SIML Best Practices</h1>
               
-<p>Writing an intelligent Chatbot requires planning and optimization. The following tips and tricks should guide you while you develop your Chatbot for any application.</p>
+<p>Writing an intelligent bot requires planning and optimization. The following tips and tricks should guide you while you develop your bot for any application.</p>
 <h3 id="step-by-step-migration-from-simple-to-complex-patterns">Step-by-step migration from Simple to Complex Patterns</h3>
 <p>When writing patterns for SIML Models make sure that you first include the simpler patterns ( without symbols ) and then move towards using SIML Wildcards and finally keyword based patterns. This ensures speed and consistency.</p>
 <h3 id="consider-filtration-while-writing-patterns">Consider filtration while writing Patterns</h3>
@@ -76,18 +76,33 @@
 <h3 id="lower-usage-of-keywords">Lower usage of Keywords</h3>
 <p>Always sticking with SIML Keyword based patterns is not encouraged as they are supposed to be the last resort when dealing with Patterns. However keywords in patterns maybe used to enquire the user if he actually meant something that is already known to the bot.</p>
 <h3 id="sets-instead-of-regular-expressions">Sets instead of Regular Expressions</h3>
-<p>Though SIML supports Regular Expression it is recommended that Sets are used instead of Regex wherever possible. Instead of creating a regular expression say b(red|green|blue)b a developer should use an SIML Set with items Red, Green and Blue. Doing so a developer can take advantage of the operations provided SIML Sets that are optimized for such scenarios.</p>
+<p>Though SIML supports Regular Expression it is recommended that Sets are used instead of Regex wherever possible. Instead of creating a regular expression say <code>\b(red|green|blue)\b</code> a developer should use an SIML Set with items Red, Green and Blue. Doing so, a developer can take advantage of the operations provided SIML Sets that are optimized for such scenarios.</p>
 <h3 id="frequent-code-analysis-and-test">Frequent Code-Analysis and Test</h3>
 <p>Small and medium SIML Project should always be analysed before being deployed as production bots. Apart from analysis a developer must test the SIML Concept by using the Console to see if the desired output is being generated.</p>
 <h3 id="maintaining-the-depth-of-nested-models">Maintaining the depth of Nested Models</h3>
 <p>Though nesting saves time and eliminates the need of declaring indefinite number of <previous> elements care should be taken that the depth of nesting is always kept between 1 and 4. Nesting beyond such depths would make maintenance of code harder and may lead to confusions when debugging your Chatbot.<p>
+<h3 id="keep-it-clean">Keep it Clean</h3>
+<p>The best coding style is not just the one that is understood by computers but also the ones that are understood by humans. Try to keep the verbosity of your code to optimal minimum by learning the default values of attributes and elements.</p>
+<p><em>Example 1</em></p>
+<pre><code class="lang-xml">&lt;Concept Name=&quot;Some Concept&quot; Type=&quot;Public&quot; Repeat=&quot;False&quot;&gt;...
+</code></pre>
+<p>Can just be</p>
+<pre><code class="lang-xml">&lt;Concept Name=&quot;Some Concept&quot;&gt;...
+</code></pre>
+<p><em>Example 2</em></p>
+<pre><code class="lang-xml">&lt;Map Get=&quot;Map Name&quot;&gt;&lt;Match/&gt;&lt;/Map&gt;
+</code></pre>
+<p>Can just be</p>
+<pre><code class="lang-xml">&lt;Map Get=&quot;Map name&quot;/&gt;
+</code></pre>
+<p>And so on...</p>
 <h3 id="check-your-goto">Check your <code>&lt;Goto&gt;</code></h3>
-<p><goto> and its derivative elements are used to reduce the pattern in user input to its minimalistic form but its upto the developer to check if the value to which the <goto> element redirects to actually exists within your SIML project.<p>
+<p><code>&lt;Goto&gt;</code> and its derivative elements are used to reduce the pattern in user input to its minimalistic form but it&#39;s upto the developer to check if the value to which the <code>&lt;Goto&gt;</code> element redirects to actually exists within your SIML project.</p>
 <h3 id="don-t-repeat-yourself">Don’t repeat yourself</h3>
 <p>Declaring multiple Models for multiple patterns would simply defeat the purpose of using an advanced Chatbot architecture. For multiple patterns always use the <item> element within the <pattern> element and the same should be applied to <previous> element.<p>
 <h3 id="smaller-dynamic-sets">Smaller Dynamic Sets</h3>
 <p>Dynamics sets have very low impact on the performance of your SIML code but for brevity if the dynamic sets are to be used frequently or the size of the dynamic sets are small and constant then the developer should save them as a static Set and give it a unique name. This reduces redundancy and ensures re-usability of your SIML code.</p>
-</previous></pattern></item></goto></goto></previous>
+</previous></pattern></item></previous>
             </article>
           </div>
           

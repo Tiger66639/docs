@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Dictionary Plugin </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Dictionary Plugin ">
+    <meta name="generator" content="docfx 2.1.0.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <a href="https://github.com/SynHub/syn-documentation/blob/master/tutorial/va/plugins/dictionary.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
+              <h1 id="dictionary-plugin">Dictionary Plugin</h1>
+              
+<h2 id="siml-adapters">SIML Adapters</h2>
+<h3 id="1-dictionary">1. Dictionary</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Annotation</strong></th>
+<th style="text-align:left"><code>&lt;o:Dictionary&gt;</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Definition</strong></td>
+<td style="text-align:left">Gets the definition of the <em>word</em> specified</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Children</strong></td>
+<td style="text-align:left">MUST contain an arbitrary text specifying the <em>word</em> whose definition is to be searched.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Supported Language</strong></td>
+<td style="text-align:left">English</td>
+</tr>
+</tbody>
+</table>
+<h4 id="usage">Usage</h4>
+<pre><code class="lang-xml">&lt;o:Dictionary&gt;sprightly&lt;/o:Dictionary&gt;
+</code></pre>
+<blockquote><p>Sets the <code>Var</code> variable <code>definition</code> with the value of the definition found.</p>
+</blockquote>
+<h3 id="2-thesaurus">2. Thesaurus</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Annotation</strong></th>
+<th style="text-align:left"><code>&lt;o:Thesaurus&gt;</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Definition</strong></td>
+<td style="text-align:left">Gets the <em>synonyms</em>, <em>spell corrections</em> or <em>hyphenations</em> of the <em>word</em> specified</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Children</strong></td>
+<td style="text-align:left">MUST contain an arbitrary text specifying the target <em>word</em></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Supported Language</strong></td>
+<td style="text-align:left">English</td>
+</tr>
+</tbody>
+</table>
+<h4 id="usage-0">Usage</h4>
+<pre><code class="lang-xml">&lt;o:Thesaurus Get=&quot;Synonym&quot;&gt;energetic&lt;/o:Thesaurus&gt;
+</code></pre>
+<blockquote><p>Gets all synonyms of the word <code>energetic</code>.</p>
+</blockquote>
+<pre><code class="lang-xml">&lt;o:Thesaurus Get=&quot;Spell&quot;&gt;encyclopedi&lt;/o:Thesaurus&gt;
+</code></pre>
+<blockquote><p>Gets all possible spell corrections for the <em>misspelled</em> word <code>encyclopedi</code>.</p>
+</blockquote>
+<pre><code class="lang-xml">&lt;o:Thesaurus Get=&quot;Hyphenate&quot;&gt;encyclopedia&lt;/o:Thesaurus&gt;
+</code></pre>
+<blockquote><p>Gets hyphenations of the word <code>encyclopedia</code></p>
+</blockquote>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2016 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
