@@ -9557,6 +9557,16 @@ references:
   href: api/Syn.Utility.Utilities.SecurityUtility.html#Syn_Utility_Utilities_SecurityUtility_Encrypt_System_String_System_String_
   commentId: M:Syn.Utility.Utilities.SecurityUtility.Encrypt(System.String,System.String)
   fullName: Syn.Utility.Utilities.SecurityUtility.Encrypt(System.String, System.String)
+- uid: Syn.Utility.Utilities.SecurityUtility.SimpleDecrypt(System.String)
+  name: SimpleDecrypt(String)
+  href: api/Syn.Utility.Utilities.SecurityUtility.html#Syn_Utility_Utilities_SecurityUtility_SimpleDecrypt_System_String_
+  commentId: M:Syn.Utility.Utilities.SecurityUtility.SimpleDecrypt(System.String)
+  fullName: Syn.Utility.Utilities.SecurityUtility.SimpleDecrypt(System.String)
+- uid: Syn.Utility.Utilities.SecurityUtility.SimpleEncrypt(System.String)
+  name: SimpleEncrypt(String)
+  href: api/Syn.Utility.Utilities.SecurityUtility.html#Syn_Utility_Utilities_SecurityUtility_SimpleEncrypt_System_String_
+  commentId: M:Syn.Utility.Utilities.SecurityUtility.SimpleEncrypt(System.String)
+  fullName: Syn.Utility.Utilities.SecurityUtility.SimpleEncrypt(System.String)
 - uid: Syn.Utility.Utilities.TextUtility
   name: TextUtility
   href: api/Syn.Utility.Utilities.TextUtility.html#Syn_Utility_Utilities_TextUtility

@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Syn Speech </title>
+    <title>Syn Speech - Speech Recognition Library </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Syn Speech ">
+    <meta name="title" content="Syn Speech - Speech Recognition Library ">
     <meta name="generator" content="docfx 2.1.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -17,6 +17,16 @@
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
     
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+    ga('create', 'UA-39941606-1', 'auto');
+    ga('send', 'pageview');
+  
+  </script>
   </head>
   <body data-spy="scroll" data-target="#affix">
     <div id="wrapper">
@@ -65,13 +75,28 @@
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
               <a href="https://github.com/SynHub/syn-documentation/blob/master/tutorial/speech/index.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
-              <h1 id="syn-speech">Syn Speech</h1>
+              <h1 id="syn-speech-speech-recognition-library">Syn Speech - Speech Recognition Library</h1>
               
 <p>Syn Speech is a flexible speaker independent continuous speech recognition engine for Mono and .Net framework. Using Syn Speech developers can easily add offline speech recognition to their projects without any advanced configuration or changes.</p>
 <p>Syn Speech even supports JSGF grammar files for faster choice based speech recognition and encapsulates many of the state-of-the art speech recognition features from CMU Sphinx which was created via a joint collaboration between the Sphinx group at Carnegie Mellon University, Sun Microsystems Laboratories, Mitsubishi Electric Research Labs (MERL), and Hewlett Packard (HP), with contributions from the University of California at Santa Cruz (UCSC) and the Massachusetts Institute of Technology (MIT).</p>
 <p>All CMU Sphinx Models can directly be loaded into Syn Speech without any modification. These include (but are not limited to) Acoustic Models, Language Models and Phonetic Dictionaries published by Carnegie Melllon University.</p>
 <h2 id="nuget">NuGet</h2>
 <p><code>PM&gt; Install-Package Syn.Speech</code></p>
+<h2 id="simple-architecture">Simple Architecture</h2>
+<p><img src="images/syn-speech-graph.png" alt="Create Project Image"></p>
+<h2 id="platform-independent">Platform Independent</h2>
+<p>Because Syn Speech doesn&#39;t rely on any external library the same library can run on a variety of platforms (including Mac, Linux and Windows) without requiring any special changes using Mono and .Net framework respectively. Syn Speech is one of the first flexible speech recognition engine that worked under Mono.</p>
+<h2 id="demo-application-and-tutorial">Demo Application and Tutorial</h2>
+<p>In our github repository we&#39;ve added a working Demo Application that demostrates continuous and grammar based speech recognition using Syn Speech. To download the demo application please visit <a href="https://github.syn.co.in/">Syn Github Repository</a>.</p>
+<h2 id="wav-audio-files">.Wav Audio Files</h2>
+<p>Syn Speech library can load and transcribe Speech to Text using .Wav Audio files. It is recommend that you use Wav files with 16Khz Sample Rate for better results.</p>
+<h2 id="jsgf-grammar-support">JSGF Grammar Support</h2>
+<p>Syn Speech also enables usage of JSpeech Grammar Format files for faster and choice-based speech recognition. Simple enable the use grammar option and specifiy the file and the name of the Grammar to use. The grammar parser will parse the grammar file in seconds and you are done with the grammar part. Syn Speech also partially supports Speech Recognition Grammar Specification (SRGS) for single-word based speech recognition.</p>
+<p>More information on JSpeech Grammar Format can be found <a href="http://www.w3.org/TR/jsgf/">here</a></p>
+<h2 id="speech-data">Speech Data</h2>
+<p>As training and preparing Models for speech recognition is a heavy and time consuming task. Syn Speech uses CMU Sphinx&#39;s Acoustic Models, Language Models and Phonetic Dictionary to free you from the burden of creating them on your own. All these Models are freely available in their <a href="https://github.com/cmusphinx/sphinx4/tree/master/sphinx4-data/src/main/resources/edu/cmu/sphinx/models/en-us">CMU Sphinx Repository</a> and can be loaded into Syn Speech with ease.</p>
+<h2 id="free-for-foss-projects">Free for FOSS Projects</h2>
+<p>Syn Speech is FREE for FOSS (Free and Open Source Software) Projects. Which means if you are working on a free and open source project (non-commercial and/or academic) you can use Syn Speech in your project without any restrictions.</p>
 
             </article>
           </div>

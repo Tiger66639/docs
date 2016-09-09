@@ -17,6 +17,16 @@
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
     
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+    ga('create', 'UA-39941606-1', 'auto');
+    ga('send', 'pageview');
+  
+  </script>
   </head>
   <body data-spy="scroll" data-target="#affix">
     <div id="wrapper">
@@ -146,9 +156,9 @@ namespace YOUR_PROJECT_NAMESPACE
 <p>In the above code replace <code>YOUR_WEBSITE_URL</code> with its respective value say <em>www.example.com</em></p>
 <h2 id="tips-and-tricks">Tips and Tricks</h2>
 <ul>
-<li>You can replace the Avatar with your own custom avatar but make sure that you use the <code>.png file</code> format if your wish to have a transparent background and use the same exact resolution as used by the avatar images in the demo project.</li>
-<li>You can map <code>.simlpk</code> extension in IIS to text/plain if you do not wish to rename the file extension to <code>.txt</code>every time you upload your SIML Package to the Assistant folder.</li>
-<li>If you add an update SIML Package to the Assistant folder use the URL <code>http://YOUR_WEBSITE_URL/ChatService.aspx?Get=restart</code> to restart the Chat Agent with its new knowledge base.</li>
+<li>You can replace the Avatar with your own custom avatar but make sure that you use the <code>.png file</code> format if your wish to have a transparent background and also use the exact resolution as used by the avatar images in the demo project.</li>
+<li>You can map <code>.simlpk</code> extension in IIS to text/plain if you do not wish to rename the file extension to <code>.txt</code> every time you upload a new SIML Package to the Assistant folder.</li>
+<li>If you add an updated SIML Package to the Assistant folder, use the URL <code>http://YOUR_WEBSITE_URL/ChatService.aspx?Get=restart</code> to restart the Chat Agent with its new knowledge base.</li>
 </ul>
 
             </article>
