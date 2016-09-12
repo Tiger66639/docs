@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Windows Plugin </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Windows Plugin ">
+    <meta name="generator" content="docfx 2.4.0.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    <meta property="docfx:rel" content="../../../">
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+    ga('create', 'UA-39941606-1', 'auto');
+    ga('send', 'pageview');
+  
+  </script>
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="windows-plugin">Windows Plugin</h1>
+              
+<p>Provides adapters to interact with the Windows operating system features.</p>
+<h2 id="siml-adapters">SIML Adapters</h2>
+<h3 id="1-clipboard">1. Clipboard</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Annotation</strong></th>
+<th style="text-align:left"><code>&lt;o:Clipboard&gt;</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Definition</strong></td>
+<td style="text-align:left">Gets or sets the user&#39;s clipboard text content.</td>
+</tr>
+<tr>
+<td><strong>Children</strong></td>
+<td style="text-align:left">May contain a <code>Get</code> or <code>Set</code> attribute. If no <code>Get</code> or <code>Set</code> attribute is provided and the inner value is empty then the adapter returns the textual content present in the user&#39;s clipboard. If the inner value is not empty and no <code>Get</code> or <code>Set</code> attribute is specified then the adapter copies the inner value to user&#39;s clipboard.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="attributes">Attributes</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Get</td>
+<td style="text-align:left">Text</td>
+<td>Returns the textual content present in the user&#39;s clipboard.</td>
+</tr>
+<tr>
+<td style="text-align:left">Set</td>
+<td style="text-align:left">Text</td>
+<td>Sets the textual content of the user&#39;s clipboard to the specified text.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example">Example</h4>
+<pre><code class="lang-xml">&lt;o:Clipboard/&gt;
+</code></pre><blockquote><p>Returns the Text content present in the user&#39;s clipboard.</p>
+</blockquote>
+<pre><code class="lang-xml">&lt;o:Clipboard&gt;This just rocks&lt;/o:Clipboard&gt;
+</code></pre><blockquote><p>Copies <code>This just rocks</code> to clipboard.</p>
+</blockquote>
+<h3 id="2-machine">2. Machine</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Annotation</strong></th>
+<th style="text-align:left"><code>&lt;o:Machine&gt;</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Definition</strong></td>
+<td style="text-align:left">Gets or sets the user&#39;s clipboard text content.</td>
+</tr>
+<tr>
+<td><strong>Children</strong></td>
+<td style="text-align:left">Must contain a <code>Task</code> or <code>Get</code> attribute specifying the task to perform or the user information to retrieve respectively.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="attributes-1">Attributes</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Value</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Task</td>
+<td style="text-align:left">Lock</td>
+<td style="text-align:left">Locks the user desktop</td>
+</tr>
+<tr>
+<td style="text-align:left">Task</td>
+<td style="text-align:left">Restart</td>
+<td style="text-align:left">Restarts the Windows operating system.</td>
+</tr>
+<tr>
+<td style="text-align:left">Task</td>
+<td style="text-align:left">Shutdown</td>
+<td style="text-align:left">Shuts down the Windows operating system.</td>
+</tr>
+<tr>
+<td style="text-align:left">Task</td>
+<td style="text-align:left">Logoff</td>
+<td style="text-align:left">Signs out of the user&#39;s desktop</td>
+</tr>
+<tr>
+<td style="text-align:left">Task</td>
+<td style="text-align:left">Clear-Trash</td>
+<td style="text-align:left">Clears the user&#39;s recycle bin content.</td>
+</tr>
+<tr>
+<td style="text-align:left">Task</td>
+<td style="text-align:left">Screenshot</td>
+<td style="text-align:left">Takes a screenshot of the User&#39;s desktop and saves it in the specified screenshot folder.</td>
+</tr>
+<tr>
+<td style="text-align:left">Task</td>
+<td style="text-align:left">Change-Wallpaper</td>
+<td style="text-align:left">Changes the desktop wallpaper by searching for image files in the specified wallpaper folder.</td>
+</tr>
+<tr>
+<td style="text-align:left">Get</td>
+<td style="text-align:left">IP</td>
+<td style="text-align:left">Gets the external IP address.</td>
+</tr>
+<tr>
+<td style="text-align:left">Get</td>
+<td style="text-align:left">User-Name</td>
+<td style="text-align:left">Gets the user&#39;s account name.</td>
+</tr>
+<tr>
+<td style="text-align:left">Get</td>
+<td style="text-align:left">Os-Version</td>
+<td style="text-align:left">Gets the Windows OS Version</td>
+</tr>
+<tr>
+<td style="text-align:left">Get</td>
+<td style="text-align:left">Processor-Count</td>
+<td style="text-align:left">Gets the number of processors in the machine.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-1">Example</h4>
+<pre><code class="lang-xml">&lt;o:Machine Task=&quot;Lock&quot;/&gt;
+</code></pre><blockquote><p>Locks the user&#39;s desktop</p>
+</blockquote>
+<pre><code class="lang-xml">&lt;o:Machine Task=&quot;Screenshot&quot;/&gt;
+</code></pre><blockquote><p>Takes a screenshot of the user&#39;s desktop.</p>
+</blockquote>
+<pre><code class="lang-xml">&lt;o:Machine Get=&quot;User-Name&quot;/&gt;
+</code></pre><blockquote><p>Gets the user&#39;s account name.</p>
+</blockquote>
+<h3 id="3-window">3. Window</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Annotation</strong></th>
+<th style="text-align:left"><code>&lt;o:Window&gt;</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Definition</strong></td>
+<td style="text-align:left">Handles open windows on user desktop.</td>
+</tr>
+<tr>
+<td><strong>Children</strong></td>
+<td style="text-align:left">Must contain a <code>Task</code> attribute that specifies that task to perform on open windows.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="attributes-2">Attributes</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Value</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Task</td>
+<td style="text-align:left">Minimize</td>
+<td style="text-align:left">Minimizes the currently active window.</td>
+</tr>
+<tr>
+<td style="text-align:left">Task</td>
+<td style="text-align:left">Restore</td>
+<td style="text-align:left">Restores the previously minimized window.</td>
+</tr>
+<tr>
+<td style="text-align:left">Task</td>
+<td style="text-align:left">Maximize</td>
+<td style="text-align:left">Maxmizes the currently active window.</td>
+</tr>
+<tr>
+<td style="text-align:left">Task</td>
+<td style="text-align:left">Close</td>
+<td style="text-align:left">Closes the currently active window.</td>
+</tr>
+<tr>
+<td style="text-align:left">Task</td>
+<td style="text-align:left">Tile</td>
+<td style="text-align:left">Tiles the opened windows.</td>
+</tr>
+<tr>
+<td style="text-align:left">Task</td>
+<td style="text-align:left">Tile-Horizontal</td>
+<td style="text-align:left">Tiles all opened windows horizontally.</td>
+</tr>
+<tr>
+<td style="text-align:left">Task</td>
+<td style="text-align:left">Tile-Vertical</td>
+<td style="text-align:left">Vertically tiles all opened windows .</td>
+</tr>
+<tr>
+<td style="text-align:left">Task</td>
+<td style="text-align:left">Cascade</td>
+<td style="text-align:left">Cascades all opened windows.</td>
+</tr>
+<tr>
+<td style="text-align:left">Task</td>
+<td style="text-align:left">Minimize-All</td>
+<td style="text-align:left">Minimizes all the opened windows.</td>
+</tr>
+<tr>
+<td style="text-align:left">Task</td>
+<td style="text-align:left">Undo-Minimize-All</td>
+<td style="text-align:left">Restores all the previously minimized windows.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="settings">Settings</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Screenshot-Directory</td>
+<td style="text-align:left">The directory where all the screenshots are saved.</td>
+</tr>
+<tr>
+<td style="text-align:left">Wallpaper-Directory</td>
+<td style="text-align:left">The directory where all the wallpapers are saved.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>Some adapter functions may require administrative rights to execute.</li>
+</ul>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2016 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

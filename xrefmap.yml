@@ -1,3 +1,4 @@
+### YamlMime:XRefMap
 sorted: true
 references:
 - uid: Syn.Bot.Siml
@@ -11729,6 +11730,11 @@ references:
   href: api/Syn.VA.SettingsManager.html#Syn_VA_SettingsManager
   commentId: T:Syn.VA.SettingsManager
   fullName: Syn.VA.SettingsManager
+- uid: Syn.VA.SettingsManager.Add(Syn.VA.Settings)
+  name: Add(Settings)
+  href: api/Syn.VA.SettingsManager.html#Syn_VA_SettingsManager_Add_Syn_VA_Settings_
+  commentId: M:Syn.VA.SettingsManager.Add(Syn.VA.Settings)
+  fullName: Syn.VA.SettingsManager.Add(Syn.VA.Settings)
 - uid: Syn.VA.SettingsManager.Contains(System.String)
   name: Contains(String)
   href: api/Syn.VA.SettingsManager.html#Syn_VA_SettingsManager_Contains_System_String_

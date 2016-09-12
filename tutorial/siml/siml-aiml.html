@@ -8,7 +8,7 @@
     <title>SIML vs AIML </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="SIML vs AIML ">
-    <meta name="generator" content="docfx 2.1.0.0">
+    <meta name="generator" content="docfx 2.4.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../../styles/main.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
+    <meta property="docfx:rel" content="../../">
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -63,6 +63,14 @@
           </div>
         </div>
       </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
       <div role="main" class="container body-content hide-when-search">
         
         <div class="sidenav hide-when-search">
@@ -74,7 +82,6 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <a href="https://github.com/SynHub/syn-documentation/blob/master/tutorial/siml/siml-aiml.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
               <h1 id="siml-vs-aiml">SIML vs AIML</h1>
               
 <p>The following comparisons has been done just to reflect the architectural differences. We have no intention of proving the opponent architecture as inferior or to degrade any of its features. At Syn we believe in a humble approach to AI and will never criticise any effort towards improving the current state of AI. Both SIML and AIML server their purpose(s) best. If you are a beginner and can live with simple Chatbot features we ourself encourage you to check AIML but if are an experienced Chatbot developer and wish to use advanced Chatbot technologies in your work then you may try SIML.</p>
@@ -111,8 +118,7 @@
     &lt;GotoMatch /&gt;
   &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre>
-<p><strong>AIML</strong></p>
+</code></pre><p><strong>AIML</strong></p>
 <pre><code class="lang-xml">&lt;category&gt;
 &lt;pattern&gt;A BIT *&lt;/pattern&gt;
 &lt;template&gt;
@@ -140,16 +146,14 @@
 &lt;sr /&gt;
 &lt;/template&gt;
 &lt;/category&gt;
-</code></pre>
-<h3 id="regular-expressions">Regular Expressions</h3>
+</code></pre><h3 id="regular-expressions">Regular Expressions</h3>
 <p><strong>SIML</strong></p>
 <pre><code class="lang-xml">&lt;Model&gt;
  &lt;!-- STATUS here is a any regular expression --&gt;
  &lt;Pattern&gt;SWITCH @STATUS&lt;/Pattern&gt;
  &lt;Response&gt;status changed to &lt;Match /&gt;&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre>
-<p><strong>AIML</strong>
+</code></pre><p><strong>AIML</strong>
 <em> Does Not Support Regular Expressions</em></p>
 <h3 id="greedy-sets-and-regex">Greedy Sets and Regex</h3>
 <p><strong>SIML</strong></p>
@@ -158,8 +162,7 @@
  &lt;Response&gt;I like &lt;Match/&gt;&lt;/Response&gt;
  &lt;!--Matches &quot;United States of America&quot;--&gt;
 &lt;/Model&gt;
-</code></pre>
-<p><strong>AIML</strong></p>
+</code></pre><p><strong>AIML</strong></p>
 <pre><code class="lang-xml">&lt;!-- Country is a SET that has &quot;United States&quot; and &quot;United States of America&quot; --&gt;
 
 &lt;category&gt;
@@ -172,8 +175,7 @@ I like &lt;star/&gt;
 &lt;/category&gt;
 
 &lt;!--Matches &quot;United States&quot;--&gt;
-</code></pre>
-<h3 id="dynamic-sets">Dynamic Sets</h3>
+</code></pre><h3 id="dynamic-sets">Dynamic Sets</h3>
 <p>SIML Sets can be created within Patterns thereby excluding the need for predefining smaller Sets.</p>
 <p><strong>SIML</strong></p>
 <pre><code class="lang-xml">&lt;Model&gt;
@@ -182,8 +184,7 @@ I like &lt;star/&gt;
   I like &lt;Match/&gt; too!
  &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre>
-<p><strong>AIML</strong></p>
+</code></pre><p><strong>AIML</strong></p>
 <p><em>Does Not Support Dynamic Sets</em></p>
 <h3 id="nested-modelling">Nested Modelling</h3>
 <p>SIML Models are nestable and extends support for dialogue based chatbot systems.</p>
@@ -196,8 +197,7 @@ I like &lt;star/&gt;
   &lt;Response&gt;Application started&lt;/Response&gt;
  &lt;/Model&gt;
 &lt;/Model&gt;
-</code></pre>
-<p><strong>AIML</strong></p>
+</code></pre><p><strong>AIML</strong></p>
 <pre><code class="lang-xml">&lt;category&gt;
 &lt;pattern&gt;START APPLICATION&lt;/pattern&gt;
 &lt;template&gt;Are you sure?&lt;/template&gt;
@@ -208,8 +208,7 @@ I like &lt;star/&gt;
 &lt;that&gt;Are you sure?&lt;/that&gt;
 &lt;template&gt;Application started&lt;/template&gt;
 &lt;/category&gt;
-</code></pre>
-<h3 id="labeling-responses">Labeling Responses</h3>
+</code></pre><h3 id="labeling-responses">Labeling Responses</h3>
 <p>SIML allows random responses to have a Label which helps in reducing redundancy of creating knowledge unit for every random output.</p>
 <p><strong>SIML</strong></p>
 <pre><code class="lang-xml">&lt;Model&gt;
@@ -230,8 +229,7 @@ I like &lt;star/&gt;
  &lt;Previous&gt;I-am-fine&lt;/Previous&gt;
  &lt;Response&gt;Thank you&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre>
-<p><strong>AIML</strong></p>
+</code></pre><p><strong>AIML</strong></p>
 <pre><code class="lang-xml">&lt;category&gt;
 &lt;pattern&gt;HOW ARE YOU&lt;/pattern&gt;
 &lt;template&gt;
@@ -267,8 +265,7 @@ I like &lt;star/&gt;
 &lt;that&gt;I feel normal&lt;/that&gt;
 &lt;template&gt;Thank you&lt;/template&gt;
 &lt;/category&gt;
-</code></pre>
-<h3 id="contextual-memory">Contextual Memory</h3>
+</code></pre><h3 id="contextual-memory">Contextual Memory</h3>
 <p>Every SIML Model represents a unit of knowledge that belongs to a particular Concept. A Concept is SIML is an <em>abstract</em> idea of what the user may input regarding a topic.</p>
 <p><strong>SIML</strong></p>
 <pre><code class="lang-xml">&lt;!-- Context = &quot;User likes and dislikes&quot; --&gt;
@@ -285,8 +282,7 @@ I like &lt;star/&gt;
 &lt;/Model&gt;
 
 &lt;/Concept&gt;
-</code></pre>
-<p><strong>AIML</strong></p>
+</code></pre><p><strong>AIML</strong></p>
 <pre><code class="lang-xml">&lt;!-- Context = SomeFile.Aiml? --&gt;
 
 &lt;category&gt;
@@ -298,8 +294,7 @@ I like &lt;star/&gt;
 &lt;pattern&gt;RED IS MY FAVORITE COLOR&lt;/pattern&gt;
 &lt;template&gt;Me too&lt;/template&gt;
 &lt;/category&gt;
-</code></pre>
-<h3 id="listed-settings">Listed Settings</h3>
+</code></pre><h3 id="listed-settings">Listed Settings</h3>
 <p>SIML stores both Bot and User predicates as list of values.</p>
 <p>For example: A <em>Bot</em> or a <em>User</em> may like or dislike or may have some interests in varying numbers. SIML stores predicates as a List of items. Example: a User may like more than 1 movie ( which is obvious ) thus SIML allows storing of such values in a list.</p>
 <p><strong>SIML</strong></p>
@@ -309,8 +304,7 @@ I like &lt;star/&gt;
  &lt;Value&gt;Green Miles&lt;/Value&gt;
  &lt;Value&gt;Life Is Beautiful&lt;/Value&gt;
 &lt;/Variable &gt;
-</code></pre>
-<p><strong>AIML</strong></p>
+</code></pre><p><strong>AIML</strong></p>
 <p><em>AIML stores Predicates as a single entity –&gt; FavoriteMovie:expendables</em></p>
 <h3 id="the-power-of-emotions-with-emotionml">The Power of Emotions with EmotionML</h3>
 <p>W3C created EmotionML as the upcoming standard for representing emotions and its related states. SIML comes with an in-built EmotionML parser to detect and parse emotions.</p>
@@ -330,8 +324,7 @@ dimension-set=&quot;http://www.w3.org/TR/emotion-voc/xml#pad-dimensions&quot;&gt
 &lt;/emotionml&gt;
 
 &lt;/Siml&gt;
-</code></pre>
-<p><strong>AIML</strong></p>
+</code></pre><p><strong>AIML</strong></p>
 <p><em>AIML bots are emotionless</em></p>
 <h3 id="true-respect-for-javascript">True Respect for JavaScript</h3>
 <p>SIML pushes pattern recognition a step further by creating a Hybrid-Graph system that can support conditions and scripts in place of textual patterns. JavaScript is the world’s favourite Scripting Language and so is ours. With SIML you can use JavaScript for conditional activation of patterns or to generate complex responses.</p>
@@ -347,8 +340,7 @@ dimension-set=&quot;http://www.w3.org/TR/emotion-voc/xml#pad-dimensions&quot;&gt
   &lt;Js&gt;hello();&lt;/Js&gt;
  &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre>
-<p><strong>AIML</strong>
+</code></pre><p><strong>AIML</strong>
 <em>AIML does’t have an internal Js Interpretor</em></p>
 <h3 id="predictive-randomness">Predictive Randomness</h3>
 <p>With SIML you can now match bot output to user input using the <code>Phrase</code> element.</p>
@@ -365,8 +357,7 @@ dimension-set=&quot;http://www.w3.org/TR/emotion-voc/xml#pad-dimensions&quot;&gt
  &lt;/Phrase&gt;
  &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre>
-<p><strong>AIML</strong></p>
+</code></pre><p><strong>AIML</strong></p>
 <p><em>AIML Interpretors do not handle this feature</em></p>
 <h3 id="conditional-patterns">Conditional Patterns</h3>
 <p>SIML even supports Conditional Patterns.</p>
@@ -375,8 +366,7 @@ dimension-set=&quot;http://www.w3.org/TR/emotion-voc/xml#pad-dimensions&quot;&gt
  &lt;Pattern&gt;&lt;If User=&quot;Is-Master&quot;/&gt;&lt;/Pattern&gt;
  &lt;Response&gt;Welcome back Sir!&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre>
-<p><strong>AIML</strong></p>
+</code></pre><p><strong>AIML</strong></p>
 <p><em>AIML Interpretors cannot handle this feature due to AIML’s static Graph System</em></p>
 <h3 id="do-more-with-operators">Do more with Operators</h3>
 <p>SIML includes a variety of operators:</p>
@@ -400,8 +390,7 @@ dimension-set=&quot;http://www.w3.org/TR/emotion-voc/xml#pad-dimensions&quot;&gt
   &lt;Else&gt;Yo!&lt;/Else&gt;
  &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre>
-<p><strong>AIML</strong></p>
+</code></pre><p><strong>AIML</strong></p>
 <p><em>AIML just offers <code>value=&quot;&quot;</code> comparisons</em></p>
 <h3 id="one-element-many-features-vs-many-elements-many-features">One element many features vs Many elements many features</h3>
 <p>With SIML we believe that there’s no need to re-invent the wheel and keep adding new tags for new features when 1 element with 1 attribute can deliver it all.</p>
@@ -415,8 +404,7 @@ dimension-set=&quot;http://www.w3.org/TR/emotion-voc/xml#pad-dimensions&quot;&gt
  &lt;Pattern&gt;MY NAME IS * &lt;/Pattern&gt;
  &lt;Response&gt;Hi there &lt;Text Get=&quot;Formal&quot;&gt;&lt;Match /&gt;&lt;/Text&gt;&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre>
-<p><strong>AIML</strong></p>
+</code></pre><p><strong>AIML</strong></p>
 <pre><code class="lang-xml">&lt;category&gt;
 &lt;pattern&gt;I AM FROM *&lt;/pattern&gt;
 &lt;template&gt;Vive la &lt;uppercase&gt;&lt;star/&gt;&lt;/uppercase&gt;&lt;/template&gt;
@@ -427,14 +415,15 @@ dimension-set=&quot;http://www.w3.org/TR/emotion-voc/xml#pad-dimensions&quot;&gt
 &lt;template&gt;Hi there &lt;formal&gt;&lt;star/&gt;&lt;/formal&gt;&lt;/template&gt;
 &lt;/category&gt;
 </code></pre>
-
             </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
-            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
-            </nav>
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
           </div>
         </div>
       </div>

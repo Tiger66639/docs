@@ -8,7 +8,7 @@
     <title>Loader Plugin </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Loader Plugin ">
-    <meta name="generator" content="docfx 2.1.0.0">
+    <meta name="generator" content="docfx 2.4.0.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../../toc.html">
-    
+    <meta property="docfx:rel" content="../../../">
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -63,6 +63,14 @@
           </div>
         </div>
       </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
       <div role="main" class="container body-content hide-when-search">
         
         <div class="sidenav hide-when-search">
@@ -74,21 +82,176 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <a href="https://github.com/SynHub/syn-documentation/blob/master/tutorial/va/plugins/loader.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
               <h1 id="loader-plugin">Loader Plugin</h1>
               
 <p>The <code>Loader</code> plugin is the only plugin that is loaded by Syn Virtual Assistant. This plugin is responsible for loading all other plugins and to provide a Bot interface to the Virtual Assistant.</p>
-<p>The default <em>Loader</em> plugin provides an SIML Bot implementation to Syn Virtual Assistant.</p>
+<p>The default <em>Loader</em> plugin provides an SIML Bot architecture to Syn Virtual Assistant.</p>
 <blockquote><p><code>Syn.VA.Plugins.Loader</code> is NOT placed in the <em>Plugins</em> folder instead it resides in the root directory of Syn Virtual Assistant Installation.</p>
+</blockquote>
+<p>This plugin also provides a few adapters and a settings interface for the <em>Main</em> user.</p>
+<h2 id="knowledge-base">Knowledge-Base</h2>
+<p>The following SIML Projects are loaded in their respective order by the <code>Loader</code> Plugin. These projects usually present in the <code>Syn/Bot</code> directory.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Project File</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Commands.SimlProj</td>
+<td style="text-align:left">Contains all commands for all official plugins.</td>
+</tr>
+<tr>
+<td style="text-align:left">General.SimlProj</td>
+<td style="text-align:left">A general purpose chat bot knowledge base.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>External</em></td>
+<td style="text-align:left">After the above projects have been loaded the plugin will search for SIML Projects in the directory provided by the <code>External-Bot-Directory</code> variable in <code>VA</code> Settings.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="siml-adapters">SIML Adapters</h2>
+<h3 id="1-agent">1. Agent</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Annotation</strong></th>
+<th style="text-align:left"><code>&lt;o:Agent&gt;</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Definition</strong></td>
+<td style="text-align:left">Allows trivial interactions with the Virtual Assistant</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Children</strong></td>
+<td style="text-align:left">Must contain a <code>Task</code>, <code>Get</code> or <code>Set</code> attribute.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="attributes">Attributes</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Task</td>
+<td style="text-align:left">Exit</td>
+<td>Shuts down the Virtual Assistant.</td>
+</tr>
+<tr>
+<td style="text-align:left">Task</td>
+<td style="text-align:left">Restart</td>
+<td>Restarts the Virtual Assistant application.</td>
+</tr>
+<tr>
+<td style="text-align:left">Get</td>
+<td style="text-align:left"><code>variable name</code></td>
+<td>Gets the value of the specified variable. A colon can be used to specify the plugin name. <em>Example</em> <code>Get=Weather:Location</code> will return the value of the variable <code>Location</code> from <code>Weather</code> plugin settings.</td>
+</tr>
+<tr>
+<td style="text-align:left">Set</td>
+<td style="text-align:left"><code>variable name</code></td>
+<td>Sets the value of the specified variable. A colon separator can be used to specify the plugin name.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example">Example</h4>
+<pre><code class="lang-xml">&lt;o:Agent Task=&quot;Restart&quot; /&gt;
+</code></pre><blockquote><p>Restarts the Virtual Assistant.</p>
+</blockquote>
+<pre><code class="lang-xml">&lt;o:Agent Get=&quot;Weather:Location&quot; /&gt;
+</code></pre><blockquote><p>Gets the value of the <code>Location</code> variable from <code>Weather</code> plugin settings.</p>
+</blockquote>
+<h3 id="2-credit">2. Credit</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Annotation</strong></th>
+<th style="text-align:left"><code>&lt;o:Credit&gt;</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Definition</strong></td>
+<td style="text-align:left">Displays a credit link in the Virtual Assistant&#39;s <em>Display Panel</em>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Children</strong></td>
+<td style="text-align:left">Must contain a <code>Title</code> and <code>Url</code> attribute. Specifying the title and the url to open when the user clicks on the <em>title</em>.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-1">Example</h4>
+<pre><code class="lang-xml">&lt;o:Credit Title=&quot;Powered by Syn!&quot; Url=&quot;http://www.syn.co.in&quot; /&gt;
+</code></pre><blockquote><p>Displays <em>Powered by Syn</em> and when the user clicks on the link the url <code>http://www.syn.co.in</code> is opened.</p>
+<p>This adapter must always be used if an external API from a service provider requires you to display there credit link.</p>
+</blockquote>
+<h3 id="3-helpwindow">3. HelpWindow</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Annotation</strong></th>
+<th style="text-align:left"><code>&lt;o:HelpWindow&gt;</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Definition</strong></td>
+<td style="text-align:left">Displays a Help Window to search for help files.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Children</strong></td>
+<td style="text-align:left">May contain a <code>Title</code> attribute that specifies that <em>Window Title</em>.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-2">Example</h4>
+<pre><code class="lang-xml">&lt;o:HelpWindow /&gt;
+</code></pre><blockquote><p>Displays the Help Window.</p>
+</blockquote>
+<h3 id="4-textwindow">4. TextWindow</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Annotation</strong></th>
+<th style="text-align:left"><code>&lt;o:TextWindow&gt;</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Definition</strong></td>
+<td style="text-align:left">Opens the specified text file in a separate window.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Children</strong></td>
+<td style="text-align:left">Must contain an arbitrary text specifying the file path and may contain a <code>Title</code> attribute that specifies that <em>Window Title</em>.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-3">Example</h4>
+<pre><code class="lang-xml">&lt;o:TextWindow Title=&quot;Log File&quot;&gt;Log.txt&lt;/o:TextWindow&gt;
+</code></pre><blockquote><p>Opens the file <code>Log.txt</code> in a separate window.</p>
 </blockquote>
 
             </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
-            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
-            </nav>
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
           </div>
         </div>
       </div>

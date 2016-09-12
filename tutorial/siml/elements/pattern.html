@@ -8,7 +8,7 @@
     <title>Pattern </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Pattern ">
-    <meta name="generator" content="docfx 2.1.0.0">
+    <meta name="generator" content="docfx 2.4.0.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../../toc.html">
-    
+    <meta property="docfx:rel" content="../../../">
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -63,6 +63,14 @@
           </div>
         </div>
       </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
       <div role="main" class="container body-content hide-when-search">
         
         <div class="sidenav hide-when-search">
@@ -74,7 +82,6 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <a href="https://github.com/SynHub/syn-documentation/blob/master/tutorial/siml/elements/pattern.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
               <h1 id="pattern">Pattern</h1>
               
 <table>
@@ -164,8 +171,7 @@
  &lt;Pattern&gt;^HI THERE&lt;/Pattern&gt;
  &lt;Response&gt;Hello user&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre>
-<p><strong>User Input</strong></p>
+</code></pre><p><strong>User Input</strong></p>
 <p><em>Hi there</em></p>
 <p><strong>Bot Output</strong></p>
 <p><em>Heya User</em></p>
@@ -185,8 +191,7 @@
  &lt;Pattern&gt;% SIML&lt;/Pattern&gt;
  &lt;Response&gt;You Rock!&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre>
-<p><strong>User Input</strong></p>
+</code></pre><p><strong>User Input</strong></p>
 <p><em>Hello Siml</em></p>
 <p><strong>Bot Output</strong></p>
 <p><em>You Rock!</em></p>
@@ -206,8 +211,7 @@
  &lt;Pattern&gt;HI MY NAME IS LESLIE&lt;/Pattern&gt;
  &lt;Response&gt;Well, Hi there.&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre>
-<p><strong>User Input</strong></p>
+</code></pre><p><strong>User Input</strong></p>
 <p><em>Hi my name is Leslie</em></p>
 <p><strong>Bot Output</strong></p>
 <p><em>Good to meet you.</em></p>
@@ -227,8 +231,7 @@
  &lt;Pattern&gt;HOW ARE YOU DOING TODAY&lt;/Pattern&gt;
  &lt;Response&gt;I am doing great.&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre>
-<p><strong>User Input</strong></p>
+</code></pre><p><strong>User Input</strong></p>
 <p><em>How are you</em></p>
 <p><strong>Bot Output</strong></p>
 <p><em>How are you</em></p>
@@ -244,8 +247,7 @@
  &lt;Pattern&gt;I LIKE THE COLOR [COLOR]&lt;/Pattern&gt;
  &lt;Response&gt;Me too!&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre>
-<p><strong>User Input</strong></p>
+</code></pre><p><strong>User Input</strong></p>
 <p><em>I like the color blue</em></p>
 <p><strong>Bot Output</strong></p>
 <p><em>Me too!</em></p>
@@ -286,8 +288,7 @@
  &lt;Item&gt;BLUE&lt;/Item&gt;
  &lt;Item&gt;ORANGE&lt;/Item&gt;
 &lt;/Set&gt;
-</code></pre>
-<h4 id="reserved-sets">Reserved Sets</h4>
+</code></pre><h4 id="reserved-sets">Reserved Sets</h4>
 <p>SIML comes with reserved Set names that can help developers address Bot, User and Map items directly within a Pattern. The name of the Set and the parameter part are separated using a colon.</p>
 <p>Like all set names, the name and the parameter part of the reserved variables are case-insensitive. Reserved sets are also dynamic. Hence, at run-time if the value of any variable is changed the pattern will then match the new value.</p>
 <h5 id="bot-set">Bot Set</h5>
@@ -300,8 +301,7 @@
     Yes, my name is &lt;Match /&gt;
   &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre>
-<p><strong>User Input</strong></p>
+</code></pre><p><strong>User Input</strong></p>
 <p><em>Is your name Maya?</em></p>
 <p><strong>Bot Output</strong></p>
 <p><em>Yes, my name is Maya</em></p>
@@ -317,8 +317,7 @@
     Yes, your name is &lt;Match /&gt;
   &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre>
-<p><strong>User Input</strong></p>
+</code></pre><p><strong>User Input</strong></p>
 <p><em>Is my name Leslie?</em></p>
 <p><strong>Bot Output</strong></p>
 <p><em>Yes, your name is Leslie</em></p>
@@ -334,8 +333,7 @@
     Yes, my &lt;Match /&gt; is a researcher.
   &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre>
-<p><strong>User Input</strong></p>
+</code></pre><p><strong>User Input</strong></p>
 <p><em>Is your father a researcher?</em></p>
 <p><strong>Bot Output</strong></p>
 <p><em>Yes, my father is a researcher</em></p>
@@ -348,8 +346,7 @@
  &lt;Pattern&gt;I LIKE THE COLOR (RED|GREEN|BLUE)&lt;/Pattern&gt;
  &lt;Response&gt;Me too!&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre>
-<blockquote><p>Priority of Choices and Normal Sets are the same. Conflicts between choices and listed sets can be ignored as the former serves the same purpose but within a limited domain.</p>
+</code></pre><blockquote><p>Priority of Choices and Normal Sets are the same. Conflicts between choices and listed sets can be ignored as the former serves the same purpose but within a limited domain.</p>
 </blockquote>
 <h3 id="ampersat">Ampersat</h3>
 <p>The <strong>@</strong> symbol is used to denote a Regular Expression in SIML. Every regular expression a user creates is stored in an optimized manner for speed and consistency. Bot developers will find regular expression in SIML to be extremely fast.</p>
@@ -359,8 +356,7 @@
  &lt;Pattern&gt;I LIKE THE COLOR @COLOR&lt;/Pattern&gt;
  &lt;Response&gt;Me too!&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre>
-<p><strong>User Input</strong></p>
+</code></pre><p><strong>User Input</strong></p>
 <p><em>I like the color blue</em></p>
 <p><strong>Bot Output</strong></p>
 <p><em>Me too!</em></p>
@@ -375,8 +371,7 @@
  &lt;Pattern&gt;YOU ARE $ COOL&lt;/Pattern&gt;
  &lt;Response&gt;Yes, I am.&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre>
-<p><strong>User Input</strong></p>
+</code></pre><p><strong>User Input</strong></p>
 <p><em>You are so cool</em></p>
 <p><strong>Bot Output</strong></p>
 <p><em>Yes, I am.</em></p>
@@ -391,8 +386,7 @@
  &lt;Pattern&gt;{CONTACT NUMBER}&lt;/Pattern&gt;
  &lt;Response&gt;+1-000-00-0000&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre>
-<p><strong>User Input</strong></p>
+</code></pre><p><strong>User Input</strong></p>
 <p><em>So what is your contact  number?</em></p>
 <p><strong>Bot Output</strong></p>
 <p><em>1-000-00-0000</em></p>
@@ -412,8 +406,7 @@
  &lt;Pattern&gt;ARE YOU * ROBOT&lt;/Pattern&gt;
  &lt;Response&gt;I am an intelligent entity.&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre>
-<p><strong>User Input</strong></p>
+</code></pre><p><strong>User Input</strong></p>
 <p><em>Are you some robot?</em></p>
 <p><strong>Bot Output</strong></p>
 <p><em>I am an intelligent entity.</em></p>
@@ -437,8 +430,7 @@
   &lt;Pattern&gt;CALL ME *&lt;/Pattern&gt;
   &lt;Response&gt;Well, hello there &lt;Match /&gt;&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre>
-<p><strong>User Input</strong></p>
+</code></pre><p><strong>User Input</strong></p>
 <ol>
 <li><em>Call me Sean Gates</em></li>
 <li><em>Call me Sean William Gates</em></li>
@@ -467,8 +459,7 @@
   &lt;Pattern&gt;CALL ME *&lt;/Pattern&gt;
   &lt;Response&gt;Well, hello there &lt;Match /&gt;&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre>
-<p><strong>User Input</strong></p>
+</code></pre><p><strong>User Input</strong></p>
 <ol>
 <li><em>Call me Sean</em></li>
 <li><em>Call me Sean Gates</em></li>
@@ -495,9 +486,11 @@
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
-            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
-            </nav>
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
           </div>
         </div>
       </div>

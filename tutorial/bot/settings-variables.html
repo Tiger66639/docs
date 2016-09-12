@@ -8,7 +8,7 @@
     <title>Settings and Variables </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Settings and Variables ">
-    <meta name="generator" content="docfx 2.1.0.0">
+    <meta name="generator" content="docfx 2.4.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../../styles/main.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
+    <meta property="docfx:rel" content="../../">
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -63,6 +63,14 @@
           </div>
         </div>
       </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
       <div role="main" class="container body-content hide-when-search">
         
         <div class="sidenav hide-when-search">
@@ -74,7 +82,6 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <a href="https://github.com/SynHub/syn-documentation/blob/master/tutorial/bot/settings-variables.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
               <h1 id="settings-and-variables">Settings and Variables</h1>
               
 <p>In SIML most of the Bot and User settings are defined using variables that may be loaded before the knowledge base is setup. It’s encouraged that setting of variables should be left to the SIML Chatbot developer but there can be occasions when a variable will have to set during run-time.</p>
@@ -82,15 +89,12 @@
 <p>If static Bot variables are changed during run-time there maybe some unexpected results in bot output. Its highly recommended that bot variables are only changed using SIML code and not Syn Bot.</p>
 <p><em>Example code to add a User variable at runtime</em></p>
 <pre><code class="lang-csharp">botUser.Settings[&quot;favourite-movie&quot;].Add(&quot;Life is beautiful&quot;);
-</code></pre>
-<p><em>Example code to set a User variable at runtime</em></p>
+</code></pre><p><em>Example code to set a User variable at runtime</em></p>
 <pre><code class="lang-csharp">botUser.Settings[&quot;user-age&quot;].Value = &quot;31&quot;;
-</code></pre>
-<p>Adding and setting a value to for a variable have different behaviors as SIML specification tells that a variable can have multiple values it’s important to use the Add function if the intention is to add a new value to an already existing list of values. A Value can be set to override a variable’s value ( if it exists ).</p>
+</code></pre><p>Adding and setting a value to for a variable have different behaviors as SIML specification tells that a variable can have multiple values it’s important to use the Add function if the intention is to add a new value to an already existing list of values. A Value can be set to override a variable’s value ( if it exists ).</p>
 <p><em>Example code to set a Bot variable at runtime</em></p>
 <pre><code class="lang-csharp">simlBot.Settings[&quot;while-limit&quot;].Value = &quot;500&quot;;
-</code></pre>
-<h2 id="custom-functional-variables">Custom Functional Variables</h2>
+</code></pre><h2 id="custom-functional-variables">Custom Functional Variables</h2>
 <p>All variables implement the <code>IVariable</code> interface. This interface provides some of the key properties and methods that must be implemented by a class to ensure that the interaction with the Settings class is held properly.</p>
 <p>Suppose you wish to create a variable that can be used in SIML whose value may change depending on the state of some other object at run-time. You can either implement the <code>IFunctionalVariable</code> interface or derive your class from the abstract <code>FunctionalVariable</code> class. If all your variable does is get or set a computed value we recommend using the FunctionalVariable class.</p>
 <pre><code class="lang-csharp">public class CultureNameVariable: FunctionalVariable
@@ -106,11 +110,9 @@
         set { /*Nothing to do here*/ }
     }
 }
-</code></pre>
-<p>And add a new instance of the variable to the Bot settings at runtime or during bot initialization.</p>
+</code></pre><p>And add a new instance of the variable to the Bot settings at runtime or during bot initialization.</p>
 <pre><code class="lang-csharp">simlBot.Settings.Add(new CultureNameVariable());
-</code></pre>
-<h2 id="variable-value-as-tuples">Variable value as Tuples</h2>
+</code></pre><h2 id="variable-value-as-tuples">Variable value as Tuples</h2>
 <p>SIML variables can contain arrays of values. Sometimes it’s very handy to be able to use the values as tuples. A simple example would be a list of countries along with their country codes. Though a Map may be suited at times for this scenario the following should serve as a good tuple example.</p>
 <pre><code class="lang-xml">&lt;Variable Name=&quot;countries-codes&quot;&gt;
   &lt;Value&gt;United States|USA&lt;/Value&gt;
@@ -120,8 +122,7 @@
   &lt;Value&gt;Poland|POL&lt;/Value&gt;
   &lt;Value&gt;India|IND&lt;/Value&gt;
 &lt;/Variable&gt;
-</code></pre>
-<p>The above declared variable can at run-time be extracted as tuples as shown below.</p>
+</code></pre><p>The above declared variable can at run-time be extracted as tuples as shown below.</p>
 <pre><code class="lang-csharp">var simlBot = new SimlBot();
 var theVariable = simlBot.Settings[&quot;countries-codes-capitals&quot;];
 var tuples= theVariable.GetTuples&lt;string, string&gt;();
@@ -132,14 +133,12 @@ foreach (var value in tuples)
     var code = value.Item2;
     //Performan some function on the above variables.
 }
-</code></pre>
-<p>New tuple values can be added to a Variable at run-time using an Extension method as shown below.</p>
+</code></pre><p>New tuple values can be added to a Variable at run-time using an Extension method as shown below.</p>
 <pre><code class="lang-csharp">var simlBot = new SimlBot();
 var theVariable = simlBot.Settings[&quot;countries-codes-capitals&quot;];
 theVariable.Add(new Tuple&lt;string,string&gt;(&quot;Malta&quot;,&quot;MLT&quot;));
 theVariable.Add(new Tuple&lt;string, string&gt;(&quot;France&quot;, &quot;FRA&quot;));
-</code></pre>
-<p>The above adds 2 more countries with their country codes making the above <em>countries-codes</em> variable change to the following</p>
+</code></pre><p>The above adds 2 more countries with their country codes making the above <em>countries-codes</em> variable change to the following</p>
 <pre><code class="lang-xml">&lt;Variable Name=&quot;countries-codes&quot;&gt;
   &lt;Value&gt;United States|USA&lt;/Value&gt;
   &lt;Value&gt;Australia|AUS&lt;/Value&gt;
@@ -150,8 +149,7 @@ theVariable.Add(new Tuple&lt;string, string&gt;(&quot;France&quot;, &quot;FRA&qu
   &lt;Value&gt;Malta|MLT&lt;/Value&gt;
   &lt;Value&gt;France|FRA&lt;/Value&gt;
 &lt;/Variable&gt;
-</code></pre>
-<p>Syn Bot offers support for tuples that can hold upto 5 items.</p>
+</code></pre><p>Syn Bot offers support for tuples that can hold upto 5 items.</p>
 <p><em>Example</em></p>
 <pre><code class="lang-xml">&lt;Variable Name=&quot;countries-codes&quot;&gt;
   &lt;Value&gt;United States|USA|Washington D.C&lt;/Value&gt;
@@ -163,19 +161,16 @@ theVariable.Add(new Tuple&lt;string, string&gt;(&quot;France&quot;, &quot;FRA&qu
   &lt;Value&gt;Malta|MLT|Valletta&lt;/Value&gt;
   &lt;Value&gt;France|FRA|Paris&lt;/Value&gt;
 &lt;/Variable&gt;
-</code></pre>
-<h2 id="applying-siml-settings-to-class-objects">Applying SIML Settings to class Objects</h2>
+</code></pre><h2 id="applying-siml-settings-to-class-objects">Applying SIML Settings to class Objects</h2>
 <p>Every settings whether it be for the Bot, a Plugin or even a Bot User can be applied intelligently to class objects. Suppose you have a class called <code>MyClass</code> with 2 public properties with the name ProductName and ProductPrice. And your Bot settings has a Variable with the name <code>ProductName</code> with value <em>3D Printer</em> and another variable with the name <code>ProductPrice</code> with value 1500.</p>
 <pre><code class="lang-csharp">public class MyClass
 {
     public string ProductName { get; set; }
     public int ProductPrice { get; set; }
 }
-</code></pre>
-<p>To change the value of your class object MyClass you can select the Settings and call the function ApplyToProperties by passing the class object as an argument.</p>
+</code></pre><p>To change the value of your class object MyClass you can select the Settings and call the function ApplyToProperties by passing the class object as an argument.</p>
 <pre><code class="lang-csharp">simlBot.Settings.ApplyToProperties(myClass);
-</code></pre>
-<p>The Settings class can detect the <strong>Type of</strong> your class object’s property and do the required conversion at run-time.  Settings can be applied to the following types.</p>
+</code></pre><p>The Settings class can detect the <strong>Type of</strong> your class object’s property and do the required conversion at run-time.  Settings can be applied to the following types.</p>
 <ul>
 <li>string</li>
 <li>int</li>
@@ -192,14 +187,15 @@ theVariable.Add(new Tuple&lt;string, string&gt;(&quot;France&quot;, &quot;FRA&qu
 var settings = simlBot.Settings.GetDocument();
 settings.Save(&quot;BotSettings.siml&quot;);
 </code></pre>
-
             </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
-            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
-            </nav>
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
           </div>
         </div>
       </div>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Media Plugin </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Media Plugin ">
+    <meta name="generator" content="docfx 2.4.0.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    <meta property="docfx:rel" content="../../../">
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+    ga('create', 'UA-39941606-1', 'auto');
+    ga('send', 'pageview');
+  
+  </script>
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="media-plugin">Media Plugin</h1>
+              
+<p>This plugin enables playback of audio and video files with added functionalities like <em>resuming</em>, <em>pausing</em> and <em>changing tracks</em> of current media files.</p>
+<p>Support media file types are <code>.mp3</code>, <code>.avi</code> and <code>mp4</code>.</p>
+<h2 id="siml-adapters">SIML Adapters</h2>
+<h3 id="1-music">1. Music</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Annotation</strong></th>
+<th style="text-align:left"><code>&lt;o:Music&gt;</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Definition</strong></td>
+<td style="text-align:left">Play music files from the set music directory.</td>
+</tr>
+<tr>
+<td><strong>Children</strong></td>
+<td style="text-align:left">May contain <code>Genre</code>, <code>Title</code>, <code>Artist</code>, <code>Album</code> or <code>Task</code> attribute.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="attributes">Attributes</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Title</td>
+<td style="text-align:left">Name of the song.</td>
+</tr>
+<tr>
+<td style="text-align:left">Genre</td>
+<td style="text-align:left">Genre of the music to be played.</td>
+</tr>
+<tr>
+<td style="text-align:left">Artist</td>
+<td style="text-align:left">Name of the song artist.</td>
+</tr>
+<tr>
+<td style="text-align:left">Album</td>
+<td style="text-align:left">Name of the song album.</td>
+</tr>
+<tr>
+<td style="text-align:left">Task</td>
+<td style="text-align:left">Task to perform on the current player. Values can be <code>Resume</code>, <code>Pause</code>, <code>Next</code> and <code>Previous</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="usage">Usage</h4>
+<pre><code class="lang-xml">&lt;o:Music Genre=&quot;Rock&quot;/&gt;
+</code></pre><blockquote><p>Plays <em>rock</em> music.</p>
+</blockquote>
+<pre><code class="lang-xml">&lt;o:Music Title=&quot;brand new day&quot;/&gt;
+</code></pre><blockquote><p>Plays the song <em>brand new day</em>.</p>
+</blockquote>
+<pre><code class="lang-xml">&lt;o:Music Artist=&quot;Ronan Keating&quot;/&gt;
+</code></pre><blockquote><p>Plays the song by sir <em>Ronan Keating</em>.</p>
+</blockquote>
+<pre><code class="lang-xml">&lt;o:Music Album=&quot;Destination&quot;/&gt;
+</code></pre><blockquote><p>Plays the album <em>Destination</em>.</p>
+</blockquote>
+<pre><code class="lang-xml">&lt;o:Music Task=&quot;Pause&quot;/&gt;
+</code></pre><blockquote><p>Pauses the song playback.</p>
+</blockquote>
+<pre><code class="lang-xml">&lt;o:Music Task=&quot;Resume&quot;/&gt;
+</code></pre><blockquote><p>Resumes the currently paused song.</p>
+</blockquote>
+<pre><code class="lang-xml">&lt;o:Music Task=&quot;Stop&quot;/&gt;
+</code></pre><blockquote><p>Stops the song playback and closes the music player.</p>
+</blockquote>
+<pre><code class="lang-xml">&lt;o:Music Task=&quot;Next&quot;/&gt;
+</code></pre><blockquote><p>Plays the next song in the playlist.</p>
+</blockquote>
+<pre><code class="lang-xml">&lt;o:Music Task=&quot;Previous&quot;/&gt;
+</code></pre><blockquote><p>Plays the previous song from the playlist.</p>
+</blockquote>
+<h2 id="2-video">2. Video</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Annotation</strong></th>
+<th style="text-align:left"><code>&lt;o:Video&gt;</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Definition</strong></td>
+<td style="text-align:left">Plays the specified video file.</td>
+</tr>
+<tr>
+<td><strong>Children</strong></td>
+<td style="text-align:left">May contain <code>Title</code> or <code>Task</code>.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="attributes-1">Attributes</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Title</td>
+<td style="text-align:left">Name of the video.</td>
+</tr>
+<tr>
+<td style="text-align:left">Task</td>
+<td style="text-align:left">Task to perform on the current player. Value can be <code>Stop</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="events">Events</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Music-Directory-Indexed</td>
+<td style="text-align:left">Raised when the newly specified music directory has been indexed by the plugin.</td>
+</tr>
+<tr>
+<td style="text-align:left">Music-Played</td>
+<td style="text-align:left">Raised when a randomly generated song playlist is played after <code>&lt;o:Music /&gt;</code> is evaluated.</td>
+</tr>
+<tr>
+<td style="text-align:left">Music-Genre-Played</td>
+<td style="text-align:left">Raised when the songs of the specified <em>genre</em> are being played after <code>&lt;o:Music Genre=&quot;Some Genre&quot;/&gt;</code> is evaluated.</td>
+</tr>
+<tr>
+<td style="text-align:left">Music-Title-Played</td>
+<td style="text-align:left">Raised when the specified song is being played after <code>&lt;o:Music Title=&quot;Some song name&quot;/&gt;</code> is evaluated.</td>
+</tr>
+<tr>
+<td style="text-align:left">Music-Album-Played</td>
+<td style="text-align:left">Raised when the specified album is being played after <code>&lt;o:Music Album=&quot;Some Album&quot;/&gt;</code> is evaluated.</td>
+</tr>
+<tr>
+<td style="text-align:left">Music-Artist-Played</td>
+<td style="text-align:left">Raised when songs by the specified artist are being played after <code>&lt;o:Music Artist=&quot;Some song artist&quot;/&gt;</code> is evaluated.</td>
+</tr>
+<tr>
+<td style="text-align:left">Music-Idle</td>
+<td style="text-align:left">Raised when a <code>Task</code> command is evaluated while no songs are being played.</td>
+</tr>
+<tr>
+<td style="text-align:left">Music-Resumed</td>
+<td style="text-align:left">Raised when a previously paused music is resumed after <code>&lt;o:Music Task=&quot;Resume&quot;/&gt;</code> is evaluated.</td>
+</tr>
+<tr>
+<td style="text-align:left">Music-Paused</td>
+<td style="text-align:left">Raised when the current song is paused after <code>&lt;o:Music Task=&quot;Pause&quot;/&gt;</code> is evaluated.</td>
+</tr>
+<tr>
+<td style="text-align:left">Music-Stopped</td>
+<td style="text-align:left">Raised when the current song is stopped after <code>&lt;o:Music Task=&quot;Stop&quot;/&gt;</code> is evaluated.</td>
+</tr>
+<tr>
+<td style="text-align:left">Music-Next-Track</td>
+<td style="text-align:left">Raised when the next track is selected from the playlist after <code>&lt;o:Music Task=&quot;Next&quot;/&gt;</code> is evaluated.</td>
+</tr>
+<tr>
+<td style="text-align:left">Music-Previous-Track</td>
+<td style="text-align:left">Raised when the previous track is selected from the playlist after <code>&lt;o:Music Task=&quot;Previous&quot;/&gt;</code> is evaluated.</td>
+</tr>
+<tr>
+<td style="text-align:left">Video-Directory-Indexed</td>
+<td style="text-align:left">Raised when the newly specified video directory has been indexed by the plugin.</td>
+</tr>
+<tr>
+<td style="text-align:left">Video-Title-Played</td>
+<td style="text-align:left">Raised when the specified video is being played after <code>&lt;o:Video Title=&quot;Some video file name&quot;/&gt;</code> is evaluated.</td>
+</tr>
+<tr>
+<td style="text-align:left">Video-Stopped</td>
+<td style="text-align:left">Raised the current video playback is stopped afte <code>&lt;o:Video Task=&quot;Stop&quot;/&gt;</code> is evaluated.</td>
+</tr>
+<tr>
+<td style="text-align:left">Video-Idle</td>
+<td style="text-align:left">Raised when a <code>Task</code> command is evaluated while no video is being played</td>
+</tr>
+</tbody>
+</table>
+<h2 id="settings">Settings</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Music-Directory</td>
+<td style="text-align:left">The directory where all music files are saved.</td>
+</tr>
+<tr>
+<td style="text-align:left">Video-Directory</td>
+<td style="text-align:left">The directory where all video files are saved.</td>
+</tr>
+</tbody>
+</table>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2016 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

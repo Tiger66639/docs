@@ -8,7 +8,7 @@
     <title>Plugin System </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Plugin System ">
-    <meta name="generator" content="docfx 2.1.0.0">
+    <meta name="generator" content="docfx 2.4.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../../styles/main.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
+    <meta property="docfx:rel" content="../../">
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -63,6 +63,14 @@
           </div>
         </div>
       </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
       <div role="main" class="container body-content hide-when-search">
         
         <div class="sidenav hide-when-search">
@@ -74,37 +82,71 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <a href="https://github.com/SynHub/syn-documentation/blob/master/tutorial/va/plugin.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
               <h1 id="plugin-system">Plugin System</h1>
               
 <p><code>VA Framework</code> provides an easy inter-component interaction mechanism via the Plugin interface. Developers can either implement the <code>IPlugin</code> interface or inherit <code>Plugin</code> class to create their own plugin.</p>
 <p>Only the plugins with the <code>public</code> modifier will be loaded automatically by the Virtual Assistant. To avoid automatic loading of plugins set the modifier to <code>internal</code> and manually load the plugins.</p>
 <h2 id="parts-of-a-plugin">Parts of a Plugin</h2>
-<ul>
-<li><code>VA</code> gets the <code>VirtualAssistant.Instance</code></li>
-<li><code>Settings</code> gets the Settings instance that belongs to this plugin</li>
-<li><code>Name</code> the name of the Plugin</li>
-<li><code>SpecialName</code> name used for displaying the Plugin to users</li>
-<li><code>GetPanel&lt;T&gt;</code> function called to retrieve a GUI settings panel</li>
-</ul>
-<h2 id="start-plugin">Start Plugin</h2>
-<p>By convention the first plugin that is to be loaded into the VA Framework is the <code>Start</code> plugin. This plugin is supposed to give the VA a functional architecture.</p>
-<p><em>For example Syn Virtual Assistant loads the <strong>Syn.VA.Plugins.Start.dll</strong> plugin from the root directory which ensures all SIML based plugins are loaded properly into the VA Framework</em></p>
-<blockquote><p>The General Plugin is <strong>NOT</strong> placed in the <code>Plugins</code> Directory. It must reside in the <strong>root</strong> directory of the Virtual Assistant application.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Member Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>VA</code></td>
+<td style="text-align:left">Property</td>
+<td style="text-align:left">Gets <code>VirtualAssistant.Instance</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Settings</code></td>
+<td style="text-align:left">Property</td>
+<td style="text-align:left">Gets the Settings instance that belongs to this plugin.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Name</code></td>
+<td style="text-align:left">Property</td>
+<td style="text-align:left">Get or sets the name of the Plugin.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SpecialName</code></td>
+<td style="text-align:left">Property</td>
+<td style="text-align:left">Gets or sets the name used for displaying the Plugin to users.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>GetPanel&lt;T&gt;</code></td>
+<td style="text-align:left">Method</td>
+<td style="text-align:left">Function called to retrieve a GUI settings panel.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="loader-plugin">Loader Plugin</h2>
+<p>By convention the first plugin that is to be loaded into the VA Framework is the <code>Loader</code> plugin. This plugin is supposed to give the VA a functional architecture.</p>
+<p><em>For example Syn Virtual Assistant loads the <strong>Syn.VA.Plugins.Loader.dll</strong> plugin from the root directory which ensures all SIML based plugins are loaded properly into the VA Framework</em></p>
+<blockquote><p>The <code>Loader</code> Plugin is <strong>NOT</strong> placed in the <code>Plugins</code> Directory. It must reside in the <strong>root</strong> directory of the Virtual Assistant application.</p>
 </blockquote>
 <h2 id="getpanel">GetPanel()</h2>
 <p>A Plugin is itself responsible for providing a <em>GUI</em> that enables its user to change the internal values or settings of the plugin. For this, the method <code>GetPanel&lt;T&gt;</code> is called by the Virtual Assistant&#39;s <em>Settings Window</em> whenever the <em>Settings Window</em> is opened.</p>
-<p>The type <strong>T</strong> depends on the calling application. The <code>SettingsWindow</code> in Syn Virtual Assistant calls the <code>GetPanel</code> function with <strong>T</strong> of the type <code>UserControl</code></p>
-<h2 id="naming-convention">Naming Convention</h2>
-<p>Plugin names should end with the word <em>Plugin</em>. For example if your plugin works with email then the proper plugin name would be <code>EmailPlugin</code>.</p>
+<p>The type <strong>T</strong> depends on the calling application. The <code>SettingsWindow</code> in Syn Virtual Assistant calls the <code>GetPanel</code> function with <strong>T</strong> of the type <code>System.Windows.Controls.UserControl</code>.</p>
+<h2 id="conventions">Conventions</h2>
+<ul>
+<li>The name of the plugin must always be suffixed with the word <strong>Plugin</strong>. <em>For Example</em> an <em>Email</em> plugin is called <em>EmailPlugin</em>.</li>
+<li>If a plugin stores its settings in an xml file like the official plugins then the settings file name must contain 2 parts, the name of the plugin and the word <strong>Settings</strong>. <em>For Example</em> the settings file name for <code>EmailPlugin</code> would be <code>EmailSettings.xml</code>.</li>
+<li>VA Plugin <code>assembly</code> and <code>default</code> namespace should start with <strong>Syn.VA.Plugins</strong>.</li>
+</ul>
 
             </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
-            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
-            </nav>
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
           </div>
         </div>
       </div>

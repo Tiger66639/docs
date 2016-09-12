@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Interface ITokenizer
    ">
-    <meta name="generator" content="docfx 2.1.0.0">
+    <meta name="generator" content="docfx 2.4.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
-    
+    <meta property="docfx:rel" content="../">
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -65,6 +65,14 @@
           </div>
         </div>
       </header>
+      <div role="main" class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
       <div role="main" class="container body-content hide-when-search">
         
         <div class="sidenav hide-when-search">
@@ -77,7 +85,6 @@
           <div class="col-md-10">
             <article class="content wrap" id="_content">
               
-              <a href="https://github.com/SynHub/syn-documentation/new/master/apispec/new?filename=Syn_Bot_Siml_Interfaces_ITokenizer.md&amp;value=---%0Auid%3A%20Syn.Bot.Siml.Interfaces.ITokenizer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
               
               <h1 id="Syn_Bot_Siml_Interfaces_ITokenizer" data-uid="Syn.Bot.Siml.Interfaces.ITokenizer">Interface ITokenizer
               </h1>
@@ -91,11 +98,6 @@
               </div>
               <h3 id="properties">Properties
               </h3>
-              <span class="small pull-right mobile-hide">
-                <span class="divider">|</span>
-                <a href="https://github.com/SynHub/syn-documentation/new/master/apispec/new?filename=Syn_Bot_Siml_Interfaces_ITokenizer_Type.md&amp;value=---%0Auid%3A%20Syn.Bot.Siml.Interfaces.ITokenizer.Type%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-              </span>
-              
               <h4 id="Syn_Bot_Siml_Interfaces_ITokenizer_Type" data-uid="Syn.Bot.Siml.Interfaces.ITokenizer.Type">Type</h4>
               <div class="markdown level1 summary"><p>Gets the type of this <a class="xref" href="Syn.Bot.Siml.Collections.Tokenizer.html#Syn_Bot_Siml_Collections_Tokenizer">Tokenizer</a></p>
 </div>
@@ -119,11 +121,6 @@
                   </tr>
                 </tbody>
               </table>
-              <span class="small pull-right mobile-hide">
-                <span class="divider">|</span>
-                <a href="https://github.com/SynHub/syn-documentation/new/master/apispec/new?filename=Syn_Bot_Siml_Interfaces_ITokenizer_Value.md&amp;value=---%0Auid%3A%20Syn.Bot.Siml.Interfaces.ITokenizer.Value%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-              </span>
-              
               <h4 id="Syn_Bot_Siml_Interfaces_ITokenizer_Value" data-uid="Syn.Bot.Siml.Interfaces.ITokenizer.Value">Value</h4>
               <div class="markdown level1 summary"><p>Gets the splitter value.</p>
 </div>
@@ -149,11 +146,6 @@
               </table>
               <h3 id="methods">Methods
               </h3>
-              <span class="small pull-right mobile-hide">
-                <span class="divider">|</span>
-                <a href="https://github.com/SynHub/syn-documentation/new/master/apispec/new?filename=Syn_Bot_Siml_Interfaces_ITokenizer_Tokenize_System_Collections_Generic_List_System_String__.md&amp;value=---%0Auid%3A%20Syn.Bot.Siml.Interfaces.ITokenizer.Tokenize(System.Collections.Generic.List%7BSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-              </span>
-              
               <h4 id="Syn_Bot_Siml_Interfaces_ITokenizer_Tokenize_System_Collections_Generic_List_System_String__" data-uid="Syn.Bot.Siml.Interfaces.ITokenizer.Tokenize(System.Collections.Generic.List{System.String})">Tokenize(List&lt;String&gt;)</h4>
               <div class="markdown level1 summary"><p>Splits the specified source string.</p>
 </div>
@@ -200,9 +192,11 @@
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
-            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
-            </nav>
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
           </div>
         </div>
       </div>

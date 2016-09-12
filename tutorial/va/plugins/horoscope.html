@@ -8,7 +8,7 @@
     <title>Horoscope Plugin </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Horoscope Plugin ">
-    <meta name="generator" content="docfx 2.1.0.0">
+    <meta name="generator" content="docfx 2.4.0.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../../toc.html">
-    
+    <meta property="docfx:rel" content="../../../">
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -63,6 +63,14 @@
           </div>
         </div>
       </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
       <div role="main" class="container body-content hide-when-search">
         
         <div class="sidenav hide-when-search">
@@ -74,9 +82,9 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <a href="https://github.com/SynHub/syn-documentation/blob/master/tutorial/va/plugins/horoscope.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
               <h1 id="horoscope-plugin">Horoscope Plugin</h1>
               
+<p>Fetches the Horoscope of the specified <em>Zodiac sign</em>.</p>
 <h2 id="siml-adapters">SIML Adapters</h2>
 <h3 id="horoscope">Horoscope</h3>
 <table>
@@ -93,24 +101,50 @@
 </tr>
 <tr>
 <td><strong>Children</strong></td>
-<td style="text-align:left">MUST contain an arbitrary text specifying the Zodiac Sign</td>
+<td style="text-align:left">MUST contain an arbitrary text specifying the Zodiac Sign OR a <code>Sign</code> attribute that specifies the <em>Zodiac sign</em></td>
 </tr>
 </tbody>
 </table>
-<h2 id="usage">Usage</h2>
+<h4 id="usage">Usage</h4>
 <pre><code class="lang-xml">&lt;o:Horoscope&gt;Gemini&lt;/o:Horoscope&gt;
-</code></pre>
-<blockquote><p>Returns <em>Gemini&#39;s</em> Horoscope for the day.</p>
+</code></pre><p><em>Or</em></p>
+<pre><code class="lang-xml">&lt;o:Horoscope Sign=&quot;Gemini&quot;/&gt;
+</code></pre><blockquote><p>Returns <em>Gemini&#39;s</em> Horoscope for the day.</p>
 </blockquote>
 <p>The value returned in is <em>Text</em> format.</p>
+<h2 id="settings">Settings</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Zodiac-Sign</td>
+<td style="text-align:left">The zodiac sign of the main user.</td>
+</tr>
+<tr>
+<td style="text-align:left">Zodiac-Sign-List</td>
+<td style="text-align:left">List of all the Zodiac signs.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>An active internet connection.</li>
+</ul>
 
             </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
-            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
-            </nav>
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
           </div>
         </div>
       </div>

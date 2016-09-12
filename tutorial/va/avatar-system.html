@@ -8,7 +8,7 @@
     <title>Avatar System </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Avatar System ">
-    <meta name="generator" content="docfx 2.1.0.0">
+    <meta name="generator" content="docfx 2.4.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../../styles/main.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
+    <meta property="docfx:rel" content="../../">
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -63,6 +63,14 @@
           </div>
         </div>
       </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
       <div role="main" class="container body-content hide-when-search">
         
         <div class="sidenav hide-when-search">
@@ -74,7 +82,6 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <a href="https://github.com/SynHub/syn-documentation/blob/master/tutorial/va/avatar-system.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
               <h1 id="avatar-system">Avatar System</h1>
               
 <p>It took a major portion of development time to create a new <em>Graphic Engine</em> from scratch for <em>Syn Virtual Assistant Prototype 8.5</em>. The goal was to have better <em>lighting</em> and support for true <em>morph targets</em>. Though these features have now been implemented in-turn the Graphic Requirements has increased and support for 2D Avatar has been retired.</p>
@@ -100,8 +107,7 @@
   &lt;Expression ID=&quot;6&quot; Morph=&quot;FV&quot; /&gt;
 ....
 &lt;/Avatar&gt;
-</code></pre>
-<h4 id="avatar">Avatar</h4>
+</code></pre><h4 id="avatar">Avatar</h4>
 <p>The root <em>Avatar</em> element has 2 attributes, <code>Name</code> and <code>Gender</code>. The value of the <code>Name</code> attribute can be any desired name for the 3D avatar. This name will be displayed under the drop-down list of the Avatar settings panel. The <code>Gender</code> attribute can have the values <code>Male</code>, <code>Female</code>, <code>Neutral</code> or <code>NotSet</code>. This value is also used by the <em>Speech Synthesis</em> engine to determine and select the Gender of the <em>Speech Synthesizer</em> if the <em>VoiceName</em>  specified is unavailable.</p>
 <h4 id="cameraposition">CameraPosition</h4>
 <p>The default camera placed in the 3D environment always faces the 3D Avatar placed within this 3D environment. The position attributes <code>X</code>, <code>Y</code> and <code>Z</code> can be set using comma separted values.</p>
@@ -140,9 +146,11 @@
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
-            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
-            </nav>
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
           </div>
         </div>
       </div>

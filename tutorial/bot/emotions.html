@@ -8,7 +8,7 @@
     <title>Working with Emotions </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Working with Emotions ">
-    <meta name="generator" content="docfx 2.1.0.0">
+    <meta name="generator" content="docfx 2.4.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../../styles/main.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
+    <meta property="docfx:rel" content="../../">
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -63,6 +63,14 @@
           </div>
         </div>
       </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
       <div role="main" class="container body-content hide-when-search">
         
         <div class="sidenav hide-when-search">
@@ -74,7 +82,6 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <a href="https://github.com/SynHub/syn-documentation/blob/master/tutorial/bot/emotions.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
               <h1 id="working-with-emotions">Working with Emotions</h1>
               
 <p>As SIML offers EmotionML to be used for emotions an emotion for the Bot or the User can be retrieved using the following code. In SIML the developer has the option of setting the Bot/User emotion but can only retrieve its ID and Name during a Chat session. Much of the action is meant to happen on the Avatar end. A developer may use the Emotion and its properties to help the Avatar ( if being used ) to display complex expressions.</p>
@@ -83,8 +90,7 @@ var categories = botEmotion.Categories;
 var dimensions = botEmotion.Dimensions;
 var duration = botEmotion.Duration;
 var id = botEmotion.ID;
-</code></pre>
-<blockquote><p>If no emotions are specified in a response the emotion will stay with its previous value.</p>
+</code></pre><blockquote><p>If no emotions are specified in a response the emotion will stay with its previous value.</p>
 </blockquote>
 <h2 id="detecting-emotional-change-in-bot">Detecting Emotional change in Bot</h2>
 <p>Emotion of the Bot can change at run-time. Changes in emotions can help developers map the Bot’s current emotion to any desired behavior including but not limited to dynamic facial expressions.</p>
@@ -93,38 +99,35 @@ var id = botEmotion.ID;
   &lt;Pattern&gt;I LIKE YOU&lt;/Pattern&gt;
   &lt;Response&gt;You make me blush!&lt;BotEmotion ID=&quot;Happy&quot;/&gt;&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre>
-<p>You can detect these emotional changes and act accordingly by attaching an event handler to the Bot’s <code>EmotionChanged</code> event as shown below.</p>
+</code></pre><p>You can detect these emotional changes and act accordingly by attaching an event handler to the Bot’s <code>EmotionChanged</code> event as shown below.</p>
 <pre><code class="lang-csharp">var simlbot = new SimlBot();
 simlbot.EmotionChanged += simlbot_EmotionChanged;
-</code></pre>
-<p>Once the emotion of the Bot is changed the event is fired and the following code gets executed. The event argument is a <code>EmotionChangeEventArgs</code> class object which provides the <code>Current</code> emotion, the <code>Previous</code> emotion and the User associated with the concerned emotional state change</p>
+</code></pre><p>Once the emotion of the Bot is changed the event is fired and the following code gets executed. The event argument is a <code>EmotionChangeEventArgs</code> class object which provides the <code>Current</code> emotion, the <code>Previous</code> emotion and the User associated with the concerned emotional state change</p>
 <pre><code class="lang-csharp">void simlbot_EmotionChanged(object sender, EmotionChangedEventArgs e)
 {
     var emotion = e.Current;
     //Do something with the new Emotion
 }
-</code></pre>
-<h2 id="detecting-emotional-change-in-user">Detecting Emotional change in User</h2>
+</code></pre><h2 id="detecting-emotional-change-in-user">Detecting Emotional change in User</h2>
 <p>Just like the change in the Bot’s emotion any emotional change of the User can also be detected via the <code>EmotionChanged</code> event of the User. The procedure is very similar to that of detecting emotional changes in the Bot. Usually an emotional change is triggered when an SIML code with the UserEmotion tag is evaluated as shown below.</p>
 <pre><code class="lang-xml">&lt;Model&gt;
   &lt;Pattern&gt;I am overjoyed&lt;/Pattern&gt;
   &lt;Response&gt;That is very pleasing.&lt;UserEmotion ID=&quot;very-happy&quot;/&gt;&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre>
-<p><em>Example code to attach an event handler to the user’s EmotionChanged event.</em></p>
+</code></pre><p><em>Example code to attach an event handler to the user’s EmotionChanged event.</em></p>
 <pre><code class="lang-csharp">var simlbot = new SimlBot();
 var mainUser = simlbot.MainUser;
 mainUser.EmotionChanged += mainUser_EmotionChanged;
 </code></pre>
-
             </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
-            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
-            </nav>
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
           </div>
         </div>
       </div>

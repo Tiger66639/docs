@@ -8,7 +8,7 @@
     <title>Skype Plugin </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Skype Plugin ">
-    <meta name="generator" content="docfx 2.1.0.0">
+    <meta name="generator" content="docfx 2.4.0.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../../toc.html">
-    
+    <meta property="docfx:rel" content="../../../">
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -63,6 +63,14 @@
           </div>
         </div>
       </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
       <div role="main" class="container body-content hide-when-search">
         
         <div class="sidenav hide-when-search">
@@ -74,9 +82,11 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <a href="https://github.com/SynHub/syn-documentation/blob/master/tutorial/va/plugins/skype.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
               <h1 id="skype-plugin">Skype Plugin</h1>
               
+<p>This plugin lets users make a skype call using Virtual Assistant commands.</p>
+<blockquote><p>If Skype is not initially launched by the Virtual Assistant then users must again login after using the command is activated.</p>
+</blockquote>
 <h2 id="siml-adapters">SIML Adapters</h2>
 <h3 id="skype">Skype</h3>
 <table>
@@ -99,18 +109,34 @@
 </table>
 <h2 id="usage">Usage</h2>
 <pre><code class="lang-xml">&lt;o:Skype&gt;echo123&lt;/o:Skype&gt;
-</code></pre>
-<blockquote><p>Calls <code>echo123</code> in Skype.</p>
+</code></pre><blockquote><p>Calls <code>echo123</code> in Skype.</p>
 </blockquote>
 <p>Skype must be installed in user computer for this adapter to work.</p>
+<h2 id="settings">Settings</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Skype-Users</td>
+<td style="text-align:left">List of all known Skype contact names.</td>
+</tr>
+</tbody>
+</table>
 
             </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
-            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
-            </nav>
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
           </div>
         </div>
       </div>

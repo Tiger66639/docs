@@ -8,7 +8,7 @@
     <title>Learning and Memorizing </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Learning and Memorizing ">
-    <meta name="generator" content="docfx 2.1.0.0">
+    <meta name="generator" content="docfx 2.4.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../../styles/main.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
+    <meta property="docfx:rel" content="../../">
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -63,6 +63,14 @@
           </div>
         </div>
       </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
       <div role="main" class="container body-content hide-when-search">
         
         <div class="sidenav hide-when-search">
@@ -74,7 +82,6 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <a href="https://github.com/SynHub/syn-documentation/blob/master/tutorial/bot/learning-memorizing.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
               <h1 id="learning-and-memorizing">Learning and Memorizing</h1>
               
 <p>Every unit of knowledge in SIML is created using Models. So learning and memorizing almost always revolves around saving and loading SIML Models. Learning involves loading of Models and Concepts to the main Graph of the Bot while memorizing is a similar process but is tightly integrated to the user involved in triggering the Memorizing process.</p>
@@ -83,15 +90,13 @@
 <p>An event handler can be attached to the Learning event of the Bot using the code below.</p>
 <pre><code class="lang-csharp">var simlBot = new SimlBot();
 simlBot.Learning += SimlBot_Learning;
-</code></pre>
-<p>In the following code whenever the Learning event is fired we save it to a disk file under the name <code>Learned.siml</code>. The <strong>e.Document</strong> is the complete SIML code which includes the root SIML element along with the Concept and Models learned.</p>
+</code></pre><p>In the following code whenever the Learning event is fired we save it to a disk file under the name <code>Learned.siml</code>. The <strong>e.Document</strong> is the complete SIML code which includes the root SIML element along with the Concept and Models learned.</p>
 <pre><code class="lang-csharp">void SimlBot_Learning(object sender, LearningEventArgs e)
 {
     var filePath = Path.Combine(Directory.GetCurrentDirectory(), &quot;Learned.siml&quot;);
     e.Document.Save(filePath);
 }
-</code></pre>
-<p>For example if your SIML code looks like the following:</p>
+</code></pre><p>For example if your SIML code looks like the following:</p>
 <pre><code class="lang-xml">&lt;Siml&gt;
   &lt;Concept Name=&quot;Learning new Models&quot; Type=&quot;Public&quot;&gt;
     &lt;Model&gt;
@@ -108,8 +113,7 @@ simlBot.Learning += SimlBot_Learning;
     &lt;/Model&gt;
   &lt;/Concept&gt;
 &lt;/Siml&gt;
-</code></pre>
-<p>And if the user says <em>A car is a vehicle</em> then the Document property would return an SIML document like the following:</p>
+</code></pre><p>And if the user says <em>A car is a vehicle</em> then the Document property would return an SIML document like the following:</p>
 <pre><code class="lang-xml">&lt;Siml&gt;
   &lt;Concept Name=&quot;Learning new Models&quot; Type=&quot;Public&quot;&gt;
     &lt;Model&gt;
@@ -118,44 +122,41 @@ simlBot.Learning += SimlBot_Learning;
     &lt;/Model&gt;
   &lt;/Concept&gt;
 &lt;/Siml&gt;
-</code></pre>
-<blockquote><p>Because in our Learn element we didn’t explicitly specify a Concept the Concept part gets derived from the Concept to which the Learn element belonged to.</p>
+</code></pre><blockquote><p>Because in our Learn element we didn’t explicitly specify a Concept the Concept part gets derived from the Concept to which the Learn element belonged to.</p>
 </blockquote>
 <p>Now, Once you’ve saved the document to a disk file you can any time load the saved document back into the Bot’s graph (If you restart the Bot later on) by using the following code. All the code does is creates a filePath variable that points to the SIML file to be loaded and then creates an XDocument by using the XDocument.Load method and later adds the document to the Bot using the AddSiml method, the overload of which accepts an XElement. The XElement MUST be the root Siml element</p>
 <pre><code class="lang-csharp">var simlBot = new SimlBot();
 var filePath = Path.Combine(Directory.GetCurrentDirectory(), &quot;Learned.siml&quot;);
 simlBot.AddSiml(XDocument.Load(filePath).Root);
-</code></pre>
-<h2 id="memorizing-and-saving-memorized-models-to-disk">Memorizing and saving Memorized Models to disk</h2>
+</code></pre><h2 id="memorizing-and-saving-memorized-models-to-disk">Memorizing and saving Memorized Models to disk</h2>
 <p>If a Bot is asked by a user to remember a fact the Bot updates an isolated Graph associated with that particular user. This graph is a separate Graph kept in memory just for interacting and understanding that particular user.</p>
 <p>A Memorizing event is fired whenever a user asks the bot to remember a fact and the graph associated with that user is updated. A <code>MemorizingEventArgs</code> is passed as an argument to the event handler which provides the user information and the SIML document that may be saved to disk.</p>
 <p>Saving a Memorized Model to disk is similar to saving a Learned Model to disk i.e. you’ll have to attach an event handler.</p>
 <pre><code class="lang-csharp">var simlBot = new SimlBot();
 simlBot.Memorizing += simlBot_Memorizing;
-</code></pre>
-<pre><code class="lang-csharp">void simlBot_Memorizing(object sender, MemorizingEventArgs e)
+</code></pre><pre><code class="lang-csharp">void simlBot_Memorizing(object sender, MemorizingEventArgs e)
 {
     var filePath = Path.Combine(Directory.GetCurrentDirectory(), e.User.ID, &quot;Memorized.siml&quot;);
     e.Document.Save(filePath);
 }
-</code></pre>
-<p>In the above code we save the Memorized document to a folder that has a name similar to the ID of the user. This helps us to load the right memorized Model to the right Graph.</p>
+</code></pre><p>In the above code we save the Memorized document to a folder that has a name similar to the ID of the user. This helps us to load the right memorized Model to the right Graph.</p>
 <p>To load the Memorized document we’ll have to tell the Bot the User for which the document is being loaded. This can be done using an overload of the <code>AddSiml</code> method as shown below.</p>
 <pre><code class="lang-csharp">var simlBot = new SimlBot();
 var onlineUser = new BotUser(simlBot, &quot;X-15652C&quot;);
 var filePath = Path.Combine(Directory.GetCurrentDirectory(), onlineUser.ID, &quot;Memorized.siml&quot;);
 var memorizedDocument = XDocument.Load(filePath);
 simlBot.AddSiml(memorizedDocument,onlineUser);
-</code></pre>
-<p>As you can see in the above code we add the SIML to the Bot but we also pass the User as an argument to tell the Bot that the document belongs to the specified user.</p>
+</code></pre><p>As you can see in the above code we add the SIML to the Bot but we also pass the User as an argument to tell the Bot that the document belongs to the specified user.</p>
 
             </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
-            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
-            </nav>
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
           </div>
         </div>
       </div>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Speech Plugin </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Speech Plugin ">
+    <meta name="generator" content="docfx 2.4.0.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    <meta property="docfx:rel" content="../../../">
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+    ga('create', 'UA-39941606-1', 'auto');
+    ga('send', 'pageview');
+  
+  </script>
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="speech-plugin">Speech Plugin</h1>
+              
+<p>Provides speech recognition and speech synthesis feature to the Virtual Assistant.</p>
+<h2 id="siml-adapters">SIML Adapters</h2>
+<h3 id="speech">Speech</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Annotation</strong></th>
+<th style="text-align:left"><code>&lt;o:Speech&gt;</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Definition</strong></td>
+<td style="text-align:left">Helps interact with the Speech Synthesis engine.</td>
+</tr>
+<tr>
+<td><strong>Children</strong></td>
+<td style="text-align:left">Must contain a <code>Task</code> attribute that specifies that type of function to perform. The value of the <code>Task</code> attribute can be <code>Stop</code>, <code>Pause</code>, <code>Resume</code>, <code>Enable</code>, <code>Disable</code> or <code>Speak</code>.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="usage">Usage</h4>
+<pre><code class="lang-xml">&lt;o:Speech Task=&quot;Disable&quot;/&gt;
+</code></pre><blockquote><p>Disables speech synthesis.</p>
+</blockquote>
+<pre><code class="lang-xml">&lt;o:Speech Task=&quot;Enable&quot;/&gt;
+</code></pre><blockquote><p>Enables speech synthesis.</p>
+</blockquote>
+<pre><code class="lang-xml">&lt;o:Speech Task=&quot;Pause&quot;/&gt;
+</code></pre><blockquote><p>Pauses speech synthesis.</p>
+</blockquote>
+<pre><code class="lang-xml">&lt;o:Speech Task=&quot;Resume&quot;/&gt;
+</code></pre><blockquote><p>Resumes the previously paused speech synthesis process.</p>
+</blockquote>
+<pre><code class="lang-xml">&lt;o:Speech Task=&quot;Speak&quot;&gt;How are you?&lt;/o:Speech&gt;
+</code></pre><blockquote><p>Speaks the given value. This method can be used in <code>Low</code> ranking responses to explicitly speak selected values.</p>
+</blockquote>
+<p>This adapter returns an <em>empty string</em>.</p>
+<h2 id="settings">Settings</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Speech-Rate</td>
+<td style="text-align:left">The speaking rate of the speech synthesizer. Default value for this variable is <code>0</code>. Any value above or below the <em>default value</em> increases or decreases the speech synthesis rate respectively.</td>
+</tr>
+<tr>
+<td style="text-align:left">Speech-Volume</td>
+<td style="text-align:left">The output volume of speech synthesis.</td>
+</tr>
+<tr>
+<td style="text-align:left">Speech-Confidence</td>
+<td style="text-align:left">The minimum confidence for a synthesized speech to be sent to the Virtual Assistant for processing. A value of <code>1</code> means 100% confidence and a value of <code>0.5</code> means 50% confidence.</td>
+</tr>
+<tr>
+<td style="text-align:left">Speech-Rank</td>
+<td style="text-align:left">The minimum rank of a response to consider when synthesizing speech.</td>
+</tr>
+<tr>
+<td style="text-align:left">Synthesizer</td>
+<td style="text-align:left">The name of the speech synthesizer to use for speech synthesis.</td>
+</tr>
+<tr>
+<td style="text-align:left">Recognizer</td>
+<td style="text-align:left">The name of speech recognized to use for speech recognition.</td>
+</tr>
+<tr>
+<td style="text-align:left">Voice</td>
+<td style="text-align:left">The name of the voice to be used by the speech synthesizer.</td>
+</tr>
+<tr>
+<td style="text-align:left">Gender</td>
+<td style="text-align:left">The gender of the currently selected voice.</td>
+</tr>
+</tbody>
+</table>
+<p>This plugin also uses the values in the <code>ChoiceList.xml</code> settings file to provide speech choices to the currently selected Speech Synthesizer for command-mode speech recognition.</p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>A Windows OS version that support <em>Speech Synthesis</em> and <em>Speech Recognition</em>.</li>
+</ul>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2016 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

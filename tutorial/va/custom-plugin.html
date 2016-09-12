@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Creating a custom VA Plugin </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Creating a custom VA Plugin ">
+    <meta name="generator" content="docfx 2.4.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:rel" content="../../">
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+    ga('create', 'UA-39941606-1', 'auto');
+    ga('send', 'pageview');
+  
+  </script>
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="creating-a-custom-va-plugin">Creating a custom VA Plugin</h1>
+              
+<p>Creation of a Plugin for VA Framework gets a lot easier due to the availability of in-built classes and utilities. For the creation of a VA Plugin, we&#39;ll assume that you are using <em>Visual Studio Community 2015</em> and have good knowledge of C# coding.</p>
+<h2 id="requirements">Requirements</h2>
+<p>You&#39;ll need to ensure that the following requirements are met in their entirety before you start developing your custom VA Plugin.</p>
+<ul>
+<li><a href="http://syn.co.in">Syn Virtual Assistant 8.5</a> or above.</li>
+<li><a href="http://simlbot.com">Syn Bot Studio</a></li>
+<li><a href="https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx">Visual Studio Community 2015</a> or above.</li>
+</ul>
+<h2 id="custom-plugin">Custom Plugin</h2>
+<h3 id="creating-a-class-library-project">Creating a <em>Class Library</em> project</h3>
+<p>All VA Plugins are <em>Class Libraries</em> that are loaded by the <code>Loader</code> plugin during VA initialization.</p>
+<p>To create a <em>Class Library</em> project, start <em>Visual Studio</em></p>
+<ul>
+<li>On the menu bar choose <strong>File</strong>, <strong>New</strong>, <strong>Project</strong>.</li>
+<li>Expand <strong>Installed</strong>, expand <strong>Templates</strong>, expand <strong>Visual C#</strong> and then choose <strong>Class Library</strong>.</li>
+<li>In the <strong>Name</strong> box, type <em><strong>Syn.VA.Plugins.HelloPlugin</strong></em> and choose <strong>OK</strong>.</li>
+</ul>
+<p><img src="images/va-plugin-project.png" alt="hello Plugin Image"></p>
+<h3 id="referencing-the-va-libraries">Referencing the VA Libraries</h3>
+<p>Once the project is created, you&#39;ll need to reference a few class libraries. Go to <a href="https://github.com/SynHub/syn-va-components">Syn-VA-Components</a> repository and download the <code>References</code> folder.</p>
+<p>After the you have downloaded the <em>References</em> folder, switch to <em>Visual Studio</em>,</p>
+<ul>
+<li>In <strong>Solution Explorer</strong>, right-click on the References node and choose <strong>Add Reference</strong>.</li>
+<li>Click on <strong>Browse</strong>, browse to the <code>References</code> folder, select <code>Syn.VA.dll</code>, <code>Syn.Bot.dll</code> and <code>Syn.Log.dll</code>.
+<img src="images/va-plugin-reference.png" alt="VA Reference Folder Image"></li>
+<li>Click on <strong>Add</strong> and then hoose <strong>OK</strong>.</li>
+</ul>
+<p>You now have all the libraries referenced to create your first plugin.</p>
+<h3 id="helloplugin-class"><code>HelloPlugin</code> class</h3>
+<p>To create a class that is loaded as a <em>Plugin</em> type it is important to derive the class from either the <code>Plugin</code> class or implement the <code>IPlugin</code> interface.</p>
+<ul>
+<li>Rename <code>Class1</code> to <code>HelloPlugin</code>.</li>
+<li>Inherit from <code>Plugin</code></li>
+</ul>
+<pre><code class="lang-csharp">namespace Syn.VA.Plugins.HelloPlugin
+{
+    public class HelloPlugin : Plugin
+    {
+
+    }
+}
+</code></pre><blockquote><p>Only <code>public</code> classes that inherit the <code>Plugin</code> class from <code>Syn.VA</code> library are loaded by the <code>Loader</code> plugin.</p>
+</blockquote>
+<h3 id="creating-an-siml-adapter">Creating an SIML Adapter</h3>
+<p>To know what an SIML Adapter is please refer <a href="../bot/custom-adapter.html">Creating a custom Adapter</a> in <em>Syn Bot</em> tutorials section.</p>
+<ul>
+<li>Right click the project name in <strong>Solution Explorer</strong>, select <strong>Add</strong> and then choose <strong>New Folder</strong>.</li>
+<li>Rename the <em>New Folder</em> to <em>Adapter</em>.</li>
+<li>Right clicck the folder, select <strong>Add</strong> and then choose <strong>Class</strong>.</li>
+<li>Name the class <em>HelloAdapter</em>.</li>
+</ul>
+<p>Once the <code>HelloAdapter</code> class has been created we&#39;ll need to implement the <code>IAdapter</code> interface present in the <code>Syn.Bot</code> library.</p>
+<pre><code class="lang-csharp">class HelloAdapter : IAdapter
+{
+
+}
+</code></pre><p>Next we&#39;ll implement the <em>Properties</em> and <em>Methods</em> of the <code>IAdapter</code> interface as shown below.</p>
+<pre><code class="lang-csharp">class HelloAdapter : IAdapter
+{
+    public XName TagName =&gt; SimlSpecification.Namespace.X + &quot;Hello&quot;;
+    public bool IsRecursive =&gt; true;
+    public string Evaluate(Context context)
+    {
+        return &quot;Hello Plugin says Hello!&quot;;
+    }
+}
+</code></pre><p>In the above code the <code>TagName</code> is the SIML tag that will later be used in an SIML Knowledge base. The above adapter just returns the string <em>&quot;Hello Plugin says Hello&quot;</em>.</p>
+<p>Now that the adapter is ready switch to <code>HelloPlugin</code> class and add the following code in the class constructor.</p>
+<pre><code class="lang-csharp">SimlBot.Instance.Adapters.Add(new HelloAdapter());
+</code></pre><p>The overall code for the <code>HelloPlugin</code> class should look like the following.</p>
+<pre><code class="lang-csharp">using Syn.Bot.Siml;
+using Syn.VA.Plugins.HelloPlugin.Adapter;
+
+namespace Syn.VA.Plugins.HelloPlugin
+{
+    public class HelloPlugin : Plugin
+    {
+        public HelloPlugin()
+        {
+            SimlBot.Instance.Adapters.Add(new HelloAdapter());
+        }
+    }
+}
+</code></pre><blockquote><p>The <code>SimlBot.Instance</code> is the main <code>SimlBot</code> instance that is used by all plugins.</p>
+</blockquote>
+<h3 id="placing-the-plugin">Placing the Plugin</h3>
+<ul>
+<li>On the menu bar, choose <strong>Build</strong> and choose <strong>Build Solution</strong>.</li>
+<li>A dynamic link library file with the name <code>Syn.VA.Plugins.HelloPlugin.dll</code> must be found in the <code>Debug</code> or <code>Release</code> folder based on your built configuration.</li>
+<li>Copy <code>Syn.VA.Plugins.HelloPlugin.dll</code> file and paste it in the <code>Syn/Plugins</code> folder found in the root directory of Syn Virtual Assistant installation.</li>
+</ul>
+<h3 id="add-command-to-knowledge-base">Add command to Knowledge-Base</h3>
+<p>For the purpose of testing the newly created we&#39;ll need to a add atleast one command in the Bot&#39;s knowledge-base to trigger the evaluation of the <code>HelloAdapter</code>.</p>
+<ul>
+<li>Open Syn Bot Studio, choose <strong>Open</strong> and choose <strong>Project</strong>.</li>
+<li>Browse to <code>Syn/Bot</code> directory under the directory where Syn Virtual Assistant is installed.</li>
+<li>Select <code>Commands.simlproj</code> and choose <strong>Open</strong>.</li>
+<li>On the right <em>File Explorer</em>, right click and choose <strong>Add New File</strong>.</li>
+<li>Enter <code>HelloPlugin</code> as the file name and choose <strong>OK</strong>.</li>
+</ul>
+<p>Under the newly created SIML _Concept add the following SIML Model and also add <code>xmlns:x=&quot;http://syn.co.in/2014/siml#external&quot;</code> to the root <code>Siml</code> element.</p>
+<pre><code class="lang-xml">&lt;Model&gt;
+  &lt;Pattern&gt;Hello Plugin&lt;/Pattern&gt;
+  &lt;Response&gt;
+    &lt;x:Hello /&gt;
+  &lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre><p>The over SIML code should look like the following.</p>
+<pre><code class="lang-xml">&lt;Siml xmlns:x=&quot;http://syn.co.in/2014/siml#external&quot;&gt;
+  &lt;Concept Name=&quot;HelloPlugin&quot;&gt;
+
+    &lt;Model&gt;
+      &lt;Pattern&gt;Hello Plugin&lt;/Pattern&gt;
+      &lt;Response&gt;
+        &lt;x:Hello /&gt;
+      &lt;/Response&gt;
+    &lt;/Model&gt;
+
+  &lt;/Concept&gt;
+&lt;/Siml&gt;
+</code></pre><p>Press <strong>Ctrl+S</strong> to save the code to file and close <em>Bot Studio</em>.</p>
+<h3 id="testing-the-custom-helloplugin">Testing the custom <code>HelloPlugin</code></h3>
+<p>Launch <strong>Syn Virtual Assistant</strong> and in the <em>Input Box</em> type <em>&quot;Hello Plugin&quot;</em>. The VA should respond <em>&quot;Hello Plugin says Hello!&quot;</em>.</p>
+<p>You have now successfully created your first plugin for Syn Virtual Assistant.</p>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2016 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

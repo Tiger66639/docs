@@ -8,7 +8,7 @@
     <title>Custom Help File </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Custom Help File ">
-    <meta name="generator" content="docfx 2.1.0.0">
+    <meta name="generator" content="docfx 2.4.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../../styles/main.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
+    <meta property="docfx:rel" content="../../">
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -63,6 +63,14 @@
           </div>
         </div>
       </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
       <div role="main" class="container body-content hide-when-search">
         
         <div class="sidenav hide-when-search">
@@ -74,7 +82,6 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <a href="https://github.com/SynHub/syn-documentation/blob/master/tutorial/va/help-file.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
               <h1 id="custom-help-file">Custom Help File</h1>
               
 <p>Developers who create their own plugins that are distributed online may wish to create documentation on the <em>commands</em> and <em>features</em> of their plugins. All help files for Syn Virtual Assistant are written in <strong>Markdown</strong> format. The same format used by <em>GitHub</em> and even this <em>Documentation</em> site.</p>
@@ -86,8 +93,7 @@
     &lt;x:HelpWindow /&gt;
   &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre>
-<h2 id="creating-markdown-files">Creating Markdown Files</h2>
+</code></pre><h2 id="creating-markdown-files">Creating Markdown Files</h2>
 <p>Firstly, we will need a Markdown file editor and for this I recommend using <a href="http://pad.haroopress.com/">Haroopad </a> which seems to be a good Markdown editor with a great editor and a viewer held side by side.</p>
 <p>If you are not familiar with Markdown formats, please visit <a href="http://www.markdowntutorial.com/">MarkdownTutorial</a> and go through some of the simple tutorials that will help you get quickly started with Markdown document creation.</p>
 <h2 id="saving-markdown-help-file">Saving Markdown help file</h2>
@@ -101,9 +107,11 @@
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
-            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
-            </nav>
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
           </div>
         </div>
       </div>

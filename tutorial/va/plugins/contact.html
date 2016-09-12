@@ -8,7 +8,7 @@
     <title>Contact Plugin </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Contact Plugin ">
-    <meta name="generator" content="docfx 2.1.0.0">
+    <meta name="generator" content="docfx 2.4.0.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../../toc.html">
-    
+    <meta property="docfx:rel" content="../../../">
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -63,6 +63,14 @@
           </div>
         </div>
       </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
       <div role="main" class="container body-content hide-when-search">
         
         <div class="sidenav hide-when-search">
@@ -74,9 +82,9 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <a href="https://github.com/SynHub/syn-documentation/blob/master/tutorial/va/plugins/contact.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
               <h1 id="contact-plugin">Contact Plugin</h1>
               
+<p>Enables fetching of <em>Windows Contact</em> details like <em>phone numbers</em> and <em>email addresses</em> using contact names.</p>
 <h2 id="siml-adapters">SIML Adapters</h2>
 <h3 id="contact">Contact</h3>
 <table>
@@ -97,15 +105,28 @@
 </tr>
 </tbody>
 </table>
-<h2 id="usage">Usage</h2>
+<h4 id="usage">Usage</h4>
 <pre><code class="lang-xml">&lt;o:Contact Get=&quot;Number&quot;&gt;Peter&lt;/o:Contact&gt;
-</code></pre>
-<blockquote><p>Returns the <em>phone number</em> of <code>Peter</code></p>
+</code></pre><blockquote><p>Returns the <em>phone number</em> of <code>Peter</code></p>
 </blockquote>
 <pre><code class="lang-xml">&lt;o:Contact Get=&quot;Email&quot;&gt;Peter&lt;/o:Contact&gt;
-</code></pre>
-<blockquote><p>Returns the <em>address</em> of <code>Peter</code></p>
+</code></pre><blockquote><p>Returns the <em>address</em> of <code>Peter</code></p>
 </blockquote>
+<h2 id="sets">Sets</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Contact</td>
+<td style="text-align:left">Names of all the <em>Windows Contacts</em> stored.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="requirements">Requirements</h2>
 <ul>
 <li>Contact list in Windows Contact</li>
@@ -115,9 +136,11 @@
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
-            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
-            </nav>
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
           </div>
         </div>
       </div>

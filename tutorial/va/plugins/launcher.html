@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Launcher Plugin </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Launcher Plugin ">
+    <meta name="generator" content="docfx 2.4.0.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    <meta property="docfx:rel" content="../../../">
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+    ga('create', 'UA-39941606-1', 'auto');
+    ga('send', 'pageview');
+  
+  </script>
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="launcher-plugin">Launcher Plugin</h1>
+              
+<p>Helps launching of applications, known folders, websites and to perform searches on saved search engines.</p>
+<h2 id="siml-adapters">SIML Adapters</h2>
+<h3 id="1-app">1. App</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Annotation</strong></th>
+<th style="text-align:left"><code>&lt;o:App&gt;</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Definition</strong></td>
+<td style="text-align:left">Opens or closes the specified application</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Children</strong></td>
+<td style="text-align:left">Must contain an arbitrary text specifying the <em>name</em> of the application to be launched or closed and may contain a <code>Task</code> attribute the value of which specifies the task to perform. The value of the <code>Task</code> attribute can be <code>Open</code>, <code>Close</code> or <code>Kill</code>.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="usage">Usage</h4>
+<pre><code class="lang-xml">&lt;o:App&gt;Notepad&lt;/o:App&gt;
+</code></pre><blockquote><p>Opens the application named <em>Notepad</em></p>
+</blockquote>
+<pre><code class="lang-xml">&lt;o:App Task=&quot;Close&quot;&gt;Notepad&lt;/o:App&gt;
+</code></pre><blockquote><p>Closes the application named <em>Notepad</em></p>
+</blockquote>
+<h3 id="2-folder">2. Folder</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Annotation</strong></th>
+<th style="text-align:left"><code>&lt;o:Folder&gt;</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Definition</strong></td>
+<td style="text-align:left">Opens the specified folder.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Children</strong></td>
+<td style="text-align:left">Must contain an arbitrary text specifying the <em>name</em> of the folder to open.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="usage-1">Usage</h4>
+<pre><code class="lang-xml">&lt;o:Folder&gt;Documents&lt;/o:Folder&gt;
+</code></pre><blockquote><p>Opens the user&#39;s documents folder.</p>
+</blockquote>
+<h3 id="3-website">3. Website</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Annotation</strong></th>
+<th style="text-align:left"><code>&lt;o:Website&gt;</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Definition</strong></td>
+<td style="text-align:left">Opens the specified website in the default browser.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Children</strong></td>
+<td style="text-align:left">Must contain an arbitrary text specifying the <em>name</em> of the website to open.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="usage-2">Usage</h4>
+<pre><code class="lang-xml">&lt;o:Website&gt;Google&lt;/o:Website&gt;
+</code></pre><blockquote><p>Launches the url <code>http://www.google.com</code></p>
+</blockquote>
+<h3 id="4-searchsite">4. SearchSite</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Annotation</strong></th>
+<th style="text-align:left"><code>&lt;o:SearchSite&gt;</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Definition</strong></td>
+<td style="text-align:left">Opens the specified search engne url in the default browser.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Children</strong></td>
+<td style="text-align:left">Must contain an arbitrary text specifying the <em>search query</em> and must contain a <code>Link</code> attribute that specifies the name of the search engine to use.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="usage-3">Usage</h4>
+<pre><code class="lang-xml">&lt;o:SearchSite Link=&quot;Google&quot;&gt;Syn Virtual Assistant&lt;/o:SearchSite&gt;
+</code></pre><blockquote><p>Launches the url <code>https://www.google.com/search?q=Syn Virtual Assistant</code></p>
+</blockquote>
+<h2 id="maps">Maps</h2>
+<p>This plugin creates multiple SIML <em>Maps</em> during initialization by using the values set in the plugin&#39;s settings.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Map Name</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Map:ApplicationList</td>
+<td style="text-align:left">Names of all known applications.</td>
+</tr>
+<tr>
+<td style="text-align:left">Map:SearchEngineList</td>
+<td style="text-align:left">Names of all known search engines.</td>
+</tr>
+<tr>
+<td style="text-align:left">Map:WebsiteList</td>
+<td style="text-align:left">Names of all the known websites.</td>
+</tr>
+<tr>
+<td style="text-align:left">Map:DirectoryList</td>
+<td style="text-align:left">Names of all the known directories.</td>
+</tr>
+</tbody>
+</table>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2016 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

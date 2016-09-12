@@ -8,7 +8,7 @@
     <title>Tutorial </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Tutorial ">
-    <meta name="generator" content="docfx 2.1.0.0">
+    <meta name="generator" content="docfx 2.4.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../../styles/main.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
+    <meta property="docfx:rel" content="../../">
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -63,6 +63,14 @@
           </div>
         </div>
       </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
       <div role="main" class="container body-content hide-when-search">
         
         <div class="sidenav hide-when-search">
@@ -74,7 +82,6 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <a href="https://github.com/SynHub/syn-documentation/blob/master/tutorial/bot/tutorial.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
               <h1 id="tutorial">Tutorial</h1>
               
 <p>Any feature of Syn.Bot not discussed here <strong>may be</strong> in its experimental stage.</p>
@@ -85,19 +92,15 @@
 <p><code>Syn.Bot</code> is updated on a regular basis we recommend using<code>PM&gt; Update-Package Syn.Bot</code> command in NuGet console to check for updates.</p>
 <p>Add the using statement</p>
 <pre><code class="lang-csharp">using Syn.Bot.Siml;
-</code></pre>
-<h2 id="creating-a-new-instance-of-simlbot">Creating a new instance of SimlBot</h2>
+</code></pre><h2 id="creating-a-new-instance-of-simlbot">Creating a new instance of SimlBot</h2>
 <p>To create a simple Syn Bot object use the following code.</p>
 <pre><code class="lang-csharp">var simlBot= new SimlBot();
-</code></pre>
-<h4 id="creating-a-new-instance-of-botuser">Creating a new instance of BotUser</h4>
+</code></pre><h4 id="creating-a-new-instance-of-botuser">Creating a new instance of BotUser</h4>
 <p>There are multiple ways of creating a user for a Bot. The important part is that a unique ID should be allocated to all new users. If you do not wish to handle creation of Id then you may initialize a bot user using the following code.</p>
 <pre><code class="lang-csharp">var botUser = simlBot.CreateUser();
-</code></pre>
-<p><strong>Or</strong></p>
+</code></pre><p><strong>Or</strong></p>
 <pre><code class="lang-csharp">var botUser = new BotUser(simlBot,&quot;SomeID&quot;);
-</code></pre>
-<p>A bot user is a user that interacts with a particular bot. If an ID is not specified the User will receive a new <code>ID</code> from the Bot. This <code>ID</code> is a GUID and has the least collision rate.</p>
+</code></pre><p>A bot user is a user that interacts with a particular bot. If an ID is not specified the User will receive a new <code>ID</code> from the Bot. This <code>ID</code> is a GUID and has the least collision rate.</p>
 <h2 id="loading-siml-files-into-the-bot">Loading SIML Files into the Bot</h2>
 <p>There are multiple ways of adding SIML files into the Bot’s knowledge base.</p>
 <ul>
@@ -119,39 +122,33 @@ foreach (var simlFile in Directory.GetFiles(@&quot;C:\Bot&quot;, &quot;*.siml&qu
 var fileString = File.ReadAllText(simlFile);
 simlBot.AddSiml(fileString);
 }
-</code></pre>
-<p>In the example above we call the function <code>Load()</code> after we have added the desired files.</p>
+</code></pre><p>In the example above we call the function <code>Load()</code> after we have added the desired files.</p>
 <p><em>Example Code to load SIML files as XDocument</em></p>
 <pre><code class="lang-csharp">foreach (var simlFile in Directory.GetFiles(@&quot;C:Bot&quot;, &quot;*.siml&quot;))
 {
 var simlDocument= XDocument.Load(simlFile);
 simlBot.AddSiml(simlDocument);
 }
-</code></pre>
-<blockquote><p>If file editing is not required after your Bot has been deployed its highly recommended that you initialize your Bot using an SIML Package instead of SIML files.</p>
+</code></pre><blockquote><p>If file editing is not required after your Bot has been deployed its highly recommended that you initialize your Bot using an SIML Package instead of SIML files.</p>
 </blockquote>
 <h2 id="interacting-with-the-bot">Interacting with the Bot</h2>
 <p>Every interaction between the User and Bot is done by creating a <em>Chat Request</em>.</p>
 <p><em>Example code to create a Chat Request</em></p>
 <pre><code class="lang-csharp">var chatRequest = new ChatRequest(&quot;how are you&quot;, RequestType.UserMessage, botUser);
-</code></pre>
-<p>In SIML 1.0 the chat request should always be of the type <code>UserMessage</code>. Other types have been reserved for future implementations. Once a chat request is created the request can then be sent to the Bot. A <strong>ChatRequest</strong> sent to a Bot will yield a <code>ChatResult</code> which is the final processed response from the Bot.</p>
+</code></pre><p>In SIML 1.0 the chat request should always be of the type <code>UserMessage</code>. Other types have been reserved for future implementations. Once a chat request is created the request can then be sent to the Bot. A <strong>ChatRequest</strong> sent to a Bot will yield a <code>ChatResult</code> which is the final processed response from the Bot.</p>
 <pre><code class="lang-csharp">var chatResult = simlBot.Chat(chatRequest);
 var botMessage = chatResult.BotMessage;
-</code></pre>
-<p>In the above the <code>botMessage</code> variable contains the textual reply the Bot generated for the chat request it received.</p>
+</code></pre><p>In the above the <code>botMessage</code> variable contains the textual reply the Bot generated for the chat request it received.</p>
 <p>To check if the result was successful i.e. the Bot could find a response for the chat request use the <code>Success</code> property, which yields <strong>True</strong> if a response was generated. This property is NOT set to <strong>True</strong> if the response is the default response the Bot is meant to send when no response is generated.</p>
 <p><em>Example</em></p>
 <pre><code class="lang-csharp">if (chatResult.Success)
 {
 //Do Something
 }
-</code></pre>
-<p>A response in SIML may contain a <strong>Hint</strong>. A <strong>Hint</strong> is the next input the Bot expects from the current user. To get the Hint for the current response use the <code>Hint</code> property. This property yields an empty string if no Hint is specified for a response.</p>
+</code></pre><p>A response in SIML may contain a <strong>Hint</strong>. A <strong>Hint</strong> is the next input the Bot expects from the current user. To get the Hint for the current response use the <code>Hint</code> property. This property yields an empty string if no Hint is specified for a response.</p>
 <p><em>Example</em></p>
 <pre><code class="lang-csharp">var hint = chatResult.Hint;
-</code></pre>
-<p>A <code>ChatResult</code> has the following properties:</p>
+</code></pre><p>A <code>ChatResult</code> has the following properties:</p>
 <ul>
 <li><code>BotEmotion</code> – Emotion of the Bot</li>
 <li><code>UserEmotion</code> – Emotion of the User</li>
@@ -172,8 +169,7 @@ foreach (var frame in chatResult.Stack)
 {
   DisplayInGrid(frame);
 }
-</code></pre>
-<p><code>DisplayInGrid</code> can be any function defined by the developer that projects the stack information to the user.</p>
+</code></pre><p><code>DisplayInGrid</code> can be any function defined by the developer that projects the stack information to the user.</p>
 <h2 id="creating-a-package-using-code">Creating a Package using code</h2>
 <p>An SIML Package is a collection of properly arranged SIML elements in their compressed format. To create an SIML package its important that you load SIML files as XElements and then use the <strong>PackageManager</strong> to convert the elements into an SIML package string.</p>
 <pre><code class="lang-csharp">var elementList = new List();
@@ -185,15 +181,13 @@ elementList.Add(simlElement);
 
 var packageString = simlBot.PackageManager.ConvertToPackage(elementList);
 File.WriteAllText(@&quot;C:\BotMySimlPackage.simlpk&quot;, packageString);
-</code></pre>
-<blockquote><p>This is exactly the same function that is called by Syn Bot Studio to create an SIML Package file.</p>
+</code></pre><blockquote><p>This is exactly the same function that is called by Syn Bot Studio to create an SIML Package file.</p>
 </blockquote>
 <p><em>Example using Linq</em></p>
 <pre><code class="lang-csharp">var elementList = Directory.GetFiles(@&quot;C:\Bot&quot;, &quot;*.siml&quot;).Select(XElement.Load).ToList();
 var packageString = simlBot.PackageManager.ConvertToPackage(elementList);
 File.WriteAllText(@&quot;C:BotMySimlPackage.simlpk&quot;, packageString);
-</code></pre>
-<blockquote><p>You should always save an SIML Package string into a file that has the extension <code>.SimlPk</code>.</p>
+</code></pre><blockquote><p>You should always save an SIML Package string into a file that has the extension <code>.SimlPk</code>.</p>
 </blockquote>
 <h2 id="getting-bot-stats">Getting Bot Stats</h2>
 <p>Syn Bot will internally monitor and store its statistics. Stats are stored not just for retrieval purpose but for run-time modifications that the Bot makes to improve its speed and responses. To get the Bot stats use the <code>Stats</code> property available for the Bot.</p>
@@ -203,33 +197,28 @@ var idleTime = simlBot.Stats.IdleTime;
 var loadTime = simlBot.Stats.LoadTime;
 var mappingTime = simlBot.Stats.MappingTime;
 //.....
-</code></pre>
-<blockquote><p>Most of these Stat properties are used by Syn Bot Studio to generate the Stats Chart.</p>
+</code></pre><blockquote><p>Most of these Stat properties are used by Syn Bot Studio to generate the Stats Chart.</p>
 </blockquote>
 <h2 id="main-bot-instance">Main Bot Instance</h2>
 <p><code>SimlBot</code> class comes with a static <code>Main</code> property that can be used to share an instance of <code>SimlBot</code> with other components. The <code>Main</code> property during its first Get call automatically creates a new instance of SimlBot and returns it. Developers can even Set the <code>Main</code> property with their own instance of <code>SimlBot</code> by first calling the Set property and later using the Get property throughout development.</p>
 <p><em>Example</em></p>
 <pre><code class="lang-csharp">var sharedBot = SimlBot.Main; //Because Get is called before Set - A new SimlBot instance gets created.
-</code></pre>
-<p><em>Example</em></p>
+</code></pre><p><em>Example</em></p>
 <pre><code class="lang-csharp">var myBot = new SimlBot();
 SimlBot.Main = myBot;
 var sharedBot = SimlBot.Main;
 //SimlBot.Main and myBot are now the same instance of SimlBot class.
-</code></pre>
-<h2 id="collecting-logs">Collecting Logs</h2>
+</code></pre><h2 id="collecting-logs">Collecting Logs</h2>
 <p>Logs generated by the Bot are not stored internally ( to reduce memory usage ) but an event is fired whenever a log is generated. The event argument however contains everything that was added to be logged.</p>
 <p>To catch all the logs generated by the Bot an event handler has to be added to the <code>LogAdded</code> event.</p>
 <p><em>Example</em></p>
 <pre><code class="lang-csharp">SimlBot.Logger.LogReceived+= Logger_LogAdded;
-</code></pre>
-<p><em>Example event handler</em></p>
+</code></pre><p><em>Example event handler</em></p>
 <pre><code class="lang-csharp">void Logger_LogAdded(object sender, LogReceivedEventArgs e)
 {
 //Do Something here
 }
-</code></pre>
-<h2 id="getting-examples-after-a-package-is-loaded">Getting Examples after a Package is Loaded</h2>
+</code></pre><h2 id="getting-examples-after-a-package-is-loaded">Getting Examples after a Package is Loaded</h2>
 <p>Every atomic pattern in SIML gets stored as an example within the Bot whenever a package or an SIML document, consisting of Concepts is loaded into the Bot’s graph. These examples can be used to give the user a hint of what all atomic patterns have been pre-defined or can also be used to auto-complete any input interface.</p>
 <p>For complex patterns a Bot developer can explicitly specify an example using the SIML <code>&lt;Example&gt;</code> element. The inner content of which is taken as the value for the Example to be stored. Duplicate entries are automatically discarded to maintain optimum memory usage.</p>
 <p><em>Explicit Example declaration</em></p>
@@ -238,16 +227,14 @@ var sharedBot = SimlBot.Main;
   &lt;Example&gt;Play music&lt;/Example&gt;
   &lt;Response&gt;Playing music...&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre>
-<p>To extract the list of all the Examples stored by the Bot you can make use of the Examples property as shown below.</p>
+</code></pre><p>To extract the list of all the Examples stored by the Bot you can make use of the Examples property as shown below.</p>
 <pre><code class="lang-csharp">var simlbBot= new SimlBot();
 var storedExamples = simlBot.Examples;
 foreach (var example in storedExamples)
 {
     //Do something
 }
-</code></pre>
-<h2 id="cache-manager">Cache Manager</h2>
+</code></pre><h2 id="cache-manager">Cache Manager</h2>
 <p>As Syn Bot is a Portable Class Library it can be assumed that the library maybe used in an environment that has some memory limitations. Under such circumstances memory management can be done by using the <code>ICacheManager</code> interface.</p>
 <p>Everytime the Bot is about to save some textual data within a variable it requests the Cache Manager to provide a unique key for the textual data and saves the key instead. The textual data or string can be stored anywhere by the Cache Manager, it can be within a database, a file, some persistent storage mechanism or any other location but not the machine’s Random Access Memory.</p>
 <p>Syn Bot ( in Nuget ) comes with its own <code>ICacheManager</code> implementation class that prevents memory from being allocated to duplicate entries.</p>
@@ -273,9 +260,11 @@ foreach (var example in storedExamples)
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
-            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
-            </nav>
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
           </div>
         </div>
       </div>

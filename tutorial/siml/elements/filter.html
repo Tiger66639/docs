@@ -8,7 +8,7 @@
     <title>Filter </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Filter ">
-    <meta name="generator" content="docfx 2.1.0.0">
+    <meta name="generator" content="docfx 2.4.0.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../../toc.html">
-    
+    <meta property="docfx:rel" content="../../../">
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -63,6 +63,14 @@
           </div>
         </div>
       </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
       <div role="main" class="container body-content hide-when-search">
         
         <div class="sidenav hide-when-search">
@@ -74,7 +82,6 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <a href="https://github.com/SynHub/syn-documentation/blob/master/tutorial/siml/elements/filter.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
               <h1 id="filter">Filter</h1>
               
 <table>
@@ -134,8 +141,7 @@
 &lt;Filter Text=&quot;.ac&quot; Value=&quot;dot ac&quot; /&gt;
 
 &lt;/Siml&gt;
-</code></pre>
-<p>The <code>Filter</code> element accepts 3 special children elements that have different meaning when nested inside the Filter tag. The Word <em>tag/attribute</em>, Text <em>tag/attribute</em> and finally the Regex <em>tag/attribute</em>. If a filtration requires just 1 word to be filtered out we encourage you to use the Word attribute but if it requires more than one word to be filtered out you can then use <code>&lt;Word&gt;</code> elements .</p>
+</code></pre><p>The <code>Filter</code> element accepts 3 special children elements that have different meaning when nested inside the Filter tag. The Word <em>tag/attribute</em>, Text <em>tag/attribute</em> and finally the Regex <em>tag/attribute</em>. If a filtration requires just 1 word to be filtered out we encourage you to use the Word attribute but if it requires more than one word to be filtered out you can then use <code>&lt;Word&gt;</code> elements .</p>
 <p>In the example above you can see that the Value attribute tells the bot what value of the text or word will have to be replaced. A Filter has just 1 Single replacement value (ofcourse).</p>
 <p>So using the above filtration if the user types iam it will be filtered out as I am and if the user ends a website address with .edu it will be filtered out as dot edu</p>
 <p>There are 3 types of Filters in SIML:</p>
@@ -170,16 +176,17 @@
 &lt;/Filter&gt;
 
 &lt;/Siml&gt;
-</code></pre>
-<p>It’s important to note that the Input filters do play a role in Bot messages as well ( internally ). When a bot output is generated a filtered version of the output is stored as the value for the <code>Previous</code> elemen</p>
+</code></pre><p>It’s important to note that the Input filters do play a role in Bot messages as well ( internally ). When a bot output is generated a filtered version of the output is stored as the value for the <code>Previous</code> elemen</p>
 
             </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
-            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
-            </nav>
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
           </div>
         </div>
       </div>

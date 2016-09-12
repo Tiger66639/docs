@@ -8,7 +8,7 @@
     <title>Dictionary Plugin </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Dictionary Plugin ">
-    <meta name="generator" content="docfx 2.1.0.0">
+    <meta name="generator" content="docfx 2.4.0.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../../toc.html">
-    
+    <meta property="docfx:rel" content="../../../">
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -63,6 +63,14 @@
           </div>
         </div>
       </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
       <div role="main" class="container body-content hide-when-search">
         
         <div class="sidenav hide-when-search">
@@ -74,9 +82,9 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <a href="https://github.com/SynHub/syn-documentation/blob/master/tutorial/va/plugins/dictionary.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
               <h1 id="dictionary-plugin">Dictionary Plugin</h1>
               
+<p>This plugin provides definitions, synonyms, spelling corrections and hyphenations of the specified word or phrase.</p>
 <h2 id="siml-adapters">SIML Adapters</h2>
 <h3 id="1-dictionary">1. Dictionary</h3>
 <table>
@@ -103,8 +111,7 @@
 </table>
 <h4 id="usage">Usage</h4>
 <pre><code class="lang-xml">&lt;o:Dictionary&gt;sprightly&lt;/o:Dictionary&gt;
-</code></pre>
-<blockquote><p>Sets the <code>Var</code> variable <code>definition</code> with the value of the definition found.</p>
+</code></pre><blockquote><p>Sets the <code>Var</code> variable <code>definition</code> with the value of the definition found.</p>
 </blockquote>
 <h3 id="2-thesaurus">2. Thesaurus</h3>
 <table>
@@ -129,27 +136,41 @@
 </tr>
 </tbody>
 </table>
-<h4 id="usage-0">Usage</h4>
+<h4 id="usage-1">Usage</h4>
 <pre><code class="lang-xml">&lt;o:Thesaurus Get=&quot;Synonym&quot;&gt;energetic&lt;/o:Thesaurus&gt;
-</code></pre>
-<blockquote><p>Gets all synonyms of the word <code>energetic</code>.</p>
+</code></pre><blockquote><p>Gets all synonyms of the word <code>energetic</code>.</p>
 </blockquote>
 <pre><code class="lang-xml">&lt;o:Thesaurus Get=&quot;Spell&quot;&gt;encyclopedi&lt;/o:Thesaurus&gt;
-</code></pre>
-<blockquote><p>Gets all possible spell corrections for the <em>misspelled</em> word <code>encyclopedi</code>.</p>
+</code></pre><blockquote><p>Gets all possible spell corrections for the <em>misspelled</em> word <code>encyclopedi</code>.</p>
 </blockquote>
 <pre><code class="lang-xml">&lt;o:Thesaurus Get=&quot;Hyphenate&quot;&gt;encyclopedia&lt;/o:Thesaurus&gt;
-</code></pre>
-<blockquote><p>Gets hyphenations of the word <code>encyclopedia</code></p>
+</code></pre><blockquote><p>Gets hyphenations of the word <code>encyclopedia</code></p>
 </blockquote>
+<h2 id="settings">Settings</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Use-Common</td>
+<td style="text-align:left">Determines if common definitions should be used</td>
+</tr>
+</tbody>
+</table>
 
             </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
-            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
-            </nav>
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
           </div>
         </div>
       </div>

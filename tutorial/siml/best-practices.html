@@ -8,7 +8,7 @@
     <title>SIML Best Practices </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="SIML Best Practices ">
-    <meta name="generator" content="docfx 2.1.0.0">
+    <meta name="generator" content="docfx 2.4.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../../styles/main.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
+    <meta property="docfx:rel" content="../../">
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -63,6 +63,14 @@
           </div>
         </div>
       </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
       <div role="main" class="container body-content hide-when-search">
         
         <div class="sidenav hide-when-search">
@@ -74,7 +82,6 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <a href="https://github.com/SynHub/syn-documentation/blob/master/tutorial/siml/best-practices.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
               <h1 id="siml-best-practices">SIML Best Practices</h1>
               
 <p>Writing an intelligent bot requires planning and optimization. The following tips and tricks should guide you while you develop your bot for any application.</p>
@@ -95,20 +102,16 @@
 <p>The best coding style is not just the one that is understood by computers but also the ones that are understood by humans. Try to keep the verbosity of your code to optimal minimum by learning the default values of attributes and elements.</p>
 <p><em>Example 1</em></p>
 <pre><code class="lang-xml">&lt;Concept Name=&quot;Some Concept&quot; Type=&quot;Public&quot; Repeat=&quot;False&quot;&gt;...
-</code></pre>
-<p>Can just be</p>
+</code></pre><p>Can just be</p>
 <pre><code class="lang-xml">&lt;Concept Name=&quot;Some Concept&quot;&gt;...
-</code></pre>
-<p><em>Example 2</em></p>
+</code></pre><p><em>Example 2</em></p>
 <pre><code class="lang-xml">&lt;Map Get=&quot;Map Name&quot;&gt;&lt;Match/&gt;&lt;/Map&gt;
-</code></pre>
-<p>Can just be</p>
+</code></pre><p>Can just be</p>
 <pre><code class="lang-xml">&lt;Map Get=&quot;Map name&quot;/&gt;
-</code></pre>
-<p>And so on...</p>
+</code></pre><p>And so on...</p>
 <h3 id="check-your-goto">Check your <code>&lt;Goto&gt;</code></h3>
 <p><code>&lt;Goto&gt;</code> and its derivative elements are used to reduce the pattern in user input to its minimalistic form but it&#39;s upto the developer to check if the value to which the <code>&lt;Goto&gt;</code> element redirects to actually exists within your SIML project.</p>
-<h3 id="don-t-repeat-yourself">Don’t repeat yourself</h3>
+<h3 id="dont-repeat-yourself">Don’t repeat yourself</h3>
 <p>Declaring multiple Models for multiple patterns would simply defeat the purpose of using an advanced Chatbot architecture. For multiple patterns always use the <item> element within the <pattern> element and the same should be applied to <previous> element.<p>
 <h3 id="smaller-dynamic-sets">Smaller Dynamic Sets</h3>
 <p>Dynamics sets have very low impact on the performance of your SIML code but for brevity if the dynamic sets are to be used frequently or the size of the dynamic sets are small and constant then the developer should save them as a static Set and give it a unique name. This reduces redundancy and ensures re-usability of your SIML code.</p>
@@ -117,9 +120,11 @@
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
-            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
-            </nav>
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
           </div>
         </div>
       </div>

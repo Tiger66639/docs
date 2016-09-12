@@ -8,7 +8,7 @@
     <title>News Plugin </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="News Plugin ">
-    <meta name="generator" content="docfx 2.1.0.0">
+    <meta name="generator" content="docfx 2.4.0.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../../toc.html">
-    
+    <meta property="docfx:rel" content="../../../">
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -63,6 +63,14 @@
           </div>
         </div>
       </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
       <div role="main" class="container body-content hide-when-search">
         
         <div class="sidenav hide-when-search">
@@ -74,9 +82,9 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <a href="https://github.com/SynHub/syn-documentation/blob/master/tutorial/va/plugins/news.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
               <h1 id="news-plugin">News Plugin</h1>
               
+<p>The plugin provides an adapter that lets developers retrieve the latest news headlines from BBC&#39;s RSS News Feed.</p>
 <h2 id="adapters">Adapters</h2>
 <h3 id="news">News</h3>
 <table>
@@ -93,20 +101,36 @@
 </tr>
 </tbody>
 </table>
-<h2 id="usage">Usage</h2>
+<h4 id="usage">Usage</h4>
 <pre><code class="lang-xml">&lt;o:News/&gt;
-</code></pre>
-<blockquote><p>Returns an HTML value from BBC News RSS Feed.</p>
+</code></pre><blockquote><p>Raises the event <code>News-Headline-Query</code> after an HTML value from BBC News RSS Feed is generated.</p>
 </blockquote>
+<h2 id="events">Events</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">News-Headline-query</td>
+<td style="text-align:left">Raised when the latest news headline is successfully retrieved after <code>&lt;o:News/&gt;</code> is evaluated. The <code>News-Headline-Value</code> variable is set to contain the HTML content.</td>
+</tr>
+</tbody>
+</table>
 <p>An <code>HtmlPanel</code> must be used to render the HTML content returned by this Adapter.</p>
 
             </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
-            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
-            </nav>
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
           </div>
         </div>
       </div>

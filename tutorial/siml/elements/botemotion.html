@@ -8,7 +8,7 @@
     <title>BotEmotion </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="BotEmotion ">
-    <meta name="generator" content="docfx 2.1.0.0">
+    <meta name="generator" content="docfx 2.4.0.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../../toc.html">
-    
+    <meta property="docfx:rel" content="../../../">
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -63,6 +63,14 @@
           </div>
         </div>
       </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
       <div role="main" class="container body-content hide-when-search">
         
         <div class="sidenav hide-when-search">
@@ -74,7 +82,6 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <a href="https://github.com/SynHub/syn-documentation/blob/master/tutorial/siml/elements/botemotion.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
               <h1 id="botemotion">BotEmotion</h1>
               
 <table>
@@ -134,8 +141,7 @@
 &lt;/emotionml&gt;
 
 &lt;/Siml&gt;
-</code></pre>
-<p>In the above example there are 2 emotions defined with the id <em>pleased</em> and <em>angry</em> and in the info tag the SIML namespace is used to declare the <code>Emotion</code> element which is used to give the ancestor emotion element a unique name. This name can later be used to access the emotion.</p>
+</code></pre><p>In the above example there are 2 emotions defined with the id <em>pleased</em> and <em>angry</em> and in the info tag the SIML namespace is used to declare the <code>Emotion</code> element which is used to give the ancestor emotion element a unique name. This name can later be used to access the emotion.</p>
 <p><em>Example</em></p>
 <pre><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;How are you feeling today&lt;/Pattern&gt;
@@ -143,8 +149,7 @@
   I feel &lt;BotEmotion Get=&quot;name&quot; /&gt;
  &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre>
-<p>The <code>&lt;BotEmotion&gt;</code> element is used to Get or Set an emotion for the Bot. This element has a <code>Get</code> attribute using which the developer can either retrieve the name of current emotion or the ID. To set the emotion to an already declared emotion use the <code>ID</code> attribute.</p>
+</code></pre><p>The <code>&lt;BotEmotion&gt;</code> element is used to Get or Set an emotion for the Bot. This element has a <code>Get</code> attribute using which the developer can either retrieve the name of current emotion or the ID. To set the emotion to an already declared emotion use the <code>ID</code> attribute.</p>
 <p>The following example should give you an idea as to how you can Get or Set the emotion for the Bot.</p>
 <p><em>Get Example</em></p>
 <pre><code class="lang-xml">&lt;Model&gt;
@@ -153,25 +158,25 @@
   &lt;BotEmotion Get=&quot;id&quot; /&gt;
  &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre>
-<p><em>Set Example</em></p>
+</code></pre><p><em>Set Example</em></p>
 <pre><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;Set Bot Emotion&lt;/Pattern&gt;
  &lt;Response&gt;
   &lt;BotEmotion ID=&quot;pleased&quot;/&gt;
  &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre>
-<blockquote><p>When the <code>ID</code> attribute is used the element will not return any value.</p>
+</code></pre><blockquote><p>When the <code>ID</code> attribute is used the element will not return any value.</p>
 </blockquote>
 
             </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
-            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
-            </nav>
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
           </div>
         </div>
       </div>

@@ -8,7 +8,7 @@
     <title>Creating a JSGF Grammar File </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Creating a JSGF Grammar File ">
-    <meta name="generator" content="docfx 2.1.0.0">
+    <meta name="generator" content="docfx 2.4.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../../styles/main.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
+    <meta property="docfx:rel" content="../../">
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -63,6 +63,14 @@
           </div>
         </div>
       </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
       <div role="main" class="container body-content hide-when-search">
         
         <div class="sidenav hide-when-search">
@@ -74,7 +82,6 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <a href="https://github.com/SynHub/syn-documentation/blob/master/tutorial/speech/jsgf-grammar.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
               <h1 id="creating-a-jsgf-grammar-file">Creating a JSGF Grammar File</h1>
               
 <p>Syn Speech has a good support for JSGF files (unlike SRGS which is partially supported). The JSGF file parser is extremely sensitive to file encoding and characters. Any illegal character in the file may render the entire grammar useless.</p>
@@ -84,8 +91,7 @@
 <pre><code class="lang-xml">#JSGF V1.0;
 grammar hello;
 public &lt;command&gt; = ( hi there | whats up | how are you );
-</code></pre>
-<h2 id="grammar-header">Grammar Header</h2>
+</code></pre><h2 id="grammar-header">Grammar Header</h2>
 <p>The first line is the grammar header and specifies the version of JSGF. The grammar header should always begin with <strong>#JSGF</strong> followed by the version.</p>
 <h2 id="grammar-name">Grammar Name</h2>
 <p>The second line declares the name of the grammar i.e. <code>hello</code>. The format is <strong>grammar grammar-name;</strong> . Every grammar file should declare a grammar name. So for example if you wish to name your grammar <code>helloSpeech</code>. You’ll do so by typing <strong>grammar helloSpeech;</strong></p>
@@ -108,9 +114,11 @@ public &lt;command&gt; = ( hi there | whats up | how are you );
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
-            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
-            </nav>
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
           </div>
         </div>
       </div>

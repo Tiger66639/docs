@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Creating a VA Plugin </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Creating a VA Plugin ">
+    <meta name="generator" content="docfx 2.1.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+    ga('create', 'UA-39941606-1', 'auto');
+    ga('send', 'pageview');
+  
+  </script>
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="creating-a-va-plugin">Creating a VA Plugin</h1>
+              
+<p>Creation of a Plugin for VA Framework gets a lot easier due to the availability of in-built classes and utilities.</p>
+<p>For the creation of a VA Plugin, we&#39;ll assume that you are using <em>Visual Studio Community 2015</em> or above. If you don&#39;t have Visual Studio we recommend downloading it from the <a href="https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx">Visual Studio download page</a>.</p>
+<h2 id="tutorial">Tutorial</h2>
+<h3 id="creating-a-class-library-project">Creating a <em>Class Library</em> project</h3>
+<p>All VA Plugins are <em>Class Libraries</em> that are loaded by the <code>Loader</code> plugin during VA initialization.</p>
+<p>To create a <em>Class Library</em> project, start <em>Visual Studio</em></p>
+<ul>
+<li>On the menu bar choose <strong>File</strong>, <strong>New</strong>, <strong>Project</strong>.</li>
+<li>Expand <strong>Installed</strong>, expand <strong>Templates</strong>, expand <strong>Visual C#</strong> and then choose <strong>Class Library</strong>.</li>
+<li>In the <strong>Name</strong> box, type <em><strong>Syn.VA.Plugins.HelloPlugin</strong></em> and choose <strong>OK</strong>.</li>
+</ul>
+<p><img src="images/va-plugin-project.png" alt="hello Plugin Image"></p>
+<h3 id="referencing-the-va-libraries">Referencing the VA Libraries</h3>
+<p>Once the project is created, you&#39;ll need to reference a few class libraries. Go to <a href="https://github.com/SynHub/syn-va-components">Syn-VA-Components</a> repository and download the <code>References</code> folder.</p>
+<p>After the you have downloaded the <em>References</em> folder, In <em>Visual Studio</em>,</p>
+<ul>
+<li>In <strong>Solution Explorer</strong>, right-click on the References node and choose <strong>Add Reference</strong>.</li>
+<li>Click on <strong>Browse</strong>, browse to the <code>References</code> folder, select <code>Syn.VA.dll</code>, <code>Syn.Bot.dll</code> and <code>Syn.Log.dll</code> and then click on <strong>Add</strong>.</li>
+<li>Choose <strong>OK</strong></li>
+</ul>
+<p>You now have all the libraries required to create your first plugin.</p>
+<h3 id="helloplugin-class"><code>HelloPlugin</code> class</h3>
+<p>To create a class that is loaded as a <em>Plugin</em> type it is important to inherit the class from either the <code>Plugin</code> class or implement the <code>IPlugin</code> interface.</p>
+<ul>
+<li>Rename <code>Class1</code> to <code>HelloPlugin</code>.</li>
+<li>Inherit from <code>Plugin</code></li>
+</ul>
+<pre><code class="lang-csharp">namespace Syn.VA.Plugins.HelloPlugin
+{
+    public class HelloPlugin : Plugin
+    {
+
+    }
+}
+</code></pre>
+<blockquote><p>Only <code>public</code> classes that inherit the <code>Plugin</code> class are loaded by the <code>Loader</code> plugin.</p>
+</blockquote>
+<h2 id="convention">Convention</h2>
+<ul>
+<li>The name of the plugin must always be suffixed with the word <strong>Plugin</strong>. <em>For Example</em> an <em>Email</em> plugin is called <em>EmailPlugin</em>.</li>
+<li>If a plugin stores its settings in an xml file like the official plugins then the settings file name must contain 2 parts, the name of the plugin and the word <strong>Settings</strong>.</li>
+<li>All VA Plugins should start with the namespace <strong>Syn.VA.Plugins.</strong></li>
+</ul>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2016 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

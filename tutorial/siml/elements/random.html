@@ -8,7 +8,7 @@
     <title>Random </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Random ">
-    <meta name="generator" content="docfx 2.1.0.0">
+    <meta name="generator" content="docfx 2.4.0.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../../toc.html">
-    
+    <meta property="docfx:rel" content="../../../">
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -63,6 +63,14 @@
           </div>
         </div>
       </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
       <div role="main" class="container body-content hide-when-search">
         
         <div class="sidenav hide-when-search">
@@ -74,7 +82,6 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <a href="https://github.com/SynHub/syn-documentation/blob/master/tutorial/siml/elements/random.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
               <h1 id="random">Random</h1>
               
 <table>
@@ -117,8 +124,7 @@
   &lt;/Random&gt;
  &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre>
-<p><strong>User Input</strong></p>
+</code></pre><p><strong>User Input</strong></p>
 <ol>
 <li><em>Hi</em></li>
 <li><em>Hi</em></li>
@@ -145,8 +151,7 @@
     &lt;/Random&gt;
   &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre>
-<p>In the above SIML code every Item element has been assigned a unique probability. In this way a develop can control the occurrence of the Item at run-time. The above code ensures that most of the time the word Hola! will used as response whenever the user says <strong><em>hi</em></strong>.</p>
+</code></pre><p>In the above SIML code every Item element has been assigned a unique probability. In this way a develop can control the occurrence of the Item at run-time. The above code ensures that most of the time the word Hola! will used as response whenever the user says <strong><em>hi</em></strong>.</p>
 <p>It’s not mandatory that to change the probability of occurrence of one item every other item has to be assigned a weight. If 1 or more items are assigned a weight then the rest of the existing items receive an equally distributed probability.</p>
 <p>The above SIML code can also be written as:</p>
 <pre><code class="lang-xml">&lt;Model&gt;
@@ -160,8 +165,7 @@
     &lt;/Random&gt;
   &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre>
-<p>In the above the 2 Item elements <code>&lt;Item&gt;Hello there.&lt;/Item&gt;</code> and <code>&lt;Item&gt;Hi there!&lt;/Item&gt;</code> will automatically receive a probability of 0.125.</p>
+</code></pre><p>In the above the 2 Item elements <code>&lt;Item&gt;Hello there.&lt;/Item&gt;</code> and <code>&lt;Item&gt;Hi there!&lt;/Item&gt;</code> will automatically receive a probability of 0.125.</p>
 <h2 id="chaining">Chaining</h2>
 <p>The Chain syntax allows developers to chain random response using a single text value. Words or sentence can be separated using a vertical bar as shown below. The entire text MUST be enclosed within a single <code>&lt;Random&gt;</code> tag instead of multiple <code>&lt;Item&gt;</code> tags.</p>
 <p><em>Example</em></p>
@@ -171,16 +175,14 @@
     &lt;Random&gt;I feel great|I feel awesome!|I feel metallic&lt;/Random&gt;
   &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre>
-<p><em>Example</em></p>
+</code></pre><p><em>Example</em></p>
 <pre><code class="lang-xml">&lt;Model&gt;
   &lt;Pattern&gt;HOW DO YOU FEEL&lt;/Pattern&gt;
   &lt;Response&gt;
     &lt;Random&gt;I feel (great|awesome!|metallic)&lt;/Random&gt;
   &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre>
-<p>The output of both the examples above will be similar.</p>
+</code></pre><p>The output of both the examples above will be similar.</p>
 <p><em>Example</em></p>
 <p><strong>SIML</strong></p>
 <pre><code class="lang-xml">&lt;Model&gt;
@@ -189,8 +191,7 @@
     &lt;Random&gt;I feel (great|awesome!|metallic)&lt;/Random&gt;
   &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre>
-<p><strong>User Input</strong></p>
+</code></pre><p><strong>User Input</strong></p>
 <ol>
 <li><em>How do you feel?</em></li>
 <li><em>How do you feel?</em></li>
@@ -208,9 +209,11 @@
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
-            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
-            </nav>
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
           </div>
         </div>
       </div>

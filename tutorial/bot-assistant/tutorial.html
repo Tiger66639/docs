@@ -8,7 +8,7 @@
     <title>Syn Bot Assistant </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Syn Bot Assistant ">
-    <meta name="generator" content="docfx 2.1.0.0">
+    <meta name="generator" content="docfx 2.4.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../../styles/main.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
+    <meta property="docfx:rel" content="../../">
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -63,6 +63,14 @@
           </div>
         </div>
       </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
       <div role="main" class="container body-content hide-when-search">
         
         <div class="sidenav hide-when-search">
@@ -74,7 +82,6 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <a href="https://github.com/SynHub/syn-documentation/blob/master/tutorial/bot-assistant/tutorial.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
               <h1 id="syn-bot-assistant">Syn Bot Assistant</h1>
               
 <p>Using the <em>Syn Bot Web Assistant</em> library developers can easily add a Virtual Chat agent to their ASP.NET websites. This is achieved by using the class library <code>Syn.Bot.Assistant</code> in your project and requires that you are working on a ASP.NET website which targets .NET Framework 4.5 or above.</p>
@@ -94,12 +101,11 @@ A web form is added to your ASP website project and all the  HTML elements are r
 <p>Before you begin download the Automated-Live-Chat-Demo project files from <a href="http://github.syn.co.in">GitHub</a>. Throughout this tutorial we will assume that you are working on an ASP.NET project using Visual Studio 2013 or above</p>
 <h3 id="importing-the-nuget-package">Importing the NuGet Package</h3>
 <p>Click on <strong>Tools-&gt; NuGet Package Manager -&gt; Package Manager Console</strong> and type Install-Package SynChat. Once done the required class library along with SynBot portable class library will be added as a reference in your project.</p>
-<h3 id="creating-the-service-url-chatservice-aspx">Creating the Service URL (ChatService.aspx)</h3>
+<h3 id="creating-the-service-url-chatserviceaspx">Creating the Service URL (ChatService.aspx)</h3>
 <p>Now right click on your project <strong>Add-&gt;New Item…</strong> and select Web Form. Name your web form “ChatService.aspx“. This page will now serve as the service URL. Ofcourse you can create an asmx service as well but for demonstration we will stick with this simple hack.</p>
 <p>Double click on the <code>ChatService.aspx</code> item in the solution explorer and remove every line except the first line which should look something like the following</p>
 <pre><code class="lang-csharp">&lt;%@ Page Language=&quot;C#&quot; AutoEventWireup=&quot;true&quot; CodeFile=&quot;ChatService.aspx.cs&quot; Inherits=&quot;Automated_Live_Chat_Demo.ChatService&quot; %&gt;
-</code></pre>
-<p>Now right click on <code>ChatService.aspx</code> and paste the following code:</p>
+</code></pre><p>Now right click on <code>ChatService.aspx</code> and paste the following code:</p>
 <pre><code class="lang-csharp">using System;
 using Syn.Automation.Chat;
 
@@ -132,8 +138,7 @@ namespace YOUR_PROJECT_NAMESPACE
         }
     }
 }
-</code></pre>
-<p>In the above code replace <code>YOUR_PROJECT_NAMESPACE</code> and <code>YOUR_WEBSITE_URL</code> with their respective values. You can also change the properties like Name, Footer, Title etc to suit your needs as the aforementioned values are just for clarification.</p>
+</code></pre><p>In the above code replace <code>YOUR_PROJECT_NAMESPACE</code> and <code>YOUR_WEBSITE_URL</code> with their respective values. You can also change the properties like Name, Footer, Title etc to suit your needs as the aforementioned values are just for clarification.</p>
 <h3 id="placing-the-required-files">Placing the required files</h3>
 <p>Now that you have created your service URL its time that you placed the required images and the package in the right directory. To do so right click on your project <strong>Add-&gt;New Folder</strong> and name the folder <code>Assistant</code>.</p>
 <p>Now that you have you created the <code>Assistant</code> folder add the image files found in the Demo Project by right clicking on the Assistant folder you created and selecting <strong>Add-&gt;Existing Item…</strong></p>
@@ -152,8 +157,7 @@ namespace YOUR_PROJECT_NAMESPACE
         (document.getElementsByTagName(&#39;head&#39;)[0] || document.getElementsByTagName(&#39;body&#39;)[0]).appendChild(scriptElement);
     })();
 &lt;/script&gt;
-</code></pre>
-<p>In the above code replace <code>YOUR_WEBSITE_URL</code> with its respective value say <em>www.example.com</em></p>
+</code></pre><p>In the above code replace <code>YOUR_WEBSITE_URL</code> with its respective value say <em>www.example.com</em></p>
 <h2 id="tips-and-tricks">Tips and Tricks</h2>
 <ul>
 <li>You can replace the Avatar with your own custom avatar but make sure that you use the <code>.png file</code> format if your wish to have a transparent background and also use the exact resolution as used by the avatar images in the demo project.</li>
@@ -165,9 +169,11 @@ namespace YOUR_PROJECT_NAMESPACE
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
-            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
-            </nav>
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
           </div>
         </div>
       </div>

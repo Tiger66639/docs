@@ -8,7 +8,7 @@
     <title>Map </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Map ">
-    <meta name="generator" content="docfx 2.1.0.0">
+    <meta name="generator" content="docfx 2.4.0.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../../toc.html">
-    
+    <meta property="docfx:rel" content="../../../">
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -63,6 +63,14 @@
           </div>
         </div>
       </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
       <div role="main" class="container body-content hide-when-search">
         
         <div class="sidenav hide-when-search">
@@ -74,7 +82,6 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <a href="https://github.com/SynHub/syn-documentation/blob/master/tutorial/siml/elements/map.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
               <h1 id="map">Map</h1>
               
 <table>
@@ -159,16 +166,14 @@
 &lt;/Map&gt;
 
 &lt;/Siml&gt;
-</code></pre>
-<p><em>Example</em></p>
+</code></pre><p><em>Example</em></p>
 <p><strong>SIML</strong></p>
 <pre><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;I like chatbots like you&lt;/Pattern&gt;
  &lt;Response&gt;Good to know that you like &lt;Map Get=&quot;person2&quot;&gt;&lt;Match/&gt;&lt;/Map&gt;&lt;/Response&gt;
  &lt;!--&lt;Map Get=&quot;person2&quot;&gt;&lt;Match /&gt;&lt;/Map&gt; can also be written as &lt;Map Get=&quot;person2&quot; /&gt;--&gt;
 &lt;/Model&gt;
-</code></pre>
-<p><strong>User Input</strong></p>
+</code></pre><p><strong>User Input</strong></p>
 <p><em> I like chatbots like you</em></p>
 <p><strong>Bot Output</strong></p>
 <p><em> Good to know that you like chatbots like me</em></p>
@@ -183,8 +188,7 @@
     &lt;MapItem Content=&quot;three&quot; Value=&quot;3&quot; /&gt;
   &lt;/Map&gt;
 &lt;/Siml&gt;
-</code></pre>
-<p><em>The above code is equivalent to writing:</em></p>
+</code></pre><p><em>The above code is equivalent to writing:</em></p>
 <pre><code class="lang-xml">&lt;Siml&gt;
   &lt;Map Name=&quot;number2word&quot;&gt;
     &lt;MapItem Content=&quot;one&quot; Value=&quot;1&quot; /&gt;
@@ -197,8 +201,7 @@
     &lt;MapItem Content=&quot;3&quot; Value=&quot;three&quot; /&gt;
   &lt;/Map&gt;
 &lt;/Siml&gt;
-</code></pre>
-<p>A reversed map can be used just like a normal Map during run-time which no special changes in behavior. There is no performance impact while using reversed maps as they are stored just like normal maps but in the reverse sequence.</p>
+</code></pre><p>A reversed map can be used just like a normal Map during run-time which no special changes in behavior. There is no performance impact while using reversed maps as they are stored just like normal maps but in the reverse sequence.</p>
 <blockquote><p>As the Value attribute in a MapItem can have duplicate entries reversed Map always store 1 unique value per Content.</p>
 </blockquote>
 <p><em>Example</em></p>
@@ -220,8 +223,7 @@
     &lt;/Map&gt;
   &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre>
-<p><strong>User Input</strong></p>
+</code></pre><p><strong>User Input</strong></p>
 <ol>
 <li><em>Change one to number</em></li>
 <li><em>Change 2 to word</em></li>
@@ -239,9 +241,11 @@
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
-            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
-            </nav>
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
           </div>
         </div>
       </div>
