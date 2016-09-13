@@ -130,9 +130,9 @@
 <h3 id="creating-an-siml-adapter">Creating an SIML Adapter</h3>
 <p>To know what an SIML Adapter is please refer <a href="../bot/custom-adapter.html">Creating a custom Adapter</a> in <em>Syn Bot</em> tutorials section.</p>
 <ul>
-<li>Right click the project name in <strong>Solution Explorer</strong>, select <strong>Add</strong> and then choose <strong>New Folder</strong>.</li>
+<li>Right click the project name in <strong>Solution Explorer</strong>, point to <strong>Add</strong> and then click <strong>New Folder</strong>.</li>
 <li>Rename the <em>New Folder</em> to <em>Adapter</em>.</li>
-<li>Right clicck the folder, select <strong>Add</strong> and then choose <strong>Class</strong>.</li>
+<li>Right clicck the folder, point to <strong>Add</strong> and then choose <strong>Class</strong>.</li>
 <li>Name the class <em>HelloAdapter</em>.</li>
 </ul>
 <p>Once the <code>HelloAdapter</code> class has been created we&#39;ll need to implement the <code>IAdapter</code> interface present in the <code>Syn.Bot</code> library.</p>
@@ -171,9 +171,13 @@ namespace Syn.VA.Plugins.HelloPlugin
 </blockquote>
 <h3 id="placing-the-plugin">Placing the Plugin</h3>
 <ul>
-<li>On the menu bar, choose <strong>Build</strong> and choose <strong>Build Solution</strong>.</li>
-<li>A dynamic link library file with the name <code>Syn.VA.Plugins.HelloPlugin.dll</code> must be found in the <code>Debug</code> or <code>Release</code> folder based on your built configuration.</li>
-<li>Copy <code>Syn.VA.Plugins.HelloPlugin.dll</code> file and paste it in the <code>Syn/Plugins</code> folder found in the root directory of Syn Virtual Assistant installation.</li>
+<li>In <strong>Solution Explorer</strong>, right click the project name and <strong>Properties</strong>.</li>
+<li>Under <strong>Build</strong> option, scroll down to <strong>Output Path</strong> and choose <strong>Browse</strong>.</li>
+<li>Browse to <code>Syn/Plugins</code> folder found in the root directory of Syn Virtual Assistant installation and then choose <strong>Select Folder</strong>.</li>
+</ul>
+<p><img src="images/va-plugin-output-path.png" alt="VA Reference Folder Image"></p>
+<ul>
+<li>On the menu bar, choose <strong>Build</strong> and then choose <strong>Build Solution</strong>.</li>
 </ul>
 <h3 id="add-command-to-knowledge-base">Add command to Knowledge-Base</h3>
 <p>For the purpose of testing the newly created we&#39;ll need to a add atleast one command in the Bot&#39;s knowledge-base to trigger the evaluation of the <code>HelloAdapter</code>.</p>
@@ -208,6 +212,41 @@ namespace Syn.VA.Plugins.HelloPlugin
 <h3 id="testing-the-custom-helloplugin">Testing the custom <code>HelloPlugin</code></h3>
 <p>Launch <strong>Syn Virtual Assistant</strong> and in the <em>Input Box</em> type <em>&quot;Hello Plugin&quot;</em>. The VA should respond <em>&quot;Hello Plugin says Hello!&quot;</em>.</p>
 <p>You have now successfully created your first plugin for Syn Virtual Assistant.</p>
+<h2 id="plugin-settings-file">Plugin Settings File</h2>
+<p>The <code>Loader</code> plugin during Virtual Assistant initialization checks if a plugin <em>class</em> has an embedded XML file as resource with a name that matches the <em>Name</em> property of the plugin itself.</p>
+<h3 id="creating-an-embedded-xml-file">Creating an Embedded XML File</h3>
+<ul>
+<li>In <strong>Solution Explorer</strong>, right click the project name, point to <strong>Add</strong> and click <strong>New Item</strong>.</li>
+<li>Scroll down and select <strong>XML File</strong>.</li>
+<li>Name the file <code>HelloPluginSettings.xml</code> and choose <strong>Add</strong>.</li>
+</ul>
+<p><img src="images/va-plugin-settings.png" alt="VA Reference Folder Image"></p>
+<ul>
+<li>In <strong>Solution Explorer</strong>, right click <code>HelloPluginSettings.xml</code> and choose <strong>Properties</strong>.</li>
+<li>In <strong>File Properties</strong>, under <strong>Build Action</strong> select <strong>Embedded Resource</strong></li>
+</ul>
+<p><img src="images/va-plugin-settings-property.png" alt="VA Reference Folder Image"></p>
+<ul>
+<li>In <strong>Solution Explorer</strong>, double-click <code>HelloPluginSettings.xml</code> to edit the new XML file.</li>
+<li>Replace the default xml template with the following code.</li>
+</ul>
+<pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+&lt;Settings&gt;
+  &lt;Item Name=&quot;SomeName&quot; Value=&quot;SomeValue&quot; /&gt;
+&lt;/Settings&gt;
+</code></pre><ul>
+<li>On the menu bar, choose <strong>Build</strong> and then choose <strong>Build Solution</strong>.</li>
+<li>Launch <strong>Syn Virtual Assistant</strong> and browse to the <em>Plugins</em> folder in Syn Virtual Assistant installation directory.</li>
+<li>You&#39;ll see the new settings file present.</li>
+</ul>
+<p><img src="images/va-plugin-file.png" alt="VA Reference Folder Image"></p>
+<p>The <code>Loader</code> during <em>plugin scan</em> checks if a plugin&#39;s <em>settings file</em> is present in the <code>Syn/Settings</code> directory. If the file is not present the <code>Loader</code> automatically copies the <em>Embedded Resource</em> file to the <em>Settings</em> directory.</p>
+<h3 id="setting-file-name">Setting File name</h3>
+<p>In the above project the actual settings file name in the <strong>Solution Explorer</strong> was <code>HelloPluginSettings.xml</code>. However, the file copied to the <em>Settings</em> directory by the <code>Loader</code> is named <code>HelloPlugin.xml</code>. This is because the <code>Loader</code> only considers the <code>Plugin.Name</code> property to create the settings file.</p>
+<p>If the <code>Name</code> property of a <em>Plugin</em> class is overriden, the new value is used to create the <em>Settings File</em>.</p>
+<p><em>For Example</em></p>
+<pre><code class="lang-csharp">public override string Name =&gt; &quot;Hello&quot;;
+</code></pre><p>Then the new settings file name created by the <code>Loader</code> in the <code>Settings</code> directory would be <code>Hello.xml</code>.</p>
 
             </article>
           </div>
