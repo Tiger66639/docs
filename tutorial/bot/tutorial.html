@@ -86,9 +86,7 @@
               
 <p>Any feature of Syn.Bot not discussed here <strong>may be</strong> in its experimental stage.</p>
 <h2 id="adding-siml-bot-library-to-your-project">Adding SIML Bot Library to your Project</h2>
-<p>To add <code>Syn.Bot.dll</code> class library to your project make sure you have download the latest version from SIML Bot. Unlike other wiki’s on class libraries created by Synthetic Intelligence Network in this document we will assume that you have a good knowledge of C# development.</p>
-<p>Right click the <em>References</em> section in your Solution Explorer and click <em>Add Reference…</em> and select <code>Syn.Bot.dll</code>.</p>
-<p>You can even use the <code>Package Manager Console</code> in Visual Studio and type<code>PM&gt; Install-Package Syn.Bot</code> and the library will be downloaded and referenced automatically. The same can be done when using MonoDevelop on Linux or Mac using the <em>Manage NuGet Package</em> option.</p>
+<p>You can use the <code>Package Manager Console</code> in Visual Studio and type<code>PM&gt; Install-Package Syn.Bot</code> and the library will be downloaded and referenced automatically. The same can be done when using MonoDevelop on Linux or Mac using the <em>Manage NuGet Package</em> option.</p>
 <p><code>Syn.Bot</code> is updated on a regular basis we recommend using<code>PM&gt; Update-Package Syn.Bot</code> command in NuGet console to check for updates.</p>
 <p>Add the using statement</p>
 <pre><code class="lang-csharp">using Syn.Bot.Siml;
@@ -124,7 +122,7 @@ simlBot.AddSiml(fileString);
 }
 </code></pre><p>In the example above we call the function <code>Load()</code> after we have added the desired files.</p>
 <p><em>Example Code to load SIML files as XDocument</em></p>
-<pre><code class="lang-csharp">foreach (var simlFile in Directory.GetFiles(@&quot;C:Bot&quot;, &quot;*.siml&quot;))
+<pre><code class="lang-csharp">foreach (var simlFile in Directory.GetFiles(@&quot;C:\Bot&quot;, &quot;*.siml&quot;))
 {
 var simlDocument= XDocument.Load(simlFile);
 simlBot.AddSiml(simlDocument);
@@ -186,7 +184,7 @@ File.WriteAllText(@&quot;C:\BotMySimlPackage.simlpk&quot;, packageString);
 <p><em>Example using Linq</em></p>
 <pre><code class="lang-csharp">var elementList = Directory.GetFiles(@&quot;C:\Bot&quot;, &quot;*.siml&quot;).Select(XElement.Load).ToList();
 var packageString = simlBot.PackageManager.ConvertToPackage(elementList);
-File.WriteAllText(@&quot;C:BotMySimlPackage.simlpk&quot;, packageString);
+File.WriteAllText(@&quot;C:\BotMySimlPackage.simlpk&quot;, packageString);
 </code></pre><blockquote><p>You should always save an SIML Package string into a file that has the extension <code>.SimlPk</code>.</p>
 </blockquote>
 <h2 id="getting-bot-stats">Getting Bot Stats</h2>
