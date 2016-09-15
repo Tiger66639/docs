@@ -123,12 +123,13 @@
               <h6><strong>Assembly</strong>:Syn.VA.dll</h6>
               <h5 id="Syn_VA_Settings_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class Settings : ISettings, ICollection&lt;IVariable&gt;, IEnumerable&lt;IVariable&gt;, IEnumerable</code></pre>
+                <pre><code class="lang-csharp hljs">public class Settings : ICollection&lt;IVariable&gt;, IEnumerable&lt;IVariable&gt;, IEnumerable</code></pre>
               </div>
               <h3 id="constructors">Constructors
               </h3>
               <h4 id="Syn_VA_Settings__ctor_System_String_System_String_" data-uid="Syn.VA.Settings.#ctor(System.String,System.String)">Settings(String, String)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Syn.VA.Settings.html#Syn_VA_Settings">Settings</a> class.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -147,36 +148,14 @@
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>name</em></td>
-                    <td></td>
+                    <td><p>The settings name.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>location</em></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h3 id="fields">Fields
-              </h3>
-              <h4 id="Syn_VA_Settings_VariableTable" data-uid="Syn.VA.Settings.VariableTable">VariableTable</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">protected readonly Dictionary&lt;string, IVariable&gt; VariableTable</code></pre>
-              </div>
-              <h5 class="fieldValue">Field Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <a class="xref" href="Syn.VA.Interfaces.IVariable.html#Syn_VA_Interfaces_IVariable">IVariable</a>&gt;</td>
-                    <td></td>
+                    <td><p>The location where the settings is to be stored.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -269,8 +248,6 @@
                   </tr>
                 </tbody>
               </table>
-              <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Syn.VA.ISettings.html#Syn_VA_ISettings_Item_System_String_">ISettings.Item[String]</a></div>
               <h4 id="Syn_VA_Settings_Location" data-uid="Syn.VA.Settings.Location">Location</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -293,8 +270,6 @@
                   </tr>
                 </tbody>
               </table>
-              <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Syn.VA.ISettings.html#Syn_VA_ISettings_Location">ISettings.Location</a></div>
               <h4 id="Syn_VA_Settings_Name" data-uid="Syn.VA.Settings.Name">Name</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -317,8 +292,28 @@
                   </tr>
                 </tbody>
               </table>
-              <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Syn.VA.ISettings.html#Syn_VA_ISettings_Name">ISettings.Name</a></div>
+              <h4 id="Syn_VA_Settings_Variables" data-uid="Syn.VA.Settings.Variables">Variables</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected Dictionary&lt;string, IVariable&gt; Variables { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <a class="xref" href="Syn.VA.Interfaces.IVariable.html#Syn_VA_Interfaces_IVariable">IVariable</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <h3 id="methods">Methods
               </h3>
               <h4 id="Syn_VA_Settings_Add_Syn_VA_Interfaces_IVariable_" data-uid="Syn.VA.Settings.Add(Syn.VA.Interfaces.IVariable)">Add(IVariable)</h4>
@@ -379,8 +374,35 @@
                   </tr>
                 </tbody>
               </table>
-              <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Syn.VA.ISettings.html#Syn_VA_ISettings_Add_System_String_System_Func_System_String__">ISettings.Add(String, Func&lt;String&gt;)</a></div>
+              <h4 id="Syn_VA_Settings_Bind_Syn_VA_Settings_" data-uid="Syn.VA.Settings.Bind(Syn.VA.Settings)">Bind(Settings)</h4>
+              <div class="markdown level1 summary"><p>Binds the current settings to the specified settings.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Bind(Settings settings)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Syn.VA.Settings.html#Syn_VA_Settings">Settings</a></td>
+                    <td><em>settings</em></td>
+                    <td><p>The settings to bind to.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Syn_VA_Settings_Bind_Syn_VA_Settings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>Bind a Settings to another settings clears its existing variable table.</p>
+</div>
               <h4 id="Syn_VA_Settings_Clear" data-uid="Syn.VA.Settings.Clear">Clear()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -473,8 +495,6 @@
                   </tr>
                 </tbody>
               </table>
-              <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Syn.VA.ISettings.html#Syn_VA_ISettings_Contains_System_String_">ISettings.Contains(String)</a></div>
               <h4 id="Syn_VA_Settings_CopyTo_Syn_VA_Interfaces_IVariable___System_Int32_" data-uid="Syn.VA.Settings.CopyTo(Syn.VA.Interfaces.IVariable[],System.Int32)">CopyTo(IVariable[], Int32)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -572,13 +592,13 @@
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Syn_VA_Settings_Load_Syn_VA_ISettings_" data-uid="Syn.VA.Settings.Load(Syn.VA.ISettings)">Load(ISettings)</h4>
+              <h4 id="Syn_VA_Settings_Load_Syn_VA_Settings_" data-uid="Syn.VA.Settings.Load(Syn.VA.Settings)">Load(Settings)</h4>
               <div class="markdown level1 summary"><p>Loads the specified settings.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void Load(ISettings settings)</code></pre>
+                <pre><code class="lang-csharp hljs">public void Load(Settings settings)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -591,15 +611,13 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Syn.VA.ISettings.html#Syn_VA_ISettings">ISettings</a></td>
+                    <td><a class="xref" href="Syn.VA.Settings.html#Syn_VA_Settings">Settings</a></td>
                     <td><em>settings</em></td>
                     <td><p>The settings.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Syn.VA.ISettings.html#Syn_VA_ISettings_Load_Syn_VA_ISettings_">ISettings.Load(ISettings)</a></div>
               <h4 id="Syn_VA_Settings_Remove_Syn_VA_Interfaces_IVariable_" data-uid="Syn.VA.Settings.Remove(Syn.VA.Interfaces.IVariable)">Remove(IVariable)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -768,10 +786,10 @@
                   <div><span class="xref">System.Collections.IEnumerable.GetEnumerator()</span></div>
               <h3 id="extensionmethods">Extension Methods</h3>
               <div>
-                  <a class="xref" href="Syn.VA.Utility.Extensions.SettingsExtensions.html#Syn_VA_Utility_Extensions_SettingsExtensions_ApplyToProperties_Syn_VA_ISettings_System_Object_System_String___">SettingsExtensions.ApplyToProperties(Object, String[])</a>
+                  <a class="xref" href="Syn.VA.Utility.Extensions.SettingsExtensions.html#Syn_VA_Utility_Extensions_SettingsExtensions_ApplyToProperties_Syn_VA_Settings_System_Object_System_String___">SettingsExtensions.ApplyToProperties(Object, String[])</a>
               </div>
               <div>
-                  <a class="xref" href="Syn.VA.Utility.Extensions.SettingsExtensions.html#Syn_VA_Utility_Extensions_SettingsExtensions_GetDocument_Syn_VA_ISettings_">SettingsExtensions.GetDocument()</a>
+                  <a class="xref" href="Syn.VA.Utility.Extensions.SettingsExtensions.html#Syn_VA_Utility_Extensions_SettingsExtensions_GetDocument_Syn_VA_Settings_">SettingsExtensions.GetDocument()</a>
               </div>
             </article>
           </div>
