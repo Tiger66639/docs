@@ -371,41 +371,6 @@ references:
   href: api/Syn.Bot.Siml.BotStats.html#Syn_Bot_Siml_BotStats_Vocabulary
   commentId: P:Syn.Bot.Siml.BotStats.Vocabulary
   fullName: Syn.Bot.Siml.BotStats.Vocabulary
-- uid: Syn.Bot.Siml.BotTask
-  name: BotTask
-  href: api/Syn.Bot.Siml.BotTask.html#Syn_Bot_Siml_BotTask
-  commentId: T:Syn.Bot.Siml.BotTask
-  fullName: Syn.Bot.Siml.BotTask
-- uid: Syn.Bot.Siml.BotTask.#ctor(Syn.Bot.Siml.Context)
-  name: BotTask(Context)
-  href: api/Syn.Bot.Siml.BotTask.html#Syn_Bot_Siml_BotTask__ctor_Syn_Bot_Siml_Context_
-  commentId: M:Syn.Bot.Siml.BotTask.#ctor(Syn.Bot.Siml.Context)
-  fullName: Syn.Bot.Siml.BotTask.BotTask(Syn.Bot.Siml.Context)
-- uid: Syn.Bot.Siml.BotTask.Perform
-  name: Perform()
-  href: api/Syn.Bot.Siml.BotTask.html#Syn_Bot_Siml_BotTask_Perform
-  commentId: M:Syn.Bot.Siml.BotTask.Perform
-  fullName: Syn.Bot.Siml.BotTask.Perform()
-- uid: Syn.Bot.Siml.BotTask.Repeat
-  name: Repeat
-  href: api/Syn.Bot.Siml.BotTask.html#Syn_Bot_Siml_BotTask_Repeat
-  commentId: P:Syn.Bot.Siml.BotTask.Repeat
-  fullName: Syn.Bot.Siml.BotTask.Repeat
-- uid: Syn.Bot.Siml.BotTimer
-  name: BotTimer
-  href: api/Syn.Bot.Siml.BotTimer.html#Syn_Bot_Siml_BotTimer
-  commentId: T:Syn.Bot.Siml.BotTimer
-  fullName: Syn.Bot.Siml.BotTimer
-- uid: Syn.Bot.Siml.BotTimer.PerformTick
-  name: PerformTick()
-  href: api/Syn.Bot.Siml.BotTimer.html#Syn_Bot_Siml_BotTimer_PerformTick
-  commentId: M:Syn.Bot.Siml.BotTimer.PerformTick
-  fullName: Syn.Bot.Siml.BotTimer.PerformTick()
-- uid: Syn.Bot.Siml.BotTimer.Tick
-  name: Tick
-  href: api/Syn.Bot.Siml.BotTimer.html#Syn_Bot_Siml_BotTimer_Tick
-  commentId: E:Syn.Bot.Siml.BotTimer.Tick
-  fullName: Syn.Bot.Siml.BotTimer.Tick
 - uid: Syn.Bot.Siml.BotUser
   name: BotUser
   href: api/Syn.Bot.Siml.BotUser.html#Syn_Bot_Siml_BotUser
@@ -1714,69 +1679,6 @@ references:
   commentId: M:Syn.Bot.Siml.Collections.SuggestionCollection.System#Collections#IEnumerable#GetEnumerator
   name.vb: System.Collections.IEnumerable.GetEnumerator()
   fullName: Syn.Bot.Siml.Collections.SuggestionCollection.System.Collections.IEnumerable.GetEnumerator()
-- uid: Syn.Bot.Siml.Collections.TaskCollection
-  name: TaskCollection
-  href: api/Syn.Bot.Siml.Collections.TaskCollection.html#Syn_Bot_Siml_Collections_TaskCollection
-  commentId: T:Syn.Bot.Siml.Collections.TaskCollection
-  fullName: Syn.Bot.Siml.Collections.TaskCollection
-- uid: Syn.Bot.Siml.Collections.TaskCollection.#ctor(Syn.Bot.Siml.SimlBot)
-  name: TaskCollection(SimlBot)
-  href: api/Syn.Bot.Siml.Collections.TaskCollection.html#Syn_Bot_Siml_Collections_TaskCollection__ctor_Syn_Bot_Siml_SimlBot_
-  commentId: M:Syn.Bot.Siml.Collections.TaskCollection.#ctor(Syn.Bot.Siml.SimlBot)
-  fullName: Syn.Bot.Siml.Collections.TaskCollection.TaskCollection(Syn.Bot.Siml.SimlBot)
-- uid: Syn.Bot.Siml.Collections.TaskCollection.Add(Syn.Bot.Siml.BotTask)
-  name: Add(BotTask)
-  href: api/Syn.Bot.Siml.Collections.TaskCollection.html#Syn_Bot_Siml_Collections_TaskCollection_Add_Syn_Bot_Siml_BotTask_
-  commentId: M:Syn.Bot.Siml.Collections.TaskCollection.Add(Syn.Bot.Siml.BotTask)
-  fullName: Syn.Bot.Siml.Collections.TaskCollection.Add(Syn.Bot.Siml.BotTask)
-- uid: Syn.Bot.Siml.Collections.TaskCollection.Clear
-  name: Clear()
-  href: api/Syn.Bot.Siml.Collections.TaskCollection.html#Syn_Bot_Siml_Collections_TaskCollection_Clear
-  commentId: M:Syn.Bot.Siml.Collections.TaskCollection.Clear
-  fullName: Syn.Bot.Siml.Collections.TaskCollection.Clear()
-- uid: Syn.Bot.Siml.Collections.TaskCollection.Contains(Syn.Bot.Siml.BotTask)
-  name: Contains(BotTask)
-  href: api/Syn.Bot.Siml.Collections.TaskCollection.html#Syn_Bot_Siml_Collections_TaskCollection_Contains_Syn_Bot_Siml_BotTask_
-  commentId: M:Syn.Bot.Siml.Collections.TaskCollection.Contains(Syn.Bot.Siml.BotTask)
-  fullName: Syn.Bot.Siml.Collections.TaskCollection.Contains(Syn.Bot.Siml.BotTask)
-- uid: Syn.Bot.Siml.Collections.TaskCollection.CopyTo(Syn.Bot.Siml.BotTask[],System.Int32)
-  name: CopyTo(BotTask[], Int32)
-  href: api/Syn.Bot.Siml.Collections.TaskCollection.html#Syn_Bot_Siml_Collections_TaskCollection_CopyTo_Syn_Bot_Siml_BotTask___System_Int32_
-  commentId: M:Syn.Bot.Siml.Collections.TaskCollection.CopyTo(Syn.Bot.Siml.BotTask[],System.Int32)
-  name.vb: CopyTo(BotTask(), Int32)
-  fullName: Syn.Bot.Siml.Collections.TaskCollection.CopyTo(Syn.Bot.Siml.BotTask[], System.Int32)
-  fullName.vb: Syn.Bot.Siml.Collections.TaskCollection.CopyTo(Syn.Bot.Siml.BotTask(), System.Int32)
-- uid: Syn.Bot.Siml.Collections.TaskCollection.Count
-  name: Count
-  href: api/Syn.Bot.Siml.Collections.TaskCollection.html#Syn_Bot_Siml_Collections_TaskCollection_Count
-  commentId: P:Syn.Bot.Siml.Collections.TaskCollection.Count
-  fullName: Syn.Bot.Siml.Collections.TaskCollection.Count
-- uid: Syn.Bot.Siml.Collections.TaskCollection.GetEnumerator
-  name: GetEnumerator()
-  href: api/Syn.Bot.Siml.Collections.TaskCollection.html#Syn_Bot_Siml_Collections_TaskCollection_GetEnumerator
-  commentId: M:Syn.Bot.Siml.Collections.TaskCollection.GetEnumerator
-  fullName: Syn.Bot.Siml.Collections.TaskCollection.GetEnumerator()
-- uid: Syn.Bot.Siml.Collections.TaskCollection.IsReadOnly
-  name: IsReadOnly
-  href: api/Syn.Bot.Siml.Collections.TaskCollection.html#Syn_Bot_Siml_Collections_TaskCollection_IsReadOnly
-  commentId: P:Syn.Bot.Siml.Collections.TaskCollection.IsReadOnly
-  fullName: Syn.Bot.Siml.Collections.TaskCollection.IsReadOnly
-- uid: Syn.Bot.Siml.Collections.TaskCollection.Remove(Syn.Bot.Siml.BotTask)
-  name: Remove(BotTask)
-  href: api/Syn.Bot.Siml.Collections.TaskCollection.html#Syn_Bot_Siml_Collections_TaskCollection_Remove_Syn_Bot_Siml_BotTask_
-  commentId: M:Syn.Bot.Siml.Collections.TaskCollection.Remove(Syn.Bot.Siml.BotTask)
-  fullName: Syn.Bot.Siml.Collections.TaskCollection.Remove(Syn.Bot.Siml.BotTask)
-- uid: Syn.Bot.Siml.Collections.TaskCollection.Remove(System.String)
-  name: Remove(String)
-  href: api/Syn.Bot.Siml.Collections.TaskCollection.html#Syn_Bot_Siml_Collections_TaskCollection_Remove_System_String_
-  commentId: M:Syn.Bot.Siml.Collections.TaskCollection.Remove(System.String)
-  fullName: Syn.Bot.Siml.Collections.TaskCollection.Remove(System.String)
-- uid: Syn.Bot.Siml.Collections.TaskCollection.System#Collections#IEnumerable#GetEnumerator
-  name: IEnumerable.GetEnumerator()
-  href: api/Syn.Bot.Siml.Collections.TaskCollection.html#Syn_Bot_Siml_Collections_TaskCollection_System_Collections_IEnumerable_GetEnumerator
-  commentId: M:Syn.Bot.Siml.Collections.TaskCollection.System#Collections#IEnumerable#GetEnumerator
-  name.vb: System.Collections.IEnumerable.GetEnumerator()
-  fullName: Syn.Bot.Siml.Collections.TaskCollection.System.Collections.IEnumerable.GetEnumerator()
 - uid: Syn.Bot.Siml.Collections.Tokenizer
   name: Tokenizer
   href: api/Syn.Bot.Siml.Collections.Tokenizer.html#Syn_Bot_Siml_Collections_Tokenizer
@@ -2209,51 +2111,36 @@ references:
   href: api/Syn.Bot.Siml.DelayBase.html#Syn_Bot_Siml_DelayBase_Bot
   commentId: P:Syn.Bot.Siml.DelayBase.Bot
   fullName: Syn.Bot.Siml.DelayBase.Bot
-- uid: Syn.Bot.Siml.DelayBase.Counter
-  name: Counter
-  href: api/Syn.Bot.Siml.DelayBase.html#Syn_Bot_Siml_DelayBase_Counter
-  commentId: P:Syn.Bot.Siml.DelayBase.Counter
-  fullName: Syn.Bot.Siml.DelayBase.Counter
 - uid: Syn.Bot.Siml.DelayBase.Element
   name: Element
   href: api/Syn.Bot.Siml.DelayBase.html#Syn_Bot_Siml_DelayBase_Element
   commentId: P:Syn.Bot.Siml.DelayBase.Element
   fullName: Syn.Bot.Siml.DelayBase.Element
-- uid: Syn.Bot.Siml.DelayBase.Hour
-  name: Hour
-  href: api/Syn.Bot.Siml.DelayBase.html#Syn_Bot_Siml_DelayBase_Hour
-  commentId: P:Syn.Bot.Siml.DelayBase.Hour
-  fullName: Syn.Bot.Siml.DelayBase.Hour
+- uid: Syn.Bot.Siml.DelayBase.Execute
+  name: Execute()
+  href: api/Syn.Bot.Siml.DelayBase.html#Syn_Bot_Siml_DelayBase_Execute
+  commentId: M:Syn.Bot.Siml.DelayBase.Execute
+  fullName: Syn.Bot.Siml.DelayBase.Execute()
 - uid: Syn.Bot.Siml.DelayBase.ID
   name: ID
   href: api/Syn.Bot.Siml.DelayBase.html#Syn_Bot_Siml_DelayBase_ID
   commentId: P:Syn.Bot.Siml.DelayBase.ID
   fullName: Syn.Bot.Siml.DelayBase.ID
-- uid: Syn.Bot.Siml.DelayBase.Minute
-  name: Minute
-  href: api/Syn.Bot.Siml.DelayBase.html#Syn_Bot_Siml_DelayBase_Minute
-  commentId: P:Syn.Bot.Siml.DelayBase.Minute
-  fullName: Syn.Bot.Siml.DelayBase.Minute
-- uid: Syn.Bot.Siml.DelayBase.Perform
-  name: Perform()
-  href: api/Syn.Bot.Siml.DelayBase.html#Syn_Bot_Siml_DelayBase_Perform
-  commentId: M:Syn.Bot.Siml.DelayBase.Perform
-  fullName: Syn.Bot.Siml.DelayBase.Perform()
-- uid: Syn.Bot.Siml.DelayBase.Second
-  name: Second
-  href: api/Syn.Bot.Siml.DelayBase.html#Syn_Bot_Siml_DelayBase_Second
-  commentId: P:Syn.Bot.Siml.DelayBase.Second
-  fullName: Syn.Bot.Siml.DelayBase.Second
+- uid: Syn.Bot.Siml.DelayBase.Interval
+  name: Interval
+  href: api/Syn.Bot.Siml.DelayBase.html#Syn_Bot_Siml_DelayBase_Interval
+  commentId: P:Syn.Bot.Siml.DelayBase.Interval
+  fullName: Syn.Bot.Siml.DelayBase.Interval
 - uid: Syn.Bot.Siml.DelayBase.Status
   name: Status
   href: api/Syn.Bot.Siml.DelayBase.html#Syn_Bot_Siml_DelayBase_Status
   commentId: P:Syn.Bot.Siml.DelayBase.Status
   fullName: Syn.Bot.Siml.DelayBase.Status
-- uid: Syn.Bot.Siml.DelayBase.TotalSeconds
-  name: TotalSeconds
-  href: api/Syn.Bot.Siml.DelayBase.html#Syn_Bot_Siml_DelayBase_TotalSeconds
-  commentId: P:Syn.Bot.Siml.DelayBase.TotalSeconds
-  fullName: Syn.Bot.Siml.DelayBase.TotalSeconds
+- uid: Syn.Bot.Siml.DelayBase.Stopwatch
+  name: Stopwatch
+  href: api/Syn.Bot.Siml.DelayBase.html#Syn_Bot_Siml_DelayBase_Stopwatch
+  commentId: P:Syn.Bot.Siml.DelayBase.Stopwatch
+  fullName: Syn.Bot.Siml.DelayBase.Stopwatch
 - uid: Syn.Bot.Siml.DelayBase.User
   name: User
   href: api/Syn.Bot.Siml.DelayBase.html#Syn_Bot_Siml_DelayBase_User
@@ -5175,11 +5062,6 @@ references:
   href: api/Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot_SynBot_Syn_Bot_Siml_BotConfiguration_
   commentId: M:Syn.Bot.Siml.SimlBot.SynBot(Syn.Bot.Siml.BotConfiguration)
   fullName: Syn.Bot.Siml.SimlBot.SynBot(Syn.Bot.Siml.BotConfiguration)
-- uid: Syn.Bot.Siml.SimlBot.Tasks
-  name: Tasks
-  href: api/Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot_Tasks
-  commentId: P:Syn.Bot.Siml.SimlBot.Tasks
-  fullName: Syn.Bot.Siml.SimlBot.Tasks
 - uid: Syn.Bot.Siml.SimlBot.Time
   name: Time
   href: api/Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot_Time
@@ -7960,6 +7842,11 @@ references:
   href: api/Syn.Utility.SynUtility.html#Syn_Utility_SynUtility_Convert
   commentId: P:Syn.Utility.SynUtility.Convert
   fullName: Syn.Utility.SynUtility.Convert
+- uid: Syn.Utility.SynUtility.Date
+  name: Date
+  href: api/Syn.Utility.SynUtility.html#Syn_Utility_SynUtility_Date
+  commentId: P:Syn.Utility.SynUtility.Date
+  fullName: Syn.Utility.SynUtility.Date
 - uid: Syn.Utility.SynUtility.Directory
   name: Directory
   href: api/Syn.Utility.SynUtility.html#Syn_Utility_SynUtility_Directory
@@ -8352,6 +8239,21 @@ references:
   href: api/Syn.Utility.Utilities.ConvertUtility.html#Syn_Utility_Utilities_ConvertUtility_BytesToString_System_Int64_
   commentId: M:Syn.Utility.Utilities.ConvertUtility.BytesToString(System.Int64)
   fullName: Syn.Utility.Utilities.ConvertUtility.BytesToString(System.Int64)
+- uid: Syn.Utility.Utilities.DateUtility
+  name: DateUtility
+  href: api/Syn.Utility.Utilities.DateUtility.html#Syn_Utility_Utilities_DateUtility
+  commentId: T:Syn.Utility.Utilities.DateUtility
+  fullName: Syn.Utility.Utilities.DateUtility
+- uid: Syn.Utility.Utilities.DateUtility.GetDateTime(System.String)
+  name: GetDateTime(String)
+  href: api/Syn.Utility.Utilities.DateUtility.html#Syn_Utility_Utilities_DateUtility_GetDateTime_System_String_
+  commentId: M:Syn.Utility.Utilities.DateUtility.GetDateTime(System.String)
+  fullName: Syn.Utility.Utilities.DateUtility.GetDateTime(System.String)
+- uid: Syn.Utility.Utilities.DateUtility.GetDateTime(System.String,System.DayOfWeek)
+  name: GetDateTime(String, DayOfWeek)
+  href: api/Syn.Utility.Utilities.DateUtility.html#Syn_Utility_Utilities_DateUtility_GetDateTime_System_String_System_DayOfWeek_
+  commentId: M:Syn.Utility.Utilities.DateUtility.GetDateTime(System.String,System.DayOfWeek)
+  fullName: Syn.Utility.Utilities.DateUtility.GetDateTime(System.String, System.DayOfWeek)
 - uid: Syn.Utility.Utilities.DirectoryUtility
   name: DirectoryUtility
   href: api/Syn.Utility.Utilities.DirectoryUtility.html#Syn_Utility_Utilities_DirectoryUtility
@@ -8422,6 +8324,11 @@ references:
   href: api/Syn.Utility.Utilities.FileUtility.html#Syn_Utility_Utilities_FileUtility_GetAbsolutePath_System_String_
   commentId: M:Syn.Utility.Utilities.FileUtility.GetAbsolutePath(System.String)
   fullName: Syn.Utility.Utilities.FileUtility.GetAbsolutePath(System.String)
+- uid: Syn.Utility.Utilities.FileUtility.GetFileSize(System.String,Syn.Utility.Utilities.SizeMeasure)
+  name: GetFileSize(String, SizeMeasure)
+  href: api/Syn.Utility.Utilities.FileUtility.html#Syn_Utility_Utilities_FileUtility_GetFileSize_System_String_Syn_Utility_Utilities_SizeMeasure_
+  commentId: M:Syn.Utility.Utilities.FileUtility.GetFileSize(System.String,Syn.Utility.Utilities.SizeMeasure)
+  fullName: Syn.Utility.Utilities.FileUtility.GetFileSize(System.String, Syn.Utility.Utilities.SizeMeasure)
 - uid: Syn.Utility.Utilities.FileUtility.GetTempFileName(System.String)
   name: GetTempFileName(String)
   href: api/Syn.Utility.Utilities.FileUtility.html#Syn_Utility_Utilities_FileUtility_GetTempFileName_System_String_
@@ -8753,6 +8660,31 @@ references:
   href: api/Syn.Utility.Utilities.SecurityUtility.html#Syn_Utility_Utilities_SecurityUtility_SimpleEncrypt_System_String_
   commentId: M:Syn.Utility.Utilities.SecurityUtility.SimpleEncrypt(System.String)
   fullName: Syn.Utility.Utilities.SecurityUtility.SimpleEncrypt(System.String)
+- uid: Syn.Utility.Utilities.SizeMeasure
+  name: SizeMeasure
+  href: api/Syn.Utility.Utilities.SizeMeasure.html#Syn_Utility_Utilities_SizeMeasure
+  commentId: T:Syn.Utility.Utilities.SizeMeasure
+  fullName: Syn.Utility.Utilities.SizeMeasure
+- uid: Syn.Utility.Utilities.SizeMeasure.Byte
+  name: Byte
+  href: api/Syn.Utility.Utilities.SizeMeasure.html#Syn_Utility_Utilities_SizeMeasure_Byte
+  commentId: F:Syn.Utility.Utilities.SizeMeasure.Byte
+  fullName: Syn.Utility.Utilities.SizeMeasure.Byte
+- uid: Syn.Utility.Utilities.SizeMeasure.Gigabyte
+  name: Gigabyte
+  href: api/Syn.Utility.Utilities.SizeMeasure.html#Syn_Utility_Utilities_SizeMeasure_Gigabyte
+  commentId: F:Syn.Utility.Utilities.SizeMeasure.Gigabyte
+  fullName: Syn.Utility.Utilities.SizeMeasure.Gigabyte
+- uid: Syn.Utility.Utilities.SizeMeasure.Kilobyte
+  name: Kilobyte
+  href: api/Syn.Utility.Utilities.SizeMeasure.html#Syn_Utility_Utilities_SizeMeasure_Kilobyte
+  commentId: F:Syn.Utility.Utilities.SizeMeasure.Kilobyte
+  fullName: Syn.Utility.Utilities.SizeMeasure.Kilobyte
+- uid: Syn.Utility.Utilities.SizeMeasure.Megabyte
+  name: Megabyte
+  href: api/Syn.Utility.Utilities.SizeMeasure.html#Syn_Utility_Utilities_SizeMeasure_Megabyte
+  commentId: F:Syn.Utility.Utilities.SizeMeasure.Megabyte
+  fullName: Syn.Utility.Utilities.SizeMeasure.Megabyte
 - uid: Syn.Utility.Utilities.TextUtility
   name: TextUtility
   href: api/Syn.Utility.Utilities.TextUtility.html#Syn_Utility_Utilities_TextUtility
@@ -9679,16 +9611,23 @@ references:
   href: api/Syn.VA.Collections.PluginCollection.html#Syn_VA_Collections_PluginCollection_Count
   commentId: P:Syn.VA.Collections.PluginCollection.Count
   fullName: Syn.VA.Collections.PluginCollection.Count
-- uid: Syn.VA.Collections.PluginCollection.FromName(System.String)
-  name: FromName(String)
-  href: api/Syn.VA.Collections.PluginCollection.html#Syn_VA_Collections_PluginCollection_FromName_System_String_
-  commentId: M:Syn.VA.Collections.PluginCollection.FromName(System.String)
-  fullName: Syn.VA.Collections.PluginCollection.FromName(System.String)
 - uid: Syn.VA.Collections.PluginCollection.GetEnumerator
   name: GetEnumerator()
   href: api/Syn.VA.Collections.PluginCollection.html#Syn_VA_Collections_PluginCollection_GetEnumerator
   commentId: M:Syn.VA.Collections.PluginCollection.GetEnumerator
   fullName: Syn.VA.Collections.PluginCollection.GetEnumerator()
+- uid: Syn.VA.Collections.PluginCollection.GetPluginByName(System.String)
+  name: GetPluginByName(String)
+  href: api/Syn.VA.Collections.PluginCollection.html#Syn_VA_Collections_PluginCollection_GetPluginByName_System_String_
+  commentId: M:Syn.VA.Collections.PluginCollection.GetPluginByName(System.String)
+  fullName: Syn.VA.Collections.PluginCollection.GetPluginByName(System.String)
+- uid: Syn.VA.Collections.PluginCollection.GetPluginByType``1
+  name: GetPluginByType<T>()
+  href: api/Syn.VA.Collections.PluginCollection.html#Syn_VA_Collections_PluginCollection_GetPluginByType__1
+  commentId: M:Syn.VA.Collections.PluginCollection.GetPluginByType``1
+  name.vb: GetPluginByType(Of T)()
+  fullName: Syn.VA.Collections.PluginCollection.GetPluginByType<T>()
+  fullName.vb: Syn.VA.Collections.PluginCollection.GetPluginByType(Of T)()
 - uid: Syn.VA.Collections.PluginCollection.Insert(System.Int32,Syn.VA.Interfaces.IPlugin)
   name: Insert(Int32, IPlugin)
   href: api/Syn.VA.Collections.PluginCollection.html#Syn_VA_Collections_PluginCollection_Insert_System_Int32_Syn_VA_Interfaces_IPlugin_

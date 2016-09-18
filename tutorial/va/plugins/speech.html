@@ -122,6 +122,32 @@
 </code></pre><blockquote><p>Speaks the given value. This method can be used in <code>Low</code> ranking responses to explicitly speak selected values.</p>
 </blockquote>
 <p>This adapter returns an <em>empty string</em>.</p>
+<h3 id="speak">Speak</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Annotation</strong></th>
+<th style="text-align:left"><code>&lt;o:Speak&gt;</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Definition</strong></td>
+<td style="text-align:left">Speaks the given value using the current Speech Synthesizer.</td>
+</tr>
+<tr>
+<td><strong>Children</strong></td>
+<td style="text-align:left">Must contain an an arbitrary text or <code>Value</code> attribute that specifies that content to speak.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="usage-1">Usage</h4>
+<pre><code class="lang-xml">&lt;o:Speak Value=&quot;How are you?&quot;/&gt;
+</code></pre><p><em>Or</em></p>
+<pre><code class="lang-xml">&lt;o:Speak&gt;How are you?&lt;/o:Speak&gt;
+</code></pre><blockquote><p>Speaks the given value.</p>
+</blockquote>
+<p>This adapter returns the <em>string</em> provided. <em>For Example</em> in the above adapter call the returned value will be <em>How are you?</em></p>
 <h2 id="settings">Settings</h2>
 <table>
 <thead>

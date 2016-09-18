@@ -293,45 +293,6 @@
               </table>
               <h5 class="implements">Implements</h5>
                   <div><span class="xref">System.Collections.Generic.ICollection&lt;Syn.VA.Interfaces.IPlugin&gt;.CopyTo(Syn.VA.Interfaces.IPlugin[], System.Int32)</span></div>
-              <h4 id="Syn_VA_Collections_PluginCollection_FromName_System_String_" data-uid="Syn.VA.Collections.PluginCollection.FromName(System.String)">FromName(String)</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public IPlugin FromName(string name)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><em>name</em></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Syn.VA.Interfaces.IPlugin.html#Syn_VA_Interfaces_IPlugin">IPlugin</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
               <h4 id="Syn_VA_Collections_PluginCollection_GetEnumerator" data-uid="Syn.VA.Collections.PluginCollection.GetEnumerator">GetEnumerator()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -356,6 +317,82 @@
               </table>
               <h5 class="implements">Implements</h5>
                   <div><span class="xref">System.Collections.Generic.IEnumerable&lt;Syn.VA.Interfaces.IPlugin&gt;.GetEnumerator()</span></div>
+              <h4 id="Syn_VA_Collections_PluginCollection_GetPluginByName_System_String_" data-uid="Syn.VA.Collections.PluginCollection.GetPluginByName(System.String)">GetPluginByName(String)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public IPlugin GetPluginByName(string pluginName)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>pluginName</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Syn.VA.Interfaces.IPlugin.html#Syn_VA_Interfaces_IPlugin">IPlugin</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Syn_VA_Collections_PluginCollection_GetPluginByType__1" data-uid="Syn.VA.Collections.PluginCollection.GetPluginByType``1">GetPluginByType&lt;T&gt;()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public T GetPluginByType&lt;T&gt;()where T : IPlugin</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">T</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><em>T</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <h4 id="Syn_VA_Collections_PluginCollection_Insert_System_Int32_Syn_VA_Interfaces_IPlugin_" data-uid="Syn.VA.Collections.PluginCollection.Insert(System.Int32,Syn.VA.Interfaces.IPlugin)">Insert(Int32, IPlugin)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>

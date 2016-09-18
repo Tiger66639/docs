@@ -175,28 +175,6 @@
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Syn_Bot_Siml_DelayBase_Counter" data-uid="Syn.Bot.Siml.DelayBase.Counter">Counter</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">protected int Counter { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Int32</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
               <h4 id="Syn_Bot_Siml_DelayBase_Element" data-uid="Syn.Bot.Siml.DelayBase.Element">Element</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -215,28 +193,6 @@
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Xml.Linq.XElement</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Syn_Bot_Siml_DelayBase_Hour" data-uid="Syn.Bot.Siml.DelayBase.Hour">Hour</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public long Hour { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Int64</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -263,12 +219,12 @@
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Syn_Bot_Siml_DelayBase_Minute" data-uid="Syn.Bot.Siml.DelayBase.Minute">Minute</h4>
+              <h4 id="Syn_Bot_Siml_DelayBase_Interval" data-uid="Syn.Bot.Siml.DelayBase.Interval">Interval</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public long Minute { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">public TimeSpan Interval { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -280,29 +236,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Int64</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Syn_Bot_Siml_DelayBase_Second" data-uid="Syn.Bot.Siml.DelayBase.Second">Second</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public long Second { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Int64</span></td>
+                    <td><span class="xref">System.TimeSpan</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -329,12 +263,13 @@
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Syn_Bot_Siml_DelayBase_TotalSeconds" data-uid="Syn.Bot.Siml.DelayBase.TotalSeconds">TotalSeconds</h4>
-              <div class="markdown level1 summary"></div>
+              <h4 id="Syn_Bot_Siml_DelayBase_Stopwatch" data-uid="Syn.Bot.Siml.DelayBase.Stopwatch">Stopwatch</h4>
+              <div class="markdown level1 summary"><p>Gets the <a class="xref" href="Syn.Bot.Siml.DelayBase.html#Syn_Bot_Siml_DelayBase_Stopwatch">Stopwatch</a> used to check if the service can be executed.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">protected long TotalSeconds { get; }</code></pre>
+                <pre><code class="lang-csharp hljs">public Stopwatch Stopwatch { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -346,7 +281,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Int64</span></td>
+                    <td><span class="xref">System.Diagnostics.Stopwatch</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -375,12 +310,12 @@
               </table>
               <h3 id="methods">Methods
               </h3>
-              <h4 id="Syn_Bot_Siml_DelayBase_Perform" data-uid="Syn.Bot.Siml.DelayBase.Perform">Perform()</h4>
+              <h4 id="Syn_Bot_Siml_DelayBase_Execute" data-uid="Syn.Bot.Siml.DelayBase.Execute">Execute()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public abstract void Perform()</code></pre>
+                <pre><code class="lang-csharp hljs">public abstract void Execute()</code></pre>
               </div>
             </article>
           </div>

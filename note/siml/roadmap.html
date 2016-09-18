@@ -102,12 +102,12 @@
 <td style="text-align:left">Allows reiteration of input commands at a given interval.</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>Late</code> Adapter</td>
-<td style="text-align:left">Generate response after the specified delay interval.</td>
+<td style="text-align:left"><code>Late</code> (Confirmed) Adapter</td>
+<td style="text-align:left">Evaluate response elements after the specified delay interval.</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>Event</code> Adapter</td>
-<td style="text-align:left">A Clone of the Model type however doesn’t yield a response immediately, instead triggers an event that has to be handled by an event handler. Uses the <raise> adapter to explicitly raise an event via an SIML Model.</raise></td>
+<td style="text-align:left"><code>Event</code> (Confirmed) Adapter</td>
+<td style="text-align:left">A clone of the Model type however doesn’t yield a response immediately, instead triggers an event that has to be handled by an event handler. Uses the <raise> adapter to explicitly raise an event via an SIML Model.</raise></td>
 </tr>
 </tbody>
 </table>
@@ -120,6 +120,8 @@
 <li>Will support Sets and Regex</li>
 <li>Important words can be marked using the tilde sign</li>
 </ul>
+<h3 id="late">Late</h3>
+<p>The <code>Late</code> adapter uses the Bot <em>Timer</em> to evaluate its inner elements after the specified interval. If no interval is provided the Late adapter will use the default delay interval of 1000 milliseconds.</p>
 
             </article>
           </div>
