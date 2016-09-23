@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Plugin System </title>
+    <title>Plugin System  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Plugin System ">
     <meta name="generator" content="docfx 2.4.0.0">
@@ -126,8 +126,6 @@
 <h2 id="loader-plugin">Loader Plugin</h2>
 <p>By convention the first plugin that is to be loaded into the VA Framework is the <code>Loader</code> plugin. This plugin is supposed to give the VA a functional architecture.</p>
 <p><em>For example Syn Virtual Assistant loads the <strong>Syn.VA.Plugins.Loader.dll</strong> plugin from the root directory which ensures all SIML based plugins are loaded properly into the VA Framework</em></p>
-<blockquote><p>The <code>Loader</code> Plugin is <strong>NOT</strong> placed in the <code>Plugins</code> Directory. It must reside in the <strong>root</strong> directory of the Virtual Assistant application.</p>
-</blockquote>
 <h2 id="getpanel">GetPanel()</h2>
 <p>A Plugin is itself responsible for providing a <em>GUI</em> that enables its user to change the internal values or settings of the plugin. For this, the method <code>GetPanel&lt;T&gt;</code> is called by the Virtual Assistant&#39;s <em>Settings Window</em> whenever the <em>Settings Window</em> is opened.</p>
 <p>The type <strong>T</strong> depends on the calling application. The <code>SettingsWindow</code> in Syn Virtual Assistant calls the <code>GetPanel</code> function with <strong>T</strong> of the type <code>System.Windows.Controls.UserControl</code>.</p>

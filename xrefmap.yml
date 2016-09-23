@@ -9628,11 +9628,6 @@ references:
   name.vb: GetPluginByType(Of T)()
   fullName: Syn.VA.Collections.PluginCollection.GetPluginByType<T>()
   fullName.vb: Syn.VA.Collections.PluginCollection.GetPluginByType(Of T)()
-- uid: Syn.VA.Collections.PluginCollection.Insert(System.Int32,Syn.VA.Interfaces.IPlugin)
-  name: Insert(Int32, IPlugin)
-  href: api/Syn.VA.Collections.PluginCollection.html#Syn_VA_Collections_PluginCollection_Insert_System_Int32_Syn_VA_Interfaces_IPlugin_
-  commentId: M:Syn.VA.Collections.PluginCollection.Insert(System.Int32,Syn.VA.Interfaces.IPlugin)
-  fullName: Syn.VA.Collections.PluginCollection.Insert(System.Int32, Syn.VA.Interfaces.IPlugin)
 - uid: Syn.VA.Collections.PluginCollection.IsReadOnly
   name: IsReadOnly
   href: api/Syn.VA.Collections.PluginCollection.html#Syn_VA_Collections_PluginCollection_IsReadOnly
@@ -9805,6 +9800,11 @@ references:
   href: api/Syn.VA.Events.MessageReceivedEventArgs.html#Syn_VA_Events_MessageReceivedEventArgs
   commentId: T:Syn.VA.Events.MessageReceivedEventArgs
   fullName: Syn.VA.Events.MessageReceivedEventArgs
+- uid: Syn.VA.Events.MessageReceivedEventArgs.Handled
+  name: Handled
+  href: api/Syn.VA.Events.MessageReceivedEventArgs.html#Syn_VA_Events_MessageReceivedEventArgs_Handled
+  commentId: P:Syn.VA.Events.MessageReceivedEventArgs.Handled
+  fullName: Syn.VA.Events.MessageReceivedEventArgs.Handled
 - uid: Syn.VA.Events.MessageReceivedEventArgs.Message
   name: Message
   href: api/Syn.VA.Events.MessageReceivedEventArgs.html#Syn_VA_Events_MessageReceivedEventArgs_Message
