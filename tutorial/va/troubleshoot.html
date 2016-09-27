@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Troubleshooting (Known Issues)  - Syn Developer Network</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Troubleshooting (Known Issues) ">
+    <meta name="generator" content="docfx 2.4.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:rel" content="../../">
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+    ga('create', 'UA-39941606-1', 'auto');
+    ga('send', 'pageview');
+  
+  </script>
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="troubleshooting-known-issues">Troubleshooting (Known Issues)</h1>
+              
+<p>Though in future version we will make an attempt to automatically address the following issues there</p>
+<h2 id="graphic-device-unsupported">Graphic Device Unsupported</h2>
+<p><code>System.NotSupportedException: Could not find a graphics device that supports the HiDef profile</code></p>
+<p>This is a known issue in Laptops and NoteBooks with switchable graphics.</p>
+<h3 id="solution-1">Solution 1</h3>
+<p>If you have switchable graphics options try the following for NVIDIA based graphic cards.</p>
+<ul>
+<li>Right click on your desktop and select <strong>NVIDIA Control Panel</strong></li>
+</ul>
+<p><img src="images/right-click-nvidia.png" alt="NVIDIA Control Panel Menu Image"></p>
+<ul>
+<li>Under <strong>Program Settings</strong>, choose <strong>Add</strong></li>
+</ul>
+<p><img src="images/nvidia-panel-add.png" alt="NVIDIA Control Panel Image"></p>
+<ul>
+<li>Browse to the installation directory of <em>Syn Virtual Assistant</em>, select <strong>Syn Virtual Assistant.exe</strong> and choose <strong>Open</strong></li>
+</ul>
+<p><img src="images/nvidia-panel-browse.png" alt="NVIDIA Control Panel Image"></p>
+<ul>
+<li>Select <strong>High-performance NVIDIA Processor</strong> and choose **Apply</li>
+</ul>
+<p><img src="images/nvidia-panel-apply.png" alt="NVIDIA Control Panel Image"></p>
+<ul>
+<li>Restart <em>Syn Virtual Assistant</em>.</li>
+</ul>
+<h3 id="solution-2">Solution 2</h3>
+<p>If the system doesn&#39;t have a dedicated graphic card that supports the Graphic Engine for <em>Syn Virtual Assistant</em> then to run the application without any graphic exceptions being generated it is recommended that you swith to <code>Dock</code> Mode in <em>Display Modes</em>.</p>
+<p>To switch the <em>Virtual Assistant</em> to run in <em>Dock</em> Mode,</p>
+<ul>
+<li>Click on <strong>Settings</strong> Button</li>
+<li>In <em>Settings Panel</em> select <strong>Display Mode</strong></li>
+<li>Under <strong>Display Modes</strong>, choose <strong>Right-Dock</strong> and select <strong>Save and Restart</strong>.</li>
+</ul>
+<h2 id="start-menu-path-access">Start Menu Path Access</h2>
+<p><code>System.UnauthorizedAccessException: Access to the path &#39;C:\Users\USER-NAME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs&#39; is denied.</code></p>
+<p>This is a common error in Windows 7 and should be ignored in version 8.5.6.</p>
+<p>The reason behind this exception is because the <code>Launcher</code> plugin tries to search for all installed applications and their shortcuts in the <code>Start Menu</code> folder so that you can use commands to launch them via the Virtual Assistant.</p>
+<h2 id="speech-recognizer-id">Speech Recognizer ID</h2>
+<p><code>System.ArgumentException: No recognizer of the required ID found.</code></p>
+<p>Syn Virtual Assistant by default uses <code>en-US</code> speech recognizer. If a speech recognizer for US English is unavailable the above exception may be thrown.</p>
+<p>A possible solution is to download a language pack with support for <code>en-US</code> speech recognizer. To do this,</p>
+<ul>
+<li>You add a new language pack by going to <strong>Settings &gt; Time &amp; language &gt; Region &amp; language &gt; Add a language</strong> and choosing <strong>English (United States)</strong>.</li>
+<li>After the language pack is installed click on <strong>Options</strong> on the language pack name and select <strong>Speech</strong> and choose <strong>Download</strong> to download the Speech Recognizer language pack.</li>
+<li>Once the download has finished, restart <em>Syn Virtual Assistant</em>.</li>
+</ul>
+<h2 id="slow-framerate">Slow Framerate</h2>
+<p>During the initial <em>unit-tests</em> done when the Graphic Engine was incorportated into the Syn Virtual Assistant <em>Main</em> Window, we noticed that certain laptop brands would not run Syn Virtual Assistant with the best Graphic Card available in their machine.</p>
+<p>For instance, some Dell laptops have an integrated <em>Intel Graphic chip</em> and as well as an NVIDIA Graphic Card on board. When the Virtual Assistant runs, the Intel Graphic Card is selected by the Operating System as the Graphic Processor. This results in low frame rate and unresponsive user interface.</p>
+<h3 id="setting-the-graphic-processor">Setting the Graphic Processor</h3>
+<p>A reliable solution to ensure that the right Graphic Processor is set for the Virtual Assistant application is to explicitly set the default <em>Graphic Processor</em>. In  laptops using the NVIDIA graphic card, just right click the Virtual Assistant icon on your desktop, select <em>Run with graphic processor</em> then click on <em>Change default graphic processor</em> and set NVIDIA as the default graphic processor.</p>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2016 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
