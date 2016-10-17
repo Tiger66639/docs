@@ -495,7 +495,8 @@ Once loaded any changes to this settings will not affect other <a class="xref" h
                 </tbody>
               </table>
               <h4 id="Syn_Bot_Siml_SimlBot_Interactions" data-uid="Syn.Bot.Siml.SimlBot.Interactions">Interactions</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Gets the interactions made by all bot users.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -512,7 +513,8 @@ Once loaded any changes to this settings will not affect other <a class="xref" h
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Syn.Bot.Siml.Collections.InteractionCollection.html#Syn_Bot_Siml_Collections_InteractionCollection">InteractionCollection</a></td>
-                    <td></td>
+                    <td><p>The interactions.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -775,6 +777,28 @@ Once loaded any changes to this settings will not affect other <a class="xref" h
                   </tr>
                 </tbody>
               </table>
+              <h4 id="Syn_Bot_Siml_SimlBot_SearchEngine" data-uid="Syn.Bot.Siml.SimlBot.SearchEngine">SearchEngine</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public ISearchEngine SearchEngine { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Syn.Bot.Siml.Search.ISearchEngine.html#Syn_Bot_Siml_Search_ISearchEngine">ISearchEngine</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <h4 id="Syn_Bot_Siml_SimlBot_Sets" data-uid="Syn.Bot.Siml.SimlBot.Sets">Sets</h4>
               <div class="markdown level1 summary"><p>Gets the set collection.</p>
 </div>
@@ -847,31 +871,9 @@ Once loaded any changes to this settings will not affect other <a class="xref" h
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Syn_Bot_Siml_SimlBot_SuggestionFormatter" data-uid="Syn.Bot.Siml.SimlBot.SuggestionFormatter">SuggestionFormatter</h4>
-              <div class="markdown level1 summary"><p>Gets or set the <a class="xref" href="Syn.Bot.Siml.Interfaces.ISuggestionFormatter.html#Syn_Bot_Siml_Interfaces_ISuggestionFormatter">ISuggestionFormatter</a> for the <span class="xref">Syn.Bot.Siml.Adapters.SuggestAdapter</span>.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public ISuggestionFormatter SuggestionFormatter { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Syn.Bot.Siml.Interfaces.ISuggestionFormatter.html#Syn_Bot_Siml_Interfaces_ISuggestionFormatter">ISuggestionFormatter</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
               <h4 id="Syn_Bot_Siml_SimlBot_Time" data-uid="Syn.Bot.Siml.SimlBot.Time">Time</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Gets the UTC offset based <span class="xref">DateTime</span> value.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -888,10 +890,14 @@ Once loaded any changes to this settings will not affect other <a class="xref" h
                 <tbody>
                   <tr>
                     <td><span class="xref">System.DateTime</span></td>
-                    <td></td>
+                    <td><p>UTC offset based <span class="xref">DateTime</span> value.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
+              <h5 id="Syn_Bot_Siml_SimlBot_Time_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>if the <pre><code>UTC</code></pre> offset value is not set in bot settings then returns <span class="xref">System.DateTime.Now</span>.</p>
+</div>
               <h4 id="Syn_Bot_Siml_SimlBot_Timeout" data-uid="Syn.Bot.Siml.SimlBot.Timeout">Timeout</h4>
               <div class="markdown level1 summary"><p>Gets the time span after which a chat request is timed out</p>
 </div>
@@ -1009,6 +1015,29 @@ Once loaded any changes to this settings will not affect other <a class="xref" h
                   </tr>
                 </tbody>
               </table>
+              <h4 id="Syn_Bot_Siml_SimlBot_Vocabulary" data-uid="Syn.Bot.Siml.SimlBot.Vocabulary">Vocabulary</h4>
+              <div class="markdown level1 summary"><p>Gets all the unique tokens known to the Bot.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public VocabularyCollection Vocabulary { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Syn.Bot.Siml.Collections.VocabularyCollection.html#Syn_Bot_Siml_Collections_VocabularyCollection">VocabularyCollection</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <h3 id="methods">Methods
               </h3>
               <h4 id="Syn_Bot_Siml_SimlBot_AddSiml_System_Collections_Generic_IEnumerable_System_Xml_Linq_XDocument__" data-uid="Syn.Bot.Siml.SimlBot.AddSiml(System.Collections.Generic.IEnumerable{System.Xml.Linq.XDocument})">AddSiml(IEnumerable&lt;XDocument&gt;)</h4>
@@ -1122,7 +1151,7 @@ Once loaded any changes to this settings will not affect other <a class="xref" h
                 </tbody>
               </table>
               <h4 id="Syn_Bot_Siml_SimlBot_Chat_Syn_Bot_Siml_ChatRequest_" data-uid="Syn.Bot.Siml.SimlBot.Chat(Syn.Bot.Siml.ChatRequest)">Chat(ChatRequest)</h4>
-              <div class="markdown level1 summary"><p>Chats the specified chat request.</p>
+              <div class="markdown level1 summary"><p>Sends the specified chat request.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1204,7 +1233,8 @@ Once loaded any changes to this settings will not affect other <a class="xref" h
                 </tbody>
               </table>
               <h4 id="Syn_Bot_Siml_SimlBot_Chat_System_String_Syn_Bot_Siml_BotUser_" data-uid="Syn.Bot.Siml.SimlBot.Chat(System.String,Syn.Bot.Siml.BotUser)">Chat(String, BotUser)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Sends the message as user chat request.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1223,12 +1253,14 @@ Once loaded any changes to this settings will not affect other <a class="xref" h
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>userMessage</em></td>
-                    <td></td>
+                    <td><p>The user message.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Syn.Bot.Siml.BotUser.html#Syn_Bot_Siml_BotUser">BotUser</a></td>
                     <td><em>botUser</em></td>
-                    <td></td>
+                    <td><p>The <a class="xref" href="Syn.Bot.Siml.BotUser.html#Syn_Bot_Siml_BotUser">BotUser</a> that is making this chat request.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1248,7 +1280,8 @@ Once loaded any changes to this settings will not affect other <a class="xref" h
                 </tbody>
               </table>
               <h4 id="Syn_Bot_Siml_SimlBot_Chat__1_System_String_" data-uid="Syn.Bot.Siml.SimlBot.Chat``1(System.String)">Chat&lt;T&gt;(String)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>EXPERIMENTAL: Starts a chat request and returnes the last evaluated contextual Data of the specified type.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1368,13 +1401,13 @@ Once loaded any changes to this settings will not affect other <a class="xref" h
               <h5 id="Syn_Bot_Siml_SimlBot_CreateUser_System_String__remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>If a user with the specified id already exists then the existing user is returned.</p>
 </div>
-              <h4 id="Syn_Bot_Siml_SimlBot_GetSuggestions_Syn_Bot_Siml_SuggestionQuery_" data-uid="Syn.Bot.Siml.SimlBot.GetSuggestions(Syn.Bot.Siml.SuggestionQuery)">GetSuggestions(SuggestionQuery)</h4>
-              <div class="markdown level1 summary"><p>EXPERIMETAL: Returns a list of Suggestions that are similar to user input.</p>
+              <h4 id="Syn_Bot_Siml_SimlBot_Raise_System_String_" data-uid="Syn.Bot.Siml.SimlBot.Raise(System.String)">Raise(String)</h4>
+              <div class="markdown level1 summary"><p>Raises the specified event for the <a class="xref" href="Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot_MainUser">MainUser</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public SuggestionCollection GetSuggestions(SuggestionQuery suggestionQuery)</code></pre>
+                <pre><code class="lang-csharp hljs">public void Raise(string eventName)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1387,24 +1420,42 @@ Once loaded any changes to this settings will not affect other <a class="xref" h
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Syn.Bot.Siml.SuggestionQuery.html#Syn_Bot_Siml_SuggestionQuery">SuggestionQuery</a></td>
-                    <td><em>suggestionQuery</em></td>
-                    <td></td>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>eventName</em></td>
+                    <td><p>The event name.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
-              <h5 class="returns">Returns</h5>
+              <h4 id="Syn_Bot_Siml_SimlBot_Raise_System_String_Syn_Bot_Siml_BotUser_" data-uid="Syn.Bot.Siml.SimlBot.Raise(System.String,Syn.Bot.Siml.BotUser)">Raise(String, BotUser)</h4>
+              <div class="markdown level1 summary"><p>Raises the specified event for the specified <a class="xref" href="Syn.Bot.Siml.BotUser.html#Syn_Bot_Siml_BotUser">BotUser</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Raise(string eventName, BotUser user)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
                 <thead>
                   <tr>
                     <th>Type</th>
+                    <th>Name</th>
                     <th>Description</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Syn.Bot.Siml.Collections.SuggestionCollection.html#Syn_Bot_Siml_Collections_SuggestionCollection">SuggestionCollection</a></td>
-                    <td></td>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>eventName</em></td>
+                    <td><p>The event name.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Syn.Bot.Siml.BotUser.html#Syn_Bot_Siml_BotUser">BotUser</a></td>
+                    <td><em>user</em></td>
+                    <td><p>The user.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1448,7 +1499,8 @@ Once loaded any changes to this settings will not affect other <a class="xref" h
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void Trigger(string eventMessage)</code></pre>
+                <pre><code class="lang-csharp hljs">[Obsolete(&quot;Please use Raise() instead.&quot;, true)]
+public void Trigger(string eventMessage)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1474,7 +1526,8 @@ Once loaded any changes to this settings will not affect other <a class="xref" h
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void Trigger(string eventMessage, BotUser user)</code></pre>
+                <pre><code class="lang-csharp hljs">[Obsolete(&quot;Please use Raise() instead.&quot;, true)]
+public void Trigger(string eventMessage, BotUser user)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1567,6 +1620,29 @@ Once loaded any changes to this settings will not affect other <a class="xref" h
                 <tbody>
                   <tr>
                     <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="Syn.Bot.Siml.Events.MemorizingEventArgs.html#Syn_Bot_Siml_Events_MemorizingEventArgs">MemorizingEventArgs</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Syn_Bot_Siml_SimlBot_Suggesting" data-uid="Syn.Bot.Siml.SimlBot.Suggesting">Suggesting</h4>
+              <div class="markdown level1 summary"><p>Occurs when the Bot is suggesting example inputs from <a class="xref" href="Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot_Examples">Examples</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public event EventHandler&lt;SuggestingEventArgs&gt; Suggesting</code></pre>
+              </div>
+              <h5 class="eventType">Event Type</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="Syn.Bot.Siml.Events.SuggestingEventArgs.html#Syn_Bot_Siml_Events_SuggestingEventArgs">SuggestingEventArgs</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>

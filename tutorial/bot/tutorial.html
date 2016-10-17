@@ -168,25 +168,6 @@ foreach (var frame in chatResult.Stack)
   DisplayInGrid(frame);
 }
 </code></pre><p><code>DisplayInGrid</code> can be any function defined by the developer that projects the stack information to the user.</p>
-<h2 id="creating-a-package-using-code">Creating a Package using code</h2>
-<p>An SIML Package is a collection of properly arranged SIML elements in their compressed format. To create an SIML package its important that you load SIML files as XElements and then use the <strong>PackageManager</strong> to convert the elements into an SIML package string.</p>
-<pre><code class="lang-csharp">var elementList = new List();
-foreach (var simlFile in Directory.GetFiles(@&quot;C:\Bot&quot;, &quot;*.siml&quot;))
-{
-var simlElement = XElement.Load(simlFile);
-elementList.Add(simlElement);
-}
-
-var packageString = simlBot.PackageManager.ConvertToPackage(elementList);
-File.WriteAllText(@&quot;C:\BotMySimlPackage.simlpk&quot;, packageString);
-</code></pre><blockquote><p>This is exactly the same function that is called by Syn Bot Studio to create an SIML Package file.</p>
-</blockquote>
-<p><em>Example using Linq</em></p>
-<pre><code class="lang-csharp">var elementList = Directory.GetFiles(@&quot;C:\Bot&quot;, &quot;*.siml&quot;).Select(XElement.Load).ToList();
-var packageString = simlBot.PackageManager.ConvertToPackage(elementList);
-File.WriteAllText(@&quot;C:\BotMySimlPackage.simlpk&quot;, packageString);
-</code></pre><blockquote><p>You should always save an SIML Package string into a file that has the extension <code>.SimlPk</code>.</p>
-</blockquote>
 <h2 id="getting-bot-stats">Getting Bot Stats</h2>
 <p>Syn Bot will internally monitor and store its statistics. Stats are stored not just for retrieval purpose but for run-time modifications that the Bot makes to improve its speed and responses. To get the Bot stats use the <code>Stats</code> property available for the Bot.</p>
 <p>Though a number of stats are available the following shows a few properties that are updated from time to time.</p>

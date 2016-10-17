@@ -241,6 +241,7 @@
 <h3 id="set">Set</h3>
 <p>A Set is a collection of words or sentences. SIML Interpreter uses state-of-the-art technology to make sure large sets do not affect the performance of matching text fragments against a collection of words in a set.</p>
 <p>A set declaration requires that you give the set a unique name. A set is addressed using Square Brackets so to use a set of colors with the name <em>COLOR</em> you would use <strong>[COLOR]</strong></p>
+<p>Two different sets with different <em>names</em> must not hold common values.</p>
 <p><em>Example</em></p>
 <p><strong>SIML</strong></p>
 <pre><code class="lang-xml">&lt;Model&gt;
@@ -270,7 +271,7 @@
 </tr>
 <tr>
 <td><strong>Children</strong></td>
-<td style="text-align:left">The element MUST contain one or more <code>&lt;Item&gt;</code> element.</td>
+<td style="text-align:left">The element MUST contain one or more <code>&lt;Item&gt;</code> element OR a comma separated arbitrary value.</td>
 </tr>
 <tr>
 <td><strong>Attributes</strong></td>
@@ -278,7 +279,7 @@
 </tr>
 <tr>
 <td><strong>Occurrence</strong></td>
-<td style="text-align:left">One or more of this element MAY occur as children of <code>&lt;Siml&gt;</code> element</td>
+<td style="text-align:left">One or more of this element MAY occur as children of <code>&lt;Siml&gt;</code> element.</td>
 </tr>
 </tbody>
 </table>
@@ -288,7 +289,9 @@
  &lt;Item&gt;BLUE&lt;/Item&gt;
  &lt;Item&gt;ORANGE&lt;/Item&gt;
 &lt;/Set&gt;
-</code></pre><h4 id="reserved-sets">Reserved Sets</h4>
+</code></pre><p>Or</p>
+<pre><code class="lang-xml">&lt;Set Name=&quot;Color&quot;&gt;Red, Green, Blue, Orange&lt;/Set&gt;
+</code></pre><h4 id="reserved-set-names">Reserved Set Names</h4>
 <p>SIML comes with reserved Set names that can help developers address Bot, User and Map items directly within a Pattern. The name of the Set and the parameter part are separated using a colon.</p>
 <p>Like all set names, the name and the parameter part of the reserved variables are case-insensitive. Reserved sets are also dynamic. Hence, at run-time if the value of any variable is changed the pattern will then match the new value.</p>
 <h5 id="bot-set">Bot Set</h5>

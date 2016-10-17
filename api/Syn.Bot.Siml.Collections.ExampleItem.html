@@ -93,10 +93,20 @@
               <div class="inheritance">
                 <h5>Inheritance</h5>
                   <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><span class="xref">ExampleItem</span></div>
+                  <div class="level1"><a class="xref" href="Syn.Bot.Siml.Search.SearchItem.html#Syn_Bot_Siml_Search_SearchItem">SearchItem</a></div>
+                  <div class="level2"><span class="xref">ExampleItem</span></div>
               </div>
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
+                <div>
+                  <a class="xref" href="Syn.Bot.Siml.Search.SearchItem.html#Syn_Bot_Siml_Search_SearchItem_Pattern">SearchItem.Pattern</a>
+                </div>
+                <div>
+                  <a class="xref" href="Syn.Bot.Siml.Search.SearchItem.html#Syn_Bot_Siml_Search_SearchItem_Tokens">SearchItem.Tokens</a>
+                </div>
+                <div>
+                  <a class="xref" href="Syn.Bot.Siml.Search.SearchItem.html#Syn_Bot_Siml_Search_SearchItem_IsAtomic">SearchItem.IsAtomic</a>
+                </div>
                 <div>
                   <span class="xref">System.Object.Equals(System.Object)</span>
                 </div>
@@ -115,24 +125,21 @@
                 <div>
                   <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
                 </div>
-                <div>
-                  <span class="xref">System.Object.ToString()</span>
-                </div>
               </div>
               <h6><strong>Namespace</strong>:Syn.Bot.Siml.Collections</h6>
               <h6><strong>Assembly</strong>:Syn.Bot.dll</h6>
               <h5 id="Syn_Bot_Siml_Collections_ExampleItem_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class ExampleItem</code></pre>
+                <pre><code class="lang-csharp hljs">public class ExampleItem : SearchItem</code></pre>
               </div>
               <h3 id="constructors">Constructors
               </h3>
-              <h4 id="Syn_Bot_Siml_Collections_ExampleItem__ctor_System_String_System_Int32_" data-uid="Syn.Bot.Siml.Collections.ExampleItem.#ctor(System.String,System.Int32)">ExampleItem(String, Int32)</h4>
+              <h4 id="Syn_Bot_Siml_Collections_ExampleItem__ctor_Syn_Bot_Siml_SimlBot_System_String_" data-uid="Syn.Bot.Siml.Collections.ExampleItem.#ctor(Syn.Bot.Siml.SimlBot,System.String)">ExampleItem(SimlBot, String)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public ExampleItem(string value, int responseKey)</code></pre>
+                <pre><code class="lang-csharp hljs">public ExampleItem(SimlBot bot, string pattern)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -145,71 +152,27 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><em>value</em></td>
+                    <td><a class="xref" href="Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot">SimlBot</a></td>
+                    <td><em>bot</em></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Int32</span></td>
-                    <td><em>responseKey</em></td>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>pattern</em></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
-              <h3 id="properties">Properties
+              <h3 id="methods">Methods
               </h3>
-              <h4 id="Syn_Bot_Siml_Collections_ExampleItem_Keywords" data-uid="Syn.Bot.Siml.Collections.ExampleItem.Keywords">Keywords</h4>
+              <h4 id="Syn_Bot_Siml_Collections_ExampleItem_ToString" data-uid="Syn.Bot.Siml.Collections.ExampleItem.ToString">ToString()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public HashSet&lt;string&gt; Keywords { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
               </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Collections.Generic.HashSet</span>&lt;<span class="xref">System.String</span>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Syn_Bot_Siml_Collections_ExampleItem_ResponseKey" data-uid="Syn.Bot.Siml.Collections.ExampleItem.ResponseKey">ResponseKey</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public int ResponseKey { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Int32</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Syn_Bot_Siml_Collections_ExampleItem_Value" data-uid="Syn.Bot.Siml.Collections.ExampleItem.Value">Value</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string Value { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
+              <h5 class="returns">Returns</h5>
               <table class="table table-bordered table-striped table-condensed">
                 <thead>
                   <tr>
@@ -224,6 +187,8 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.ToString()</span></div>
             </article>
           </div>
           

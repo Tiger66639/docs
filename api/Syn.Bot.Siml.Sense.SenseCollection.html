@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SenseCollection
+    - Syn Developer Network</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SenseCollection
+   ">
+    <meta name="generator" content="docfx 2.4.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    <meta property="docfx:rel" content="../">
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+    ga('create', 'UA-39941606-1', 'auto');
+    ga('send', 'pageview');
+  
+  </script>
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Syn_Bot_Siml_Sense_SenseCollection" data-uid="Syn.Bot.Siml.Sense.SenseCollection">Class SenseCollection
+              </h1>
+              <div class="markdown level0 summary"></div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">SenseCollection</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:Syn.Bot.Siml.Sense</h6>
+              <h6><strong>Assembly</strong>:Syn.Bot.dll</h6>
+              <h5 id="Syn_Bot_Siml_Sense_SenseCollection_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public class SenseCollection : ICollection&lt;SenseItem&gt;, IEnumerable&lt;SenseItem&gt;, IEnumerable</code></pre>
+              </div>
+              <h3 id="constructors">Constructors
+              </h3>
+              <h4 id="Syn_Bot_Siml_Sense_SenseCollection__ctor_Syn_Bot_Siml_SimlBot_" data-uid="Syn.Bot.Siml.Sense.SenseCollection.#ctor(Syn.Bot.Siml.SimlBot)">SenseCollection(SimlBot)</h4>
+              <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Syn.Bot.Siml.Sense.SenseCollection.html#Syn_Bot_Siml_Sense_SenseCollection">SenseCollection</a> class.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public SenseCollection(SimlBot bot)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot">SimlBot</a></td>
+                    <td><em>bot</em></td>
+                    <td><p>The bot.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="properties">Properties
+              </h3>
+              <h4 id="Syn_Bot_Siml_Sense_SenseCollection_Count" data-uid="Syn.Bot.Siml.Sense.SenseCollection.Count">Count</h4>
+              <div class="markdown level1 summary"><p>Gets the number of elements contained in the <span class="xref">ICollection&lt;T&gt;</span>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public int Count { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.ICollection&lt;Syn.Bot.Siml.Sense.SenseItem&gt;.Count</span></div>
+              <h4 id="Syn_Bot_Siml_Sense_SenseCollection_DisorderPenalty" data-uid="Syn.Bot.Siml.Sense.SenseCollection.DisorderPenalty">DisorderPenalty</h4>
+              <div class="markdown level1 summary"><p>Gets or sets the disorder penalty.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public double DisorderPenalty { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Double</span></td>
+                    <td><p>The disorder penalty.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Syn_Bot_Siml_Sense_SenseCollection_DisorderPenalty_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>Default value is 0.4</p>
+</div>
+              <h4 id="Syn_Bot_Siml_Sense_SenseCollection_IsReadOnly" data-uid="Syn.Bot.Siml.Sense.SenseCollection.IsReadOnly">IsReadOnly</h4>
+              <div class="markdown level1 summary"><p>Gets a value indicating whether the <span class="xref">ICollection&lt;T&gt;</span> is read-only.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool IsReadOnly { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.ICollection&lt;Syn.Bot.Siml.Sense.SenseItem&gt;.IsReadOnly</span></div>
+              <h4 id="Syn_Bot_Siml_Sense_SenseCollection_MinimumScore" data-uid="Syn.Bot.Siml.Sense.SenseCollection.MinimumScore">MinimumScore</h4>
+              <div class="markdown level1 summary"><p>Gets or sets the minimum score.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public double MinimumScore { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Double</span></td>
+                    <td><p>The minimum score.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Syn_Bot_Siml_Sense_SenseCollection_MinimumScore_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>Default value is 0.4</p>
+</div>
+              <h4 id="Syn_Bot_Siml_Sense_SenseCollection_SearchEngine" data-uid="Syn.Bot.Siml.Sense.SenseCollection.SearchEngine">SearchEngine</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public ISearchEngine SearchEngine { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Syn.Bot.Siml.Search.ISearchEngine.html#Syn_Bot_Siml_Search_ISearchEngine">ISearchEngine</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="methods">Methods
+              </h3>
+              <h4 id="Syn_Bot_Siml_Sense_SenseCollection_Add_Syn_Bot_Siml_Sense_SenseItem_" data-uid="Syn.Bot.Siml.Sense.SenseCollection.Add(Syn.Bot.Siml.Sense.SenseItem)">Add(SenseItem)</h4>
+              <div class="markdown level1 summary"><p>Adds an item to the <span class="xref">ICollection&lt;T&gt;</span>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Add(SenseItem item)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Syn.Bot.Siml.Sense.SenseItem.html#Syn_Bot_Siml_Sense_SenseItem">SenseItem</a></td>
+                    <td><em>item</em></td>
+                    <td><p>The object to add to the <span class="xref">ICollection&lt;T&gt;</span>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.ICollection&lt;Syn.Bot.Siml.Sense.SenseItem&gt;.Add(Syn.Bot.Siml.Sense.SenseItem)</span></div>
+              <h4 id="Syn_Bot_Siml_Sense_SenseCollection_Add_System_String_" data-uid="Syn.Bot.Siml.Sense.SenseCollection.Add(System.String)">Add(String)</h4>
+              <div class="markdown level1 summary"><p>Adds a new <a class="xref" href="Syn.Bot.Siml.Sense.SenseItem.html#Syn_Bot_Siml_Sense_SenseItem">SenseItem</a> with the specified pattern.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Add(string pattern)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>pattern</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Syn_Bot_Siml_Sense_SenseCollection_Clear" data-uid="Syn.Bot.Siml.Sense.SenseCollection.Clear">Clear()</h4>
+              <div class="markdown level1 summary"><p>Removes all items from the <span class="xref">ICollection&lt;T&gt;</span>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Clear()</code></pre>
+              </div>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.ICollection&lt;Syn.Bot.Siml.Sense.SenseItem&gt;.Clear()</span></div>
+              <h4 id="Syn_Bot_Siml_Sense_SenseCollection_Contains_Syn_Bot_Siml_Sense_SenseItem_" data-uid="Syn.Bot.Siml.Sense.SenseCollection.Contains(Syn.Bot.Siml.Sense.SenseItem)">Contains(SenseItem)</h4>
+              <div class="markdown level1 summary"><p>Determines whether the <span class="xref">ICollection&lt;T&gt;</span> contains a specific value.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool Contains(SenseItem item)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Syn.Bot.Siml.Sense.SenseItem.html#Syn_Bot_Siml_Sense_SenseItem">SenseItem</a></td>
+                    <td><em>item</em></td>
+                    <td><p>The object to locate in the <span class="xref">ICollection&lt;T&gt;</span>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td><p>true if <em>item</em> is found in the <span class="xref">ICollection&lt;T&gt;</span>; otherwise, false.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.ICollection&lt;Syn.Bot.Siml.Sense.SenseItem&gt;.Contains(Syn.Bot.Siml.Sense.SenseItem)</span></div>
+              <h4 id="Syn_Bot_Siml_Sense_SenseCollection_CopyTo_Syn_Bot_Siml_Sense_SenseItem___System_Int32_" data-uid="Syn.Bot.Siml.Sense.SenseCollection.CopyTo(Syn.Bot.Siml.Sense.SenseItem[],System.Int32)">CopyTo(SenseItem[], Int32)</h4>
+              <div class="markdown level1 summary"><p>Copies the elements of the <span class="xref">ICollection&lt;T&gt;</span> to an <span class="xref">System.Array</span>, starting at a particular <span class="xref">System.Array</span> index.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void CopyTo(SenseItem[] array, int arrayIndex)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Syn.Bot.Siml.Sense.SenseItem.html#Syn_Bot_Siml_Sense_SenseItem">SenseItem</a>[]</td>
+                    <td><em>array</em></td>
+                    <td><p>The one-dimensional <span class="xref">System.Array</span> that is the destination of the elements copied from <span class="xref">ICollection&lt;T&gt;</span>. The <span class="xref">System.Array</span> must have zero-based indexing.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><em>arrayIndex</em></td>
+                    <td><p>The zero-based index in <em>array</em> at which copying begins.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.ICollection&lt;Syn.Bot.Siml.Sense.SenseItem&gt;.CopyTo(Syn.Bot.Siml.Sense.SenseItem[], System.Int32)</span></div>
+              <h4 id="Syn_Bot_Siml_Sense_SenseCollection_GetEnumerator" data-uid="Syn.Bot.Siml.Sense.SenseCollection.GetEnumerator">GetEnumerator()</h4>
+              <div class="markdown level1 summary"><p>Returns an enumerator that iterates through the collection.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public IEnumerator&lt;SenseItem&gt; GetEnumerator()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;<a class="xref" href="Syn.Bot.Siml.Sense.SenseItem.html#Syn_Bot_Siml_Sense_SenseItem">SenseItem</a>&gt;</td>
+                    <td><p>A <span class="xref">IEnumerator&lt;T&gt;</span> that can be used to iterate through the collection.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.IEnumerable&lt;Syn.Bot.Siml.Sense.SenseItem&gt;.GetEnumerator()</span></div>
+              <h4 id="Syn_Bot_Siml_Sense_SenseCollection_GetMatches_Syn_Bot_Siml_ChatRequest_System_String_" data-uid="Syn.Bot.Siml.Sense.SenseCollection.GetMatches(Syn.Bot.Siml.ChatRequest,System.String)">GetMatches(ChatRequest, String)</h4>
+              <div class="markdown level1 summary"><p>Gets a list of <a class="xref" href="Syn.Bot.Siml.Sense.SenseResult.html#Syn_Bot_Siml_Sense_SenseResult">SenseResult</a>s whose match score is equal or above the <a class="xref" href="Syn.Bot.Siml.Sense.SenseCollection.html#Syn_Bot_Siml_Sense_SenseCollection_MinimumScore">MinimumScore</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public List&lt;SenseResult&gt; GetMatches(ChatRequest request, string phrase)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Syn.Bot.Siml.ChatRequest.html#Syn_Bot_Siml_ChatRequest">ChatRequest</a></td>
+                    <td><em>request</em></td>
+                    <td><p>The Chat request to process.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>phrase</em></td>
+                    <td><p>The phrase.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="Syn.Bot.Siml.Sense.SenseResult.html#Syn_Bot_Siml_Sense_SenseResult">SenseResult</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Syn_Bot_Siml_Sense_SenseCollection_Remove_Syn_Bot_Siml_Sense_SenseItem_" data-uid="Syn.Bot.Siml.Sense.SenseCollection.Remove(Syn.Bot.Siml.Sense.SenseItem)">Remove(SenseItem)</h4>
+              <div class="markdown level1 summary"><p>Removes the first occurrence of a specific object from the <span class="xref">ICollection&lt;T&gt;</span>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool Remove(SenseItem item)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Syn.Bot.Siml.Sense.SenseItem.html#Syn_Bot_Siml_Sense_SenseItem">SenseItem</a></td>
+                    <td><em>item</em></td>
+                    <td><p>The object to remove from the <span class="xref">ICollection&lt;T&gt;</span>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td><p>true if <em>item</em> was successfully removed from the <span class="xref">ICollection&lt;T&gt;</span>; otherwise, false. This method also returns false if <em>item</em> is not found in the original <span class="xref">ICollection&lt;T&gt;</span>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.ICollection&lt;Syn.Bot.Siml.Sense.SenseItem&gt;.Remove(Syn.Bot.Siml.Sense.SenseItem)</span></div>
+              <h3 id="eii">Explicit Interface Implementations
+              </h3>
+              <h4 id="Syn_Bot_Siml_Sense_SenseCollection_System_Collections_IEnumerable_GetEnumerator" data-uid="Syn.Bot.Siml.Sense.SenseCollection.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
+              <div class="markdown level1 summary"><p>Returns an enumerator that iterates through a collection.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">IEnumerator IEnumerable.GetEnumerator()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.IEnumerator</span></td>
+                    <td><p>An <span class="xref">IEnumerator</span> object that can be used to iterate through the collection.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.IEnumerable.GetEnumerator()</span></div>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2016 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

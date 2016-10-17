@@ -195,7 +195,8 @@
                 </tbody>
               </table>
               <h4 id="Syn_Bot_Siml_ChatResult_Data" data-uid="Syn.Bot.Siml.ChatResult.Data">Data</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Gets or sets the <a class="xref" href="Syn.Bot.Siml.Collections.DataCollection.html#Syn_Bot_Siml_Collections_DataCollection">DataCollection</a> stored in this <a class="xref" href="Syn.Bot.Siml.ChatResult.html#Syn_Bot_Siml_ChatResult">ChatResult</a>.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -212,12 +213,13 @@
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Syn.Bot.Siml.Collections.DataCollection.html#Syn_Bot_Siml_Collections_DataCollection">DataCollection</a></td>
-                    <td></td>
+                    <td><p>The data.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Syn_Bot_Siml_ChatResult_Hint" data-uid="Syn.Bot.Siml.ChatResult.Hint">Hint</h4>
-              <div class="markdown level1 summary"><p>Gets the next user message the Bot expects.</p>
+              <div class="markdown level1 summary"><p>Gets or sets the last hint for next user message the Bot expects.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -239,13 +241,13 @@
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Syn_Bot_Siml_ChatResult_LastLabel" data-uid="Syn.Bot.Siml.ChatResult.LastLabel">LastLabel</h4>
+              <h4 id="Syn_Bot_Siml_ChatResult_Label" data-uid="Syn.Bot.Siml.ChatResult.Label">Label</h4>
               <div class="markdown level1 summary"><p>Gets the last <code>Label</code> that was set for a <a class="xref" href="Syn.Bot.Siml.BotResponse.html#Syn_Bot_Siml_BotResponse">BotResponse</a></p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string LastLabel { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">public string Label { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -291,7 +293,7 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public float Precision { get; }</code></pre>
+                <pre><code class="lang-csharp hljs">public double Precision { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -303,7 +305,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Single</span></td>
+                    <td><span class="xref">System.Double</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -314,7 +316,7 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public float ReadTime { get; }</code></pre>
+                <pre><code class="lang-csharp hljs">public double ReadTime { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -326,7 +328,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Single</span></td>
+                    <td><span class="xref">System.Double</span></td>
                     <td><p>The human read time.</p>
 </td>
                   </tr>
@@ -352,30 +354,6 @@
                   <tr>
                     <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="Syn.Bot.Siml.BotResponse.html#Syn_Bot_Siml_BotResponse">BotResponse</a>&gt;</td>
                     <td><p>The responses.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Syn_Bot_Siml_ChatResult_SearchTree" data-uid="Syn.Bot.Siml.ChatResult.SearchTree">SearchTree</h4>
-              <div class="markdown level1 summary"><p>Gets the search graph.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public SearchTree SearchTree { get; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Syn.Bot.Siml.Graph.SearchTree.html#Syn_Bot_Siml_Graph_SearchTree">SearchTree</a></td>
-                    <td><p>The search graph.</p>
 </td>
                   </tr>
                 </tbody>
@@ -450,6 +428,30 @@
                   </tr>
                 </tbody>
               </table>
+              <h4 id="Syn_Bot_Siml_ChatResult_TraversedNode" data-uid="Syn.Bot.Siml.ChatResult.TraversedNode">TraversedNode</h4>
+              <div class="markdown level1 summary"><p>Gets the search graph.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public TraversedNode TraversedNode { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Syn.Bot.Siml.Graph.TraversedNode.html#Syn_Bot_Siml_Graph_TraversedNode">TraversedNode</a></td>
+                    <td><p>The search graph.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
               <h4 id="Syn_Bot_Siml_ChatResult_Type" data-uid="Syn.Bot.Siml.ChatResult.Type">Type</h4>
               <div class="markdown level1 summary"><p>The type of Result generated.</p>
 </div>
@@ -474,7 +476,8 @@
                 </tbody>
               </table>
               <h4 id="Syn_Bot_Siml_ChatResult_User" data-uid="Syn.Bot.Siml.ChatResult.User">User</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Gets the <a class="xref" href="Syn.Bot.Siml.BotUser.html#Syn_Bot_Siml_BotUser">BotUser</a> for whom the <a class="xref" href="Syn.Bot.Siml.ChatResult.html#Syn_Bot_Siml_ChatResult">ChatResult</a> was generated.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -491,7 +494,8 @@
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Syn.Bot.Siml.BotUser.html#Syn_Bot_Siml_BotUser">BotUser</a></td>
-                    <td></td>
+                    <td><p>The user.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -521,11 +525,12 @@
               <h3 id="methods">Methods
               </h3>
               <h4 id="Syn_Bot_Siml_ChatResult_GetSuggestions" data-uid="Syn.Bot.Siml.ChatResult.GetSuggestions">GetSuggestions()</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Gets suggestions for the <a class="xref" href="Syn.Bot.Siml.ChatRequest.html#Syn_Bot_Siml_ChatRequest">ChatRequest</a> attached to this <a class="xref" href="Syn.Bot.Siml.ChatResult.html#Syn_Bot_Siml_ChatResult">ChatResult</a>.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public SuggestionCollection GetSuggestions()</code></pre>
+                <pre><code class="lang-csharp hljs">public Suggestion GetSuggestions()</code></pre>
               </div>
               <h5 class="returns">Returns</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -537,11 +542,14 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Syn.Bot.Siml.Collections.SuggestionCollection.html#Syn_Bot_Siml_Collections_SuggestionCollection">SuggestionCollection</a></td>
+                    <td><a class="xref" href="Syn.Bot.Siml.Collections.Suggestion.html#Syn_Bot_Siml_Collections_Suggestion">Suggestion</a></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <h5 id="Syn_Bot_Siml_ChatResult_GetSuggestions_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>In case the response is generated by a <a class="xref" href="Syn.Bot.Siml.Search.SearchResult.html#Syn_Bot_Siml_Search_SearchResult">SearchResult</a> then the value of <a class="xref" href="Syn.Bot.Siml.Search.SearchResult.html#Syn_Bot_Siml_Search_SearchResult_Score">Score</a> is returned.</p>
+</div>
               <h4 id="Syn_Bot_Siml_ChatResult_ToString" data-uid="Syn.Bot.Siml.ChatResult.ToString">ToString()</h4>
               <div class="markdown level1 summary"><p>Returns a <span class="xref">String</span> that represents this instance.</p>
 </div>

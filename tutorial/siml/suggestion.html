@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>SIML Suggestion  - Syn Developer Network</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="SIML Suggestion ">
+    <meta name="generator" content="docfx 2.4.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:rel" content="../../">
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+    ga('create', 'UA-39941606-1', 'auto');
+    ga('send', 'pageview');
+  
+  </script>
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="siml-suggestion">SIML Suggestion</h1>
+              
+<p>The <code>Suggestion</code> adapter is a new experimental feature added to the draft SIML Specification. This adapter enables the Bot to use a custom or in-built <strong>Search Engine</strong> interface to find a list of best possible matches of user inputs using the value of <code>Example</code> tags.</p>
+<p>When necessary, developers can also replace the current <code>SearchEngine</code> instance used by <em>SimlBot</em> by a custom implementation of <code>ISearchEngine</code> interface.</p>
+<h2 id="pattern-symbols-in-example">Pattern Symbols in <code>Example</code></h2>
+<p>The following entities are part of a search query that the <em>Search Engine</em> processes.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Entity</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Word</td>
+<td style="text-align:left">Any word that <em>may</em> or <em>may not</em> exist in <em>user input</em>.</td>
+</tr>
+<tr>
+<td style="text-align:left">^Keyword</td>
+<td style="text-align:left">A word that <em>must</em> be present in <em>user input</em>.</td>
+</tr>
+<tr>
+<td style="text-align:left">[Set]</td>
+<td style="text-align:left">A set whose value <em>must</em> be present in <em>user input</em>.</td>
+</tr>
+<tr>
+<td style="text-align:left">@Regex</td>
+<td style="text-align:left">A regular expression, the pattern of which must match in <em>user input</em>.</td>
+</tr>
+</tbody>
+</table>
+<blockquote><p>[Set] and @Regex are part of wildcard <em>match</em> and their values can be acquired using the <code>Match</code> tag.</p>
+</blockquote>
+<p>Other <em>symbols</em> used in <code>Pattern</code> tag are invalid within the <code>Sense</code> tag.</p>
+<h2 id="search-engine-algorithm">Search Engine Algorithm</h2>
+<p>The default implementation of <code>ISearchEn gine</code> interface (<code>SearchEngine</code>) in <em>Syn Bot</em> uses a <strong>Fuzzy Keyword Search</strong> algorithm that takes the following into consideration.</p>
+<ul>
+<li>If a word exists</li>
+<li>Order of words</li>
+<li>Existence of keywords, sets and regular expressions</li>
+<li>Number of unmatched words</li>
+<li>Tolerance - if a word is not found in user input but is part of <code>Common-Words</code> variable.</li>
+<li>Minimum score required for a <em>search result</em> to be accepted.</li>
+</ul>
+<h2 id="modes">Modes</h2>
+<p>On top of that the default search engine also has 2 modes of operation.</p>
+<h3 id="soft-mode-default-search-mode">Soft Mode (Default Search Mode)</h3>
+<ul>
+<li>The minimum search result score is equal to 60% of the actual <em>base</em> value set.</li>
+<li>Words may or may not exist in <em>query</em>. However, existence of words do increase the <em>Score</em>.</li>
+<li>Order of words may or may not match the order of words in <em>query</em>. However, proper order increase the search result <em>Score</em>.</li>
+<li><strong>Sets</strong> and <strong>Regular Expressions</strong> must exist in user <em>query</em>.</li>
+</ul>
+<h3 id="hard-mode">Hard Mode</h3>
+<ul>
+<li>The minimum search result score is exactly <em>base</em> score value set.</li>
+<li>All words except the list of words in <em>Common-Words</em> variable must exist.</li>
+<li>Order of words must match in user <em>query</em>. Any additional word in query is neglected.</li>
+<li><strong>Sets</strong> and <strong>Regular Expressions</strong> must exist in user <em>query</em>.</li>
+</ul>
+<h2 id="variables">Variables</h2>
+<p>The default <code>SearchEngine</code> uses the following reserved Bot variables to process a search result.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Variable Name</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Search-Score</td>
+<td style="text-align:left">The minimum score required by a search result to be accepted. Default value is <strong>0.4</strong></td>
+</tr>
+<tr>
+<td style="text-align:left">Search-Count</td>
+<td style="text-align:left">The maximum number of search results to return. Default value is <strong>5</strong></td>
+</tr>
+<tr>
+<td style="text-align:left">Search-Mode</td>
+<td style="text-align:left">Gets or sets the value of search mode to be used. Default value (if not set) is <strong>Soft</strong>.</td>
+</tr>
+<tr>
+<td style="text-align:left">Common-Words</td>
+<td style="text-align:left">List of common words in the language. The values of which determines the <em>tolerance</em> of missing words in <strong>Hard</strong> search mode.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="suggestion-formatting">Suggestion Formatting</h2>
+<p>In order to allow developers to format the suggestion string. The <code>Examples</code> property which is a instance of <code>ExampleCollection</code> uses <code>ISuggestionFormatter</code> interface that can be implemented to override the format of the suggestion string returned by the <code>Suggestion</code> adapter.</p>
+<p>The default implementation of <code>ISuggestionFormatter</code> provides results in the following format.</p>
+<ul>
+<li>If the suggestion contains just 1 result then the value of the result is returned as such.</li>
+<li>If 2 or more results exist in the suggestion the a index number is prefixed to each result.</li>
+</ul>
+<p><em>Example</em></p>
+<ol>
+<li>How are you?</li>
+<li>How is life?</li>
+</ol>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2016 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

@@ -366,11 +366,6 @@ references:
   href: api/Syn.Bot.Siml.BotStats.html#Syn_Bot_Siml_BotStats_ToString
   commentId: M:Syn.Bot.Siml.BotStats.ToString
   fullName: Syn.Bot.Siml.BotStats.ToString()
-- uid: Syn.Bot.Siml.BotStats.Vocabulary
-  name: Vocabulary
-  href: api/Syn.Bot.Siml.BotStats.html#Syn_Bot_Siml_BotStats_Vocabulary
-  commentId: P:Syn.Bot.Siml.BotStats.Vocabulary
-  fullName: Syn.Bot.Siml.BotStats.Vocabulary
 - uid: Syn.Bot.Siml.BotUser
   name: BotUser
   href: api/Syn.Bot.Siml.BotUser.html#Syn_Bot_Siml_BotUser
@@ -471,6 +466,11 @@ references:
   href: api/Syn.Bot.Siml.ChatRequest.html#Syn_Bot_Siml_ChatRequest_Bot
   commentId: P:Syn.Bot.Siml.ChatRequest.Bot
   fullName: Syn.Bot.Siml.ChatRequest.Bot
+- uid: Syn.Bot.Siml.ChatRequest.ExampleResult
+  name: ExampleResult
+  href: api/Syn.Bot.Siml.ChatRequest.html#Syn_Bot_Siml_ChatRequest_ExampleResult
+  commentId: P:Syn.Bot.Siml.ChatRequest.ExampleResult
+  fullName: Syn.Bot.Siml.ChatRequest.ExampleResult
 - uid: Syn.Bot.Siml.ChatRequest.InputList
   name: InputList
   href: api/Syn.Bot.Siml.ChatRequest.html#Syn_Bot_Siml_ChatRequest_InputList
@@ -526,11 +526,11 @@ references:
   href: api/Syn.Bot.Siml.ChatResult.html#Syn_Bot_Siml_ChatResult_Hint
   commentId: P:Syn.Bot.Siml.ChatResult.Hint
   fullName: Syn.Bot.Siml.ChatResult.Hint
-- uid: Syn.Bot.Siml.ChatResult.LastLabel
-  name: LastLabel
-  href: api/Syn.Bot.Siml.ChatResult.html#Syn_Bot_Siml_ChatResult_LastLabel
-  commentId: P:Syn.Bot.Siml.ChatResult.LastLabel
-  fullName: Syn.Bot.Siml.ChatResult.LastLabel
+- uid: Syn.Bot.Siml.ChatResult.Label
+  name: Label
+  href: api/Syn.Bot.Siml.ChatResult.html#Syn_Bot_Siml_ChatResult_Label
+  commentId: P:Syn.Bot.Siml.ChatResult.Label
+  fullName: Syn.Bot.Siml.ChatResult.Label
 - uid: Syn.Bot.Siml.ChatResult.LastResponse
   name: LastResponse
   href: api/Syn.Bot.Siml.ChatResult.html#Syn_Bot_Siml_ChatResult_LastResponse
@@ -551,11 +551,6 @@ references:
   href: api/Syn.Bot.Siml.ChatResult.html#Syn_Bot_Siml_ChatResult_Responses
   commentId: P:Syn.Bot.Siml.ChatResult.Responses
   fullName: Syn.Bot.Siml.ChatResult.Responses
-- uid: Syn.Bot.Siml.ChatResult.SearchTree
-  name: SearchTree
-  href: api/Syn.Bot.Siml.ChatResult.html#Syn_Bot_Siml_ChatResult_SearchTree
-  commentId: P:Syn.Bot.Siml.ChatResult.SearchTree
-  fullName: Syn.Bot.Siml.ChatResult.SearchTree
 - uid: Syn.Bot.Siml.ChatResult.Stack
   name: Stack
   href: api/Syn.Bot.Siml.ChatResult.html#Syn_Bot_Siml_ChatResult_Stack
@@ -576,6 +571,11 @@ references:
   href: api/Syn.Bot.Siml.ChatResult.html#Syn_Bot_Siml_ChatResult_ToString
   commentId: M:Syn.Bot.Siml.ChatResult.ToString
   fullName: Syn.Bot.Siml.ChatResult.ToString()
+- uid: Syn.Bot.Siml.ChatResult.TraversedNode
+  name: TraversedNode
+  href: api/Syn.Bot.Siml.ChatResult.html#Syn_Bot_Siml_ChatResult_TraversedNode
+  commentId: P:Syn.Bot.Siml.ChatResult.TraversedNode
+  fullName: Syn.Bot.Siml.ChatResult.TraversedNode
 - uid: Syn.Bot.Siml.ChatResult.Type
   name: Type
   href: api/Syn.Bot.Siml.ChatResult.html#Syn_Bot_Siml_ChatResult_Type
@@ -804,6 +804,11 @@ references:
   href: api/Syn.Bot.Siml.Collections.ExampleCollection.html#Syn_Bot_Siml_Collections_ExampleCollection_Add_Syn_Bot_Siml_Collections_ExampleItem_
   commentId: M:Syn.Bot.Siml.Collections.ExampleCollection.Add(Syn.Bot.Siml.Collections.ExampleItem)
   fullName: Syn.Bot.Siml.Collections.ExampleCollection.Add(Syn.Bot.Siml.Collections.ExampleItem)
+- uid: Syn.Bot.Siml.Collections.ExampleCollection.Add(Syn.Bot.Siml.Collections.ExampleItem,System.Boolean)
+  name: Add(ExampleItem, Boolean)
+  href: api/Syn.Bot.Siml.Collections.ExampleCollection.html#Syn_Bot_Siml_Collections_ExampleCollection_Add_Syn_Bot_Siml_Collections_ExampleItem_System_Boolean_
+  commentId: M:Syn.Bot.Siml.Collections.ExampleCollection.Add(Syn.Bot.Siml.Collections.ExampleItem,System.Boolean)
+  fullName: Syn.Bot.Siml.Collections.ExampleCollection.Add(Syn.Bot.Siml.Collections.ExampleItem, System.Boolean)
 - uid: Syn.Bot.Siml.Collections.ExampleCollection.Clear
   name: Clear()
   href: api/Syn.Bot.Siml.Collections.ExampleCollection.html#Syn_Bot_Siml_Collections_ExampleCollection_Clear
@@ -836,6 +841,16 @@ references:
   href: api/Syn.Bot.Siml.Collections.ExampleCollection.html#Syn_Bot_Siml_Collections_ExampleCollection_GetEnumerator
   commentId: M:Syn.Bot.Siml.Collections.ExampleCollection.GetEnumerator
   fullName: Syn.Bot.Siml.Collections.ExampleCollection.GetEnumerator()
+- uid: Syn.Bot.Siml.Collections.ExampleCollection.GetSuggestion(Syn.Bot.Siml.ChatRequest)
+  name: GetSuggestion(ChatRequest)
+  href: api/Syn.Bot.Siml.Collections.ExampleCollection.html#Syn_Bot_Siml_Collections_ExampleCollection_GetSuggestion_Syn_Bot_Siml_ChatRequest_
+  commentId: M:Syn.Bot.Siml.Collections.ExampleCollection.GetSuggestion(Syn.Bot.Siml.ChatRequest)
+  fullName: Syn.Bot.Siml.Collections.ExampleCollection.GetSuggestion(Syn.Bot.Siml.ChatRequest)
+- uid: Syn.Bot.Siml.Collections.ExampleCollection.GetSuggestion(Syn.Bot.Siml.Search.SearchQuery)
+  name: GetSuggestion(SearchQuery)
+  href: api/Syn.Bot.Siml.Collections.ExampleCollection.html#Syn_Bot_Siml_Collections_ExampleCollection_GetSuggestion_Syn_Bot_Siml_Search_SearchQuery_
+  commentId: M:Syn.Bot.Siml.Collections.ExampleCollection.GetSuggestion(Syn.Bot.Siml.Search.SearchQuery)
+  fullName: Syn.Bot.Siml.Collections.ExampleCollection.GetSuggestion(Syn.Bot.Siml.Search.SearchQuery)
 - uid: Syn.Bot.Siml.Collections.ExampleCollection.IsReadOnly
   name: IsReadOnly
   href: api/Syn.Bot.Siml.Collections.ExampleCollection.html#Syn_Bot_Siml_Collections_ExampleCollection_IsReadOnly
@@ -846,6 +861,11 @@ references:
   href: api/Syn.Bot.Siml.Collections.ExampleCollection.html#Syn_Bot_Siml_Collections_ExampleCollection_Remove_Syn_Bot_Siml_Collections_ExampleItem_
   commentId: M:Syn.Bot.Siml.Collections.ExampleCollection.Remove(Syn.Bot.Siml.Collections.ExampleItem)
   fullName: Syn.Bot.Siml.Collections.ExampleCollection.Remove(Syn.Bot.Siml.Collections.ExampleItem)
+- uid: Syn.Bot.Siml.Collections.ExampleCollection.SuggestionFormatter
+  name: SuggestionFormatter
+  href: api/Syn.Bot.Siml.Collections.ExampleCollection.html#Syn_Bot_Siml_Collections_ExampleCollection_SuggestionFormatter
+  commentId: P:Syn.Bot.Siml.Collections.ExampleCollection.SuggestionFormatter
+  fullName: Syn.Bot.Siml.Collections.ExampleCollection.SuggestionFormatter
 - uid: Syn.Bot.Siml.Collections.ExampleCollection.System#Collections#IEnumerable#GetEnumerator
   name: IEnumerable.GetEnumerator()
   href: api/Syn.Bot.Siml.Collections.ExampleCollection.html#Syn_Bot_Siml_Collections_ExampleCollection_System_Collections_IEnumerable_GetEnumerator
@@ -857,26 +877,16 @@ references:
   href: api/Syn.Bot.Siml.Collections.ExampleItem.html#Syn_Bot_Siml_Collections_ExampleItem
   commentId: T:Syn.Bot.Siml.Collections.ExampleItem
   fullName: Syn.Bot.Siml.Collections.ExampleItem
-- uid: Syn.Bot.Siml.Collections.ExampleItem.#ctor(System.String,System.Int32)
-  name: ExampleItem(String, Int32)
-  href: api/Syn.Bot.Siml.Collections.ExampleItem.html#Syn_Bot_Siml_Collections_ExampleItem__ctor_System_String_System_Int32_
-  commentId: M:Syn.Bot.Siml.Collections.ExampleItem.#ctor(System.String,System.Int32)
-  fullName: Syn.Bot.Siml.Collections.ExampleItem.ExampleItem(System.String, System.Int32)
-- uid: Syn.Bot.Siml.Collections.ExampleItem.Keywords
-  name: Keywords
-  href: api/Syn.Bot.Siml.Collections.ExampleItem.html#Syn_Bot_Siml_Collections_ExampleItem_Keywords
-  commentId: P:Syn.Bot.Siml.Collections.ExampleItem.Keywords
-  fullName: Syn.Bot.Siml.Collections.ExampleItem.Keywords
-- uid: Syn.Bot.Siml.Collections.ExampleItem.ResponseKey
-  name: ResponseKey
-  href: api/Syn.Bot.Siml.Collections.ExampleItem.html#Syn_Bot_Siml_Collections_ExampleItem_ResponseKey
-  commentId: P:Syn.Bot.Siml.Collections.ExampleItem.ResponseKey
-  fullName: Syn.Bot.Siml.Collections.ExampleItem.ResponseKey
-- uid: Syn.Bot.Siml.Collections.ExampleItem.Value
-  name: Value
-  href: api/Syn.Bot.Siml.Collections.ExampleItem.html#Syn_Bot_Siml_Collections_ExampleItem_Value
-  commentId: P:Syn.Bot.Siml.Collections.ExampleItem.Value
-  fullName: Syn.Bot.Siml.Collections.ExampleItem.Value
+- uid: Syn.Bot.Siml.Collections.ExampleItem.#ctor(Syn.Bot.Siml.SimlBot,System.String)
+  name: ExampleItem(SimlBot, String)
+  href: api/Syn.Bot.Siml.Collections.ExampleItem.html#Syn_Bot_Siml_Collections_ExampleItem__ctor_Syn_Bot_Siml_SimlBot_System_String_
+  commentId: M:Syn.Bot.Siml.Collections.ExampleItem.#ctor(Syn.Bot.Siml.SimlBot,System.String)
+  fullName: Syn.Bot.Siml.Collections.ExampleItem.ExampleItem(Syn.Bot.Siml.SimlBot, System.String)
+- uid: Syn.Bot.Siml.Collections.ExampleItem.ToString
+  name: ToString()
+  href: api/Syn.Bot.Siml.Collections.ExampleItem.html#Syn_Bot_Siml_Collections_ExampleItem_ToString
+  commentId: M:Syn.Bot.Siml.Collections.ExampleItem.ToString
+  fullName: Syn.Bot.Siml.Collections.ExampleItem.ToString()
 - uid: Syn.Bot.Siml.Collections.FilterCollection
   name: FilterCollection
   href: api/Syn.Bot.Siml.Collections.FilterCollection.html#Syn_Bot_Siml_Collections_FilterCollection
@@ -985,21 +995,21 @@ references:
   href: api/Syn.Bot.Siml.Collections.InteractionItem.html#Syn_Bot_Siml_Collections_InteractionItem
   commentId: T:Syn.Bot.Siml.Collections.InteractionItem
   fullName: Syn.Bot.Siml.Collections.InteractionItem
-- uid: Syn.Bot.Siml.Collections.InteractionItem.Bot
-  name: Bot
-  href: api/Syn.Bot.Siml.Collections.InteractionItem.html#Syn_Bot_Siml_Collections_InteractionItem_Bot
-  commentId: P:Syn.Bot.Siml.Collections.InteractionItem.Bot
-  fullName: Syn.Bot.Siml.Collections.InteractionItem.Bot
+- uid: Syn.Bot.Siml.Collections.InteractionItem.BotMessage
+  name: BotMessage
+  href: api/Syn.Bot.Siml.Collections.InteractionItem.html#Syn_Bot_Siml_Collections_InteractionItem_BotMessage
+  commentId: P:Syn.Bot.Siml.Collections.InteractionItem.BotMessage
+  fullName: Syn.Bot.Siml.Collections.InteractionItem.BotMessage
 - uid: Syn.Bot.Siml.Collections.InteractionItem.Precision
   name: Precision
   href: api/Syn.Bot.Siml.Collections.InteractionItem.html#Syn_Bot_Siml_Collections_InteractionItem_Precision
   commentId: P:Syn.Bot.Siml.Collections.InteractionItem.Precision
   fullName: Syn.Bot.Siml.Collections.InteractionItem.Precision
-- uid: Syn.Bot.Siml.Collections.InteractionItem.User
-  name: User
-  href: api/Syn.Bot.Siml.Collections.InteractionItem.html#Syn_Bot_Siml_Collections_InteractionItem_User
-  commentId: P:Syn.Bot.Siml.Collections.InteractionItem.User
-  fullName: Syn.Bot.Siml.Collections.InteractionItem.User
+- uid: Syn.Bot.Siml.Collections.InteractionItem.UserMessage
+  name: UserMessage
+  href: api/Syn.Bot.Siml.Collections.InteractionItem.html#Syn_Bot_Siml_Collections_InteractionItem_UserMessage
+  commentId: P:Syn.Bot.Siml.Collections.InteractionItem.UserMessage
+  fullName: Syn.Bot.Siml.Collections.InteractionItem.UserMessage
 - uid: Syn.Bot.Siml.Collections.Map
   name: Map
   href: api/Syn.Bot.Siml.Collections.Map.html#Syn_Bot_Siml_Collections_Map
@@ -1535,6 +1545,11 @@ references:
   href: api/Syn.Bot.Siml.Collections.SetCollection.html#Syn_Bot_Siml_Collections_SetCollection_GetEnumerator
   commentId: M:Syn.Bot.Siml.Collections.SetCollection.GetEnumerator
   fullName: Syn.Bot.Siml.Collections.SetCollection.GetEnumerator()
+- uid: Syn.Bot.Siml.Collections.SetCollection.GetMatchString(Syn.Bot.Siml.ChatRequest,System.String,System.String,System.Boolean)
+  name: GetMatchString(ChatRequest, String, String, Boolean)
+  href: api/Syn.Bot.Siml.Collections.SetCollection.html#Syn_Bot_Siml_Collections_SetCollection_GetMatchString_Syn_Bot_Siml_ChatRequest_System_String_System_String_System_Boolean_
+  commentId: M:Syn.Bot.Siml.Collections.SetCollection.GetMatchString(Syn.Bot.Siml.ChatRequest,System.String,System.String,System.Boolean)
+  fullName: Syn.Bot.Siml.Collections.SetCollection.GetMatchString(Syn.Bot.Siml.ChatRequest, System.String, System.String, System.Boolean)
 - uid: Syn.Bot.Siml.Collections.SetCollection.IsOverridable
   name: IsOverridable
   href: api/Syn.Bot.Siml.Collections.SetCollection.html#Syn_Bot_Siml_Collections_SetCollection_IsOverridable
@@ -1614,71 +1629,11 @@ references:
   href: api/Syn.Bot.Siml.Collections.SetItem.html#Syn_Bot_Siml_Collections_SetItem_Name
   commentId: P:Syn.Bot.Siml.Collections.SetItem.Name
   fullName: Syn.Bot.Siml.Collections.SetItem.Name
-- uid: Syn.Bot.Siml.Collections.SuggestionCollection
-  name: SuggestionCollection
-  href: api/Syn.Bot.Siml.Collections.SuggestionCollection.html#Syn_Bot_Siml_Collections_SuggestionCollection
-  commentId: T:Syn.Bot.Siml.Collections.SuggestionCollection
-  fullName: Syn.Bot.Siml.Collections.SuggestionCollection
-- uid: Syn.Bot.Siml.Collections.SuggestionCollection.#ctor
-  name: SuggestionCollection()
-  href: api/Syn.Bot.Siml.Collections.SuggestionCollection.html#Syn_Bot_Siml_Collections_SuggestionCollection__ctor
-  commentId: M:Syn.Bot.Siml.Collections.SuggestionCollection.#ctor
-  fullName: Syn.Bot.Siml.Collections.SuggestionCollection.SuggestionCollection()
-- uid: Syn.Bot.Siml.Collections.SuggestionCollection.#ctor(System.Collections.Generic.IEnumerable{Syn.Bot.Siml.Suggestion})
-  name: SuggestionCollection(IEnumerable<Suggestion>)
-  href: api/Syn.Bot.Siml.Collections.SuggestionCollection.html#Syn_Bot_Siml_Collections_SuggestionCollection__ctor_System_Collections_Generic_IEnumerable_Syn_Bot_Siml_Suggestion__
-  commentId: M:Syn.Bot.Siml.Collections.SuggestionCollection.#ctor(System.Collections.Generic.IEnumerable{Syn.Bot.Siml.Suggestion})
-  name.vb: SuggestionCollection(IEnumerable(Of Suggestion))
-  fullName: Syn.Bot.Siml.Collections.SuggestionCollection.SuggestionCollection(System.Collections.Generic.IEnumerable<Syn.Bot.Siml.Suggestion>)
-  fullName.vb: Syn.Bot.Siml.Collections.SuggestionCollection.SuggestionCollection(System.Collections.Generic.IEnumerable(Of Syn.Bot.Siml.Suggestion))
-- uid: Syn.Bot.Siml.Collections.SuggestionCollection.Add(Syn.Bot.Siml.Suggestion)
-  name: Add(Suggestion)
-  href: api/Syn.Bot.Siml.Collections.SuggestionCollection.html#Syn_Bot_Siml_Collections_SuggestionCollection_Add_Syn_Bot_Siml_Suggestion_
-  commentId: M:Syn.Bot.Siml.Collections.SuggestionCollection.Add(Syn.Bot.Siml.Suggestion)
-  fullName: Syn.Bot.Siml.Collections.SuggestionCollection.Add(Syn.Bot.Siml.Suggestion)
-- uid: Syn.Bot.Siml.Collections.SuggestionCollection.Clear
-  name: Clear()
-  href: api/Syn.Bot.Siml.Collections.SuggestionCollection.html#Syn_Bot_Siml_Collections_SuggestionCollection_Clear
-  commentId: M:Syn.Bot.Siml.Collections.SuggestionCollection.Clear
-  fullName: Syn.Bot.Siml.Collections.SuggestionCollection.Clear()
-- uid: Syn.Bot.Siml.Collections.SuggestionCollection.Contains(Syn.Bot.Siml.Suggestion)
-  name: Contains(Suggestion)
-  href: api/Syn.Bot.Siml.Collections.SuggestionCollection.html#Syn_Bot_Siml_Collections_SuggestionCollection_Contains_Syn_Bot_Siml_Suggestion_
-  commentId: M:Syn.Bot.Siml.Collections.SuggestionCollection.Contains(Syn.Bot.Siml.Suggestion)
-  fullName: Syn.Bot.Siml.Collections.SuggestionCollection.Contains(Syn.Bot.Siml.Suggestion)
-- uid: Syn.Bot.Siml.Collections.SuggestionCollection.CopyTo(Syn.Bot.Siml.Suggestion[],System.Int32)
-  name: CopyTo(Suggestion[], Int32)
-  href: api/Syn.Bot.Siml.Collections.SuggestionCollection.html#Syn_Bot_Siml_Collections_SuggestionCollection_CopyTo_Syn_Bot_Siml_Suggestion___System_Int32_
-  commentId: M:Syn.Bot.Siml.Collections.SuggestionCollection.CopyTo(Syn.Bot.Siml.Suggestion[],System.Int32)
-  name.vb: CopyTo(Suggestion(), Int32)
-  fullName: Syn.Bot.Siml.Collections.SuggestionCollection.CopyTo(Syn.Bot.Siml.Suggestion[], System.Int32)
-  fullName.vb: Syn.Bot.Siml.Collections.SuggestionCollection.CopyTo(Syn.Bot.Siml.Suggestion(), System.Int32)
-- uid: Syn.Bot.Siml.Collections.SuggestionCollection.Count
-  name: Count
-  href: api/Syn.Bot.Siml.Collections.SuggestionCollection.html#Syn_Bot_Siml_Collections_SuggestionCollection_Count
-  commentId: P:Syn.Bot.Siml.Collections.SuggestionCollection.Count
-  fullName: Syn.Bot.Siml.Collections.SuggestionCollection.Count
-- uid: Syn.Bot.Siml.Collections.SuggestionCollection.GetEnumerator
-  name: GetEnumerator()
-  href: api/Syn.Bot.Siml.Collections.SuggestionCollection.html#Syn_Bot_Siml_Collections_SuggestionCollection_GetEnumerator
-  commentId: M:Syn.Bot.Siml.Collections.SuggestionCollection.GetEnumerator
-  fullName: Syn.Bot.Siml.Collections.SuggestionCollection.GetEnumerator()
-- uid: Syn.Bot.Siml.Collections.SuggestionCollection.IsReadOnly
-  name: IsReadOnly
-  href: api/Syn.Bot.Siml.Collections.SuggestionCollection.html#Syn_Bot_Siml_Collections_SuggestionCollection_IsReadOnly
-  commentId: P:Syn.Bot.Siml.Collections.SuggestionCollection.IsReadOnly
-  fullName: Syn.Bot.Siml.Collections.SuggestionCollection.IsReadOnly
-- uid: Syn.Bot.Siml.Collections.SuggestionCollection.Remove(Syn.Bot.Siml.Suggestion)
-  name: Remove(Suggestion)
-  href: api/Syn.Bot.Siml.Collections.SuggestionCollection.html#Syn_Bot_Siml_Collections_SuggestionCollection_Remove_Syn_Bot_Siml_Suggestion_
-  commentId: M:Syn.Bot.Siml.Collections.SuggestionCollection.Remove(Syn.Bot.Siml.Suggestion)
-  fullName: Syn.Bot.Siml.Collections.SuggestionCollection.Remove(Syn.Bot.Siml.Suggestion)
-- uid: Syn.Bot.Siml.Collections.SuggestionCollection.System#Collections#IEnumerable#GetEnumerator
-  name: IEnumerable.GetEnumerator()
-  href: api/Syn.Bot.Siml.Collections.SuggestionCollection.html#Syn_Bot_Siml_Collections_SuggestionCollection_System_Collections_IEnumerable_GetEnumerator
-  commentId: M:Syn.Bot.Siml.Collections.SuggestionCollection.System#Collections#IEnumerable#GetEnumerator
-  name.vb: System.Collections.IEnumerable.GetEnumerator()
-  fullName: Syn.Bot.Siml.Collections.SuggestionCollection.System.Collections.IEnumerable.GetEnumerator()
+- uid: Syn.Bot.Siml.Collections.Suggestion
+  name: Suggestion
+  href: api/Syn.Bot.Siml.Collections.Suggestion.html#Syn_Bot_Siml_Collections_Suggestion
+  commentId: T:Syn.Bot.Siml.Collections.Suggestion
+  fullName: Syn.Bot.Siml.Collections.Suggestion
 - uid: Syn.Bot.Siml.Collections.Tokenizer
   name: Tokenizer
   href: api/Syn.Bot.Siml.Collections.Tokenizer.html#Syn_Bot_Siml_Collections_Tokenizer
@@ -2346,31 +2301,46 @@ references:
   href: api/Syn.Bot.Siml.Events.ResponseReceivedEventArgs.html#Syn_Bot_Siml_Events_ResponseReceivedEventArgs_Result
   commentId: P:Syn.Bot.Siml.Events.ResponseReceivedEventArgs.Result
   fullName: Syn.Bot.Siml.Events.ResponseReceivedEventArgs.Result
+- uid: Syn.Bot.Siml.Events.SuggestingEventArgs
+  name: SuggestingEventArgs
+  href: api/Syn.Bot.Siml.Events.SuggestingEventArgs.html#Syn_Bot_Siml_Events_SuggestingEventArgs
+  commentId: T:Syn.Bot.Siml.Events.SuggestingEventArgs
+  fullName: Syn.Bot.Siml.Events.SuggestingEventArgs
+- uid: Syn.Bot.Siml.Events.SuggestingEventArgs.Handled
+  name: Handled
+  href: api/Syn.Bot.Siml.Events.SuggestingEventArgs.html#Syn_Bot_Siml_Events_SuggestingEventArgs_Handled
+  commentId: P:Syn.Bot.Siml.Events.SuggestingEventArgs.Handled
+  fullName: Syn.Bot.Siml.Events.SuggestingEventArgs.Handled
+- uid: Syn.Bot.Siml.Events.SuggestingEventArgs.SearchQuery
+  name: SearchQuery
+  href: api/Syn.Bot.Siml.Events.SuggestingEventArgs.html#Syn_Bot_Siml_Events_SuggestingEventArgs_SearchQuery
+  commentId: P:Syn.Bot.Siml.Events.SuggestingEventArgs.SearchQuery
+  fullName: Syn.Bot.Siml.Events.SuggestingEventArgs.SearchQuery
+- uid: Syn.Bot.Siml.Events.SuggestingEventArgs.Suggestion
+  name: Suggestion
+  href: api/Syn.Bot.Siml.Events.SuggestingEventArgs.html#Syn_Bot_Siml_Events_SuggestingEventArgs_Suggestion
+  commentId: P:Syn.Bot.Siml.Events.SuggestingEventArgs.Suggestion
+  fullName: Syn.Bot.Siml.Events.SuggestingEventArgs.Suggestion
+- uid: Syn.Bot.Siml.ExampleResult
+  name: ExampleResult
+  href: api/Syn.Bot.Siml.ExampleResult.html#Syn_Bot_Siml_ExampleResult
+  commentId: T:Syn.Bot.Siml.ExampleResult
+  fullName: Syn.Bot.Siml.ExampleResult
+- uid: Syn.Bot.Siml.ExampleResult.#ctor(Syn.Bot.Siml.Search.SearchResult,Syn.Bot.Siml.Collections.ExampleItem)
+  name: ExampleResult(SearchResult, ExampleItem)
+  href: api/Syn.Bot.Siml.ExampleResult.html#Syn_Bot_Siml_ExampleResult__ctor_Syn_Bot_Siml_Search_SearchResult_Syn_Bot_Siml_Collections_ExampleItem_
+  commentId: M:Syn.Bot.Siml.ExampleResult.#ctor(Syn.Bot.Siml.Search.SearchResult,Syn.Bot.Siml.Collections.ExampleItem)
+  fullName: Syn.Bot.Siml.ExampleResult.ExampleResult(Syn.Bot.Siml.Search.SearchResult, Syn.Bot.Siml.Collections.ExampleItem)
+- uid: Syn.Bot.Siml.ExampleResult.Example
+  name: Example
+  href: api/Syn.Bot.Siml.ExampleResult.html#Syn_Bot_Siml_ExampleResult_Example
+  commentId: P:Syn.Bot.Siml.ExampleResult.Example
+  fullName: Syn.Bot.Siml.ExampleResult.Example
 - uid: Syn.Bot.Siml.Extensions
   name: Syn.Bot.Siml.Extensions
   href: api/Syn.Bot.Siml.Extensions.html#Syn_Bot_Siml_Extensions
   commentId: N:Syn.Bot.Siml.Extensions
   fullName: Syn.Bot.Siml.Extensions
-- uid: Syn.Bot.Siml.Extensions.DoubleExtensions
-  name: DoubleExtensions
-  href: api/Syn.Bot.Siml.Extensions.DoubleExtensions.html#Syn_Bot_Siml_Extensions_DoubleExtensions
-  commentId: T:Syn.Bot.Siml.Extensions.DoubleExtensions
-  fullName: Syn.Bot.Siml.Extensions.DoubleExtensions
-- uid: Syn.Bot.Siml.Extensions.DoubleExtensions.IsEqualTo(System.Double,System.Double)
-  name: IsEqualTo(Double, Double)
-  href: api/Syn.Bot.Siml.Extensions.DoubleExtensions.html#Syn_Bot_Siml_Extensions_DoubleExtensions_IsEqualTo_System_Double_System_Double_
-  commentId: M:Syn.Bot.Siml.Extensions.DoubleExtensions.IsEqualTo(System.Double,System.Double)
-  fullName: Syn.Bot.Siml.Extensions.DoubleExtensions.IsEqualTo(System.Double, System.Double)
-- uid: Syn.Bot.Siml.Extensions.DoubleExtensions.IsNotEqualTo(System.Double,System.Double)
-  name: IsNotEqualTo(Double, Double)
-  href: api/Syn.Bot.Siml.Extensions.DoubleExtensions.html#Syn_Bot_Siml_Extensions_DoubleExtensions_IsNotEqualTo_System_Double_System_Double_
-  commentId: M:Syn.Bot.Siml.Extensions.DoubleExtensions.IsNotEqualTo(System.Double,System.Double)
-  fullName: Syn.Bot.Siml.Extensions.DoubleExtensions.IsNotEqualTo(System.Double, System.Double)
-- uid: Syn.Bot.Siml.Extensions.DoubleExtensions.IsZero(System.Double)
-  name: IsZero(Double)
-  href: api/Syn.Bot.Siml.Extensions.DoubleExtensions.html#Syn_Bot_Siml_Extensions_DoubleExtensions_IsZero_System_Double_
-  commentId: M:Syn.Bot.Siml.Extensions.DoubleExtensions.IsZero(System.Double)
-  fullName: Syn.Bot.Siml.Extensions.DoubleExtensions.IsZero(System.Double)
 - uid: Syn.Bot.Siml.Extensions.MapExtensions
   name: MapExtensions
   href: api/Syn.Bot.Siml.Extensions.MapExtensions.html#Syn_Bot_Siml_Extensions_MapExtensions
@@ -2610,11 +2580,11 @@ references:
   href: api/Syn.Bot.Siml.Graph.QueryTree.html#Syn_Bot_Siml_Graph_QueryTree_PreviousMatchList
   commentId: P:Syn.Bot.Siml.Graph.QueryTree.PreviousMatchList
   fullName: Syn.Bot.Siml.Graph.QueryTree.PreviousMatchList
-- uid: Syn.Bot.Siml.Graph.QueryTree.ReGenerate(System.String)
-  name: ReGenerate(String)
-  href: api/Syn.Bot.Siml.Graph.QueryTree.html#Syn_Bot_Siml_Graph_QueryTree_ReGenerate_System_String_
-  commentId: M:Syn.Bot.Siml.Graph.QueryTree.ReGenerate(System.String)
-  fullName: Syn.Bot.Siml.Graph.QueryTree.ReGenerate(System.String)
+- uid: Syn.Bot.Siml.Graph.QueryTree.Regenerate(System.String)
+  name: Regenerate(String)
+  href: api/Syn.Bot.Siml.Graph.QueryTree.html#Syn_Bot_Siml_Graph_QueryTree_Regenerate_System_String_
+  commentId: M:Syn.Bot.Siml.Graph.QueryTree.Regenerate(System.String)
+  fullName: Syn.Bot.Siml.Graph.QueryTree.Regenerate(System.String)
 - uid: Syn.Bot.Siml.Graph.QueryTree.RemoveLastToken
   name: RemoveLastToken()
   href: api/Syn.Bot.Siml.Graph.QueryTree.html#Syn_Bot_Siml_Graph_QueryTree_RemoveLastToken
@@ -2717,26 +2687,6 @@ references:
   href: api/Syn.Bot.Siml.Graph.SearchSequence.html#Syn_Bot_Siml_Graph_SearchSequence_SearchList
   commentId: P:Syn.Bot.Siml.Graph.SearchSequence.SearchList
   fullName: Syn.Bot.Siml.Graph.SearchSequence.SearchList
-- uid: Syn.Bot.Siml.Graph.SearchTree
-  name: SearchTree
-  href: api/Syn.Bot.Siml.Graph.SearchTree.html#Syn_Bot_Siml_Graph_SearchTree
-  commentId: T:Syn.Bot.Siml.Graph.SearchTree
-  fullName: Syn.Bot.Siml.Graph.SearchTree
-- uid: Syn.Bot.Siml.Graph.SearchTree.ContainsNode(Syn.Bot.Siml.Graph.GraphNode)
-  name: ContainsNode(GraphNode)
-  href: api/Syn.Bot.Siml.Graph.SearchTree.html#Syn_Bot_Siml_Graph_SearchTree_ContainsNode_Syn_Bot_Siml_Graph_GraphNode_
-  commentId: M:Syn.Bot.Siml.Graph.SearchTree.ContainsNode(Syn.Bot.Siml.Graph.GraphNode)
-  fullName: Syn.Bot.Siml.Graph.SearchTree.ContainsNode(Syn.Bot.Siml.Graph.GraphNode)
-- uid: Syn.Bot.Siml.Graph.SearchTree.GenerateNodes
-  name: GenerateNodes()
-  href: api/Syn.Bot.Siml.Graph.SearchTree.html#Syn_Bot_Siml_Graph_SearchTree_GenerateNodes
-  commentId: M:Syn.Bot.Siml.Graph.SearchTree.GenerateNodes
-  fullName: Syn.Bot.Siml.Graph.SearchTree.GenerateNodes()
-- uid: Syn.Bot.Siml.Graph.SearchTree.VisitedNodes
-  name: VisitedNodes
-  href: api/Syn.Bot.Siml.Graph.SearchTree.html#Syn_Bot_Siml_Graph_SearchTree_VisitedNodes
-  commentId: P:Syn.Bot.Siml.Graph.SearchTree.VisitedNodes
-  fullName: Syn.Bot.Siml.Graph.SearchTree.VisitedNodes
 - uid: Syn.Bot.Siml.Graph.Token
   name: Token
   href: api/Syn.Bot.Siml.Graph.Token.html#Syn_Bot_Siml_Graph_Token
@@ -2822,6 +2772,26 @@ references:
   href: api/Syn.Bot.Siml.Graph.TokenType.html#Syn_Bot_Siml_Graph_TokenType_ScriptElement
   commentId: F:Syn.Bot.Siml.Graph.TokenType.ScriptElement
   fullName: Syn.Bot.Siml.Graph.TokenType.ScriptElement
+- uid: Syn.Bot.Siml.Graph.TraversedNode
+  name: TraversedNode
+  href: api/Syn.Bot.Siml.Graph.TraversedNode.html#Syn_Bot_Siml_Graph_TraversedNode
+  commentId: T:Syn.Bot.Siml.Graph.TraversedNode
+  fullName: Syn.Bot.Siml.Graph.TraversedNode
+- uid: Syn.Bot.Siml.Graph.TraversedNode.ContainsNode(Syn.Bot.Siml.Graph.GraphNode)
+  name: ContainsNode(GraphNode)
+  href: api/Syn.Bot.Siml.Graph.TraversedNode.html#Syn_Bot_Siml_Graph_TraversedNode_ContainsNode_Syn_Bot_Siml_Graph_GraphNode_
+  commentId: M:Syn.Bot.Siml.Graph.TraversedNode.ContainsNode(Syn.Bot.Siml.Graph.GraphNode)
+  fullName: Syn.Bot.Siml.Graph.TraversedNode.ContainsNode(Syn.Bot.Siml.Graph.GraphNode)
+- uid: Syn.Bot.Siml.Graph.TraversedNode.GenerateNodes
+  name: GenerateNodes()
+  href: api/Syn.Bot.Siml.Graph.TraversedNode.html#Syn_Bot_Siml_Graph_TraversedNode_GenerateNodes
+  commentId: M:Syn.Bot.Siml.Graph.TraversedNode.GenerateNodes
+  fullName: Syn.Bot.Siml.Graph.TraversedNode.GenerateNodes()
+- uid: Syn.Bot.Siml.Graph.TraversedNode.VisitedNodes
+  name: VisitedNodes
+  href: api/Syn.Bot.Siml.Graph.TraversedNode.html#Syn_Bot_Siml_Graph_TraversedNode_VisitedNodes
+  commentId: P:Syn.Bot.Siml.Graph.TraversedNode.VisitedNodes
+  fullName: Syn.Bot.Siml.Graph.TraversedNode.VisitedNodes
 - uid: Syn.Bot.Siml.Graph.Tree
   name: Tree
   href: api/Syn.Bot.Siml.Graph.Tree.html#Syn_Bot_Siml_Graph_Tree
@@ -3046,35 +3016,6 @@ references:
   href: api/Syn.Bot.Siml.Helper.ComparisonAlgorithm.html#Syn_Bot_Siml_Helper_ComparisonAlgorithm_TanimotoCoefficient
   commentId: F:Syn.Bot.Siml.Helper.ComparisonAlgorithm.TanimotoCoefficient
   fullName: Syn.Bot.Siml.Helper.ComparisonAlgorithm.TanimotoCoefficient
-- uid: Syn.Bot.Siml.Helper.Compressor
-  name: Compressor
-  href: api/Syn.Bot.Siml.Helper.Compressor.html#Syn_Bot_Siml_Helper_Compressor
-  commentId: T:Syn.Bot.Siml.Helper.Compressor
-  fullName: Syn.Bot.Siml.Helper.Compressor
-- uid: Syn.Bot.Siml.Helper.Compressor.Compress(System.Byte[])
-  name: Compress(Byte[])
-  href: api/Syn.Bot.Siml.Helper.Compressor.html#Syn_Bot_Siml_Helper_Compressor_Compress_System_Byte___
-  commentId: M:Syn.Bot.Siml.Helper.Compressor.Compress(System.Byte[])
-  name.vb: Compress(Byte())
-  fullName: Syn.Bot.Siml.Helper.Compressor.Compress(System.Byte[])
-  fullName.vb: Syn.Bot.Siml.Helper.Compressor.Compress(System.Byte())
-- uid: Syn.Bot.Siml.Helper.Compressor.Compress(System.String)
-  name: Compress(String)
-  href: api/Syn.Bot.Siml.Helper.Compressor.html#Syn_Bot_Siml_Helper_Compressor_Compress_System_String_
-  commentId: M:Syn.Bot.Siml.Helper.Compressor.Compress(System.String)
-  fullName: Syn.Bot.Siml.Helper.Compressor.Compress(System.String)
-- uid: Syn.Bot.Siml.Helper.Compressor.Decompress(System.Byte[])
-  name: Decompress(Byte[])
-  href: api/Syn.Bot.Siml.Helper.Compressor.html#Syn_Bot_Siml_Helper_Compressor_Decompress_System_Byte___
-  commentId: M:Syn.Bot.Siml.Helper.Compressor.Decompress(System.Byte[])
-  name.vb: Decompress(Byte())
-  fullName: Syn.Bot.Siml.Helper.Compressor.Decompress(System.Byte[])
-  fullName.vb: Syn.Bot.Siml.Helper.Compressor.Decompress(System.Byte())
-- uid: Syn.Bot.Siml.Helper.Compressor.Decompress(System.String)
-  name: Decompress(String)
-  href: api/Syn.Bot.Siml.Helper.Compressor.html#Syn_Bot_Siml_Helper_Compressor_Decompress_System_String_
-  commentId: M:Syn.Bot.Siml.Helper.Compressor.Decompress(System.String)
-  fullName: Syn.Bot.Siml.Helper.Compressor.Decompress(System.String)
 - uid: Syn.Bot.Siml.Helper.StringComparisonUtility
   name: StringComparisonUtility
   href: api/Syn.Bot.Siml.Helper.StringComparisonUtility.html#Syn_Bot_Siml_Helper_StringComparisonUtility
@@ -3167,16 +3108,18 @@ references:
   href: api/Syn.Bot.Siml.Helper.StringUtility.html#Syn_Bot_Siml_Helper_StringUtility_GetCommaSeparatedValues_System_String_
   commentId: M:Syn.Bot.Siml.Helper.StringUtility.GetCommaSeparatedValues(System.String)
   fullName: Syn.Bot.Siml.Helper.StringUtility.GetCommaSeparatedValues(System.String)
+- uid: Syn.Bot.Siml.Helper.StringUtility.GetSafeAlphaNumeric(System.String,System.Char[])
+  name: GetSafeAlphaNumeric(String, Char[])
+  href: api/Syn.Bot.Siml.Helper.StringUtility.html#Syn_Bot_Siml_Helper_StringUtility_GetSafeAlphaNumeric_System_String_System_Char___
+  commentId: M:Syn.Bot.Siml.Helper.StringUtility.GetSafeAlphaNumeric(System.String,System.Char[])
+  name.vb: GetSafeAlphaNumeric(String, Char())
+  fullName: Syn.Bot.Siml.Helper.StringUtility.GetSafeAlphaNumeric(System.String, System.Char[])
+  fullName.vb: Syn.Bot.Siml.Helper.StringUtility.GetSafeAlphaNumeric(System.String, System.Char())
 - uid: Syn.Bot.Siml.Helper.StringUtility.GetSimilarityScore(System.String,System.String,Syn.Bot.Siml.Helper.ComparisonAlgorithm)
   name: GetSimilarityScore(String, String, ComparisonAlgorithm)
   href: api/Syn.Bot.Siml.Helper.StringUtility.html#Syn_Bot_Siml_Helper_StringUtility_GetSimilarityScore_System_String_System_String_Syn_Bot_Siml_Helper_ComparisonAlgorithm_
   commentId: M:Syn.Bot.Siml.Helper.StringUtility.GetSimilarityScore(System.String,System.String,Syn.Bot.Siml.Helper.ComparisonAlgorithm)
   fullName: Syn.Bot.Siml.Helper.StringUtility.GetSimilarityScore(System.String, System.String, Syn.Bot.Siml.Helper.ComparisonAlgorithm)
-- uid: Syn.Bot.Siml.Helper.StringUtility.GetSuggestions(Syn.Bot.Siml.SuggestionQuery)
-  name: GetSuggestions(SuggestionQuery)
-  href: api/Syn.Bot.Siml.Helper.StringUtility.html#Syn_Bot_Siml_Helper_StringUtility_GetSuggestions_Syn_Bot_Siml_SuggestionQuery_
-  commentId: M:Syn.Bot.Siml.Helper.StringUtility.GetSuggestions(Syn.Bot.Siml.SuggestionQuery)
-  fullName: Syn.Bot.Siml.Helper.StringUtility.GetSuggestions(Syn.Bot.Siml.SuggestionQuery)
 - uid: Syn.Bot.Siml.Helper.StringUtility.GetWordDistance(System.String,System.String)
   name: GetWordDistance(String, String)
   href: api/Syn.Bot.Siml.Helper.StringUtility.html#Syn_Bot_Siml_Helper_StringUtility_GetWordDistance_System_String_System_String_
@@ -3232,11 +3175,6 @@ references:
   href: api/Syn.Bot.Siml.Helper.Tag.html#Syn_Bot_Siml_Helper_Tag_BotEmotion
   commentId: F:Syn.Bot.Siml.Helper.Tag.BotEmotion
   fullName: Syn.Bot.Siml.Helper.Tag.BotEmotion
-- uid: Syn.Bot.Siml.Helper.Tag.BotEmotionValue
-  name: BotEmotionValue
-  href: api/Syn.Bot.Siml.Helper.Tag.html#Syn_Bot_Siml_Helper_Tag_BotEmotionValue
-  commentId: F:Syn.Bot.Siml.Helper.Tag.BotEmotionValue
-  fullName: Syn.Bot.Siml.Helper.Tag.BotEmotionValue
 - uid: Syn.Bot.Siml.Helper.Tag.BotSettings
   name: BotSettings
   href: api/Syn.Bot.Siml.Helper.Tag.html#Syn_Bot_Siml_Helper_Tag_BotSettings
@@ -3352,16 +3290,6 @@ references:
   href: api/Syn.Bot.Siml.Helper.Tag.html#Syn_Bot_Siml_Helper_Tag_EmotionML
   commentId: F:Syn.Bot.Siml.Helper.Tag.EmotionML
   fullName: Syn.Bot.Siml.Helper.Tag.EmotionML
-- uid: Syn.Bot.Siml.Helper.Tag.EmptyMatchValue
-  name: EmptyMatchValue
-  href: api/Syn.Bot.Siml.Helper.Tag.html#Syn_Bot_Siml_Helper_Tag_EmptyMatchValue
-  commentId: F:Syn.Bot.Siml.Helper.Tag.EmptyMatchValue
-  fullName: Syn.Bot.Siml.Helper.Tag.EmptyMatchValue
-- uid: Syn.Bot.Siml.Helper.Tag.EmptyResponseValue
-  name: EmptyResponseValue
-  href: api/Syn.Bot.Siml.Helper.Tag.html#Syn_Bot_Siml_Helper_Tag_EmptyResponseValue
-  commentId: F:Syn.Bot.Siml.Helper.Tag.EmptyResponseValue
-  fullName: Syn.Bot.Siml.Helper.Tag.EmptyResponseValue
 - uid: Syn.Bot.Siml.Helper.Tag.EnabledAttribute
   name: EnabledAttribute
   href: api/Syn.Bot.Siml.Helper.Tag.html#Syn_Bot_Siml_Helper_Tag_EnabledAttribute
@@ -3472,6 +3400,11 @@ references:
   href: api/Syn.Bot.Siml.Helper.Tag.html#Syn_Bot_Siml_Helper_Tag_Hint
   commentId: F:Syn.Bot.Siml.Helper.Tag.Hint
   fullName: Syn.Bot.Siml.Helper.Tag.Hint
+- uid: Syn.Bot.Siml.Helper.Tag.HintAttribute
+  name: HintAttribute
+  href: api/Syn.Bot.Siml.Helper.Tag.html#Syn_Bot_Siml_Helper_Tag_HintAttribute
+  commentId: F:Syn.Bot.Siml.Helper.Tag.HintAttribute
+  fullName: Syn.Bot.Siml.Helper.Tag.HintAttribute
 - uid: Syn.Bot.Siml.Helper.Tag.HourAttribute
   name: HourAttribute
   href: api/Syn.Bot.Siml.Helper.Tag.html#Syn_Bot_Siml_Helper_Tag_HourAttribute
@@ -3522,11 +3455,6 @@ references:
   href: api/Syn.Bot.Siml.Helper.Tag.html#Syn_Bot_Siml_Helper_Tag_KeyAttribute
   commentId: F:Syn.Bot.Siml.Helper.Tag.KeyAttribute
   fullName: Syn.Bot.Siml.Helper.Tag.KeyAttribute
-- uid: Syn.Bot.Siml.Helper.Tag.Keywords
-  name: Keywords
-  href: api/Syn.Bot.Siml.Helper.Tag.html#Syn_Bot_Siml_Helper_Tag_Keywords
-  commentId: F:Syn.Bot.Siml.Helper.Tag.Keywords
-  fullName: Syn.Bot.Siml.Helper.Tag.Keywords
 - uid: Syn.Bot.Siml.Helper.Tag.KnownDeprecatedHtmlTags
   name: KnownDeprecatedHtmlTags
   href: api/Syn.Bot.Siml.Helper.Tag.html#Syn_Bot_Siml_Helper_Tag_KnownDeprecatedHtmlTags
@@ -3592,16 +3520,6 @@ references:
   href: api/Syn.Bot.Siml.Helper.Tag.html#Syn_Bot_Siml_Helper_Tag_ListAttribute
   commentId: F:Syn.Bot.Siml.Helper.Tag.ListAttribute
   fullName: Syn.Bot.Siml.Helper.Tag.ListAttribute
-- uid: Syn.Bot.Siml.Helper.Tag.ListEndValue
-  name: ListEndValue
-  href: api/Syn.Bot.Siml.Helper.Tag.html#Syn_Bot_Siml_Helper_Tag_ListEndValue
-  commentId: F:Syn.Bot.Siml.Helper.Tag.ListEndValue
-  fullName: Syn.Bot.Siml.Helper.Tag.ListEndValue
-- uid: Syn.Bot.Siml.Helper.Tag.ListSeparatorValue
-  name: ListSeparatorValue
-  href: api/Syn.Bot.Siml.Helper.Tag.html#Syn_Bot_Siml_Helper_Tag_ListSeparatorValue
-  commentId: F:Syn.Bot.Siml.Helper.Tag.ListSeparatorValue
-  fullName: Syn.Bot.Siml.Helper.Tag.ListSeparatorValue
 - uid: Syn.Bot.Siml.Helper.Tag.LowPrioritySymbol
   name: LowPrioritySymbol
   href: api/Syn.Bot.Siml.Helper.Tag.html#Syn_Bot_Siml_Helper_Tag_LowPrioritySymbol
@@ -3637,11 +3555,6 @@ references:
   href: api/Syn.Bot.Siml.Helper.Tag.html#Syn_Bot_Siml_Helper_Tag_MaxAttribute
   commentId: F:Syn.Bot.Siml.Helper.Tag.MaxAttribute
   fullName: Syn.Bot.Siml.Helper.Tag.MaxAttribute
-- uid: Syn.Bot.Siml.Helper.Tag.MaxRequestLength
-  name: MaxRequestLength
-  href: api/Syn.Bot.Siml.Helper.Tag.html#Syn_Bot_Siml_Helper_Tag_MaxRequestLength
-  commentId: F:Syn.Bot.Siml.Helper.Tag.MaxRequestLength
-  fullName: Syn.Bot.Siml.Helper.Tag.MaxRequestLength
 - uid: Syn.Bot.Siml.Helper.Tag.MinAttribute
   name: MinAttribute
   href: api/Syn.Bot.Siml.Helper.Tag.html#Syn_Bot_Siml_Helper_Tag_MinAttribute
@@ -3852,16 +3765,16 @@ references:
   href: api/Syn.Bot.Siml.Helper.Tag.html#Syn_Bot_Siml_Helper_Tag_SecondAttribute
   commentId: F:Syn.Bot.Siml.Helper.Tag.SecondAttribute
   fullName: Syn.Bot.Siml.Helper.Tag.SecondAttribute
+- uid: Syn.Bot.Siml.Helper.Tag.Sense
+  name: Sense
+  href: api/Syn.Bot.Siml.Helper.Tag.html#Syn_Bot_Siml_Helper_Tag_Sense
+  commentId: F:Syn.Bot.Siml.Helper.Tag.Sense
+  fullName: Syn.Bot.Siml.Helper.Tag.Sense
 - uid: Syn.Bot.Siml.Helper.Tag.Service
   name: Service
   href: api/Syn.Bot.Siml.Helper.Tag.html#Syn_Bot_Siml_Helper_Tag_Service
   commentId: F:Syn.Bot.Siml.Helper.Tag.Service
   fullName: Syn.Bot.Siml.Helper.Tag.Service
-- uid: Syn.Bot.Siml.Helper.Tag.ServiceSettings
-  name: ServiceSettings
-  href: api/Syn.Bot.Siml.Helper.Tag.html#Syn_Bot_Siml_Helper_Tag_ServiceSettings
-  commentId: F:Syn.Bot.Siml.Helper.Tag.ServiceSettings
-  fullName: Syn.Bot.Siml.Helper.Tag.ServiceSettings
 - uid: Syn.Bot.Siml.Helper.Tag.Set
   name: Set
   href: api/Syn.Bot.Siml.Helper.Tag.html#Syn_Bot_Siml_Helper_Tag_Set
@@ -3897,11 +3810,11 @@ references:
   href: api/Syn.Bot.Siml.Helper.Tag.html#Syn_Bot_Siml_Helper_Tag_StrictAttribute
   commentId: F:Syn.Bot.Siml.Helper.Tag.StrictAttribute
   fullName: Syn.Bot.Siml.Helper.Tag.StrictAttribute
-- uid: Syn.Bot.Siml.Helper.Tag.Suggest
-  name: Suggest
-  href: api/Syn.Bot.Siml.Helper.Tag.html#Syn_Bot_Siml_Helper_Tag_Suggest
-  commentId: F:Syn.Bot.Siml.Helper.Tag.Suggest
-  fullName: Syn.Bot.Siml.Helper.Tag.Suggest
+- uid: Syn.Bot.Siml.Helper.Tag.Suggestion
+  name: Suggestion
+  href: api/Syn.Bot.Siml.Helper.Tag.html#Syn_Bot_Siml_Helper_Tag_Suggestion
+  commentId: F:Syn.Bot.Siml.Helper.Tag.Suggestion
+  fullName: Syn.Bot.Siml.Helper.Tag.Suggestion
 - uid: Syn.Bot.Siml.Helper.Tag.Switch
   name: Switch
   href: api/Syn.Bot.Siml.Helper.Tag.html#Syn_Bot_Siml_Helper_Tag_Switch
@@ -3917,11 +3830,6 @@ references:
   href: api/Syn.Bot.Siml.Helper.Tag.html#Syn_Bot_Siml_Helper_Tag_TargetAttribute
   commentId: P:Syn.Bot.Siml.Helper.Tag.TargetAttribute
   fullName: Syn.Bot.Siml.Helper.Tag.TargetAttribute
-- uid: Syn.Bot.Siml.Helper.Tag.Task
-  name: Task
-  href: api/Syn.Bot.Siml.Helper.Tag.html#Syn_Bot_Siml_Helper_Tag_Task
-  commentId: F:Syn.Bot.Siml.Helper.Tag.Task
-  fullName: Syn.Bot.Siml.Helper.Tag.Task
 - uid: Syn.Bot.Siml.Helper.Tag.TaskAttribute
   name: TaskAttribute
   href: api/Syn.Bot.Siml.Helper.Tag.html#Syn_Bot_Siml_Helper_Tag_TaskAttribute
@@ -3942,11 +3850,6 @@ references:
   href: api/Syn.Bot.Siml.Helper.Tag.html#Syn_Bot_Siml_Helper_Tag_Think
   commentId: F:Syn.Bot.Siml.Helper.Tag.Think
   fullName: Syn.Bot.Siml.Helper.Tag.Think
-- uid: Syn.Bot.Siml.Helper.Tag.TimeoutResponseValue
-  name: TimeoutResponseValue
-  href: api/Syn.Bot.Siml.Helper.Tag.html#Syn_Bot_Siml_Helper_Tag_TimeoutResponseValue
-  commentId: F:Syn.Bot.Siml.Helper.Tag.TimeoutResponseValue
-  fullName: Syn.Bot.Siml.Helper.Tag.TimeoutResponseValue
 - uid: Syn.Bot.Siml.Helper.Tag.Trigger
   name: Trigger
   href: api/Syn.Bot.Siml.Helper.Tag.html#Syn_Bot_Siml_Helper_Tag_Trigger
@@ -3977,11 +3880,6 @@ references:
   href: api/Syn.Bot.Siml.Helper.Tag.html#Syn_Bot_Siml_Helper_Tag_UserAttribute
   commentId: F:Syn.Bot.Siml.Helper.Tag.UserAttribute
   fullName: Syn.Bot.Siml.Helper.Tag.UserAttribute
-- uid: Syn.Bot.Siml.Helper.Tag.UserEmotionValue
-  name: UserEmotionValue
-  href: api/Syn.Bot.Siml.Helper.Tag.html#Syn_Bot_Siml_Helper_Tag_UserEmotionValue
-  commentId: F:Syn.Bot.Siml.Helper.Tag.UserEmotionValue
-  fullName: Syn.Bot.Siml.Helper.Tag.UserEmotionValue
 - uid: Syn.Bot.Siml.Helper.Tag.UserMotion
   name: UserMotion
   href: api/Syn.Bot.Siml.Helper.Tag.html#Syn_Bot_Siml_Helper_Tag_UserMotion
@@ -4052,11 +3950,6 @@ references:
   href: api/Syn.Bot.Siml.Helper.Utility.html#Syn_Bot_Siml_Helper_Utility
   commentId: T:Syn.Bot.Siml.Helper.Utility
   fullName: Syn.Bot.Siml.Helper.Utility
-- uid: Syn.Bot.Siml.Helper.Utility.BestMatch(System.Text.RegularExpressions.MatchCollection,System.String)
-  name: BestMatch(MatchCollection, String)
-  href: api/Syn.Bot.Siml.Helper.Utility.html#Syn_Bot_Siml_Helper_Utility_BestMatch_System_Text_RegularExpressions_MatchCollection_System_String_
-  commentId: M:Syn.Bot.Siml.Helper.Utility.BestMatch(System.Text.RegularExpressions.MatchCollection,System.String)
-  fullName: Syn.Bot.Siml.Helper.Utility.BestMatch(System.Text.RegularExpressions.MatchCollection, System.String)
 - uid: Syn.Bot.Siml.Helper.Utility.CompressString(System.String)
   name: CompressString(String)
   href: api/Syn.Bot.Siml.Helper.Utility.html#Syn_Bot_Siml_Helper_Utility_CompressString_System_String_
@@ -4086,6 +3979,11 @@ references:
   href: api/Syn.Bot.Siml.Helper.Utility.html#Syn_Bot_Siml_Helper_Utility_DecompressString_System_String_
   commentId: M:Syn.Bot.Siml.Helper.Utility.DecompressString(System.String)
   fullName: Syn.Bot.Siml.Helper.Utility.DecompressString(System.String)
+- uid: Syn.Bot.Siml.Helper.Utility.GetBestRegexMatch(System.Text.RegularExpressions.MatchCollection,System.String)
+  name: GetBestRegexMatch(MatchCollection, String)
+  href: api/Syn.Bot.Siml.Helper.Utility.html#Syn_Bot_Siml_Helper_Utility_GetBestRegexMatch_System_Text_RegularExpressions_MatchCollection_System_String_
+  commentId: M:Syn.Bot.Siml.Helper.Utility.GetBestRegexMatch(System.Text.RegularExpressions.MatchCollection,System.String)
+  fullName: Syn.Bot.Siml.Helper.Utility.GetBestRegexMatch(System.Text.RegularExpressions.MatchCollection, System.String)
 - uid: Syn.Bot.Siml.Helper.Utility.GetBinaryString(System.String)
   name: GetBinaryString(String)
   href: api/Syn.Bot.Siml.Helper.Utility.html#Syn_Bot_Siml_Helper_Utility_GetBinaryString_System_String_
@@ -4480,11 +4378,11 @@ references:
   href: api/Syn.Bot.Siml.Interfaces.ISuggestionFormatter.html#Syn_Bot_Siml_Interfaces_ISuggestionFormatter
   commentId: T:Syn.Bot.Siml.Interfaces.ISuggestionFormatter
   fullName: Syn.Bot.Siml.Interfaces.ISuggestionFormatter
-- uid: Syn.Bot.Siml.Interfaces.ISuggestionFormatter.Format(Syn.Bot.Siml.Collections.SuggestionCollection)
-  name: Format(SuggestionCollection)
-  href: api/Syn.Bot.Siml.Interfaces.ISuggestionFormatter.html#Syn_Bot_Siml_Interfaces_ISuggestionFormatter_Format_Syn_Bot_Siml_Collections_SuggestionCollection_
-  commentId: M:Syn.Bot.Siml.Interfaces.ISuggestionFormatter.Format(Syn.Bot.Siml.Collections.SuggestionCollection)
-  fullName: Syn.Bot.Siml.Interfaces.ISuggestionFormatter.Format(Syn.Bot.Siml.Collections.SuggestionCollection)
+- uid: Syn.Bot.Siml.Interfaces.ISuggestionFormatter.Format(Syn.Bot.Siml.Collections.Suggestion)
+  name: Format(Suggestion)
+  href: api/Syn.Bot.Siml.Interfaces.ISuggestionFormatter.html#Syn_Bot_Siml_Interfaces_ISuggestionFormatter_Format_Syn_Bot_Siml_Collections_Suggestion_
+  commentId: M:Syn.Bot.Siml.Interfaces.ISuggestionFormatter.Format(Syn.Bot.Siml.Collections.Suggestion)
+  fullName: Syn.Bot.Siml.Interfaces.ISuggestionFormatter.Format(Syn.Bot.Siml.Collections.Suggestion)
 - uid: Syn.Bot.Siml.Interfaces.ITokenizer
   name: ITokenizer
   href: api/Syn.Bot.Siml.Interfaces.ITokenizer.html#Syn_Bot_Siml_Interfaces_ITokenizer
@@ -4773,6 +4671,241 @@ references:
   href: api/Syn.Bot.Siml.ScriptType.html#Syn_Bot_Siml_ScriptType_Lua
   commentId: F:Syn.Bot.Siml.ScriptType.Lua
   fullName: Syn.Bot.Siml.ScriptType.Lua
+- uid: Syn.Bot.Siml.Search
+  name: Syn.Bot.Siml.Search
+  href: api/Syn.Bot.Siml.Search.html#Syn_Bot_Siml_Search
+  commentId: N:Syn.Bot.Siml.Search
+  fullName: Syn.Bot.Siml.Search
+- uid: Syn.Bot.Siml.Search.ISearchEngine
+  name: ISearchEngine
+  href: api/Syn.Bot.Siml.Search.ISearchEngine.html#Syn_Bot_Siml_Search_ISearchEngine
+  commentId: T:Syn.Bot.Siml.Search.ISearchEngine
+  fullName: Syn.Bot.Siml.Search.ISearchEngine
+- uid: Syn.Bot.Siml.Search.ISearchEngine.GetSearchResult(Syn.Bot.Siml.Search.SearchQuery,Syn.Bot.Siml.Search.SearchItem)
+  name: GetSearchResult(SearchQuery, SearchItem)
+  href: api/Syn.Bot.Siml.Search.ISearchEngine.html#Syn_Bot_Siml_Search_ISearchEngine_GetSearchResult_Syn_Bot_Siml_Search_SearchQuery_Syn_Bot_Siml_Search_SearchItem_
+  commentId: M:Syn.Bot.Siml.Search.ISearchEngine.GetSearchResult(Syn.Bot.Siml.Search.SearchQuery,Syn.Bot.Siml.Search.SearchItem)
+  fullName: Syn.Bot.Siml.Search.ISearchEngine.GetSearchResult(Syn.Bot.Siml.Search.SearchQuery, Syn.Bot.Siml.Search.SearchItem)
+- uid: Syn.Bot.Siml.Search.SearchEngine
+  name: SearchEngine
+  href: api/Syn.Bot.Siml.Search.SearchEngine.html#Syn_Bot_Siml_Search_SearchEngine
+  commentId: T:Syn.Bot.Siml.Search.SearchEngine
+  fullName: Syn.Bot.Siml.Search.SearchEngine
+- uid: Syn.Bot.Siml.Search.SearchEngine.GetSearchResult(Syn.Bot.Siml.Search.SearchQuery,Syn.Bot.Siml.Search.SearchItem)
+  name: GetSearchResult(SearchQuery, SearchItem)
+  href: api/Syn.Bot.Siml.Search.SearchEngine.html#Syn_Bot_Siml_Search_SearchEngine_GetSearchResult_Syn_Bot_Siml_Search_SearchQuery_Syn_Bot_Siml_Search_SearchItem_
+  commentId: M:Syn.Bot.Siml.Search.SearchEngine.GetSearchResult(Syn.Bot.Siml.Search.SearchQuery,Syn.Bot.Siml.Search.SearchItem)
+  fullName: Syn.Bot.Siml.Search.SearchEngine.GetSearchResult(Syn.Bot.Siml.Search.SearchQuery, Syn.Bot.Siml.Search.SearchItem)
+- uid: Syn.Bot.Siml.Search.SearchItem
+  name: SearchItem
+  href: api/Syn.Bot.Siml.Search.SearchItem.html#Syn_Bot_Siml_Search_SearchItem
+  commentId: T:Syn.Bot.Siml.Search.SearchItem
+  fullName: Syn.Bot.Siml.Search.SearchItem
+- uid: Syn.Bot.Siml.Search.SearchItem.#ctor(Syn.Bot.Siml.SimlBot,System.String)
+  name: SearchItem(SimlBot, String)
+  href: api/Syn.Bot.Siml.Search.SearchItem.html#Syn_Bot_Siml_Search_SearchItem__ctor_Syn_Bot_Siml_SimlBot_System_String_
+  commentId: M:Syn.Bot.Siml.Search.SearchItem.#ctor(Syn.Bot.Siml.SimlBot,System.String)
+  fullName: Syn.Bot.Siml.Search.SearchItem.SearchItem(Syn.Bot.Siml.SimlBot, System.String)
+- uid: Syn.Bot.Siml.Search.SearchItem.IsAtomic
+  name: IsAtomic
+  href: api/Syn.Bot.Siml.Search.SearchItem.html#Syn_Bot_Siml_Search_SearchItem_IsAtomic
+  commentId: P:Syn.Bot.Siml.Search.SearchItem.IsAtomic
+  fullName: Syn.Bot.Siml.Search.SearchItem.IsAtomic
+- uid: Syn.Bot.Siml.Search.SearchItem.Pattern
+  name: Pattern
+  href: api/Syn.Bot.Siml.Search.SearchItem.html#Syn_Bot_Siml_Search_SearchItem_Pattern
+  commentId: P:Syn.Bot.Siml.Search.SearchItem.Pattern
+  fullName: Syn.Bot.Siml.Search.SearchItem.Pattern
+- uid: Syn.Bot.Siml.Search.SearchItem.Tokens
+  name: Tokens
+  href: api/Syn.Bot.Siml.Search.SearchItem.html#Syn_Bot_Siml_Search_SearchItem_Tokens
+  commentId: P:Syn.Bot.Siml.Search.SearchItem.Tokens
+  fullName: Syn.Bot.Siml.Search.SearchItem.Tokens
+- uid: Syn.Bot.Siml.Search.SearchMode
+  name: SearchMode
+  href: api/Syn.Bot.Siml.Search.SearchMode.html#Syn_Bot_Siml_Search_SearchMode
+  commentId: T:Syn.Bot.Siml.Search.SearchMode
+  fullName: Syn.Bot.Siml.Search.SearchMode
+- uid: Syn.Bot.Siml.Search.SearchMode.Hard
+  name: Hard
+  href: api/Syn.Bot.Siml.Search.SearchMode.html#Syn_Bot_Siml_Search_SearchMode_Hard
+  commentId: F:Syn.Bot.Siml.Search.SearchMode.Hard
+  fullName: Syn.Bot.Siml.Search.SearchMode.Hard
+- uid: Syn.Bot.Siml.Search.SearchMode.Soft
+  name: Soft
+  href: api/Syn.Bot.Siml.Search.SearchMode.html#Syn_Bot_Siml_Search_SearchMode_Soft
+  commentId: F:Syn.Bot.Siml.Search.SearchMode.Soft
+  fullName: Syn.Bot.Siml.Search.SearchMode.Soft
+- uid: Syn.Bot.Siml.Search.SearchQuery
+  name: SearchQuery
+  href: api/Syn.Bot.Siml.Search.SearchQuery.html#Syn_Bot_Siml_Search_SearchQuery
+  commentId: T:Syn.Bot.Siml.Search.SearchQuery
+  fullName: Syn.Bot.Siml.Search.SearchQuery
+- uid: Syn.Bot.Siml.Search.SearchQuery.#ctor(Syn.Bot.Siml.ChatRequest,System.String)
+  name: SearchQuery(ChatRequest, String)
+  href: api/Syn.Bot.Siml.Search.SearchQuery.html#Syn_Bot_Siml_Search_SearchQuery__ctor_Syn_Bot_Siml_ChatRequest_System_String_
+  commentId: M:Syn.Bot.Siml.Search.SearchQuery.#ctor(Syn.Bot.Siml.ChatRequest,System.String)
+  fullName: Syn.Bot.Siml.Search.SearchQuery.SearchQuery(Syn.Bot.Siml.ChatRequest, System.String)
+- uid: Syn.Bot.Siml.Search.SearchQuery.BaseScore
+  name: BaseScore
+  href: api/Syn.Bot.Siml.Search.SearchQuery.html#Syn_Bot_Siml_Search_SearchQuery_BaseScore
+  commentId: P:Syn.Bot.Siml.Search.SearchQuery.BaseScore
+  fullName: Syn.Bot.Siml.Search.SearchQuery.BaseScore
+- uid: Syn.Bot.Siml.Search.SearchQuery.CommonWords
+  name: CommonWords
+  href: api/Syn.Bot.Siml.Search.SearchQuery.html#Syn_Bot_Siml_Search_SearchQuery_CommonWords
+  commentId: P:Syn.Bot.Siml.Search.SearchQuery.CommonWords
+  fullName: Syn.Bot.Siml.Search.SearchQuery.CommonWords
+- uid: Syn.Bot.Siml.Search.SearchQuery.DefaultBaseScore
+  name: DefaultBaseScore
+  href: api/Syn.Bot.Siml.Search.SearchQuery.html#Syn_Bot_Siml_Search_SearchQuery_DefaultBaseScore
+  commentId: F:Syn.Bot.Siml.Search.SearchQuery.DefaultBaseScore
+  fullName: Syn.Bot.Siml.Search.SearchQuery.DefaultBaseScore
+- uid: Syn.Bot.Siml.Search.SearchQuery.DefaultDisorderPenalty
+  name: DefaultDisorderPenalty
+  href: api/Syn.Bot.Siml.Search.SearchQuery.html#Syn_Bot_Siml_Search_SearchQuery_DefaultDisorderPenalty
+  commentId: F:Syn.Bot.Siml.Search.SearchQuery.DefaultDisorderPenalty
+  fullName: Syn.Bot.Siml.Search.SearchQuery.DefaultDisorderPenalty
+- uid: Syn.Bot.Siml.Search.SearchQuery.DefaultMaxCount
+  name: DefaultMaxCount
+  href: api/Syn.Bot.Siml.Search.SearchQuery.html#Syn_Bot_Siml_Search_SearchQuery_DefaultMaxCount
+  commentId: F:Syn.Bot.Siml.Search.SearchQuery.DefaultMaxCount
+  fullName: Syn.Bot.Siml.Search.SearchQuery.DefaultMaxCount
+- uid: Syn.Bot.Siml.Search.SearchQuery.DisorderPenalty
+  name: DisorderPenalty
+  href: api/Syn.Bot.Siml.Search.SearchQuery.html#Syn_Bot_Siml_Search_SearchQuery_DisorderPenalty
+  commentId: P:Syn.Bot.Siml.Search.SearchQuery.DisorderPenalty
+  fullName: Syn.Bot.Siml.Search.SearchQuery.DisorderPenalty
+- uid: Syn.Bot.Siml.Search.SearchQuery.MaxCount
+  name: MaxCount
+  href: api/Syn.Bot.Siml.Search.SearchQuery.html#Syn_Bot_Siml_Search_SearchQuery_MaxCount
+  commentId: P:Syn.Bot.Siml.Search.SearchQuery.MaxCount
+  fullName: Syn.Bot.Siml.Search.SearchQuery.MaxCount
+- uid: Syn.Bot.Siml.Search.SearchQuery.Mode
+  name: Mode
+  href: api/Syn.Bot.Siml.Search.SearchQuery.html#Syn_Bot_Siml_Search_SearchQuery_Mode
+  commentId: P:Syn.Bot.Siml.Search.SearchQuery.Mode
+  fullName: Syn.Bot.Siml.Search.SearchQuery.Mode
+- uid: Syn.Bot.Siml.Search.SearchQuery.Query
+  name: Query
+  href: api/Syn.Bot.Siml.Search.SearchQuery.html#Syn_Bot_Siml_Search_SearchQuery_Query
+  commentId: P:Syn.Bot.Siml.Search.SearchQuery.Query
+  fullName: Syn.Bot.Siml.Search.SearchQuery.Query
+- uid: Syn.Bot.Siml.Search.SearchQuery.Request
+  name: Request
+  href: api/Syn.Bot.Siml.Search.SearchQuery.html#Syn_Bot_Siml_Search_SearchQuery_Request
+  commentId: P:Syn.Bot.Siml.Search.SearchQuery.Request
+  fullName: Syn.Bot.Siml.Search.SearchQuery.Request
+- uid: Syn.Bot.Siml.Search.SearchQuery.WordCount
+  name: WordCount
+  href: api/Syn.Bot.Siml.Search.SearchQuery.html#Syn_Bot_Siml_Search_SearchQuery_WordCount
+  commentId: P:Syn.Bot.Siml.Search.SearchQuery.WordCount
+  fullName: Syn.Bot.Siml.Search.SearchQuery.WordCount
+- uid: Syn.Bot.Siml.Search.SearchResult
+  name: SearchResult
+  href: api/Syn.Bot.Siml.Search.SearchResult.html#Syn_Bot_Siml_Search_SearchResult
+  commentId: T:Syn.Bot.Siml.Search.SearchResult
+  fullName: Syn.Bot.Siml.Search.SearchResult
+- uid: Syn.Bot.Siml.Search.SearchResult.#ctor
+  name: SearchResult()
+  href: api/Syn.Bot.Siml.Search.SearchResult.html#Syn_Bot_Siml_Search_SearchResult__ctor
+  commentId: M:Syn.Bot.Siml.Search.SearchResult.#ctor
+  fullName: Syn.Bot.Siml.Search.SearchResult.SearchResult()
+- uid: Syn.Bot.Siml.Search.SearchResult.#ctor(Syn.Bot.Siml.Search.SearchResult)
+  name: SearchResult(SearchResult)
+  href: api/Syn.Bot.Siml.Search.SearchResult.html#Syn_Bot_Siml_Search_SearchResult__ctor_Syn_Bot_Siml_Search_SearchResult_
+  commentId: M:Syn.Bot.Siml.Search.SearchResult.#ctor(Syn.Bot.Siml.Search.SearchResult)
+  fullName: Syn.Bot.Siml.Search.SearchResult.SearchResult(Syn.Bot.Siml.Search.SearchResult)
+- uid: Syn.Bot.Siml.Search.SearchResult.Empty
+  name: Empty
+  href: api/Syn.Bot.Siml.Search.SearchResult.html#Syn_Bot_Siml_Search_SearchResult_Empty
+  commentId: F:Syn.Bot.Siml.Search.SearchResult.Empty
+  fullName: Syn.Bot.Siml.Search.SearchResult.Empty
+- uid: Syn.Bot.Siml.Search.SearchResult.InputMatchList
+  name: InputMatchList
+  href: api/Syn.Bot.Siml.Search.SearchResult.html#Syn_Bot_Siml_Search_SearchResult_InputMatchList
+  commentId: P:Syn.Bot.Siml.Search.SearchResult.InputMatchList
+  fullName: Syn.Bot.Siml.Search.SearchResult.InputMatchList
+- uid: Syn.Bot.Siml.Search.SearchResult.Query
+  name: Query
+  href: api/Syn.Bot.Siml.Search.SearchResult.html#Syn_Bot_Siml_Search_SearchResult_Query
+  commentId: P:Syn.Bot.Siml.Search.SearchResult.Query
+  fullName: Syn.Bot.Siml.Search.SearchResult.Query
+- uid: Syn.Bot.Siml.Search.SearchResult.Score
+  name: Score
+  href: api/Syn.Bot.Siml.Search.SearchResult.html#Syn_Bot_Siml_Search_SearchResult_Score
+  commentId: P:Syn.Bot.Siml.Search.SearchResult.Score
+  fullName: Syn.Bot.Siml.Search.SearchResult.Score
+- uid: Syn.Bot.Siml.Search.SearchResult.ToString
+  name: ToString()
+  href: api/Syn.Bot.Siml.Search.SearchResult.html#Syn_Bot_Siml_Search_SearchResult_ToString
+  commentId: M:Syn.Bot.Siml.Search.SearchResult.ToString
+  fullName: Syn.Bot.Siml.Search.SearchResult.ToString()
+- uid: Syn.Bot.Siml.Search.SearchResult.Value
+  name: Value
+  href: api/Syn.Bot.Siml.Search.SearchResult.html#Syn_Bot_Siml_Search_SearchResult_Value
+  commentId: P:Syn.Bot.Siml.Search.SearchResult.Value
+  fullName: Syn.Bot.Siml.Search.SearchResult.Value
+- uid: Syn.Bot.Siml.Search.SearchToken
+  name: SearchToken
+  href: api/Syn.Bot.Siml.Search.SearchToken.html#Syn_Bot_Siml_Search_SearchToken
+  commentId: T:Syn.Bot.Siml.Search.SearchToken
+  fullName: Syn.Bot.Siml.Search.SearchToken
+- uid: Syn.Bot.Siml.Search.SearchToken.#ctor(System.String,System.String,Syn.Bot.Siml.Search.SearchTokenType)
+  name: SearchToken(String, String, SearchTokenType)
+  href: api/Syn.Bot.Siml.Search.SearchToken.html#Syn_Bot_Siml_Search_SearchToken__ctor_System_String_System_String_Syn_Bot_Siml_Search_SearchTokenType_
+  commentId: M:Syn.Bot.Siml.Search.SearchToken.#ctor(System.String,System.String,Syn.Bot.Siml.Search.SearchTokenType)
+  fullName: Syn.Bot.Siml.Search.SearchToken.SearchToken(System.String, System.String, Syn.Bot.Siml.Search.SearchTokenType)
+- uid: Syn.Bot.Siml.Search.SearchToken.GetFormatted(System.String)
+  name: GetFormatted(String)
+  href: api/Syn.Bot.Siml.Search.SearchToken.html#Syn_Bot_Siml_Search_SearchToken_GetFormatted_System_String_
+  commentId: M:Syn.Bot.Siml.Search.SearchToken.GetFormatted(System.String)
+  fullName: Syn.Bot.Siml.Search.SearchToken.GetFormatted(System.String)
+- uid: Syn.Bot.Siml.Search.SearchToken.Type
+  name: Type
+  href: api/Syn.Bot.Siml.Search.SearchToken.html#Syn_Bot_Siml_Search_SearchToken_Type
+  commentId: P:Syn.Bot.Siml.Search.SearchToken.Type
+  fullName: Syn.Bot.Siml.Search.SearchToken.Type
+- uid: Syn.Bot.Siml.Search.SearchToken.Value
+  name: Value
+  href: api/Syn.Bot.Siml.Search.SearchToken.html#Syn_Bot_Siml_Search_SearchToken_Value
+  commentId: P:Syn.Bot.Siml.Search.SearchToken.Value
+  fullName: Syn.Bot.Siml.Search.SearchToken.Value
+- uid: Syn.Bot.Siml.Search.SearchTokenType
+  name: SearchTokenType
+  href: api/Syn.Bot.Siml.Search.SearchTokenType.html#Syn_Bot_Siml_Search_SearchTokenType
+  commentId: T:Syn.Bot.Siml.Search.SearchTokenType
+  fullName: Syn.Bot.Siml.Search.SearchTokenType
+- uid: Syn.Bot.Siml.Search.SearchTokenType.ChunkBackWord
+  name: ChunkBackWord
+  href: api/Syn.Bot.Siml.Search.SearchTokenType.html#Syn_Bot_Siml_Search_SearchTokenType_ChunkBackWord
+  commentId: F:Syn.Bot.Siml.Search.SearchTokenType.ChunkBackWord
+  fullName: Syn.Bot.Siml.Search.SearchTokenType.ChunkBackWord
+- uid: Syn.Bot.Siml.Search.SearchTokenType.ChunkFrontWord
+  name: ChunkFrontWord
+  href: api/Syn.Bot.Siml.Search.SearchTokenType.html#Syn_Bot_Siml_Search_SearchTokenType_ChunkFrontWord
+  commentId: F:Syn.Bot.Siml.Search.SearchTokenType.ChunkFrontWord
+  fullName: Syn.Bot.Siml.Search.SearchTokenType.ChunkFrontWord
+- uid: Syn.Bot.Siml.Search.SearchTokenType.PriorityWord
+  name: PriorityWord
+  href: api/Syn.Bot.Siml.Search.SearchTokenType.html#Syn_Bot_Siml_Search_SearchTokenType_PriorityWord
+  commentId: F:Syn.Bot.Siml.Search.SearchTokenType.PriorityWord
+  fullName: Syn.Bot.Siml.Search.SearchTokenType.PriorityWord
+- uid: Syn.Bot.Siml.Search.SearchTokenType.Regex
+  name: Regex
+  href: api/Syn.Bot.Siml.Search.SearchTokenType.html#Syn_Bot_Siml_Search_SearchTokenType_Regex
+  commentId: F:Syn.Bot.Siml.Search.SearchTokenType.Regex
+  fullName: Syn.Bot.Siml.Search.SearchTokenType.Regex
+- uid: Syn.Bot.Siml.Search.SearchTokenType.Set
+  name: Set
+  href: api/Syn.Bot.Siml.Search.SearchTokenType.html#Syn_Bot_Siml_Search_SearchTokenType_Set
+  commentId: F:Syn.Bot.Siml.Search.SearchTokenType.Set
+  fullName: Syn.Bot.Siml.Search.SearchTokenType.Set
+- uid: Syn.Bot.Siml.Search.SearchTokenType.Word
+  name: Word
+  href: api/Syn.Bot.Siml.Search.SearchTokenType.html#Syn_Bot_Siml_Search_SearchTokenType_Word
+  commentId: F:Syn.Bot.Siml.Search.SearchTokenType.Word
+  fullName: Syn.Bot.Siml.Search.SearchTokenType.Word
 - uid: Syn.Bot.Siml.Serialization
   name: Syn.Bot.Siml.Serialization
   href: api/Syn.Bot.Siml.Serialization.html#Syn_Bot_Siml_Serialization
@@ -4937,11 +5070,6 @@ references:
   href: api/Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot_Filters
   commentId: P:Syn.Bot.Siml.SimlBot.Filters
   fullName: Syn.Bot.Siml.SimlBot.Filters
-- uid: Syn.Bot.Siml.SimlBot.GetSuggestions(Syn.Bot.Siml.SuggestionQuery)
-  name: GetSuggestions(SuggestionQuery)
-  href: api/Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot_GetSuggestions_Syn_Bot_Siml_SuggestionQuery_
-  commentId: M:Syn.Bot.Siml.SimlBot.GetSuggestions(Syn.Bot.Siml.SuggestionQuery)
-  fullName: Syn.Bot.Siml.SimlBot.GetSuggestions(Syn.Bot.Siml.SuggestionQuery)
 - uid: Syn.Bot.Siml.SimlBot.GraphMaster
   name: GraphMaster
   href: api/Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot_GraphMaster
@@ -5012,6 +5140,16 @@ references:
   href: api/Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot_Parsers
   commentId: P:Syn.Bot.Siml.SimlBot.Parsers
   fullName: Syn.Bot.Siml.SimlBot.Parsers
+- uid: Syn.Bot.Siml.SimlBot.Raise(System.String)
+  name: Raise(String)
+  href: api/Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot_Raise_System_String_
+  commentId: M:Syn.Bot.Siml.SimlBot.Raise(System.String)
+  fullName: Syn.Bot.Siml.SimlBot.Raise(System.String)
+- uid: Syn.Bot.Siml.SimlBot.Raise(System.String,Syn.Bot.Siml.BotUser)
+  name: Raise(String, BotUser)
+  href: api/Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot_Raise_System_String_Syn_Bot_Siml_BotUser_
+  commentId: M:Syn.Bot.Siml.SimlBot.Raise(System.String,Syn.Bot.Siml.BotUser)
+  fullName: Syn.Bot.Siml.SimlBot.Raise(System.String, Syn.Bot.Siml.BotUser)
 - uid: Syn.Bot.Siml.SimlBot.RandomCollection
   name: RandomCollection
   href: api/Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot_RandomCollection
@@ -5037,6 +5175,11 @@ references:
   href: api/Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot_ScriptManager
   commentId: P:Syn.Bot.Siml.SimlBot.ScriptManager
   fullName: Syn.Bot.Siml.SimlBot.ScriptManager
+- uid: Syn.Bot.Siml.SimlBot.SearchEngine
+  name: SearchEngine
+  href: api/Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot_SearchEngine
+  commentId: P:Syn.Bot.Siml.SimlBot.SearchEngine
+  fullName: Syn.Bot.Siml.SimlBot.SearchEngine
 - uid: Syn.Bot.Siml.SimlBot.Sets
   name: Sets
   href: api/Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot_Sets
@@ -5052,11 +5195,11 @@ references:
   href: api/Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot_Stats
   commentId: P:Syn.Bot.Siml.SimlBot.Stats
   fullName: Syn.Bot.Siml.SimlBot.Stats
-- uid: Syn.Bot.Siml.SimlBot.SuggestionFormatter
-  name: SuggestionFormatter
-  href: api/Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot_SuggestionFormatter
-  commentId: P:Syn.Bot.Siml.SimlBot.SuggestionFormatter
-  fullName: Syn.Bot.Siml.SimlBot.SuggestionFormatter
+- uid: Syn.Bot.Siml.SimlBot.Suggesting
+  name: Suggesting
+  href: api/Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot_Suggesting
+  commentId: E:Syn.Bot.Siml.SimlBot.Suggesting
+  fullName: Syn.Bot.Siml.SimlBot.Suggesting
 - uid: Syn.Bot.Siml.SimlBot.SynBot(Syn.Bot.Siml.BotConfiguration)
   name: SynBot(BotConfiguration)
   href: api/Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot_SynBot_Syn_Bot_Siml_BotConfiguration_
@@ -5102,6 +5245,11 @@ references:
   href: api/Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot_Version
   commentId: P:Syn.Bot.Siml.SimlBot.Version
   fullName: Syn.Bot.Siml.SimlBot.Version
+- uid: Syn.Bot.Siml.SimlBot.Vocabulary
+  name: Vocabulary
+  href: api/Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot_Vocabulary
+  commentId: P:Syn.Bot.Siml.SimlBot.Vocabulary
+  fullName: Syn.Bot.Siml.SimlBot.Vocabulary
 - uid: Syn.Bot.Siml.SimlSpecification
   name: SimlSpecification
   href: api/Syn.Bot.Siml.SimlSpecification.html#Syn_Bot_Siml_SimlSpecification
@@ -5157,106 +5305,6 @@ references:
   href: api/Syn.Bot.Siml.StackFrame.html#Syn_Bot_Siml_StackFrame_Trigger
   commentId: P:Syn.Bot.Siml.StackFrame.Trigger
   fullName: Syn.Bot.Siml.StackFrame.Trigger
-- uid: Syn.Bot.Siml.Suggestion
-  name: Suggestion
-  href: api/Syn.Bot.Siml.Suggestion.html#Syn_Bot_Siml_Suggestion
-  commentId: T:Syn.Bot.Siml.Suggestion
-  fullName: Syn.Bot.Siml.Suggestion
-- uid: Syn.Bot.Siml.Suggestion.#ctor(System.Double,System.String)
-  name: Suggestion(Double, String)
-  href: api/Syn.Bot.Siml.Suggestion.html#Syn_Bot_Siml_Suggestion__ctor_System_Double_System_String_
-  commentId: M:Syn.Bot.Siml.Suggestion.#ctor(System.Double,System.String)
-  fullName: Syn.Bot.Siml.Suggestion.Suggestion(System.Double, System.String)
-- uid: Syn.Bot.Siml.Suggestion.Similarity
-  name: Similarity
-  href: api/Syn.Bot.Siml.Suggestion.html#Syn_Bot_Siml_Suggestion_Similarity
-  commentId: P:Syn.Bot.Siml.Suggestion.Similarity
-  fullName: Syn.Bot.Siml.Suggestion.Similarity
-- uid: Syn.Bot.Siml.Suggestion.ToString
-  name: ToString()
-  href: api/Syn.Bot.Siml.Suggestion.html#Syn_Bot_Siml_Suggestion_ToString
-  commentId: M:Syn.Bot.Siml.Suggestion.ToString
-  fullName: Syn.Bot.Siml.Suggestion.ToString()
-- uid: Syn.Bot.Siml.Suggestion.Value
-  name: Value
-  href: api/Syn.Bot.Siml.Suggestion.html#Syn_Bot_Siml_Suggestion_Value
-  commentId: P:Syn.Bot.Siml.Suggestion.Value
-  fullName: Syn.Bot.Siml.Suggestion.Value
-- uid: Syn.Bot.Siml.SuggestionQuery
-  name: SuggestionQuery
-  href: api/Syn.Bot.Siml.SuggestionQuery.html#Syn_Bot_Siml_SuggestionQuery
-  commentId: T:Syn.Bot.Siml.SuggestionQuery
-  fullName: Syn.Bot.Siml.SuggestionQuery
-- uid: Syn.Bot.Siml.SuggestionQuery.#ctor(System.String,Syn.Bot.Siml.SimlBot)
-  name: SuggestionQuery(String, SimlBot)
-  href: api/Syn.Bot.Siml.SuggestionQuery.html#Syn_Bot_Siml_SuggestionQuery__ctor_System_String_Syn_Bot_Siml_SimlBot_
-  commentId: M:Syn.Bot.Siml.SuggestionQuery.#ctor(System.String,Syn.Bot.Siml.SimlBot)
-  fullName: Syn.Bot.Siml.SuggestionQuery.SuggestionQuery(System.String, Syn.Bot.Siml.SimlBot)
-- uid: Syn.Bot.Siml.SuggestionQuery.Algorithm
-  name: Algorithm
-  href: api/Syn.Bot.Siml.SuggestionQuery.html#Syn_Bot_Siml_SuggestionQuery_Algorithm
-  commentId: P:Syn.Bot.Siml.SuggestionQuery.Algorithm
-  fullName: Syn.Bot.Siml.SuggestionQuery.Algorithm
-- uid: Syn.Bot.Siml.SuggestionQuery.Bot
-  name: Bot
-  href: api/Syn.Bot.Siml.SuggestionQuery.html#Syn_Bot_Siml_SuggestionQuery_Bot
-  commentId: P:Syn.Bot.Siml.SuggestionQuery.Bot
-  fullName: Syn.Bot.Siml.SuggestionQuery.Bot
-- uid: Syn.Bot.Siml.SuggestionQuery.DefaultDrop
-  name: DefaultDrop
-  href: api/Syn.Bot.Siml.SuggestionQuery.html#Syn_Bot_Siml_SuggestionQuery_DefaultDrop
-  commentId: F:Syn.Bot.Siml.SuggestionQuery.DefaultDrop
-  fullName: Syn.Bot.Siml.SuggestionQuery.DefaultDrop
-- uid: Syn.Bot.Siml.SuggestionQuery.DefaultGate
-  name: DefaultGate
-  href: api/Syn.Bot.Siml.SuggestionQuery.html#Syn_Bot_Siml_SuggestionQuery_DefaultGate
-  commentId: F:Syn.Bot.Siml.SuggestionQuery.DefaultGate
-  fullName: Syn.Bot.Siml.SuggestionQuery.DefaultGate
-- uid: Syn.Bot.Siml.SuggestionQuery.DefaultSimilarity
-  name: DefaultSimilarity
-  href: api/Syn.Bot.Siml.SuggestionQuery.html#Syn_Bot_Siml_SuggestionQuery_DefaultSimilarity
-  commentId: F:Syn.Bot.Siml.SuggestionQuery.DefaultSimilarity
-  fullName: Syn.Bot.Siml.SuggestionQuery.DefaultSimilarity
-- uid: Syn.Bot.Siml.SuggestionQuery.Drop
-  name: Drop
-  href: api/Syn.Bot.Siml.SuggestionQuery.html#Syn_Bot_Siml_SuggestionQuery_Drop
-  commentId: P:Syn.Bot.Siml.SuggestionQuery.Drop
-  fullName: Syn.Bot.Siml.SuggestionQuery.Drop
-- uid: Syn.Bot.Siml.SuggestionQuery.Gate
-  name: Gate
-  href: api/Syn.Bot.Siml.SuggestionQuery.html#Syn_Bot_Siml_SuggestionQuery_Gate
-  commentId: P:Syn.Bot.Siml.SuggestionQuery.Gate
-  fullName: Syn.Bot.Siml.SuggestionQuery.Gate
-- uid: Syn.Bot.Siml.SuggestionQuery.IgnoreList
-  name: IgnoreList
-  href: api/Syn.Bot.Siml.SuggestionQuery.html#Syn_Bot_Siml_SuggestionQuery_IgnoreList
-  commentId: P:Syn.Bot.Siml.SuggestionQuery.IgnoreList
-  fullName: Syn.Bot.Siml.SuggestionQuery.IgnoreList
-- uid: Syn.Bot.Siml.SuggestionQuery.IsEqual(Syn.Bot.Siml.SuggestionQuery)
-  name: IsEqual(SuggestionQuery)
-  href: api/Syn.Bot.Siml.SuggestionQuery.html#Syn_Bot_Siml_SuggestionQuery_IsEqual_Syn_Bot_Siml_SuggestionQuery_
-  commentId: M:Syn.Bot.Siml.SuggestionQuery.IsEqual(Syn.Bot.Siml.SuggestionQuery)
-  fullName: Syn.Bot.Siml.SuggestionQuery.IsEqual(Syn.Bot.Siml.SuggestionQuery)
-- uid: Syn.Bot.Siml.SuggestionQuery.Similarity
-  name: Similarity
-  href: api/Syn.Bot.Siml.SuggestionQuery.html#Syn_Bot_Siml_SuggestionQuery_Similarity
-  commentId: P:Syn.Bot.Siml.SuggestionQuery.Similarity
-  fullName: Syn.Bot.Siml.SuggestionQuery.Similarity
-- uid: Syn.Bot.Siml.SuggestionQuery.Strips
-  name: Strips
-  href: api/Syn.Bot.Siml.SuggestionQuery.html#Syn_Bot_Siml_SuggestionQuery_Strips
-  commentId: P:Syn.Bot.Siml.SuggestionQuery.Strips
-  fullName: Syn.Bot.Siml.SuggestionQuery.Strips
-- uid: Syn.Bot.Siml.SuggestionQuery.ToString
-  name: ToString()
-  href: api/Syn.Bot.Siml.SuggestionQuery.html#Syn_Bot_Siml_SuggestionQuery_ToString
-  commentId: M:Syn.Bot.Siml.SuggestionQuery.ToString
-  fullName: Syn.Bot.Siml.SuggestionQuery.ToString()
-- uid: Syn.Bot.Siml.SuggestionQuery.UserMessage
-  name: UserMessage
-  href: api/Syn.Bot.Siml.SuggestionQuery.html#Syn_Bot_Siml_SuggestionQuery_UserMessage
-  commentId: P:Syn.Bot.Siml.SuggestionQuery.UserMessage
-  fullName: Syn.Bot.Siml.SuggestionQuery.UserMessage
 - uid: Syn.Bot.Siml.UserSettings
   name: UserSettings
   href: api/Syn.Bot.Siml.UserSettings.html#Syn_Bot_Siml_UserSettings
@@ -6214,11 +6262,11 @@ references:
   href: api/Syn.Bot.Utility.Format.WebSuggestionFormatter.html#Syn_Bot_Utility_Format_WebSuggestionFormatter
   commentId: T:Syn.Bot.Utility.Format.WebSuggestionFormatter
   fullName: Syn.Bot.Utility.Format.WebSuggestionFormatter
-- uid: Syn.Bot.Utility.Format.WebSuggestionFormatter.Format(Syn.Bot.Siml.Collections.SuggestionCollection)
-  name: Format(SuggestionCollection)
-  href: api/Syn.Bot.Utility.Format.WebSuggestionFormatter.html#Syn_Bot_Utility_Format_WebSuggestionFormatter_Format_Syn_Bot_Siml_Collections_SuggestionCollection_
-  commentId: M:Syn.Bot.Utility.Format.WebSuggestionFormatter.Format(Syn.Bot.Siml.Collections.SuggestionCollection)
-  fullName: Syn.Bot.Utility.Format.WebSuggestionFormatter.Format(Syn.Bot.Siml.Collections.SuggestionCollection)
+- uid: Syn.Bot.Utility.Format.WebSuggestionFormatter.Format(Syn.Bot.Siml.Collections.Suggestion)
+  name: Format(Suggestion)
+  href: api/Syn.Bot.Utility.Format.WebSuggestionFormatter.html#Syn_Bot_Utility_Format_WebSuggestionFormatter_Format_Syn_Bot_Siml_Collections_Suggestion_
+  commentId: M:Syn.Bot.Utility.Format.WebSuggestionFormatter.Format(Syn.Bot.Siml.Collections.Suggestion)
+  fullName: Syn.Bot.Utility.Format.WebSuggestionFormatter.Format(Syn.Bot.Siml.Collections.Suggestion)
 - uid: Syn.Bot.Utility.ProjectManager
   name: ProjectManager
   href: api/Syn.Bot.Utility.ProjectManager.html#Syn_Bot_Utility_ProjectManager
@@ -7681,6 +7729,26 @@ references:
   name.vb: Put(Of TKey, TValue)(IDictionary(Of TKey, TValue), TKey, TValue)
   fullName: Syn.Utility.Extensions.DictionaryExtensions.Put<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, TKey, TValue)
   fullName.vb: Syn.Utility.Extensions.DictionaryExtensions.Put(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), TKey, TValue)
+- uid: Syn.Utility.Extensions.DoubleExtensions
+  name: DoubleExtensions
+  href: api/Syn.Utility.Extensions.DoubleExtensions.html#Syn_Utility_Extensions_DoubleExtensions
+  commentId: T:Syn.Utility.Extensions.DoubleExtensions
+  fullName: Syn.Utility.Extensions.DoubleExtensions
+- uid: Syn.Utility.Extensions.DoubleExtensions.IsEqualTo(System.Double,System.Double)
+  name: IsEqualTo(Double, Double)
+  href: api/Syn.Utility.Extensions.DoubleExtensions.html#Syn_Utility_Extensions_DoubleExtensions_IsEqualTo_System_Double_System_Double_
+  commentId: M:Syn.Utility.Extensions.DoubleExtensions.IsEqualTo(System.Double,System.Double)
+  fullName: Syn.Utility.Extensions.DoubleExtensions.IsEqualTo(System.Double, System.Double)
+- uid: Syn.Utility.Extensions.DoubleExtensions.IsNotEqualTo(System.Double,System.Double)
+  name: IsNotEqualTo(Double, Double)
+  href: api/Syn.Utility.Extensions.DoubleExtensions.html#Syn_Utility_Extensions_DoubleExtensions_IsNotEqualTo_System_Double_System_Double_
+  commentId: M:Syn.Utility.Extensions.DoubleExtensions.IsNotEqualTo(System.Double,System.Double)
+  fullName: Syn.Utility.Extensions.DoubleExtensions.IsNotEqualTo(System.Double, System.Double)
+- uid: Syn.Utility.Extensions.DoubleExtensions.IsZero(System.Double)
+  name: IsZero(Double)
+  href: api/Syn.Utility.Extensions.DoubleExtensions.html#Syn_Utility_Extensions_DoubleExtensions_IsZero_System_Double_
+  commentId: M:Syn.Utility.Extensions.DoubleExtensions.IsZero(System.Double)
+  fullName: Syn.Utility.Extensions.DoubleExtensions.IsZero(System.Double)
 - uid: Syn.Utility.Extensions.ImageExtensions
   name: ImageExtensions
   href: api/Syn.Utility.Extensions.ImageExtensions.html#Syn_Utility_Extensions_ImageExtensions

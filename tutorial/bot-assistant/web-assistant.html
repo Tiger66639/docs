@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Syn Bot Assistant  - Syn Developer Network</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Syn Bot Assistant ">
+    <meta name="generator" content="docfx 2.4.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:rel" content="../../">
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+    ga('create', 'UA-39941606-1', 'auto');
+    ga('send', 'pageview');
+  
+  </script>
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="syn-bot-assistant">Syn Bot Assistant</h1>
+              
+<p>Using the <em>Syn Bot Web Assistant</em> library developers can easily add a Virtual Chat agent to their ASP.NET websites. This is achieved by using the class library <code>Syn.Bot.Assistant</code> in your project and requires that you are working on a ASP.NET website which targets .NET Framework 4.5 or above.</p>
+<p><img src="images/web-assistant.jpg" alt="Web Assistant Image"></p>
+<p><img src="images/web-assistant-launch.jpg" alt="Web Assistant Image"></p>
+<p>The best part of using the library is that it automatically provides a service URL that can be used to fetch the CSS, JavaScript and HTML elements for displaying and interacting with your Virtual Chat Agent dynamically.</p>
+<h2 id="how-it-works">How it works</h2>
+<p>(Simple Hack)
+A web form is added to your ASP website project and all the  HTML elements are removed from the .aspx page except for the first line that defines CodeFile to be used. The name of this aspx page is set to ChatService.aspx and will be used as a service URL to interact with the underlying Chatbot which is powered by SIML. The same page will also serve as the URL to fetch the CSS, JavaScript and HTML elements to be included in your web page once its loaded. Inside the CodeFile we define a static constructor that will initialize the default values for the Chat agent to use. Finally in the page load constructor we write 1 line of code that passes the Request and Response objects to the ChatAgent which in turn evaluates the URL variables and returns the appropriate response with the proper header.</p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>ASP.NET Website targeting .NET Framework 4.5 or above</li>
+<li>Your website should not be running on a shared-hosting basis.</li>
+<li>32MB or more RAM available on server side</li>
+</ul>
+<h2 id="getting-started">Getting Started</h2>
+<p>Before you begin download the Automated-Live-Chat-Demo project files from <a href="http://github.syn.co.in">GitHub</a>. Throughout this tutorial we will assume that you are working on an ASP.NET project using Visual Studio 2013 or above</p>
+<h3 id="importing-the-nuget-package">Importing the NuGet Package</h3>
+<p>Click on <strong>Tools-&gt; NuGet Package Manager -&gt; Package Manager Console</strong> and type Install-Package SynChat. Once done the required class library along with SynBot portable class library will be added as a reference in your project.</p>
+<h3 id="creating-the-service-url-chatserviceaspx">Creating the Service URL (ChatService.aspx)</h3>
+<p>Now right click on your project <strong>Add-&gt;New Item…</strong> and select Web Form. Name your web form “ChatService.aspx“. This page will now serve as the service URL. Ofcourse you can create an asmx service as well but for demonstration we will stick with this simple hack.</p>
+<p>Double click on the <code>ChatService.aspx</code> item in the solution explorer and remove every line except the first line which should look something like the following</p>
+<pre><code class="lang-csharp">&lt;%@ Page Language=&quot;C#&quot; AutoEventWireup=&quot;true&quot; CodeFile=&quot;ChatService.aspx.cs&quot; Inherits=&quot;Automated_Live_Chat_Demo.ChatService&quot; %&gt;
+</code></pre><p>Now right click on <code>ChatService.aspx</code> and paste the following code:</p>
+<pre><code class="lang-csharp">using System;
+using Syn.Automation.Chat;
+
+namespace YOUR_PROJECT_NAMESPACE
+{
+    public partial class ChatService : System.Web.UI.Page
+    {
+
+        private static readonly ChatAgent Agent;
+        static ChatService()
+        {
+            Agent = new ChatAgent
+            {
+                ServiceUrl = &quot;http://YOUR_WEBSITE_URL/ChatService.aspx&quot;,
+                ResourceUrl = &quot;http://YOUR_WEBSITE_URL/Assistant&quot;,
+                Name = &quot;Maya&quot;,
+                Title = &quot;Syn Web Assistant&quot;,
+                Intro = &quot;Hi I am Maya, I am here to help you with your questions.&quot;,
+                InputText = &quot;What can I help you with?&quot;,
+                Footer = &quot;Syn&quot;,
+                FooterLink = &quot;http://www.syn.co.in&quot;,
+                RestartId = &quot;restart&quot;,
+                PackageFileName = &quot;Package.txt&quot;
+            };
+        }
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            Agent.Process(Request, Response);
+        }
+    }
+}
+</code></pre><p>In the above code replace <code>YOUR_PROJECT_NAMESPACE</code> and <code>YOUR_WEBSITE_URL</code> with their respective values. You can also change the properties like Name, Footer, Title etc to suit your needs as the aforementioned values are just for clarification.</p>
+<h3 id="placing-the-required-files">Placing the required files</h3>
+<p>Now that you have created your service URL its time that you placed the required images and the package in the right directory. To do so right click on your project <strong>Add-&gt;New Folder</strong> and name the folder <code>Assistant</code>.</p>
+<p>Now that you have you created the <code>Assistant</code> folder add the image files found in the Demo Project by right clicking on the Assistant folder you created and selecting <strong>Add-&gt;Existing Item…</strong></p>
+<p>Once added we will move to adding a knowledge base to our Chat Agent using Chatbot Studio. If you haven’t installed Syn Chatbot Studio you can download it from here. Moreover a quick start tutorial on writing an SIML knowledge base using Chatbot Studio can be found here</p>
+<p>(Assuming that you have written your first SIML Bot using Chatbot Studio)</p>
+<p><img src="images/package-extension.jpg" alt="Package Extension Image"></p>
+<p>he next step is to export your SIML Project to an SIML Package. To do so click <strong>Project-&gt;Export</strong> to Package in Chatbot Studio and type the file name as <code>Package.txt</code> ( With the double quotes to ensure that the file extension will be <code>.Txt</code> and <strong>not</strong> <code>.SimlPk</code>). The reason why the file should have the .txt extension and not the default .simlpk extension is because the ChatService.aspx page will load the file from URL and not the project directory.</p>
+<h3 id="finalizing">Finalizing</h3>
+<p>Now that we have added the ChatService.aspx along with its code and have added all the files required in the right directory the last step is to add a simple JavaScript to the master page of your ASP Website Project so that the assistant is visible on every page of your website. To do so paste the following code just before the </form> tag in your master page.</p>
+<pre><code class="lang-html">&lt;script type=&quot;text/javascript&quot;&gt;
+    (function () {
+        var scriptElement = document.createElement(&#39;script&#39;);
+        scriptElement.type = &#39;text/javascript&#39;;
+        scriptElement.async = true;
+        scriptElement.src = &#39;http://YOUR_WEBSITE_URL/ChatService.aspx?Get=Script&#39;;
+        (document.getElementsByTagName(&#39;head&#39;)[0] || document.getElementsByTagName(&#39;body&#39;)[0]).appendChild(scriptElement);
+    })();
+&lt;/script&gt;
+</code></pre><p>In the above code replace <code>YOUR_WEBSITE_URL</code> with its respective value say <em>www.example.com</em></p>
+<h2 id="tips-and-tricks">Tips and Tricks</h2>
+<ul>
+<li>You can replace the Avatar with your own custom avatar but make sure that you use the <code>.png file</code> format if your wish to have a transparent background and also use the exact resolution as used by the avatar images in the demo project.</li>
+<li>You can map <code>.simlpk</code> extension in IIS to text/plain if you do not wish to rename the file extension to <code>.txt</code> every time you upload a new SIML Package to the Assistant folder.</li>
+<li>If you add an updated SIML Package to the Assistant folder, use the URL <code>http://YOUR_WEBSITE_URL/ChatService.aspx?Get=restart</code> to restart the Chat Agent with its new knowledge base.</li>
+</ul>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2016 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

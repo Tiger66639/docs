@@ -93,10 +93,41 @@
               <div class="inheritance">
                 <h5>Inheritance</h5>
                   <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><span class="xref">SuggestionQuery</span></div>
+                  <div class="level1"><a class="xref" href="Syn.Bot.Siml.Search.SearchQuery.html#Syn_Bot_Siml_Search_SearchQuery">SearchQuery</a></div>
+                  <div class="level2"><span class="xref">SuggestionQuery</span></div>
               </div>
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
+                <div>
+                  <a class="xref" href="Syn.Bot.Siml.Search.SearchQuery.html#Syn_Bot_Siml_Search_SearchQuery_DefaultMinimumScore">SearchQuery.DefaultMinimumScore</a>
+                </div>
+                <div>
+                  <a class="xref" href="Syn.Bot.Siml.Search.SearchQuery.html#Syn_Bot_Siml_Search_SearchQuery_DefaultDisorderPenalty">SearchQuery.DefaultDisorderPenalty</a>
+                </div>
+                <div>
+                  <a class="xref" href="Syn.Bot.Siml.Search.SearchQuery.html#Syn_Bot_Siml_Search_SearchQuery_DefaultDrop">SearchQuery.DefaultDrop</a>
+                </div>
+                <div>
+                  <a class="xref" href="Syn.Bot.Siml.Search.SearchQuery.html#Syn_Bot_Siml_Search_SearchQuery_DefaultGate">SearchQuery.DefaultGate</a>
+                </div>
+                <div>
+                  <a class="xref" href="Syn.Bot.Siml.Search.SearchQuery.html#Syn_Bot_Siml_Search_SearchQuery_Request">SearchQuery.Request</a>
+                </div>
+                <div>
+                  <a class="xref" href="Syn.Bot.Siml.Search.SearchQuery.html#Syn_Bot_Siml_Search_SearchQuery_Phrase">SearchQuery.Phrase</a>
+                </div>
+                <div>
+                  <a class="xref" href="Syn.Bot.Siml.Search.SearchQuery.html#Syn_Bot_Siml_Search_SearchQuery_MinimumScore">SearchQuery.MinimumScore</a>
+                </div>
+                <div>
+                  <a class="xref" href="Syn.Bot.Siml.Search.SearchQuery.html#Syn_Bot_Siml_Search_SearchQuery_DisorderPenalty">SearchQuery.DisorderPenalty</a>
+                </div>
+                <div>
+                  <a class="xref" href="Syn.Bot.Siml.Search.SearchQuery.html#Syn_Bot_Siml_Search_SearchQuery_Drop">SearchQuery.Drop</a>
+                </div>
+                <div>
+                  <a class="xref" href="Syn.Bot.Siml.Search.SearchQuery.html#Syn_Bot_Siml_Search_SearchQuery_Gate">SearchQuery.Gate</a>
+                </div>
                 <div>
                   <span class="xref">System.Object.Equals(System.Object)</span>
                 </div>
@@ -115,21 +146,24 @@
                 <div>
                   <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
                 </div>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
               </div>
               <h6><strong>Namespace</strong>:Syn.Bot.Siml</h6>
               <h6><strong>Assembly</strong>:Syn.Bot.dll</h6>
               <h5 id="Syn_Bot_Siml_SuggestionQuery_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class SuggestionQuery</code></pre>
+                <pre><code class="lang-csharp hljs">public class SuggestionQuery : SearchQuery</code></pre>
               </div>
               <h3 id="constructors">Constructors
               </h3>
-              <h4 id="Syn_Bot_Siml_SuggestionQuery__ctor_System_String_Syn_Bot_Siml_SimlBot_" data-uid="Syn.Bot.Siml.SuggestionQuery.#ctor(System.String,Syn.Bot.Siml.SimlBot)">SuggestionQuery(String, SimlBot)</h4>
+              <h4 id="Syn_Bot_Siml_SuggestionQuery__ctor_Syn_Bot_Siml_ChatRequest_System_String_" data-uid="Syn.Bot.Siml.SuggestionQuery.#ctor(Syn.Bot.Siml.ChatRequest,System.String)">SuggestionQuery(ChatRequest, String)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public SuggestionQuery(string message, SimlBot bot)</code></pre>
+                <pre><code class="lang-csharp hljs">public SuggestionQuery(ChatRequest request, string phrase)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -142,328 +176,17 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><em>message</em></td>
+                    <td><a class="xref" href="Syn.Bot.Siml.ChatRequest.html#Syn_Bot_Siml_ChatRequest">ChatRequest</a></td>
+                    <td><em>request</em></td>
                     <td></td>
                   </tr>
-                  <tr>
-                    <td><a class="xref" href="Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot">SimlBot</a></td>
-                    <td><em>bot</em></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h3 id="fields">Fields
-              </h3>
-              <h4 id="Syn_Bot_Siml_SuggestionQuery_DefaultDrop" data-uid="Syn.Bot.Siml.SuggestionQuery.DefaultDrop">DefaultDrop</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public const double DefaultDrop = 0.2</code></pre>
-              </div>
-              <h5 class="fieldValue">Field Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Double</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Syn_Bot_Siml_SuggestionQuery_DefaultGate" data-uid="Syn.Bot.Siml.SuggestionQuery.DefaultGate">DefaultGate</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public const int DefaultGate = 10</code></pre>
-              </div>
-              <h5 class="fieldValue">Field Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Int32</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Syn_Bot_Siml_SuggestionQuery_DefaultSimilarity" data-uid="Syn.Bot.Siml.SuggestionQuery.DefaultSimilarity">DefaultSimilarity</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public const double DefaultSimilarity = 0.6</code></pre>
-              </div>
-              <h5 class="fieldValue">Field Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Double</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h3 id="properties">Properties
-              </h3>
-              <h4 id="Syn_Bot_Siml_SuggestionQuery_Algorithm" data-uid="Syn.Bot.Siml.SuggestionQuery.Algorithm">Algorithm</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public ComparisonAlgorithm Algorithm { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Syn.Bot.Siml.Helper.ComparisonAlgorithm.html#Syn_Bot_Siml_Helper_ComparisonAlgorithm">ComparisonAlgorithm</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Syn_Bot_Siml_SuggestionQuery_Bot" data-uid="Syn.Bot.Siml.SuggestionQuery.Bot">Bot</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public SimlBot Bot { get; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot">SimlBot</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Syn_Bot_Siml_SuggestionQuery_Drop" data-uid="Syn.Bot.Siml.SuggestionQuery.Drop">Drop</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public double Drop { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Double</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Syn_Bot_Siml_SuggestionQuery_Gate" data-uid="Syn.Bot.Siml.SuggestionQuery.Gate">Gate</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public int Gate { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Int32</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Syn_Bot_Siml_SuggestionQuery_IgnoreList" data-uid="Syn.Bot.Siml.SuggestionQuery.IgnoreList">IgnoreList</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public IEnumerable&lt;string&gt; IgnoreList { get; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Syn_Bot_Siml_SuggestionQuery_Similarity" data-uid="Syn.Bot.Siml.SuggestionQuery.Similarity">Similarity</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public double Similarity { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Double</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Syn_Bot_Siml_SuggestionQuery_Strips" data-uid="Syn.Bot.Siml.SuggestionQuery.Strips">Strips</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public IEnumerable&lt;string&gt; Strips { get; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Syn_Bot_Siml_SuggestionQuery_UserMessage" data-uid="Syn.Bot.Siml.SuggestionQuery.UserMessage">UserMessage</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string UserMessage { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
+                    <td><em>phrase</em></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
-              <h3 id="methods">Methods
-              </h3>
-              <h4 id="Syn_Bot_Siml_SuggestionQuery_IsEqual_Syn_Bot_Siml_SuggestionQuery_" data-uid="Syn.Bot.Siml.SuggestionQuery.IsEqual(Syn.Bot.Siml.SuggestionQuery)">IsEqual(SuggestionQuery)</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public bool IsEqual(SuggestionQuery query)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Syn.Bot.Siml.SuggestionQuery.html#Syn_Bot_Siml_SuggestionQuery">SuggestionQuery</a></td>
-                    <td><em>query</em></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Boolean</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Syn_Bot_Siml_SuggestionQuery_ToString" data-uid="Syn.Bot.Siml.SuggestionQuery.ToString">ToString()</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
-              </div>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="overrides">Overrides</h5>
-              <div><span class="xref">System.Object.ToString()</span></div>
             </article>
           </div>
           

@@ -84,12 +84,12 @@
             <article class="content wrap" id="_content" data-uid="">
               <h1 id="working-with-maps">Working with Maps</h1>
               
-<p>Syn Bot can dynamically create an <code>XDocument</code> file at any point during runt-time to allow developers to store the current state of the Maps used by the Bot. Maps usually don’t change during run-time but at will a developer can update or change the values.</p>
+<p><em>Syn Bot</em> can dynamically create an <code>XDocument</code> file at any point during run-time to allow developers to store the current state of the Maps used by the Bot. Maps usually don’t change during run-time but at will a developer can update or change the values.</p>
 <p>To save Maps to disk you can use the <code>GetDocument</code> method available on the <code>MapCollection</code> as shown below.</p>
 <p>In the code below simlBot is a pre-defined <code>SimlBot</code> instance. Just get the <code>XDocument</code> using the <code>GetDocument</code> method and then save the document file as a string to any file with the <code>.siml</code> extension.</p>
 <pre><code class="lang-csharp">var simlMapsDocument = simlBot.Maps.GetDocument();
 File.WriteAllText(&quot;Maps.siml&quot;, simlMapsDocument.ToString());
-</code></pre><blockquote><p>Certain (Functional or Volatile) types of MapItems declared explicitly by a developer are designed to just stay in memory instead of being part of the serialization process. However all external classes (including the in-built <code>MapItem</code> class ) that implement the IMapItem interface will be considered during serialization.</p>
+</code></pre><blockquote><p>All (Functional or Volatile) types of MapItems declared explicitly by a developer are designed to just stay in memory and are not considered during the serialization process. However all external classes (including the in-built <code>MapItem</code> class ) that implement the IMapItem interface will be considered during serialization.</p>
 </blockquote>
 
             </article>
