@@ -8,7 +8,7 @@
     <title>Phrase  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Phrase ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.6.1.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -82,9 +82,9 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="phrase">Phrase</h1>
+              <h1 id="phrase" sourcefile="tutorial/siml/elements/phrase.md" sourcestartlinenumber="1" sourceendlinenumber="1">Phrase</h1>
               
-<table>
+<table sourcefile="tutorial/siml/elements/phrase.md" sourcestartlinenumber="3" sourceendlinenumber="8">
 <thead>
 <tr>
 <th><strong>Annotation</strong></th>
@@ -110,10 +110,10 @@
 </tr>
 </tbody>
 </table>
-<p>Phrase is a sibling of <code>Random</code> element. The key difference between a Phrase element and a Random element is that Phrase element tries to match the output to user input. Lets see an example for a better clarification.</p>
-<p><em>Example</em></p>
-<p><strong>SIML</strong></p>
-<pre><code class="lang-xml">&lt;Model&gt;
+<p sourcefile="tutorial/siml/elements/phrase.md" sourcestartlinenumber="10" sourceendlinenumber="10">Phrase is a sibling of <code>Random</code> element. The key difference between a Phrase element and a Random element is that Phrase element tries to match the output to user input. Lets see an example for a better clarification.</p>
+<p sourcefile="tutorial/siml/elements/phrase.md" sourcestartlinenumber="12" sourceendlinenumber="12"><em>Example</em></p>
+<p sourcefile="tutorial/siml/elements/phrase.md" sourcestartlinenumber="14" sourceendlinenumber="14"><strong>SIML</strong></p>
+<pre sourcefile="tutorial/siml/elements/phrase.md" sourcestartlinenumber="16" sourceendlinenumber="29"><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;
   &lt;Item&gt;WHAT IS YOUR NAME&lt;/Item&gt;
   &lt;Item&gt;WHAT CAN I CALL YOU&lt;/Item&gt;
@@ -125,20 +125,20 @@
   &lt;/Phrase&gt;
  &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p><strong>User Input</strong></p>
-<ol>
-<li><em>What is your name?</em></li>
-<li><em>What can I call you?</em></li>
+</code></pre><p sourcefile="tutorial/siml/elements/phrase.md" sourcestartlinenumber="31" sourceendlinenumber="31"><strong>User Input</strong></p>
+<ol sourcefile="tutorial/siml/elements/phrase.md" sourcestartlinenumber="33" sourceendlinenumber="34">
+<li sourcefile="tutorial/siml/elements/phrase.md" sourcestartlinenumber="33" sourceendlinenumber="33"><em>What is your name?</em></li>
+<li sourcefile="tutorial/siml/elements/phrase.md" sourcestartlinenumber="34" sourceendlinenumber="34"><em>What can I call you?</em></li>
 </ol>
-<p><strong>Bot Output</strong></p>
-<ol>
-<li><em>My name is Maya</em></li>
-<li><em>You can call me Maya</em></li>
+<p sourcefile="tutorial/siml/elements/phrase.md" sourcestartlinenumber="36" sourceendlinenumber="36"><strong>Bot Output</strong></p>
+<ol sourcefile="tutorial/siml/elements/phrase.md" sourcestartlinenumber="38" sourceendlinenumber="39">
+<li sourcefile="tutorial/siml/elements/phrase.md" sourcestartlinenumber="38" sourceendlinenumber="38"><em>My name is Maya</em></li>
+<li sourcefile="tutorial/siml/elements/phrase.md" sourcestartlinenumber="39" sourceendlinenumber="39"><em>You can call me Maya</em></li>
 </ol>
-<p><strong>Explanation</strong></p>
-<blockquote><p>The <code>Phrase</code> element scans it children <code>Item</code> elements and tries to find the best match against user input.</p>
+<p sourcefile="tutorial/siml/elements/phrase.md" sourcestartlinenumber="41" sourceendlinenumber="41"><strong>Explanation</strong></p>
+<blockquote sourcefile="tutorial/siml/elements/phrase.md" sourcestartlinenumber="43" sourceendlinenumber="43"><p sourcefile="tutorial/siml/elements/phrase.md" sourcestartlinenumber="43" sourceendlinenumber="43">The <code>Phrase</code> element scans it children <code>Item</code> elements and tries to find the best match against user input.</p>
 </blockquote>
-<p><code>Phrase</code> elements are slightly slower when compared to <code>Random</code> elements as every word and character in the user input and available outputs have to be evaluated and measured. It&#39;s highly recommended that developers stick with <code>Random</code> elements wherever possible and should use the <code>Phrase</code> element when it’s absolutely necessary to match the output to user input.</p>
+<p sourcefile="tutorial/siml/elements/phrase.md" sourcestartlinenumber="45" sourceendlinenumber="45"><code>Phrase</code> elements are slightly slower when compared to <code>Random</code> elements as every word and character in the user input and available outputs have to be evaluated and measured. It&#39;s highly recommended that developers stick with <code>Random</code> elements wherever possible and should use the <code>Phrase</code> element when it’s absolutely necessary to match the output to user input.</p>
 
             </article>
           </div>
@@ -170,6 +170,5 @@
     <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

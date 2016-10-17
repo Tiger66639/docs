@@ -8,7 +8,7 @@
     <title>Working with Emotion Elements  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Working with Emotion Elements ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.6.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -82,20 +82,20 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="working-with-emotion-elements">Working with Emotion Elements</h1>
+              <h1 id="working-with-emotion-elements" sourcefile="tutorial/emotionml/emotion-elements.md" sourcestartlinenumber="1" sourceendlinenumber="1">Working with Emotion Elements</h1>
               
-<h2 id="getting-the-category">Getting the Category</h2>
-<p><em>Example Code</em></p>
-<pre><code class="lang-csharp">var firstEmotion = emotionDoc.Emotions[0];
+<h2 id="getting-the-category" sourcefile="tutorial/emotionml/emotion-elements.md" sourcestartlinenumber="3" sourceendlinenumber="3">Getting the Category</h2>
+<p sourcefile="tutorial/emotionml/emotion-elements.md" sourcestartlinenumber="5" sourceendlinenumber="5"><em>Example Code</em></p>
+<pre sourcefile="tutorial/emotionml/emotion-elements.md" sourcestartlinenumber="7" sourceendlinenumber="11"><code class="lang-csharp">var firstEmotion = emotionDoc.Emotions[0];
 var firstCategory = firstEmotion.Categories[0];
 var categoryName = firstCategory.Name;
-</code></pre><h2 id="getting-the-dimension">Getting the Dimension</h2>
-<p><em>Example Code</em></p>
-<pre><code class="lang-csharp">var firstEmotion = emotionDoc.Emotions[0];
+</code></pre><h2 id="getting-the-dimension" sourcefile="tutorial/emotionml/emotion-elements.md" sourcestartlinenumber="13" sourceendlinenumber="13">Getting the Dimension</h2>
+<p sourcefile="tutorial/emotionml/emotion-elements.md" sourcestartlinenumber="15" sourceendlinenumber="15"><em>Example Code</em></p>
+<pre sourcefile="tutorial/emotionml/emotion-elements.md" sourcestartlinenumber="17" sourceendlinenumber="21"><code class="lang-csharp">var firstEmotion = emotionDoc.Emotions[0];
 var firstDimension = firstEmotion.Dimensions[0];
 var dimensioName = firstDimension.Name;
-</code></pre><h2 id="getting-emotion-by-id">Getting Emotion By ID</h2>
-<pre><code class="lang-xml"> &lt;emotion id=&quot;extremely-happy&quot; category-set=&quot;http://www.w3.org/TR/emotion-voc/xml#fsre-categories&quot;&gt;
+</code></pre><h2 id="getting-emotion-by-id" sourcefile="tutorial/emotionml/emotion-elements.md" sourcestartlinenumber="23" sourceendlinenumber="23">Getting Emotion By ID</h2>
+<pre sourcefile="tutorial/emotionml/emotion-elements.md" sourcestartlinenumber="25" sourceendlinenumber="35"><code class="lang-xml"> &lt;emotion id=&quot;extremely-happy&quot; category-set=&quot;http://www.w3.org/TR/emotion-voc/xml#fsre-categories&quot;&gt;
     &lt;info&gt;
       &lt;Siml:Emotion Name=&quot;extremely happy&quot; /&gt;
     &lt;/info&gt;
@@ -104,15 +104,15 @@ var dimensioName = firstDimension.Name;
     &lt;dimension name=&quot;arousal&quot; value=&quot;0.9&quot; /&gt;
     &lt;dimension name=&quot;dominance&quot; value=&quot;1.0&quot; /&gt;
  &lt;/emotion&gt;
-</code></pre><p>Emotions in EmotionML MAY contain an ID attribute which uniquely identifies the underlying emotion. Because an ID has to be unique the parser allows fetching of emotions by ID as shown below.</p>
-<pre><code class="lang-csharp">var emotionDoc = EmotionMLDocument.Parse(XDocument.Load(&quot;emotionml.xml&quot;));
+</code></pre><p sourcefile="tutorial/emotionml/emotion-elements.md" sourcestartlinenumber="37" sourceendlinenumber="37">Emotions in EmotionML MAY contain an ID attribute which uniquely identifies the underlying emotion. Because an ID has to be unique the parser allows fetching of emotions by ID as shown below.</p>
+<pre sourcefile="tutorial/emotionml/emotion-elements.md" sourcestartlinenumber="39" sourceendlinenumber="42"><code class="lang-csharp">var emotionDoc = EmotionMLDocument.Parse(XDocument.Load(&quot;emotionml.xml&quot;));
 var emotion = emotionDoc.GetEmotionById(&quot;extremely-happy&quot;)
-</code></pre><h2 id="getting-external-info">Getting external Info</h2>
-<p>The info element in EmotionML can be used to annotate arbitrary metadata because info is the only possible way to annotate arbitrary metadata Syn EmotionML parser provides the Info class with the Element property exposed.</p>
-<p>An Info element must make use of a different namespace in the example code above we have used <code>xmlns:Siml=”http://syn.co.in/2014/siml”</code> which creates a new namespace Siml in the EmotionML document which is later used within the <info> element as shown below.<p>
-<pre><code class="lang-xml">&lt;Siml:Emotion Name=&quot;very pleased&quot; /&gt;
-</code></pre><p><em>To fetch the above created Emotion element within the <strong>Siml</strong> namespace</em></p>
-<pre><code class="lang-csharp">var firstEmotion = emotionDoc.Emotions[0];
+</code></pre><h2 id="getting-external-info" sourcefile="tutorial/emotionml/emotion-elements.md" sourcestartlinenumber="44" sourceendlinenumber="44">Getting external Info</h2>
+<p sourcefile="tutorial/emotionml/emotion-elements.md" sourcestartlinenumber="46" sourceendlinenumber="46">The info element in EmotionML can be used to annotate arbitrary metadata because info is the only possible way to annotate arbitrary metadata Syn EmotionML parser provides the Info class with the Element property exposed.</p>
+<p sourcefile="tutorial/emotionml/emotion-elements.md" sourcestartlinenumber="48" sourceendlinenumber="48">An Info element must make use of a different namespace in the example code above we have used <code>xmlns:Siml=”http://syn.co.in/2014/siml”</code> which creates a new namespace Siml in the EmotionML document which is later used within the <info> element as shown below.<p>
+<pre sourcefile="tutorial/emotionml/emotion-elements.md" sourcestartlinenumber="50" sourceendlinenumber="52"><code class="lang-xml">&lt;Siml:Emotion Name=&quot;very pleased&quot; /&gt;
+</code></pre><p sourcefile="tutorial/emotionml/emotion-elements.md" sourcestartlinenumber="54" sourceendlinenumber="54"><em>To fetch the above created Emotion element within the <strong>Siml</strong> namespace</em></p>
+<pre sourcefile="tutorial/emotionml/emotion-elements.md" sourcestartlinenumber="56" sourceendlinenumber="62"><code class="lang-csharp">var firstEmotion = emotionDoc.Emotions[0];
 var info = firstEmotion.Info;
 XNamespace ns = &quot;http://syn.co.in/2014/siml&quot;;
 var elementName = ns + &quot;Emotion&quot;;
@@ -148,6 +148,5 @@ var element = info.Element.Element(elementName);
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

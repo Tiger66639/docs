@@ -8,7 +8,7 @@
     <title>SIML Suggestion  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="SIML Suggestion ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.6.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -82,13 +82,13 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="siml-suggestion">SIML Suggestion</h1>
+              <h1 id="siml-suggestion" sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="1" sourceendlinenumber="1">SIML Suggestion</h1>
               
-<p>The <code>Suggestion</code> adapter is a new experimental feature added to the draft SIML Specification. This adapter enables the Bot to use a custom or in-built <strong>Search Engine</strong> interface to find a list of best possible matches of user inputs using the value of <code>Example</code> tags.</p>
-<p>When necessary, developers can also replace the current <code>SearchEngine</code> instance used by <em>SimlBot</em> by a custom implementation of <code>ISearchEngine</code> interface.</p>
-<h2 id="pattern-symbols-in-example">Pattern Symbols in <code>Example</code></h2>
-<p>The following entities are part of a search query that the <em>Search Engine</em> processes.</p>
-<table>
+<p sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="3" sourceendlinenumber="3">The <code>Suggestion</code> adapter is a new experimental feature added to the draft SIML Specification. This adapter enables the Bot to use a custom or in-built <strong>Search Engine</strong> interface to find a list of best possible matches of user inputs using the value of <code>Example</code> tags.</p>
+<p sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="5" sourceendlinenumber="5">When necessary, developers can also replace the current <code>SearchEngine</code> instance used by <em>SimlBot</em> by a custom implementation of <code>ISearchEngine</code> interface.</p>
+<h2 id="pattern-symbols-in-example" sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="7" sourceendlinenumber="7">Pattern Symbols in <code>Example</code></h2>
+<p sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="9" sourceendlinenumber="9">The following entities are part of a search query that the <em>Search Engine</em> processes.</p>
+<table sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="11" sourceendlinenumber="16">
 <thead>
 <tr>
 <th style="text-align:left">Entity</th>
@@ -114,38 +114,38 @@
 </tr>
 </tbody>
 </table>
-<blockquote><p>[Set] and @Regex are part of wildcard <em>match</em> and their values can be acquired using the <code>Match</code> tag.</p>
+<blockquote sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="18" sourceendlinenumber="18"><p sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="18" sourceendlinenumber="18">[Set] and @Regex are part of wildcard <em>match</em> and their values can be acquired using the <code>Match</code> tag.</p>
 </blockquote>
-<p>Other <em>symbols</em> used in <code>Pattern</code> tag are invalid within the <code>Sense</code> tag.</p>
-<h2 id="search-engine-algorithm">Search Engine Algorithm</h2>
-<p>The default implementation of <code>ISearchEn gine</code> interface (<code>SearchEngine</code>) in <em>Syn Bot</em> uses a <strong>Fuzzy Keyword Search</strong> algorithm that takes the following into consideration.</p>
-<ul>
-<li>If a word exists</li>
-<li>Order of words</li>
-<li>Existence of keywords, sets and regular expressions</li>
-<li>Number of unmatched words</li>
-<li>Tolerance - if a word is not found in user input but is part of <code>Common-Words</code> variable.</li>
-<li>Minimum score required for a <em>search result</em> to be accepted.</li>
+<p sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="20" sourceendlinenumber="20">Other <em>symbols</em> used in <code>Pattern</code> tag are invalid within the <code>Sense</code> tag.</p>
+<h2 id="search-engine-algorithm" sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="22" sourceendlinenumber="22">Search Engine Algorithm</h2>
+<p sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="24" sourceendlinenumber="24">The default implementation of <code>ISearchEn gine</code> interface (<code>SearchEngine</code>) in <em>Syn Bot</em> uses a <strong>Fuzzy Keyword Search</strong> algorithm that takes the following into consideration.</p>
+<ul sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="26" sourceendlinenumber="31">
+<li sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="26" sourceendlinenumber="26">If a word exists</li>
+<li sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="27" sourceendlinenumber="27">Order of words</li>
+<li sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="28" sourceendlinenumber="28">Existence of keywords, sets and regular expressions</li>
+<li sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="29" sourceendlinenumber="29">Number of unmatched words</li>
+<li sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="30" sourceendlinenumber="30">Tolerance - if a word is not found in user input but is part of <code>Common-Words</code> variable.</li>
+<li sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="31" sourceendlinenumber="31">Minimum score required for a <em>search result</em> to be accepted.</li>
 </ul>
-<h2 id="modes">Modes</h2>
-<p>On top of that the default search engine also has 2 modes of operation.</p>
-<h3 id="soft-mode-default-search-mode">Soft Mode (Default Search Mode)</h3>
-<ul>
-<li>The minimum search result score is equal to 60% of the actual <em>base</em> value set.</li>
-<li>Words may or may not exist in <em>query</em>. However, existence of words do increase the <em>Score</em>.</li>
-<li>Order of words may or may not match the order of words in <em>query</em>. However, proper order increase the search result <em>Score</em>.</li>
-<li><strong>Sets</strong> and <strong>Regular Expressions</strong> must exist in user <em>query</em>.</li>
+<h2 id="modes" sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="34" sourceendlinenumber="34">Modes</h2>
+<p sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="36" sourceendlinenumber="36">On top of that the default search engine also has 2 modes of operation.</p>
+<h3 id="soft-mode-default-search-mode" sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="38" sourceendlinenumber="38">Soft Mode (Default Search Mode)</h3>
+<ul sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="40" sourceendlinenumber="43">
+<li sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="40" sourceendlinenumber="40">The minimum search result score is equal to 60% of the actual <em>base</em> value set.</li>
+<li sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="41" sourceendlinenumber="41">Words may or may not exist in <em>query</em>. However, existence of words do increase the <em>Score</em>.</li>
+<li sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="42" sourceendlinenumber="42">Order of words may or may not match the order of words in <em>query</em>. However, proper order increase the search result <em>Score</em>.</li>
+<li sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="43" sourceendlinenumber="43"><strong>Sets</strong> and <strong>Regular Expressions</strong> must exist in user <em>query</em>.</li>
 </ul>
-<h3 id="hard-mode">Hard Mode</h3>
-<ul>
-<li>The minimum search result score is exactly <em>base</em> score value set.</li>
-<li>All words except the list of words in <em>Common-Words</em> variable must exist.</li>
-<li>Order of words must match in user <em>query</em>. Any additional word in query is neglected.</li>
-<li><strong>Sets</strong> and <strong>Regular Expressions</strong> must exist in user <em>query</em>.</li>
+<h3 id="hard-mode" sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="45" sourceendlinenumber="45">Hard Mode</h3>
+<ul sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="47" sourceendlinenumber="50">
+<li sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="47" sourceendlinenumber="47">The minimum search result score is exactly <em>base</em> score value set.</li>
+<li sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="48" sourceendlinenumber="48">All words except the list of words in <em>Common-Words</em> variable must exist.</li>
+<li sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="49" sourceendlinenumber="49">Order of words must match in user <em>query</em>. Any additional word in query is neglected.</li>
+<li sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="50" sourceendlinenumber="50"><strong>Sets</strong> and <strong>Regular Expressions</strong> must exist in user <em>query</em>.</li>
 </ul>
-<h2 id="variables">Variables</h2>
-<p>The default <code>SearchEngine</code> uses the following reserved Bot variables to process a search result.</p>
-<table>
+<h2 id="variables" sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="53" sourceendlinenumber="53">Variables</h2>
+<p sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="55" sourceendlinenumber="55">The default <code>SearchEngine</code> uses the following reserved Bot variables to process a search result.</p>
+<table sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="57" sourceendlinenumber="62">
 <thead>
 <tr>
 <th style="text-align:left">Variable Name</th>
@@ -171,17 +171,17 @@
 </tr>
 </tbody>
 </table>
-<h2 id="suggestion-formatting">Suggestion Formatting</h2>
-<p>In order to allow developers to format the suggestion string. The <code>Examples</code> property which is a instance of <code>ExampleCollection</code> uses <code>ISuggestionFormatter</code> interface that can be implemented to override the format of the suggestion string returned by the <code>Suggestion</code> adapter.</p>
-<p>The default implementation of <code>ISuggestionFormatter</code> provides results in the following format.</p>
-<ul>
-<li>If the suggestion contains just 1 result then the value of the result is returned as such.</li>
-<li>If 2 or more results exist in the suggestion the a index number is prefixed to each result.</li>
+<h2 id="suggestion-formatting" sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="64" sourceendlinenumber="64">Suggestion Formatting</h2>
+<p sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="66" sourceendlinenumber="66">In order to allow developers to format the suggestion string. The <code>Examples</code> property which is a instance of <code>ExampleCollection</code> uses <code>ISuggestionFormatter</code> interface that can be implemented to override the format of the suggestion string returned by the <code>Suggestion</code> adapter.</p>
+<p sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="68" sourceendlinenumber="68">The default implementation of <code>ISuggestionFormatter</code> provides results in the following format.</p>
+<ul sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="70" sourceendlinenumber="71">
+<li sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="70" sourceendlinenumber="70">If the suggestion contains just 1 result then the value of the result is returned as such.</li>
+<li sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="71" sourceendlinenumber="71">If 2 or more results exist in the suggestion the a index number is prefixed to each result.</li>
 </ul>
-<p><em>Example</em></p>
-<ol>
-<li>How are you?</li>
-<li>How is life?</li>
+<p sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="73" sourceendlinenumber="73"><em>Example</em></p>
+<ol sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="75" sourceendlinenumber="76">
+<li sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="75" sourceendlinenumber="75">How are you?</li>
+<li sourcefile="tutorial/bot/suggestion.md" sourcestartlinenumber="76" sourceendlinenumber="76">How is life?</li>
 </ol>
 
             </article>
@@ -214,6 +214,5 @@
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

@@ -8,7 +8,7 @@
     <title>Saving an EmotionML Document to File  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Saving an EmotionML Document to File ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.6.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -82,13 +82,13 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="saving-an-emotionml-document-to-file">Saving an EmotionML Document to File</h1>
+              <h1 id="saving-an-emotionml-document-to-file" sourcefile="tutorial/emotionml/saving-document.md" sourcestartlinenumber="2" sourceendlinenumber="2">Saving an EmotionML Document to File</h1>
               
-<p>Apart from reading EmotionML documents the EmotionMLDocument object can dynamically create an EmotionML XGocument using the information stored within the class object.</p>
-<p>To create an <code>XDocument</code> from an <code>EmotionMLDocument</code> you can use the <code>GetDocument</code> method as shown below.</p>
-<pre><code class="lang-csharp">var changedDocument = emotionDoc.GetDocument();
+<p sourcefile="tutorial/emotionml/saving-document.md" sourcestartlinenumber="4" sourceendlinenumber="4">Apart from reading EmotionML documents the EmotionMLDocument object can dynamically create an EmotionML XGocument using the information stored within the class object.</p>
+<p sourcefile="tutorial/emotionml/saving-document.md" sourcestartlinenumber="6" sourceendlinenumber="6">To create an <code>XDocument</code> from an <code>EmotionMLDocument</code> you can use the <code>GetDocument</code> method as shown below.</p>
+<pre sourcefile="tutorial/emotionml/saving-document.md" sourcestartlinenumber="8" sourceendlinenumber="11"><code class="lang-csharp">var changedDocument = emotionDoc.GetDocument();
 File.WriteAllText(&quot;emotionml.xml&quot;,changedDocument.ToString());
-</code></pre><p>In the above code <code>emotionDoc</code> is any initialized <code>EmotionMLDocument</code> the internal values of which will be serialized to XML.</p>
+</code></pre><p sourcefile="tutorial/emotionml/saving-document.md" sourcestartlinenumber="13" sourceendlinenumber="13">In the above code <code>emotionDoc</code> is any initialized <code>EmotionMLDocument</code> the internal values of which will be serialized to XML.</p>
 
             </article>
           </div>
@@ -120,6 +120,5 @@ File.WriteAllText(&quot;emotionml.xml&quot;,changedDocument.ToString());
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

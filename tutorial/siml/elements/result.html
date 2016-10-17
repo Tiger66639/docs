@@ -8,7 +8,7 @@
     <title>Result  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Result ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.6.1.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -82,9 +82,9 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="result">Result</h1>
+              <h1 id="result" sourcefile="tutorial/siml/elements/result.md" sourcestartlinenumber="1" sourceendlinenumber="1">Result</h1>
               
-<table>
+<table sourcefile="tutorial/siml/elements/result.md" sourcestartlinenumber="3" sourceendlinenumber="8">
 <thead>
 <tr>
 <th><strong>Annotation</strong></th>
@@ -101,8 +101,8 @@
 <td style="text-align:left"><strong>Optional</strong> <code>Index</code> The <code>Index=”n”</code> is optional, and if left off, the Index value of <code>1</code> is assumed which yields the last bot result</td>
 </tr>
 <tr>
-<td></td>
-<td style="text-align:left"><code>At</code> Is optional, and if left off, returns the entire bot message otherwise if specified yields the entire bot message at the specified index index. <code>At</code> attribute MUST occur only if Index is specified otherwise use <code>&lt;Output&gt;</code> instead of <code>&lt;Result&gt;</code>.</td>
+<td><code>At</code> Is optional, and if left off, returns the entire bot message otherwise if specified yields the entire bot message at the specified index index. <code>At</code> attribute MUST occur only if Index is specified otherwise use <code>&lt;Output&gt;</code> instead of <code>&lt;Result&gt;</code>.</td>
+<td style="text-align:left"></td>
 </tr>
 <tr>
 <td><strong>Occurrence</strong></td>
@@ -110,10 +110,10 @@
 </tr>
 </tbody>
 </table>
-<p>A Result is a response for a particular Request . A Result may contain multiple Outputs. Lets take a look at an example.</p>
-<p><em>Example</em></p>
-<p><strong>SIML</strong></p>
-<pre><code class="lang-xml">&lt;Model&gt;
+<p sourcefile="tutorial/siml/elements/result.md" sourcestartlinenumber="10" sourceendlinenumber="10">A Result is a response for a particular Request . A Result may contain multiple Outputs. Lets take a look at an example.</p>
+<p sourcefile="tutorial/siml/elements/result.md" sourcestartlinenumber="12" sourceendlinenumber="12"><em>Example</em></p>
+<p sourcefile="tutorial/siml/elements/result.md" sourcestartlinenumber="14" sourceendlinenumber="14"><strong>SIML</strong></p>
+<pre sourcefile="tutorial/siml/elements/result.md" sourcestartlinenumber="16" sourceendlinenumber="28"><code class="lang-xml">&lt;Model&gt;
   &lt;Pattern&gt;FLIP A COIN&lt;/Pattern&gt;
   &lt;Response&gt;
     &lt;Random&gt;Coin flipped. It&#39;s (Heads|Tails)&lt;/Random&gt;
@@ -124,22 +124,22 @@
   &lt;Pattern&gt;WHAT DID YOU SAY&lt;/Pattern&gt;
   &lt;Response&gt;I said &quot;&lt;Result /&gt;&quot;&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p><strong>User Input</strong></p>
-<ol>
-<li><em>Flip a coin</em></li>
-<li><em>What did you say?</em></li>
+</code></pre><p sourcefile="tutorial/siml/elements/result.md" sourcestartlinenumber="30" sourceendlinenumber="30"><strong>User Input</strong></p>
+<ol sourcefile="tutorial/siml/elements/result.md" sourcestartlinenumber="32" sourceendlinenumber="33">
+<li sourcefile="tutorial/siml/elements/result.md" sourcestartlinenumber="32" sourceendlinenumber="32"><em>Flip a coin</em></li>
+<li sourcefile="tutorial/siml/elements/result.md" sourcestartlinenumber="33" sourceendlinenumber="33"><em>What did you say?</em></li>
 </ol>
-<p><strong>Bot Output</strong></p>
-<ol>
-<li><em>Coin flipped. It’s Heads</em></li>
-<li><em>I said “Coin flipped. It’s Heads”</em></li>
+<p sourcefile="tutorial/siml/elements/result.md" sourcestartlinenumber="35" sourceendlinenumber="35"><strong>Bot Output</strong></p>
+<ol sourcefile="tutorial/siml/elements/result.md" sourcestartlinenumber="37" sourceendlinenumber="38">
+<li sourcefile="tutorial/siml/elements/result.md" sourcestartlinenumber="37" sourceendlinenumber="37"><em>Coin flipped. It’s Heads</em></li>
+<li sourcefile="tutorial/siml/elements/result.md" sourcestartlinenumber="38" sourceendlinenumber="38"><em>I said “Coin flipped. It’s Heads”</em></li>
 </ol>
-<p><strong>Explanation</strong></p>
-<blockquote><p>The Result element gets the Last sentence ( Result ) that the bot uttered.</p>
+<p sourcefile="tutorial/siml/elements/result.md" sourcestartlinenumber="40" sourceendlinenumber="40"><strong>Explanation</strong></p>
+<blockquote sourcefile="tutorial/siml/elements/result.md" sourcestartlinenumber="42" sourceendlinenumber="42"><p sourcefile="tutorial/siml/elements/result.md" sourcestartlinenumber="42" sourceendlinenumber="42">The Result element gets the Last sentence ( Result ) that the bot uttered.</p>
 </blockquote>
-<p>Backward referencing of the previous utterance of the bot is achieved using the Index attribute.</p>
-<p><em>Example</em></p>
-<pre><code class="lang-xml">&lt;Model&gt;
+<p sourcefile="tutorial/siml/elements/result.md" sourcestartlinenumber="44" sourceendlinenumber="44">Backward referencing of the previous utterance of the bot is achieved using the Index attribute.</p>
+<p sourcefile="tutorial/siml/elements/result.md" sourcestartlinenumber="46" sourceendlinenumber="46"><em>Example</em></p>
+<pre sourcefile="tutorial/siml/elements/result.md" sourcestartlinenumber="48" sourceendlinenumber="63"><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;HI&lt;/Pattern&gt;
  &lt;Response&gt;Hello there.&lt;/Response&gt;
 &lt;/Model&gt;
@@ -184,6 +184,5 @@
     <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

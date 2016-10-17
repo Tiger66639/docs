@@ -8,7 +8,7 @@
     <title>Adding a new language support  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Adding a new language support ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.6.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -82,49 +82,49 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="adding-a-new-language-support">Adding a new language support</h1>
+              <h1 id="adding-a-new-language-support" sourcefile="tutorial/va/language-support.md" sourcestartlinenumber="1" sourceendlinenumber="1">Adding a new language support</h1>
               
-<p>Syn Virtual Assistant and majority of the official plugins rely on the <code>Syn.VA.Libraries.Language</code> class library for <strong>String Resources</strong>.</p>
-<p>For more information on <strong>Satellite Assemblies</strong> please visit <a href="https://msdn.microsoft.com/en-us/library/21a15yht(v=vs.110).aspx">https://msdn.microsoft.com/en-us/library/21a15yht(v=vs.110).aspx</a></p>
-<h2 id="va-language-library">VA Language Library</h2>
-<p>If you wish to add a new language to Syn Virtual Assistant&#39;s GUI it is important to work with the <code>Syn.VA.Libraries.Language</code>. For this you&#39;ll first need to download the <code>Syn.VA.Libraries.Language</code> project from our GitHub repository.</p>
-<blockquote><p>Unlike other satellite assemblies <code>Syn.VA.Libraries.Language</code> embeds all it&#39;s satellite assemblies as <em>embedded resources</em> which are loaded during Virtual Assistant initialization.</p>
+<p sourcefile="tutorial/va/language-support.md" sourcestartlinenumber="3" sourceendlinenumber="3">Syn Virtual Assistant and majority of the official plugins rely on the <code>Syn.VA.Libraries.Language</code> class library for <strong>String Resources</strong>.</p>
+<p sourcefile="tutorial/va/language-support.md" sourcestartlinenumber="5" sourceendlinenumber="5">For more information on <strong>Satellite Assemblies</strong> please visit <a href="https://msdn.microsoft.com/en-us/library/21a15yht(v=vs.110).aspx" sourcefile="tutorial/va/language-support.md" sourcestartlinenumber="5" sourceendlinenumber="5">https://msdn.microsoft.com/en-us/library/21a15yht(v=vs.110).aspx</a></p>
+<h2 id="va-language-library" sourcefile="tutorial/va/language-support.md" sourcestartlinenumber="7" sourceendlinenumber="7">VA Language Library</h2>
+<p sourcefile="tutorial/va/language-support.md" sourcestartlinenumber="9" sourceendlinenumber="9">If you wish to add a new language to Syn Virtual Assistant&#39;s GUI it is important to work with the <code>Syn.VA.Libraries.Language</code>. For this you&#39;ll first need to download the <code>Syn.VA.Libraries.Language</code> project from our GitHub repository.</p>
+<blockquote sourcefile="tutorial/va/language-support.md" sourcestartlinenumber="11" sourceendlinenumber="11"><p sourcefile="tutorial/va/language-support.md" sourcestartlinenumber="11" sourceendlinenumber="11">Unlike other satellite assemblies <code>Syn.VA.Libraries.Language</code> embeds all it&#39;s satellite assemblies as <em>embedded resources</em> which are loaded during Virtual Assistant initialization.</p>
 </blockquote>
-<ul>
-<li>Visit <a href="http://GitHub.com/SynHub/Syn-VA-Components">http://GitHub.com/SynHub/Syn-VA-Components</a> and click on the green <strong>Clone or download</strong> button.</li>
-<li>Choose <strong>Download ZIP</strong>.</li>
+<ul sourcefile="tutorial/va/language-support.md" sourcestartlinenumber="13" sourceendlinenumber="14">
+<li sourcefile="tutorial/va/language-support.md" sourcestartlinenumber="13" sourceendlinenumber="13">Visit <a href="http://GitHub.com/SynHub/Syn-VA-Components" sourcefile="tutorial/va/language-support.md" sourcestartlinenumber="13" sourceendlinenumber="13">http://GitHub.com/SynHub/Syn-VA-Components</a> and click on the green <strong>Clone or download</strong> button.</li>
+<li sourcefile="tutorial/va/language-support.md" sourcestartlinenumber="14" sourceendlinenumber="14">Choose <strong>Download ZIP</strong>.</li>
 </ul>
-<p>The project will now be downloaded to your local computer.</p>
-<ul>
-<li>Browse to the folder and under <strong>Libraries</strong>, double click on <strong>Libraries.sln</strong></li>
-<li>The <code>Libraries</code> solution will now be opened in <strong>Visual Studio</strong>.</li>
-<li>In <strong>Solution Explorer</strong> double click on <strong>Syn.VA.Libraries.Language</strong> project.</li>
-<li>Double click on the <strong>Locale</strong> folder and you&#39;ll find the <code>StringResource.resx</code> file. This is default resource file from which all <em>string</em> values are taken.</li>
+<p sourcefile="tutorial/va/language-support.md" sourcestartlinenumber="16" sourceendlinenumber="16">The project will now be downloaded to your local computer.</p>
+<ul sourcefile="tutorial/va/language-support.md" sourcestartlinenumber="18" sourceendlinenumber="21">
+<li sourcefile="tutorial/va/language-support.md" sourcestartlinenumber="18" sourceendlinenumber="18">Browse to the folder and under <strong>Libraries</strong>, double click on <strong>Libraries.sln</strong></li>
+<li sourcefile="tutorial/va/language-support.md" sourcestartlinenumber="19" sourceendlinenumber="19">The <code>Libraries</code> solution will now be opened in <strong>Visual Studio</strong>.</li>
+<li sourcefile="tutorial/va/language-support.md" sourcestartlinenumber="20" sourceendlinenumber="20">In <strong>Solution Explorer</strong> double click on <strong>Syn.VA.Libraries.Language</strong> project.</li>
+<li sourcefile="tutorial/va/language-support.md" sourcestartlinenumber="21" sourceendlinenumber="21">Double click on the <strong>Locale</strong> folder and you&#39;ll find the <code>StringResource.resx</code> file. This is default resource file from which all <em>string</em> values are taken.</li>
 </ul>
-<h3 id="adding-support-for-additional-cultures">Adding support for additional cultures</h3>
-<p>For this we&#39;ll assume that you are trying to add support for <strong>French (fr-FR)</strong> culture.</p>
-<ul>
-<li>Right click the <strong>Locale</strong> folder, choose <strong>Add</strong> and then choose <strong>New Item</strong>.</li>
-<li>Scroll down and select <strong>Resources File</strong> and name the file <code>StringResource.fr-FR.resx</code>.
-<img src="images/new-french-culture.png" alt="hello Plugin Image"></li>
-<li>Once the <code>StringResource.fr-FR.resx</code> file has been created you can now add <em>Names</em> and converted <em>Values</em> by referring the default <code>StringResource.resx</code> file.</li>
+<h3 id="adding-support-for-additional-cultures" sourcefile="tutorial/va/language-support.md" sourcestartlinenumber="23" sourceendlinenumber="23">Adding support for additional cultures</h3>
+<p sourcefile="tutorial/va/language-support.md" sourcestartlinenumber="25" sourceendlinenumber="25">For this we&#39;ll assume that you are trying to add support for <strong>French (fr-FR)</strong> culture.</p>
+<ul sourcefile="tutorial/va/language-support.md" sourcestartlinenumber="27" sourceendlinenumber="30">
+<li sourcefile="tutorial/va/language-support.md" sourcestartlinenumber="27" sourceendlinenumber="27">Right click the <strong>Locale</strong> folder, choose <strong>Add</strong> and then choose <strong>New Item</strong>.</li>
+<li sourcefile="tutorial/va/language-support.md" sourcestartlinenumber="28" sourceendlinenumber="29">Scroll down and select <strong>Resources File</strong> and name the file <code>StringResource.fr-FR.resx</code>.
+<img src="images/new-french-culture.png" alt="hello Plugin Image" sourcefile="tutorial/va/language-support.md" sourcestartlinenumber="29" sourceendlinenumber="29"></li>
+<li sourcefile="tutorial/va/language-support.md" sourcestartlinenumber="30" sourceendlinenumber="30">Once the <code>StringResource.fr-FR.resx</code> file has been created you can now add <em>Names</em> and converted <em>Values</em> by referring the default <code>StringResource.resx</code> file.</li>
 </ul>
-<p>After you&#39;ve successfully converted all <em>string</em> values build the solution and place the <code>Syn.VA.Libraries.Language.dll</code> in the root directory of Syn Virtual Assistant installation.</p>
-<h3 id="changing-the-culture-and-ui-culture">Changing the <code>Culture</code> and <code>UI-Culture</code></h3>
-<p>Syn Virtual Assistant uses the <code>Culture</code> and <code>UI-Culture</code> values found in the <code>VA</code> settings to determine the thread culture. To explicitly specify the cultures you&#39;ll have to change the setting values.</p>
-<p>To do this,</p>
-<ul>
-<li>Browse to <code>Syn/Settings</code> folder in the root directory of Syn Virtual Assistant installation and you&#39;ll find the <code>VA.xml</code> file.</li>
+<p sourcefile="tutorial/va/language-support.md" sourcestartlinenumber="32" sourceendlinenumber="32">After you&#39;ve successfully converted all <em>string</em> values build the solution and place the <code>Syn.VA.Libraries.Language.dll</code> in the root directory of Syn Virtual Assistant installation.</p>
+<h3 id="changing-the-culture-and-ui-culture" sourcefile="tutorial/va/language-support.md" sourcestartlinenumber="34" sourceendlinenumber="34">Changing the <code>Culture</code> and <code>UI-Culture</code></h3>
+<p sourcefile="tutorial/va/language-support.md" sourcestartlinenumber="36" sourceendlinenumber="36">Syn Virtual Assistant uses the <code>Culture</code> and <code>UI-Culture</code> values found in the <code>VA</code> settings to determine the thread culture. To explicitly specify the cultures you&#39;ll have to change the setting values.</p>
+<p sourcefile="tutorial/va/language-support.md" sourcestartlinenumber="38" sourceendlinenumber="38">To do this,</p>
+<ul sourcefile="tutorial/va/language-support.md" sourcestartlinenumber="39" sourceendlinenumber="39">
+<li sourcefile="tutorial/va/language-support.md" sourcestartlinenumber="39" sourceendlinenumber="39">Browse to <code>Syn/Settings</code> folder in the root directory of Syn Virtual Assistant installation and you&#39;ll find the <code>VA.xml</code> file.</li>
 </ul>
-<p><img src="images/va-settings-file.png" alt="hello Plugin Image"></p>
-<ul>
-<li>Open <code>VA.xml</code> file and change the values of <code>Culture</code> and <code>UI-Culture</code> to desired language culture.</li>
+<p sourcefile="tutorial/va/language-support.md" sourcestartlinenumber="41" sourceendlinenumber="41"><img src="images/va-settings-file.png" alt="hello Plugin Image" sourcefile="tutorial/va/language-support.md" sourcestartlinenumber="41" sourceendlinenumber="41"></p>
+<ul sourcefile="tutorial/va/language-support.md" sourcestartlinenumber="43" sourceendlinenumber="43">
+<li sourcefile="tutorial/va/language-support.md" sourcestartlinenumber="43" sourceendlinenumber="43">Open <code>VA.xml</code> file and change the values of <code>Culture</code> and <code>UI-Culture</code> to desired language culture.</li>
 </ul>
-<h2 id="conventions-followed">Conventions followed</h2>
-<ul>
-<li>For single words the key and the Value part should be the same.</li>
-<li>For plugins the <em>Name</em> part must start with <code>PluginName_</code> followed by the component property. <em>For Example</em> <code>EmailPlugin_DisplayName</code> is used for specifying a value for the <code>Name</code> property of <code>EmailPlugin</code> class.</li>
-<li>Adding a <em>description</em> is not mandatory.</li>
+<h2 id="conventions-followed" sourcefile="tutorial/va/language-support.md" sourcestartlinenumber="45" sourceendlinenumber="45">Conventions followed</h2>
+<ul sourcefile="tutorial/va/language-support.md" sourcestartlinenumber="47" sourceendlinenumber="49">
+<li sourcefile="tutorial/va/language-support.md" sourcestartlinenumber="47" sourceendlinenumber="47">For single words the key and the Value part should be the same.</li>
+<li sourcefile="tutorial/va/language-support.md" sourcestartlinenumber="48" sourceendlinenumber="48">For plugins the <em>Name</em> part must start with <code>PluginName_</code> followed by the component property. <em>For Example</em> <code>EmailPlugin_DisplayName</code> is used for specifying a value for the <code>Name</code> property of <code>EmailPlugin</code> class.</li>
+<li sourcefile="tutorial/va/language-support.md" sourcestartlinenumber="49" sourceendlinenumber="49">Adding a <em>description</em> is not mandatory.</li>
 </ul>
 
             </article>
@@ -157,6 +157,5 @@
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

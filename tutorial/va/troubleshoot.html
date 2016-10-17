@@ -8,7 +8,7 @@
     <title>Troubleshooting (Known Issues)  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Troubleshooting (Known Issues) ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.6.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -82,59 +82,59 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="troubleshooting-known-issues">Troubleshooting (Known Issues)</h1>
+              <h1 id="troubleshooting-known-issues" sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="1" sourceendlinenumber="1">Troubleshooting (Known Issues)</h1>
               
-<p>Though in future version we will make an attempt to automatically address the following issues there</p>
-<h2 id="graphic-device-unsupported">Graphic Device Unsupported</h2>
-<p><code>System.NotSupportedException: Could not find a graphics device that supports the HiDef profile</code></p>
-<p>This is a known issue in Laptops and NoteBooks with switchable graphics.</p>
-<h3 id="solution-1">Solution 1</h3>
-<p>If you have switchable graphics options try the following for NVIDIA based graphic cards.</p>
-<ul>
-<li>Right click on your desktop and select <strong>NVIDIA Control Panel</strong></li>
+<p sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="3" sourceendlinenumber="3">Though in future version we will make an attempt to automatically address the following issues there</p>
+<h2 id="graphic-device-unsupported" sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="5" sourceendlinenumber="5">Graphic Device Unsupported</h2>
+<p sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="7" sourceendlinenumber="7"><code>System.NotSupportedException: Could not find a graphics device that supports the HiDef profile</code></p>
+<p sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="9" sourceendlinenumber="9">This is a known issue in Laptops and NoteBooks with switchable graphics.</p>
+<h3 id="solution-1" sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="11" sourceendlinenumber="11">Solution 1</h3>
+<p sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="13" sourceendlinenumber="13">If you have switchable graphics options try the following for NVIDIA based graphic cards.</p>
+<ul sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="15" sourceendlinenumber="15">
+<li sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="15" sourceendlinenumber="15">Right click on your desktop and select <strong>NVIDIA Control Panel</strong></li>
 </ul>
-<p><img src="images/right-click-nvidia.png" alt="NVIDIA Control Panel Menu Image"></p>
-<ul>
-<li>Under <strong>Program Settings</strong>, choose <strong>Add</strong></li>
+<p sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="17" sourceendlinenumber="17"><img src="images/right-click-nvidia.png" alt="NVIDIA Control Panel Menu Image" sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="17" sourceendlinenumber="17"></p>
+<ul sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="19" sourceendlinenumber="19">
+<li sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="19" sourceendlinenumber="19">Under <strong>Program Settings</strong>, choose <strong>Add</strong></li>
 </ul>
-<p><img src="images/nvidia-panel-add.png" alt="NVIDIA Control Panel Image"></p>
-<ul>
-<li>Browse to the installation directory of <em>Syn Virtual Assistant</em>, select <strong>Syn Virtual Assistant.exe</strong> and choose <strong>Open</strong></li>
+<p sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="21" sourceendlinenumber="21"><img src="images/nvidia-panel-add.png" alt="NVIDIA Control Panel Image" sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="21" sourceendlinenumber="21"></p>
+<ul sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="23" sourceendlinenumber="23">
+<li sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="23" sourceendlinenumber="23">Browse to the installation directory of <em>Syn Virtual Assistant</em>, select <strong>Syn Virtual Assistant.exe</strong> and choose <strong>Open</strong></li>
 </ul>
-<p><img src="images/nvidia-panel-browse.png" alt="NVIDIA Control Panel Image"></p>
-<ul>
-<li>Select <strong>High-performance NVIDIA Processor</strong> and choose **Apply</li>
+<p sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="25" sourceendlinenumber="25"><img src="images/nvidia-panel-browse.png" alt="NVIDIA Control Panel Image" sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="25" sourceendlinenumber="25"></p>
+<ul sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="27" sourceendlinenumber="27">
+<li sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="27" sourceendlinenumber="27">Select <strong>High-performance NVIDIA Processor</strong> and choose **Apply</li>
 </ul>
-<p><img src="images/nvidia-panel-apply.png" alt="NVIDIA Control Panel Image"></p>
-<ul>
-<li>Restart <em>Syn Virtual Assistant</em>.</li>
+<p sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="29" sourceendlinenumber="29"><img src="images/nvidia-panel-apply.png" alt="NVIDIA Control Panel Image" sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="29" sourceendlinenumber="29"></p>
+<ul sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="31" sourceendlinenumber="31">
+<li sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="31" sourceendlinenumber="31">Restart <em>Syn Virtual Assistant</em>.</li>
 </ul>
-<h3 id="solution-2">Solution 2</h3>
-<p>If the system doesn&#39;t have a dedicated graphic card that supports the Graphic Engine for <em>Syn Virtual Assistant</em> then to run the application without any graphic exceptions being generated it is recommended that you swith to <code>Dock</code> Mode in <em>Display Modes</em>.</p>
-<p>To switch the <em>Virtual Assistant</em> to run in <em>Dock</em> Mode,</p>
-<ul>
-<li>Click on <strong>Settings</strong> Button</li>
-<li>In <em>Settings Panel</em> select <strong>Display Mode</strong></li>
-<li>Under <strong>Display Modes</strong>, choose <strong>Right-Dock</strong> and select <strong>Save and Restart</strong>.</li>
+<h3 id="solution-2" sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="33" sourceendlinenumber="33">Solution 2</h3>
+<p sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="35" sourceendlinenumber="35">If the system doesn&#39;t have a dedicated graphic card that supports the Graphic Engine for <em>Syn Virtual Assistant</em> then to run the application without any graphic exceptions being generated it is recommended that you swith to <code>Dock</code> Mode in <em>Display Modes</em>.</p>
+<p sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="37" sourceendlinenumber="37">To switch the <em>Virtual Assistant</em> to run in <em>Dock</em> Mode,</p>
+<ul sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="39" sourceendlinenumber="41">
+<li sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="39" sourceendlinenumber="39">Click on <strong>Settings</strong> Button</li>
+<li sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="40" sourceendlinenumber="40">In <em>Settings Panel</em> select <strong>Display Mode</strong></li>
+<li sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="41" sourceendlinenumber="41">Under <strong>Display Modes</strong>, choose <strong>Right-Dock</strong> and select <strong>Save and Restart</strong>.</li>
 </ul>
-<h2 id="start-menu-path-access">Start Menu Path Access</h2>
-<p><code>System.UnauthorizedAccessException: Access to the path &#39;C:\Users\USER-NAME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs&#39; is denied.</code></p>
-<p>This is a common error in Windows 7 and should be ignored in version 8.5.6.</p>
-<p>The reason behind this exception is because the <code>Launcher</code> plugin tries to search for all installed applications and their shortcuts in the <code>Start Menu</code> folder so that you can use commands to launch them via the Virtual Assistant.</p>
-<h2 id="speech-recognizer-id">Speech Recognizer ID</h2>
-<p><code>System.ArgumentException: No recognizer of the required ID found.</code></p>
-<p>Syn Virtual Assistant by default uses <code>en-US</code> speech recognizer. If a speech recognizer for US English is unavailable the above exception may be thrown.</p>
-<p>A possible solution is to download a language pack with support for <code>en-US</code> speech recognizer. To do this,</p>
-<ul>
-<li>You add a new language pack by going to <strong>Settings &gt; Time &amp; language &gt; Region &amp; language &gt; Add a language</strong> and choosing <strong>English (United States)</strong>.</li>
-<li>After the language pack is installed click on <strong>Options</strong> on the language pack name and select <strong>Speech</strong> and choose <strong>Download</strong> to download the Speech Recognizer language pack.</li>
-<li>Once the download has finished, restart <em>Syn Virtual Assistant</em>.</li>
+<h2 id="start-menu-path-access" sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="44" sourceendlinenumber="44">Start Menu Path Access</h2>
+<p sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="46" sourceendlinenumber="46"><code>System.UnauthorizedAccessException: Access to the path &#39;C:\Users\USER-NAME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs&#39; is denied.</code></p>
+<p sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="48" sourceendlinenumber="48">This is a common error in Windows 7 and should be ignored in version 8.5.6.</p>
+<p sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="50" sourceendlinenumber="50">The reason behind this exception is because the <code>Launcher</code> plugin tries to search for all installed applications and their shortcuts in the <code>Start Menu</code> folder so that you can use commands to launch them via the Virtual Assistant.</p>
+<h2 id="speech-recognizer-id" sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="52" sourceendlinenumber="52">Speech Recognizer ID</h2>
+<p sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="54" sourceendlinenumber="54"><code>System.ArgumentException: No recognizer of the required ID found.</code></p>
+<p sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="56" sourceendlinenumber="56">Syn Virtual Assistant by default uses <code>en-US</code> speech recognizer. If a speech recognizer for US English is unavailable the above exception may be thrown.</p>
+<p sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="58" sourceendlinenumber="58">A possible solution is to download a language pack with support for <code>en-US</code> speech recognizer. To do this,</p>
+<ul sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="60" sourceendlinenumber="62">
+<li sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="60" sourceendlinenumber="60">You add a new language pack by going to <strong>Settings &gt; Time &amp; language &gt; Region &amp; language &gt; Add a language</strong> and choosing <strong>English (United States)</strong>.</li>
+<li sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="61" sourceendlinenumber="61">After the language pack is installed click on <strong>Options</strong> on the language pack name and select <strong>Speech</strong> and choose <strong>Download</strong> to download the Speech Recognizer language pack.</li>
+<li sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="62" sourceendlinenumber="62">Once the download has finished, restart <em>Syn Virtual Assistant</em>.</li>
 </ul>
-<h2 id="slow-framerate">Slow Framerate</h2>
-<p>During the initial <em>unit-tests</em> done when the Graphic Engine was incorportated into the Syn Virtual Assistant <em>Main</em> Window, we noticed that certain laptop brands would not run Syn Virtual Assistant with the best Graphic Card available in their machine.</p>
-<p>For instance, some Dell laptops have an integrated <em>Intel Graphic chip</em> and as well as an NVIDIA Graphic Card on board. When the Virtual Assistant runs, the Intel Graphic Card is selected by the Operating System as the Graphic Processor. This results in low frame rate and unresponsive user interface.</p>
-<h3 id="setting-the-graphic-processor">Setting the Graphic Processor</h3>
-<p>A reliable solution to ensure that the right Graphic Processor is set for the Virtual Assistant application is to explicitly set the default <em>Graphic Processor</em>. In  laptops using the NVIDIA graphic card, just right click the Virtual Assistant icon on your desktop, select <em>Run with graphic processor</em> then click on <em>Change default graphic processor</em> and set NVIDIA as the default graphic processor.</p>
+<h2 id="slow-framerate" sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="64" sourceendlinenumber="64">Slow Framerate</h2>
+<p sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="66" sourceendlinenumber="66">During the initial <em>unit-tests</em> done when the Graphic Engine was incorportated into the Syn Virtual Assistant <em>Main</em> Window, we noticed that certain laptop brands would not run Syn Virtual Assistant with the best Graphic Card available in their machine.</p>
+<p sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="68" sourceendlinenumber="68">For instance, some Dell laptops have an integrated <em>Intel Graphic chip</em> and as well as an NVIDIA Graphic Card on board. When the Virtual Assistant runs, the Intel Graphic Card is selected by the Operating System as the Graphic Processor. This results in low frame rate and unresponsive user interface.</p>
+<h3 id="setting-the-graphic-processor" sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="70" sourceendlinenumber="70">Setting the Graphic Processor</h3>
+<p sourcefile="tutorial/va/troubleshoot.md" sourcestartlinenumber="72" sourceendlinenumber="72">A reliable solution to ensure that the right Graphic Processor is set for the Virtual Assistant application is to explicitly set the default <em>Graphic Processor</em>. In  laptops using the NVIDIA graphic card, just right click the Virtual Assistant icon on your desktop, select <em>Run with graphic processor</em> then click on <em>Change default graphic processor</em> and set NVIDIA as the default graphic processor.</p>
 
             </article>
           </div>
@@ -166,6 +166,5 @@
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

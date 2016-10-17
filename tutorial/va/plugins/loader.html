@@ -8,7 +8,7 @@
     <title>Loader Plugin  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Loader Plugin ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.6.1.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -82,13 +82,13 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="loader-plugin">Loader Plugin</h1>
+              <h1 id="loader-plugin" sourcefile="tutorial/va/plugins/loader.md" sourcestartlinenumber="1" sourceendlinenumber="1">Loader Plugin</h1>
               
-<p>The <code>Loader</code> plugin is the only plugin that is loaded by Syn Virtual Assistant. This plugin is responsible for loading all other plugins and to provide a Bot interface to the Virtual Assistant.</p>
-<p>The default <em>Loader</em> plugin provides an SIML Bot architecture to Syn Virtual Assistant. This plugin also provides a few adapters and a settings interface for the <em>Main</em> user.</p>
-<h2 id="knowledge-base">Knowledge-Base</h2>
-<p>The following SIML Projects are loaded in their respective order by the <code>Loader</code> Plugin. These projects usually present in the <code>Syn/Bot</code> directory.</p>
-<table>
+<p sourcefile="tutorial/va/plugins/loader.md" sourcestartlinenumber="3" sourceendlinenumber="3">The <code>Loader</code> plugin is the only plugin that is loaded by Syn Virtual Assistant. This plugin is responsible for loading all other plugins and to provide a Bot interface to the Virtual Assistant.</p>
+<p sourcefile="tutorial/va/plugins/loader.md" sourcestartlinenumber="5" sourceendlinenumber="5">The default <em>Loader</em> plugin provides an SIML Bot architecture to Syn Virtual Assistant. This plugin also provides a few adapters and a settings interface for the <em>Main</em> user.</p>
+<h2 id="knowledge-base" sourcefile="tutorial/va/plugins/loader.md" sourcestartlinenumber="7" sourceendlinenumber="7">Knowledge-Base</h2>
+<p sourcefile="tutorial/va/plugins/loader.md" sourcestartlinenumber="9" sourceendlinenumber="9">The following SIML Projects are loaded in their respective order by the <code>Loader</code> Plugin. These projects usually present in the <code>Syn/Bot</code> directory.</p>
+<table sourcefile="tutorial/va/plugins/loader.md" sourcestartlinenumber="11" sourceendlinenumber="15">
 <thead>
 <tr>
 <th style="text-align:left">Project File</th>
@@ -110,9 +110,9 @@
 </tr>
 </tbody>
 </table>
-<h2 id="siml-adapters">SIML Adapters</h2>
-<h3 id="1-agent">1. Agent</h3>
-<table>
+<h2 id="siml-adapters" sourcefile="tutorial/va/plugins/loader.md" sourcestartlinenumber="17" sourceendlinenumber="17">SIML Adapters</h2>
+<h3 id="1-agent" sourcefile="tutorial/va/plugins/loader.md" sourcestartlinenumber="19" sourceendlinenumber="19">1. Agent</h3>
+<table sourcefile="tutorial/va/plugins/loader.md" sourcestartlinenumber="21" sourceendlinenumber="24">
 <thead>
 <tr>
 <th style="text-align:left"><strong>Annotation</strong></th>
@@ -130,47 +130,22 @@
 </tr>
 </tbody>
 </table>
-<h4 id="attributes">Attributes</h4>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">Name</th>
-<th style="text-align:left">Value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">Task</td>
-<td style="text-align:left">Exit</td>
-<td>Shuts down the Virtual Assistant.</td>
-</tr>
-<tr>
-<td style="text-align:left">Task</td>
-<td style="text-align:left">Restart</td>
-<td>Restarts the Virtual Assistant application.</td>
-</tr>
-<tr>
-<td style="text-align:left">Get</td>
-<td style="text-align:left"><code>variable name</code></td>
-<td>Gets the value of the specified variable. A colon can be used to specify the plugin name. <em>Example</em> <code>Get=Weather:Location</code> will return the value of the variable <code>Location</code> from <code>Weather</code> plugin settings.</td>
-</tr>
-<tr>
-<td style="text-align:left">Set</td>
-<td style="text-align:left"><code>variable name</code></td>
-<td>Sets the value of the specified variable. A colon separator can be used to specify the plugin name.</td>
-</tr>
-</tbody>
-</table>
-<h4 id="example">Example</h4>
-<pre><code class="lang-xml">&lt;o:Agent Task=&quot;Restart&quot; /&gt;
-</code></pre><blockquote><p>Restarts the Virtual Assistant.</p>
+<h4 id="attributes" sourcefile="tutorial/va/plugins/loader.md" sourcestartlinenumber="26" sourceendlinenumber="26">Attributes</h4>
+<p sourcefile="tutorial/va/plugins/loader.md" sourcestartlinenumber="27" sourceendlinenumber="32">|Name|Value|Description|
+|:---|:---|
+|Task|Exit|Shuts down the Virtual Assistant.|
+|Task|Restart|Restarts the Virtual Assistant application.|
+|Get|<code>variable name</code>|Gets the value of the specified variable. A colon can be used to specify the plugin name. <em>Example</em> <code>Get=Weather:Location</code> will return the value of the variable <code>Location</code> from <code>Weather</code> plugin settings.|
+|Set|<code>variable name</code>|Sets the value of the specified variable. A colon separator can be used to specify the plugin name.|</p>
+<h4 id="example" sourcefile="tutorial/va/plugins/loader.md" sourcestartlinenumber="34" sourceendlinenumber="34">Example</h4>
+<pre sourcefile="tutorial/va/plugins/loader.md" sourcestartlinenumber="36" sourceendlinenumber="38"><code class="lang-xml">&lt;o:Agent Task=&quot;Restart&quot; /&gt;
+</code></pre><blockquote sourcefile="tutorial/va/plugins/loader.md" sourcestartlinenumber="39" sourceendlinenumber="39"><p sourcefile="tutorial/va/plugins/loader.md" sourcestartlinenumber="39" sourceendlinenumber="39">Restarts the Virtual Assistant.</p>
 </blockquote>
-<pre><code class="lang-xml">&lt;o:Agent Get=&quot;Weather:Location&quot; /&gt;
-</code></pre><blockquote><p>Gets the value of the <code>Location</code> variable from <code>Weather</code> plugin settings.</p>
+<pre sourcefile="tutorial/va/plugins/loader.md" sourcestartlinenumber="41" sourceendlinenumber="43"><code class="lang-xml">&lt;o:Agent Get=&quot;Weather:Location&quot; /&gt;
+</code></pre><blockquote sourcefile="tutorial/va/plugins/loader.md" sourcestartlinenumber="44" sourceendlinenumber="44"><p sourcefile="tutorial/va/plugins/loader.md" sourcestartlinenumber="44" sourceendlinenumber="44">Gets the value of the <code>Location</code> variable from <code>Weather</code> plugin settings.</p>
 </blockquote>
-<h3 id="2-credit">2. Credit</h3>
-<table>
+<h3 id="2-credit" sourcefile="tutorial/va/plugins/loader.md" sourcestartlinenumber="46" sourceendlinenumber="46">2. Credit</h3>
+<table sourcefile="tutorial/va/plugins/loader.md" sourcestartlinenumber="48" sourceendlinenumber="51">
 <thead>
 <tr>
 <th style="text-align:left"><strong>Annotation</strong></th>
@@ -188,13 +163,13 @@
 </tr>
 </tbody>
 </table>
-<h4 id="example-1">Example</h4>
-<pre><code class="lang-xml">&lt;o:Credit Title=&quot;Powered by Syn!&quot; Url=&quot;http://www.syn.co.in&quot; /&gt;
-</code></pre><blockquote><p>Displays <em>Powered by Syn</em> and when the user clicks on the link the url <code>http://www.syn.co.in</code> is opened.</p>
-<p>This adapter must always be used if an external API from a service provider requires you to display there credit link.</p>
+<h4 id="example-1" sourcefile="tutorial/va/plugins/loader.md" sourcestartlinenumber="53" sourceendlinenumber="53">Example</h4>
+<pre sourcefile="tutorial/va/plugins/loader.md" sourcestartlinenumber="55" sourceendlinenumber="57"><code class="lang-xml">&lt;o:Credit Title=&quot;Powered by Syn!&quot; Url=&quot;http://www.syn.co.in&quot; /&gt;
+</code></pre><blockquote sourcefile="tutorial/va/plugins/loader.md" sourcestartlinenumber="58" sourceendlinenumber="58"><p sourcefile="tutorial/va/plugins/loader.md" sourcestartlinenumber="58" sourceendlinenumber="58">Displays <em>Powered by Syn</em> and when the user clicks on the link the url <code>http://www.syn.co.in</code> is opened.</p>
+<p sourcefile="tutorial/va/plugins/loader.md" sourcestartlinenumber="60" sourceendlinenumber="60">This adapter must always be used if an external API from a service provider requires you to display there credit link.</p>
 </blockquote>
-<h3 id="3-helpwindow">3. HelpWindow</h3>
-<table>
+<h3 id="3-helpwindow" sourcefile="tutorial/va/plugins/loader.md" sourcestartlinenumber="62" sourceendlinenumber="62">3. HelpWindow</h3>
+<table sourcefile="tutorial/va/plugins/loader.md" sourcestartlinenumber="64" sourceendlinenumber="67">
 <thead>
 <tr>
 <th style="text-align:left"><strong>Annotation</strong></th>
@@ -212,12 +187,12 @@
 </tr>
 </tbody>
 </table>
-<h4 id="example-2">Example</h4>
-<pre><code class="lang-xml">&lt;o:HelpWindow /&gt;
-</code></pre><blockquote><p>Displays the Help Window.</p>
+<h4 id="example-2" sourcefile="tutorial/va/plugins/loader.md" sourcestartlinenumber="69" sourceendlinenumber="69">Example</h4>
+<pre sourcefile="tutorial/va/plugins/loader.md" sourcestartlinenumber="71" sourceendlinenumber="73"><code class="lang-xml">&lt;o:HelpWindow /&gt;
+</code></pre><blockquote sourcefile="tutorial/va/plugins/loader.md" sourcestartlinenumber="74" sourceendlinenumber="74"><p sourcefile="tutorial/va/plugins/loader.md" sourcestartlinenumber="74" sourceendlinenumber="74">Displays the Help Window.</p>
 </blockquote>
-<h3 id="4-textwindow">4. TextWindow</h3>
-<table>
+<h3 id="4-textwindow" sourcefile="tutorial/va/plugins/loader.md" sourcestartlinenumber="76" sourceendlinenumber="76">4. TextWindow</h3>
+<table sourcefile="tutorial/va/plugins/loader.md" sourcestartlinenumber="78" sourceendlinenumber="81">
 <thead>
 <tr>
 <th style="text-align:left"><strong>Annotation</strong></th>
@@ -235,9 +210,9 @@
 </tr>
 </tbody>
 </table>
-<h4 id="example-3">Example</h4>
-<pre><code class="lang-xml">&lt;o:TextWindow Title=&quot;Log File&quot;&gt;Log.txt&lt;/o:TextWindow&gt;
-</code></pre><blockquote><p>Opens the file <code>Log.txt</code> in a separate window.</p>
+<h4 id="example-3" sourcefile="tutorial/va/plugins/loader.md" sourcestartlinenumber="83" sourceendlinenumber="83">Example</h4>
+<pre sourcefile="tutorial/va/plugins/loader.md" sourcestartlinenumber="85" sourceendlinenumber="87"><code class="lang-xml">&lt;o:TextWindow Title=&quot;Log File&quot;&gt;Log.txt&lt;/o:TextWindow&gt;
+</code></pre><blockquote sourcefile="tutorial/va/plugins/loader.md" sourcestartlinenumber="88" sourceendlinenumber="88"><p sourcefile="tutorial/va/plugins/loader.md" sourcestartlinenumber="88" sourceendlinenumber="88">Opens the file <code>Log.txt</code> in a separate window.</p>
 </blockquote>
 
             </article>
@@ -270,6 +245,5 @@
     <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

@@ -8,7 +8,7 @@
     <title>UserSettings  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="UserSettings ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.6.1.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -82,9 +82,9 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="usersettings">UserSettings</h1>
+              <h1 id="usersettings" sourcefile="tutorial/siml/elements/usersettings.md" sourcestartlinenumber="1" sourceendlinenumber="1">UserSettings</h1>
               
-<table>
+<table sourcefile="tutorial/siml/elements/usersettings.md" sourcestartlinenumber="3" sourceendlinenumber="7">
 <thead>
 <tr>
 <th><strong>Annotation</strong></th>
@@ -106,8 +106,8 @@
 </tr>
 </tbody>
 </table>
-<p>Just like <code>BotSettings</code> the <code>UserSettings</code> element is used to define settings for the User. This element also takes one or more <code>Variable</code> elements as its children and the child element may store one or more values.</p>
-<pre><code class="lang-xml">&lt;Siml version=&quot;1.0&quot;&gt;
+<p sourcefile="tutorial/siml/elements/usersettings.md" sourcestartlinenumber="9" sourceendlinenumber="9">Just like <code>BotSettings</code> the <code>UserSettings</code> element is used to define settings for the User. This element also takes one or more <code>Variable</code> elements as its children and the child element may store one or more values.</p>
+<pre sourcefile="tutorial/siml/elements/usersettings.md" sourcestartlinenumber="11" sourceendlinenumber="26"><code class="lang-xml">&lt;Siml version=&quot;1.0&quot;&gt;
 
 &lt;UserSettings&gt;
  &lt;Variable Name=&quot;Favorite-Sports&quot; Value=&quot;Nascar&quot; /&gt;
@@ -121,25 +121,25 @@
 &lt;/UserSettings&gt;
 
 &lt;/Siml&gt;
-</code></pre><p><em>Example</em></p>
-<p><strong>SIML</strong></p>
-<pre><code class="lang-xml">&lt;Model&gt;
+</code></pre><p sourcefile="tutorial/siml/elements/usersettings.md" sourcestartlinenumber="28" sourceendlinenumber="28"><em>Example</em></p>
+<p sourcefile="tutorial/siml/elements/usersettings.md" sourcestartlinenumber="30" sourceendlinenumber="30"><strong>SIML</strong></p>
+<pre sourcefile="tutorial/siml/elements/usersettings.md" sourcestartlinenumber="32" sourceendlinenumber="39"><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;DO YOU KNOW MY NAME&lt;/Pattern&gt;
  &lt;Response&gt;
   Your name is &lt;User Get=&quot;name&quot; /&gt;
  &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p><strong>User Input</strong></p>
-<p><em>Do you know my name?</em></p>
-<p><strong>Bot Output</strong></p>
-<p><em>Your name is Leslie</em></p>
-<p><strong>Explanation</strong></p>
-<blockquote><p>The <code>User</code> element retrieves settings/predicates values stored for the User. The value of the <code>Get</code> attribute should be a valid Settings name.</p>
+</code></pre><p sourcefile="tutorial/siml/elements/usersettings.md" sourcestartlinenumber="41" sourceendlinenumber="41"><strong>User Input</strong></p>
+<p sourcefile="tutorial/siml/elements/usersettings.md" sourcestartlinenumber="43" sourceendlinenumber="43"><em>Do you know my name?</em></p>
+<p sourcefile="tutorial/siml/elements/usersettings.md" sourcestartlinenumber="45" sourceendlinenumber="45"><strong>Bot Output</strong></p>
+<p sourcefile="tutorial/siml/elements/usersettings.md" sourcestartlinenumber="47" sourceendlinenumber="47"><em>Your name is Leslie</em></p>
+<p sourcefile="tutorial/siml/elements/usersettings.md" sourcestartlinenumber="49" sourceendlinenumber="49"><strong>Explanation</strong></p>
+<blockquote sourcefile="tutorial/siml/elements/usersettings.md" sourcestartlinenumber="51" sourceendlinenumber="51"><p sourcefile="tutorial/siml/elements/usersettings.md" sourcestartlinenumber="51" sourceendlinenumber="51">The <code>User</code> element retrieves settings/predicates values stored for the User. The value of the <code>Get</code> attribute should be a valid Settings name.</p>
 </blockquote>
-<p>Most of the values of variables are stored/created during run-time ( while the bot interacts with the user ). If you explicitly write down predicate values under UserSettings then the variables will be used to initialize settings for new users.</p>
-<p>There are a few reserved variable under <code>UserSettings</code>. Some of the user variables mentioned below will not change their values even if the bot developer explicitly tried to change their values during a chat session.</p>
-<h2 id="reserved-user-variables">Reserved User Variables</h2>
-<table>
+<p sourcefile="tutorial/siml/elements/usersettings.md" sourcestartlinenumber="53" sourceendlinenumber="53">Most of the values of variables are stored/created during run-time ( while the bot interacts with the user ). If you explicitly write down predicate values under UserSettings then the variables will be used to initialize settings for new users.</p>
+<p sourcefile="tutorial/siml/elements/usersettings.md" sourcestartlinenumber="55" sourceendlinenumber="55">There are a few reserved variable under <code>UserSettings</code>. Some of the user variables mentioned below will not change their values even if the bot developer explicitly tried to change their values during a chat session.</p>
+<h2 id="reserved-user-variables" sourcefile="tutorial/siml/elements/usersettings.md" sourcestartlinenumber="57" sourceendlinenumber="57">Reserved User Variables</h2>
+<table sourcefile="tutorial/siml/elements/usersettings.md" sourcestartlinenumber="59" sourceendlinenumber="70">
 <thead>
 <tr>
 <th>Variable Name</th>
@@ -220,6 +220,5 @@
     <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

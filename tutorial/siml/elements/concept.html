@@ -8,7 +8,7 @@
     <title>Concept  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Concept ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.6.1.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -82,9 +82,9 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="concept">Concept</h1>
+              <h1 id="concept" sourcefile="tutorial/siml/elements/concept.md" sourcestartlinenumber="1" sourceendlinenumber="1">Concept</h1>
               
-<table>
+<table sourcefile="tutorial/siml/elements/concept.md" sourcestartlinenumber="3" sourceendlinenumber="10">
 <thead>
 <tr>
 <th><strong>Annotation</strong></th>
@@ -105,12 +105,12 @@
 <td style="text-align:left"><strong>Required</strong> <code>Name</code> Name of the Concept</td>
 </tr>
 <tr>
-<td></td>
-<td style="text-align:left"><strong>Optional</strong> <code>Type</code> Type of Concept. If not present the Concept is assumed to be a public concept</td>
+<td><strong>Optional</strong> <code>Type</code> Type of Concept. If not present the Concept is assumed to be a public concept</td>
+<td style="text-align:left"></td>
 </tr>
 <tr>
-<td></td>
-<td style="text-align:left"><strong>Optional</strong> <code>Repeat</code> Determines if a Concept allows repetitive activation of its Models. If not present the value is assumed to be <code>True</code></td>
+<td><strong>Optional</strong> <code>Repeat</code> Determines if a Concept allows repetitive activation of its Models. If not present the value is assumed to be <code>True</code></td>
+<td style="text-align:left"></td>
 </tr>
 <tr>
 <td><strong>Occurrence</strong></td>
@@ -118,24 +118,24 @@
 </tr>
 </tbody>
 </table>
-<p>An SIML knowledge base starts with a Concept. A Concept is the topic under consideration and is used to differentiate between similar Models. A Model in SIML is a unit of knowledge that contains a response for any pattern that might match the user input.</p>
-<p>Say, that we would like to talk to the user about <em>his likes and dislikes</em>. For this it’s important that we catch most ( if not all ) of the inputs the user might submit if the current topic is about likes and dislikes.</p>
-<p>To declare a concept use the <code>Concept</code> element and declare the name of the <code>Concept</code> using the <code>Name</code> attribute. In the code below you can see how one can create a concept and provide a concept name. Besides the Name attribute there’s the <code>Type</code> and the <code>Repeat</code> attribute. The <code>Type</code> attribute is an important attribute that tells the interpreter ( SIML Bot ) how Models within this Concept will be activated if any of their pattern’s match. Whereas the <code>Repeat</code> attribute takes 2 values <code>True</code> or <code>False</code> and if set to True the Models within the Concept are allowed to be activated even if the user repeats his input.</p>
-<pre><code class="lang-xml">&lt;Siml&gt;
+<p sourcefile="tutorial/siml/elements/concept.md" sourcestartlinenumber="12" sourceendlinenumber="12">An SIML knowledge base starts with a Concept. A Concept is the topic under consideration and is used to differentiate between similar Models. A Model in SIML is a unit of knowledge that contains a response for any pattern that might match the user input.</p>
+<p sourcefile="tutorial/siml/elements/concept.md" sourcestartlinenumber="14" sourceendlinenumber="14">Say, that we would like to talk to the user about <em>his likes and dislikes</em>. For this it’s important that we catch most ( if not all ) of the inputs the user might submit if the current topic is about likes and dislikes.</p>
+<p sourcefile="tutorial/siml/elements/concept.md" sourcestartlinenumber="16" sourceendlinenumber="16">To declare a concept use the <code>Concept</code> element and declare the name of the <code>Concept</code> using the <code>Name</code> attribute. In the code below you can see how one can create a concept and provide a concept name. Besides the Name attribute there’s the <code>Type</code> and the <code>Repeat</code> attribute. The <code>Type</code> attribute is an important attribute that tells the interpreter ( SIML Bot ) how Models within this Concept will be activated if any of their pattern’s match. Whereas the <code>Repeat</code> attribute takes 2 values <code>True</code> or <code>False</code> and if set to True the Models within the Concept are allowed to be activated even if the user repeats his input.</p>
+<pre sourcefile="tutorial/siml/elements/concept.md" sourcestartlinenumber="18" sourceendlinenumber="24"><code class="lang-xml">&lt;Siml&gt;
  &lt;Concept Type=&quot;public&quot; Name=&quot;User likes and dislikes&quot;&gt;
   &lt;!--SIML Models go within a Concept--&gt;
  &lt;/Concept&gt;
 &lt;/Siml&gt;
-</code></pre><p>There are 2 types of Concepts.</p>
-<ul>
-<li><strong>Public</strong> – Models within public Concept will get activated if their patterns are matched.</li>
-<li><strong>Private</strong> – Models within a private concept will only be evaluated if the current concept names matches the name of the private concept.</li>
+</code></pre><p sourcefile="tutorial/siml/elements/concept.md" sourcestartlinenumber="26" sourceendlinenumber="26">There are 2 types of Concepts.</p>
+<ul sourcefile="tutorial/siml/elements/concept.md" sourcestartlinenumber="28" sourceendlinenumber="29">
+<li sourcefile="tutorial/siml/elements/concept.md" sourcestartlinenumber="28" sourceendlinenumber="28"><strong>Public</strong> – Models within public Concept will get activated if their patterns are matched.</li>
+<li sourcefile="tutorial/siml/elements/concept.md" sourcestartlinenumber="29" sourceendlinenumber="29"><strong>Private</strong> – Models within a private concept will only be evaluated if the current concept names matches the name of the private concept.</li>
 </ul>
-<p>Private concepts are kept hidden from the user and have to enabled by the developer using the Set attribute on the User element.</p>
-<p>All SIML responses are Conceptual in nature which makes a pattern in a Public Concept unique to the Concept in which the pattern has been declared.</p>
-<h2 id="user-specific-concepts">User Specific Concepts</h2>
-<p>Concepts can directly be stored for a particular user using the User attribute and specifying the ID of the user as the attribute value. If a user with the specified ID is found then the Concept is loaded into the isolated Graph of the user.</p>
-<pre><code class="lang-xml">  &lt;Concept Name=&quot;Controlling Lights&quot; Type=&quot;Public&quot; User=&quot;ec82e3ee-5355-427b-be5c-658ed4933943&quot;&gt;
+<p sourcefile="tutorial/siml/elements/concept.md" sourcestartlinenumber="31" sourceendlinenumber="31">Private concepts are kept hidden from the user and have to enabled by the developer using the Set attribute on the User element.</p>
+<p sourcefile="tutorial/siml/elements/concept.md" sourcestartlinenumber="33" sourceendlinenumber="33">All SIML responses are Conceptual in nature which makes a pattern in a Public Concept unique to the Concept in which the pattern has been declared.</p>
+<h2 id="user-specific-concepts" sourcefile="tutorial/siml/elements/concept.md" sourcestartlinenumber="35" sourceendlinenumber="35">User Specific Concepts</h2>
+<p sourcefile="tutorial/siml/elements/concept.md" sourcestartlinenumber="37" sourceendlinenumber="37">Concepts can directly be stored for a particular user using the User attribute and specifying the ID of the user as the attribute value. If a user with the specified ID is found then the Concept is loaded into the isolated Graph of the user.</p>
+<pre sourcefile="tutorial/siml/elements/concept.md" sourcestartlinenumber="39" sourceendlinenumber="52"><code class="lang-xml">  &lt;Concept Name=&quot;Controlling Lights&quot; Type=&quot;Public&quot; User=&quot;ec82e3ee-5355-427b-be5c-658ed4933943&quot;&gt;
     &lt;Model&gt;
       &lt;Pattern&gt;SWITCH ON THE LIGHTS&lt;/Pattern&gt;
       &lt;Response&gt;Switching on lights in drawing room.&lt;/Response&gt;
@@ -147,8 +147,8 @@
       &lt;Response&gt;I am sorry the request has been denied.&lt;/Response&gt;
     &lt;/Model&gt;
   &lt;/Concept&gt;
-</code></pre><p>In the above SIML code the first Concept specifies a User ID. If a user with the specified ID is found then the Concept is loaded within the Isolated Graph of the User instead of the main Graph used by the Bot by default. This ensures that during a chat session if and only if the user with the specified ID requests the Bot to Switch on the lights the request will be granted. If the same request is made by another user then the response will be entirely different.</p>
-<p>Developers can use <strong>Main</strong> as a value for the User attribute to specify the Main user.</p>
+</code></pre><p sourcefile="tutorial/siml/elements/concept.md" sourcestartlinenumber="54" sourceendlinenumber="54">In the above SIML code the first Concept specifies a User ID. If a user with the specified ID is found then the Concept is loaded within the Isolated Graph of the User instead of the main Graph used by the Bot by default. This ensures that during a chat session if and only if the user with the specified ID requests the Bot to Switch on the lights the request will be granted. If the same request is made by another user then the response will be entirely different.</p>
+<p sourcefile="tutorial/siml/elements/concept.md" sourcestartlinenumber="56" sourceendlinenumber="56">Developers can use <strong>Main</strong> as a value for the User attribute to specify the Main user.</p>
 
             </article>
           </div>
@@ -180,6 +180,5 @@
     <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

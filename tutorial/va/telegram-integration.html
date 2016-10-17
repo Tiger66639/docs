@@ -8,7 +8,7 @@
     <title>Telegram Integration  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Telegram Integration ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.6.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -82,44 +82,44 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="telegram-integration">Telegram Integration</h1>
+              <h1 id="telegram-integration" sourcefile="tutorial/va/telegram-integration.md" sourcestartlinenumber="1" sourceendlinenumber="1">Telegram Integration</h1>
               
-<p><em>Syn Virtual Assistant</em> can be integrated to work with <a href="https://telegram.org/">Telegram</a> API. For this developers would need to create a new (personal) Bot in telegram and obtain its HTTP API Access Token.</p>
-<p>To obtain a Telegram API Access Token</p>
-<ul>
-<li>Download Telegram to your Desktop or Mobile from <a href="https://telegram.org/">Telegram</a></li>
-<li>Search for <strong>BotFather</strong> and then click on <strong>Start</strong>.</li>
+<p sourcefile="tutorial/va/telegram-integration.md" sourcestartlinenumber="3" sourceendlinenumber="3"><em>Syn Virtual Assistant</em> can be integrated to work with <a href="https://telegram.org/" sourcefile="tutorial/va/telegram-integration.md" sourcestartlinenumber="3" sourceendlinenumber="3">Telegram</a> API. For this developers would need to create a new (personal) Bot in telegram and obtain its HTTP API Access Token.</p>
+<p sourcefile="tutorial/va/telegram-integration.md" sourcestartlinenumber="5" sourceendlinenumber="5">To obtain a Telegram API Access Token</p>
+<ul sourcefile="tutorial/va/telegram-integration.md" sourcestartlinenumber="7" sourceendlinenumber="8">
+<li sourcefile="tutorial/va/telegram-integration.md" sourcestartlinenumber="7" sourceendlinenumber="7">Download Telegram to your Desktop or Mobile from <a href="https://telegram.org/" sourcefile="tutorial/va/telegram-integration.md" sourcestartlinenumber="7" sourceendlinenumber="7">Telegram</a></li>
+<li sourcefile="tutorial/va/telegram-integration.md" sourcestartlinenumber="8" sourceendlinenumber="8">Search for <strong>BotFather</strong> and then click on <strong>Start</strong>.</li>
 </ul>
-<p><img src="images/telegram-botfather.png" alt="Telegram Image"></p>
-<ul>
-<li>Type <strong>/newbot</strong></li>
+<p sourcefile="tutorial/va/telegram-integration.md" sourcestartlinenumber="10" sourceendlinenumber="10"><img src="images/telegram-botfather.png" alt="Telegram Image" sourcefile="tutorial/va/telegram-integration.md" sourcestartlinenumber="10" sourceendlinenumber="10"></p>
+<ul sourcefile="tutorial/va/telegram-integration.md" sourcestartlinenumber="12" sourceendlinenumber="12">
+<li sourcefile="tutorial/va/telegram-integration.md" sourcestartlinenumber="12" sourceendlinenumber="12">Type <strong>/newbot</strong></li>
 </ul>
-<p><img src="images/telegram-newbot.png" alt="Telegram Image"></p>
-<ul>
-<li>Enter a display name for your bot. In our example we&#39;ve used <strong>Maya</strong></li>
+<p sourcefile="tutorial/va/telegram-integration.md" sourcestartlinenumber="14" sourceendlinenumber="14"><img src="images/telegram-newbot.png" alt="Telegram Image" sourcefile="tutorial/va/telegram-integration.md" sourcestartlinenumber="14" sourceendlinenumber="14"></p>
+<ul sourcefile="tutorial/va/telegram-integration.md" sourcestartlinenumber="16" sourceendlinenumber="16">
+<li sourcefile="tutorial/va/telegram-integration.md" sourcestartlinenumber="16" sourceendlinenumber="16">Enter a display name for your bot. In our example we&#39;ve used <strong>Maya</strong></li>
 </ul>
-<p><img src="images/telegram-name.png" alt="Telegram Image"></p>
-<ul>
-<li>After you&#39;ve specified the bot name, enter a unique Bot name. You can use _ as separators. For this tutorial we&#39;ve used the name <strong>My_VA_Bot</strong> as the Bot name.</li>
+<p sourcefile="tutorial/va/telegram-integration.md" sourcestartlinenumber="18" sourceendlinenumber="18"><img src="images/telegram-name.png" alt="Telegram Image" sourcefile="tutorial/va/telegram-integration.md" sourcestartlinenumber="18" sourceendlinenumber="18"></p>
+<ul sourcefile="tutorial/va/telegram-integration.md" sourcestartlinenumber="20" sourceendlinenumber="20">
+<li sourcefile="tutorial/va/telegram-integration.md" sourcestartlinenumber="20" sourceendlinenumber="20">After you&#39;ve specified the bot name, enter a unique Bot name. You can use _ as separators. For this tutorial we&#39;ve used the name <strong>My_VA_Bot</strong> as the Bot name.</li>
 </ul>
-<p><img src="images/telegram-botname.png" alt="Telegram Image"></p>
-<ul>
-<li>After that you&#39;ll be presented with the HTTP Access Token.</li>
+<p sourcefile="tutorial/va/telegram-integration.md" sourcestartlinenumber="22" sourceendlinenumber="22"><img src="images/telegram-botname.png" alt="Telegram Image" sourcefile="tutorial/va/telegram-integration.md" sourcestartlinenumber="22" sourceendlinenumber="22"></p>
+<ul sourcefile="tutorial/va/telegram-integration.md" sourcestartlinenumber="24" sourceendlinenumber="24">
+<li sourcefile="tutorial/va/telegram-integration.md" sourcestartlinenumber="24" sourceendlinenumber="24">After that you&#39;ll be presented with the HTTP Access Token.</li>
 </ul>
-<p><img src="images/telegram-token.png" alt="Telegram Image"></p>
-<ul>
-<li>Copy the HTTP API access token as shown below.</li>
+<p sourcefile="tutorial/va/telegram-integration.md" sourcestartlinenumber="26" sourceendlinenumber="26"><img src="images/telegram-token.png" alt="Telegram Image" sourcefile="tutorial/va/telegram-integration.md" sourcestartlinenumber="26" sourceendlinenumber="26"></p>
+<ul sourcefile="tutorial/va/telegram-integration.md" sourcestartlinenumber="28" sourceendlinenumber="28">
+<li sourcefile="tutorial/va/telegram-integration.md" sourcestartlinenumber="28" sourceendlinenumber="28">Copy the HTTP API access token as shown below.</li>
 </ul>
-<p><img src="images/telegram-copy-token.png" alt="Telegram Image"></p>
-<ul>
-<li>Open the <strong>Settings Panel</strong> in <em>Syn Virtual Assistant</em>, select <strong>Telegram Bot</strong></li>
-<li>Paste the copied Token and press <strong>Save</strong>.</li>
+<p sourcefile="tutorial/va/telegram-integration.md" sourcestartlinenumber="30" sourceendlinenumber="30"><img src="images/telegram-copy-token.png" alt="Telegram Image" sourcefile="tutorial/va/telegram-integration.md" sourcestartlinenumber="30" sourceendlinenumber="30"></p>
+<ul sourcefile="tutorial/va/telegram-integration.md" sourcestartlinenumber="32" sourceendlinenumber="33">
+<li sourcefile="tutorial/va/telegram-integration.md" sourcestartlinenumber="32" sourceendlinenumber="32">Open the <strong>Settings Panel</strong> in <em>Syn Virtual Assistant</em>, select <strong>Telegram Bot</strong></li>
+<li sourcefile="tutorial/va/telegram-integration.md" sourcestartlinenumber="33" sourceendlinenumber="33">Paste the copied Token and press <strong>Save</strong>.</li>
 </ul>
-<p><img src="images/telegram-paste.png" alt="Telegram Image"></p>
-<ul>
-<li>Enabled <strong>Auto-Connect</strong> and restart <em>Syn Virtual Assistant</em>.</li>
+<p sourcefile="tutorial/va/telegram-integration.md" sourcestartlinenumber="35" sourceendlinenumber="35"><img src="images/telegram-paste.png" alt="Telegram Image" sourcefile="tutorial/va/telegram-integration.md" sourcestartlinenumber="35" sourceendlinenumber="35"></p>
+<ul sourcefile="tutorial/va/telegram-integration.md" sourcestartlinenumber="37" sourceendlinenumber="37">
+<li sourcefile="tutorial/va/telegram-integration.md" sourcestartlinenumber="37" sourceendlinenumber="37">Enabled <strong>Auto-Connect</strong> and restart <em>Syn Virtual Assistant</em>.</li>
 </ul>
-<p>Congratulations! You can now control your Virtual Assistant using <em>Telegram</em>.</p>
+<p sourcefile="tutorial/va/telegram-integration.md" sourcestartlinenumber="39" sourceendlinenumber="39">Congratulations! You can now control your Virtual Assistant using <em>Telegram</em>.</p>
 
             </article>
           </div>
@@ -151,6 +151,5 @@
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

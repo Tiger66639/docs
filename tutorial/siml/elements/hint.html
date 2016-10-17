@@ -8,7 +8,7 @@
     <title>Hint  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Hint ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.6.1.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -82,9 +82,9 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="hint">Hint</h1>
+              <h1 id="hint" sourcefile="tutorial/siml/elements/hint.md" sourcestartlinenumber="1" sourceendlinenumber="1">Hint</h1>
               
-<table>
+<table sourcefile="tutorial/siml/elements/hint.md" sourcestartlinenumber="3" sourceendlinenumber="7">
 <thead>
 <tr>
 <th><strong>Annotation</strong></th>
@@ -106,24 +106,24 @@
 </tr>
 </tbody>
 </table>
-<p>The Hint element is an interface for bot developers to explicitly give an application/program the opportunity to display the next possible value that the bot may expect. This element produces no textual value but sets the value for the Hint part when the response class object is de-serialized. This element is to be used by Syn Virtual Assistant to display the next possible input it expects from the user.</p>
-<p>If XML content is being specified within the <em>Hint</em> element, it is important to note that only one child element with one or more children is valid within the <em>Hint</em> element.</p>
-<blockquote><p>The <code>Hint</code> element returns an empty value and therefore DOES NOT require being enclosed within a <code>&lt;Think&gt;</code> element.</p>
+<p sourcefile="tutorial/siml/elements/hint.md" sourcestartlinenumber="10" sourceendlinenumber="10">The Hint element is an interface for bot developers to explicitly give an application/program the opportunity to display the next possible value that the bot may expect. This element produces no textual value but sets the value for the Hint part when the response class object is de-serialized. This element is to be used by Syn Virtual Assistant to display the next possible input it expects from the user.</p>
+<p sourcefile="tutorial/siml/elements/hint.md" sourcestartlinenumber="12" sourceendlinenumber="12">If XML content is being specified within the <em>Hint</em> element, it is important to note that only one child element with one or more children is valid within the <em>Hint</em> element.</p>
+<blockquote sourcefile="tutorial/siml/elements/hint.md" sourcestartlinenumber="14" sourceendlinenumber="14"><p sourcefile="tutorial/siml/elements/hint.md" sourcestartlinenumber="14" sourceendlinenumber="14">The <code>Hint</code> element returns an empty value and therefore DOES NOT require being enclosed within a <code>&lt;Think&gt;</code> element.</p>
 </blockquote>
-<p><em>Example</em></p>
-<p><strong>SIML</strong></p>
-<pre><code class="lang-xml">&lt;Model&gt;
+<p sourcefile="tutorial/siml/elements/hint.md" sourcestartlinenumber="16" sourceendlinenumber="16"><em>Example</em></p>
+<p sourcefile="tutorial/siml/elements/hint.md" sourcestartlinenumber="18" sourceendlinenumber="18"><strong>SIML</strong></p>
+<pre sourcefile="tutorial/siml/elements/hint.md" sourcestartlinenumber="20" sourceendlinenumber="27"><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;RESTART COMPUTER&lt;/Pattern&gt;
  &lt;Response&gt;Are you sure?
   &lt;Hint&gt;Yes|No&lt;/Hint&gt;
  &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p><strong>User Input</strong></p>
-<p><em>Restart Computer</em></p>
-<p><strong>Bot Output</strong></p>
-<p><em>Are you sure?</em></p>
-<p><strong>Explanation</strong></p>
-<blockquote><p>User GUI may display <code>Yes|No</code> by getting the value of the <code>Hint</code> property on the <code>ChatResult</code> class.</p>
+</code></pre><p sourcefile="tutorial/siml/elements/hint.md" sourcestartlinenumber="29" sourceendlinenumber="29"><strong>User Input</strong></p>
+<p sourcefile="tutorial/siml/elements/hint.md" sourcestartlinenumber="31" sourceendlinenumber="31"><em>Restart Computer</em></p>
+<p sourcefile="tutorial/siml/elements/hint.md" sourcestartlinenumber="33" sourceendlinenumber="33"><strong>Bot Output</strong></p>
+<p sourcefile="tutorial/siml/elements/hint.md" sourcestartlinenumber="35" sourceendlinenumber="35"><em>Are you sure?</em></p>
+<p sourcefile="tutorial/siml/elements/hint.md" sourcestartlinenumber="37" sourceendlinenumber="37"><strong>Explanation</strong></p>
+<blockquote sourcefile="tutorial/siml/elements/hint.md" sourcestartlinenumber="39" sourceendlinenumber="39"><p sourcefile="tutorial/siml/elements/hint.md" sourcestartlinenumber="39" sourceendlinenumber="39">User GUI may display <code>Yes|No</code> by getting the value of the <code>Hint</code> property on the <code>ChatResult</code> class.</p>
 </blockquote>
 
             </article>
@@ -156,6 +156,5 @@
     <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

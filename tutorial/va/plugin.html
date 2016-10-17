@@ -8,7 +8,7 @@
     <title>Plugin System  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Plugin System ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.6.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -82,12 +82,12 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="plugin-system">Plugin System</h1>
+              <h1 id="plugin-system" sourcefile="tutorial/va/plugin.md" sourcestartlinenumber="1" sourceendlinenumber="1">Plugin System</h1>
               
-<p><code>VA Framework</code> provides an easy inter-component interaction mechanism via the Plugin interface. Developers can either implement the <code>IPlugin</code> interface or inherit <code>Plugin</code> class to create their own plugin.</p>
-<p>Only the plugins with the <code>public</code> modifier will be loaded automatically by the Virtual Assistant. To avoid automatic loading of plugins set the modifier to <code>internal</code> and manually load the plugins.</p>
-<h2 id="parts-of-a-plugin">Parts of a Plugin</h2>
-<table>
+<p sourcefile="tutorial/va/plugin.md" sourcestartlinenumber="3" sourceendlinenumber="3"><code>VA Framework</code> provides an easy inter-component interaction mechanism via the Plugin interface. Developers can either implement the <code>IPlugin</code> interface or inherit <code>Plugin</code> class to create their own plugin.</p>
+<p sourcefile="tutorial/va/plugin.md" sourcestartlinenumber="5" sourceendlinenumber="5">Only the plugins with the <code>public</code> modifier will be loaded automatically by the Virtual Assistant. To avoid automatic loading of plugins set the modifier to <code>internal</code> and manually load the plugins.</p>
+<h2 id="parts-of-a-plugin" sourcefile="tutorial/va/plugin.md" sourcestartlinenumber="7" sourceendlinenumber="7">Parts of a Plugin</h2>
+<table sourcefile="tutorial/va/plugin.md" sourcestartlinenumber="9" sourceendlinenumber="15">
 <thead>
 <tr>
 <th style="text-align:left">Name</th>
@@ -123,17 +123,17 @@
 </tr>
 </tbody>
 </table>
-<h2 id="loader-plugin">Loader Plugin</h2>
-<p>By convention the first plugin that is to be loaded into the VA Framework is the <code>Loader</code> plugin. This plugin is supposed to give the VA a functional architecture.</p>
-<p><em>For example Syn Virtual Assistant loads the <strong>Syn.VA.Plugins.Loader.dll</strong> plugin from the root directory which ensures all SIML based plugins are loaded properly into the VA Framework</em></p>
-<h2 id="getpanel">GetPanel()</h2>
-<p>A Plugin is itself responsible for providing a <em>GUI</em> that enables its user to change the internal values or settings of the plugin. For this, the method <code>GetPanel&lt;T&gt;</code> is called by the Virtual Assistant&#39;s <em>Settings Window</em> whenever the <em>Settings Window</em> is opened.</p>
-<p>The type <strong>T</strong> depends on the calling application. The <code>SettingsWindow</code> in Syn Virtual Assistant calls the <code>GetPanel</code> function with <strong>T</strong> of the type <code>System.Windows.Controls.UserControl</code>.</p>
-<h2 id="conventions">Conventions</h2>
-<ul>
-<li>The name of the plugin must always be suffixed with the word <strong>Plugin</strong>. <em>For Example</em> an <em>Email</em> plugin is called <em>EmailPlugin</em>.</li>
-<li>If a plugin stores its settings in an xml file like the official plugins then the settings file name must contain 2 parts, the name of the plugin and the word <strong>Settings</strong>. <em>For Example</em> the settings file name for <code>EmailPlugin</code> would be <code>EmailPluginSettings.xml</code>.</li>
-<li>VA Plugin <code>assembly</code> and <code>default</code> namespace should start with <strong>Syn.VA.Plugins</strong>.</li>
+<h2 id="loader-plugin" sourcefile="tutorial/va/plugin.md" sourcestartlinenumber="17" sourceendlinenumber="17">Loader Plugin</h2>
+<p sourcefile="tutorial/va/plugin.md" sourcestartlinenumber="19" sourceendlinenumber="19">By convention the first plugin that is to be loaded into the VA Framework is the <code>Loader</code> plugin. This plugin is supposed to give the VA a functional architecture.</p>
+<p sourcefile="tutorial/va/plugin.md" sourcestartlinenumber="21" sourceendlinenumber="21"><em>For example Syn Virtual Assistant loads the <strong>Syn.VA.Plugins.Loader.dll</strong> plugin from the root directory which ensures all SIML based plugins are loaded properly into the VA Framework</em></p>
+<h2 id="getpanel" sourcefile="tutorial/va/plugin.md" sourcestartlinenumber="23" sourceendlinenumber="23">GetPanel()</h2>
+<p sourcefile="tutorial/va/plugin.md" sourcestartlinenumber="25" sourceendlinenumber="25">A Plugin is itself responsible for providing a <em>GUI</em> that enables its user to change the internal values or settings of the plugin. For this, the method <code>GetPanel&lt;T&gt;</code> is called by the Virtual Assistant&#39;s <em>Settings Window</em> whenever the <em>Settings Window</em> is opened.</p>
+<p sourcefile="tutorial/va/plugin.md" sourcestartlinenumber="27" sourceendlinenumber="27">The type <strong>T</strong> depends on the calling application. The <code>SettingsWindow</code> in Syn Virtual Assistant calls the <code>GetPanel</code> function with <strong>T</strong> of the type <code>System.Windows.Controls.UserControl</code>.</p>
+<h2 id="conventions" sourcefile="tutorial/va/plugin.md" sourcestartlinenumber="29" sourceendlinenumber="29">Conventions</h2>
+<ul sourcefile="tutorial/va/plugin.md" sourcestartlinenumber="31" sourceendlinenumber="33">
+<li sourcefile="tutorial/va/plugin.md" sourcestartlinenumber="31" sourceendlinenumber="31">The name of the plugin must always be suffixed with the word <strong>Plugin</strong>. <em>For Example</em> an <em>Email</em> plugin is called <em>EmailPlugin</em>.</li>
+<li sourcefile="tutorial/va/plugin.md" sourcestartlinenumber="32" sourceendlinenumber="32">If a plugin stores its settings in an xml file like the official plugins then the settings file name must contain 2 parts, the name of the plugin and the word <strong>Settings</strong>. <em>For Example</em> the settings file name for <code>EmailPlugin</code> would be <code>EmailPluginSettings.xml</code>.</li>
+<li sourcefile="tutorial/va/plugin.md" sourcestartlinenumber="33" sourceendlinenumber="33">VA Plugin <code>assembly</code> and <code>default</code> namespace should start with <strong>Syn.VA.Plugins</strong>.</li>
 </ul>
 
             </article>
@@ -166,6 +166,5 @@
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

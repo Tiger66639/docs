@@ -8,7 +8,7 @@
     <title>Pattern  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Pattern ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.6.1.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -82,9 +82,9 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="pattern">Pattern</h1>
+              <h1 id="pattern" sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="1" sourceendlinenumber="1">Pattern</h1>
               
-<table>
+<table sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="3" sourceendlinenumber="7">
 <thead>
 <tr>
 <th><strong>Annotation</strong></th>
@@ -106,9 +106,9 @@
 </tr>
 </tbody>
 </table>
-<p>A <code>&lt;Pattern&gt;</code> element is used to declare an SIML pattern. The above pattern in the Model section is called an atomic pattern because the pattern comprises of only words and no symbols. In SIML there are a number of ways of declaring a valid pattern by either using wildcards, sets, regular expressions, variable state comparison (conditionals) or even JavaScript.</p>
-<h2 id="symbols-in-pattern">Symbols in Pattern</h2>
-<table>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="9" sourceendlinenumber="9">A <code>&lt;Pattern&gt;</code> element is used to declare an SIML pattern. The above pattern in the Model section is called an atomic pattern because the pattern comprises of only words and no symbols. In SIML there are a number of ways of declaring a valid pattern by either using wildcards, sets, regular expressions, variable state comparison (conditionals) or even JavaScript.</p>
+<h2 id="symbols-in-pattern" sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="11" sourceendlinenumber="11">Symbols in Pattern</h2>
+<table sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="13" sourceendlinenumber="24">
 <thead>
 <tr>
 <th><strong>Symbol</strong></th>
@@ -158,11 +158,11 @@
 </tr>
 </tbody>
 </table>
-<h3 id="caret">Caret</h3>
-<p>Firstly the ^ symbol. This symbols ensures that the word after the symbol is to be evaluated ( or looked for ) before any other word or symbol.</p>
-<p><em>Example</em></p>
-<p><strong>SIML Code</strong></p>
-<pre><code class="lang-xml">&lt;Model&gt;
+<h3 id="caret" sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="26" sourceendlinenumber="26">Caret</h3>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="28" sourceendlinenumber="28">Firstly the ^ symbol. This symbols ensures that the word after the symbol is to be evaluated ( or looked for ) before any other word or symbol.</p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="30" sourceendlinenumber="30"><em>Example</em></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="32" sourceendlinenumber="32"><strong>SIML Code</strong></p>
+<pre sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="34" sourceendlinenumber="44"><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;HI THERE&lt;/Pattern&gt;
  &lt;Response&gt;Heya user&lt;/Response&gt;
 &lt;/Model&gt;
@@ -171,18 +171,18 @@
  &lt;Pattern&gt;^HI THERE&lt;/Pattern&gt;
  &lt;Response&gt;Hello user&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p><strong>User Input</strong></p>
-<p><em>Hi there</em></p>
-<p><strong>Bot Output</strong></p>
-<p><em>Heya User</em></p>
-<p><strong>Explanation</strong></p>
-<blockquote><p>The symbol ^ in the above example speaks for itself by pointing upwards which implies that the word Hi in the first pattern declared in the first Model has the highest priority. So if the user says Hi there the bot will respond Hello user despite the fact that the pattern HI THERE has been defined before the pattern ^HI THERE.</p>
+</code></pre><p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="45" sourceendlinenumber="45"><strong>User Input</strong></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="47" sourceendlinenumber="47"><em>Hi there</em></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="49" sourceendlinenumber="49"><strong>Bot Output</strong></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="51" sourceendlinenumber="51"><em>Heya User</em></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="53" sourceendlinenumber="53"><strong>Explanation</strong></p>
+<blockquote sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="55" sourceendlinenumber="55"><p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="55" sourceendlinenumber="55">The symbol ^ in the above example speaks for itself by pointing upwards which implies that the word Hi in the first pattern declared in the first Model has the highest priority. So if the user says Hi there the bot will respond Hello user despite the fact that the pattern HI THERE has been defined before the pattern ^HI THERE.</p>
 </blockquote>
-<h3 id="percent">Percent</h3>
-<p>The <strong>%</strong> symbol is used to denote a pattern that will match zero or more words.</p>
-<p><em>Example</em></p>
-<p><strong>SIML</strong></p>
-<pre><code class="lang-xml">&lt;Model&gt;
+<h3 id="percent" sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="57" sourceendlinenumber="57">Percent</h3>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="59" sourceendlinenumber="59">The <strong>%</strong> symbol is used to denote a pattern that will match zero or more words.</p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="61" sourceendlinenumber="61"><em>Example</em></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="63" sourceendlinenumber="63"><strong>SIML</strong></p>
+<pre sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="65" sourceendlinenumber="75"><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;HELLO SIML&lt;/Pattern&gt;
  &lt;Response&gt;Life is awesome!&lt;/Response&gt;
 &lt;/Model&gt;
@@ -191,18 +191,18 @@
  &lt;Pattern&gt;% SIML&lt;/Pattern&gt;
  &lt;Response&gt;You Rock!&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p><strong>User Input</strong></p>
-<p><em>Hello Siml</em></p>
-<p><strong>Bot Output</strong></p>
-<p><em>You Rock!</em></p>
-<p><strong>Explanation</strong></p>
-<blockquote><p>Since % has higher priority than an exact word SIML Bot will accept the second model with the pattern % SIML and generate a response.Note: If the user says SIML the response will still be <em>You Rock!</em> this is because the Percent symbol accepts 0 or more words.</p>
+</code></pre><p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="77" sourceendlinenumber="77"><strong>User Input</strong></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="79" sourceendlinenumber="79"><em>Hello Siml</em></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="81" sourceendlinenumber="81"><strong>Bot Output</strong></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="83" sourceendlinenumber="83"><em>You Rock!</em></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="85" sourceendlinenumber="85"><strong>Explanation</strong></p>
+<blockquote sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="87" sourceendlinenumber="87"><p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="87" sourceendlinenumber="87">Since % has higher priority than an exact word SIML Bot will accept the second model with the pattern % SIML and generate a response.Note: If the user says SIML the response will still be <em>You Rock!</em> this is because the Percent symbol accepts 0 or more words.</p>
 </blockquote>
-<h3 id="underscore">Underscore</h3>
-<p>The underscore symbol matches one or more words unlike the percent symbol that matches zero or more words.</p>
-<p><em>Example</em></p>
-<p><strong>SIML</strong></p>
-<pre><code class="lang-xml">&lt;Model&gt;
+<h3 id="underscore" sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="89" sourceendlinenumber="89">Underscore</h3>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="91" sourceendlinenumber="91">The underscore symbol matches one or more words unlike the percent symbol that matches zero or more words.</p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="93" sourceendlinenumber="93"><em>Example</em></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="95" sourceendlinenumber="95"><strong>SIML</strong></p>
+<pre sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="97" sourceendlinenumber="107"><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;_ MY NAME IS LESLIE&lt;/Pattern&gt;
  &lt;Response&gt;Good to meet you.&lt;/Response&gt;
 &lt;/Model&gt;
@@ -211,18 +211,18 @@
  &lt;Pattern&gt;HI MY NAME IS LESLIE&lt;/Pattern&gt;
  &lt;Response&gt;Well, Hi there.&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p><strong>User Input</strong></p>
-<p><em>Hi my name is Leslie</em></p>
-<p><strong>Bot Output</strong></p>
-<p><em>Good to meet you.</em></p>
-<p><strong>Explanation</strong></p>
-<blockquote><p>The _ symbol has a priority lesser than % but higher than an exact word. This symbol is useful if you wish to ignore a word or sentence especially the name of the Bot when declaring commands.</p>
+</code></pre><p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="109" sourceendlinenumber="109"><strong>User Input</strong></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="111" sourceendlinenumber="111"><em>Hi my name is Leslie</em></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="113" sourceendlinenumber="113"><strong>Bot Output</strong></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="115" sourceendlinenumber="115"><em>Good to meet you.</em></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="117" sourceendlinenumber="117"><strong>Explanation</strong></p>
+<blockquote sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="119" sourceendlinenumber="119"><p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="119" sourceendlinenumber="119">The _ symbol has a priority lesser than % but higher than an exact word. This symbol is useful if you wish to ignore a word or sentence especially the name of the Bot when declaring commands.</p>
 </blockquote>
-<h3 id="a-word">A Word</h3>
-<p>A word in any language ranks 4 under the evaluation tree in SIML. Words are matched as such and no match indexing is generated. SIML uses UTF-8 encoding to address multiple languages.</p>
-<p><em>Example</em></p>
-<p><strong>SIML</strong></p>
-<pre><code class="lang-xml">&lt;Model&gt;
+<h3 id="a-word" sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="121" sourceendlinenumber="121">A Word</h3>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="123" sourceendlinenumber="123">A word in any language ranks 4 under the evaluation tree in SIML. Words are matched as such and no match indexing is generated. SIML uses UTF-8 encoding to address multiple languages.</p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="125" sourceendlinenumber="125"><em>Example</em></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="127" sourceendlinenumber="127"><strong>SIML</strong></p>
+<pre sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="129" sourceendlinenumber="139"><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;HOW ARE YOU&lt;/Pattern&gt;
  &lt;Response&gt;I am fine.&lt;/Response&gt;
 &lt;/Model&gt;
@@ -231,33 +231,33 @@
  &lt;Pattern&gt;HOW ARE YOU DOING TODAY&lt;/Pattern&gt;
  &lt;Response&gt;I am doing great.&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p><strong>User Input</strong></p>
-<p><em>How are you</em></p>
-<p><strong>Bot Output</strong></p>
-<p><em>How are you</em></p>
-<p><strong>Explanation</strong></p>
-<blockquote><p>Words and their locations are matched as such. If you remove the Model with the Pattern How are you SIML won’t activate the second Model containing the pattern <em>How are you today</em></p>
+</code></pre><p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="141" sourceendlinenumber="141"><strong>User Input</strong></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="143" sourceendlinenumber="143"><em>How are you</em></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="145" sourceendlinenumber="145"><strong>Bot Output</strong></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="147" sourceendlinenumber="147"><em>How are you</em></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="149" sourceendlinenumber="149"><strong>Explanation</strong></p>
+<blockquote sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="151" sourceendlinenumber="151"><p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="151" sourceendlinenumber="151">Words and their locations are matched as such. If you remove the Model with the Pattern How are you SIML won’t activate the second Model containing the pattern <em>How are you today</em></p>
 </blockquote>
-<h3 id="set">Set</h3>
-<p>A Set is a collection of words or sentences. SIML Interpreter uses state-of-the-art technology to make sure large sets do not affect the performance of matching text fragments against a collection of words in a set.</p>
-<p>A set declaration requires that you give the set a unique name. A set is addressed using Square Brackets so to use a set of colors with the name <em>COLOR</em> you would use <strong>[COLOR]</strong></p>
-<p>Two different sets with different <em>names</em> must not hold common values.</p>
-<p><em>Example</em></p>
-<p><strong>SIML</strong></p>
-<pre><code class="lang-xml">&lt;Model&gt;
+<h3 id="set" sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="153" sourceendlinenumber="153">Set</h3>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="155" sourceendlinenumber="155">A Set is a collection of words or sentences. SIML Interpreter uses state-of-the-art technology to make sure large sets do not affect the performance of matching text fragments against a collection of words in a set.</p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="157" sourceendlinenumber="157">A set declaration requires that you give the set a unique name. A set is addressed using Square Brackets so to use a set of colors with the name <em>COLOR</em> you would use <strong>[COLOR]</strong></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="159" sourceendlinenumber="159">Two different sets with different <em>names</em> must not hold common values.</p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="161" sourceendlinenumber="161"><em>Example</em></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="163" sourceendlinenumber="163"><strong>SIML</strong></p>
+<pre sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="165" sourceendlinenumber="170"><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;I LIKE THE COLOR [COLOR]&lt;/Pattern&gt;
  &lt;Response&gt;Me too!&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p><strong>User Input</strong></p>
-<p><em>I like the color blue</em></p>
-<p><strong>Bot Output</strong></p>
-<p><em>Me too!</em></p>
-<p><strong>Explanation</strong></p>
-<blockquote><p><strong>[COLOR]</strong> is a collection of colors (names of colors)</p>
+</code></pre><p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="172" sourceendlinenumber="172"><strong>User Input</strong></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="174" sourceendlinenumber="174"><em>I like the color blue</em></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="176" sourceendlinenumber="176"><strong>Bot Output</strong></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="178" sourceendlinenumber="178"><em>Me too!</em></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="180" sourceendlinenumber="180"><strong>Explanation</strong></p>
+<blockquote sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="182" sourceendlinenumber="182"><p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="182" sourceendlinenumber="182"><strong>[COLOR]</strong> is a collection of colors (names of colors)</p>
 </blockquote>
-<p>Sets in SIML can be declared in using the <code>&lt;Set&gt;</code> Tag and can be accessed ( once declared ) using <em>Round Brackets</em> around their names.</p>
-<h4 id="set-declaration">Set Declaration</h4>
-<table>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="184" sourceendlinenumber="184">Sets in SIML can be declared in using the <code>&lt;Set&gt;</code> Tag and can be accessed ( once declared ) using <em>Round Brackets</em> around their names.</p>
+<h4 id="set-declaration" sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="186" sourceendlinenumber="186">Set Declaration</h4>
+<table sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="188" sourceendlinenumber="193">
 <thead>
 <tr>
 <th><strong>Annotation</strong></th>
@@ -283,124 +283,124 @@
 </tr>
 </tbody>
 </table>
-<pre><code class="lang-xml">&lt;Set Name=&quot;Color&quot;&gt;
+<pre sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="195" sourceendlinenumber="202"><code class="lang-xml">&lt;Set Name=&quot;Color&quot;&gt;
  &lt;Item&gt;RED&lt;/Item&gt;
  &lt;Item&gt;GREEN&lt;/Item&gt;
  &lt;Item&gt;BLUE&lt;/Item&gt;
  &lt;Item&gt;ORANGE&lt;/Item&gt;
 &lt;/Set&gt;
-</code></pre><p>Or</p>
-<pre><code class="lang-xml">&lt;Set Name=&quot;Color&quot;&gt;Red, Green, Blue, Orange&lt;/Set&gt;
-</code></pre><h4 id="reserved-set-names">Reserved Set Names</h4>
-<p>SIML comes with reserved Set names that can help developers address Bot, User and Map items directly within a Pattern. The name of the Set and the parameter part are separated using a colon.</p>
-<p>Like all set names, the name and the parameter part of the reserved variables are case-insensitive. Reserved sets are also dynamic. Hence, at run-time if the value of any variable is changed the pattern will then match the new value.</p>
-<h5 id="bot-set">Bot Set</h5>
-<p>To indicate a bot variable the set name Bot is followed by the name of the bot variable.</p>
-<p><em>Example</em></p>
-<p><strong>SIML</strong></p>
-<pre><code class="lang-xml">&lt;Model&gt;
+</code></pre><p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="204" sourceendlinenumber="204">Or</p>
+<pre sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="206" sourceendlinenumber="208"><code class="lang-xml">&lt;Set Name=&quot;Color&quot;&gt;Red, Green, Blue, Orange&lt;/Set&gt;
+</code></pre><h4 id="reserved-set-names" sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="210" sourceendlinenumber="210">Reserved Set Names</h4>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="212" sourceendlinenumber="212">SIML comes with reserved Set names that can help developers address Bot, User and Map items directly within a Pattern. The name of the Set and the parameter part are separated using a colon.</p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="214" sourceendlinenumber="214">Like all set names, the name and the parameter part of the reserved variables are case-insensitive. Reserved sets are also dynamic. Hence, at run-time if the value of any variable is changed the pattern will then match the new value.</p>
+<h5 id="bot-set" sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="216" sourceendlinenumber="216">Bot Set</h5>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="218" sourceendlinenumber="218">To indicate a bot variable the set name Bot is followed by the name of the bot variable.</p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="220" sourceendlinenumber="220"><em>Example</em></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="222" sourceendlinenumber="222"><strong>SIML</strong></p>
+<pre sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="224" sourceendlinenumber="231"><code class="lang-xml">&lt;Model&gt;
   &lt;Pattern&gt;Is your name [Bot:Name]&lt;/Pattern&gt;
   &lt;Response&gt;
     Yes, my name is &lt;Match /&gt;
   &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p><strong>User Input</strong></p>
-<p><em>Is your name Maya?</em></p>
-<p><strong>Bot Output</strong></p>
-<p><em>Yes, my name is Maya</em></p>
-<p><strong>Explanation</strong></p>
-<blockquote><p>At run-time the pattern is evaluated after replacing the value of <code>[Bot:Name]</code> with the name of the Bot as <em>Is your name Maya</em>.</p>
+</code></pre><p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="233" sourceendlinenumber="233"><strong>User Input</strong></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="235" sourceendlinenumber="235"><em>Is your name Maya?</em></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="237" sourceendlinenumber="237"><strong>Bot Output</strong></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="239" sourceendlinenumber="239"><em>Yes, my name is Maya</em></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="241" sourceendlinenumber="241"><strong>Explanation</strong></p>
+<blockquote sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="243" sourceendlinenumber="243"><p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="243" sourceendlinenumber="243">At run-time the pattern is evaluated after replacing the value of <code>[Bot:Name]</code> with the name of the Bot as <em>Is your name Maya</em>.</p>
 </blockquote>
-<h5 id="user-set">User Set</h5>
-<p><em>Example</em></p>
-<p><strong>SIML</strong></p>
-<pre><code class="lang-xml">&lt;Model&gt;
+<h5 id="user-set" sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="246" sourceendlinenumber="246">User Set</h5>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="248" sourceendlinenumber="248"><em>Example</em></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="250" sourceendlinenumber="250"><strong>SIML</strong></p>
+<pre sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="252" sourceendlinenumber="259"><code class="lang-xml">&lt;Model&gt;
   &lt;Pattern&gt;Is my name [User:Name]&lt;/Pattern&gt;
   &lt;Response&gt;
     Yes, your name is &lt;Match /&gt;
   &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p><strong>User Input</strong></p>
-<p><em>Is my name Leslie?</em></p>
-<p><strong>Bot Output</strong></p>
-<p><em>Yes, your name is Leslie</em></p>
-<p><strong>Explanation</strong></p>
-<blockquote><p>At run-time the pattern is evaluated after replacing the value of <code>[User:Name]</code> with the name of the user as <em>Is your name Leslie</em>.</p>
+</code></pre><p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="261" sourceendlinenumber="261"><strong>User Input</strong></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="263" sourceendlinenumber="263"><em>Is my name Leslie?</em></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="265" sourceendlinenumber="265"><strong>Bot Output</strong></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="267" sourceendlinenumber="267"><em>Yes, your name is Leslie</em></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="269" sourceendlinenumber="269"><strong>Explanation</strong></p>
+<blockquote sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="271" sourceendlinenumber="271"><p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="271" sourceendlinenumber="271">At run-time the pattern is evaluated after replacing the value of <code>[User:Name]</code> with the name of the user as <em>Is your name Leslie</em>.</p>
 </blockquote>
-<h5 id="map-set">Map Set</h5>
-<p><em>Example</em></p>
-<p><strong>SIML</strong></p>
-<pre><code class="lang-xml">&lt;Model&gt;
+<h5 id="map-set" sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="273" sourceendlinenumber="273">Map Set</h5>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="275" sourceendlinenumber="275"><em>Example</em></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="277" sourceendlinenumber="277"><strong>SIML</strong></p>
+<pre sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="279" sourceendlinenumber="286"><code class="lang-xml">&lt;Model&gt;
   &lt;Pattern&gt;Is your [Map:Family-Gender] a researcher&lt;/Pattern&gt;
   &lt;Response&gt;
     Yes, my &lt;Match /&gt; is a researcher.
   &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p><strong>User Input</strong></p>
-<p><em>Is your father a researcher?</em></p>
-<p><strong>Bot Output</strong></p>
-<p><em>Yes, my father is a researcher</em></p>
-<p><strong>Explanation</strong></p>
-<blockquote><p>The family-gender Map may contain <code>father</code>, <code>mother</code>, <code>brother</code> and <code>sister</code> and their gender values. While parsing the Content value of the <code>&lt;MapItem&gt;</code> is treated as a Set value.</p>
+</code></pre><p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="288" sourceendlinenumber="288"><strong>User Input</strong></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="290" sourceendlinenumber="290"><em>Is your father a researcher?</em></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="292" sourceendlinenumber="292"><strong>Bot Output</strong></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="294" sourceendlinenumber="294"><em>Yes, my father is a researcher</em></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="296" sourceendlinenumber="296"><strong>Explanation</strong></p>
+<blockquote sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="298" sourceendlinenumber="298"><p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="298" sourceendlinenumber="298">The family-gender Map may contain <code>father</code>, <code>mother</code>, <code>brother</code> and <code>sister</code> and their gender values. While parsing the Content value of the <code>&lt;MapItem&gt;</code> is treated as a Set value.</p>
 </blockquote>
-<h3 id="choices">Choices</h3>
-<p><em>Example</em></p>
-<pre><code class="lang-xml">&lt;Model&gt;
+<h3 id="choices" sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="300" sourceendlinenumber="300">Choices</h3>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="302" sourceendlinenumber="302"><em>Example</em></p>
+<pre sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="304" sourceendlinenumber="309"><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;I LIKE THE COLOR (RED|GREEN|BLUE)&lt;/Pattern&gt;
  &lt;Response&gt;Me too!&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><blockquote><p>Priority of Choices and Normal Sets are the same. Conflicts between choices and listed sets can be ignored as the former serves the same purpose but within a limited domain.</p>
+</code></pre><blockquote sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="311" sourceendlinenumber="311"><p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="311" sourceendlinenumber="311">Priority of Choices and Normal Sets are the same. Conflicts between choices and listed sets can be ignored as the former serves the same purpose but within a limited domain.</p>
 </blockquote>
-<h3 id="ampersat">Ampersat</h3>
-<p>The <strong>@</strong> symbol is used to denote a Regular Expression in SIML. Every regular expression a user creates is stored in an optimized manner for speed and consistency. Bot developers will find regular expression in SIML to be extremely fast.</p>
-<p><em>Example</em></p>
-<p><strong>SIML</strong></p>
-<pre><code class="lang-xml">&lt;Model&gt;
+<h3 id="ampersat" sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="313" sourceendlinenumber="313">Ampersat</h3>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="315" sourceendlinenumber="315">The <strong>@</strong> symbol is used to denote a Regular Expression in SIML. Every regular expression a user creates is stored in an optimized manner for speed and consistency. Bot developers will find regular expression in SIML to be extremely fast.</p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="317" sourceendlinenumber="317"><em>Example</em></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="319" sourceendlinenumber="319"><strong>SIML</strong></p>
+<pre sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="321" sourceendlinenumber="326"><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;I LIKE THE COLOR @COLOR&lt;/Pattern&gt;
  &lt;Response&gt;Me too!&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p><strong>User Input</strong></p>
-<p><em>I like the color blue</em></p>
-<p><strong>Bot Output</strong></p>
-<p><em>Me too!</em></p>
-<p><strong>Explanation</strong></p>
-<blockquote><p><em>@Color</em> is a regular expression with the unique name <em>COLOR</em></p>
+</code></pre><p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="328" sourceendlinenumber="328"><strong>User Input</strong></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="330" sourceendlinenumber="330"><em>I like the color blue</em></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="332" sourceendlinenumber="332"><strong>Bot Output</strong></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="334" sourceendlinenumber="334"><em>Me too!</em></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="336" sourceendlinenumber="336"><strong>Explanation</strong></p>
+<blockquote sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="338" sourceendlinenumber="338"><p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="338" sourceendlinenumber="338"><em>@Color</em> is a regular expression with the unique name <em>COLOR</em></p>
 </blockquote>
-<h3 id="dollar">Dollar</h3>
-<p>The <strong>$</strong> symbol matches 0 or more words and has less priority than its sibling symbol <strong>%</strong>.</p>
-<p><em>Example</em></p>
-<p><strong>SIML</strong></p>
-<pre><code class="lang-xml">&lt;Model&gt;
+<h3 id="dollar" sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="341" sourceendlinenumber="341">Dollar</h3>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="343" sourceendlinenumber="343">The <strong>$</strong> symbol matches 0 or more words and has less priority than its sibling symbol <strong>%</strong>.</p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="345" sourceendlinenumber="345"><em>Example</em></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="347" sourceendlinenumber="347"><strong>SIML</strong></p>
+<pre sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="349" sourceendlinenumber="354"><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;YOU ARE $ COOL&lt;/Pattern&gt;
  &lt;Response&gt;Yes, I am.&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p><strong>User Input</strong></p>
-<p><em>You are so cool</em></p>
-<p><strong>Bot Output</strong></p>
-<p><em>Yes, I am.</em></p>
-<p><strong>Explanation</strong></p>
-<blockquote><p>The dollar symbol will match so. If the user writes You are cool the pattern will still hold as the symbol matches 0 or more words.</p>
+</code></pre><p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="356" sourceendlinenumber="356"><strong>User Input</strong></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="358" sourceendlinenumber="358"><em>You are so cool</em></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="360" sourceendlinenumber="360"><strong>Bot Output</strong></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="362" sourceendlinenumber="362"><em>Yes, I am.</em></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="364" sourceendlinenumber="364"><strong>Explanation</strong></p>
+<blockquote sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="366" sourceendlinenumber="366"><p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="366" sourceendlinenumber="366">The dollar symbol will match so. If the user writes You are cool the pattern will still hold as the symbol matches 0 or more words.</p>
 </blockquote>
-<h3 id="curly-brackets">Curly Brackets</h3>
-<p><strong>{}</strong> allows developers to define a set of words that should exist in a sentence. Any number of words can exist before, between and even after the specified collection of words but the order of appearance of these words should match their orders defined within the curly brackets.</p>
-<p><em>Example</em></p>
-<p><strong>SIML</strong></p>
-<pre><code class="lang-xml">&lt;Model&gt;
+<h3 id="curly-brackets" sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="368" sourceendlinenumber="368">Curly Brackets</h3>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="370" sourceendlinenumber="370"><strong>{}</strong> allows developers to define a set of words that should exist in a sentence. Any number of words can exist before, between and even after the specified collection of words but the order of appearance of these words should match their orders defined within the curly brackets.</p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="372" sourceendlinenumber="372"><em>Example</em></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="374" sourceendlinenumber="374"><strong>SIML</strong></p>
+<pre sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="376" sourceendlinenumber="381"><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;{CONTACT NUMBER}&lt;/Pattern&gt;
  &lt;Response&gt;+1-000-00-0000&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p><strong>User Input</strong></p>
-<p><em>So what is your contact  number?</em></p>
-<p><strong>Bot Output</strong></p>
-<p><em>1-000-00-0000</em></p>
-<p><strong>Explanation</strong></p>
-<blockquote><p>The pattern contains 2 important words <em>contact</em> and <em>number</em> and even if the user adds a word in this case phone the pattern will still hold and a response will be generated.</p>
+</code></pre><p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="383" sourceendlinenumber="383"><strong>User Input</strong></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="385" sourceendlinenumber="385"><em>So what is your contact  number?</em></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="387" sourceendlinenumber="387"><strong>Bot Output</strong></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="389" sourceendlinenumber="389"><em>1-000-00-0000</em></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="391" sourceendlinenumber="391"><strong>Explanation</strong></p>
+<blockquote sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="393" sourceendlinenumber="393"><p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="393" sourceendlinenumber="393">The pattern contains 2 important words <em>contact</em> and <em>number</em> and even if the user adds a word in this case phone the pattern will still hold and a response will be generated.</p>
 </blockquote>
-<h3 id="asterisk">Asterisk</h3>
-<p>The * symbol is a wildcard that matches 1 or more words and has the least priority in the evaluation tree. This symbol is the most widely used wildcard symbol in knowledge base development.</p>
-<p><em>Example</em></p>
-<p><strong>SIML</strong></p>
-<pre><code class="lang-xml">&lt;Model&gt;
+<h3 id="asterisk" sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="396" sourceendlinenumber="396">Asterisk</h3>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="398" sourceendlinenumber="398">The * symbol is a wildcard that matches 1 or more words and has the least priority in the evaluation tree. This symbol is the most widely used wildcard symbol in knowledge base development.</p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="400" sourceendlinenumber="400"><em>Example</em></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="402" sourceendlinenumber="402"><strong>SIML</strong></p>
+<pre sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="404" sourceendlinenumber="414"><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;ARE YOU A ROBOT&lt;/Pattern&gt;
  &lt;Response&gt;Maybe I am.&lt;/Response&gt;
 &lt;/Model&gt;
@@ -409,22 +409,22 @@
  &lt;Pattern&gt;ARE YOU * ROBOT&lt;/Pattern&gt;
  &lt;Response&gt;I am an intelligent entity.&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p><strong>User Input</strong></p>
-<p><em>Are you some robot?</em></p>
-<p><strong>Bot Output</strong></p>
-<p><em>I am an intelligent entity.</em></p>
-<p><strong>Explanation</strong></p>
-<blockquote><p>Since there is no exact pattern for Are you some robot the * wildcard matches the input <em>Are you some robot</em>. The word some is then stored in the Match list which can later be retrieved using the <code>&lt;Match /&gt;</code> tag.</p>
+</code></pre><p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="416" sourceendlinenumber="416"><strong>User Input</strong></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="418" sourceendlinenumber="418"><em>Are you some robot?</em></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="420" sourceendlinenumber="420"><strong>Bot Output</strong></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="422" sourceendlinenumber="422"><em>I am an intelligent entity.</em></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="424" sourceendlinenumber="424"><strong>Explanation</strong></p>
+<blockquote sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="426" sourceendlinenumber="426"><p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="426" sourceendlinenumber="426">Since there is no exact pattern for Are you some robot the * wildcard matches the input <em>Are you some robot</em>. The word some is then stored in the Match list which can later be retrieved using the <code>&lt;Match /&gt;</code> tag.</p>
 </blockquote>
-<h2 id="behavior-of-zero-wildcards">Behavior of Zero+ wildcards</h2>
-<p>When zero+ wildcards are used the match value for the wildcard may or may not contain a value. If the length of match is 0 and the <code>&lt;Match&gt;</code> element or any of its derivative elements are used to retrieve this value. The interpreter checks for the value of the reserved Bot variable <code>Empty-Match</code>. If a value is specified for the variable then the value is used otherwise an <em>empty</em> string is returned.</p>
-<h3 id="ranged-wildcards">Ranged Wildcards</h3>
-<p>Ranged wildcards allow developers to set a fixed or a variable length capture on any SIML wildcard aforementioned. A ranged wildcard will always maintain its evaluation index based on the symbol used.</p>
-<h4 id="fixed-length">Fixed Length</h4>
-<p>If you wish to capture an exact number of words from user input then add the required number as a suffix to the type of wildcard symbol of your choice.</p>
-<p><em>Example</em></p>
-<p><strong>SIML</strong></p>
-<pre><code class="lang-xml">&lt;Model&gt;
+<h2 id="behavior-of-zero-wildcards" sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="429" sourceendlinenumber="429">Behavior of Zero+ wildcards</h2>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="431" sourceendlinenumber="431">When zero+ wildcards are used the match value for the wildcard may or may not contain a value. If the length of match is 0 and the <code>&lt;Match&gt;</code> element or any of its derivative elements are used to retrieve this value. The interpreter checks for the value of the reserved Bot variable <code>Empty-Match</code>. If a value is specified for the variable then the value is used otherwise an <em>empty</em> string is returned.</p>
+<h3 id="ranged-wildcards" sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="433" sourceendlinenumber="433">Ranged Wildcards</h3>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="435" sourceendlinenumber="435">Ranged wildcards allow developers to set a fixed or a variable length capture on any SIML wildcard aforementioned. A ranged wildcard will always maintain its evaluation index based on the symbol used.</p>
+<h4 id="fixed-length" sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="437" sourceendlinenumber="437">Fixed Length</h4>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="439" sourceendlinenumber="439">If you wish to capture an exact number of words from user input then add the required number as a suffix to the type of wildcard symbol of your choice.</p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="441" sourceendlinenumber="441"><em>Example</em></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="443" sourceendlinenumber="443"><strong>SIML</strong></p>
+<pre sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="445" sourceendlinenumber="455"><code class="lang-xml">&lt;Model&gt;
   &lt;Pattern&gt;CALL ME *2&lt;/Pattern&gt;
   &lt;Response&gt;Nice to meet you, &lt;Match /&gt;&lt;/Response&gt;
 &lt;/Model&gt;
@@ -433,27 +433,27 @@
   &lt;Pattern&gt;CALL ME *&lt;/Pattern&gt;
   &lt;Response&gt;Well, hello there &lt;Match /&gt;&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p><strong>User Input</strong></p>
-<ol>
-<li><em>Call me Sean Gates</em></li>
-<li><em>Call me Sean William Gates</em></li>
+</code></pre><p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="457" sourceendlinenumber="457"><strong>User Input</strong></p>
+<ol sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="459" sourceendlinenumber="460">
+<li sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="459" sourceendlinenumber="459"><em>Call me Sean Gates</em></li>
+<li sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="460" sourceendlinenumber="460"><em>Call me Sean William Gates</em></li>
 </ol>
-<p><strong>Bot Output</strong></p>
-<ol>
-<li><em>Nice to meet you, Sean Gates</em></li>
-<li><em>Well, hello there Sean William Gates</em></li>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="462" sourceendlinenumber="462"><strong>Bot Output</strong></p>
+<ol sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="464" sourceendlinenumber="465">
+<li sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="464" sourceendlinenumber="464"><em>Nice to meet you, Sean Gates</em></li>
+<li sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="465" sourceendlinenumber="465"><em>Well, hello there Sean William Gates</em></li>
 </ol>
-<p><strong>Explanation</strong></p>
-<blockquote><p>The star * wildcard is suffixed with 2 making sure that the wildcard captures exactly 2 words from user input.</p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="467" sourceendlinenumber="467"><strong>Explanation</strong></p>
+<blockquote sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="469" sourceendlinenumber="469"><p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="469" sourceendlinenumber="469">The star * wildcard is suffixed with 2 making sure that the wildcard captures exactly 2 words from user input.</p>
 </blockquote>
-<p>Likewise developers can make use of any other SIML wildcard symbol and suffix it with a number to specify the exact number of words it should capture.</p>
-<blockquote><p>Suffixing a Zero+ wildcard with a number forces the wildcard to act as a One+ wildcard that captures the exact number of words specified.</p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="471" sourceendlinenumber="471">Likewise developers can make use of any other SIML wildcard symbol and suffix it with a number to specify the exact number of words it should capture.</p>
+<blockquote sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="473" sourceendlinenumber="473"><p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="473" sourceendlinenumber="473">Suffixing a Zero+ wildcard with a number forces the wildcard to act as a One+ wildcard that captures the exact number of words specified.</p>
 </blockquote>
-<h4 id="variable-length">Variable Length</h4>
-<p>A variable length wildcard can be used to specify the <em>maximum</em> number of words a wildcard may capture. To create a variable length wildcard prefix the number with a tilde.</p>
-<p><em>Example</em></p>
-<p><strong>SIML</strong></p>
-<pre><code class="lang-xml">&lt;Model&gt;
+<h4 id="variable-length" sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="475" sourceendlinenumber="475">Variable Length</h4>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="477" sourceendlinenumber="477">A variable length wildcard can be used to specify the <em>maximum</em> number of words a wildcard may capture. To create a variable length wildcard prefix the number with a tilde.</p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="479" sourceendlinenumber="479"><em>Example</em></p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="481" sourceendlinenumber="481"><strong>SIML</strong></p>
+<pre sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="483" sourceendlinenumber="493"><code class="lang-xml">&lt;Model&gt;
   &lt;Pattern&gt;CALL ME *~2&lt;/Pattern&gt;
   &lt;Response&gt;It&#39;s a pleasure to meet you, &lt;Match /&gt;&lt;/Response&gt;
 &lt;/Model&gt;
@@ -462,27 +462,27 @@
   &lt;Pattern&gt;CALL ME *&lt;/Pattern&gt;
   &lt;Response&gt;Well, hello there &lt;Match /&gt;&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p><strong>User Input</strong></p>
-<ol>
-<li><em>Call me Sean</em></li>
-<li><em>Call me Sean Gates</em></li>
-<li><em>Call me Sean William Gates</em></li>
+</code></pre><p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="495" sourceendlinenumber="495"><strong>User Input</strong></p>
+<ol sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="497" sourceendlinenumber="499">
+<li sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="497" sourceendlinenumber="497"><em>Call me Sean</em></li>
+<li sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="498" sourceendlinenumber="498"><em>Call me Sean Gates</em></li>
+<li sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="499" sourceendlinenumber="499"><em>Call me Sean William Gates</em></li>
 </ol>
-<p><strong>Bot Output</strong></p>
-<ol>
-<li><em>It’s a please to meet you, Sean</em></li>
-<li><em>It’s a pleasure to meet you, Sean Gates</em></li>
-<li><em>Well, hello there Sean William Gates</em></li>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="501" sourceendlinenumber="501"><strong>Bot Output</strong></p>
+<ol sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="503" sourceendlinenumber="505">
+<li sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="503" sourceendlinenumber="503"><em>It’s a please to meet you, Sean</em></li>
+<li sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="504" sourceendlinenumber="504"><em>It’s a pleasure to meet you, Sean Gates</em></li>
+<li sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="505" sourceendlinenumber="505"><em>Well, hello there Sean William Gates</em></li>
 </ol>
-<p><strong>Explanation</strong></p>
-<blockquote><p>The star * wildcard is suffixed with tilde symbol followed by 2 making sure that the wildcard captures a maximum of 2 words from user input.</p>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="507" sourceendlinenumber="507"><strong>Explanation</strong></p>
+<blockquote sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="509" sourceendlinenumber="509"><p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="509" sourceendlinenumber="509">The star * wildcard is suffixed with tilde symbol followed by 2 making sure that the wildcard captures a maximum of 2 words from user input.</p>
 </blockquote>
-<h4 id="priority-index">Priority Index</h4>
-<p>Every wildcard in SIML is evaluated based on a priority index. The evaluation sequence of a Wildcard symbol is as follows.</p>
-<ol>
-<li>Fixed Length – <em>Example</em> <code>*2</code></li>
-<li>Variable Length – <em>Example</em> <code>*~2</code></li>
-<li>Atomic Symbol – <em>Example</em> <code>*</code></li>
+<h4 id="priority-index" sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="511" sourceendlinenumber="511">Priority Index</h4>
+<p sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="513" sourceendlinenumber="513">Every wildcard in SIML is evaluated based on a priority index. The evaluation sequence of a Wildcard symbol is as follows.</p>
+<ol sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="515" sourceendlinenumber="517">
+<li sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="515" sourceendlinenumber="515">Fixed Length – <em>Example</em> <code>*2</code></li>
+<li sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="516" sourceendlinenumber="516">Variable Length – <em>Example</em> <code>*~2</code></li>
+<li sourcefile="tutorial/siml/elements/pattern.md" sourcestartlinenumber="517" sourceendlinenumber="517">Atomic Symbol – <em>Example</em> <code>*</code></li>
 </ol>
 
             </article>
@@ -515,6 +515,5 @@
     <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

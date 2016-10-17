@@ -8,7 +8,7 @@
     <title>Working with Maps  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Working with Maps ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.6.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -82,14 +82,14 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="working-with-maps">Working with Maps</h1>
+              <h1 id="working-with-maps" sourcefile="tutorial/bot/maps.md" sourcestartlinenumber="1" sourceendlinenumber="1">Working with Maps</h1>
               
-<p><em>Syn Bot</em> can dynamically create an <code>XDocument</code> file at any point during run-time to allow developers to store the current state of the Maps used by the Bot. Maps usually don’t change during run-time but at will a developer can update or change the values.</p>
-<p>To save Maps to disk you can use the <code>GetDocument</code> method available on the <code>MapCollection</code> as shown below.</p>
-<p>In the code below simlBot is a pre-defined <code>SimlBot</code> instance. Just get the <code>XDocument</code> using the <code>GetDocument</code> method and then save the document file as a string to any file with the <code>.siml</code> extension.</p>
-<pre><code class="lang-csharp">var simlMapsDocument = simlBot.Maps.GetDocument();
+<p sourcefile="tutorial/bot/maps.md" sourcestartlinenumber="3" sourceendlinenumber="3"><em>Syn Bot</em> can dynamically create an <code>XDocument</code> file at any point during run-time to allow developers to store the current state of the Maps used by the Bot. Maps usually don’t change during run-time but at will a developer can update or change the values.</p>
+<p sourcefile="tutorial/bot/maps.md" sourcestartlinenumber="5" sourceendlinenumber="5">To save Maps to disk you can use the <code>GetDocument</code> method available on the <code>MapCollection</code> as shown below.</p>
+<p sourcefile="tutorial/bot/maps.md" sourcestartlinenumber="7" sourceendlinenumber="7">In the code below simlBot is a pre-defined <code>SimlBot</code> instance. Just get the <code>XDocument</code> using the <code>GetDocument</code> method and then save the document file as a string to any file with the <code>.siml</code> extension.</p>
+<pre sourcefile="tutorial/bot/maps.md" sourcestartlinenumber="9" sourceendlinenumber="12"><code class="lang-csharp">var simlMapsDocument = simlBot.Maps.GetDocument();
 File.WriteAllText(&quot;Maps.siml&quot;, simlMapsDocument.ToString());
-</code></pre><blockquote><p>All (Functional or Volatile) types of MapItems declared explicitly by a developer are designed to just stay in memory and are not considered during the serialization process. However all external classes (including the in-built <code>MapItem</code> class ) that implement the IMapItem interface will be considered during serialization.</p>
+</code></pre><blockquote sourcefile="tutorial/bot/maps.md" sourcestartlinenumber="14" sourceendlinenumber="14"><p sourcefile="tutorial/bot/maps.md" sourcestartlinenumber="14" sourceendlinenumber="14">All (Functional or Volatile) types of MapItems declared explicitly by a developer are designed to just stay in memory and are not considered during the serialization process. However all external classes (including the in-built <code>MapItem</code> class ) that implement the IMapItem interface will be considered during serialization.</p>
 </blockquote>
 
             </article>
@@ -122,6 +122,5 @@ File.WriteAllText(&quot;Maps.siml&quot;, simlMapsDocument.ToString());
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

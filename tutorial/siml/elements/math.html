@@ -8,7 +8,7 @@
     <title>Math  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Math ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.6.1.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -82,9 +82,9 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="math">Math</h1>
+              <h1 id="math" sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="1" sourceendlinenumber="1">Math</h1>
               
-<table>
+<table sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="3" sourceendlinenumber="7">
 <thead>
 <tr>
 <th><strong>Annotation</strong></th>
@@ -106,35 +106,35 @@
 </tr>
 </tbody>
 </table>
-<p>The Math element allows mathematical operations to be performed using the variable provided as its inner value.</p>
-<p>The following Get operations are available as of SIML 1.0</p>
-<ul>
-<li>log</li>
-<li>log10</li>
-<li>abs</li>
-<li>sqrt</li>
-<li>sin</li>
-<li>cos</li>
-<li>tan</li>
-<li>acos</li>
-<li>asin</li>
-<li>atan</li>
-<li>cosh</li>
-<li>sinh</li>
-<li>tanh</li>
-<li>exp</li>
-<li>sign</li>
-<li>floor</li>
-<li>pi</li>
-<li>e</li>
-<li>random</li>
-<li>evaluate</li>
-<li>increment</li>
-<li>decrement</li>
+<p sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="9" sourceendlinenumber="9">The Math element allows mathematical operations to be performed using the variable provided as its inner value.</p>
+<p sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="11" sourceendlinenumber="11">The following Get operations are available as of SIML 1.0</p>
+<ul sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="13" sourceendlinenumber="34">
+<li sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="13" sourceendlinenumber="13">log</li>
+<li sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="14" sourceendlinenumber="14">log10</li>
+<li sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="15" sourceendlinenumber="15">abs</li>
+<li sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="16" sourceendlinenumber="16">sqrt</li>
+<li sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="17" sourceendlinenumber="17">sin</li>
+<li sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="18" sourceendlinenumber="18">cos</li>
+<li sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="19" sourceendlinenumber="19">tan</li>
+<li sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="20" sourceendlinenumber="20">acos</li>
+<li sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="21" sourceendlinenumber="21">asin</li>
+<li sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="22" sourceendlinenumber="22">atan</li>
+<li sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="23" sourceendlinenumber="23">cosh</li>
+<li sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="24" sourceendlinenumber="24">sinh</li>
+<li sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="25" sourceendlinenumber="25">tanh</li>
+<li sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="26" sourceendlinenumber="26">exp</li>
+<li sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="27" sourceendlinenumber="27">sign</li>
+<li sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="28" sourceendlinenumber="28">floor</li>
+<li sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="29" sourceendlinenumber="29">pi</li>
+<li sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="30" sourceendlinenumber="30">e</li>
+<li sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="31" sourceendlinenumber="31">random</li>
+<li sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="32" sourceendlinenumber="32">evaluate</li>
+<li sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="33" sourceendlinenumber="33">increment</li>
+<li sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="34" sourceendlinenumber="34">decrement</li>
 </ul>
-<p><em>Example</em></p>
-<p><strong>SIML</strong></p>
-<pre><code class="lang-xml">&lt;Model&gt;
+<p sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="37" sourceendlinenumber="37"><em>Example</em></p>
+<p sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="39" sourceendlinenumber="39"><strong>SIML</strong></p>
+<pre sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="41" sourceendlinenumber="62"><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;GET SINE OF *&lt;/Pattern&gt;
  &lt;Response&gt;
   &lt;Math Get=&quot;sin&quot;&gt;&lt;Match /&gt;&lt;/Math&gt;
@@ -154,46 +154,46 @@
   &lt;Math Get=&quot;random&quot; Min=&quot;0&quot; Max=&quot;10&quot; /&gt;
  &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p><strong>User Input</strong></p>
-<ol>
-<li><em>Get sine of 10</em></li>
-<li><em>What is the value of PI</em></li>
-<li><em>Give me a random number</em></li>
-<li><em>Give me a random number</em></li>
+</code></pre><p sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="64" sourceendlinenumber="64"><strong>User Input</strong></p>
+<ol sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="66" sourceendlinenumber="69">
+<li sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="66" sourceendlinenumber="66"><em>Get sine of 10</em></li>
+<li sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="67" sourceendlinenumber="67"><em>What is the value of PI</em></li>
+<li sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="68" sourceendlinenumber="68"><em>Give me a random number</em></li>
+<li sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="69" sourceendlinenumber="69"><em>Give me a random number</em></li>
 </ol>
-<p><strong>Bot Output</strong></p>
-<ol>
-<li><em>0.17364817766693034885171662676931</em></li>
-<li><em>3.1415926535897932384626433832795</em></li>
-<li><em>24</em></li>
-<li><em>5</em></li>
+<p sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="71" sourceendlinenumber="71"><strong>Bot Output</strong></p>
+<ol sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="73" sourceendlinenumber="76">
+<li sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="73" sourceendlinenumber="73"><em>0.17364817766693034885171662676931</em></li>
+<li sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="74" sourceendlinenumber="74"><em>3.1415926535897932384626433832795</em></li>
+<li sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="75" sourceendlinenumber="75"><em>24</em></li>
+<li sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="76" sourceendlinenumber="76"><em>5</em></li>
 </ol>
-<p><strong>Explanation</strong></p>
-<blockquote><p>The first Math element gets the Sine value for 10, the second gives you the value of the constant PI and finally the Random attribute value is used to get a random number. The Min attribute is optional ( defaults to 0 ).</p>
+<p sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="78" sourceendlinenumber="78"><strong>Explanation</strong></p>
+<blockquote sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="80" sourceendlinenumber="80"><p sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="80" sourceendlinenumber="80">The first Math element gets the Sine value for 10, the second gives you the value of the constant PI and finally the Random attribute value is used to get a random number. The Min attribute is optional ( defaults to 0 ).</p>
 </blockquote>
-<p>Another special feature of the Math element in SIML is that it’s internally a Math expression evaluator thus if you do not specify the <code>Get</code> attribute the element behaves as a Math expression evaluator and returns the evaluated value.</p>
-<p><em>Example</em></p>
-<p><strong>SIML</strong></p>
-<pre><code class="lang-xml">&lt;Model&gt;
+<p sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="82" sourceendlinenumber="82">Another special feature of the Math element in SIML is that it’s internally a Math expression evaluator thus if you do not specify the <code>Get</code> attribute the element behaves as a Math expression evaluator and returns the evaluated value.</p>
+<p sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="84" sourceendlinenumber="84"><em>Example</em></p>
+<p sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="86" sourceendlinenumber="86"><strong>SIML</strong></p>
+<pre sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="88" sourceendlinenumber="96"><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;Evaluate *&lt;/Pattern&gt;
  &lt;Response&gt;
   &lt;Math Get=&quot;evaluate&quot;&gt;&lt;Match /&gt;&lt;/Math&gt;
   &lt;!-- Or even &lt;Math&gt;&lt;Match /&gt;&lt;Math&gt;--&gt;
  &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p><strong>User Input</strong></p>
-<p><em>Evaluate sqrt(4)</em></p>
-<p><strong>Bot Output</strong></p>
-<p><em>2</em></p>
-<p><strong>Explanation</strong></p>
-<blockquote><p>The Math element takes its inner value as a mathematical expression and evaluates the expression and finally returns the value. Math element can also evaluate slightly complex expressions like <em>sin(sqrt(4))</em></p>
+</code></pre><p sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="98" sourceendlinenumber="98"><strong>User Input</strong></p>
+<p sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="100" sourceendlinenumber="100"><em>Evaluate sqrt(4)</em></p>
+<p sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="102" sourceendlinenumber="102"><strong>Bot Output</strong></p>
+<p sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="104" sourceendlinenumber="104"><em>2</em></p>
+<p sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="106" sourceendlinenumber="106"><strong>Explanation</strong></p>
+<blockquote sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="108" sourceendlinenumber="108"><p sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="108" sourceendlinenumber="108">The Math element takes its inner value as a mathematical expression and evaluates the expression and finally returns the value. Math element can also evaluate slightly complex expressions like <em>sin(sqrt(4))</em></p>
 </blockquote>
-<p>Besides the <code>Get</code> attribute there is also a <code>Round</code> attribute. The <code>Round</code> attribute takes an integer value and rounds the content of the Math element to a specified number of fractional digits. A Round attribute can be used alongside the Get attribute or as the only attribute when the Math element is used for evaluating a Mathematical expression.</p>
-<blockquote><p>The specified value for the Round attribute should not be less than 0 or greater than 15.</p>
+<p sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="110" sourceendlinenumber="110">Besides the <code>Get</code> attribute there is also a <code>Round</code> attribute. The <code>Round</code> attribute takes an integer value and rounds the content of the Math element to a specified number of fractional digits. A Round attribute can be used alongside the Get attribute or as the only attribute when the Math element is used for evaluating a Mathematical expression.</p>
+<blockquote sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="112" sourceendlinenumber="112"><p sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="112" sourceendlinenumber="112">The specified value for the Round attribute should not be less than 0 or greater than 15.</p>
 </blockquote>
-<p><em>Example</em></p>
-<p><strong>SIML</strong></p>
-<pre><code class="lang-xml">&lt;Model&gt;
+<p sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="114" sourceendlinenumber="114"><em>Example</em></p>
+<p sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="116" sourceendlinenumber="116"><strong>SIML</strong></p>
+<pre sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="118" sourceendlinenumber="132"><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;WHAT IS THE VALUE OF PI&lt;/Pattern&gt;
  &lt;Response&gt;
   &lt;Math Get=&quot;pi&quot; Round=&quot;2&quot; /&gt;
@@ -206,18 +206,18 @@
   &lt;Math Round=&quot;4&quot;&gt;cos(&lt;Match /&gt;)&lt;/Math&gt;
  &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p><strong>User Input</strong></p>
-<ol>
-<li><em>what is the value of pi.</em></li>
-<li><em>cos of 6</em></li>
+</code></pre><p sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="134" sourceendlinenumber="134"><strong>User Input</strong></p>
+<ol sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="136" sourceendlinenumber="137">
+<li sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="136" sourceendlinenumber="136"><em>what is the value of pi.</em></li>
+<li sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="137" sourceendlinenumber="137"><em>cos of 6</em></li>
 </ol>
-<p><strong>Bot Output</strong></p>
-<ol>
-<li><em>3.14</em></li>
-<li><em>0.9602</em></li>
+<p sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="139" sourceendlinenumber="139"><strong>Bot Output</strong></p>
+<ol sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="141" sourceendlinenumber="142">
+<li sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="141" sourceendlinenumber="141"><em>3.14</em></li>
+<li sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="142" sourceendlinenumber="142"><em>0.9602</em></li>
 </ol>
-<p><strong>Explanation</strong></p>
-<blockquote><p><code>Round</code> attribute takes affect only after a value is generated by the Math element. Once a value is generated the <code>Round</code> attribute rounds the given value using the Integer number specified.</p>
+<p sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="144" sourceendlinenumber="144"><strong>Explanation</strong></p>
+<blockquote sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="146" sourceendlinenumber="146"><p sourcefile="tutorial/siml/elements/math.md" sourcestartlinenumber="146" sourceendlinenumber="146"><code>Round</code> attribute takes affect only after a value is generated by the Math element. Once a value is generated the <code>Round</code> attribute rounds the given value using the Integer number specified.</p>
 </blockquote>
 
             </article>
@@ -250,6 +250,5 @@
     <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

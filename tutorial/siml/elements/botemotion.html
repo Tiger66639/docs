@@ -8,7 +8,7 @@
     <title>BotEmotion  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="BotEmotion ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.6.1.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -82,9 +82,9 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="botemotion">BotEmotion</h1>
+              <h1 id="botemotion" sourcefile="tutorial/siml/elements/botemotion.md" sourcestartlinenumber="1" sourceendlinenumber="1">BotEmotion</h1>
               
-<table>
+<table sourcefile="tutorial/siml/elements/botemotion.md" sourcestartlinenumber="3" sourceendlinenumber="9">
 <thead>
 <tr>
 <th><strong>Annotation</strong></th>
@@ -105,8 +105,8 @@
 <td style="text-align:left"><strong>Optional:</strong> <code>Get</code> This attribute MUST be used when trying to retrieve an already declared emotion. The values MUST be either <em>name</em> or <em>id</em>.</td>
 </tr>
 <tr>
-<td></td>
-<td style="text-align:left"><strong>Optional:</strong> <code>ID</code> This attribute MUST be used when trying to set the Bot’s emotion to an already declared emotion. The value of this attribute MUST be a valid emotion ID</td>
+<td><strong>Optional:</strong> <code>ID</code> This attribute MUST be used when trying to set the Bot’s emotion to an already declared emotion. The value of this attribute MUST be a valid emotion ID</td>
+<td style="text-align:left"></td>
 </tr>
 <tr>
 <td><strong>Occurrence</strong></td>
@@ -114,9 +114,9 @@
 </tr>
 </tbody>
 </table>
-<p>SIML is the first Chatbot Markup Language that has an in-built parser for EmotionML. Therefore in SIML every emotion ( whether Bot’s or Users’ ) can be measured in different dimensions. The entire idea behind including EmotionML in SIML is to create a catalogue of emotions that can represent as many individual emotions that humans are familiar with.</p>
-<p>The following is an example of 2 emotions defined in EmotionML and being included within SIML.</p>
-<pre><code class="lang-xml">&lt;Siml&gt;
+<p sourcefile="tutorial/siml/elements/botemotion.md" sourcestartlinenumber="12" sourceendlinenumber="12">SIML is the first Chatbot Markup Language that has an in-built parser for EmotionML. Therefore in SIML every emotion ( whether Bot’s or Users’ ) can be measured in different dimensions. The entire idea behind including EmotionML in SIML is to create a catalogue of emotions that can represent as many individual emotions that humans are familiar with.</p>
+<p sourcefile="tutorial/siml/elements/botemotion.md" sourcestartlinenumber="14" sourceendlinenumber="14">The following is an example of 2 emotions defined in EmotionML and being included within SIML.</p>
+<pre sourcefile="tutorial/siml/elements/botemotion.md" sourcestartlinenumber="16" sourceendlinenumber="42"><code class="lang-xml">&lt;Siml&gt;
 
 &lt;emotionml version=&quot;1.0&quot; xmlns=&quot;http://www.w3.org/2009/10/emotionml&quot; xmlns:Siml=&quot;http://syn.co.in/2014/siml&quot; dimension-set=&quot;http://www.w3.org/TR/emotion-voc/xml#pad-dimensions&quot;&gt;
  &lt;emotion id=&quot;pleased&quot; category-set=&quot;http://www.w3.org/TR/emotion-voc/xml#everyday-categories&quot;&gt;
@@ -141,31 +141,31 @@
 &lt;/emotionml&gt;
 
 &lt;/Siml&gt;
-</code></pre><p>In the above example there are 2 emotions defined with the id <em>pleased</em> and <em>angry</em> and in the info tag the SIML namespace is used to declare the <code>Emotion</code> element which is used to give the ancestor emotion element a unique name. This name can later be used to access the emotion.</p>
-<p><em>Example</em></p>
-<pre><code class="lang-xml">&lt;Model&gt;
+</code></pre><p sourcefile="tutorial/siml/elements/botemotion.md" sourcestartlinenumber="44" sourceendlinenumber="44">In the above example there are 2 emotions defined with the id <em>pleased</em> and <em>angry</em> and in the info tag the SIML namespace is used to declare the <code>Emotion</code> element which is used to give the ancestor emotion element a unique name. This name can later be used to access the emotion.</p>
+<p sourcefile="tutorial/siml/elements/botemotion.md" sourcestartlinenumber="46" sourceendlinenumber="46"><em>Example</em></p>
+<pre sourcefile="tutorial/siml/elements/botemotion.md" sourcestartlinenumber="48" sourceendlinenumber="55"><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;How are you feeling today&lt;/Pattern&gt;
  &lt;Response&gt;
   I feel &lt;BotEmotion Get=&quot;name&quot; /&gt;
  &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p>The <code>&lt;BotEmotion&gt;</code> element is used to Get or Set an emotion for the Bot. This element has a <code>Get</code> attribute using which the developer can either retrieve the name of current emotion or the ID. To set the emotion to an already declared emotion use the <code>ID</code> attribute.</p>
-<p>The following example should give you an idea as to how you can Get or Set the emotion for the Bot.</p>
-<p><em>Get Example</em></p>
-<pre><code class="lang-xml">&lt;Model&gt;
+</code></pre><p sourcefile="tutorial/siml/elements/botemotion.md" sourcestartlinenumber="57" sourceendlinenumber="57">The <code>&lt;BotEmotion&gt;</code> element is used to Get or Set an emotion for the Bot. This element has a <code>Get</code> attribute using which the developer can either retrieve the name of current emotion or the ID. To set the emotion to an already declared emotion use the <code>ID</code> attribute.</p>
+<p sourcefile="tutorial/siml/elements/botemotion.md" sourcestartlinenumber="59" sourceendlinenumber="59">The following example should give you an idea as to how you can Get or Set the emotion for the Bot.</p>
+<p sourcefile="tutorial/siml/elements/botemotion.md" sourcestartlinenumber="61" sourceendlinenumber="61"><em>Get Example</em></p>
+<pre sourcefile="tutorial/siml/elements/botemotion.md" sourcestartlinenumber="63" sourceendlinenumber="70"><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;Get Bot Emotion&lt;/Pattern&gt;
  &lt;Response&gt;
   &lt;BotEmotion Get=&quot;id&quot; /&gt;
  &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p><em>Set Example</em></p>
-<pre><code class="lang-xml">&lt;Model&gt;
+</code></pre><p sourcefile="tutorial/siml/elements/botemotion.md" sourcestartlinenumber="72" sourceendlinenumber="72"><em>Set Example</em></p>
+<pre sourcefile="tutorial/siml/elements/botemotion.md" sourcestartlinenumber="74" sourceendlinenumber="81"><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;Set Bot Emotion&lt;/Pattern&gt;
  &lt;Response&gt;
   &lt;BotEmotion ID=&quot;pleased&quot;/&gt;
  &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><blockquote><p>When the <code>ID</code> attribute is used the element will not return any value.</p>
+</code></pre><blockquote sourcefile="tutorial/siml/elements/botemotion.md" sourcestartlinenumber="82" sourceendlinenumber="82"><p sourcefile="tutorial/siml/elements/botemotion.md" sourcestartlinenumber="82" sourceendlinenumber="82">When the <code>ID</code> attribute is used the element will not return any value.</p>
 </blockquote>
 
             </article>
@@ -198,6 +198,5 @@
     <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

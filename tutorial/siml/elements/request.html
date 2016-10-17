@@ -8,7 +8,7 @@
     <title>Request  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Request ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.6.1.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -82,9 +82,9 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="request">Request</h1>
+              <h1 id="request" sourcefile="tutorial/siml/elements/request.md" sourcestartlinenumber="1" sourceendlinenumber="1">Request</h1>
               
-<table>
+<table sourcefile="tutorial/siml/elements/request.md" sourcestartlinenumber="3" sourceendlinenumber="8">
 <thead>
 <tr>
 <th><strong>Annotation</strong></th>
@@ -101,8 +101,8 @@
 <td style="text-align:left"><strong>Optional</strong> <code>Index</code> The <code>Index=”n”</code> is optional, and if left off, the Index value of <code>1</code> is assumed which yields the last chat request made by the user</td>
 </tr>
 <tr>
-<td></td>
-<td style="text-align:left"><strong>Optional</strong> <code>At</code> Is optional, and if left off, returns the entire user message otherwise if specified yields the sentence at the specified index value. At attribute MUST occur only if Index is specified otherwise the developer should use <code>&lt;Input&gt;</code> element instead of <code>&lt;Request&gt;</code>.</td>
+<td><strong>Optional</strong> <code>At</code> Is optional, and if left off, returns the entire user message otherwise if specified yields the sentence at the specified index value. At attribute MUST occur only if Index is specified otherwise the developer should use <code>&lt;Input&gt;</code> element instead of <code>&lt;Request&gt;</code>.</td>
+<td style="text-align:left"></td>
 </tr>
 <tr>
 <td><strong>Occurrence</strong></td>
@@ -110,10 +110,10 @@
 </tr>
 </tbody>
 </table>
-<p>The Request element gets the previous input ( in its entirety i.e. the entire sentence) of the user. It’s important to note that a user input maybe made up of multiple sentences and therefore individual sentences are split into Inputs. So to avoid confusions while developing a Bot, a developer should always remember that a Request is the entire message that the User sends to a Bot and a <strong>Request</strong> may have more than one sentence in it. An Input however, is a single sentence which is obtained after splitting a chat Request.</p>
-<p><em>Example 1</em></p>
-<p><strong>SIML</strong></p>
-<pre><code class="lang-xml">&lt;Model&gt;
+<p sourcefile="tutorial/siml/elements/request.md" sourcestartlinenumber="10" sourceendlinenumber="10">The Request element gets the previous input ( in its entirety i.e. the entire sentence) of the user. It’s important to note that a user input maybe made up of multiple sentences and therefore individual sentences are split into Inputs. So to avoid confusions while developing a Bot, a developer should always remember that a Request is the entire message that the User sends to a Bot and a <strong>Request</strong> may have more than one sentence in it. An Input however, is a single sentence which is obtained after splitting a chat Request.</p>
+<p sourcefile="tutorial/siml/elements/request.md" sourcestartlinenumber="12" sourceendlinenumber="12"><em>Example 1</em></p>
+<p sourcefile="tutorial/siml/elements/request.md" sourcestartlinenumber="14" sourceendlinenumber="14"><strong>SIML</strong></p>
+<pre sourcefile="tutorial/siml/elements/request.md" sourcestartlinenumber="16" sourceendlinenumber="26"><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;HOW ARE YOU&lt;/Pattern&gt;
  &lt;Response&gt;I am fine&lt;/Response&gt;
 &lt;/Model&gt;
@@ -122,22 +122,22 @@
  &lt;Pattern&gt;WHAT DID I JUST SAY&lt;/Pattern&gt;
  &lt;Response&gt;You said &quot;&lt;Request/&gt;&quot;&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p><strong>User Input</strong></p>
-<ol>
-<li><em>How are you?</em></li>
-<li><em>What did I just say ?</em></li>
+</code></pre><p sourcefile="tutorial/siml/elements/request.md" sourcestartlinenumber="28" sourceendlinenumber="28"><strong>User Input</strong></p>
+<ol sourcefile="tutorial/siml/elements/request.md" sourcestartlinenumber="30" sourceendlinenumber="31">
+<li sourcefile="tutorial/siml/elements/request.md" sourcestartlinenumber="30" sourceendlinenumber="30"><em>How are you?</em></li>
+<li sourcefile="tutorial/siml/elements/request.md" sourcestartlinenumber="31" sourceendlinenumber="31"><em>What did I just say ?</em></li>
 </ol>
-<p><strong>Bot Output</strong></p>
-<ol>
-<li><em>I am fine</em></li>
-<li><em> You said “How are you?”</em></li>
+<p sourcefile="tutorial/siml/elements/request.md" sourcestartlinenumber="33" sourceendlinenumber="33"><strong>Bot Output</strong></p>
+<ol sourcefile="tutorial/siml/elements/request.md" sourcestartlinenumber="35" sourceendlinenumber="36">
+<li sourcefile="tutorial/siml/elements/request.md" sourcestartlinenumber="35" sourceendlinenumber="35"><em>I am fine</em></li>
+<li sourcefile="tutorial/siml/elements/request.md" sourcestartlinenumber="36" sourceendlinenumber="36"><em> You said “How are you?”</em></li>
 </ol>
-<p><strong>Explanation</strong></p>
-<blockquote><p>The Request tag gets the entire user message. The last message received from the user is kept at Index 1 to retrieve even older messages use <code>Index=”2″</code> … <code>Index=”3″</code></p>
+<p sourcefile="tutorial/siml/elements/request.md" sourcestartlinenumber="38" sourceendlinenumber="38"><strong>Explanation</strong></p>
+<blockquote sourcefile="tutorial/siml/elements/request.md" sourcestartlinenumber="40" sourceendlinenumber="40"><p sourcefile="tutorial/siml/elements/request.md" sourcestartlinenumber="40" sourceendlinenumber="40">The Request tag gets the entire user message. The last message received from the user is kept at Index 1 to retrieve even older messages use <code>Index=”2″</code> … <code>Index=”3″</code></p>
 </blockquote>
-<p>The last message received from the user is kept at Index 1, which is the default Index value if the attribute is not specified for a <strong>Request</strong> element, to retrieve even older messages use <code>Index=”2″</code> or <code>Index=”3″</code> and so on.</p>
-<p><em>Example 2</em></p>
-<pre><code class="lang-xml">&lt;Model&gt;
+<p sourcefile="tutorial/siml/elements/request.md" sourcestartlinenumber="42" sourceendlinenumber="42">The last message received from the user is kept at Index 1, which is the default Index value if the attribute is not specified for a <strong>Request</strong> element, to retrieve even older messages use <code>Index=”2″</code> or <code>Index=”3″</code> and so on.</p>
+<p sourcefile="tutorial/siml/elements/request.md" sourcestartlinenumber="44" sourceendlinenumber="44"><em>Example 2</em></p>
+<pre sourcefile="tutorial/siml/elements/request.md" sourcestartlinenumber="46" sourceendlinenumber="61"><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;HOW ARE YOU&lt;/Pattern&gt;
  &lt;Response&gt;I am fine&lt;/Response&gt;
 &lt;/Model&gt;
@@ -182,6 +182,5 @@
     <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

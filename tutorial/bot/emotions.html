@@ -8,7 +8,7 @@
     <title>Working with Emotions  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Working with Emotions ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.6.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -82,40 +82,40 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="working-with-emotions">Working with Emotions</h1>
+              <h1 id="working-with-emotions" sourcefile="tutorial/bot/emotions.md" sourcestartlinenumber="1" sourceendlinenumber="1">Working with Emotions</h1>
               
-<p>As SIML offers EmotionML to be used for emotions an emotion for the Bot or the User can be retrieved using the following code. In SIML the developer has the option of setting the Bot/User emotion but can only retrieve its ID and Name during a Chat session. Much of the action is meant to happen on the Avatar end. A developer may use the Emotion and its properties to help the Avatar ( if being used ) to display complex expressions.</p>
-<pre><code class="lang-csharp">var botEmotion = chatResult.BotEmotion;
+<p sourcefile="tutorial/bot/emotions.md" sourcestartlinenumber="3" sourceendlinenumber="3">As SIML offers EmotionML to be used for emotions an emotion for the Bot or the User can be retrieved using the following code. In SIML the developer has the option of setting the Bot/User emotion but can only retrieve its ID and Name during a Chat session. Much of the action is meant to happen on the Avatar end. A developer may use the Emotion and its properties to help the Avatar ( if being used ) to display complex expressions.</p>
+<pre sourcefile="tutorial/bot/emotions.md" sourcestartlinenumber="5" sourceendlinenumber="11"><code class="lang-csharp">var botEmotion = chatResult.BotEmotion;
 var categories = botEmotion.Categories;
 var dimensions = botEmotion.Dimensions;
 var duration = botEmotion.Duration;
 var id = botEmotion.ID;
-</code></pre><blockquote><p>If no emotions are specified in a response the emotion will stay with its previous value.</p>
+</code></pre><blockquote sourcefile="tutorial/bot/emotions.md" sourcestartlinenumber="13" sourceendlinenumber="13"><p sourcefile="tutorial/bot/emotions.md" sourcestartlinenumber="13" sourceendlinenumber="13">If no emotions are specified in a response the emotion will stay with its previous value.</p>
 </blockquote>
-<h2 id="detecting-emotional-change-in-bot">Detecting Emotional change in Bot</h2>
-<p>Emotion of the Bot can change at run-time. Changes in emotions can help developers map the Bot’s current emotion to any desired behavior including but not limited to dynamic facial expressions.</p>
-<p>Say for example your SIML code changes the emotion of your Bot from <strong>pleased</strong> to <strong>happy</strong>.</p>
-<pre><code class="lang-xml">&lt;Model&gt;
+<h2 id="detecting-emotional-change-in-bot" sourcefile="tutorial/bot/emotions.md" sourcestartlinenumber="16" sourceendlinenumber="16">Detecting Emotional change in Bot</h2>
+<p sourcefile="tutorial/bot/emotions.md" sourcestartlinenumber="18" sourceendlinenumber="18">Emotion of the Bot can change at run-time. Changes in emotions can help developers map the Bot’s current emotion to any desired behavior including but not limited to dynamic facial expressions.</p>
+<p sourcefile="tutorial/bot/emotions.md" sourcestartlinenumber="20" sourceendlinenumber="20">Say for example your SIML code changes the emotion of your Bot from <strong>pleased</strong> to <strong>happy</strong>.</p>
+<pre sourcefile="tutorial/bot/emotions.md" sourcestartlinenumber="22" sourceendlinenumber="27"><code class="lang-xml">&lt;Model&gt;
   &lt;Pattern&gt;I LIKE YOU&lt;/Pattern&gt;
   &lt;Response&gt;You make me blush!&lt;BotEmotion ID=&quot;Happy&quot;/&gt;&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p>You can detect these emotional changes and act accordingly by attaching an event handler to the Bot’s <code>EmotionChanged</code> event as shown below.</p>
-<pre><code class="lang-csharp">var simlbot = new SimlBot();
+</code></pre><p sourcefile="tutorial/bot/emotions.md" sourcestartlinenumber="29" sourceendlinenumber="29">You can detect these emotional changes and act accordingly by attaching an event handler to the Bot’s <code>EmotionChanged</code> event as shown below.</p>
+<pre sourcefile="tutorial/bot/emotions.md" sourcestartlinenumber="31" sourceendlinenumber="34"><code class="lang-csharp">var simlbot = new SimlBot();
 simlbot.EmotionChanged += simlbot_EmotionChanged;
-</code></pre><p>Once the emotion of the Bot is changed the event is fired and the following code gets executed. The event argument is a <code>EmotionChangeEventArgs</code> class object which provides the <code>Current</code> emotion, the <code>Previous</code> emotion and the User associated with the concerned emotional state change</p>
-<pre><code class="lang-csharp">void simlbot_EmotionChanged(object sender, EmotionChangedEventArgs e)
+</code></pre><p sourcefile="tutorial/bot/emotions.md" sourcestartlinenumber="36" sourceendlinenumber="36">Once the emotion of the Bot is changed the event is fired and the following code gets executed. The event argument is a <code>EmotionChangeEventArgs</code> class object which provides the <code>Current</code> emotion, the <code>Previous</code> emotion and the User associated with the concerned emotional state change</p>
+<pre sourcefile="tutorial/bot/emotions.md" sourcestartlinenumber="38" sourceendlinenumber="44"><code class="lang-csharp">void simlbot_EmotionChanged(object sender, EmotionChangedEventArgs e)
 {
     var emotion = e.Current;
     //Do something with the new Emotion
 }
-</code></pre><h2 id="detecting-emotional-change-in-user">Detecting Emotional change in User</h2>
-<p>Just like the change in the Bot’s emotion any emotional change of the User can also be detected via the <code>EmotionChanged</code> event of the User. The procedure is very similar to that of detecting emotional changes in the Bot. Usually an emotional change is triggered when an SIML code with the UserEmotion tag is evaluated as shown below.</p>
-<pre><code class="lang-xml">&lt;Model&gt;
+</code></pre><h2 id="detecting-emotional-change-in-user" sourcefile="tutorial/bot/emotions.md" sourcestartlinenumber="46" sourceendlinenumber="46">Detecting Emotional change in User</h2>
+<p sourcefile="tutorial/bot/emotions.md" sourcestartlinenumber="48" sourceendlinenumber="48">Just like the change in the Bot’s emotion any emotional change of the User can also be detected via the <code>EmotionChanged</code> event of the User. The procedure is very similar to that of detecting emotional changes in the Bot. Usually an emotional change is triggered when an SIML code with the UserEmotion tag is evaluated as shown below.</p>
+<pre sourcefile="tutorial/bot/emotions.md" sourcestartlinenumber="50" sourceendlinenumber="55"><code class="lang-xml">&lt;Model&gt;
   &lt;Pattern&gt;I am overjoyed&lt;/Pattern&gt;
   &lt;Response&gt;That is very pleasing.&lt;UserEmotion ID=&quot;very-happy&quot;/&gt;&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p><em>Example code to attach an event handler to the user’s EmotionChanged event.</em></p>
-<pre><code class="lang-csharp">var simlbot = new SimlBot();
+</code></pre><p sourcefile="tutorial/bot/emotions.md" sourcestartlinenumber="57" sourceendlinenumber="57"><em>Example code to attach an event handler to the user’s EmotionChanged event.</em></p>
+<pre sourcefile="tutorial/bot/emotions.md" sourcestartlinenumber="59" sourceendlinenumber="63"><code class="lang-csharp">var simlbot = new SimlBot();
 var mainUser = simlbot.MainUser;
 mainUser.EmotionChanged += mainUser_EmotionChanged;
 </code></pre>
@@ -149,6 +149,5 @@ mainUser.EmotionChanged += mainUser_EmotionChanged;
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

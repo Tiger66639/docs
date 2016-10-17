@@ -8,7 +8,7 @@
     <title>Map  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Map ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.6.1.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -82,9 +82,9 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="map">Map</h1>
+              <h1 id="map" sourcefile="tutorial/siml/elements/map.md" sourcestartlinenumber="1" sourceendlinenumber="1">Map</h1>
               
-<table>
+<table sourcefile="tutorial/siml/elements/map.md" sourcestartlinenumber="3" sourceendlinenumber="9">
 <thead>
 <tr>
 <th><strong>Annotation</strong></th>
@@ -105,8 +105,8 @@
 <td style="text-align:left"><strong>Required:</strong> MUST contain either <code>Get</code> or <code>Name</code> attribute depending on the context of usage.</td>
 </tr>
 <tr>
-<td></td>
-<td style="text-align:left"><strong>Optional:</strong> MAY contain a <code>Reverse</code> attribute</td>
+<td><strong>Optional:</strong> MAY contain a <code>Reverse</code> attribute</td>
+<td style="text-align:left"></td>
 </tr>
 <tr>
 <td><strong>Occurrence</strong></td>
@@ -114,8 +114,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="mapitem">MapItem</h2>
-<table>
+<h2 id="mapitem" sourcefile="tutorial/siml/elements/map.md" sourcestartlinenumber="11" sourceendlinenumber="11">MapItem</h2>
+<table sourcefile="tutorial/siml/elements/map.md" sourcestartlinenumber="13" sourceendlinenumber="17">
 <thead>
 <tr>
 <th><strong>Annotation</strong></th>
@@ -137,8 +137,8 @@
 </tr>
 </tbody>
 </table>
-<p>Mapping allows the bot developer to transform a fragment of one set into an element of another. SIML uses Maps for gender, person and other substitution.</p>
-<pre><code class="lang-xml">&lt;Siml&gt;
+<p sourcefile="tutorial/siml/elements/map.md" sourcestartlinenumber="19" sourceendlinenumber="19">Mapping allows the bot developer to transform a fragment of one set into an element of another. SIML uses Maps for gender, person and other substitution.</p>
+<pre sourcefile="tutorial/siml/elements/map.md" sourcestartlinenumber="21" sourceendlinenumber="50"><code class="lang-xml">&lt;Siml&gt;
 
 &lt;Map Name=&quot;gender&quot;&gt;
  &lt;MapItem Content=&quot;he&quot; Value=&quot;she&quot; /&gt;
@@ -166,30 +166,30 @@
 &lt;/Map&gt;
 
 &lt;/Siml&gt;
-</code></pre><p><em>Example</em></p>
-<p><strong>SIML</strong></p>
-<pre><code class="lang-xml">&lt;Model&gt;
+</code></pre><p sourcefile="tutorial/siml/elements/map.md" sourcestartlinenumber="51" sourceendlinenumber="51"><em>Example</em></p>
+<p sourcefile="tutorial/siml/elements/map.md" sourcestartlinenumber="53" sourceendlinenumber="53"><strong>SIML</strong></p>
+<pre sourcefile="tutorial/siml/elements/map.md" sourcestartlinenumber="55" sourceendlinenumber="61"><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;I like chatbots like you&lt;/Pattern&gt;
  &lt;Response&gt;Good to know that you like &lt;Map Get=&quot;person2&quot;&gt;&lt;Match/&gt;&lt;/Map&gt;&lt;/Response&gt;
  &lt;!--&lt;Map Get=&quot;person2&quot;&gt;&lt;Match /&gt;&lt;/Map&gt; can also be written as &lt;Map Get=&quot;person2&quot; /&gt;--&gt;
 &lt;/Model&gt;
-</code></pre><p><strong>User Input</strong></p>
-<p><em> I like chatbots like you</em></p>
-<p><strong>Bot Output</strong></p>
-<p><em> Good to know that you like chatbots like me</em></p>
-<p><strong>Explanation</strong></p>
-<blockquote><p>The <code>Map</code> element searches for the right transformation under the Map named <code>person2</code> and returns the transformed value.</p>
+</code></pre><p sourcefile="tutorial/siml/elements/map.md" sourcestartlinenumber="63" sourceendlinenumber="63"><strong>User Input</strong></p>
+<p sourcefile="tutorial/siml/elements/map.md" sourcestartlinenumber="65" sourceendlinenumber="65"><em> I like chatbots like you</em></p>
+<p sourcefile="tutorial/siml/elements/map.md" sourcestartlinenumber="67" sourceendlinenumber="67"><strong>Bot Output</strong></p>
+<p sourcefile="tutorial/siml/elements/map.md" sourcestartlinenumber="69" sourceendlinenumber="69"><em> Good to know that you like chatbots like me</em></p>
+<p sourcefile="tutorial/siml/elements/map.md" sourcestartlinenumber="71" sourceendlinenumber="71"><strong>Explanation</strong></p>
+<blockquote sourcefile="tutorial/siml/elements/map.md" sourcestartlinenumber="73" sourceendlinenumber="73"><p sourcefile="tutorial/siml/elements/map.md" sourcestartlinenumber="73" sourceendlinenumber="73">The <code>Map</code> element searches for the right transformation under the Map named <code>person2</code> and returns the transformed value.</p>
 </blockquote>
-<p>If you wish to use a reverse sequence of an already declared Map you can do so by using the Reverse attribute. A Reverse attribute along with a special name for the reversed map should be provided to store reversed sequence of the Map under consideration.</p>
-<pre><code class="lang-xml">&lt;Siml&gt;
+<p sourcefile="tutorial/siml/elements/map.md" sourcestartlinenumber="75" sourceendlinenumber="75">If you wish to use a reverse sequence of an already declared Map you can do so by using the Reverse attribute. A Reverse attribute along with a special name for the reversed map should be provided to store reversed sequence of the Map under consideration.</p>
+<pre sourcefile="tutorial/siml/elements/map.md" sourcestartlinenumber="77" sourceendlinenumber="85"><code class="lang-xml">&lt;Siml&gt;
   &lt;Map Name=&quot;number2word&quot; Reverse=&quot;word2number&quot;&gt;
     &lt;MapItem Content=&quot;one&quot; Value=&quot;1&quot; /&gt;
     &lt;MapItem Content=&quot;two&quot; Value=&quot;2&quot; /&gt;
     &lt;MapItem Content=&quot;three&quot; Value=&quot;3&quot; /&gt;
   &lt;/Map&gt;
 &lt;/Siml&gt;
-</code></pre><p><em>The above code is equivalent to writing:</em></p>
-<pre><code class="lang-xml">&lt;Siml&gt;
+</code></pre><p sourcefile="tutorial/siml/elements/map.md" sourcestartlinenumber="87" sourceendlinenumber="87"><em>The above code is equivalent to writing:</em></p>
+<pre sourcefile="tutorial/siml/elements/map.md" sourcestartlinenumber="89" sourceendlinenumber="102"><code class="lang-xml">&lt;Siml&gt;
   &lt;Map Name=&quot;number2word&quot;&gt;
     &lt;MapItem Content=&quot;one&quot; Value=&quot;1&quot; /&gt;
     &lt;MapItem Content=&quot;two&quot; Value=&quot;2&quot; /&gt;
@@ -201,12 +201,12 @@
     &lt;MapItem Content=&quot;3&quot; Value=&quot;three&quot; /&gt;
   &lt;/Map&gt;
 &lt;/Siml&gt;
-</code></pre><p>A reversed map can be used just like a normal Map during run-time which no special changes in behavior. There is no performance impact while using reversed maps as they are stored just like normal maps but in the reverse sequence.</p>
-<blockquote><p>As the Value attribute in a MapItem can have duplicate entries reversed Map always store 1 unique value per Content.</p>
+</code></pre><p sourcefile="tutorial/siml/elements/map.md" sourcestartlinenumber="104" sourceendlinenumber="104">A reversed map can be used just like a normal Map during run-time which no special changes in behavior. There is no performance impact while using reversed maps as they are stored just like normal maps but in the reverse sequence.</p>
+<blockquote sourcefile="tutorial/siml/elements/map.md" sourcestartlinenumber="106" sourceendlinenumber="106"><p sourcefile="tutorial/siml/elements/map.md" sourcestartlinenumber="106" sourceendlinenumber="106">As the Value attribute in a MapItem can have duplicate entries reversed Map always store 1 unique value per Content.</p>
 </blockquote>
-<p><em>Example</em></p>
-<p><strong>SIML</strong></p>
-<pre><code class="lang-xml">&lt;Model&gt;
+<p sourcefile="tutorial/siml/elements/map.md" sourcestartlinenumber="108" sourceendlinenumber="108"><em>Example</em></p>
+<p sourcefile="tutorial/siml/elements/map.md" sourcestartlinenumber="110" sourceendlinenumber="110"><strong>SIML</strong></p>
+<pre sourcefile="tutorial/siml/elements/map.md" sourcestartlinenumber="112" sourceendlinenumber="130"><code class="lang-xml">&lt;Model&gt;
   &lt;Pattern&gt;CHANGE * TO NUMBER&lt;/Pattern&gt;
   &lt;Response&gt;
     &lt;Map Get=&quot;word2number&quot;&gt;
@@ -223,18 +223,18 @@
     &lt;/Map&gt;
   &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p><strong>User Input</strong></p>
-<ol>
-<li><em>Change one to number</em></li>
-<li><em>Change 2 to word</em></li>
+</code></pre><p sourcefile="tutorial/siml/elements/map.md" sourcestartlinenumber="132" sourceendlinenumber="132"><strong>User Input</strong></p>
+<ol sourcefile="tutorial/siml/elements/map.md" sourcestartlinenumber="134" sourceendlinenumber="135">
+<li sourcefile="tutorial/siml/elements/map.md" sourcestartlinenumber="134" sourceendlinenumber="134"><em>Change one to number</em></li>
+<li sourcefile="tutorial/siml/elements/map.md" sourcestartlinenumber="135" sourceendlinenumber="135"><em>Change 2 to word</em></li>
 </ol>
-<p><strong>Bot Output</strong></p>
-<ol>
-<li><em>1</em></li>
-<li><em>two</em></li>
+<p sourcefile="tutorial/siml/elements/map.md" sourcestartlinenumber="137" sourceendlinenumber="137"><strong>Bot Output</strong></p>
+<ol sourcefile="tutorial/siml/elements/map.md" sourcestartlinenumber="139" sourceendlinenumber="140">
+<li sourcefile="tutorial/siml/elements/map.md" sourcestartlinenumber="139" sourceendlinenumber="139"><em>1</em></li>
+<li sourcefile="tutorial/siml/elements/map.md" sourcestartlinenumber="140" sourceendlinenumber="140"><em>two</em></li>
 </ol>
-<p><strong>Explanation</strong></p>
-<blockquote><p>The interpreter gets the values for both the Maps at run-time without any change in behavior.</p>
+<p sourcefile="tutorial/siml/elements/map.md" sourcestartlinenumber="142" sourceendlinenumber="142"><strong>Explanation</strong></p>
+<blockquote sourcefile="tutorial/siml/elements/map.md" sourcestartlinenumber="144" sourceendlinenumber="144"><p sourcefile="tutorial/siml/elements/map.md" sourcestartlinenumber="144" sourceendlinenumber="144">The interpreter gets the values for both the Maps at run-time without any change in behavior.</p>
 </blockquote>
 
             </article>
@@ -267,6 +267,5 @@
     <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

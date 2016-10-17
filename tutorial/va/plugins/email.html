@@ -8,7 +8,7 @@
     <title>Email Plugin  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Email Plugin ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.6.1.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -82,15 +82,15 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="email-plugin">Email Plugin</h1>
+              <h1 id="email-plugin" sourcefile="tutorial/va/plugins/email.md" sourcestartlinenumber="1" sourceendlinenumber="1">Email Plugin</h1>
               
-<p>Allows reading and checking of new emails that are received in the Bot&#39;s personal email address.</p>
-<p>The email address must be a registered <em>gmail</em> adddress.</p>
-<blockquote><p>Never use your personal email address for this feature. Developers are asked to create a new <em>gmail</em> id for the Bot.</p>
+<p sourcefile="tutorial/va/plugins/email.md" sourcestartlinenumber="3" sourceendlinenumber="3">Allows reading and checking of new emails that are received in the Bot&#39;s personal email address.</p>
+<p sourcefile="tutorial/va/plugins/email.md" sourcestartlinenumber="5" sourceendlinenumber="5">The email address must be a registered <em>gmail</em> adddress.</p>
+<blockquote sourcefile="tutorial/va/plugins/email.md" sourcestartlinenumber="7" sourceendlinenumber="7"><p sourcefile="tutorial/va/plugins/email.md" sourcestartlinenumber="7" sourceendlinenumber="7">Never use your personal email address for this feature. Developers are asked to create a new <em>gmail</em> id for the Bot.</p>
 </blockquote>
-<h2 id="siml-adapters">SIML Adapters</h2>
-<h3 id="email">Email</h3>
-<table>
+<h2 id="siml-adapters" sourcefile="tutorial/va/plugins/email.md" sourcestartlinenumber="9" sourceendlinenumber="9">SIML Adapters</h2>
+<h3 id="email" sourcefile="tutorial/va/plugins/email.md" sourcestartlinenumber="11" sourceendlinenumber="11">Email</h3>
+<table sourcefile="tutorial/va/plugins/email.md" sourcestartlinenumber="13" sourceendlinenumber="17">
 <thead>
 <tr>
 <th><strong>Annotation</strong></th>
@@ -112,15 +112,15 @@
 </tr>
 </tbody>
 </table>
-<h4 id="usage">Usage</h4>
-<pre><code class="lang-xml">&lt;o:Email Task=&quot;Check&quot;/&gt;
-</code></pre><blockquote><p>Raises the event <code>New-Email</code> if an unseen email is found otherwise <code>No-New-Email</code>.</p>
+<h4 id="usage" sourcefile="tutorial/va/plugins/email.md" sourcestartlinenumber="19" sourceendlinenumber="19">Usage</h4>
+<pre sourcefile="tutorial/va/plugins/email.md" sourcestartlinenumber="21" sourceendlinenumber="23"><code class="lang-xml">&lt;o:Email Task=&quot;Check&quot;/&gt;
+</code></pre><blockquote sourcefile="tutorial/va/plugins/email.md" sourcestartlinenumber="24" sourceendlinenumber="24"><p sourcefile="tutorial/va/plugins/email.md" sourcestartlinenumber="24" sourceendlinenumber="24">Raises the event <code>New-Email</code> if an unseen email is found otherwise <code>No-New-Email</code>.</p>
 </blockquote>
-<pre><code class="lang-xml">&lt;o:Email Task=&quot;Read&quot;/&gt;
-</code></pre><blockquote><p>Reads the previously checked email&#39;s content. Raises <code>Read-Email-Text</code> or <code>Read-Email-Html</code> based on the content type of the email.</p>
+<pre sourcefile="tutorial/va/plugins/email.md" sourcestartlinenumber="26" sourceendlinenumber="28"><code class="lang-xml">&lt;o:Email Task=&quot;Read&quot;/&gt;
+</code></pre><blockquote sourcefile="tutorial/va/plugins/email.md" sourcestartlinenumber="29" sourceendlinenumber="29"><p sourcefile="tutorial/va/plugins/email.md" sourcestartlinenumber="29" sourceendlinenumber="29">Reads the previously checked email&#39;s content. Raises <code>Read-Email-Text</code> or <code>Read-Email-Html</code> based on the content type of the email.</p>
 </blockquote>
-<h4 id="events">Events</h4>
-<table>
+<h4 id="events" sourcefile="tutorial/va/plugins/email.md" sourcestartlinenumber="31" sourceendlinenumber="31">Events</h4>
+<table sourcefile="tutorial/va/plugins/email.md" sourcestartlinenumber="33" sourceendlinenumber="40">
 <thead>
 <tr>
 <th style="text-align:left">Name</th>
@@ -154,8 +154,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="settings">Settings</h2>
-<table>
+<h2 id="settings" sourcefile="tutorial/va/plugins/email.md" sourcestartlinenumber="42" sourceendlinenumber="42">Settings</h2>
+<table sourcefile="tutorial/va/plugins/email.md" sourcestartlinenumber="44" sourceendlinenumber="48">
 <thead>
 <tr>
 <th style="text-align:left">Name</th>
@@ -177,10 +177,10 @@
 </tr>
 </tbody>
 </table>
-<h2 id="requirements">Requirements</h2>
-<ul>
-<li>Requires an active Internet connection.</li>
-<li>New Gmail address for the Bot.</li>
+<h2 id="requirements" sourcefile="tutorial/va/plugins/email.md" sourcestartlinenumber="50" sourceendlinenumber="50">Requirements</h2>
+<ul sourcefile="tutorial/va/plugins/email.md" sourcestartlinenumber="52" sourceendlinenumber="53">
+<li sourcefile="tutorial/va/plugins/email.md" sourcestartlinenumber="52" sourceendlinenumber="52">Requires an active Internet connection.</li>
+<li sourcefile="tutorial/va/plugins/email.md" sourcestartlinenumber="53" sourceendlinenumber="53">New Gmail address for the Bot.</li>
 </ul>
 
             </article>
@@ -213,6 +213,5 @@
     <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

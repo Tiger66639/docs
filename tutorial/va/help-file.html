@@ -8,7 +8,7 @@
     <title>Custom Help File  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Custom Help File ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.6.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -82,26 +82,26 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="custom-help-file">Custom Help File</h1>
+              <h1 id="custom-help-file" sourcefile="tutorial/va/help-file.md" sourcestartlinenumber="1" sourceendlinenumber="1">Custom Help File</h1>
               
-<p>Developers who create their own plugins that are distributed online may wish to create documentation on the <em>commands</em> and <em>features</em> of their plugins. All help files for Syn Virtual Assistant are written in <strong>Markdown</strong> format. The same format used by <em>GitHub</em> and even this <em>Documentation</em> site.</p>
-<p>In Syn Virtual Assistant, when the command <em>What can I say?</em> is used a <code>Help Window</code> opens which displays a table of content on the right had side using the files found in the <code>Syn/Resources/Help</code> directory. The <code>index</code> file is always the first file listed in the table of content section.</p>
-<p>The <code>Help Window</code> is actually triggered because of an SIML code which looks something like the following.</p>
-<pre><code class="lang-xml">&lt;Model&gt;
+<p sourcefile="tutorial/va/help-file.md" sourcestartlinenumber="3" sourceendlinenumber="3">Developers who create their own plugins that are distributed online may wish to create documentation on the <em>commands</em> and <em>features</em> of their plugins. All help files for Syn Virtual Assistant are written in <strong>Markdown</strong> format. The same format used by <em>GitHub</em> and even this <em>Documentation</em> site.</p>
+<p sourcefile="tutorial/va/help-file.md" sourcestartlinenumber="5" sourceendlinenumber="5">In Syn Virtual Assistant, when the command <em>What can I say?</em> is used a <code>Help Window</code> opens which displays a table of content on the right had side using the files found in the <code>Syn/Resources/Help</code> directory. The <code>index</code> file is always the first file listed in the table of content section.</p>
+<p sourcefile="tutorial/va/help-file.md" sourcestartlinenumber="7" sourceendlinenumber="7">The <code>Help Window</code> is actually triggered because of an SIML code which looks something like the following.</p>
+<pre sourcefile="tutorial/va/help-file.md" sourcestartlinenumber="9" sourceendlinenumber="16"><code class="lang-xml">&lt;Model&gt;
   &lt;Pattern&gt;WHAT CAN I SAY&lt;/Pattern&gt;
   &lt;Response&gt;
     &lt;x:HelpWindow /&gt;
   &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><h2 id="creating-markdown-files">Creating Markdown Files</h2>
-<p>Firstly, we will need a Markdown file editor and for this I recommend using <a href="http://pad.haroopress.com/">Haroopad </a> which seems to be a good Markdown editor with a great editor and a viewer held side by side.</p>
-<p>If you are not familiar with Markdown formats, please visit <a href="http://www.markdowntutorial.com/">MarkdownTutorial</a> and go through some of the simple tutorials that will help you get quickly started with Markdown document creation.</p>
-<h2 id="saving-markdown-help-file">Saving Markdown help file</h2>
-<p>After you have finished creating your <em>Markdown</em> based help file, save it in the <code>Syn/Resources/Help</code> directory with <code>.md</code> file extension</p>
-<blockquote><p>The name of the file without the <strong>.md</strong> extension will be used in table of content panel of the <em>Help Window</em></p>
+</code></pre><h2 id="creating-markdown-files" sourcefile="tutorial/va/help-file.md" sourcestartlinenumber="18" sourceendlinenumber="18">Creating Markdown Files</h2>
+<p sourcefile="tutorial/va/help-file.md" sourcestartlinenumber="20" sourceendlinenumber="20">Firstly, we will need a Markdown file editor and for this I recommend using <a href="http://pad.haroopress.com/" sourcefile="tutorial/va/help-file.md" sourcestartlinenumber="20" sourceendlinenumber="20">Haroopad </a> which seems to be a good Markdown editor with a great editor and a viewer held side by side.</p>
+<p sourcefile="tutorial/va/help-file.md" sourcestartlinenumber="22" sourceendlinenumber="22">If you are not familiar with Markdown formats, please visit <a href="http://www.markdowntutorial.com/" sourcefile="tutorial/va/help-file.md" sourcestartlinenumber="22" sourceendlinenumber="22">MarkdownTutorial</a> and go through some of the simple tutorials that will help you get quickly started with Markdown document creation.</p>
+<h2 id="saving-markdown-help-file" sourcefile="tutorial/va/help-file.md" sourcestartlinenumber="24" sourceendlinenumber="24">Saving Markdown help file</h2>
+<p sourcefile="tutorial/va/help-file.md" sourcestartlinenumber="26" sourceendlinenumber="26">After you have finished creating your <em>Markdown</em> based help file, save it in the <code>Syn/Resources/Help</code> directory with <code>.md</code> file extension</p>
+<blockquote sourcefile="tutorial/va/help-file.md" sourcestartlinenumber="28" sourceendlinenumber="28"><p sourcefile="tutorial/va/help-file.md" sourcestartlinenumber="28" sourceendlinenumber="28">The name of the file without the <strong>.md</strong> extension will be used in table of content panel of the <em>Help Window</em></p>
 </blockquote>
-<p>Try opening the <code>Help Window</code> using the command <em>What can I say?</em> or just <em>Help</em></p>
-<p>You should now see the name of your Markdown file in the Table of Content section of the <em>Help Window</em>. Clicking on it will display the content of your <em>Markdown</em> file.</p>
+<p sourcefile="tutorial/va/help-file.md" sourcestartlinenumber="30" sourceendlinenumber="30">Try opening the <code>Help Window</code> using the command <em>What can I say?</em> or just <em>Help</em></p>
+<p sourcefile="tutorial/va/help-file.md" sourcestartlinenumber="32" sourceendlinenumber="32">You should now see the name of your Markdown file in the Table of Content section of the <em>Help Window</em>. Clicking on it will display the content of your <em>Markdown</em> file.</p>
 
             </article>
           </div>
@@ -133,6 +133,5 @@
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

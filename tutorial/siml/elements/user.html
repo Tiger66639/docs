@@ -8,7 +8,7 @@
     <title>User  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="User ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.6.1.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -82,9 +82,9 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="user">User</h1>
+              <h1 id="user" sourcefile="tutorial/siml/elements/user.md" sourcestartlinenumber="1" sourceendlinenumber="1">User</h1>
               
-<table>
+<table sourcefile="tutorial/siml/elements/user.md" sourcestartlinenumber="3" sourceendlinenumber="9">
 <thead>
 <tr>
 <th><strong>Annotation</strong></th>
@@ -105,17 +105,17 @@
 <td style="text-align:left">One or more <code>&lt;User&gt;</code> elements MAY either occur as descendants of</td>
 </tr>
 <tr>
-<td></td>
-<td style="text-align:left"><code>&lt;Pattern&gt;</code> element or any of its children i.e. <code>&lt;Item&gt;</code></td>
+<td><code>&lt;Pattern&gt;</code> element or any of its children i.e. <code>&lt;Item&gt;</code></td>
+<td style="text-align:left"></td>
 </tr>
 <tr>
-<td></td>
-<td style="text-align:left"><code>&lt;Response&gt;</code> element or any of its children elements.</td>
+<td><code>&lt;Response&gt;</code> element or any of its children elements.</td>
+<td style="text-align:left"></td>
 </tr>
 </tbody>
 </table>
-<p>Just like the Bot tag the <strong>User</strong> tag is used to retrieve user related predicates/settings. The user related predicates are evaluated during run-time and if a value or the variable doesn’t exist then a default value specified by the bot developer is returned.</p>
-<pre><code class="lang-xml">&lt;Model&gt;
+<p sourcefile="tutorial/siml/elements/user.md" sourcestartlinenumber="11" sourceendlinenumber="11">Just like the Bot tag the <strong>User</strong> tag is used to retrieve user related predicates/settings. The user related predicates are evaluated during run-time and if a value or the variable doesn’t exist then a default value specified by the bot developer is returned.</p>
+<pre sourcefile="tutorial/siml/elements/user.md" sourcestartlinenumber="13" sourceendlinenumber="23"><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;MY NAME IS *&lt;/Pattern&gt;
  &lt;Response&gt;Good to meet you &lt;User Set=&quot;name&quot;&gt;&lt;Match /&gt;&lt;/User&gt;&lt;/Response&gt;
 &lt;/Model&gt;
@@ -124,10 +124,10 @@
  &lt;Pattern&gt;WHAT IS MY NAME&lt;/Pattern&gt;
  &lt;Response&gt;Your name is &lt;User Get=&quot;name&quot;/&gt;&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p>In the above example we firstly extract the User name and later when the user asks what is my name we retrieve the user name specifying the variable name ‘name within the <code>&lt;User&gt;</code> Tag.</p>
-<p>Just like the Bot element User element can be evaluated within the Pattern element using the parameterized Set syntax. The value of the User set with the parameter <code>name</code> is the run-time value of the variable <code>name</code> that belongs to the user. Any change in the variable’s value automatically updates the pattern.</p>
-<p><em>Example</em></p>
-<pre><code class="lang-xml">&lt;Model&gt;
+</code></pre><p sourcefile="tutorial/siml/elements/user.md" sourcestartlinenumber="25" sourceendlinenumber="25">In the above example we firstly extract the User name and later when the user asks what is my name we retrieve the user name specifying the variable name ‘name within the <code>&lt;User&gt;</code> Tag.</p>
+<p sourcefile="tutorial/siml/elements/user.md" sourcestartlinenumber="27" sourceendlinenumber="27">Just like the Bot element User element can be evaluated within the Pattern element using the parameterized Set syntax. The value of the User set with the parameter <code>name</code> is the run-time value of the variable <code>name</code> that belongs to the user. Any change in the variable’s value automatically updates the pattern.</p>
+<p sourcefile="tutorial/siml/elements/user.md" sourcestartlinenumber="29" sourceendlinenumber="29"><em>Example</em></p>
+<pre sourcefile="tutorial/siml/elements/user.md" sourcestartlinenumber="31" sourceendlinenumber="36"><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;IS MY [User:Name]&lt;/Pattern&gt;
  &lt;Response&gt;Yes, Your name is &lt;Match /&gt;&lt;/Response&gt;
 &lt;/Model&gt;
@@ -162,6 +162,5 @@
     <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

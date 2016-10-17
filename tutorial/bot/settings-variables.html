@@ -8,7 +8,7 @@
     <title>Settings and Variables  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Settings and Variables ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.6.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -82,22 +82,22 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="settings-and-variables">Settings and Variables</h1>
+              <h1 id="settings-and-variables" sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="1" sourceendlinenumber="1">Settings and Variables</h1>
               
-<p>In SIML most of the Bot and User settings are defined using variables that may be loaded before the knowledge base is setup. It’s encouraged that setting of variables should be left to the SIML Chatbot developer but there can be occasions when a variable will have to set during run-time.</p>
-<h2 id="bot-and-user-settings">Bot and User Settings</h2>
-<p>If static Bot variables are changed during run-time there maybe some unexpected results in bot output. Its highly recommended that bot variables are only changed using SIML code and not Syn Bot.</p>
-<p><em>Example code to add a User variable at runtime</em></p>
-<pre><code class="lang-csharp">botUser.Settings[&quot;favourite-movie&quot;].Add(&quot;Life is beautiful&quot;);
-</code></pre><p><em>Example code to set a User variable at runtime</em></p>
-<pre><code class="lang-csharp">botUser.Settings[&quot;user-age&quot;].Value = &quot;31&quot;;
-</code></pre><p>Adding and setting a value to for a variable have different behaviors as SIML specification tells that a variable can have multiple values it’s important to use the Add function if the intention is to add a new value to an already existing list of values. A Value can be set to override a variable’s value ( if it exists ).</p>
-<p><em>Example code to set a Bot variable at runtime</em></p>
-<pre><code class="lang-csharp">simlBot.Settings[&quot;while-limit&quot;].Value = &quot;500&quot;;
-</code></pre><h2 id="custom-functional-variables">Custom Functional Variables</h2>
-<p>All variables implement the <code>IVariable</code> interface. This interface provides some of the key properties and methods that must be implemented by a class to ensure that the interaction with the Settings class is held properly.</p>
-<p>Suppose you wish to create a variable that can be used in SIML whose value may change depending on the state of some other object at run-time. You can either implement the <code>IFunctionalVariable</code> interface or derive your class from the abstract <code>FunctionalVariable</code> class. If all your variable does is get or set a computed value we recommend using the FunctionalVariable class.</p>
-<pre><code class="lang-csharp">public class CultureNameVariable: FunctionalVariable
+<p sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="3" sourceendlinenumber="3">In SIML most of the Bot and User settings are defined using variables that may be loaded before the knowledge base is setup. It’s encouraged that setting of variables should be left to the SIML Chatbot developer but there can be occasions when a variable will have to set during run-time.</p>
+<h2 id="bot-and-user-settings" sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="5" sourceendlinenumber="5">Bot and User Settings</h2>
+<p sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="7" sourceendlinenumber="7">If static Bot variables are changed during run-time there maybe some unexpected results in bot output. Its highly recommended that bot variables are only changed using SIML code and not Syn Bot.</p>
+<p sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="9" sourceendlinenumber="9"><em>Example code to add a User variable at runtime</em></p>
+<pre sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="11" sourceendlinenumber="13"><code class="lang-csharp">botUser.Settings[&quot;favourite-movie&quot;].Add(&quot;Life is beautiful&quot;);
+</code></pre><p sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="15" sourceendlinenumber="15"><em>Example code to set a User variable at runtime</em></p>
+<pre sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="17" sourceendlinenumber="19"><code class="lang-csharp">botUser.Settings[&quot;user-age&quot;].Value = &quot;31&quot;;
+</code></pre><p sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="21" sourceendlinenumber="21">Adding and setting a value to for a variable have different behaviors as SIML specification tells that a variable can have multiple values it’s important to use the Add function if the intention is to add a new value to an already existing list of values. A Value can be set to override a variable’s value ( if it exists ).</p>
+<p sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="23" sourceendlinenumber="23"><em>Example code to set a Bot variable at runtime</em></p>
+<pre sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="25" sourceendlinenumber="27"><code class="lang-csharp">simlBot.Settings[&quot;while-limit&quot;].Value = &quot;500&quot;;
+</code></pre><h2 id="custom-functional-variables" sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="29" sourceendlinenumber="29">Custom Functional Variables</h2>
+<p sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="31" sourceendlinenumber="31">All variables implement the <code>IVariable</code> interface. This interface provides some of the key properties and methods that must be implemented by a class to ensure that the interaction with the Settings class is held properly.</p>
+<p sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="33" sourceendlinenumber="33">Suppose you wish to create a variable that can be used in SIML whose value may change depending on the state of some other object at run-time. You can either implement the <code>IFunctionalVariable</code> interface or derive your class from the abstract <code>FunctionalVariable</code> class. If all your variable does is get or set a computed value we recommend using the FunctionalVariable class.</p>
+<pre sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="35" sourceendlinenumber="49"><code class="lang-csharp">public class CultureNameVariable: FunctionalVariable
 {
     public override string Name
     {
@@ -110,11 +110,13 @@
         set { /*Nothing to do here*/ }
     }
 }
-</code></pre><p>And add a new instance of the variable to the Bot settings at runtime or during bot initialization.</p>
-<pre><code class="lang-csharp">simlBot.Settings.Add(new CultureNameVariable());
-</code></pre><h2 id="variable-value-as-tuples">Variable value as Tuples</h2>
-<p>SIML variables can contain arrays of values. Sometimes it’s very handy to be able to use the values as tuples. A simple example would be a list of countries along with their country codes. Though a Map may be suited at times for this scenario the following should serve as a good tuple example.</p>
-<pre><code class="lang-xml">&lt;Variable Name=&quot;countries-codes&quot;&gt;
+</code></pre><p sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="51" sourceendlinenumber="51">And add a new instance of the variable to the Bot settings at runtime or during bot initialization.</p>
+<pre sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="53" sourceendlinenumber="55"><code class="lang-csharp">simlBot.Settings.Add(new CultureNameVariable());
+</code></pre><blockquote sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="57" sourceendlinenumber="57"><p sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="57" sourceendlinenumber="57">Functional variables are not considered during serialization.</p>
+</blockquote>
+<h2 id="variable-value-as-tuples" sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="59" sourceendlinenumber="59">Variable value as Tuples</h2>
+<p sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="61" sourceendlinenumber="61">SIML variables can contain arrays of values. Sometimes it’s very handy to be able to use the values as tuples. A simple example would be a list of countries along with their country codes. Though a Map may be suited at times for this scenario the following should serve as a good tuple example.</p>
+<pre sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="63" sourceendlinenumber="72"><code class="lang-xml">&lt;Variable Name=&quot;countries-codes&quot;&gt;
   &lt;Value&gt;United States|USA&lt;/Value&gt;
   &lt;Value&gt;Australia|AUS&lt;/Value&gt;
   &lt;Value&gt;Russian|RUS&lt;/Value&gt;
@@ -122,8 +124,8 @@
   &lt;Value&gt;Poland|POL&lt;/Value&gt;
   &lt;Value&gt;India|IND&lt;/Value&gt;
 &lt;/Variable&gt;
-</code></pre><p>The above declared variable can at run-time be extracted as tuples as shown below.</p>
-<pre><code class="lang-csharp">var simlBot = new SimlBot();
+</code></pre><p sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="74" sourceendlinenumber="74">The above declared variable can at run-time be extracted as tuples as shown below.</p>
+<pre sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="76" sourceendlinenumber="87"><code class="lang-csharp">var simlBot = new SimlBot();
 var theVariable = simlBot.Settings[&quot;countries-codes-capitals&quot;];
 var tuples= theVariable.GetTuples&lt;string, string&gt;();
 
@@ -133,13 +135,13 @@ foreach (var value in tuples)
     var code = value.Item2;
     //Performan some function on the above variables.
 }
-</code></pre><p>New tuple values can be added to a Variable at run-time using an Extension method as shown below.</p>
-<pre><code class="lang-csharp">var simlBot = new SimlBot();
+</code></pre><p sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="89" sourceendlinenumber="89">New tuple values can be added to a Variable at run-time using an Extension method as shown below.</p>
+<pre sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="91" sourceendlinenumber="96"><code class="lang-csharp">var simlBot = new SimlBot();
 var theVariable = simlBot.Settings[&quot;countries-codes-capitals&quot;];
 theVariable.Add(new Tuple&lt;string,string&gt;(&quot;Malta&quot;,&quot;MLT&quot;));
 theVariable.Add(new Tuple&lt;string, string&gt;(&quot;France&quot;, &quot;FRA&quot;));
-</code></pre><p>The above adds 2 more countries with their country codes making the above <em>countries-codes</em> variable change to the following</p>
-<pre><code class="lang-xml">&lt;Variable Name=&quot;countries-codes&quot;&gt;
+</code></pre><p sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="98" sourceendlinenumber="98">The above adds 2 more countries with their country codes making the above <em>countries-codes</em> variable change to the following</p>
+<pre sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="100" sourceendlinenumber="111"><code class="lang-xml">&lt;Variable Name=&quot;countries-codes&quot;&gt;
   &lt;Value&gt;United States|USA&lt;/Value&gt;
   &lt;Value&gt;Australia|AUS&lt;/Value&gt;
   &lt;Value&gt;Russian|RUS&lt;/Value&gt;
@@ -149,9 +151,9 @@ theVariable.Add(new Tuple&lt;string, string&gt;(&quot;France&quot;, &quot;FRA&qu
   &lt;Value&gt;Malta|MLT&lt;/Value&gt;
   &lt;Value&gt;France|FRA&lt;/Value&gt;
 &lt;/Variable&gt;
-</code></pre><p>Syn Bot offers support for tuples that can hold upto 5 items.</p>
-<p><em>Example</em></p>
-<pre><code class="lang-xml">&lt;Variable Name=&quot;countries-codes&quot;&gt;
+</code></pre><p sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="113" sourceendlinenumber="113">Syn Bot offers support for tuples that can hold upto 5 items.</p>
+<p sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="115" sourceendlinenumber="115"><em>Example</em></p>
+<pre sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="117" sourceendlinenumber="128"><code class="lang-xml">&lt;Variable Name=&quot;countries-codes&quot;&gt;
   &lt;Value&gt;United States|USA|Washington D.C&lt;/Value&gt;
   &lt;Value&gt;Australia|AUS|Canberra&lt;/Value&gt;
   &lt;Value&gt;Russian|RUS|Moscow&lt;/Value&gt;
@@ -161,29 +163,36 @@ theVariable.Add(new Tuple&lt;string, string&gt;(&quot;France&quot;, &quot;FRA&qu
   &lt;Value&gt;Malta|MLT|Valletta&lt;/Value&gt;
   &lt;Value&gt;France|FRA|Paris&lt;/Value&gt;
 &lt;/Variable&gt;
-</code></pre><h2 id="applying-siml-settings-to-class-objects">Applying SIML Settings to class Objects</h2>
-<p>Every settings whether it be for the Bot, a Plugin or even a Bot User can be applied intelligently to class objects. Suppose you have a class called <code>MyClass</code> with 2 public properties with the name ProductName and ProductPrice. And your Bot settings has a Variable with the name <code>ProductName</code> with value <em>3D Printer</em> and another variable with the name <code>ProductPrice</code> with value 1500.</p>
-<pre><code class="lang-csharp">public class MyClass
+</code></pre><h2 id="applying-siml-settings-to-class-objects" sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="130" sourceendlinenumber="130">Applying SIML Settings to class Objects</h2>
+<p sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="132" sourceendlinenumber="132">Every settings whether it be for the Bot, a Plugin or even a Bot User can be applied intelligently to class objects. Suppose you have a class called <code>MyClass</code> with 2 public properties with the name ProductName and ProductPrice. And your Bot settings has a Variable with the name <code>ProductName</code> with value <em>3D Printer</em> and another variable with the name <code>ProductPrice</code> with value 1500.</p>
+<pre sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="134" sourceendlinenumber="140"><code class="lang-csharp">public class MyClass
 {
     public string ProductName { get; set; }
     public int ProductPrice { get; set; }
 }
-</code></pre><p>To change the value of your class object MyClass you can select the Settings and call the function ApplyToProperties by passing the class object as an argument.</p>
-<pre><code class="lang-csharp">simlBot.Settings.ApplyToProperties(myClass);
-</code></pre><p>The Settings class can detect the <strong>Type of</strong> your class object’s property and do the required conversion at run-time.  Settings can be applied to the following types.</p>
-<ul>
-<li>string</li>
-<li>int</li>
-<li>bool</li>
-<li>double</li>
-<li>Collection<string></string></li>
+</code></pre><p sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="142" sourceendlinenumber="142">To change the value of your class object MyClass you can select the Settings and call the function ApplyToProperties by passing the class object as an argument.</p>
+<pre sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="144" sourceendlinenumber="146"><code class="lang-csharp">simlBot.Settings.ApplyToProperties(myClass);
+</code></pre><p sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="148" sourceendlinenumber="148">The Settings class can detect the <strong>Type of</strong> your class object’s property and do the required conversion at run-time.  Settings can be applied to the following types.</p>
+<ul sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="150" sourceendlinenumber="154">
+<li sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="150" sourceendlinenumber="150">string</li>
+<li sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="151" sourceendlinenumber="151">int</li>
+<li sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="152" sourceendlinenumber="152">bool</li>
+<li sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="153" sourceendlinenumber="153">double</li>
+<li sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="154" sourceendlinenumber="154">Collection<string></string></li>
 </ul>
-<blockquote><p>This feature allows class objects and data context to be initialized using the variables defined in SIML.</p>
+<blockquote sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="156" sourceendlinenumber="156"><p sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="156" sourceendlinenumber="156">This feature allows class objects and data context to be initialized using the variables defined in SIML.</p>
 </blockquote>
-<h2 id="saving-settings-to-a-file">Saving Settings to a File</h2>
-<p>It wouldn’t be fair if the changes made to the internal variables of a Bot reside only in the computer’s memory. Saving them to disk allows developers to retain the state of a Bot and later load the state back into the Bot’s memory. For this the SIML interpreter provides you with the <code>GetDocument()</code> method. When the function is called all the existing variables of the Bot are analysed and an SIML document is generated.</p>
-<p>All variables that implement <code>IVariable</code> interface are included within the generated document and others that implement <code>IFunctionalVariable</code> or derive from the abstract FunctionVariable class are disregarded.</p>
-<pre><code class="lang-csharp">//simlBot is your Bot instance
+<h2 id="detecting-variable-value-changes" sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="158" sourceendlinenumber="158">Detecting Variable value changes</h2>
+<p sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="160" sourceendlinenumber="160"><code>Variable</code> class provides the <code>Changed</code> event to detect changes in the value of the variable. Hence, to detect a variable value change you can add an event handler to the <code>Changed</code> event.</p>
+<pre sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="162" sourceendlinenumber="168"><code class="lang-csharp">var myVariable = bot.Settings[&quot;my-variable&quot;];
+myVariable.Changed += (sender, eventArgs) =&gt;
+{
+    //Do something
+};
+</code></pre><h2 id="saving-settings-to-a-file" sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="170" sourceendlinenumber="170">Saving Settings to a File</h2>
+<p sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="172" sourceendlinenumber="172">It wouldn’t be fair if the changes made to the internal variables of a Bot reside only in the computer’s memory. Saving them to disk allows developers to retain the state of a Bot and later load the state back into the Bot’s memory. For this the SIML interpreter provides you with the <code>GetDocument()</code> method. When the function is called all the existing variables of the Bot are analysed and an SIML document is generated.</p>
+<p sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="174" sourceendlinenumber="174">All variables that implement <code>IVariable</code> interface are included within the generated document and others that implement <code>IFunctionalVariable</code> or derive from the abstract FunctionVariable class are disregarded.</p>
+<pre sourcefile="tutorial/bot/settings-variables.md" sourcestartlinenumber="176" sourceendlinenumber="180"><code class="lang-csharp">//simlBot is your Bot instance
 var settings = simlBot.Settings.GetDocument();
 settings.Save(&quot;BotSettings.siml&quot;);
 </code></pre>
@@ -217,6 +226,5 @@ settings.Save(&quot;BotSettings.siml&quot;);
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

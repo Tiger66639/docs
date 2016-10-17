@@ -8,7 +8,7 @@
     <title>UserEmotion  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="UserEmotion ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.6.1.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -82,9 +82,9 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="useremotion">UserEmotion</h1>
+              <h1 id="useremotion" sourcefile="tutorial/siml/elements/useremotion.md" sourcestartlinenumber="1" sourceendlinenumber="1">UserEmotion</h1>
               
-<table>
+<table sourcefile="tutorial/siml/elements/useremotion.md" sourcestartlinenumber="3" sourceendlinenumber="8">
 <thead>
 <tr>
 <th><strong>Annotation</strong></th>
@@ -101,8 +101,8 @@
 <td style="text-align:left"><strong>Optional:</strong> <code>Get</code> This attribute MUST be used when trying to retrieve an already declared emotion. The values MUST be either &quot;name&quot; or &quot;id&quot;.</td>
 </tr>
 <tr>
-<td></td>
-<td style="text-align:left"><strong>Optional:</strong> <code>ID</code> This attribute MUST be used when trying to set the User’s emotion to an already declared emotion. The value of this attribute MUST be a valid emotion ID.</td>
+<td><strong>Optional:</strong> <code>ID</code> This attribute MUST be used when trying to set the User’s emotion to an already declared emotion. The value of this attribute MUST be a valid emotion ID.</td>
+<td style="text-align:left"></td>
 </tr>
 <tr>
 <td><strong>Occurrence</strong></td>
@@ -110,23 +110,23 @@
 </tr>
 </tbody>
 </table>
-<p>The <code>&lt;UserEmotion&gt;</code> element is used to Get or set an emotion for the User. This element has a Get attribute using which the developer can either retrieve the name of current emotion or the ID. To set the emotion to an already declared emotion use the <code>ID</code> attribute.</p>
-<p>The following example should give you an idea as to how you can Get or Set the emotion for the User.</p>
-<p><em>Get Example</em></p>
-<pre><code class="lang-xml">&lt;Model&gt;
+<p sourcefile="tutorial/siml/elements/useremotion.md" sourcestartlinenumber="10" sourceendlinenumber="10">The <code>&lt;UserEmotion&gt;</code> element is used to Get or set an emotion for the User. This element has a Get attribute using which the developer can either retrieve the name of current emotion or the ID. To set the emotion to an already declared emotion use the <code>ID</code> attribute.</p>
+<p sourcefile="tutorial/siml/elements/useremotion.md" sourcestartlinenumber="12" sourceendlinenumber="12">The following example should give you an idea as to how you can Get or Set the emotion for the User.</p>
+<p sourcefile="tutorial/siml/elements/useremotion.md" sourcestartlinenumber="14" sourceendlinenumber="14"><em>Get Example</em></p>
+<pre sourcefile="tutorial/siml/elements/useremotion.md" sourcestartlinenumber="16" sourceendlinenumber="23"><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;Get User Emotion&lt;/Pattern&gt;
  &lt;Response&gt;
   &lt;UserEmotion Get=&quot;id&quot; /&gt;
  &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p><em>Set Example</em></p>
-<pre><code class="lang-xml">&lt;Model&gt;
+</code></pre><p sourcefile="tutorial/siml/elements/useremotion.md" sourcestartlinenumber="25" sourceendlinenumber="25"><em>Set Example</em></p>
+<pre sourcefile="tutorial/siml/elements/useremotion.md" sourcestartlinenumber="27" sourceendlinenumber="34"><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;Set User Emotion&lt;/Pattern&gt;
  &lt;Response&gt;
   &lt;UserEmotion ID=&quot;pleased&quot;/&gt;
  &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><blockquote><p>When the <code>ID</code> attribute is used the element will not return any value.</p>
+</code></pre><blockquote sourcefile="tutorial/siml/elements/useremotion.md" sourcestartlinenumber="36" sourceendlinenumber="36"><p sourcefile="tutorial/siml/elements/useremotion.md" sourcestartlinenumber="36" sourceendlinenumber="36">When the <code>ID</code> attribute is used the element will not return any value.</p>
 </blockquote>
 
             </article>
@@ -159,6 +159,5 @@
     <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

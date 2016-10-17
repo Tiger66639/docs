@@ -8,7 +8,7 @@
     <title>Memory Optimization  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Memory Optimization ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.6.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -82,16 +82,16 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="memory-optimization">Memory Optimization</h1>
+              <h1 id="memory-optimization" sourcefile="tutorial/bot/memory-optimization.md" sourcestartlinenumber="1" sourceendlinenumber="1">Memory Optimization</h1>
               
-<p>Syn Bot will by default try to store Examples and Vocabularies as part of it’s introspective nature. However if you intend to run Syn Bot in a memory constrained environment it is normally recommended that you turn off some memory intensive features as aforementioned. To do so before loading the SIML package or individual SIML files change the Configuration property to as follows.</p>
-<pre><code class="lang-csharp">var simlBot = new SimlBot();
+<p sourcefile="tutorial/bot/memory-optimization.md" sourcestartlinenumber="3" sourceendlinenumber="3">Syn Bot will by default try to store Examples and Vocabularies as part of it’s introspective nature. However if you intend to run Syn Bot in a memory constrained environment it is normally recommended that you turn off some memory intensive features as aforementioned. To do so before loading the SIML package or individual SIML files change the Configuration property to as follows.</p>
+<pre sourcefile="tutorial/bot/memory-optimization.md" sourcestartlinenumber="5" sourceendlinenumber="9"><code class="lang-csharp">var simlBot = new SimlBot();
 simlBot.Configuration.StoreVocabulary = false;
 simlBot.Configuration.StoreExamples = false;
-</code></pre><p>The second line disables the storage of unique vocabulary every-time a new token is found. This can greatly increase load time as large projects tend to have larger vocabulary.</p>
-<pre><code class="lang-csharp">simlBot.Configuration.StoreVocabulary = false;
-</code></pre><p>The third line disables storage of known Atomic patterns including patterns specified within <code>&lt;Example&gt;</code> elements.</p>
-<pre><code class="lang-csharp">simlBot.Configuration.StoreExamples = false;
+</code></pre><p sourcefile="tutorial/bot/memory-optimization.md" sourcestartlinenumber="11" sourceendlinenumber="11">The second line disables the storage of unique vocabulary every-time a new token is found. This can greatly increase load time as large projects tend to have larger vocabulary.</p>
+<pre sourcefile="tutorial/bot/memory-optimization.md" sourcestartlinenumber="13" sourceendlinenumber="15"><code class="lang-csharp">simlBot.Configuration.StoreVocabulary = false;
+</code></pre><p sourcefile="tutorial/bot/memory-optimization.md" sourcestartlinenumber="17" sourceendlinenumber="17">The third line disables storage of known Atomic patterns including patterns specified within <code>&lt;Example&gt;</code> elements.</p>
+<pre sourcefile="tutorial/bot/memory-optimization.md" sourcestartlinenumber="19" sourceendlinenumber="21"><code class="lang-csharp">simlBot.Configuration.StoreExamples = false;
 </code></pre>
             </article>
           </div>
@@ -123,6 +123,5 @@ simlBot.Configuration.StoreExamples = false;
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>
