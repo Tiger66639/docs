@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Regex  - Syn Developer Network</title>
+    <title>Late  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Regex ">
+    <meta name="title" content="Late ">
     <meta name="generator" content="docfx 2.6.1.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
@@ -82,73 +82,54 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="regex" sourcefile="tutorial/siml/elements/regex.md" sourcestartlinenumber="1" sourceendlinenumber="1">Regex</h1>
+              <h1 id="late" sourcefile="tutorial/siml/elements/late.md" sourcestartlinenumber="1" sourceendlinenumber="1">Late</h1>
               
-<p sourcefile="tutorial/siml/elements/regex.md" sourcestartlinenumber="3" sourceendlinenumber="3"><strong>Context 1:</strong> As children of <code>&lt;Splitter&gt;</code> or <code>&lt;Filter&gt;</code> elements.</p>
-<table sourcefile="tutorial/siml/elements/regex.md" sourcestartlinenumber="5" sourceendlinenumber="10">
+<table sourcefile="tutorial/siml/elements/late.md" sourcestartlinenumber="3" sourceendlinenumber="7">
 <thead>
 <tr>
 <th><strong>Annotation</strong></th>
-<th style="text-align:left"><code>&lt;Regex&gt;</code></th>
+<th style="text-align:left"><code>&lt;Late&gt;</code></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>Definition</strong></td>
-<td style="text-align:left">Declares a Regular Expression for usage normalization and splitting of user input.</td>
+<td style="text-align:left">Returns the evaluated value of its inner elements after a specified interval.</td>
 </tr>
 <tr>
 <td><strong>Attributes</strong></td>
-<td style="text-align:left"><strong>Required:</strong> A <code>Pattern</code> attribute MUST exist if no arbitrary text value is specified.</td>
-</tr>
-<tr>
-<td><strong>Optional:</strong> <code>Options</code> This attribute MAY be included to add options to the specified regular expression. Values of this attribute MUST be a valid member of .Net RegexOptions enumeration. Multiple options MUST be separated using a SPACE character.</td>
-<td style="text-align:left"></td>
+<td style="text-align:left"><strong>Optional:</strong> MAY contain a <code>Second</code> <code>Minute</code> or <code>Hour</code> attribute. The value of which determines the delay time in seconds, minutes and hours respectively. If none of the aforementioned attributes are specified then a delay interval of <code>1</code> second is assumed.</td>
 </tr>
 <tr>
 <td><strong>Occurrence</strong></td>
-<td style="text-align:left">One or more of this element MAY occur as children of <code>&lt;Splitter&gt;</code> or <code>&lt;Filter&gt;</code> element.</td>
+<td style="text-align:left">One of more of this element MAY occur as descendants of <code>&lt;Response&gt;</code> element.</td>
 </tr>
 </tbody>
 </table>
-<p sourcefile="tutorial/siml/elements/regex.md" sourcestartlinenumber="12" sourceendlinenumber="12"><strong>Context 2:</strong> As children of <code>&lt;Siml&gt;</code> element.</p>
-<table sourcefile="tutorial/siml/elements/regex.md" sourcestartlinenumber="14" sourceendlinenumber="21">
-<thead>
-<tr>
-<th><strong>Annotation</strong></th>
-<th style="text-align:left"><code>&lt;Regex&gt;</code></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Definition</strong></td>
-<td style="text-align:left">Declares a Regular Expression for usage within SIML patterns.</td>
-</tr>
-<tr>
-<td><strong>Children</strong></td>
-<td style="text-align:left">The element MUST contain either a single <code>Pattern</code> attribute or an arbitrary text that is a valid regular expression.</td>
-</tr>
-<tr>
-<td><strong>Attributes</strong></td>
-<td style="text-align:left"><strong>Required:</strong> <code>Name</code> Name of the Regular Expression</td>
-</tr>
-<tr>
-<td><strong>Required:</strong> A <code>Pattern</code> attribute MUST exist if the value of the element is empty.</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td><strong>Optional:</strong> <code>Options</code> This attribute MAY be included to add options to the specified regular expression. Values of this attribute MUST be a valid member of .Net RegexOptions enumeration. Multiple options MUST be separated using a SPACE character.</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td><strong>Occurrence</strong></td>
-<td style="text-align:left">One or more of this element MAY occur as children of <code>&lt;Siml&gt;</code> element.</td>
-</tr>
-</tbody>
-</table>
-<p sourcefile="tutorial/siml/elements/regex.md" sourcestartlinenumber="23" sourceendlinenumber="23"><em>Example</em></p>
-<pre sourcefile="tutorial/siml/elements/regex.md" sourcestartlinenumber="25" sourceendlinenumber="27"><code class="lang-xml">&lt;Regex Name=&quot;Color&quot; Pattern=&quot;b(red|green|blue)b&quot; /&gt;
-</code></pre>
+<p sourcefile="tutorial/siml/elements/late.md" sourcestartlinenumber="9" sourceendlinenumber="9">The <code>Late</code> tag is used to delay the evaluation of its inner elements or arbitrary value by a specified interval. The value of the interval is usually specified in seconds.</p>
+<blockquote sourcefile="tutorial/siml/elements/late.md" sourcestartlinenumber="11" sourceendlinenumber="12"><p sourcefile="tutorial/siml/elements/late.md" sourcestartlinenumber="11" sourceendlinenumber="12">The <code>Late</code> tag returns an empty string in its parent <code>Model</code>.
+A <code>Timer</code> may be required by the interpreter to control the timing of evaluation.</p>
+</blockquote>
+<p sourcefile="tutorial/siml/elements/late.md" sourcestartlinenumber="14" sourceendlinenumber="14"><em>Example</em></p>
+<p sourcefile="tutorial/siml/elements/late.md" sourcestartlinenumber="16" sourceendlinenumber="16"><strong>SIML</strong></p>
+<pre sourcefile="tutorial/siml/elements/late.md" sourcestartlinenumber="18" sourceendlinenumber="28"><code class="lang-xml">&lt;Model&gt;
+  &lt;Pattern&gt;Run App after &lt;Match /&gt; seconds&lt;/Pattern&gt;
+  &lt;Response&gt;
+    App will be opened after &lt;Match /&gt; seconds.
+    &lt;Late Second=&quot;{Bind:Match}&quot;&gt;
+      &lt;Goto&gt;Run App&lt;/Goto&gt;
+    &lt;/Late&gt;
+  &lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre><p sourcefile="tutorial/siml/elements/late.md" sourcestartlinenumber="30" sourceendlinenumber="30"><strong>User Input</strong></p>
+<p sourcefile="tutorial/siml/elements/late.md" sourcestartlinenumber="32" sourceendlinenumber="32"><em>Run app after 10 seconds</em></p>
+<p sourcefile="tutorial/siml/elements/late.md" sourcestartlinenumber="34" sourceendlinenumber="34"><strong>Bot Output</strong></p>
+<p sourcefile="tutorial/siml/elements/late.md" sourcestartlinenumber="36" sourceendlinenumber="36"><em>App will be opened after 10 seconds.</em></p>
+<p sourcefile="tutorial/siml/elements/late.md" sourcestartlinenumber="38" sourceendlinenumber="38"><strong>Explanation</strong></p>
+<blockquote sourcefile="tutorial/siml/elements/late.md" sourcestartlinenumber="40" sourceendlinenumber="40"><p sourcefile="tutorial/siml/elements/late.md" sourcestartlinenumber="40" sourceendlinenumber="40">The Late tag will evaluate its inner elements after 10 seconds and the generated response will be send back as an event response.</p>
+<p sourcefile="tutorial/siml/elements/late.md" sourcestartlinenumber="42" sourceendlinenumber="42">The <code>Second</code> attribute is used to set the delay interval in seconds.</p>
+</blockquote>
+
             </article>
           </div>
           
