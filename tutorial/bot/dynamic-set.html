@@ -84,84 +84,164 @@
             <article class="content wrap" id="_content" data-uid="">
               <h2 id="dynamic-sets" sourcefile="tutorial/bot/dynamic-set.md" sourcestartlinenumber="1" sourceendlinenumber="1">Dynamic Sets</h2>
               
-<p sourcefile="tutorial/bot/dynamic-set.md" sourcestartlinenumber="3" sourceendlinenumber="3">All SIML Sets processed within a class that implements the <code>ISet</code> interface.</p>
-<h3 id="set-generation" sourcefile="tutorial/bot/dynamic-set.md" sourcestartlinenumber="5" sourceendlinenumber="5">Set Generation</h3>
-<p sourcefile="tutorial/bot/dynamic-set.md" sourcestartlinenumber="7" sourceendlinenumber="7">Some sets may need to be generated real-time for evaluation.To implement an SIML Set in code implement the <code>ISet</code> interface and implement its methods.</p>
-<p sourcefile="tutorial/bot/dynamic-set.md" sourcestartlinenumber="9" sourceendlinenumber="9"><em>Example</em></p>
-<pre sourcefile="tutorial/bot/dynamic-set.md" sourcestartlinenumber="11" sourceendlinenumber="35"><code class="lang-csharp">class MySet : ISet
+<p sourcefile="tutorial/bot/dynamic-set.md" sourcestartlinenumber="5" sourceendlinenumber="5">All SIML Sets processed within a class that implements the <code>ISet</code> interface.</p>
+<h3 id="set-generation" sourcefile="tutorial/bot/dynamic-set.md" sourcestartlinenumber="9" sourceendlinenumber="9">Set Generation</h3>
+<p sourcefile="tutorial/bot/dynamic-set.md" sourcestartlinenumber="13" sourceendlinenumber="13">Some sets may need to be generated real-time for evaluation.To implement an SIML Set in code implement the <code>ISet</code> interface and implement its methods.</p>
+<p sourcefile="tutorial/bot/dynamic-set.md" sourcestartlinenumber="17" sourceendlinenumber="17"><em>Example</em></p>
+<pre sourcefile="tutorial/bot/dynamic-set.md" sourcestartlinenumber="21" sourceendlinenumber="69"><code class="lang-csharp">
+class MySet : ISet
+
 {
+
     public string Name =&gt; &quot;Dogs&quot;;
 
+
+
     public HashSet&lt;string&gt; ValueList
+
     {
+
         get
+
         {
+
             var hashSet = new HashSet&lt;string&gt; { &quot;Pug&quot;, &quot;Beagle&quot;, &quot;Bulldog&quot;, &quot;Poodle&quot;, &quot;Chihuahua&quot; };
+
             return hashSet;
+
         }
+
     }
+
+
 
     public IEnumerable&lt;string&gt; GetValues(string parameter = &quot;&quot;)
+
     {
+
         return ValueList;
+
     }
 
+
+
     public bool Contains(string value, string parameter = &quot;&quot;)
+
     {
+
         return ValueList.Contains(value);
+
     }
+
 }
-</code></pre><p sourcefile="tutorial/bot/dynamic-set.md" sourcestartlinenumber="37" sourceendlinenumber="37">The above set provides a list of Dog breeds. Bot developer can now use the set <code>[Dogs]</code> in their SIML Pattern.</p>
-<pre sourcefile="tutorial/bot/dynamic-set.md" sourcestartlinenumber="39" sourceendlinenumber="44"><code class="lang-xml">&lt;Model&gt;
+</code></pre><p sourcefile="tutorial/bot/dynamic-set.md" sourcestartlinenumber="73" sourceendlinenumber="73">The above set provides a list of Dog breeds. Bot developer can now use the set <code>[Dogs]</code> in their SIML Pattern.</p>
+<pre sourcefile="tutorial/bot/dynamic-set.md" sourcestartlinenumber="77" sourceendlinenumber="87"><code class="lang-xml">
+&lt;Model&gt;
+
   &lt;Pattern&gt;I HAVE A [DOGS]&lt;/Pattern&gt;
+
   &lt;Response&gt;I wish I had a &lt;Match /&gt;.&lt;/Response&gt;
+
 &lt;/Model&gt;
-</code></pre><h3 id="parameterized-sets" sourcefile="tutorial/bot/dynamic-set.md" sourcestartlinenumber="46" sourceendlinenumber="46">Parameterized Sets</h3>
-<p sourcefile="tutorial/bot/dynamic-set.md" sourcestartlinenumber="48" sourceendlinenumber="48">SIML Set specification allows parameterized Sets, by this we mean that a Set can be passed a <strong>single word</strong> as a paramter to evaluate the existence of words or phrases. By using parameters a Single set can check repective items within itself.</p>
-<p sourcefile="tutorial/bot/dynamic-set.md" sourcestartlinenumber="50" sourceendlinenumber="50"><em>Example</em></p>
-<pre sourcefile="tutorial/bot/dynamic-set.md" sourcestartlinenumber="52" sourceendlinenumber="90"><code class="lang-csharp">class Pet : ISet
+</code></pre><h3 id="parameterized-sets" sourcefile="tutorial/bot/dynamic-set.md" sourcestartlinenumber="91" sourceendlinenumber="91">Parameterized Sets</h3>
+<p sourcefile="tutorial/bot/dynamic-set.md" sourcestartlinenumber="95" sourceendlinenumber="95">SIML Set specification allows parameterized Sets, by this we mean that a Set can be passed a <strong>single word</strong> as a paramter to evaluate the existence of words or phrases. By using parameters a Single set can check repective items within itself.</p>
+<p sourcefile="tutorial/bot/dynamic-set.md" sourcestartlinenumber="99" sourceendlinenumber="99"><em>Example</em></p>
+<pre sourcefile="tutorial/bot/dynamic-set.md" sourcestartlinenumber="103" sourceendlinenumber="179"><code class="lang-csharp">
+class Pet : ISet
+
 {
+
     public string Name =&gt; &quot;Pet&quot;;
 
+
+
     public HashSet&lt;string&gt; Dog =&gt; new HashSet&lt;string&gt; { &quot;Pug&quot;, &quot;Beagle&quot;, &quot;Bulldog&quot;, &quot;Poodle&quot;, &quot;Chihuahua&quot; };
+
     public HashSet&lt;string&gt; Bird =&gt; new HashSet&lt;string&gt; { &quot;greys&quot;, &quot;budgies&quot;, &quot;conures&quot;, &quot;macaws&quot;, &quot;quaker parrots&quot; };
 
+
+
     public IEnumerable&lt;string&gt; GetValues(string parameter = &quot;&quot;)
+
     {
+
         if (parameter.Equals(&quot;dog&quot;, StringComparison.OrdinalIgnoreCase))
+
         {
+
             return Dog;
+
         }
 
+
+
         if (parameter.Equals(&quot;bird&quot;, StringComparison.OrdinalIgnoreCase))
+
         {
+
             return Bird;
+
         }
+
+
 
         return new[] { string.Empty };
+
     }
+
+
 
     public bool Contains(string value, string parameter = &quot;&quot;)
+
     {
+
         if (parameter.Equals(&quot;dog&quot;, StringComparison.OrdinalIgnoreCase))
+
         {
+
             return Dog.Contains(value);
+
         }
+
+
 
         if (parameter.Equals(&quot;bird&quot;, StringComparison.OrdinalIgnoreCase))
+
         {
+
             return Bird.Contains(value);
+
         }
 
+
+
         return false;
+
     }
+
 }
-</code></pre><p sourcefile="tutorial/bot/dynamic-set.md" sourcestartlinenumber="92" sourceendlinenumber="92">Once a parameterized <code>Set</code> is created, the Set has to be called with one parameter.</p>
-<pre sourcefile="tutorial/bot/dynamic-set.md" sourcestartlinenumber="94" sourceendlinenumber="99"><code class="lang-xml">&lt;Model&gt;
+</code></pre><p sourcefile="tutorial/bot/dynamic-set.md" sourcestartlinenumber="183" sourceendlinenumber="183">Once a parameterized <code>Set</code> is created, the Set has to be called with one parameter.</p>
+<pre sourcefile="tutorial/bot/dynamic-set.md" sourcestartlinenumber="187" sourceendlinenumber="197"><code class="lang-xml">
+&lt;Model&gt;
+
   &lt;Pattern&gt;I HAVE A [PET:DOG]&lt;/Pattern&gt;
+
   &lt;Response&gt;I want a &lt;Match /&gt; for myself.&lt;/Response&gt;
+
 &lt;/Model&gt;
-</code></pre>
+</code></pre><h2 id="enumerations-as-set" sourcefile="tutorial/bot/dynamic-set.md" sourcestartlinenumber="201" sourceendlinenumber="201">Enumerations as Set</h2>
+<p sourcefile="tutorial/bot/dynamic-set.md" sourcestartlinenumber="205" sourceendlinenumber="205">The <code>Sets</code> property on <code>SimlBot</code> class allows adding enumerations as Sets.</p>
+<p sourcefile="tutorial/bot/dynamic-set.md" sourcestartlinenumber="209" sourceendlinenumber="209"><em>Example</em></p>
+<pre sourcefile="tutorial/bot/dynamic-set.md" sourcestartlinenumber="213" sourceendlinenumber="217"><code class="lang-csharp">
+Bot.Sets.Add&lt;DayOfWeek&gt;();
+</code></pre><blockquote sourcefile="tutorial/bot/dynamic-set.md" sourcestartlinenumber="219" sourceendlinenumber="219"><p sourcefile="tutorial/bot/dynamic-set.md" sourcestartlinenumber="219" sourceendlinenumber="219">Creates a new SIML Set <code>[DayOfWeek]</code> the value of which are taken from the enumerataion.</p>
+</blockquote>
+<p sourcefile="tutorial/bot/dynamic-set.md" sourcestartlinenumber="223" sourceendlinenumber="223"><em>Example</em></p>
+<pre sourcefile="tutorial/bot/dynamic-set.md" sourcestartlinenumber="227" sourceendlinenumber="231"><code class="lang-csharp">
+Bot.Sets.Add&lt;DayOfWeek&gt;(&quot;Week-Day&quot;);
+</code></pre><blockquote sourcefile="tutorial/bot/dynamic-set.md" sourcestartlinenumber="233" sourceendlinenumber="233"><p sourcefile="tutorial/bot/dynamic-set.md" sourcestartlinenumber="233" sourceendlinenumber="233">Createss a new SIML Set <code>[Week-Day]</code>.</p>
+</blockquote>
+
             </article>
           </div>
           
