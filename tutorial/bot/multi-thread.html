@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Multi-Threaded Responses  - Syn Developer Network</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Multi-Threaded Responses ">
+    <meta name="generator" content="docfx 2.6.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:rel" content="../../">
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+    ga('create', 'UA-39941606-1', 'auto');
+    ga('send', 'pageview');
+  
+  </script>
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="multi-threaded-responses" sourcefile="tutorial/bot/multi-thread.md" sourcestartlinenumber="2" sourceendlinenumber="2">Multi-Threaded Responses</h1>
+              
+<p sourcefile="tutorial/bot/multi-thread.md" sourcestartlinenumber="4" sourceendlinenumber="4">Developers may at times wish to call slow async operations when certain SIML Models are activated. For such scenarios we recommend working with SIML <strong>Events</strong> instead of making your <em>app</em> wait for responses to be generated.</p>
+<p sourcefile="tutorial/bot/multi-thread.md" sourcestartlinenumber="6" sourceendlinenumber="6">The following Wiki Adapter demonstrates how an Adapter can trigger SIML Events on task completion and pass relevant information in temporary <em>var</em> variables.</p>
+<h2 id="example-adapter" sourcefile="tutorial/bot/multi-thread.md" sourcestartlinenumber="8" sourceendlinenumber="8">Example <em>Adapter</em></h2>
+<pre sourcefile="tutorial/bot/multi-thread.md" sourcestartlinenumber="10" sourceendlinenumber="42"><code class="lang-csharp">class WikiAdapter: IAdapter
+{
+    public XName TagName =&gt; SimlSpecification.Namespace.X + &quot;Wiki&quot;;
+    public bool IsRecursive =&gt; true;
+
+    public string Evaluate(Context context)
+    {
+        Task.Factory.StartNew(() =&gt;
+        {
+            var result = WikipediaApi.Search(context.Element.Value);
+            context.User.Vars[&quot;Wiki-Query&quot;] = context.Element.Value;
+
+            var dispatcher = //Some Dispatcher instance.
+
+            if (dispatcher != null &amp;&amp; !string.IsNullOrEmpty(extract))
+            {
+                dispatcher.Invoke(() =&gt;
+                {
+                    context.User.Vars[&quot;Wiki-Extract&quot;].Value = result;
+                    context.Bot.Raise(&quot;Wiki-Result&quot;, context.User);
+                });
+            }
+            else
+            {
+                context.Bot.Raise(&quot;Wiki-No-Result&quot;);
+            }
+        });
+
+        return string.Empty;
+    }
+}
+</code></pre><blockquote sourcefile="tutorial/bot/multi-thread.md" sourcestartlinenumber="44" sourceendlinenumber="44"><p sourcefile="tutorial/bot/multi-thread.md" sourcestartlinenumber="44" sourceendlinenumber="44">In the above code <code>WikipediaApi</code> is some static API class that retrieves first extract from an article that matches the <em>query</em>.</p>
+</blockquote>
+<h2 id="example-siml-code" sourcefile="tutorial/bot/multi-thread.md" sourcestartlinenumber="46" sourceendlinenumber="46">Example SIML Code</h2>
+<pre sourcefile="tutorial/bot/multi-thread.md" sourcestartlinenumber="48" sourceendlinenumber="70"><code class="lang-xml">&lt;Model&gt;
+  &lt;Pattern&gt;Search Wikipedia for *&lt;/Pattern&gt;
+  &lt;Response&gt;
+    Searching Wikipedia for &quot;&lt;Match/&gt;&quot;.
+    &lt;x:Wiki&gt;
+      &lt;Match /&gt;
+    &lt;/x:Wiki&gt;
+  &lt;/Response&gt;
+&lt;/Model&gt;
+
+&lt;Event&gt;
+  &lt;Pattern&gt;Wiki-Result&lt;/Pattern&gt;
+  &lt;Response&gt;
+    &lt;Var Get=&quot;Wiki-Extract&quot; /&gt;
+  &lt;/Response&gt;
+&lt;/Event&gt;
+
+&lt;Event&gt;
+  &lt;Pattern&gt;WIKI-NO-RESULT&lt;/Pattern&gt;
+  &lt;Response&gt;Sorry, I couldn&#39;t find any Wikipedia article on &quot;&lt;Var Get=&quot;Wiki-Query&quot; /&gt;&quot;&lt;/Response&gt;
+&lt;/Event&gt;
+</code></pre><p sourcefile="tutorial/bot/multi-thread.md" sourcestartlinenumber="72" sourceendlinenumber="72"><strong>User Input</strong></p>
+<p sourcefile="tutorial/bot/multi-thread.md" sourcestartlinenumber="74" sourceendlinenumber="74"><em>Search wikipedia for Random Access Memory.</em></p>
+<p sourcefile="tutorial/bot/multi-thread.md" sourcestartlinenumber="76" sourceendlinenumber="76"><strong>Bot Output (Immediate)</strong></p>
+<p sourcefile="tutorial/bot/multi-thread.md" sourcestartlinenumber="78" sourceendlinenumber="78"><em>Searching Wikipedia for &quot;Random Access Memory&quot;.</em></p>
+<p sourcefile="tutorial/bot/multi-thread.md" sourcestartlinenumber="80" sourceendlinenumber="80"><strong>Event Output (Later)</strong></p>
+<p sourcefile="tutorial/bot/multi-thread.md" sourcestartlinenumber="82" sourceendlinenumber="82"><em>Random-access memory is a form of computer data storage. A random-access memory device allows data items to be read or written in almost the same amount ...</em></p>
+<p sourcefile="tutorial/bot/multi-thread.md" sourcestartlinenumber="84" sourceendlinenumber="84"><strong>Explanation</strong></p>
+<p sourcefile="tutorial/bot/multi-thread.md" sourcestartlinenumber="86" sourceendlinenumber="86">Once the <em>Wiki</em> adapter it called it returns an empty response immediately. However, after an <em>Extract</em> from Wikipedia is obtained then Adapter triggers the event <code>Wiki-Result</code>. The value of the variable <code>Wiki-Extract</code> represents the extract received from Wikipedia API.</p>
+<p sourcefile="tutorial/bot/multi-thread.md" sourcestartlinenumber="88" sourceendlinenumber="88">If no results are obtained the Adapter triggers the event <code>Wiki-No-Result</code>.</p>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2016 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
