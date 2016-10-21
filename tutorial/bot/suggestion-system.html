@@ -86,7 +86,7 @@
               
 <p sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="3" sourceendlinenumber="3">The <code>Suggestion</code> adapter is a new experimental feature added to the draft SIML Specification. This adapter enables the Bot to use a custom or in-built <strong>Search Engine</strong> interface to find a list of best possible matches for user inputs using the value of <code>Example</code> tags.</p>
 <p sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="5" sourceendlinenumber="5">When necessary, developers can also replace the current <code>SearchEngine</code> instance used by <em>SimlBot</em> by a custom implementation of <code>ISearchEngine</code> interface.</p>
-<h2 id="suggestion-tag" sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="7" sourceendlinenumber="7">Suggestion Tag</h2>
+<h2 id="suggestion" sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="7" sourceendlinenumber="7">Suggestion</h2>
 <table sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="9" sourceendlinenumber="14">
 <thead>
 <tr>
@@ -104,8 +104,8 @@
 <td style="text-align:left"><strong>Optional:</strong> <code>Count</code> Returns the <em>number</em> of <code>Example</code> inputs matching the user input.</td>
 </tr>
 <tr>
+<td style="text-align:left">...</td>
 <td style="text-align:left"><strong>Optional:</strong> <code>Response</code> Is optional, and if left off, returns the entire user message otherwise if specified yields the sentence at the specified index value. At attribute MUST occur only if Index is specified otherwise the developer should use <code>&lt;Input&gt;</code> element instead of <code>&lt;Request&gt;</code>.</td>
-<td style="text-align:left"></td>
 </tr>
 <tr>
 <td style="text-align:left"><strong>Occurrence</strong></td>
@@ -144,7 +144,7 @@
 <blockquote sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="27" sourceendlinenumber="27"><p sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="27" sourceendlinenumber="27">[Set] and @Regex are part of wildcard capture process and their values can be acquired using the <code>Match</code> tag.</p>
 <p sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="29" sourceendlinenumber="29">All attributes and behaviours of Sets and Regular expressions within Pattern tag stay intact when used within Example tag.</p>
 </blockquote>
-<p sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="31" sourceendlinenumber="31">Other <em>symbols</em> (_, *, %, $, {}, ()) used in <code>Pattern</code> tag are invalid within the <code>Example</code> tag.</p>
+<p sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="31" sourceendlinenumber="31">Other <em>symbols</em>  like  _, *, %, $, {}, () used in <code>Pattern</code> tag are invalid within the <code>Example</code> tag.</p>
 <h2 id="search-engine-algorithm" sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="33" sourceendlinenumber="33">Search Engine Algorithm</h2>
 <p sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="35" sourceendlinenumber="35">The default implementation of <code>ISearchEn gine</code> interface (<code>SearchEngine</code>) in <em>Syn Bot</em> uses a <strong>Fuzzy Keyword Search</strong> algorithm that takes the following into consideration.</p>
 <ul sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="37" sourceendlinenumber="42">
@@ -214,10 +214,7 @@
 <li sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="89" sourceendlinenumber="89">How is life?</li>
 </ol>
 <p sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="91" sourceendlinenumber="91"><strong>Example <code>ISuggestionFormmater</code> Implementation</strong></p>
-<pre sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="93" sourceendlinenumber="122"><code class="lang-csharp">/// &lt;summary&gt;
-/// Default implementation of &lt;see cref=&quot;ISuggestionFormatter&quot;/&gt; interface.
-/// &lt;/summary&gt;
-class SuggestionFormatter : ISuggestionFormatter
+<pre sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="93" sourceendlinenumber="119"><code class="lang-csharp">class SuggestionFormatter : ISuggestionFormatter
 {
     public string Format(Suggestion suggestion)
     {
@@ -242,8 +239,8 @@ class SuggestionFormatter : ISuggestionFormatter
         return toReturn.Trim();
     }
 }
-</code></pre><h2 id="simple-suggestion-example" sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="124" sourceendlinenumber="124">Simple Suggestion Example</h2>
-<pre sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="126" sourceendlinenumber="167"><code class="lang-xml">&lt;Model&gt;
+</code></pre><h2 id="simple-suggestion-example" sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="121" sourceendlinenumber="121">Simple Suggestion Example</h2>
+<pre sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="123" sourceendlinenumber="164"><code class="lang-xml">&lt;Model&gt;
   &lt;Pattern&gt;
     &lt;Item&gt;HOW * YOU&lt;/Item&gt;
     &lt;Item&gt;HOW * LIFE&lt;/Item&gt;
@@ -283,26 +280,26 @@ class SuggestionFormatter : ISuggestionFormatter
 &lt;Suggestion /&gt;&lt;/Else&gt;
   &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><h3 id="example-1" sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="169" sourceendlinenumber="169">Example 1</h3>
-<p sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="171" sourceendlinenumber="171"><strong>User Input</strong></p>
-<p sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="173" sourceendlinenumber="173"><em>How is life mate?</em></p>
-<p sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="175" sourceendlinenumber="175"><strong>Bot Output</strong></p>
-<p sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="177" sourceendlinenumber="179"><em>Perhaps you meant:...</em>
+</code></pre><h3 id="example-1" sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="166" sourceendlinenumber="166">Example 1</h3>
+<p sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="168" sourceendlinenumber="168"><strong>User Input</strong></p>
+<p sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="170" sourceendlinenumber="170"><em>How is life mate?</em></p>
+<p sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="172" sourceendlinenumber="172"><strong>Bot Output</strong></p>
+<p sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="174" sourceendlinenumber="176"><em>Perhaps you meant:...</em>
 <em>1. How is life?</em>
 <em>2. How is it going?</em></p>
-<h3 id="example-2" sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="181" sourceendlinenumber="181">Example 2</h3>
-<p sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="183" sourceendlinenumber="183"><strong>User Input</strong></p>
-<p sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="185" sourceendlinenumber="185"><em>Hows going?</em></p>
-<p sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="187" sourceendlinenumber="187"><strong>Bot Output</strong></p>
-<p sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="189" sourceendlinenumber="189"><em>Did you mean:..&quot;How is it going?&quot;</em></p>
-<h3 id="example-3" sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="191" sourceendlinenumber="191">Example 3</h3>
-<p sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="193" sourceendlinenumber="193"><strong>User Input</strong></p>
-<p sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="195" sourceendlinenumber="195"><em>bla bla</em></p>
-<p sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="197" sourceendlinenumber="197"><strong>Bot Output</strong></p>
-<p sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="199" sourceendlinenumber="199"><em>Please rephrase that for me.</em></p>
-<h2 id="complex-suggestion-example" sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="201" sourceendlinenumber="201">Complex Suggestion Example</h2>
-<pre sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="203" sourceendlinenumber="205"><code class="lang-xml">&lt;Set Name=&quot;Family&quot;&gt;Peter, Ali, Ramesh&lt;/Set&gt;
-</code></pre><pre sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="207" sourceendlinenumber="243"><code class="lang-xml">&lt;Model&gt;
+<h3 id="example-2" sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="178" sourceendlinenumber="178">Example 2</h3>
+<p sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="180" sourceendlinenumber="180"><strong>User Input</strong></p>
+<p sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="182" sourceendlinenumber="182"><em>Hows going?</em></p>
+<p sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="184" sourceendlinenumber="184"><strong>Bot Output</strong></p>
+<p sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="186" sourceendlinenumber="186"><em>Did you mean:..&quot;How is it going?&quot;</em></p>
+<h3 id="example-3" sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="188" sourceendlinenumber="188">Example 3</h3>
+<p sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="190" sourceendlinenumber="190"><strong>User Input</strong></p>
+<p sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="192" sourceendlinenumber="192"><em>bla bla</em></p>
+<p sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="194" sourceendlinenumber="194"><strong>Bot Output</strong></p>
+<p sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="196" sourceendlinenumber="196"><em>Please rephrase that for me.</em></p>
+<h2 id="complex-suggestion-example" sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="198" sourceendlinenumber="198">Complex Suggestion Example</h2>
+<pre sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="200" sourceendlinenumber="202"><code class="lang-xml">&lt;Set Name=&quot;Family&quot;&gt;Peter, Ali, Ramesh&lt;/Set&gt;
+</code></pre><pre sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="204" sourceendlinenumber="240"><code class="lang-xml">&lt;Model&gt;
   &lt;Pattern&gt;
     &lt;Item&gt;HOW IS [FAMILY]&lt;/Item&gt;
     &lt;Item&gt;WHAT IS UP WITH [FAMILY]&lt;/Item&gt;
@@ -337,15 +334,15 @@ class SuggestionFormatter : ISuggestionFormatter
 &lt;Suggestion /&gt;&lt;/Else&gt;
   &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><h3 id="example" sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="245" sourceendlinenumber="245">Example</h3>
-<p sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="247" sourceendlinenumber="247"><strong>User Input</strong></p>
-<p sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="249" sourceendlinenumber="249"><em>Is Peter fine?</em></p>
-<p sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="251" sourceendlinenumber="251"><strong>Bot Output</strong></p>
-<p sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="253" sourceendlinenumber="255"><em>Perhaps you meant:...</em>
+</code></pre><h3 id="example" sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="242" sourceendlinenumber="242">Example</h3>
+<p sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="244" sourceendlinenumber="244"><strong>User Input</strong></p>
+<p sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="246" sourceendlinenumber="246"><em>Is Peter fine?</em></p>
+<p sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="248" sourceendlinenumber="248"><strong>Bot Output</strong></p>
+<p sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="250" sourceendlinenumber="252"><em>Perhaps you meant:...</em>
 <em>1. How is Peter?</em>
 <em>2. What is up with Peter?</em></p>
-<p sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="257" sourceendlinenumber="257"><strong>Explanation</strong></p>
-<p sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="259" sourceendlinenumber="259">As the set <code>Family</code> is specified within an <code>Example</code> item, The value <strong>Peter</strong> of the set <code>Family</code> is evaluated during example generation. Thereby creating a generated example that transforms <strong><em>How is [Family]?</em></strong> to <strong><em>How is Peter?</em></strong> and <strong><em>What is up with [Family]?</em></strong> to <strong><em>What is up with Peter?</em></strong></p>
+<p sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="254" sourceendlinenumber="254"><strong>Explanation</strong></p>
+<p sourcefile="tutorial/bot/suggestion-system.md" sourcestartlinenumber="256" sourceendlinenumber="256">As the set <code>Family</code> is specified within an <code>Example</code> item, The value <strong>Peter</strong> of the set <code>Family</code> is evaluated during example generation. Thereby creating a generated example that transforms <strong><em>How is [Family]?</em></strong> to <strong><em>How is Peter?</em></strong> and <strong><em>What is up with [Family]?</em></strong> to <strong><em>What is up with Peter?</em></strong></p>
 
             </article>
           </div>
