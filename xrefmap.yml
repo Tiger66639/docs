@@ -256,6 +256,136 @@ references:
   commentId: Overload:Syn.Bot.Siml.BotConfiguration.#ctor
   name: BotConfiguration
   fullName: Syn.Bot.Siml.BotConfiguration.BotConfiguration()
+- uid: Syn.Bot.Siml.BotConfiguration.AllowConditionsInPattern
+  name: AllowConditionsInPattern
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_AllowConditionsInPattern
+  commentId: P:Syn.Bot.Siml.BotConfiguration.AllowConditionsInPattern
+  fullName: Syn.Bot.Siml.BotConfiguration.AllowConditionsInPattern
+- uid: Syn.Bot.Siml.BotConfiguration.AllowConditionsInPattern*
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_AllowConditionsInPattern_
+  commentId: Overload:Syn.Bot.Siml.BotConfiguration.AllowConditionsInPattern
+  name: AllowConditionsInPattern
+  fullName: Syn.Bot.Siml.BotConfiguration.AllowConditionsInPattern
+- uid: Syn.Bot.Siml.BotConfiguration.AllowConditionsInPublicPattern
+  name: AllowConditionsInPublicPattern
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_AllowConditionsInPublicPattern
+  commentId: P:Syn.Bot.Siml.BotConfiguration.AllowConditionsInPublicPattern
+  fullName: Syn.Bot.Siml.BotConfiguration.AllowConditionsInPublicPattern
+- uid: Syn.Bot.Siml.BotConfiguration.AllowConditionsInPublicPattern*
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_AllowConditionsInPublicPattern_
+  commentId: Overload:Syn.Bot.Siml.BotConfiguration.AllowConditionsInPublicPattern
+  name: AllowConditionsInPublicPattern
+  fullName: Syn.Bot.Siml.BotConfiguration.AllowConditionsInPublicPattern
+- uid: Syn.Bot.Siml.BotConfiguration.AllowEmotions
+  name: AllowEmotions
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_AllowEmotions
+  commentId: P:Syn.Bot.Siml.BotConfiguration.AllowEmotions
+  fullName: Syn.Bot.Siml.BotConfiguration.AllowEmotions
+- uid: Syn.Bot.Siml.BotConfiguration.AllowEmotions*
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_AllowEmotions_
+  commentId: Overload:Syn.Bot.Siml.BotConfiguration.AllowEmotions
+  name: AllowEmotions
+  fullName: Syn.Bot.Siml.BotConfiguration.AllowEmotions
+- uid: Syn.Bot.Siml.BotConfiguration.AllowFilters
+  name: AllowFilters
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_AllowFilters
+  commentId: P:Syn.Bot.Siml.BotConfiguration.AllowFilters
+  fullName: Syn.Bot.Siml.BotConfiguration.AllowFilters
+- uid: Syn.Bot.Siml.BotConfiguration.AllowFilters*
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_AllowFilters_
+  commentId: Overload:Syn.Bot.Siml.BotConfiguration.AllowFilters
+  name: AllowFilters
+  fullName: Syn.Bot.Siml.BotConfiguration.AllowFilters
+- uid: Syn.Bot.Siml.BotConfiguration.AllowJavaScript
+  name: AllowJavaScript
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_AllowJavaScript
+  commentId: P:Syn.Bot.Siml.BotConfiguration.AllowJavaScript
+  fullName: Syn.Bot.Siml.BotConfiguration.AllowJavaScript
+- uid: Syn.Bot.Siml.BotConfiguration.AllowJavaScript*
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_AllowJavaScript_
+  commentId: Overload:Syn.Bot.Siml.BotConfiguration.AllowJavaScript
+  name: AllowJavaScript
+  fullName: Syn.Bot.Siml.BotConfiguration.AllowJavaScript
+- uid: Syn.Bot.Siml.BotConfiguration.AllowLearning
+  name: AllowLearning
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_AllowLearning
+  commentId: P:Syn.Bot.Siml.BotConfiguration.AllowLearning
+  fullName: Syn.Bot.Siml.BotConfiguration.AllowLearning
+- uid: Syn.Bot.Siml.BotConfiguration.AllowLearning*
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_AllowLearning_
+  commentId: Overload:Syn.Bot.Siml.BotConfiguration.AllowLearning
+  name: AllowLearning
+  fullName: Syn.Bot.Siml.BotConfiguration.AllowLearning
+- uid: Syn.Bot.Siml.BotConfiguration.AllowMaps
+  name: AllowMaps
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_AllowMaps
+  commentId: P:Syn.Bot.Siml.BotConfiguration.AllowMaps
+  fullName: Syn.Bot.Siml.BotConfiguration.AllowMaps
+- uid: Syn.Bot.Siml.BotConfiguration.AllowMaps*
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_AllowMaps_
+  commentId: Overload:Syn.Bot.Siml.BotConfiguration.AllowMaps
+  name: AllowMaps
+  fullName: Syn.Bot.Siml.BotConfiguration.AllowMaps
+- uid: Syn.Bot.Siml.BotConfiguration.AllowPublicScriptsInPattern
+  name: AllowPublicScriptsInPattern
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_AllowPublicScriptsInPattern
+  commentId: P:Syn.Bot.Siml.BotConfiguration.AllowPublicScriptsInPattern
+  fullName: Syn.Bot.Siml.BotConfiguration.AllowPublicScriptsInPattern
+- uid: Syn.Bot.Siml.BotConfiguration.AllowPublicScriptsInPattern*
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_AllowPublicScriptsInPattern_
+  commentId: Overload:Syn.Bot.Siml.BotConfiguration.AllowPublicScriptsInPattern
+  name: AllowPublicScriptsInPattern
+  fullName: Syn.Bot.Siml.BotConfiguration.AllowPublicScriptsInPattern
+- uid: Syn.Bot.Siml.BotConfiguration.AllowRegex
+  name: AllowRegex
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_AllowRegex
+  commentId: P:Syn.Bot.Siml.BotConfiguration.AllowRegex
+  fullName: Syn.Bot.Siml.BotConfiguration.AllowRegex
+- uid: Syn.Bot.Siml.BotConfiguration.AllowRegex*
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_AllowRegex_
+  commentId: Overload:Syn.Bot.Siml.BotConfiguration.AllowRegex
+  name: AllowRegex
+  fullName: Syn.Bot.Siml.BotConfiguration.AllowRegex
+- uid: Syn.Bot.Siml.BotConfiguration.AllowRemembering
+  name: AllowRemembering
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_AllowRemembering
+  commentId: P:Syn.Bot.Siml.BotConfiguration.AllowRemembering
+  fullName: Syn.Bot.Siml.BotConfiguration.AllowRemembering
+- uid: Syn.Bot.Siml.BotConfiguration.AllowRemembering*
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_AllowRemembering_
+  commentId: Overload:Syn.Bot.Siml.BotConfiguration.AllowRemembering
+  name: AllowRemembering
+  fullName: Syn.Bot.Siml.BotConfiguration.AllowRemembering
+- uid: Syn.Bot.Siml.BotConfiguration.AllowScriptsInPattern
+  name: AllowScriptsInPattern
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_AllowScriptsInPattern
+  commentId: P:Syn.Bot.Siml.BotConfiguration.AllowScriptsInPattern
+  fullName: Syn.Bot.Siml.BotConfiguration.AllowScriptsInPattern
+- uid: Syn.Bot.Siml.BotConfiguration.AllowScriptsInPattern*
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_AllowScriptsInPattern_
+  commentId: Overload:Syn.Bot.Siml.BotConfiguration.AllowScriptsInPattern
+  name: AllowScriptsInPattern
+  fullName: Syn.Bot.Siml.BotConfiguration.AllowScriptsInPattern
+- uid: Syn.Bot.Siml.BotConfiguration.AllowSets
+  name: AllowSets
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_AllowSets
+  commentId: P:Syn.Bot.Siml.BotConfiguration.AllowSets
+  fullName: Syn.Bot.Siml.BotConfiguration.AllowSets
+- uid: Syn.Bot.Siml.BotConfiguration.AllowSets*
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_AllowSets_
+  commentId: Overload:Syn.Bot.Siml.BotConfiguration.AllowSets
+  name: AllowSets
+  fullName: Syn.Bot.Siml.BotConfiguration.AllowSets
+- uid: Syn.Bot.Siml.BotConfiguration.AllowStacking
+  name: AllowStacking
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_AllowStacking
+  commentId: P:Syn.Bot.Siml.BotConfiguration.AllowStacking
+  fullName: Syn.Bot.Siml.BotConfiguration.AllowStacking
+- uid: Syn.Bot.Siml.BotConfiguration.AllowStacking*
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_AllowStacking_
+  commentId: Overload:Syn.Bot.Siml.BotConfiguration.AllowStacking
+  name: AllowStacking
+  fullName: Syn.Bot.Siml.BotConfiguration.AllowStacking
 - uid: Syn.Bot.Siml.BotConfiguration.BotID
   name: BotID
   href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_BotID
@@ -276,6 +406,16 @@ references:
   commentId: Overload:Syn.Bot.Siml.BotConfiguration.BotTimeout
   name: BotTimeout
   fullName: Syn.Bot.Siml.BotConfiguration.BotTimeout
+- uid: Syn.Bot.Siml.BotConfiguration.CacheManager
+  name: CacheManager
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_CacheManager
+  commentId: P:Syn.Bot.Siml.BotConfiguration.CacheManager
+  fullName: Syn.Bot.Siml.BotConfiguration.CacheManager
+- uid: Syn.Bot.Siml.BotConfiguration.CacheManager*
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_CacheManager_
+  commentId: Overload:Syn.Bot.Siml.BotConfiguration.CacheManager
+  name: CacheManager
+  fullName: Syn.Bot.Siml.BotConfiguration.CacheManager
 - uid: Syn.Bot.Siml.BotConfiguration.Encoding
   name: Encoding
   href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_Encoding
@@ -286,6 +426,26 @@ references:
   commentId: Overload:Syn.Bot.Siml.BotConfiguration.Encoding
   name: Encoding
   fullName: Syn.Bot.Siml.BotConfiguration.Encoding
+- uid: Syn.Bot.Siml.BotConfiguration.FilterLimit
+  name: FilterLimit
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_FilterLimit
+  commentId: P:Syn.Bot.Siml.BotConfiguration.FilterLimit
+  fullName: Syn.Bot.Siml.BotConfiguration.FilterLimit
+- uid: Syn.Bot.Siml.BotConfiguration.FilterLimit*
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_FilterLimit_
+  commentId: Overload:Syn.Bot.Siml.BotConfiguration.FilterLimit
+  name: FilterLimit
+  fullName: Syn.Bot.Siml.BotConfiguration.FilterLimit
+- uid: Syn.Bot.Siml.BotConfiguration.HasParent
+  name: HasParent
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_HasParent
+  commentId: P:Syn.Bot.Siml.BotConfiguration.HasParent
+  fullName: Syn.Bot.Siml.BotConfiguration.HasParent
+- uid: Syn.Bot.Siml.BotConfiguration.HasParent*
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_HasParent_
+  commentId: Overload:Syn.Bot.Siml.BotConfiguration.HasParent
+  name: HasParent
+  fullName: Syn.Bot.Siml.BotConfiguration.HasParent
 - uid: Syn.Bot.Siml.BotConfiguration.LicenseKey
   name: LicenseKey
   href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_LicenseKey
@@ -296,6 +456,16 @@ references:
   commentId: Overload:Syn.Bot.Siml.BotConfiguration.LicenseKey
   name: LicenseKey
   fullName: Syn.Bot.Siml.BotConfiguration.LicenseKey
+- uid: Syn.Bot.Siml.BotConfiguration.MapLimit
+  name: MapLimit
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_MapLimit
+  commentId: P:Syn.Bot.Siml.BotConfiguration.MapLimit
+  fullName: Syn.Bot.Siml.BotConfiguration.MapLimit
+- uid: Syn.Bot.Siml.BotConfiguration.MapLimit*
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_MapLimit_
+  commentId: Overload:Syn.Bot.Siml.BotConfiguration.MapLimit
+  name: MapLimit
+  fullName: Syn.Bot.Siml.BotConfiguration.MapLimit
 - uid: Syn.Bot.Siml.BotConfiguration.MaxBotIdleTime
   name: MaxBotIdleTime
   href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_MaxBotIdleTime
@@ -316,6 +486,16 @@ references:
   commentId: Overload:Syn.Bot.Siml.BotConfiguration.MaxUserIdleTime
   name: MaxUserIdleTime
   fullName: Syn.Bot.Siml.BotConfiguration.MaxUserIdleTime
+- uid: Syn.Bot.Siml.BotConfiguration.ModelLimit
+  name: ModelLimit
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_ModelLimit
+  commentId: P:Syn.Bot.Siml.BotConfiguration.ModelLimit
+  fullName: Syn.Bot.Siml.BotConfiguration.ModelLimit
+- uid: Syn.Bot.Siml.BotConfiguration.ModelLimit*
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_ModelLimit_
+  commentId: Overload:Syn.Bot.Siml.BotConfiguration.ModelLimit
+  name: ModelLimit
+  fullName: Syn.Bot.Siml.BotConfiguration.ModelLimit
 - uid: Syn.Bot.Siml.BotConfiguration.ParentBot
   name: ParentBot
   href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_ParentBot
@@ -326,6 +506,36 @@ references:
   commentId: Overload:Syn.Bot.Siml.BotConfiguration.ParentBot
   name: ParentBot
   fullName: Syn.Bot.Siml.BotConfiguration.ParentBot
+- uid: Syn.Bot.Siml.BotConfiguration.RegexLimit
+  name: RegexLimit
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_RegexLimit
+  commentId: P:Syn.Bot.Siml.BotConfiguration.RegexLimit
+  fullName: Syn.Bot.Siml.BotConfiguration.RegexLimit
+- uid: Syn.Bot.Siml.BotConfiguration.RegexLimit*
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_RegexLimit_
+  commentId: Overload:Syn.Bot.Siml.BotConfiguration.RegexLimit
+  name: RegexLimit
+  fullName: Syn.Bot.Siml.BotConfiguration.RegexLimit
+- uid: Syn.Bot.Siml.BotConfiguration.SetLimit
+  name: SetLimit
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_SetLimit
+  commentId: P:Syn.Bot.Siml.BotConfiguration.SetLimit
+  fullName: Syn.Bot.Siml.BotConfiguration.SetLimit
+- uid: Syn.Bot.Siml.BotConfiguration.SetLimit*
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_SetLimit_
+  commentId: Overload:Syn.Bot.Siml.BotConfiguration.SetLimit
+  name: SetLimit
+  fullName: Syn.Bot.Siml.BotConfiguration.SetLimit
+- uid: Syn.Bot.Siml.BotConfiguration.SplitterLimit
+  name: SplitterLimit
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_SplitterLimit
+  commentId: P:Syn.Bot.Siml.BotConfiguration.SplitterLimit
+  fullName: Syn.Bot.Siml.BotConfiguration.SplitterLimit
+- uid: Syn.Bot.Siml.BotConfiguration.SplitterLimit*
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_SplitterLimit_
+  commentId: Overload:Syn.Bot.Siml.BotConfiguration.SplitterLimit
+  name: SplitterLimit
+  fullName: Syn.Bot.Siml.BotConfiguration.SplitterLimit
 - uid: Syn.Bot.Siml.BotConfiguration.StoreExamples
   name: StoreExamples
   href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_StoreExamples
@@ -356,6 +566,86 @@ references:
   commentId: Overload:Syn.Bot.Siml.BotConfiguration.StoreVocabulary
   name: StoreVocabulary
   fullName: Syn.Bot.Siml.BotConfiguration.StoreVocabulary
+- uid: Syn.Bot.Siml.BotConfiguration.UseParentFilters
+  name: UseParentFilters
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_UseParentFilters
+  commentId: P:Syn.Bot.Siml.BotConfiguration.UseParentFilters
+  fullName: Syn.Bot.Siml.BotConfiguration.UseParentFilters
+- uid: Syn.Bot.Siml.BotConfiguration.UseParentFilters*
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_UseParentFilters_
+  commentId: Overload:Syn.Bot.Siml.BotConfiguration.UseParentFilters
+  name: UseParentFilters
+  fullName: Syn.Bot.Siml.BotConfiguration.UseParentFilters
+- uid: Syn.Bot.Siml.BotConfiguration.UseParentMaps
+  name: UseParentMaps
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_UseParentMaps
+  commentId: P:Syn.Bot.Siml.BotConfiguration.UseParentMaps
+  fullName: Syn.Bot.Siml.BotConfiguration.UseParentMaps
+- uid: Syn.Bot.Siml.BotConfiguration.UseParentMaps*
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_UseParentMaps_
+  commentId: Overload:Syn.Bot.Siml.BotConfiguration.UseParentMaps
+  name: UseParentMaps
+  fullName: Syn.Bot.Siml.BotConfiguration.UseParentMaps
+- uid: Syn.Bot.Siml.BotConfiguration.UseParentPhrases
+  name: UseParentPhrases
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_UseParentPhrases
+  commentId: P:Syn.Bot.Siml.BotConfiguration.UseParentPhrases
+  fullName: Syn.Bot.Siml.BotConfiguration.UseParentPhrases
+- uid: Syn.Bot.Siml.BotConfiguration.UseParentPhrases*
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_UseParentPhrases_
+  commentId: Overload:Syn.Bot.Siml.BotConfiguration.UseParentPhrases
+  name: UseParentPhrases
+  fullName: Syn.Bot.Siml.BotConfiguration.UseParentPhrases
+- uid: Syn.Bot.Siml.BotConfiguration.UseParentRandoms
+  name: UseParentRandoms
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_UseParentRandoms
+  commentId: P:Syn.Bot.Siml.BotConfiguration.UseParentRandoms
+  fullName: Syn.Bot.Siml.BotConfiguration.UseParentRandoms
+- uid: Syn.Bot.Siml.BotConfiguration.UseParentRandoms*
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_UseParentRandoms_
+  commentId: Overload:Syn.Bot.Siml.BotConfiguration.UseParentRandoms
+  name: UseParentRandoms
+  fullName: Syn.Bot.Siml.BotConfiguration.UseParentRandoms
+- uid: Syn.Bot.Siml.BotConfiguration.UseParentRegex
+  name: UseParentRegex
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_UseParentRegex
+  commentId: P:Syn.Bot.Siml.BotConfiguration.UseParentRegex
+  fullName: Syn.Bot.Siml.BotConfiguration.UseParentRegex
+- uid: Syn.Bot.Siml.BotConfiguration.UseParentRegex*
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_UseParentRegex_
+  commentId: Overload:Syn.Bot.Siml.BotConfiguration.UseParentRegex
+  name: UseParentRegex
+  fullName: Syn.Bot.Siml.BotConfiguration.UseParentRegex
+- uid: Syn.Bot.Siml.BotConfiguration.UseParentSets
+  name: UseParentSets
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_UseParentSets
+  commentId: P:Syn.Bot.Siml.BotConfiguration.UseParentSets
+  fullName: Syn.Bot.Siml.BotConfiguration.UseParentSets
+- uid: Syn.Bot.Siml.BotConfiguration.UseParentSets*
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_UseParentSets_
+  commentId: Overload:Syn.Bot.Siml.BotConfiguration.UseParentSets
+  name: UseParentSets
+  fullName: Syn.Bot.Siml.BotConfiguration.UseParentSets
+- uid: Syn.Bot.Siml.BotConfiguration.UseParentSplitters
+  name: UseParentSplitters
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_UseParentSplitters
+  commentId: P:Syn.Bot.Siml.BotConfiguration.UseParentSplitters
+  fullName: Syn.Bot.Siml.BotConfiguration.UseParentSplitters
+- uid: Syn.Bot.Siml.BotConfiguration.UseParentSplitters*
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_UseParentSplitters_
+  commentId: Overload:Syn.Bot.Siml.BotConfiguration.UseParentSplitters
+  name: UseParentSplitters
+  fullName: Syn.Bot.Siml.BotConfiguration.UseParentSplitters
+- uid: Syn.Bot.Siml.BotConfiguration.UserHistoryLimit
+  name: UserHistoryLimit
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_UserHistoryLimit
+  commentId: P:Syn.Bot.Siml.BotConfiguration.UserHistoryLimit
+  fullName: Syn.Bot.Siml.BotConfiguration.UserHistoryLimit
+- uid: Syn.Bot.Siml.BotConfiguration.UserHistoryLimit*
+  href: api/Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration_UserHistoryLimit_
+  commentId: Overload:Syn.Bot.Siml.BotConfiguration.UserHistoryLimit
+  name: UserHistoryLimit
+  fullName: Syn.Bot.Siml.BotConfiguration.UserHistoryLimit
 - uid: Syn.Bot.Siml.BotResponse
   name: BotResponse
   href: api/Syn.Bot.Siml.BotResponse.html#Syn_Bot_Siml_BotResponse
@@ -6315,6 +6605,34 @@ references:
   commentId: Overload:Syn.Bot.Siml.Helper.Utility.GetMarker
   name: GetMarker
   fullName: Syn.Bot.Siml.Helper.Utility.GetMarker()
+- uid: Syn.Bot.Siml.Helper.Utility.GetSequencedDocument(System.Collections.Generic.IEnumerable{System.Xml.Linq.XDocument})
+  name: GetSequencedDocument(IEnumerable<XDocument>)
+  href: api/Syn.Bot.Siml.Helper.Utility.html#Syn_Bot_Siml_Helper_Utility_GetSequencedDocument_System_Collections_Generic_IEnumerable_System_Xml_Linq_XDocument__
+  commentId: M:Syn.Bot.Siml.Helper.Utility.GetSequencedDocument(System.Collections.Generic.IEnumerable{System.Xml.Linq.XDocument})
+  name.vb: GetSequencedDocument(IEnumerable(Of XDocument))
+  fullName: Syn.Bot.Siml.Helper.Utility.GetSequencedDocument(System.Collections.Generic.IEnumerable<System.Xml.Linq.XDocument>)
+  fullName.vb: Syn.Bot.Siml.Helper.Utility.GetSequencedDocument(System.Collections.Generic.IEnumerable(Of System.Xml.Linq.XDocument))
+- uid: Syn.Bot.Siml.Helper.Utility.GetSequencedDocument*
+  href: api/Syn.Bot.Siml.Helper.Utility.html#Syn_Bot_Siml_Helper_Utility_GetSequencedDocument_
+  commentId: Overload:Syn.Bot.Siml.Helper.Utility.GetSequencedDocument
+  name: GetSequencedDocument
+  name.vb: GetSequencedDocument
+  fullName: Syn.Bot.Siml.Helper.Utility.GetSequencedDocument(System.Collections.Generic.IEnumerable<System.Xml.Linq.XDocument>)
+  fullName.vb: Syn.Bot.Siml.Helper.Utility.GetSequencedDocument
+- uid: Syn.Bot.Siml.Helper.Utility.GetSequencedElement(System.Collections.Generic.IEnumerable{System.Xml.Linq.XElement})
+  name: GetSequencedElement(IEnumerable<XElement>)
+  href: api/Syn.Bot.Siml.Helper.Utility.html#Syn_Bot_Siml_Helper_Utility_GetSequencedElement_System_Collections_Generic_IEnumerable_System_Xml_Linq_XElement__
+  commentId: M:Syn.Bot.Siml.Helper.Utility.GetSequencedElement(System.Collections.Generic.IEnumerable{System.Xml.Linq.XElement})
+  name.vb: GetSequencedElement(IEnumerable(Of XElement))
+  fullName: Syn.Bot.Siml.Helper.Utility.GetSequencedElement(System.Collections.Generic.IEnumerable<System.Xml.Linq.XElement>)
+  fullName.vb: Syn.Bot.Siml.Helper.Utility.GetSequencedElement(System.Collections.Generic.IEnumerable(Of System.Xml.Linq.XElement))
+- uid: Syn.Bot.Siml.Helper.Utility.GetSequencedElement*
+  href: api/Syn.Bot.Siml.Helper.Utility.html#Syn_Bot_Siml_Helper_Utility_GetSequencedElement_
+  commentId: Overload:Syn.Bot.Siml.Helper.Utility.GetSequencedElement
+  name: GetSequencedElement
+  name.vb: GetSequencedElement
+  fullName: Syn.Bot.Siml.Helper.Utility.GetSequencedElement(System.Collections.Generic.IEnumerable<System.Xml.Linq.XElement>)
+  fullName.vb: Syn.Bot.Siml.Helper.Utility.GetSequencedElement
 - uid: Syn.Bot.Siml.Helper.Utility.RandomElement(System.Xml.Linq.XElement,System.String)
   name: RandomElement(XElement, String)
   href: api/Syn.Bot.Siml.Helper.Utility.html#Syn_Bot_Siml_Helper_Utility_RandomElement_System_Xml_Linq_XElement_System_String_
@@ -7854,6 +8172,11 @@ references:
   href: api/Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot__ctor
   commentId: M:Syn.Bot.Siml.SimlBot.#ctor
   fullName: Syn.Bot.Siml.SimlBot.SimlBot()
+- uid: Syn.Bot.Siml.SimlBot.#ctor(Syn.Bot.Siml.BotConfiguration)
+  name: SimlBot(BotConfiguration)
+  href: api/Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot__ctor_Syn_Bot_Siml_BotConfiguration_
+  commentId: M:Syn.Bot.Siml.SimlBot.#ctor(Syn.Bot.Siml.BotConfiguration)
+  fullName: Syn.Bot.Siml.SimlBot.SimlBot(Syn.Bot.Siml.BotConfiguration)
 - uid: Syn.Bot.Siml.SimlBot.#ctor*
   href: api/Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot__ctor_
   commentId: Overload:Syn.Bot.Siml.SimlBot.#ctor
@@ -8283,16 +8606,6 @@ references:
   href: api/Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot_Suggesting
   commentId: E:Syn.Bot.Siml.SimlBot.Suggesting
   fullName: Syn.Bot.Siml.SimlBot.Suggesting
-- uid: Syn.Bot.Siml.SimlBot.SynBot(Syn.Bot.Siml.BotConfiguration)
-  name: SynBot(BotConfiguration)
-  href: api/Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot_SynBot_Syn_Bot_Siml_BotConfiguration_
-  commentId: M:Syn.Bot.Siml.SimlBot.SynBot(Syn.Bot.Siml.BotConfiguration)
-  fullName: Syn.Bot.Siml.SimlBot.SynBot(Syn.Bot.Siml.BotConfiguration)
-- uid: Syn.Bot.Siml.SimlBot.SynBot*
-  href: api/Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot_SynBot_
-  commentId: Overload:Syn.Bot.Siml.SimlBot.SynBot
-  name: SynBot
-  fullName: Syn.Bot.Siml.SimlBot.SynBot(Syn.Bot.Siml.BotConfiguration)
 - uid: Syn.Bot.Siml.SimlBot.Time
   name: Time
   href: api/Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot_Time

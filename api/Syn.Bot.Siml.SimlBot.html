@@ -136,6 +136,32 @@
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public SimlBot()</code></pre>
               </div>
+              <h4 id="Syn_Bot_Siml_SimlBot__ctor_Syn_Bot_Siml_BotConfiguration_" data-uid="Syn.Bot.Siml.SimlBot.#ctor(Syn.Bot.Siml.BotConfiguration)">SimlBot(BotConfiguration)</h4>
+              <div class="markdown level1 summary"><p sourcefile="api/Syn.Bot.Siml.SimlBot.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Initializes a new instance of <a class="xref" href="Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot">SimlBot</a> class with the specified configuration.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public SimlBot(BotConfiguration configuration)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration">BotConfiguration</a></td>
+                    <td><em>configuration</em></td>
+                    <td><p sourcefile="api/Syn.Bot.Siml.SimlBot.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Bot Configuration.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
               <h3 id="properties">Properties
               </h3>
               <h4 id="Syn_Bot_Siml_SimlBot_Adapters" data-uid="Syn.Bot.Siml.SimlBot.Adapters">Adapters</h4>
@@ -778,7 +804,8 @@ Once loaded any changes to this settings will not affect other <a class="xref" h
                 </tbody>
               </table>
               <h4 id="Syn_Bot_Siml_SimlBot_SearchEngine" data-uid="Syn.Bot.Siml.SimlBot.SearchEngine">SearchEngine</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p sourcefile="api/Syn.Bot.Siml.SimlBot.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Gets or sets the search engine for processing examples.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -795,7 +822,8 @@ Once loaded any changes to this settings will not affect other <a class="xref" h
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Syn.Bot.Siml.Search.ISearchEngine.html#Syn_Bot_Siml_Search_ISearchEngine">ISearchEngine</a></td>
-                    <td></td>
+                    <td><p sourcefile="api/Syn.Bot.Siml.SimlBot.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The search engine.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1041,12 +1069,12 @@ Once loaded any changes to this settings will not affect other <a class="xref" h
               <h3 id="methods">Methods
               </h3>
               <h4 id="Syn_Bot_Siml_SimlBot_AddSiml_System_Collections_Generic_IEnumerable_System_Xml_Linq_XDocument__" data-uid="Syn.Bot.Siml.SimlBot.AddSiml(System.Collections.Generic.IEnumerable{System.Xml.Linq.XDocument})">AddSiml(IEnumerable&lt;XDocument&gt;)</h4>
-              <div class="markdown level1 summary"><p sourcefile="api/Syn.Bot.Siml.SimlBot.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Adds SIML</p>
+              <div class="markdown level1 summary"><p sourcefile="api/Syn.Bot.Siml.SimlBot.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Adds SIML documents to Bot Knowledge-Base after proper sequencing.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void AddSiml(IEnumerable&lt;XDocument&gt; simlElements)</code></pre>
+                <pre><code class="lang-csharp hljs">public void AddSiml(IEnumerable&lt;XDocument&gt; simlDocuments)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1060,7 +1088,7 @@ Once loaded any changes to this settings will not affect other <a class="xref" h
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Xml.Linq.XDocument</span>&gt;</td>
-                    <td><em>simlElements</em></td>
+                    <td><em>simlDocuments</em></td>
                     <td><p sourcefile="api/Syn.Bot.Siml.SimlBot.yml" sourcestartlinenumber="1" sourceendlinenumber="1">SIML Elements</p>
 </td>
                   </tr>
@@ -1467,32 +1495,6 @@ Once loaded any changes to this settings will not affect other <a class="xref" h
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public void Release()</code></pre>
               </div>
-              <h4 id="Syn_Bot_Siml_SimlBot_SynBot_Syn_Bot_Siml_BotConfiguration_" data-uid="Syn.Bot.Siml.SimlBot.SynBot(Syn.Bot.Siml.BotConfiguration)">SynBot(BotConfiguration)</h4>
-              <div class="markdown level1 summary"><p sourcefile="api/Syn.Bot.Siml.SimlBot.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Initializes a new instance of <a class="xref" href="Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot">SimlBot</a> class with the specified configuration.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void SynBot(BotConfiguration configuration)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Syn.Bot.Siml.BotConfiguration.html#Syn_Bot_Siml_BotConfiguration">BotConfiguration</a></td>
-                    <td><em>configuration</em></td>
-                    <td><p sourcefile="api/Syn.Bot.Siml.SimlBot.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Bot Configuration.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
               <h4 id="Syn_Bot_Siml_SimlBot_Trigger_System_String_" data-uid="Syn.Bot.Siml.SimlBot.Trigger(System.String)">Trigger(String)</h4>
               <div class="markdown level1 summary"><p sourcefile="api/Syn.Bot.Siml.SimlBot.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Triggers the specified event.</p>
 </div>
