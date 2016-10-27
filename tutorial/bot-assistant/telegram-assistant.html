@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Telegram Assistant  - Syn Developer Network</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Telegram Assistant ">
+    <meta name="generator" content="docfx 2.6.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:rel" content="../../">
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+    ga('create', 'UA-39941606-1', 'auto');
+    ga('send', 'pageview');
+  
+  </script>
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="telegram-assistant" sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="1" sourceendlinenumber="1">Telegram Assistant</h1>
+              
+<p sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="3" sourceendlinenumber="3"><code>Syn.Bot.Assistant</code> library comes with a <code>TelegramAssistant</code> class that is tailored for rapid Telegram Bot deployment based on SIML and <code>Syn.Bot</code> framework. The class takes care of the following.</p>
+<ul sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="5" sourceendlinenumber="11">
+<li sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="5" sourceendlinenumber="5">Automated User name part extractions (Name, First Name, Last Name and Username)</li>
+<li sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="6" sourceendlinenumber="6">Handling of messages received by Telegram Bot by directly generating responses from the SIML knowledge-base.</li>
+<li sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="7" sourceendlinenumber="7">Service Timer - adds support for internal bot timer and <code>Late</code> adapter.</li>
+<li sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="8" sourceendlinenumber="8">Handling of <em>callback</em> queries.</li>
+<li sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="9" sourceendlinenumber="9">Auto construction of Telegram&#39;s <strong>Inline Keyboard</strong> when formatted <code>Hint</code> value is received.</li>
+<li sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="10" sourceendlinenumber="10">Adds custom implementation of <code>ISuggestionFormatter</code> for Example processing within <code>Hint</code> element.</li>
+<li sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="11" sourceendlinenumber="11">Support for <strong>Parse Mode</strong> and <strong>Keyboard Alignment</strong> selection.</li>
+</ul>
+<h2 id="overriden-user-variables" sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="13" sourceendlinenumber="13">Overriden User Variables</h2>
+<table sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="15" sourceendlinenumber="19">
+<thead>
+<tr>
+<th style="text-align:left">Variable Name</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>Name</code> or <code>FirstName</code></td>
+<td style="text-align:left">Returns the first name of Telegram user.</td>
+</tr>
+<tr>
+<td style="text-align:left">LastName</td>
+<td style="text-align:left">Gets the last name of the Telegram user.</td>
+</tr>
+<tr>
+<td style="text-align:left">Username</td>
+<td style="text-align:left">Gets the User ID of the Telegram user.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="deploying-a-telegram-bot" sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="21" sourceendlinenumber="21">Deploying a Telegram Bot</h2>
+<p sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="23" sourceendlinenumber="23"><strong>Requirements</strong></p>
+<ul sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="25" sourceendlinenumber="27">
+<li sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="25" sourceendlinenumber="25">.NET Framework 4.5 (on Windows 7 or  8)</li>
+<li sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="26" sourceendlinenumber="26">Visual Studio 2015 Community Edition or above</li>
+<li sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="27" sourceendlinenumber="27">Syn Bot Studio 1.54 or above</li>
+</ul>
+<blockquote sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="29" sourceendlinenumber="29"><p sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="29" sourceendlinenumber="29">As an alternative you may also download the <a href="https://github.com/SynHub/siml-telegrambot" sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="29" sourceendlinenumber="29">Sample Telegram Console application</a> project from our GitHub repository.</p>
+</blockquote>
+<p sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="31" sourceendlinenumber="31">As the backend knowledge-base processing part of a Bot is usually held in a server environment, we will create a <strong>Console</strong> application to keep memory usage to its bare minimum.</p>
+<p sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="33" sourceendlinenumber="33">In this tutorial we&#39;ll use <em>Visual Studio 2015 Community Edition</em> to create a Console C# project that will allow us to create an SIML based server which would power a Telegram Bot.</p>
+<ul sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="35" sourceendlinenumber="37">
+<li sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="35" sourceendlinenumber="35">Start Visual Studio</li>
+<li sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="36" sourceendlinenumber="36">Click on <strong>File</strong>, select <strong>New</strong> and then choose <strong>Project</strong></li>
+<li sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="37" sourceendlinenumber="37">Under <strong>Visual C#</strong> select <strong>Console Application</strong>.</li>
+</ul>
+<p sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="39" sourceendlinenumber="39"><img src="images/console-project.png" alt="" sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="39" sourceendlinenumber="39"></p>
+<ul sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="41" sourceendlinenumber="44">
+<li sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="41" sourceendlinenumber="41"><p sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="41" sourceendlinenumber="41">Name your project <strong>MyTelegramBot</strong> and choose <strong>OK</strong></p>
+</li>
+<li sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="43" sourceendlinenumber="43"><p sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="43" sourceendlinenumber="43">Once the project has been successfully created. On the toolbar select <strong>Tools</strong>, point to <strong>NuGet Package Manager</strong> and select <strong>Package Manager Console</strong>.</p>
+</li>
+<li sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="44" sourceendlinenumber="44">Type <strong>Install-Package Syn.Bot.Assistant</strong> and press <em>Enter</em></li>
+</ul>
+<p sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="46" sourceendlinenumber="46"><img src="images/package-manager-console.png" alt="" sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="46" sourceendlinenumber="46"></p>
+<p sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="48" sourceendlinenumber="48">The <code>Syn.Bot.Assistant</code> library along with its dependencies will now be referenced in your project.</p>
+<h3 id="siml-knowledge-base" sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="51" sourceendlinenumber="51">SIML Knowledge-Base</h3>
+<p sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="53" sourceendlinenumber="53">For the sake of this tutorial we&#39;ll use the pre-built knowledge-base of <strong>Maya Bot</strong> which is a telegram Inline Keyboard based SIML Knowledge-Base. Download the <a href="https://github.com/SynHub/maya-web-assistant-siml" sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="53" sourceendlinenumber="53">Maya Web Assistant Knowledge-Base</a> from GitHub.</p>
+<ul sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="55" sourceendlinenumber="57">
+<li sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="55" sourceendlinenumber="55">After the repository has been downloaded, launch <strong>Syn Bot Studio</strong>.</li>
+<li sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="56" sourceendlinenumber="56">Click on <strong>File</strong>, select <strong>Project</strong> and then choose <strong>Open</strong>.</li>
+<li sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="57" sourceendlinenumber="57">Browse to the downloaded repository and select the SIML project file.</li>
+</ul>
+<p sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="59" sourceendlinenumber="59"><img src="images/maya-project.png" alt="" sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="59" sourceendlinenumber="59"></p>
+<ul sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="61" sourceendlinenumber="62">
+<li sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="61" sourceendlinenumber="61">After the project is loaded on the toolbar click on <strong>Project</strong> and select <strong>Export to Package</strong>.</li>
+<li sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="62" sourceendlinenumber="62">Name the file <code>Bot</code>, browse to the <code>bin/debug</code> directory of your Console application and select <strong>Save</strong>.</li>
+</ul>
+<p sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="65" sourceendlinenumber="65"><img src="images/maya-package.png" alt="" sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="65" sourceendlinenumber="65"></p>
+<ul sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="67" sourceendlinenumber="67">
+<li sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="67" sourceendlinenumber="67">The SIML knowledge-base package will now be saved as <code>Bot.simlpk</code>.</li>
+</ul>
+<!-- BEGIN INCLUDE: Include content from &quot;tutorial/external/telegram-bot.md&quot; --><h2 id="creating-a-telegram-bot" sourcefile="tutorial/external/telegram-bot.md" sourcestartlinenumber="1" sourceendlinenumber="1">Creating a Telegram Bot</h2>
+<p sourcefile="tutorial/external/telegram-bot.md" sourcestartlinenumber="3" sourceendlinenumber="3">To obtain a Telegram Bot Access Token</p>
+<ul sourcefile="tutorial/external/telegram-bot.md" sourcestartlinenumber="5" sourceendlinenumber="6">
+<li sourcefile="tutorial/external/telegram-bot.md" sourcestartlinenumber="5" sourceendlinenumber="5">Download Telegram to your Desktop or Mobile from <a href="https://telegram.org/" sourcefile="tutorial/external/telegram-bot.md" sourcestartlinenumber="5" sourceendlinenumber="5">Telegram</a></li>
+<li sourcefile="tutorial/external/telegram-bot.md" sourcestartlinenumber="6" sourceendlinenumber="6">Search for <strong>BotFather</strong> and then click on <strong>Start</strong>.</li>
+</ul>
+<p sourcefile="tutorial/external/telegram-bot.md" sourcestartlinenumber="8" sourceendlinenumber="8"><img src="../external/images/telegram-botfather.png" alt="Telegram Image" sourcefile="tutorial/external/telegram-bot.md" sourcestartlinenumber="8" sourceendlinenumber="8"></p>
+<ul sourcefile="tutorial/external/telegram-bot.md" sourcestartlinenumber="10" sourceendlinenumber="10">
+<li sourcefile="tutorial/external/telegram-bot.md" sourcestartlinenumber="10" sourceendlinenumber="10">Type <strong>/newbot</strong></li>
+</ul>
+<p sourcefile="tutorial/external/telegram-bot.md" sourcestartlinenumber="12" sourceendlinenumber="12"><img src="../external/images/telegram-newbot.png" alt="Telegram Image" sourcefile="tutorial/external/telegram-bot.md" sourcestartlinenumber="12" sourceendlinenumber="12"></p>
+<ul sourcefile="tutorial/external/telegram-bot.md" sourcestartlinenumber="14" sourceendlinenumber="14">
+<li sourcefile="tutorial/external/telegram-bot.md" sourcestartlinenumber="14" sourceendlinenumber="14">Enter a display name for your bot. In our example we&#39;ve used <strong>Maya</strong></li>
+</ul>
+<p sourcefile="tutorial/external/telegram-bot.md" sourcestartlinenumber="16" sourceendlinenumber="16"><img src="../external/images/telegram-name.png" alt="Telegram Image" sourcefile="tutorial/external/telegram-bot.md" sourcestartlinenumber="16" sourceendlinenumber="16"></p>
+<ul sourcefile="tutorial/external/telegram-bot.md" sourcestartlinenumber="18" sourceendlinenumber="18">
+<li sourcefile="tutorial/external/telegram-bot.md" sourcestartlinenumber="18" sourceendlinenumber="18">After you&#39;ve specified the bot name, enter a unique Bot name. You can use _ as separators. For this tutorial we&#39;ve used the name <strong>My_VA_Bot</strong> as the Bot name.</li>
+</ul>
+<p sourcefile="tutorial/external/telegram-bot.md" sourcestartlinenumber="20" sourceendlinenumber="20"><img src="../external/images/telegram-botname.png" alt="Telegram Image" sourcefile="tutorial/external/telegram-bot.md" sourcestartlinenumber="20" sourceendlinenumber="20"></p>
+<ul sourcefile="tutorial/external/telegram-bot.md" sourcestartlinenumber="22" sourceendlinenumber="22">
+<li sourcefile="tutorial/external/telegram-bot.md" sourcestartlinenumber="22" sourceendlinenumber="22">After that you&#39;ll be presented with the HTTP Access Token.</li>
+</ul>
+<p sourcefile="tutorial/external/telegram-bot.md" sourcestartlinenumber="24" sourceendlinenumber="24"><img src="../external/images/telegram-token.png" alt="Telegram Image" sourcefile="tutorial/external/telegram-bot.md" sourcestartlinenumber="24" sourceendlinenumber="24"></p>
+<ul sourcefile="tutorial/external/telegram-bot.md" sourcestartlinenumber="26" sourceendlinenumber="26">
+<li sourcefile="tutorial/external/telegram-bot.md" sourcestartlinenumber="26" sourceendlinenumber="26">Copy the HTTP API access token as shown below.</li>
+</ul>
+<p sourcefile="tutorial/external/telegram-bot.md" sourcestartlinenumber="28" sourceendlinenumber="28"><img src="../external/images/telegram-copy-token.png" alt="Telegram Image" sourcefile="tutorial/external/telegram-bot.md" sourcestartlinenumber="28" sourceendlinenumber="28"></p>
+<p sourcefile="tutorial/external/telegram-bot.md" sourcestartlinenumber="30" sourceendlinenumber="30">You have now successfully created a <em>Telegram Bot</em> and acquired its <em>Access Token</em>.</p>
+<!--END INCLUDE --><h3 id="code" sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="71" sourceendlinenumber="71">Code</h3>
+<p sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="73" sourceendlinenumber="73">Now switch to the Visual Studio project and type the following within the <code>Main</code> static method.</p>
+<pre sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="75" sourceendlinenumber="87"><code class="lang-csharp">var telegramAssistant = new TelegramAssistant(&quot;TELEGRAM_BOT_ACCESS_TOKEN&quot;);
+telegramAssistant.Bot.PackageManager.LoadFromString(File.ReadAllText(&quot;Bot.simlpk&quot;));
+
+//Start receiving user messages.
+telegramAssistant.Client.StartReceiving();
+
+Console.WriteLine($&quot;Your Telegram Bot is now Online: {DateTime.Now}&quot;);
+Console.ReadLine();
+
+//Stop receiving user messages.
+telegramAssistant.Client.StopReceiving();
+</code></pre><blockquote sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="89" sourceendlinenumber="89"><p sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="89" sourceendlinenumber="89">Replace <code>TELEGRAM_BOT_ACCESS_TOKEN</code> with the Telegram Bot <em>Access Token</em>.</p>
+</blockquote>
+<ul sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="91" sourceendlinenumber="91">
+<li sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="91" sourceendlinenumber="91">To start you Console application press <strong>F5</strong>.</li>
+</ul>
+<p sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="93" sourceendlinenumber="93"><img src="images/telegram-console.png" alt="" sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="93" sourceendlinenumber="93"></p>
+<p sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="95" sourceendlinenumber="95">Your SIML based Telegram Bot is now online. You may now chat with your bot on Telegram.</p>
+<h2 id="performance" sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="97" sourceendlinenumber="97">Performance</h2>
+<p sourcefile="tutorial/bot-assistant/telegram-assistant.md" sourcestartlinenumber="99" sourceendlinenumber="99">The <code>TelegramAssistant</code> is designed to be launched in a <em>Server</em> (either Windows or Linux) environment where the internet speed is in <strong>Mbps</strong> or <strong>Gbps</strong>. During local testing if your computer&#39;s internet speed is slow it would directly impact the response time of your Telegram Bot.</p>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2016 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
