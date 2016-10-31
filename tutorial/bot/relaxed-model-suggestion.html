@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Relaxed Models and Suggestion System  - Syn Developer Network</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Relaxed Models and Suggestion System ">
+    <meta name="generator" content="docfx 2.6.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:rel" content="../../">
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+    ga('create', 'UA-39941606-1', 'auto');
+    ga('send', 'pageview');
+  
+  </script>
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="relaxed-models-and-suggestion-system" sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="1" sourceendlinenumber="1">Relaxed Models and Suggestion System</h1>
+              
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="3" sourceendlinenumber="3">SIML now enables bot developers to use <em>Best Match</em> scheme in small SIML projects instead of strict pattern based triggers. This has been made possible due to the arrival of an in-built <strong>Search Engine</strong> interface made available in <code>Syn.Bot</code> framework version 1.2.5 and above.</p>
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="5" sourceendlinenumber="5">Instead of <code>&lt;Pattern&gt;</code> elements inside SIML Models, developers can now just add <em>Example</em> user inputs that will be processed as part of <em>Search Results</em> by the in-built <strong>Search Engine</strong>. For this <code>Syn.Bot</code> framework implements an intelligent <strong>Fuzzy Keyword Search</strong> algorithm that even permits usage of SIML Sets and Regular Expressions within <code>Example</code> items.</p>
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="7" sourceendlinenumber="7"><strong>Strict Model (based on Pattern)</strong></p>
+<pre sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="9" sourceendlinenumber="18"><code class="lang-xml">&lt;Model&gt;
+  &lt;Pattern&gt;
+    &lt;Item&gt;HOW ARE YOU&lt;/Item&gt;
+    &lt;Item&gt;HOW IS LIFE&lt;/Item&gt;
+    &lt;Item&gt;HOW * GOING&lt;/Item&gt;
+  &lt;/Pattern&gt;
+  &lt;Response&gt;I am doing great!&lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre><p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="20" sourceendlinenumber="20"><strong>Relaxed Model (based on Example)</strong></p>
+<pre sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="22" sourceendlinenumber="31"><code class="lang-xml">&lt;Model&gt;
+  &lt;Example&gt;
+    &lt;Item&gt;How are you?&lt;/Item&gt;
+    &lt;Item&gt;How is life?&lt;/Item&gt;
+    &lt;Item&gt;How is it going?&lt;/Item&gt;
+  &lt;/Example&gt;
+  &lt;Response&gt;I am doing great!&lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre><blockquote sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="32" sourceendlinenumber="32"><p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="32" sourceendlinenumber="32">Based on Bot project requirements, developer must carefully choose between the two configurations of writing SIML Models.</p>
+</blockquote>
+<h2 id="auto-stripping-of-invalid-symbols" sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="34" sourceendlinenumber="34">Auto stripping of invalid symbols</h2>
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="36" sourceendlinenumber="36">If the SIML interpreter detects a symbol in an <code>Example</code> item that is not valid or allowed in the context, the symbol is automatically removed. However, when <code>Suggestion</code> values are being regenerated the interpreter properly assembles all the symbols back into the example.</p>
+<h2 id="suggestion" sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="38" sourceendlinenumber="38">Suggestion</h2>
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="40" sourceendlinenumber="40">The <code>Suggestion</code> adapter is a new experimental feature added to the draft SIML Specification. This adapter enables the Bot to use a custom or in-built <strong>Search Engine</strong> interface to find a list of best possible matches for user inputs using the value of <code>Example</code> tags.</p>
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="42" sourceendlinenumber="42">When necessary, developers can also replace the current <code>SearchEngine</code> instance used by <em>SimlBot</em> by a custom implementation of <code>ISearchEngine</code> interface.</p>
+<table sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="44" sourceendlinenumber="49">
+<thead>
+<tr>
+<th style="text-align:left"><strong>Annotation</strong></th>
+<th style="text-align:left"><code>&lt;Suggestion&gt;</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Definition</strong></td>
+<td style="text-align:left">Gets a list of <code>Example</code> inputs matching the current user input by performing a <em>Fuzzy Keyword Search</em> on stored Examples.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Attributes</strong></td>
+<td style="text-align:left"><strong>Optional:</strong> <code>Count</code> Returns the <em>number</em> of <code>Example</code> inputs matching the user input.</td>
+</tr>
+<tr>
+<td style="text-align:left">...</td>
+<td style="text-align:left"><strong>Optional:</strong> <code>Response</code> Evaluates the <code>&lt;Response&gt;</code> element of the <code>Model</code> to which the highest scoring <code>Example</code> element belongs to.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Occurrence</strong></td>
+<td style="text-align:left">One or more <code>&lt;Suggestion&gt;</code> elements MAY occur as children of <code>&lt;Response&gt;</code> element.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="pattern-symbols-in-example" sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="51" sourceendlinenumber="51">Pattern Symbols in <code>Example</code></h2>
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="53" sourceendlinenumber="53">The following entities are part of a search query that the <em>Search Engine</em> processes.</p>
+<table sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="55" sourceendlinenumber="60">
+<thead>
+<tr>
+<th style="text-align:left">Entity</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Word</td>
+<td style="text-align:left">Any word that <em>may</em> or <em>may not</em> exist in <em>user input</em>.</td>
+</tr>
+<tr>
+<td style="text-align:left">^Keyword</td>
+<td style="text-align:left">A word that <em>must</em> be present in <em>user input</em> in both <strong>Soft</strong> and <strong>Hard</strong> search modes.</td>
+</tr>
+<tr>
+<td style="text-align:left">[Set]</td>
+<td style="text-align:left">A set whose value <em>must</em> be present in <em>user input</em>.</td>
+</tr>
+<tr>
+<td style="text-align:left">@Regex</td>
+<td style="text-align:left">A regular expression, the pattern of which must match in <em>user input</em>.</td>
+</tr>
+</tbody>
+</table>
+<blockquote sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="62" sourceendlinenumber="62"><p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="62" sourceendlinenumber="62">[Set] and @Regex are part of wildcard capture process and their values can be acquired using the <code>Match</code> tag.</p>
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="64" sourceendlinenumber="64">All attributes and behaviours of Sets and Regular expressions within Pattern tag stay intact when used within Example tag.</p>
+</blockquote>
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="66" sourceendlinenumber="66">Other <em>symbols</em>  like  _, *, %, $, {}, () used in <code>Pattern</code> tag are invalid within the <code>Example</code> tag.</p>
+<h2 id="search-engine-algorithm" sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="68" sourceendlinenumber="68">Search Engine Algorithm</h2>
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="70" sourceendlinenumber="70">The default implementation of <code>ISearchEngine</code> interface (<code>SearchEngine</code>) in <em>Syn.Bot</em> uses a <strong>Fuzzy Keyword Search</strong> algorithm that takes the following into consideration.</p>
+<ul sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="72" sourceendlinenumber="77">
+<li sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="72" sourceendlinenumber="72">If a word exists</li>
+<li sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="73" sourceendlinenumber="73">Order of words</li>
+<li sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="74" sourceendlinenumber="74">Existence of keywords, sets and regular expressions</li>
+<li sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="75" sourceendlinenumber="75">Number of unmatched words</li>
+<li sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="76" sourceendlinenumber="76">Tolerance - if a word is not found in user input but is part of <code>Common-Words</code> variable.</li>
+<li sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="77" sourceendlinenumber="77">Minimum score required for a <em>search result</em> to be accepted.</li>
+</ul>
+<h2 id="modes" sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="80" sourceendlinenumber="80">Modes</h2>
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="82" sourceendlinenumber="82">On top of that, the default search engine also has 2 modes of operation.</p>
+<h3 id="soft-mode-default-search-mode" sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="84" sourceendlinenumber="84">Soft Mode (Default Search Mode)</h3>
+<ul sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="86" sourceendlinenumber="89">
+<li sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="86" sourceendlinenumber="86">The minimum search result score is equal to 60% of the actual <em>base</em> value set.</li>
+<li sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="87" sourceendlinenumber="87">Words may or may not exist in <em>query</em>. However, existence of words do increase the <em>Score</em>.</li>
+<li sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="88" sourceendlinenumber="88">Order of words may or may not match the order of words in <em>query</em>. However, proper order increase the search result <em>Score</em>.</li>
+<li sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="89" sourceendlinenumber="89"><strong>Sets</strong> and <strong>Regular Expressions</strong> must exist in user <em>query</em>.</li>
+</ul>
+<h3 id="hard-mode" sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="91" sourceendlinenumber="91">Hard Mode</h3>
+<ul sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="93" sourceendlinenumber="96">
+<li sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="93" sourceendlinenumber="93">The minimum search result score is equal to the <em>base</em> score value.</li>
+<li sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="94" sourceendlinenumber="94">All words except the list of words in <em>Common-Words</em> variable must exist.</li>
+<li sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="95" sourceendlinenumber="95">Order of words must match in user <em>query</em>. Any additional word in query is neglected.</li>
+<li sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="96" sourceendlinenumber="96"><strong>Sets</strong> and <strong>Regular Expressions</strong> must exist in user <em>query</em>.</li>
+</ul>
+<h2 id="reserved-variables" sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="99" sourceendlinenumber="99">Reserved Variables</h2>
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="101" sourceendlinenumber="101">The default <code>SearchEngine</code> uses the following <em>reserved</em> Bot variables to process a search result.</p>
+<table sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="103" sourceendlinenumber="108">
+<thead>
+<tr>
+<th style="text-align:left">Variable Name</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Search-Score</td>
+<td style="text-align:left">The minimum score required by a search result to be accepted. Default value is <strong>0.4</strong></td>
+</tr>
+<tr>
+<td style="text-align:left">Search-Count</td>
+<td style="text-align:left">The maximum number of search results to return. Default value is <strong>5</strong></td>
+</tr>
+<tr>
+<td style="text-align:left">Search-Mode</td>
+<td style="text-align:left">Gets or sets the value of search mode to be used. Default value (if not set) is <strong>Soft</strong>.</td>
+</tr>
+<tr>
+<td style="text-align:left">Common-Words</td>
+<td style="text-align:left">List of common words in the language. The values of which determines the <em>tolerance</em> of missing words in <strong>Hard</strong> search mode.</td>
+</tr>
+</tbody>
+</table>
+<blockquote sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="110" sourceendlinenumber="110"><p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="110" sourceendlinenumber="110">If any of the above variable is not <em>explicitly</em> specified within an SIML Knowledge-Base, the default <em>search engine</em> automatically assumes their default values.</p>
+</blockquote>
+<h2 id="creating-a-suggestion-system" sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="112" sourceendlinenumber="112">Creating a Suggestion system</h2>
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="114" sourceendlinenumber="114">If <em>Relaxed Models</em> ared used in an SIML knowledge-base it is mandatory that a <strong>Suggestion</strong> system is explicitly implemented by the Bot developer.</p>
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="116" sourceendlinenumber="117"><em>What is a Suggestion system?</em>
+A Suggestion system is a mechanism by which the <em>Search Engine</em> of the interpreter is able to evaluate the <code>Example</code> items and return a list of results that closely match the user input.</p>
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="120" sourceendlinenumber="120"><strong>Simple implementation of Suggestion system</strong></p>
+<pre sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="122" sourceendlinenumber="135"><code class="lang-xml">&lt;Model&gt;
+  &lt;Pattern&gt;*&lt;/Pattern&gt;
+  &lt;Response&gt;
+    &lt;Var Think:Set=&quot;Count&quot;&gt;
+      &lt;Suggestion Get=&quot;Count&quot; /&gt;
+    &lt;/Var&gt;
+    &lt;If Var=&quot;Count&quot; Value=&quot;0&quot;&gt;Please rephrase that for me.&lt;/If&gt;
+    &lt;Else&gt;
+      &lt;Suggestion Get=&quot;Response&quot; /&gt;
+    &lt;/Else&gt;
+  &lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre><p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="137" sourceendlinenumber="137">The above code first stores the number of suggestions found. If no suggestion is available the code returns <strong><em>Please rephrase that for me</em></strong> otherwise it gets the response from the highest scoring result.</p>
+<h2 id="suggestion-formatting" sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="139" sourceendlinenumber="139">Suggestion Formatting</h2>
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="141" sourceendlinenumber="141">In order to allow developers to format the suggestion string. The <code>Examples</code> property which is a instance of <code>ExampleCollection</code> uses <code>ISuggestionFormatter</code> interface that can be implemented to override the format of the suggestion string returned by the <code>Suggestion</code> adapter.</p>
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="143" sourceendlinenumber="143">The default implementation of <code>ISuggestionFormatter</code> provides results in the following format.</p>
+<ul sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="145" sourceendlinenumber="146">
+<li sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="145" sourceendlinenumber="145">If the suggestion contains just 1 result then the value of the result is returned as such.</li>
+<li sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="146" sourceendlinenumber="146">If 2 or more results exist in the suggestion the a index number is prefixed to each result.</li>
+</ul>
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="148" sourceendlinenumber="148"><em>Example</em></p>
+<ol sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="150" sourceendlinenumber="151">
+<li sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="150" sourceendlinenumber="150">How are you?</li>
+<li sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="151" sourceendlinenumber="151">How is life?</li>
+</ol>
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="153" sourceendlinenumber="153"><strong>Example <code>ISuggestionFormmater</code> Implementation</strong></p>
+<pre sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="155" sourceendlinenumber="181"><code class="lang-csharp">class SuggestionFormatter : ISuggestionFormatter
+{
+    public string Format(Suggestion suggestion)
+    {
+        var toReturn = string.Empty;
+
+        //If no suggestion then return an empty string.
+        if (suggestion.Count == 0) return string.Empty;
+
+        //If only 1 item is present just return its generated value.
+        if (suggestion.Count == 1) return suggestion[0].Value;
+
+        //If more than 1 suggestion then create format.
+        var counter = 0;
+        foreach (var item in suggestion)
+        {
+            counter++;
+            //1. Item Value
+            //2. Item Value
+            toReturn += $&quot;{counter}. {item.Value}{Environment.NewLine}&quot;;
+        }
+
+        return toReturn.Trim();
+    }
+}
+</code></pre><h2 id="simple-suggestion" sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="183" sourceendlinenumber="183">Simple Suggestion</h2>
+<pre sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="185" sourceendlinenumber="205"><code class="lang-xml">&lt;Model&gt;
+  &lt;Pattern&gt;
+    &lt;Item&gt;HOW * YOU&lt;/Item&gt;
+    &lt;Item&gt;HOW * LIFE&lt;/Item&gt;
+    &lt;Item&gt;HOW * IT GOING&lt;/Item&gt;
+  &lt;/Pattern&gt;
+  &lt;Example&gt;
+    &lt;Item&gt;How are you?&lt;/Item&gt;
+    &lt;Item&gt;How is life?&lt;/Item&gt;
+    &lt;Item&gt;How is it going?&lt;/Item&gt;
+  &lt;/Example&gt;
+  &lt;Response&gt;
+    &lt;Phrase&gt;
+      &lt;Item&gt;It is going just fine.&lt;/Item&gt;
+      &lt;Item&gt;Life is good.&lt;/Item&gt;
+      &lt;Item&gt;I am great. How are you?&lt;/Item&gt;
+    &lt;/Phrase&gt;
+  &lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre><pre sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="207" sourceendlinenumber="228"><code class="lang-xml">&lt;Model&gt;
+  &lt;Pattern&gt;*&lt;/Pattern&gt;
+  &lt;Response&gt;
+    &lt;Var Think:Set=&quot;Count&quot;&gt;
+      &lt;Suggestion Get=&quot;Count&quot; /&gt;
+    &lt;/Var&gt;
+    &lt;If Var=&quot;Count&quot; Value=&quot;0&quot;&gt;
+      &lt;Random&gt;
+        &lt;Item&gt;Could you please try rewording your query for me?&lt;/Item&gt;
+        &lt;Item&gt;Please rephrase that for me.&lt;/Item&gt;
+        &lt;Item&gt;Could you please try the same query with simpler words?&lt;/Item&gt;
+        &lt;Item&gt;Perhaps you could reword your question for me?&lt;/Item&gt;
+        &lt;Item&gt;Can you please repeat your question in a different way?&lt;/Item&gt;
+      &lt;/Random&gt;
+    &lt;/If&gt;
+    &lt;ElseIf Var=&quot;Count&quot; Value=&quot;1&quot;&gt;Did you mean:..&quot;&lt;Suggestion /&gt;&quot;&lt;/ElseIf&gt;
+    &lt;Else&gt;Perhaps you meant:...
+&lt;Suggestion /&gt;&lt;/Else&gt;
+  &lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre><h3 id="example-1" sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="230" sourceendlinenumber="230">Example 1</h3>
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="232" sourceendlinenumber="232"><strong>User Input</strong></p>
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="234" sourceendlinenumber="234"><em>How is life mate?</em></p>
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="236" sourceendlinenumber="236"><strong>Bot Output</strong></p>
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="238" sourceendlinenumber="240"><em>Perhaps you meant:...</em>
+<em>1. How is life?</em>
+<em>2. How is it going?</em></p>
+<h3 id="example-2" sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="242" sourceendlinenumber="242">Example 2</h3>
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="244" sourceendlinenumber="244"><strong>User Input</strong></p>
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="246" sourceendlinenumber="246"><em>Hows going?</em></p>
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="248" sourceendlinenumber="248"><strong>Bot Output</strong></p>
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="250" sourceendlinenumber="250"><em>Did you mean:..&quot;How is it going?&quot;</em></p>
+<h3 id="example-3" sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="252" sourceendlinenumber="252">Example 3</h3>
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="254" sourceendlinenumber="254"><strong>User Input</strong></p>
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="256" sourceendlinenumber="256"><em>bla bla</em></p>
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="258" sourceendlinenumber="258"><strong>Bot Output</strong></p>
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="260" sourceendlinenumber="260"><em>Please rephrase that for me.</em></p>
+<h2 id="complex-suggestion" sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="262" sourceendlinenumber="262">Complex Suggestion</h2>
+<pre sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="264" sourceendlinenumber="266"><code class="lang-xml">&lt;Set Name=&quot;Family&quot;&gt;Peter, Ali, Ramesh&lt;/Set&gt;
+</code></pre><pre sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="268" sourceendlinenumber="283"><code class="lang-xml">&lt;Model&gt;
+  &lt;Pattern&gt;
+    &lt;Item&gt;HOW IS [FAMILY]&lt;/Item&gt;
+    &lt;Item&gt;WHAT IS UP WITH [FAMILY]&lt;/Item&gt;
+    &lt;Item&gt;HOW IS [FAMILY] DOING&lt;/Item&gt;
+  &lt;/Pattern&gt;
+  &lt;Example&gt;
+    &lt;Item&gt;How is [Family]?&lt;/Item&gt;
+    &lt;Item&gt;What is up with [Family]?&lt;/Item&gt;
+    &lt;Item&gt;How is [Family] doing?&lt;/Item&gt;
+  &lt;/Example&gt;
+  &lt;Response&gt;
+    &lt;Match /&gt; is fine.&lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre><pre sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="285" sourceendlinenumber="306"><code class="lang-xml">&lt;Model&gt;
+  &lt;Pattern&gt;*&lt;/Pattern&gt;
+  &lt;Response&gt;
+    &lt;Var Think:Set=&quot;Count&quot;&gt;
+      &lt;Suggestion Get=&quot;Count&quot; /&gt;
+    &lt;/Var&gt;
+    &lt;If Var=&quot;Count&quot; Value=&quot;0&quot;&gt;
+      &lt;Random&gt;
+        &lt;Item&gt;Could you please try rewording your query for me?&lt;/Item&gt;
+        &lt;Item&gt;Please rephrase that for me.&lt;/Item&gt;
+        &lt;Item&gt;Could you please try the same query with simpler words?&lt;/Item&gt;
+        &lt;Item&gt;Perhaps you could reword your question for me?&lt;/Item&gt;
+        &lt;Item&gt;Can you please repeat your question in a different way?&lt;/Item&gt;
+      &lt;/Random&gt;
+    &lt;/If&gt;
+    &lt;ElseIf Var=&quot;Count&quot; Value=&quot;1&quot;&gt;Did you mean:..&quot;&lt;Suggestion /&gt;&quot;&lt;/ElseIf&gt;
+    &lt;Else&gt;Perhaps you meant:...
+&lt;Suggestion /&gt;&lt;/Else&gt;
+  &lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre><h3 id="example" sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="308" sourceendlinenumber="308">Example</h3>
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="310" sourceendlinenumber="310"><strong>User Input</strong></p>
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="312" sourceendlinenumber="312"><em>Is Peter fine?</em></p>
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="314" sourceendlinenumber="314"><strong>Bot Output</strong></p>
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="316" sourceendlinenumber="318"><em>Perhaps you meant:...</em>
+<em>1. How is Peter?</em>
+<em>2. What is up with Peter?</em></p>
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="320" sourceendlinenumber="320"><strong>Explanation</strong></p>
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="322" sourceendlinenumber="322">As the set <code>Family</code> is specified within an <code>Example</code> item, The value <strong>Peter</strong> of the set <code>Family</code> is evaluated during example generation. Thereby creating a generated example that transforms <strong><em>How is [Family]?</em></strong> to <strong><em>How is Peter?</em></strong> and <strong><em>What is up with [Family]?</em></strong> to <strong><em>What is up with Peter?</em></strong></p>
+<h2 id="response-from-suggestion" sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="324" sourceendlinenumber="324">Response from Suggestion</h2>
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="326" sourceendlinenumber="326">The <code>Suggestion</code> adapter can be used to evaluate the <code>&lt;Response&gt;</code> element for the highest scoring <code>Example</code> item or search result. This is done by adding a <code>Get</code> attribute and settings its value to <code>Response</code>.</p>
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="329" sourceendlinenumber="329"><strong>Relaxed Model</strong></p>
+<pre sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="330" sourceendlinenumber="339"><code class="lang-xml">&lt;Model&gt;
+  &lt;Example&gt;
+    &lt;Item&gt;How are you?&lt;/Item&gt;
+    &lt;Item&gt;How is life?&lt;/Item&gt;
+    &lt;Item&gt;How is it going?&lt;/Item&gt;
+  &lt;/Example&gt;
+  &lt;Response&gt;I am doing great!&lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre><p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="341" sourceendlinenumber="341"><strong>Suggestion System</strong></p>
+<pre sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="342" sourceendlinenumber="363"><code class="lang-xml">&lt;Model&gt;
+  &lt;Pattern&gt;*&lt;/Pattern&gt;
+  &lt;Response&gt;
+    &lt;Var Think:Set=&quot;Count&quot;&gt;
+      &lt;Suggestion Get=&quot;Count&quot; /&gt;
+    &lt;/Var&gt;
+    &lt;If Var=&quot;Count&quot; Value=&quot;0&quot;&gt;
+      &lt;Random&gt;
+        &lt;Item&gt;Could you please try rewording your query for me?&lt;/Item&gt;
+        &lt;Item&gt;Please rephrase that for me.&lt;/Item&gt;
+        &lt;Item&gt;Could you please try the same query with simpler words?&lt;/Item&gt;
+        &lt;Item&gt;Perhaps you could reword your question for me?&lt;/Item&gt;
+        &lt;Item&gt;Can you please repeat your question in a different way?&lt;/Item&gt;
+      &lt;/Random&gt;
+    &lt;/If&gt;
+    &lt;Else&gt;
+      &lt;Suggestion Get=&quot;Response&quot; /&gt;
+    &lt;/Else&gt;
+  &lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre><p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="365" sourceendlinenumber="365"><strong>User Input</strong></p>
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="367" sourceendlinenumber="367"><em>How are you mate?</em></p>
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="369" sourceendlinenumber="369"><strong>Bot Output</strong></p>
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="371" sourceendlinenumber="371"><em>I am doing great!</em></p>
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="373" sourceendlinenumber="373"><strong>Explanation</strong></p>
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="375" sourceendlinenumber="375">When the user says <em>How are you mate?</em> the <code>Example</code> item <code>How are you?</code> is internally returned as a search result item with an approximate score of <code>0.875</code> making it the highest scoring search result.</p>
+<p sourcefile="tutorial/bot/relaxed-model-suggestion.md" sourcestartlinenumber="377" sourceendlinenumber="377">As the <code>Get</code> attribute with value <code>Response</code> is used in the <code>Suggestion</code> adapter, the <code>Response</code> element of the <code>Model</code> to which the <code>Example</code> item <code>How are you?</code> belonged to is evaluated and the generated response is returned by the adapter.</p>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2016 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

@@ -98,7 +98,7 @@
 </tr>
 <tr>
 <td><strong>Children</strong></td>
-<td style="text-align:left">This element SHOULD contain one <code>&lt;Pattern&gt;</code> element and one <code>&lt;Response&gt;</code> element. It MAY contain a <code>&lt;Previous&gt;</code> element. It MAY contain one or more <code>&lt;Model&gt;</code> elements</td>
+<td style="text-align:left">This element SHOULD contain one <code>&lt;Pattern&gt;</code> or <code>&lt;Example&gt;</code> element and one <code>&lt;Response&gt;</code> element. It MAY contain a <code>&lt;Previous&gt;</code> element. It MAY contain one or more <code>&lt;Model&gt;</code> elements</td>
 </tr>
 <tr>
 <td><strong>Occurrence</strong></td>
@@ -108,7 +108,7 @@
 </table>
 <p sourcefile="tutorial/siml/elements/model.md" sourcestartlinenumber="9" sourceendlinenumber="9">A Model in SIML is a Unit of knowledge that encapsulates 2 important entities i.e. the <strong>Pattern</strong> and the <strong>Response</strong> element. Pressing <strong>Alt+M</strong> in Syn Bot Studio will insert a Model template for you. Each pattern is the entry point for the Model. A Response element within a Model is evaluated if and only its Pattern section is satisfied.</p>
 <pre sourcefile="tutorial/siml/elements/model.md" sourcestartlinenumber="11" sourceendlinenumber="20"><code class="lang-xml">&lt;Siml&gt;
- &lt;Concept Type=&quot;public&quot; Name=&quot;User likes and dislikes&quot;&gt;
+ &lt;Concept Name=&quot;User likes and dislikes&quot;&gt;
   &lt;Model&gt;
    &lt;Pattern&gt;Hello Bot&lt;/Pattern&gt;
    &lt;Response&gt;Hi there!&lt;/Response&gt;
