@@ -84,10 +84,10 @@
             <article class="content wrap" id="_content" data-uid="">
               <h1 id="siml-quick-start" sourcefile="tutorial/siml/quick-start.md" sourcestartlinenumber="1" sourceendlinenumber="1">SIML Quick Start</h1>
               
-<p sourcefile="tutorial/siml/quick-start.md" sourcestartlinenumber="3" sourceendlinenumber="3">Only a few simple SIML features have been touched briefly in this presentation. To get into more details please visit <a href="http://developer.syn.co.in" sourcefile="tutorial/siml/quick-start.md" sourcestartlinenumber="3" sourceendlinenumber="3">Developer Network</a></p>
+<p sourcefile="tutorial/siml/quick-start.md" sourcestartlinenumber="3" sourceendlinenumber="3">Only a few simple SIML features have been touched in this presentation. To get into more details please visit <a href="http://developer.syn.co.in" sourcefile="tutorial/siml/quick-start.md" sourcestartlinenumber="3" sourceendlinenumber="3">Developer Network</a></p>
 <h2 id="getting-started" sourcefile="tutorial/siml/quick-start.md" sourcestartlinenumber="5" sourceendlinenumber="5">Getting Started</h2>
 <p sourcefile="tutorial/siml/quick-start.md" sourcestartlinenumber="7" sourceendlinenumber="7">This is a quick start tutorial on SIML bot creation. By the end of this tutorial you will be able to create your own SIML Bot with simple functionalities. Before you begin your development download Syn Bot Studio.</p>
-<p sourcefile="tutorial/siml/quick-start.md" sourcestartlinenumber="9" sourceendlinenumber="9">To download Syn Bot Studio visit <a href="http://simlbot.com" sourcefile="tutorial/siml/quick-start.md" sourcestartlinenumber="9" sourceendlinenumber="9">SimlBot.com</a></p>
+<p sourcefile="tutorial/siml/quick-start.md" sourcestartlinenumber="9" sourceendlinenumber="9">To download Syn Bot Studio please visit <a href="http://simlbot.com" sourcefile="tutorial/siml/quick-start.md" sourcestartlinenumber="9" sourceendlinenumber="9">SimlBot.com</a></p>
 <h3 id="syn-bot-studio---system-requirements" sourcefile="tutorial/siml/quick-start.md" sourcestartlinenumber="11" sourceendlinenumber="11">Syn Bot Studio - System Requirements</h3>
 <p sourcefile="tutorial/siml/quick-start.md" sourcestartlinenumber="12" sourceendlinenumber="12">All of the following system requirements should be met in their entirety.</p>
 <ul sourcefile="tutorial/siml/quick-start.md" sourcestartlinenumber="14" sourceendlinenumber="18">
@@ -185,13 +185,48 @@
 &lt;/Siml&gt;
 </code></pre><h2 id="testing-your-bot" sourcefile="tutorial/siml/quick-start.md" sourcestartlinenumber="130" sourceendlinenumber="130">Testing your Bot</h2>
 <p sourcefile="tutorial/siml/quick-start.md" sourcestartlinenumber="132" sourceendlinenumber="132">Click on the <strong>Console</strong> tab and type <strong><em>how are you?</em></strong>.</p>
-<h3 id="output-1" sourcefile="tutorial/siml/quick-start.md" sourcestartlinenumber="134" sourceendlinenumber="134">Output</h3>
-<p sourcefile="tutorial/siml/quick-start.md" sourcestartlinenumber="136" sourceendlinenumber="136"><strong><em>I am doing great!</em></strong></p>
-<h3 id="explanation-1" sourcefile="tutorial/siml/quick-start.md" sourcestartlinenumber="138" sourceendlinenumber="138">Explanation</h3>
+<p sourcefile="tutorial/siml/quick-start.md" sourcestartlinenumber="134" sourceendlinenumber="134"><strong>Output</strong></p>
+<p sourcefile="tutorial/siml/quick-start.md" sourcestartlinenumber="136" sourceendlinenumber="136"><em>I am doing great!</em></p>
+<p sourcefile="tutorial/siml/quick-start.md" sourcestartlinenumber="138" sourceendlinenumber="138"><strong>Explanation</strong></p>
 <p sourcefile="tutorial/siml/quick-start.md" sourcestartlinenumber="140" sourceendlinenumber="140">The SIML code you just wrote now has a model with patterns <strong><em>how are you</em></strong> and <strong><em>how is it going</em></strong> that yields a response <strong><em>I am doing great!</em></strong>. So when the user types <strong><em>how are you</em></strong> this model is activated and its response is evaluated. Note the <code>&lt;Item&gt;</code> element allows multiple patterns to be declared within the same Pattern element.</p>
-<h2 id="siml-concepts" sourcefile="tutorial/siml/quick-start.md" sourcestartlinenumber="142" sourceendlinenumber="142">SIML Concepts</h2>
+<h2 id="siml-concept" sourcefile="tutorial/siml/quick-start.md" sourcestartlinenumber="142" sourceendlinenumber="142">SIML Concept</h2>
 <p sourcefile="tutorial/siml/quick-start.md" sourcestartlinenumber="144" sourceendlinenumber="144">A Concept is a collection of Models. The aggregation of which is <em>your</em> abstract idea of how the user perceives a topic while interacting with your Bot.</p>
 <h3 id="declaring-a-concept" sourcefile="tutorial/siml/quick-start.md" sourcestartlinenumber="146" sourceendlinenumber="146">Declaring a Concept</h3>
+<p sourcefile="tutorial/siml/quick-start.md" sourcestartlinenumber="148" sourceendlinenumber="148">An SIML has the following attributes.</p>
+<table sourcefile="tutorial/siml/quick-start.md" sourcestartlinenumber="150" sourceendlinenumber="154">
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Values</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Type</td>
+<td style="text-align:left"><strong>Public</strong> or <strong>Private</strong></td>
+<td style="text-align:left">Models within a public Concept are visible globally and will be activated whenever their patterns match. Models within a private Concept are not visible unless a Response within a public Model activates it.</td>
+</tr>
+<tr>
+<td style="text-align:left">Name</td>
+<td style="text-align:left"><em>Unique name</em></td>
+<td style="text-align:left">Every Concept in SIML should have a name. A name is what identifies a Concept and tells the Bot what subject is under consideration. A Concept may at times be synonymous to a Topic.</td>
+</tr>
+<tr>
+<td style="text-align:left">Repeat</td>
+<td style="text-align:left"><strong>True</strong> or <strong>False</strong></td>
+<td style="text-align:left">Models within a Concept may or may not repeat themselves. i.e. they may be designed to be evaluated only once. In that case a Concept is declared with an attribute <code>Repeat=&quot;False&quot;</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="siml-model" sourcefile="tutorial/siml/quick-start.md" sourcestartlinenumber="156" sourceendlinenumber="156">SIML Model</h2>
+<p sourcefile="tutorial/siml/quick-start.md" sourcestartlinenumber="158" sourceendlinenumber="158"><em>A basic unit of knowledge in SIML is stored within a Model.</em></p>
+<p sourcefile="tutorial/siml/quick-start.md" sourcestartlinenumber="160" sourceendlinenumber="160">There are 3 types of Models in SIML.</p>
+<ul sourcefile="tutorial/siml/quick-start.md" sourcestartlinenumber="162" sourceendlinenumber="164">
+<li sourcefile="tutorial/siml/quick-start.md" sourcestartlinenumber="162" sourceendlinenumber="162">Strict</li>
+<li sourcefile="tutorial/siml/quick-start.md" sourcestartlinenumber="163" sourceendlinenumber="163">Relaxed</li>
+<li sourcefile="tutorial/siml/quick-start.md" sourcestartlinenumber="164" sourceendlinenumber="164">Hybrid</li>
+</ul>
 
             </article>
           </div>

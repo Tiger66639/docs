@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Creating a custom Adapter  - Syn Developer Network</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Creating a custom Adapter ">
+    <meta name="generator" content="docfx 2.6.1.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    <meta property="docfx:rel" content="../../../">
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+    ga('create', 'UA-39941606-1', 'auto');
+    ga('send', 'pageview');
+  
+  </script>
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="creating-a-custom-adapter" sourcefile="tutorial/bot/siml/custom-adapter.md" sourcestartlinenumber="1" sourceendlinenumber="1">Creating a custom Adapter</h1>
+              
+<p sourcefile="tutorial/bot/siml/custom-adapter.md" sourcestartlinenumber="3" sourceendlinenumber="3">Apart from all the SIML elements you can add your own custom Element to the SIML interpreter. A custom element should have a unique name and may or may not return a value.</p>
+<h2 id="adapters--tag-handlers" sourcefile="tutorial/bot/siml/custom-adapter.md" sourcestartlinenumber="5" sourceendlinenumber="5">Adapters – Tag handlers</h2>
+<p sourcefile="tutorial/bot/siml/custom-adapter.md" sourcestartlinenumber="7" sourceendlinenumber="7">All SIML tag handlers implement the interface <code>IAdapter</code>. This interface provides the simplest set of properties and functions a tag handler should have to interact with the <strong>GraphMaster</strong>.</p>
+<p sourcefile="tutorial/bot/siml/custom-adapter.md" sourcestartlinenumber="9" sourceendlinenumber="9"><em>Example of a Custom tag handler</em></p>
+<pre sourcefile="tutorial/bot/siml/custom-adapter.md" sourcestartlinenumber="11" sourceendlinenumber="24"><code class="lang-csharp">public class CustomAdapter : IAdapter
+{
+    public XName TagName { get { return &quot;Custom&quot;; } }
+    public bool IsRecursive { get { return true; } }
+    public string Evaluate(Context parameter)
+    {
+        var customElement = parameter.Element;
+        var value = customElement.Value;
+        //Do some processing
+        return value;
+    }
+}
+</code></pre><p sourcefile="tutorial/bot/siml/custom-adapter.md" sourcestartlinenumber="26" sourceendlinenumber="26">In the example code above the <code>TagName</code> property is the case-sensitive name of your custom tag. . The property <code>IsRecursive</code> tells the interpreter that the children elements of this element can be processed prior to calling the Evaluate method. Finally the function <code>Evaluate</code> is the main function that will be called once the inner elements have been evaluated or skipped if the IsRecursive property is set to false.</p>
+<h2 id="working-with-namespaces" sourcefile="tutorial/bot/siml/custom-adapter.md" sourcestartlinenumber="28" sourceendlinenumber="28">Working with Namespaces</h2>
+<p sourcefile="tutorial/bot/siml/custom-adapter.md" sourcestartlinenumber="30" sourceendlinenumber="30">Because large bots will definitely be making use of Custom Adapters there can arise a situation where 2 or more adapters may share the same name. To avoid such conflicts all adapter names are <strong>XName</strong> objects. This allows developers to group their adapter names with relevant namespaces.</p>
+<pre sourcefile="tutorial/bot/siml/custom-adapter.md" sourcestartlinenumber="32" sourceendlinenumber="43"><code class="lang-xml">&lt;Siml&gt;
+  &lt;Concept Name=&quot;Some new Concept&quot; Type=&quot;Public&quot; xmlns:example=&quot;http://example.com/namespace#example&quot;&gt;
+    &lt;Model&gt;
+      &lt;Pattern&gt;EXECUTE CUSTOM COMMAND&lt;/Pattern&gt;
+      &lt;Response&gt;
+        &lt;example:Custom&gt;Run&lt;/example:Custom&gt;
+      &lt;/Response&gt;
+    &lt;/Model&gt;
+  &lt;/Concept&gt;
+&lt;/Siml&gt;
+</code></pre><p sourcefile="tutorial/bot/siml/custom-adapter.md" sourcestartlinenumber="45" sourceendlinenumber="45">In the above SIML code we create a new namespace example using <strong>xmlns:prefix=”URI“</strong> format. The URI in the above example is <em><a href="http://example.com/namespace#example" sourcefile="tutorial/bot/siml/custom-adapter.md" sourcestartlinenumber="45" sourceendlinenumber="45">http://example.com/namespace#example</a></em></p>
+<p sourcefile="tutorial/bot/siml/custom-adapter.md" sourcestartlinenumber="47" sourceendlinenumber="47">Later we prefix our <strong>Custom</strong> element with the <em>example:</em> namespace. This is a perfectly valid example of using Namespaces in SIML. But how will our Adapter look like in Code ? It will look something like the following.</p>
+<pre sourcefile="tutorial/bot/siml/custom-adapter.md" sourcestartlinenumber="49" sourceendlinenumber="67"><code class="lang-csharp">public class CustomAdapter : IAdapter
+{
+    public bool IsRecursive { get { return true; } }
+    public XName TagName
+    {
+        get
+        {
+            XNamespace ns = &quot;http://example.com/namespace#example&quot;;
+            return ns + &quot;Custom&quot;;
+        }
+    }
+    public string Evaluate(Context parameter)
+    {
+        //Do Something
+        return string.Empty;
+    }
+}
+</code></pre><h2 id="adding-an-adapter" sourcefile="tutorial/bot/siml/custom-adapter.md" sourcestartlinenumber="69" sourceendlinenumber="69">Adding an Adapter</h2>
+<p sourcefile="tutorial/bot/siml/custom-adapter.md" sourcestartlinenumber="71" sourceendlinenumber="71">Once you’ve created an Adapter you should add it to the Adapters list of the Bot as shown below.</p>
+<pre sourcefile="tutorial/bot/siml/custom-adapter.md" sourcestartlinenumber="73" sourceendlinenumber="75"><code class="lang-csharp">simlBot.Adapters.Add(new CustomAdapter());
+</code></pre><blockquote sourcefile="tutorial/bot/siml/custom-adapter.md" sourcestartlinenumber="77" sourceendlinenumber="77"><p sourcefile="tutorial/bot/siml/custom-adapter.md" sourcestartlinenumber="77" sourceendlinenumber="77">You should add an Adapter once during initialization. Duplicate adapter entries are not allowed by the interpreter.</p>
+</blockquote>
+<h2 id="interacting-with-a-custom-adapter" sourcefile="tutorial/bot/siml/custom-adapter.md" sourcestartlinenumber="79" sourceendlinenumber="79">Interacting with a Custom adapter</h2>
+<p sourcefile="tutorial/bot/siml/custom-adapter.md" sourcestartlinenumber="81" sourceendlinenumber="81">An added adapter can be used at run-time via SIML flawlessly. The output of the Adapter generated, after the Evaluate method is called, will get embedded within an SIML response.</p>
+<p sourcefile="tutorial/bot/siml/custom-adapter.md" sourcestartlinenumber="83" sourceendlinenumber="83"><em>An example usage of the above <strong>Custom</strong> Adapter</em></p>
+<pre sourcefile="tutorial/bot/siml/custom-adapter.md" sourcestartlinenumber="85" sourceendlinenumber="90"><code class="lang-xml">&lt;Model&gt;
+  &lt;Pattern&gt;GET THE LOCATION OF *&lt;/Pattern&gt;
+  &lt;Response&gt;The location is &lt;x:Custom&gt;&lt;Match /&gt;&lt;/x:Custom&gt;&lt;/Response&gt;
+&lt;/Model&gt;
+</code></pre><blockquote sourcefile="tutorial/bot/siml/custom-adapter.md" sourcestartlinenumber="92" sourceendlinenumber="92"><p sourcefile="tutorial/bot/siml/custom-adapter.md" sourcestartlinenumber="92" sourceendlinenumber="92">Advanced tag handler interface may be implemented in the next iteration of Syn Bot which will supposedly be used by <em>Syn Virtual Assistant Prototype 8.5</em></p>
+</blockquote>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2016 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

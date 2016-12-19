@@ -186,37 +186,6 @@
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public class CommonSettings : Settings, ICollection&lt;IVariable&gt;, IEnumerable&lt;IVariable&gt;, IEnumerable</code></pre>
               </div>
-              <h3 id="constructors">Constructors
-              </h3>
-              <h4 id="Syn_Bot_Siml_CommonSettings__ctor_System_String_System_String_" data-uid="Syn.Bot.Siml.CommonSettings.#ctor(System.String,System.String)">CommonSettings(String, String)</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public CommonSettings(string name, string location)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><em>name</em></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><em>location</em></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
               <h3 id="properties">Properties
               </h3>
               <h4 id="Syn_Bot_Siml_CommonSettings_DefaultValue" data-uid="Syn.Bot.Siml.CommonSettings.DefaultValue">DefaultValue</h4>
@@ -340,7 +309,7 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void Load(XDocument settingsDocument)</code></pre>
+                <pre><code class="lang-csharp hljs">public void Load(XDocument simlDocument)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -354,7 +323,7 @@
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Xml.Linq.XDocument</span></td>
-                    <td><em>settingsDocument</em></td>
+                    <td><em>simlDocument</em></td>
                     <td><p sourcefile="api/Syn.Bot.Siml.CommonSettings.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The SIML Document.</p>
 </td>
                   </tr>

@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>System Entities  - Syn Developer Network</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="System Entities ">
+    <meta name="generator" content="docfx 2.6.1.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    <meta property="docfx:rel" content="../../../">
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+    ga('create', 'UA-39941606-1', 'auto');
+    ga('send', 'pageview');
+  
+  </script>
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="system-entities" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="1" sourceendlinenumber="1">System Entities</h1>
+              
+<p sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="3" sourceendlinenumber="3">Oscova comes with many pre-built system entities to ease the Bot development process. By default all <em>Entity Recognizers</em> for the following entity types are pre-loaded during Bot training.</p>
+<p sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="5" sourceendlinenumber="5">To force the Bot to load <em>Entity Recognizers</em> only for required entity types, that are declared using <code>EntityAttribute</code>, set the value of <code>RequiredRecognizersOnly</code> to <code>true</code> in <code>BotConfiguration</code>.</p>
+<p sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="7" sourceendlinenumber="7">To load an additional <em>Entity Recognizer</em> for an entity type that is not mentioned using <code>EntityAttribute</code> you may register the entity recognizer using the following method.</p>
+<pre sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="10" sourceendlinenumber="12"><code class="lang-csharp">Bot.Recognizers.RegisterType&lt;Recognizer-Class&gt;(Entity-Type);
+</code></pre><blockquote sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="14" sourceendlinenumber="14"><p sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="14" sourceendlinenumber="14">Note: All required entity recognizers must be registered before calling the <code>Train</code> method.</p>
+</blockquote>
+<h3 id="generic" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="16" sourceendlinenumber="16">Generic</h3>
+<table sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="18" sourceendlinenumber="20">
+<thead>
+<tr>
+<th style="text-align:left">Entity Name</th>
+<th style="text-align:left">Description</th>
+<th style="text-align:left">Examples</th>
+<th style="text-align:left">Returned Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>@sys.url</code></td>
+<td style="text-align:left">Matches a url</td>
+<td style="text-align:left">www.oscova.com <br> <a href="http://oscova.com" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="20" sourceendlinenumber="20">http://oscova.com</a></td>
+<td style="text-align:left">Returns a valid URL</td>
+</tr>
+</tbody>
+</table>
+<h3 id="date-and-time" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="22" sourceendlinenumber="22">Date and Time</h3>
+<table sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="24" sourceendlinenumber="29">
+<thead>
+<tr>
+<th style="text-align:left">Entity Name</th>
+<th style="text-align:left">Description</th>
+<th style="text-align:left">Examples</th>
+<th style="text-align:left">Returned Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>@sys.date</code></td>
+<td style="text-align:left">Matches a date</td>
+<td style="text-align:left">March 12th <br> Tomorrow</td>
+<td style="text-align:left">Returns date in ISO-8601 format, such as <code>2016-12-15</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>@sys.date.month</code></td>
+<td style="text-align:left">Names of months</td>
+<td style="text-align:left">January, June</td>
+<td style="text-align:left">Returns month and date string in ISO-8601</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>@sys.date.time</code></td>
+<td style="text-align:left">Matches a date and time</td>
+<td style="text-align:left">December 1 at 5 pm <br> Tomorrow at 2 pm</td>
+<td style="text-align:left">Returns Date and time in ISO-8601 format, such as <code>2016-12-10T13:42:25</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>@sys.time</code></td>
+<td style="text-align:left">Matches a time.</td>
+<td style="text-align:left">8:30 <br> 12 pm <br> in 10 minutes</td>
+<td style="text-align:left">Returns time in ISO-8601 format (hh:mm:ss): <code>14:20:00</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="numbers" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="32" sourceendlinenumber="32">Numbers</h3>
+<table sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="34" sourceendlinenumber="39">
+<thead>
+<tr>
+<th style="text-align:left">Entity Name</th>
+<th style="text-align:left">Description</th>
+<th style="text-align:left">Examples</th>
+<th style="text-align:left">Returned Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>@sys.number</code></td>
+<td style="text-align:left">Matches integer and decimal numbers</td>
+<td style="text-align:left">10.5 <br> 14 <br> seventy <br> first</td>
+<td style="text-align:left">Returns double, such as <code>10.5</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>@sys.ordinal</code></td>
+<td style="text-align:left">Matches ordinal numbers</td>
+<td style="text-align:left">second <br> 1st <br> 12-th</td>
+<td style="text-align:left">Returns integer, such as <code>12</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>@sys.number.integer</code></td>
+<td style="text-align:left">Matches integer numbers</td>
+<td style="text-align:left">10 <br> -10</td>
+<td style="text-align:left">Returns integer, such as <code>10</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>@sys.number.sequence</code></td>
+<td style="text-align:left">Matches integer number sequences</td>
+<td style="text-align:left">10 15 20 <br> 1 5 8 6</td>
+<td style="text-align:left">Returns string, such as <code>10 15 12</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="value-and-units" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="42" sourceendlinenumber="42">Value and Units</h3>
+<table sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="44" sourceendlinenumber="54">
+<thead>
+<tr>
+<th style="text-align:left">Entity Name</th>
+<th style="text-align:left">Description</th>
+<th style="text-align:left">Examples</th>
+<th style="text-align:left">Returned Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>@sys.unit.area</code></td>
+<td style="text-align:left">Number and Area unit</td>
+<td style="text-align:left">36 sq m <br> 19 acres</td>
+<td style="text-align:left">Value as double and unit abbreviation as <code>{&quot;value&quot;:10, &quot;unit&quot;:&quot;sq m&quot;}</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>@sys.unit.length</code></td>
+<td style="text-align:left">Number and Length unit</td>
+<td style="text-align:left">15 kilometers <br> 8 miles</td>
+<td style="text-align:left">Value as double and unit abbreviation as <code>{&quot;value&quot;:10, &quot;unit&quot;:&quot;km&quot;}</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>@sys.unit.speed</code></td>
+<td style="text-align:left">Number and Speed unit</td>
+<td style="text-align:left">17 miles per hour <br> 10 km/h</td>
+<td style="text-align:left">Value as double and unit abbreviation as <code>{&quot;value&quot;:10, &quot;unit&quot;:&quot;mph&quot;}</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>@sys.unit.volume</code></td>
+<td style="text-align:left">Number and Volume unit</td>
+<td style="text-align:left">5 liters <br> 10 gallons</td>
+<td style="text-align:left">Value as double and unit abbreviation as <code>{&quot;value&quot;:10, &quot;unit&quot;:&quot;cm3&quot;}</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>@sys.unit.weight</code></td>
+<td style="text-align:left">Number and Weight unit</td>
+<td style="text-align:left">14 kg <br> 10 pounds</td>
+<td style="text-align:left">Value as double and unit abbreviation as <code>{&quot;value&quot;:10, &quot;unit&quot;:&quot;lb&quot;}</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>@sys.temperature</code></td>
+<td style="text-align:left">Number and Temperature unit</td>
+<td style="text-align:left">37.6°F <br> 15 degrees celsius</td>
+<td style="text-align:left">Value as double and unit abbreviation as <code>{&quot;value&quot;:10, &quot;unit&quot;:&quot;F&quot;}</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>@sys.duration</code></td>
+<td style="text-align:left">Number and Time unit</td>
+<td style="text-align:left">12 minutes <br> 4 hrs</td>
+<td style="text-align:left">Value as double and unit abbreviation as <code>{&quot;value&quot;:10, &quot;unit&quot;:&quot;hour&quot;}</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>@sys.age</code></td>
+<td style="text-align:left">Number and Age unit</td>
+<td style="text-align:left">12 months old <br> 2 years old</td>
+<td style="text-align:left">Value as double and unit abbreviation as <code>{&quot;value&quot;:5, &quot;unit&quot;:&quot;year&quot;}</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>@sys.percentage</code></td>
+<td style="text-align:left">Number and Percentage unit</td>
+<td style="text-align:left">56% <br> 12 percent</td>
+<td style="text-align:left">Value as double and unit as <code>{&quot;value&quot;:5, &quot;unit&quot;:&quot;percent&quot;}</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="unit-names" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="58" sourceendlinenumber="58">Unit Names</h3>
+<table sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="60" sourceendlinenumber="68">
+<thead>
+<tr>
+<th style="text-align:left">Entity Name</th>
+<th style="text-align:left">Description</th>
+<th style="text-align:left">Examples</th>
+<th style="text-align:left">Returned Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>@sys.currency.name</code></td>
+<td style="text-align:left">Currencies. [Requires Configuration]()</td>
+<td style="text-align:left">US dollar <br> INR</td>
+<td style="text-align:left">Returns string, such as <code>USD</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>@sys.unit.area.name</code></td>
+<td style="text-align:left">Units of area</td>
+<td style="text-align:left">Square Meters <br> Hectares</td>
+<td style="text-align:left">Returns string, such as <code>sq km</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>@sys.unit.length.name</code></td>
+<td style="text-align:left">Units of length</td>
+<td style="text-align:left">Meter <br> Kilometers</td>
+<td style="text-align:left">Returns string, such as <code>km</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>@sys.unit.speed.name</code></td>
+<td style="text-align:left">Units of speed</td>
+<td style="text-align:left">Miles per hour <br> Kilometer per hour</td>
+<td style="text-align:left">Returns string, such as <code>mph</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>@sys.unit.temperature.name</code></td>
+<td style="text-align:left">Units of temperature</td>
+<td style="text-align:left">degree celsius <br> Kelvin</td>
+<td style="text-align:left">Returns string, such as <code>K</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>@sys.unit.volume.name</code></td>
+<td style="text-align:left">Units of volume</td>
+<td style="text-align:left">Milliliter <br> Gallon</td>
+<td style="text-align:left">Returns string, such as <code>ml</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>@sys.unit.weight.name</code></td>
+<td style="text-align:left">Units of weight</td>
+<td style="text-align:left">Kilogram <br> Pounds</td>
+<td style="text-align:left">Returns string, such as <code>kg</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="geography" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="72" sourceendlinenumber="72">Geography</h3>
+<table sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="74" sourceendlinenumber="82">
+<thead>
+<tr>
+<th style="text-align:left">Entity Name</th>
+<th style="text-align:left">Description</th>
+<th style="text-align:left">Examples</th>
+<th style="text-align:left">Returned Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>@sys.geo.country</code></td>
+<td style="text-align:left">Names of countries</td>
+<td style="text-align:left">United States <br> Australia</td>
+<td style="text-align:left">Returns short country name string as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="76" sourceendlinenumber="76">ISO 3166-1</a>, such as <code>United States of America</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>@sys.geo.state.us</code></td>
+<td style="text-align:left">US States</td>
+<td style="text-align:left">Arizona <br> Minnesota</td>
+<td style="text-align:left">Returns short state name string as per <a href="https://en.wikipedia.org/wiki/ISO_3166-2:US" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="77" sourceendlinenumber="77">ISO-3166-2</a>, such as <code>Ohio</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>@sys.geo.state.ind</code></td>
+<td style="text-align:left">Indian states and union territories</td>
+<td style="text-align:left">Goa <br> New Delhi</td>
+<td style="text-align:left">Returns string, such as <code>Goa</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>@sys.geo.ip</code></td>
+<td style="text-align:left">Matches IP Addresses</td>
+<td style="text-align:left">192.168.2.1</td>
+<td style="text-align:left">Returns string, such as <code>192.168.2.1</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>@sys.geo.postal.us</code></td>
+<td style="text-align:left">5 digit US postal codes</td>
+<td style="text-align:left">11368 <br> 90005</td>
+<td style="text-align:left">Returns string, such as <code>90005</code> <strong>Note:</strong> Does not validate the code</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>@sys.geo.postal.uk</code></td>
+<td style="text-align:left">Alphanumeric UK Postal codes</td>
+<td style="text-align:left">W1A 1HQ <br> M60 1NW</td>
+<td style="text-align:left">Returns string, such as <code>M60 1NW</code> <strong>Note:</strong> Does not validate the code.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>@sys.geo.postal.ind</code></td>
+<td style="text-align:left">6 digit Indian Postal codes</td>
+<td style="text-align:left">560037 <br> 691001</td>
+<td style="text-align:left">Returns string, such as <code>560037</code> <strong>Note:</strong> Does not validate the code.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="language" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="85" sourceendlinenumber="85">Language</h3>
+<table sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="87" sourceendlinenumber="89">
+<thead>
+<tr>
+<th style="text-align:left">Entity Name</th>
+<th style="text-align:left">Description</th>
+<th style="text-align:left">Examples</th>
+<th style="text-align:left">Returned Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>@sys.language</code></td>
+<td style="text-align:left">Names of Languages</td>
+<td style="text-align:left">English <br> Hindi</td>
+<td style="text-align:left">Returns string, such as <code>English</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="contacts" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="91" sourceendlinenumber="91">Contacts</h3>
+<table sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="93" sourceendlinenumber="97">
+<thead>
+<tr>
+<th style="text-align:left">Entity Name</th>
+<th style="text-align:left">Description</th>
+<th style="text-align:left">Examples</th>
+<th style="text-align:left">Returned Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>@sys.email</code></td>
+<td style="text-align:left">Email address</td>
+<td style="text-align:left">example@example.com</td>
+<td style="text-align:left">Returns string, such as <code>example@example.com</code> <strong>Note:</strong> Overrides <code>@sys.url</code> value <code>example.com</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>@sys.phone.us</code></td>
+<td style="text-align:left">Matches US phone numbers</td>
+<td style="text-align:left">+1 (123) 456-7890 <br> (123) 456-7890</td>
+<td style="text-align:left">Returns string, such as <code>(123) 456-7890</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>@sys.phone.ind</code></td>
+<td style="text-align:left">Matches Indian phone numbers</td>
+<td style="text-align:left">(+91) 8987654321 <br> 011-20000198</td>
+<td style="text-align:left">Returns string, such as <code>8987654321</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="color" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="99" sourceendlinenumber="99">Color</h3>
+<table sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="101" sourceendlinenumber="103">
+<thead>
+<tr>
+<th style="text-align:left">Entity Name</th>
+<th style="text-align:left">Description</th>
+<th style="text-align:left">Examples</th>
+<th style="text-align:left">Returned Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>@sys.color</code></td>
+<td style="text-align:left">Names of colors</td>
+<td style="text-align:left">Red <br> Dark Gray</td>
+<td style="text-align:left">Returns string, such as <code>Dark Gray</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="music" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="105" sourceendlinenumber="105">Music</h3>
+<table sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="107" sourceendlinenumber="109">
+<thead>
+<tr>
+<th style="text-align:left">Entity Name</th>
+<th style="text-align:left">Description</th>
+<th style="text-align:left">Examples</th>
+<th style="text-align:left">Returned Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>@sys.music.genre</code></td>
+<td style="text-align:left">Names of popular music genres</td>
+<td style="text-align:left">Jazz <br> Blues</td>
+<td style="text-align:left">Returns string, such as <code>Jazz</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="polar-question" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="111" sourceendlinenumber="111">Polar Question</h3>
+<p sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="113" sourceendlinenumber="113"><em>Because users can respond in any manner to </em>polar questions* some user responses may lead to some false-positives. Hence, developers are encouraged to build custom recognizers for positive and negative sentences. However, by using the following entity types the developer is solely responsible for any action executed by the Bot.*</p>
+<table sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="115" sourceendlinenumber="118">
+<thead>
+<tr>
+<th style="text-align:left">Entity Name</th>
+<th style="text-align:left">Description</th>
+<th style="text-align:left">Examples</th>
+<th style="text-align:left">Returned Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>@sys.positive</code></td>
+<td style="text-align:left">A positive response</td>
+<td style="text-align:left">Yes <br> Okay</td>
+<td style="text-align:left">Returns string, such as <code>yes</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>@sys.negative</code></td>
+<td style="text-align:left">A negative response</td>
+<td style="text-align:left">No <br> Nope</td>
+<td style="text-align:left">Returns string, such as <code>no</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="manual-configuration" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="120" sourceendlinenumber="120">Manual Configuration</h2>
+<h3 id="currency" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="122" sourceendlinenumber="122">Currency</h3>
+<p sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="124" sourceendlinenumber="124">As the word <em>dollar</em> may be used to refer to <em>United States Dollar</em> in <em>US</em> and <em>Australian Dollar</em> in <em>Australia</em>. The developer must manually extend the <code>@sys.currency.name</code> entries by adding synonyms for currency codes based on the location of the user the bot is interacting with.</p>
+<pre sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="126" sourceendlinenumber="128"><code class="lang-csharp">Bot.Recognizers[EntityTypes.CurrencyName].Entries.AddSynonyms(&quot;USD&quot;, new [] {&quot;dollar&quot;, &quot;us dollar&quot;,&quot;dollars&quot;})
+</code></pre>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2016 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

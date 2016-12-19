@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Result  - Syn Developer Network</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Result ">
+    <meta name="generator" content="docfx 2.6.1.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    <meta property="docfx:rel" content="../../../">
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+    ga('create', 'UA-39941606-1', 'auto');
+    ga('send', 'pageview');
+  
+  </script>
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="result" sourcefile="tutorial/bot/siml/result.md" sourcestartlinenumber="1" sourceendlinenumber="1">Result</h1>
+              
+<h2 id="precision" sourcefile="tutorial/bot/siml/result.md" sourcestartlinenumber="3" sourceendlinenumber="3">Precision</h2>
+<p sourcefile="tutorial/bot/siml/result.md" sourcestartlinenumber="5" sourceendlinenumber="5">From version 1.1.3 Syn Bot offers the precision property on the ChatResult returned when a ChatRequest is made. The Precision property uses the formula <img src="images/formula.png" alt="Formula Image" sourcefile="tutorial/bot/siml/result.md" sourcestartlinenumber="5" sourceendlinenumber="5"> where <strong>i</strong> is the number of input sentences, <strong>mi</strong> is the total number of Precision-Tokens matched, <strong>Mi</strong> is the total number of Precision-Tokens in the Input.</p>
+<h3 id="a-precision-token" sourcefile="tutorial/bot/siml/result.md" sourcestartlinenumber="7" sourceendlinenumber="7">A Precision Token</h3>
+<p sourcefile="tutorial/bot/siml/result.md" sourcestartlinenumber="9" sourceendlinenumber="9">Important Graph tokens that require exact matches are considered as precision-tokens. Graph delimiters like <code>&lt;Pattern&gt;</code>, <code>&lt;Event&gt;</code>, <code>&lt;Previous&gt;</code> and <code>&lt;Concept&gt;</code><em> Scripts, Conditions and pattern wildcards $, %, * _</em>  are not considered as Precision-tokens.</p>
+<p sourcefile="tutorial/bot/siml/result.md" sourcestartlinenumber="11" sourceendlinenumber="11"><em>What does a Precision-Token include ?</em></p>
+<ul sourcefile="tutorial/bot/siml/result.md" sourcestartlinenumber="13" sourceendlinenumber="17">
+<li sourcefile="tutorial/bot/siml/result.md" sourcestartlinenumber="13" sourceendlinenumber="13">Exact words</li>
+<li sourcefile="tutorial/bot/siml/result.md" sourcestartlinenumber="14" sourceendlinenumber="14">Sets</li>
+<li sourcefile="tutorial/bot/siml/result.md" sourcestartlinenumber="15" sourceendlinenumber="15">Regular Expressions</li>
+<li sourcefile="tutorial/bot/siml/result.md" sourcestartlinenumber="16" sourceendlinenumber="16">Maps</li>
+<li sourcefile="tutorial/bot/siml/result.md" sourcestartlinenumber="17" sourceendlinenumber="17">Choices (Keywords)</li>
+</ul>
+<p sourcefile="tutorial/bot/siml/result.md" sourcestartlinenumber="20" sourceendlinenumber="20"><em>Use-Cases</em></p>
+<ul sourcefile="tutorial/bot/siml/result.md" sourcestartlinenumber="22" sourceendlinenumber="24">
+<li sourcefile="tutorial/bot/siml/result.md" sourcestartlinenumber="22" sourceendlinenumber="22">Allows developers to create a log of all the patterns that yield less precise results.</li>
+<li sourcefile="tutorial/bot/siml/result.md" sourcestartlinenumber="23" sourceendlinenumber="23">Gives a developer an idea of new Patterns that need to be added to the Bot’s knowledge base (KB).</li>
+<li sourcefile="tutorial/bot/siml/result.md" sourcestartlinenumber="24" sourceendlinenumber="24">Make run-time changes to the Bot’s Graph-Master based on user input pattern</li>
+</ul>
+<p sourcefile="tutorial/bot/siml/result.md" sourcestartlinenumber="26" sourceendlinenumber="26"><em>Example Code</em></p>
+<pre sourcefile="tutorial/bot/siml/result.md" sourcestartlinenumber="28" sourceendlinenumber="34"><code class="lang-csharp">var result = bot.Chat(&quot;how are you?&quot;);
+if (result.Precision &lt; 0.5)
+{
+    //Do Something
+}
+</code></pre><p sourcefile="tutorial/bot/siml/result.md" sourcestartlinenumber="36" sourceendlinenumber="36">In the above code <code>bot</code> is any instance of the <code>SimlBot</code> class.</p>
+<h2 id="readtime" sourcefile="tutorial/bot/siml/result.md" sourcestartlinenumber="38" sourceendlinenumber="38">ReadTime</h2>
+<p sourcefile="tutorial/bot/siml/result.md" sourcestartlinenumber="40" sourceendlinenumber="40">The ReadTime property of the ChatResult class provides an estimated time (in seconds) required to read the value of the BotMessage property. This property may be used when some GUI interaction requires removal of previously displayed output and to determine for how long some information should stay on the user screen.</p>
+<p sourcefile="tutorial/bot/siml/result.md" sourcestartlinenumber="42" sourceendlinenumber="42"><em>Example Code</em></p>
+<pre sourcefile="tutorial/bot/siml/result.md" sourcestartlinenumber="44" sourceendlinenumber="47"><code class="lang-csharp">var result = bot.Chat(&quot;how are you?&quot;);
+var readTime = result.ReadTime; //Time required to read the BotMessage.
+</code></pre>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2016 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

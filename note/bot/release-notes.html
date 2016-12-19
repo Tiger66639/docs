@@ -85,8 +85,208 @@
               <h1 id="release-notes---synbot" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="1" sourceendlinenumber="1">Release Notes - <code>Syn.Bot</code></h1>
               
 <p sourcefile="note/bot/release-notes.md" sourcestartlinenumber="3" sourceendlinenumber="3">Thank you for installing <code>Syn.Bot</code> Framework.</p>
-<h2 id="version-126" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="5" sourceendlinenumber="5">Version 1.2.6</h2>
-<table sourcefile="note/bot/release-notes.md" sourcestartlinenumber="6" sourceendlinenumber="14">
+<h2 id="version-200" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="5" sourceendlinenumber="5">Version 2.0.0</h2>
+<h3 id="oscova-bot" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="7" sourceendlinenumber="7">OSCOVA Bot</h3>
+<table sourcefile="note/bot/release-notes.md" sourcestartlinenumber="8" sourceendlinenumber="51">
+<thead>
+<tr>
+<th style="text-align:left">Commit</th>
+<th style="text-align:left">Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Added Prompt and Contextual Parameter support.</td>
+<td style="text-align:left">19/12/2016 11:08</td>
+</tr>
+<tr>
+<td style="text-align:left">Successfully integrated <code>Machine Learning</code> mode.</td>
+<td style="text-align:left">18/12/2016 11:08</td>
+</tr>
+<tr>
+<td style="text-align:left">Sys entity types implement common intefaces.</td>
+<td style="text-align:left">13/12/2016 04:15</td>
+</tr>
+<tr>
+<td style="text-align:left">Filled override table for <em>Number-Unit</em> types.</td>
+<td style="text-align:left">13/12/2016</td>
+</tr>
+<tr>
+<td style="text-align:left">Support creation of composite entity types.</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">Added Unit Length, Weight, Speed and Temperature recognizers.</td>
+<td style="text-align:left">05/12/2016 18:02</td>
+</tr>
+<tr>
+<td style="text-align:left">Functional Parser with overridable delegate.</td>
+<td style="text-align:left">04/12/2016 12:33</td>
+</tr>
+<tr>
+<td style="text-align:left">Option to explicitly specify overridable entity types.</td>
+<td style="text-align:left">04/12/2016 12:07</td>
+</tr>
+<tr>
+<td style="text-align:left">Add only required parsers found in Dialogs.</td>
+<td style="text-align:left">03/12/2016 18:06</td>
+</tr>
+<tr>
+<td style="text-align:left">Added parser for Url Entity.</td>
+<td style="text-align:left">02/12/2016 19:47</td>
+</tr>
+<tr>
+<td style="text-align:left">Add parsing for integer entity type.</td>
+<td style="text-align:left">02/12/2016 18:33</td>
+</tr>
+<tr>
+<td style="text-align:left">Support for adding synonyms for parser entries.</td>
+<td style="text-align:left">02/12/2016 17:54</td>
+</tr>
+<tr>
+<td style="text-align:left">Case strict parser values support.</td>
+<td style="text-align:left">02/12/2016 16:12</td>
+</tr>
+<tr>
+<td style="text-align:left">Auto improve sys entities if user annotates expression.</td>
+<td style="text-align:left">01/12/2016 12:39</td>
+</tr>
+<tr>
+<td style="text-align:left">Enum Entity value conversion support.</td>
+<td style="text-align:left">29/11/2016 20:34</td>
+</tr>
+<tr>
+<td style="text-align:left">Context item to consider existence time for removal.</td>
+<td style="text-align:left">29/11/2016 19:03</td>
+</tr>
+<tr>
+<td style="text-align:left">Greedy Term match by parser.</td>
+<td style="text-align:left">29/11/2016 15:45</td>
+</tr>
+<tr>
+<td style="text-align:left">InvokingIntent Event in Bot when Result is invoked.</td>
+<td style="text-align:left">29/11/2016 14:27</td>
+</tr>
+<tr>
+<td style="text-align:left">Auto add Default expression dialog if none found after Training.</td>
+<td style="text-align:left">29/11/2016 13:06</td>
+</tr>
+<tr>
+<td style="text-align:left">Added CurrentIntent property to Result class.</td>
+<td style="text-align:left">28/11/2016 20:49</td>
+</tr>
+<tr>
+<td style="text-align:left">Conflicting Sys entities overriden by Developer entities.</td>
+<td style="text-align:left">28/11/2016 19:44</td>
+</tr>
+<tr>
+<td style="text-align:left">Entities sorted by Start position.</td>
+<td style="text-align:left">28/11/2016</td>
+</tr>
+<tr>
+<td style="text-align:left">Addressed invalid Expression declarations.</td>
+<td style="text-align:left">28/11/2016 18:14</td>
+</tr>
+<tr>
+<td style="text-align:left">Support for Inline Entity declaration.</td>
+<td style="text-align:left">28/11/2016 12:03</td>
+</tr>
+<tr>
+<td style="text-align:left">Support for <code>@</code> symbol as Template <code>EntityType</code> declaration</td>
+<td style="text-align:left">28/11/2016 10:53</td>
+</tr>
+<tr>
+<td style="text-align:left">Multiple expressions of similar Intent should influences Intent score.</td>
+<td style="text-align:left">28/11/2016</td>
+</tr>
+<tr>
+<td style="text-align:left">Auto <code>State</code> removal after lifespan is reached.</td>
+<td style="text-align:left">26/11/2016 9:44</td>
+</tr>
+<tr>
+<td style="text-align:left">Bot throws exception if Evaluation is called before Training.</td>
+<td style="text-align:left">26/11/2016</td>
+</tr>
+<tr>
+<td style="text-align:left">State array support added in <code>Context</code>.</td>
+<td style="text-align:left">23/11/2016 13:04</td>
+</tr>
+<tr>
+<td style="text-align:left">One way JSON Serialization support for <code>EvaluationResult</code> class.</td>
+<td style="text-align:left">23/11/2016</td>
+</tr>
+<tr>
+<td style="text-align:left">Only unique Intents in <code>Result</code>.</td>
+<td style="text-align:left">23/11/2016 03:01</td>
+</tr>
+<tr>
+<td style="text-align:left">Auto extraction of common words during Training.</td>
+<td style="text-align:left">22/11/2016 15:30</td>
+</tr>
+<tr>
+<td style="text-align:left">Auto generated <code>SuggestedValue</code> using Tokens.</td>
+<td style="text-align:left">22/11/2016 11:44</td>
+</tr>
+<tr>
+<td style="text-align:left">Manual <code>None</code> intent evaluation in Dialog using <code>Result</code> class.</td>
+<td style="text-align:left">21/11/2016 22:20</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>typeof</code> option in Entity declaration.</td>
+<td style="text-align:left">21/11/2016</td>
+</tr>
+<tr>
+<td style="text-align:left">Tokenizer moved to <code>Language</code> support class.</td>
+<td style="text-align:left">21/11/2016</td>
+</tr>
+<tr>
+<td style="text-align:left">User settings based on VA interface added.</td>
+<td style="text-align:left">21/11/2016</td>
+</tr>
+<tr>
+<td style="text-align:left">Added support for Terms in Enum values.</td>
+<td style="text-align:left">20/11/2016</td>
+</tr>
+<tr>
+<td style="text-align:left">Contextual Data holder for storing objects of all types.</td>
+<td style="text-align:left">20/11/2016</td>
+</tr>
+<tr>
+<td style="text-align:left">Response class to hold Intent Results.</td>
+<td style="text-align:left">19/11/2016</td>
+</tr>
+<tr>
+<td style="text-align:left">Tokenizer addresses spaced entity words.</td>
+<td style="text-align:left">18/11/2016</td>
+</tr>
+<tr>
+<td style="text-align:left">Initial Feature Set completed.</td>
+<td style="text-align:left">18/11/2016</td>
+</tr>
+</tbody>
+</table>
+<h3 id="siml-bot" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="53" sourceendlinenumber="53">SIML Bot</h3>
+<table sourcefile="note/bot/release-notes.md" sourcestartlinenumber="54" sourceendlinenumber="57">
+<thead>
+<tr>
+<th style="text-align:left">Commit</th>
+<th style="text-align:left">Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Added <code>Suggestion</code> caching for same chat session.</td>
+<td style="text-align:left">01/11/2016</td>
+</tr>
+<tr>
+<td style="text-align:left">Fixed <code>Load(XDocument)</code> method to support <code>Siml</code> root element.</td>
+<td style="text-align:left">01/11/2016</td>
+</tr>
+</tbody>
+</table>
+<h2 id="version-126" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="59" sourceendlinenumber="59">Version 1.2.6</h2>
+<h3 id="siml-bot-1" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="61" sourceendlinenumber="61">SIML Bot</h3>
+<table sourcefile="note/bot/release-notes.md" sourcestartlinenumber="63" sourceendlinenumber="71">
 <thead>
 <tr>
 <th style="text-align:left">Commit</th>
@@ -124,8 +324,9 @@
 </tr>
 </tbody>
 </table>
-<h2 id="version-125" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="16" sourceendlinenumber="16">Version 1.2.5</h2>
-<table sourcefile="note/bot/release-notes.md" sourcestartlinenumber="17" sourceendlinenumber="39">
+<h2 id="version-125" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="73" sourceendlinenumber="73">Version 1.2.5</h2>
+<h3 id="siml-bot-2" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="75" sourceendlinenumber="75">SIML Bot</h3>
+<table sourcefile="note/bot/release-notes.md" sourcestartlinenumber="77" sourceendlinenumber="99">
 <thead>
 <tr>
 <th style="text-align:left">Commit</th>
@@ -219,8 +420,9 @@
 </tr>
 </tbody>
 </table>
-<h2 id="version-124" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="41" sourceendlinenumber="41">Version 1.2.4</h2>
-<table sourcefile="note/bot/release-notes.md" sourcestartlinenumber="42" sourceendlinenumber="50">
+<h2 id="version-124" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="101" sourceendlinenumber="101">Version 1.2.4</h2>
+<h3 id="siml-bot-3" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="103" sourceendlinenumber="103">SIML Bot</h3>
+<table sourcefile="note/bot/release-notes.md" sourcestartlinenumber="105" sourceendlinenumber="113">
 <thead>
 <tr>
 <th style="text-align:left">Commit</th>
@@ -250,8 +452,9 @@
 </tr>
 </tbody>
 </table>
-<h2 id="version-123" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="52" sourceendlinenumber="52">Version 1.2.3</h2>
-<table sourcefile="note/bot/release-notes.md" sourcestartlinenumber="53" sourceendlinenumber="70">
+<h2 id="version-123" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="115" sourceendlinenumber="115">Version 1.2.3</h2>
+<h3 id="siml-bot-4" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="117" sourceendlinenumber="117">SIML Bot</h3>
+<table sourcefile="note/bot/release-notes.md" sourcestartlinenumber="119" sourceendlinenumber="136">
 <thead>
 <tr>
 <th style="text-align:left">Commit</th>
@@ -308,8 +511,9 @@
 </tr>
 </tbody>
 </table>
-<h2 id="version-122" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="72" sourceendlinenumber="72">Version 1.2.2</h2>
-<table sourcefile="note/bot/release-notes.md" sourcestartlinenumber="73" sourceendlinenumber="84">
+<h2 id="version-122" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="138" sourceendlinenumber="138">Version 1.2.2</h2>
+<h3 id="siml-bot-5" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="140" sourceendlinenumber="140">SIML Bot</h3>
+<table sourcefile="note/bot/release-notes.md" sourcestartlinenumber="142" sourceendlinenumber="153">
 <thead>
 <tr>
 <th style="text-align:left">Commit</th>
@@ -348,8 +552,9 @@
 </tr>
 </tbody>
 </table>
-<h2 id="version-121" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="86" sourceendlinenumber="86">Version 1.2.1</h2>
-<table sourcefile="note/bot/release-notes.md" sourcestartlinenumber="87" sourceendlinenumber="104">
+<h2 id="version-121" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="155" sourceendlinenumber="155">Version 1.2.1</h2>
+<h3 id="siml-bot-6" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="157" sourceendlinenumber="157">SIML Bot</h3>
+<table sourcefile="note/bot/release-notes.md" sourcestartlinenumber="159" sourceendlinenumber="176">
 <thead>
 <tr>
 <th style="text-align:left">Commit</th>
@@ -406,8 +611,9 @@
 </tr>
 </tbody>
 </table>
-<h2 id="version-118" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="106" sourceendlinenumber="106">Version 1.1.8</h2>
-<table sourcefile="note/bot/release-notes.md" sourcestartlinenumber="107" sourceendlinenumber="125">
+<h2 id="version-118" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="178" sourceendlinenumber="178">Version 1.1.8</h2>
+<h3 id="siml-bot-7" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="180" sourceendlinenumber="180">SIML Bot</h3>
+<table sourcefile="note/bot/release-notes.md" sourcestartlinenumber="182" sourceendlinenumber="200">
 <thead>
 <tr>
 <th style="text-align:left">Commit</th>
@@ -467,8 +673,9 @@
 </tr>
 </tbody>
 </table>
-<h2 id="version-117" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="127" sourceendlinenumber="127">Version 1.1.7</h2>
-<table sourcefile="note/bot/release-notes.md" sourcestartlinenumber="128" sourceendlinenumber="136">
+<h2 id="version-117" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="202" sourceendlinenumber="202">Version 1.1.7</h2>
+<h3 id="siml-bot-8" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="204" sourceendlinenumber="204">SIML Bot</h3>
+<table sourcefile="note/bot/release-notes.md" sourcestartlinenumber="206" sourceendlinenumber="214">
 <thead>
 <tr>
 <th style="text-align:left">Commit</th>
@@ -498,8 +705,9 @@
 </tr>
 </tbody>
 </table>
-<h2 id="version-116" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="138" sourceendlinenumber="138">Version 1.1.6</h2>
-<table sourcefile="note/bot/release-notes.md" sourcestartlinenumber="139" sourceendlinenumber="144">
+<h2 id="version-116" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="216" sourceendlinenumber="216">Version 1.1.6</h2>
+<h3 id="siml-bot-9" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="218" sourceendlinenumber="218">SIML Bot</h3>
+<table sourcefile="note/bot/release-notes.md" sourcestartlinenumber="220" sourceendlinenumber="225">
 <thead>
 <tr>
 <th style="text-align:left">Commit</th>
@@ -520,8 +728,9 @@
 </tr>
 </tbody>
 </table>
-<h2 id="version-115" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="146" sourceendlinenumber="146">Version 1.1.5</h2>
-<table sourcefile="note/bot/release-notes.md" sourcestartlinenumber="147" sourceendlinenumber="150">
+<h2 id="version-115" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="227" sourceendlinenumber="227">Version 1.1.5</h2>
+<h3 id="siml-bot-10" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="229" sourceendlinenumber="229">SIML Bot</h3>
+<table sourcefile="note/bot/release-notes.md" sourcestartlinenumber="231" sourceendlinenumber="234">
 <thead>
 <tr>
 <th style="text-align:left">Commit</th>
@@ -536,8 +745,9 @@
 </tr>
 </tbody>
 </table>
-<h2 id="version-114" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="152" sourceendlinenumber="152">Version 1.1.4</h2>
-<table sourcefile="note/bot/release-notes.md" sourcestartlinenumber="153" sourceendlinenumber="168">
+<h2 id="version-114" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="236" sourceendlinenumber="236">Version 1.1.4</h2>
+<h3 id="siml-bot-11" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="238" sourceendlinenumber="238">SIML Bot</h3>
+<table sourcefile="note/bot/release-notes.md" sourcestartlinenumber="240" sourceendlinenumber="255">
 <thead>
 <tr>
 <th style="text-align:left">Commit</th>
@@ -588,8 +798,9 @@
 </tr>
 </tbody>
 </table>
-<h2 id="version-113" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="170" sourceendlinenumber="170">Version 1.1.3</h2>
-<table sourcefile="note/bot/release-notes.md" sourcestartlinenumber="171" sourceendlinenumber="187">
+<h2 id="version-113" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="257" sourceendlinenumber="257">Version 1.1.3</h2>
+<h3 id="siml-bot-12" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="259" sourceendlinenumber="259">SIML Bot</h3>
+<table sourcefile="note/bot/release-notes.md" sourcestartlinenumber="261" sourceendlinenumber="277">
 <thead>
 <tr>
 <th style="text-align:left">Commit</th>
@@ -643,8 +854,9 @@
 </tr>
 </tbody>
 </table>
-<h2 id="version-112" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="189" sourceendlinenumber="189">Version 1.1.2</h2>
-<table sourcefile="note/bot/release-notes.md" sourcestartlinenumber="190" sourceendlinenumber="201">
+<h2 id="version-112" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="279" sourceendlinenumber="279">Version 1.1.2</h2>
+<h3 id="siml-bot-13" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="281" sourceendlinenumber="281">SIML Bot</h3>
+<table sourcefile="note/bot/release-notes.md" sourcestartlinenumber="283" sourceendlinenumber="294">
 <thead>
 <tr>
 <th style="text-align:left">Commit</th>
@@ -683,8 +895,9 @@
 </tr>
 </tbody>
 </table>
-<h2 id="version-111" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="203" sourceendlinenumber="203">Version 1.1.1</h2>
-<table sourcefile="note/bot/release-notes.md" sourcestartlinenumber="204" sourceendlinenumber="214">
+<h2 id="version-111" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="296" sourceendlinenumber="296">Version 1.1.1</h2>
+<h3 id="siml-bot-14" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="298" sourceendlinenumber="298">SIML Bot</h3>
+<table sourcefile="note/bot/release-notes.md" sourcestartlinenumber="300" sourceendlinenumber="310">
 <thead>
 <tr>
 <th style="text-align:left">Commit</th>
@@ -713,15 +926,16 @@
 <td style="text-align:left">XML Namespace support added for Adapters</td>
 </tr>
 <tr>
-<td style="text-align:left">Fixed proper namespace as per SIML specification to <a href="http://syn.co.in/2014/siml" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="213" sourceendlinenumber="213">http://syn.co.in/2014/siml</a></td>
+<td style="text-align:left">Fixed proper namespace as per SIML specification to <a href="http://syn.co.in/2014/siml" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="309" sourceendlinenumber="309">http://syn.co.in/2014/siml</a></td>
 </tr>
 <tr>
 <td style="text-align:left">Memory optimization via configuration</td>
 </tr>
 </tbody>
 </table>
-<h2 id="version-110" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="216" sourceendlinenumber="216">Version 1.1.0</h2>
-<table sourcefile="note/bot/release-notes.md" sourcestartlinenumber="217" sourceendlinenumber="238">
+<h2 id="version-110" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="312" sourceendlinenumber="312">Version 1.1.0</h2>
+<h3 id="siml-bot-15" sourcefile="note/bot/release-notes.md" sourcestartlinenumber="314" sourceendlinenumber="314">SIML Bot</h3>
+<table sourcefile="note/bot/release-notes.md" sourcestartlinenumber="316" sourceendlinenumber="337">
 <thead>
 <tr>
 <th style="text-align:left">Commit</th>
