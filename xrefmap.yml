@@ -386,16 +386,6 @@ references:
   commentId: Overload:Syn.Bot.Oscova.Attributes.ContextAttribute.#ctor
   name: ContextAttribute
   fullName: Syn.Bot.Oscova.Attributes.ContextAttribute.ContextAttribute(System.Object, System.Int32)
-- uid: Syn.Bot.Oscova.Attributes.ContextAttribute.IsType
-  name: IsType
-  href: api/Syn.Bot.Oscova.Attributes.ContextAttribute.html#Syn_Bot_Oscova_Attributes_ContextAttribute_IsType
-  commentId: P:Syn.Bot.Oscova.Attributes.ContextAttribute.IsType
-  fullName: Syn.Bot.Oscova.Attributes.ContextAttribute.IsType
-- uid: Syn.Bot.Oscova.Attributes.ContextAttribute.IsType*
-  href: api/Syn.Bot.Oscova.Attributes.ContextAttribute.html#Syn_Bot_Oscova_Attributes_ContextAttribute_IsType_
-  commentId: Overload:Syn.Bot.Oscova.Attributes.ContextAttribute.IsType
-  name: IsType
-  fullName: Syn.Bot.Oscova.Attributes.ContextAttribute.IsType
 - uid: Syn.Bot.Oscova.Attributes.ContextAttribute.Lifespan
   name: Lifespan
   href: api/Syn.Bot.Oscova.Attributes.ContextAttribute.html#Syn_Bot_Oscova_Attributes_ContextAttribute_Lifespan
@@ -627,6 +617,16 @@ references:
   commentId: Overload:Syn.Bot.Oscova.BotConfiguration.#ctor
   name: BotConfiguration
   fullName: Syn.Bot.Oscova.BotConfiguration.BotConfiguration()
+- uid: Syn.Bot.Oscova.BotConfiguration.ContextLifespan
+  name: ContextLifespan
+  href: api/Syn.Bot.Oscova.BotConfiguration.html#Syn_Bot_Oscova_BotConfiguration_ContextLifespan
+  commentId: P:Syn.Bot.Oscova.BotConfiguration.ContextLifespan
+  fullName: Syn.Bot.Oscova.BotConfiguration.ContextLifespan
+- uid: Syn.Bot.Oscova.BotConfiguration.ContextLifespan*
+  href: api/Syn.Bot.Oscova.BotConfiguration.html#Syn_Bot_Oscova_BotConfiguration_ContextLifespan_
+  commentId: Overload:Syn.Bot.Oscova.BotConfiguration.ContextLifespan
+  name: ContextLifespan
+  fullName: Syn.Bot.Oscova.BotConfiguration.ContextLifespan
 - uid: Syn.Bot.Oscova.BotConfiguration.MatchMode
   name: MatchMode
   href: api/Syn.Bot.Oscova.BotConfiguration.html#Syn_Bot_Oscova_BotConfiguration_MatchMode
@@ -682,16 +682,6 @@ references:
   href: api/Syn.Bot.Oscova.BotUser.html#Syn_Bot_Oscova_BotUser
   commentId: T:Syn.Bot.Oscova.BotUser
   fullName: Syn.Bot.Oscova.BotUser
-- uid: Syn.Bot.Oscova.BotUser.Bot
-  name: Bot
-  href: api/Syn.Bot.Oscova.BotUser.html#Syn_Bot_Oscova_BotUser_Bot
-  commentId: P:Syn.Bot.Oscova.BotUser.Bot
-  fullName: Syn.Bot.Oscova.BotUser.Bot
-- uid: Syn.Bot.Oscova.BotUser.Bot*
-  href: api/Syn.Bot.Oscova.BotUser.html#Syn_Bot_Oscova_BotUser_Bot_
-  commentId: Overload:Syn.Bot.Oscova.BotUser.Bot
-  name: Bot
-  fullName: Syn.Bot.Oscova.BotUser.Bot
 - uid: Syn.Bot.Oscova.BotUser.Context
   name: Context
   href: api/Syn.Bot.Oscova.BotUser.html#Syn_Bot_Oscova_BotUser_Context
@@ -2029,11 +2019,6 @@ references:
   href: api/Syn.Bot.Oscova.Context.html#Syn_Bot_Oscova_Context_Add_System_String_System_Int32_
   commentId: M:Syn.Bot.Oscova.Context.Add(System.String,System.Int32)
   fullName: Syn.Bot.Oscova.Context.Add(System.String, System.Int32)
-- uid: Syn.Bot.Oscova.Context.Add(System.Type,System.Int32)
-  name: Add(Type, Int32)
-  href: api/Syn.Bot.Oscova.Context.html#Syn_Bot_Oscova_Context_Add_System_Type_System_Int32_
-  commentId: M:Syn.Bot.Oscova.Context.Add(System.Type,System.Int32)
-  fullName: Syn.Bot.Oscova.Context.Add(System.Type, System.Int32)
 - uid: Syn.Bot.Oscova.Context.Add*
   href: api/Syn.Bot.Oscova.Context.html#Syn_Bot_Oscova_Context_Add_
   commentId: Overload:Syn.Bot.Oscova.Context.Add
@@ -2113,6 +2098,13 @@ references:
   commentId: Overload:Syn.Bot.Oscova.Context.IsReadOnly
   name: IsReadOnly
   fullName: Syn.Bot.Oscova.Context.IsReadOnly
+- uid: Syn.Bot.Oscova.Context.Item(System.Enum)
+  name: Item[Enum]
+  href: api/Syn.Bot.Oscova.Context.html#Syn_Bot_Oscova_Context_Item_System_Enum_
+  commentId: P:Syn.Bot.Oscova.Context.Item(System.Enum)
+  name.vb: Item(Enum)
+  fullName: Syn.Bot.Oscova.Context.Item[System.Enum]
+  fullName.vb: Syn.Bot.Oscova.Context.Item(System.Enum)
 - uid: Syn.Bot.Oscova.Context.Item(System.String)
   name: Item[String]
   href: api/Syn.Bot.Oscova.Context.html#Syn_Bot_Oscova_Context_Item_System_String_
@@ -2179,51 +2171,21 @@ references:
   href: api/Syn.Bot.Oscova.ContextItem.html#Syn_Bot_Oscova_ContextItem
   commentId: T:Syn.Bot.Oscova.ContextItem
   fullName: Syn.Bot.Oscova.ContextItem
-- uid: Syn.Bot.Oscova.ContextItem.#ctor(System.Enum)
-  name: ContextItem(Enum)
-  href: api/Syn.Bot.Oscova.ContextItem.html#Syn_Bot_Oscova_ContextItem__ctor_System_Enum_
-  commentId: M:Syn.Bot.Oscova.ContextItem.#ctor(System.Enum)
-  fullName: Syn.Bot.Oscova.ContextItem.ContextItem(System.Enum)
-- uid: Syn.Bot.Oscova.ContextItem.#ctor(System.Enum,System.Int32)
-  name: ContextItem(Enum, Int32)
-  href: api/Syn.Bot.Oscova.ContextItem.html#Syn_Bot_Oscova_ContextItem__ctor_System_Enum_System_Int32_
-  commentId: M:Syn.Bot.Oscova.ContextItem.#ctor(System.Enum,System.Int32)
-  fullName: Syn.Bot.Oscova.ContextItem.ContextItem(System.Enum, System.Int32)
-- uid: Syn.Bot.Oscova.ContextItem.#ctor(System.String)
-  name: ContextItem(String)
-  href: api/Syn.Bot.Oscova.ContextItem.html#Syn_Bot_Oscova_ContextItem__ctor_System_String_
-  commentId: M:Syn.Bot.Oscova.ContextItem.#ctor(System.String)
-  fullName: Syn.Bot.Oscova.ContextItem.ContextItem(System.String)
-- uid: Syn.Bot.Oscova.ContextItem.#ctor(System.Type)
-  name: ContextItem(Type)
-  href: api/Syn.Bot.Oscova.ContextItem.html#Syn_Bot_Oscova_ContextItem__ctor_System_Type_
-  commentId: M:Syn.Bot.Oscova.ContextItem.#ctor(System.Type)
-  fullName: Syn.Bot.Oscova.ContextItem.ContextItem(System.Type)
-- uid: Syn.Bot.Oscova.ContextItem.#ctor(System.Type,System.Int32)
-  name: ContextItem(Type, Int32)
-  href: api/Syn.Bot.Oscova.ContextItem.html#Syn_Bot_Oscova_ContextItem__ctor_System_Type_System_Int32_
-  commentId: M:Syn.Bot.Oscova.ContextItem.#ctor(System.Type,System.Int32)
-  fullName: Syn.Bot.Oscova.ContextItem.ContextItem(System.Type, System.Int32)
-- uid: Syn.Bot.Oscova.ContextItem.#ctor*
-  href: api/Syn.Bot.Oscova.ContextItem.html#Syn_Bot_Oscova_ContextItem__ctor_
-  commentId: Overload:Syn.Bot.Oscova.ContextItem.#ctor
-  name: ContextItem
-  fullName: Syn.Bot.Oscova.ContextItem.ContextItem(System.Enum)
 - uid: Syn.Bot.Oscova.ContextItem.Empty
   name: Empty
   href: api/Syn.Bot.Oscova.ContextItem.html#Syn_Bot_Oscova_ContextItem_Empty
   commentId: F:Syn.Bot.Oscova.ContextItem.Empty
   fullName: Syn.Bot.Oscova.ContextItem.Empty
-- uid: Syn.Bot.Oscova.ContextItem.IsType
-  name: IsType
-  href: api/Syn.Bot.Oscova.ContextItem.html#Syn_Bot_Oscova_ContextItem_IsType
-  commentId: P:Syn.Bot.Oscova.ContextItem.IsType
-  fullName: Syn.Bot.Oscova.ContextItem.IsType
-- uid: Syn.Bot.Oscova.ContextItem.IsType*
-  href: api/Syn.Bot.Oscova.ContextItem.html#Syn_Bot_Oscova_ContextItem_IsType_
-  commentId: Overload:Syn.Bot.Oscova.ContextItem.IsType
-  name: IsType
-  fullName: Syn.Bot.Oscova.ContextItem.IsType
+- uid: Syn.Bot.Oscova.ContextItem.IsActive
+  name: IsActive
+  href: api/Syn.Bot.Oscova.ContextItem.html#Syn_Bot_Oscova_ContextItem_IsActive
+  commentId: P:Syn.Bot.Oscova.ContextItem.IsActive
+  fullName: Syn.Bot.Oscova.ContextItem.IsActive
+- uid: Syn.Bot.Oscova.ContextItem.IsActive*
+  href: api/Syn.Bot.Oscova.ContextItem.html#Syn_Bot_Oscova_ContextItem_IsActive_
+  commentId: Overload:Syn.Bot.Oscova.ContextItem.IsActive
+  name: IsActive
+  fullName: Syn.Bot.Oscova.ContextItem.IsActive
 - uid: Syn.Bot.Oscova.ContextItem.LifeSpan
   name: LifeSpan
   href: api/Syn.Bot.Oscova.ContextItem.html#Syn_Bot_Oscova_ContextItem_LifeSpan
@@ -4093,31 +4055,6 @@ references:
   href: api/Syn.Bot.Oscova.FilterType.html#Syn_Bot_Oscova_FilterType_Word
   commentId: F:Syn.Bot.Oscova.FilterType.Word
   fullName: Syn.Bot.Oscova.FilterType.Word
-- uid: Syn.Bot.Oscova.IndianStateRecognizer
-  name: IndianStateRecognizer
-  href: api/Syn.Bot.Oscova.IndianStateRecognizer.html#Syn_Bot_Oscova_IndianStateRecognizer
-  commentId: T:Syn.Bot.Oscova.IndianStateRecognizer
-  fullName: Syn.Bot.Oscova.IndianStateRecognizer
-- uid: Syn.Bot.Oscova.IndianStateRecognizer.#ctor
-  name: IndianStateRecognizer()
-  href: api/Syn.Bot.Oscova.IndianStateRecognizer.html#Syn_Bot_Oscova_IndianStateRecognizer__ctor
-  commentId: M:Syn.Bot.Oscova.IndianStateRecognizer.#ctor
-  fullName: Syn.Bot.Oscova.IndianStateRecognizer.IndianStateRecognizer()
-- uid: Syn.Bot.Oscova.IndianStateRecognizer.#ctor*
-  href: api/Syn.Bot.Oscova.IndianStateRecognizer.html#Syn_Bot_Oscova_IndianStateRecognizer__ctor_
-  commentId: Overload:Syn.Bot.Oscova.IndianStateRecognizer.#ctor
-  name: IndianStateRecognizer
-  fullName: Syn.Bot.Oscova.IndianStateRecognizer.IndianStateRecognizer()
-- uid: Syn.Bot.Oscova.IndianStateRecognizer.CreateEntity(Syn.Bot.Oscova.MatchItem)
-  name: CreateEntity(MatchItem)
-  href: api/Syn.Bot.Oscova.IndianStateRecognizer.html#Syn_Bot_Oscova_IndianStateRecognizer_CreateEntity_Syn_Bot_Oscova_MatchItem_
-  commentId: M:Syn.Bot.Oscova.IndianStateRecognizer.CreateEntity(Syn.Bot.Oscova.MatchItem)
-  fullName: Syn.Bot.Oscova.IndianStateRecognizer.CreateEntity(Syn.Bot.Oscova.MatchItem)
-- uid: Syn.Bot.Oscova.IndianStateRecognizer.CreateEntity*
-  href: api/Syn.Bot.Oscova.IndianStateRecognizer.html#Syn_Bot_Oscova_IndianStateRecognizer_CreateEntity_
-  commentId: Overload:Syn.Bot.Oscova.IndianStateRecognizer.CreateEntity
-  name: CreateEntity
-  fullName: Syn.Bot.Oscova.IndianStateRecognizer.CreateEntity(Syn.Bot.Oscova.MatchItem)
 - uid: Syn.Bot.Oscova.IntentResult
   name: IntentResult
   href: api/Syn.Bot.Oscova.IntentResult.html#Syn_Bot_Oscova_IntentResult
@@ -5100,31 +5037,6 @@ references:
   href: api/Syn.Bot.Oscova.OscovaBot.html#Syn_Bot_Oscova_OscovaBot_TrainingStarted
   commentId: E:Syn.Bot.Oscova.OscovaBot.TrainingStarted
   fullName: Syn.Bot.Oscova.OscovaBot.TrainingStarted
-- uid: Syn.Bot.Oscova.Position
-  name: Position
-  href: api/Syn.Bot.Oscova.Position.html#Syn_Bot_Oscova_Position
-  commentId: T:Syn.Bot.Oscova.Position
-  fullName: Syn.Bot.Oscova.Position
-- uid: Syn.Bot.Oscova.Position.End
-  name: End
-  href: api/Syn.Bot.Oscova.Position.html#Syn_Bot_Oscova_Position_End
-  commentId: P:Syn.Bot.Oscova.Position.End
-  fullName: Syn.Bot.Oscova.Position.End
-- uid: Syn.Bot.Oscova.Position.End*
-  href: api/Syn.Bot.Oscova.Position.html#Syn_Bot_Oscova_Position_End_
-  commentId: Overload:Syn.Bot.Oscova.Position.End
-  name: End
-  fullName: Syn.Bot.Oscova.Position.End
-- uid: Syn.Bot.Oscova.Position.Start
-  name: Start
-  href: api/Syn.Bot.Oscova.Position.html#Syn_Bot_Oscova_Position_Start
-  commentId: P:Syn.Bot.Oscova.Position.Start
-  fullName: Syn.Bot.Oscova.Position.Start
-- uid: Syn.Bot.Oscova.Position.Start*
-  href: api/Syn.Bot.Oscova.Position.html#Syn_Bot_Oscova_Position_Start_
-  commentId: Overload:Syn.Bot.Oscova.Position.Start
-  name: Start
-  fullName: Syn.Bot.Oscova.Position.Start
 - uid: Syn.Bot.Oscova.Recognizers
   name: Syn.Bot.Oscova.Recognizers
   href: api/Syn.Bot.Oscova.Recognizers.html#Syn_Bot_Oscova_Recognizers
@@ -5630,6 +5542,31 @@ references:
   commentId: Overload:Syn.Bot.Oscova.Recognizers.IndianPostalCodeRecognizer.Regex
   name: Regex
   fullName: Syn.Bot.Oscova.Recognizers.IndianPostalCodeRecognizer.Regex
+- uid: Syn.Bot.Oscova.Recognizers.IndianStateRecognizer
+  name: IndianStateRecognizer
+  href: api/Syn.Bot.Oscova.Recognizers.IndianStateRecognizer.html#Syn_Bot_Oscova_Recognizers_IndianStateRecognizer
+  commentId: T:Syn.Bot.Oscova.Recognizers.IndianStateRecognizer
+  fullName: Syn.Bot.Oscova.Recognizers.IndianStateRecognizer
+- uid: Syn.Bot.Oscova.Recognizers.IndianStateRecognizer.#ctor
+  name: IndianStateRecognizer()
+  href: api/Syn.Bot.Oscova.Recognizers.IndianStateRecognizer.html#Syn_Bot_Oscova_Recognizers_IndianStateRecognizer__ctor
+  commentId: M:Syn.Bot.Oscova.Recognizers.IndianStateRecognizer.#ctor
+  fullName: Syn.Bot.Oscova.Recognizers.IndianStateRecognizer.IndianStateRecognizer()
+- uid: Syn.Bot.Oscova.Recognizers.IndianStateRecognizer.#ctor*
+  href: api/Syn.Bot.Oscova.Recognizers.IndianStateRecognizer.html#Syn_Bot_Oscova_Recognizers_IndianStateRecognizer__ctor_
+  commentId: Overload:Syn.Bot.Oscova.Recognizers.IndianStateRecognizer.#ctor
+  name: IndianStateRecognizer
+  fullName: Syn.Bot.Oscova.Recognizers.IndianStateRecognizer.IndianStateRecognizer()
+- uid: Syn.Bot.Oscova.Recognizers.IndianStateRecognizer.CreateEntity(Syn.Bot.Oscova.MatchItem)
+  name: CreateEntity(MatchItem)
+  href: api/Syn.Bot.Oscova.Recognizers.IndianStateRecognizer.html#Syn_Bot_Oscova_Recognizers_IndianStateRecognizer_CreateEntity_Syn_Bot_Oscova_MatchItem_
+  commentId: M:Syn.Bot.Oscova.Recognizers.IndianStateRecognizer.CreateEntity(Syn.Bot.Oscova.MatchItem)
+  fullName: Syn.Bot.Oscova.Recognizers.IndianStateRecognizer.CreateEntity(Syn.Bot.Oscova.MatchItem)
+- uid: Syn.Bot.Oscova.Recognizers.IndianStateRecognizer.CreateEntity*
+  href: api/Syn.Bot.Oscova.Recognizers.IndianStateRecognizer.html#Syn_Bot_Oscova_Recognizers_IndianStateRecognizer_CreateEntity_
+  commentId: Overload:Syn.Bot.Oscova.Recognizers.IndianStateRecognizer.CreateEntity
+  name: CreateEntity
+  fullName: Syn.Bot.Oscova.Recognizers.IndianStateRecognizer.CreateEntity(Syn.Bot.Oscova.MatchItem)
 - uid: Syn.Bot.Oscova.Recognizers.IntegerRecognizer
   name: IntegerRecognizer
   href: api/Syn.Bot.Oscova.Recognizers.IntegerRecognizer.html#Syn_Bot_Oscova_Recognizers_IntegerRecognizer

@@ -88,7 +88,7 @@
               
               <h1 id="Syn_Bot_Oscova_OscovaBot" data-uid="Syn.Bot.Oscova.OscovaBot">Class OscovaBot
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="api/Syn.Bot.Oscova.OscovaBot.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Represents the Oscova Bot class.</p>
+              <div class="markdown level0 summary"><p sourcefile="api/Syn.Bot.Oscova.OscovaBot.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Represents the Oscova Bot system.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -136,6 +136,9 @@
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public OscovaBot()</code></pre>
               </div>
+              <h5 id="Syn_Bot_Oscova_OscovaBot__ctor_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p sourcefile="api/Syn.Bot.Oscova.OscovaBot.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Uses default Bot configuration.</p>
+</div>
               <h4 id="Syn_Bot_Oscova_OscovaBot__ctor_Syn_Bot_Oscova_BotConfiguration_" data-uid="Syn.Bot.Oscova.OscovaBot.#ctor(Syn.Bot.Oscova.BotConfiguration)">OscovaBot(BotConfiguration)</h4>
               <div class="markdown level1 summary"><p sourcefile="api/Syn.Bot.Oscova.OscovaBot.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Initializes a new instance of the <a class="xref" href="Syn.Bot.Oscova.OscovaBot.html#Syn_Bot_Oscova_OscovaBot">OscovaBot</a> class.</p>
 </div>
@@ -213,7 +216,8 @@
                 </tbody>
               </table>
               <h4 id="Syn_Bot_Oscova_OscovaBot_Lingua" data-uid="Syn.Bot.Oscova.OscovaBot.Lingua">Lingua</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p sourcefile="api/Syn.Bot.Oscova.OscovaBot.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Gets or sets the Bot lingua.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -230,7 +234,8 @@
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Syn.Bot.Oscova.Lingua.html#Syn_Bot_Oscova_Lingua">Lingua</a></td>
-                    <td></td>
+                    <td><p sourcefile="api/Syn.Bot.Oscova.OscovaBot.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The lingua.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -360,6 +365,9 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 id="Syn_Bot_Oscova_OscovaBot_CreateRecognizer_System_String__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p sourcefile="api/Syn.Bot.Oscova.OscovaBot.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Developer must fill in the <a class="xref" href="Syn.Bot.Oscova.Recognizers.BaseEntryRecognizer.html#Syn_Bot_Oscova_Recognizers_BaseEntryRecognizer_Entries">Entries</a> values manually.</p>
+</div>
               <h4 id="Syn_Bot_Oscova_OscovaBot_CreateRecognizer_System_String_Syn_Bot_Oscova_Recognizers_EntityExtractor_" data-uid="Syn.Bot.Oscova.OscovaBot.CreateRecognizer(System.String,Syn.Bot.Oscova.Recognizers.EntityExtractor)">CreateRecognizer(String, EntityExtractor)</h4>
               <div class="markdown level1 summary"><p sourcefile="api/Syn.Bot.Oscova.OscovaBot.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Creates a <a class="xref" href="Syn.Bot.Oscova.Recognizers.FunctionalRecognizer.html#Syn_Bot_Oscova_Recognizers_FunctionalRecognizer">FunctionalRecognizer</a>.</p>
 </div>
@@ -403,12 +411,13 @@
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Syn.Bot.Oscova.Recognizers.FunctionalRecognizer.html#Syn_Bot_Oscova_Recognizers_FunctionalRecognizer">FunctionalRecognizer</a></td>
-                    <td></td>
+                    <td><a class="xref" href="Syn.Bot.Oscova.Recognizers.FunctionalRecognizer.html#Syn_Bot_Oscova_Recognizers_FunctionalRecognizer">FunctionalRecognizer</a></td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Syn_Bot_Oscova_OscovaBot_CreateRecognizer_System_String_System_Collections_Generic_IEnumerable_System_String__" data-uid="Syn.Bot.Oscova.OscovaBot.CreateRecognizer(System.String,System.Collections.Generic.IEnumerable{System.String})">CreateRecognizer(String, IEnumerable&lt;String&gt;)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p sourcefile="api/Syn.Bot.Oscova.OscovaBot.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Creates an <a class="xref" href="Syn.Bot.Oscova.Recognizers.EntityRecognizer.html#Syn_Bot_Oscova_Recognizers_EntityRecognizer">EntityRecognizer</a> for list of terms.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -427,12 +436,14 @@
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>entityType</em></td>
-                    <td></td>
+                    <td><p sourcefile="api/Syn.Bot.Oscova.OscovaBot.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Type of the entity.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
                     <td><em>valueList</em></td>
-                    <td></td>
+                    <td><p sourcefile="api/Syn.Bot.Oscova.OscovaBot.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The term list.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -452,7 +463,8 @@
                 </tbody>
               </table>
               <h4 id="Syn_Bot_Oscova_OscovaBot_CreateRecognizer__1_System_String_" data-uid="Syn.Bot.Oscova.OscovaBot.CreateRecognizer``1(System.String)">CreateRecognizer&lt;T&gt;(String)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p sourcefile="api/Syn.Bot.Oscova.OscovaBot.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Creates an <a class="xref" href="Syn.Bot.Oscova.Recognizers.EntityRecognizer.html#Syn_Bot_Oscova_Recognizers_EntityRecognizer">EntityRecognizer</a> for enum values.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -471,7 +483,8 @@
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>entityType</em></td>
-                    <td></td>
+                    <td><p sourcefile="api/Syn.Bot.Oscova.OscovaBot.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Type of the entity.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -501,7 +514,7 @@
                 <tbody>
                   <tr>
                     <td><em>T</em></td>
-                    <td></td>
+                    <td>Enum Type.</td>
                   </tr>
                 </tbody>
               </table>
