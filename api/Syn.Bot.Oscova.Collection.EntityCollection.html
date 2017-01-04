@@ -93,56 +93,10 @@
               <div class="inheritance">
                 <h5>Inheritance</h5>
                   <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><a class="xref" href="Syn.Bot.Oscova.Collection.GenericCollection-1.html#Syn_Bot_Oscova_Collection_GenericCollection_1">GenericCollection</a>&lt;<a class="xref" href="Syn.Bot.Oscova.Interfaces.IEntity.html#Syn_Bot_Oscova_Interfaces_IEntity">IEntity</a>&gt;</div>
-                  <div class="level2"><span class="xref">EntityCollection</span></div>
+                  <div class="level1"><span class="xref">EntityCollection</span></div>
               </div>
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
-                <div>
-                  <a class="xref" href="Syn.Bot.Oscova.Collection.GenericCollection-1.html#Syn_Bot_Oscova_Collection_GenericCollection_1_DataList">GenericCollection&lt;IEntity&gt;.DataList</a>
-                </div>
-                <div>
-                  <a class="xref" href="Syn.Bot.Oscova.Collection.GenericCollection-1.html#Syn_Bot_Oscova_Collection_GenericCollection_1_Item_System_Int32_">GenericCollection&lt;IEntity&gt;.Item[Int32]</a>
-                </div>
-                <div>
-                  <a class="xref" href="Syn.Bot.Oscova.Collection.GenericCollection-1.html#Syn_Bot_Oscova_Collection_GenericCollection_1_GetEnumerator">GenericCollection&lt;IEntity&gt;.GetEnumerator()</a>
-                </div>
-                <div>
-                  <span class="xref">Syn.Bot.Oscova.Collection.GenericCollection&lt;Syn.Bot.Oscova.Interfaces.IEntity&gt;.System.Collections.IEnumerable.GetEnumerator()</span>
-                </div>
-                <div>
-                  <a class="xref" href="Syn.Bot.Oscova.Collection.GenericCollection-1.html#Syn_Bot_Oscova_Collection_GenericCollection_1_Add__0_">GenericCollection&lt;IEntity&gt;.Add(IEntity)</a>
-                </div>
-                <div>
-                  <a class="xref" href="Syn.Bot.Oscova.Collection.GenericCollection-1.html#Syn_Bot_Oscova_Collection_GenericCollection_1_AddRange_System_Collections_Generic_IEnumerable__0__">GenericCollection&lt;IEntity&gt;.AddRange(IEnumerable&lt;IEntity&gt;)</a>
-                </div>
-                <div>
-                  <a class="xref" href="Syn.Bot.Oscova.Collection.GenericCollection-1.html#Syn_Bot_Oscova_Collection_GenericCollection_1_Clear">GenericCollection&lt;IEntity&gt;.Clear()</a>
-                </div>
-                <div>
-                  <a class="xref" href="Syn.Bot.Oscova.Collection.GenericCollection-1.html#Syn_Bot_Oscova_Collection_GenericCollection_1_Contains__0_">GenericCollection&lt;IEntity&gt;.Contains(IEntity)</a>
-                </div>
-                <div>
-                  <a class="xref" href="Syn.Bot.Oscova.Collection.GenericCollection-1.html#Syn_Bot_Oscova_Collection_GenericCollection_1_CopyTo__0___System_Int32_">GenericCollection&lt;IEntity&gt;.CopyTo(IEntity[], Int32)</a>
-                </div>
-                <div>
-                  <a class="xref" href="Syn.Bot.Oscova.Collection.GenericCollection-1.html#Syn_Bot_Oscova_Collection_GenericCollection_1_Remove__0_">GenericCollection&lt;IEntity&gt;.Remove(IEntity)</a>
-                </div>
-                <div>
-                  <a class="xref" href="Syn.Bot.Oscova.Collection.GenericCollection-1.html#Syn_Bot_Oscova_Collection_GenericCollection_1_Count">GenericCollection&lt;IEntity&gt;.Count</a>
-                </div>
-                <div>
-                  <a class="xref" href="Syn.Bot.Oscova.Collection.GenericCollection-1.html#Syn_Bot_Oscova_Collection_GenericCollection_1_IsReadOnly">GenericCollection&lt;IEntity&gt;.IsReadOnly</a>
-                </div>
-                <div>
-                  <a class="xref" href="Syn.Bot.Oscova.Collection.GenericCollection-1.html#Syn_Bot_Oscova_Collection_GenericCollection_1_Contains__1">GenericCollection&lt;IEntity&gt;.Contains&lt;TR&gt;()</a>
-                </div>
-                <div>
-                  <a class="xref" href="Syn.Bot.Oscova.Collection.GenericCollection-1.html#Syn_Bot_Oscova_Collection_GenericCollection_1_AllOfType__1">GenericCollection&lt;IEntity&gt;.AllOfType&lt;TR&gt;()</a>
-                </div>
-                <div>
-                  <a class="xref" href="Syn.Bot.Oscova.Collection.GenericCollection-1.html#Syn_Bot_Oscova_Collection_GenericCollection_1_OfType__1">GenericCollection&lt;IEntity&gt;.OfType&lt;TR&gt;()</a>
-                </div>
                 <div>
                   <span class="xref">System.Object.Equals(System.Object)</span>
                 </div>
@@ -169,7 +123,7 @@
               <h6><strong>Assembly</strong>:Syn.Bot.dll</h6>
               <h5 id="Syn_Bot_Oscova_Collection_EntityCollection_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class EntityCollection : GenericCollection&lt;IEntity&gt;, ICollection&lt;IEntity&gt;, IEnumerable&lt;IEntity&gt;, IEnumerable</code></pre>
+                <pre><code class="lang-csharp hljs">public class EntityCollection : ICollection&lt;IEntity&gt;, IEnumerable&lt;IEntity&gt;, IEnumerable</code></pre>
               </div>
               <h3 id="constructors">Constructors
               </h3>
@@ -204,8 +158,147 @@
                   </tr>
                 </tbody>
               </table>
+              <h3 id="properties">Properties
+              </h3>
+              <h4 id="Syn_Bot_Oscova_Collection_EntityCollection_Count" data-uid="Syn.Bot.Oscova.Collection.EntityCollection.Count">Count</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public int Count { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.ICollection&lt;Syn.Bot.Oscova.Interfaces.IEntity&gt;.Count</span></div>
+              <h4 id="Syn_Bot_Oscova_Collection_EntityCollection_IsReadOnly" data-uid="Syn.Bot.Oscova.Collection.EntityCollection.IsReadOnly">IsReadOnly</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool IsReadOnly { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.ICollection&lt;Syn.Bot.Oscova.Interfaces.IEntity&gt;.IsReadOnly</span></div>
+              <h4 id="Syn_Bot_Oscova_Collection_EntityCollection_Item_System_Int32_" data-uid="Syn.Bot.Oscova.Collection.EntityCollection.Item(System.Int32)">Item[Int32]</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public IEntity this[int index] { get; }</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><em>index</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Syn.Bot.Oscova.Interfaces.IEntity.html#Syn_Bot_Oscova_Interfaces_IEntity">IEntity</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <h3 id="methods">Methods
               </h3>
+              <h4 id="Syn_Bot_Oscova_Collection_EntityCollection_Add_Syn_Bot_Oscova_Interfaces_IEntity_" data-uid="Syn.Bot.Oscova.Collection.EntityCollection.Add(Syn.Bot.Oscova.Interfaces.IEntity)">Add(IEntity)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Add(IEntity item)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Syn.Bot.Oscova.Interfaces.IEntity.html#Syn_Bot_Oscova_Interfaces_IEntity">IEntity</a></td>
+                    <td><em>item</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.ICollection&lt;Syn.Bot.Oscova.Interfaces.IEntity&gt;.Add(Syn.Bot.Oscova.Interfaces.IEntity)</span></div>
+              <h4 id="Syn_Bot_Oscova_Collection_EntityCollection_AddRange_System_Collections_Generic_IEnumerable_Syn_Bot_Oscova_Interfaces_IEntity__" data-uid="Syn.Bot.Oscova.Collection.EntityCollection.AddRange(System.Collections.Generic.IEnumerable{Syn.Bot.Oscova.Interfaces.IEntity})">AddRange(IEnumerable&lt;IEntity&gt;)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void AddRange(IEnumerable&lt;IEntity&gt; entities)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Syn.Bot.Oscova.Interfaces.IEntity.html#Syn_Bot_Oscova_Interfaces_IEntity">IEntity</a>&gt;</td>
+                    <td><em>entities</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <h4 id="Syn_Bot_Oscova_Collection_EntityCollection_AllOfType_System_String_" data-uid="Syn.Bot.Oscova.Collection.EntityCollection.AllOfType(System.String)">AllOfType(String)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -241,6 +334,43 @@
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="Syn.Bot.Oscova.Interfaces.IEntity.html#Syn_Bot_Oscova_Interfaces_IEntity">IEntity</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Syn_Bot_Oscova_Collection_EntityCollection_AllOfType__1" data-uid="Syn.Bot.Oscova.Collection.EntityCollection.AllOfType``1">AllOfType&lt;T&gt;()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public List&lt;T&gt; AllOfType&lt;T&gt;()where T : IEntity</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.List</span>&lt;T&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><em>T</em></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -299,6 +429,15 @@
                   </tr>
                 </tbody>
               </table>
+              <h4 id="Syn_Bot_Oscova_Collection_EntityCollection_Clear" data-uid="Syn.Bot.Oscova.Collection.EntityCollection.Clear">Clear()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Clear()</code></pre>
+              </div>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.ICollection&lt;Syn.Bot.Oscova.Interfaces.IEntity&gt;.Clear()</span></div>
               <h4 id="Syn_Bot_Oscova_Collection_EntityCollection_Clone" data-uid="Syn.Bot.Oscova.Collection.EntityCollection.Clone">Clone()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -321,6 +460,47 @@
                   </tr>
                 </tbody>
               </table>
+              <h4 id="Syn_Bot_Oscova_Collection_EntityCollection_Contains_Syn_Bot_Oscova_Interfaces_IEntity_" data-uid="Syn.Bot.Oscova.Collection.EntityCollection.Contains(Syn.Bot.Oscova.Interfaces.IEntity)">Contains(IEntity)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool Contains(IEntity item)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Syn.Bot.Oscova.Interfaces.IEntity.html#Syn_Bot_Oscova_Interfaces_IEntity">IEntity</a></td>
+                    <td><em>item</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.ICollection&lt;Syn.Bot.Oscova.Interfaces.IEntity&gt;.Contains(Syn.Bot.Oscova.Interfaces.IEntity)</span></div>
               <h4 id="Syn_Bot_Oscova_Collection_EntityCollection_Contains_System_String_" data-uid="Syn.Bot.Oscova.Collection.EntityCollection.Contains(System.String)">Contains(String)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -360,6 +540,61 @@
                   </tr>
                 </tbody>
               </table>
+              <h4 id="Syn_Bot_Oscova_Collection_EntityCollection_CopyTo_Syn_Bot_Oscova_Interfaces_IEntity___System_Int32_" data-uid="Syn.Bot.Oscova.Collection.EntityCollection.CopyTo(Syn.Bot.Oscova.Interfaces.IEntity[],System.Int32)">CopyTo(IEntity[], Int32)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void CopyTo(IEntity[] array, int arrayIndex)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Syn.Bot.Oscova.Interfaces.IEntity.html#Syn_Bot_Oscova_Interfaces_IEntity">IEntity</a>[]</td>
+                    <td><em>array</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><em>arrayIndex</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.ICollection&lt;Syn.Bot.Oscova.Interfaces.IEntity&gt;.CopyTo(Syn.Bot.Oscova.Interfaces.IEntity[], System.Int32)</span></div>
+              <h4 id="Syn_Bot_Oscova_Collection_EntityCollection_GetEnumerator" data-uid="Syn.Bot.Oscova.Collection.EntityCollection.GetEnumerator">GetEnumerator()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public IEnumerator&lt;IEntity&gt; GetEnumerator()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;<a class="xref" href="Syn.Bot.Oscova.Interfaces.IEntity.html#Syn_Bot_Oscova_Interfaces_IEntity">IEntity</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.IEnumerable&lt;Syn.Bot.Oscova.Interfaces.IEntity&gt;.GetEnumerator()</span></div>
               <h4 id="Syn_Bot_Oscova_Collection_EntityCollection_IndexOf_Syn_Bot_Oscova_Interfaces_IEntity_" data-uid="Syn.Bot.Oscova.Collection.EntityCollection.IndexOf(Syn.Bot.Oscova.Interfaces.IEntity)">IndexOf(IEntity)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -516,6 +751,43 @@
                   </tr>
                 </tbody>
               </table>
+              <h4 id="Syn_Bot_Oscova_Collection_EntityCollection_OfType__1" data-uid="Syn.Bot.Oscova.Collection.EntityCollection.OfType``1">OfType&lt;T&gt;()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public T OfType&lt;T&gt;()where T : IEntity</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">T</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><em>T</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <h4 id="Syn_Bot_Oscova_Collection_EntityCollection_OfType__1_System_String_" data-uid="Syn.Bot.Oscova.Collection.EntityCollection.OfType``1(System.String)">OfType&lt;T&gt;(String)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -570,6 +842,47 @@
                   </tr>
                 </tbody>
               </table>
+              <h4 id="Syn_Bot_Oscova_Collection_EntityCollection_Remove_Syn_Bot_Oscova_Interfaces_IEntity_" data-uid="Syn.Bot.Oscova.Collection.EntityCollection.Remove(Syn.Bot.Oscova.Interfaces.IEntity)">Remove(IEntity)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool Remove(IEntity item)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Syn.Bot.Oscova.Interfaces.IEntity.html#Syn_Bot_Oscova_Interfaces_IEntity">IEntity</a></td>
+                    <td><em>item</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.ICollection&lt;Syn.Bot.Oscova.Interfaces.IEntity&gt;.Remove(Syn.Bot.Oscova.Interfaces.IEntity)</span></div>
               <h4 id="Syn_Bot_Oscova_Collection_EntityCollection_Remove_System_String_" data-uid="Syn.Bot.Oscova.Collection.EntityCollection.Remove(System.String)">Remove(String)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -609,6 +922,32 @@
                   </tr>
                 </tbody>
               </table>
+              <h3 id="eii">Explicit Interface Implementations
+              </h3>
+              <h4 id="Syn_Bot_Oscova_Collection_EntityCollection_System_Collections_IEnumerable_GetEnumerator" data-uid="Syn.Bot.Oscova.Collection.EntityCollection.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">IEnumerator IEnumerable.GetEnumerator()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.IEnumerator</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.IEnumerable.GetEnumerator()</span></div>
             </article>
           </div>
           

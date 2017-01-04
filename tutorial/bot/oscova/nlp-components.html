@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>NLP Components  - Syn Developer Network</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="NLP Components ">
+    <meta name="generator" content="docfx 2.6.1.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    <meta property="docfx:rel" content="../../../">
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+    ga('create', 'UA-39941606-1', 'auto');
+    ga('send', 'pageview');
+  
+  </script>
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="nlp-components" sourcefile="tutorial/bot/oscova/nlp-components.md" sourcestartlinenumber="1" sourceendlinenumber="1">NLP Components</h1>
+              
+<p sourcefile="tutorial/bot/oscova/nlp-components.md" sourcestartlinenumber="3" sourceendlinenumber="3">As Oscova is designed to be a single standalone framework with a fully customizble Natural Language Processing (NLP) engine. There are multiple ways of customizating Oscova&#39;s NLP behaviour by implementing respective interfaces.</p>
+<p sourcefile="tutorial/bot/oscova/nlp-components.md" sourcestartlinenumber="5" sourceendlinenumber="5">The <code>Language</code> property of Oscova bot holds the following components.</p>
+<ul sourcefile="tutorial/bot/oscova/nlp-components.md" sourcestartlinenumber="7" sourceendlinenumber="13">
+<li sourcefile="tutorial/bot/oscova/nlp-components.md" sourcestartlinenumber="7" sourceendlinenumber="7">Filters</li>
+<li sourcefile="tutorial/bot/oscova/nlp-components.md" sourcestartlinenumber="8" sourceendlinenumber="8">Tokenizer</li>
+<li sourcefile="tutorial/bot/oscova/nlp-components.md" sourcestartlinenumber="9" sourceendlinenumber="9">Detokenizer</li>
+<li sourcefile="tutorial/bot/oscova/nlp-components.md" sourcestartlinenumber="10" sourceendlinenumber="10">Stemmer</li>
+<li sourcefile="tutorial/bot/oscova/nlp-components.md" sourcestartlinenumber="11" sourceendlinenumber="11">Stop Words</li>
+<li sourcefile="tutorial/bot/oscova/nlp-components.md" sourcestartlinenumber="12" sourceendlinenumber="12">Punctuations</li>
+<li sourcefile="tutorial/bot/oscova/nlp-components.md" sourcestartlinenumber="13" sourceendlinenumber="13">Lexical Database</li>
+</ul>
+<p sourcefile="tutorial/bot/oscova/nlp-components.md" sourcestartlinenumber="15" sourceendlinenumber="15">By default Oscova uses the <code>EnglishLanguage</code> Language class with <code>en-US</code> culture. The <code>EnglishLanguage</code> class uses the following in-built components.</p>
+<ul sourcefile="tutorial/bot/oscova/nlp-components.md" sourcestartlinenumber="17" sourceendlinenumber="19">
+<li sourcefile="tutorial/bot/oscova/nlp-components.md" sourcestartlinenumber="17" sourceendlinenumber="17">EnglishTokenizer</li>
+<li sourcefile="tutorial/bot/oscova/nlp-components.md" sourcestartlinenumber="18" sourceendlinenumber="18">EnglishDetokenizer</li>
+<li sourcefile="tutorial/bot/oscova/nlp-components.md" sourcestartlinenumber="19" sourceendlinenumber="19">EnglishStemmer</li>
+</ul>
+<h2 id="filters" sourcefile="tutorial/bot/oscova/nlp-components.md" sourcestartlinenumber="21" sourceendlinenumber="21">Filters</h2>
+<p sourcefile="tutorial/bot/oscova/nlp-components.md" sourcestartlinenumber="23" sourceendlinenumber="23">Filtration is an integral part of the <em>normalization</em> process and enables words, phrases or text values to be replaced by the specified replacement values.</p>
+<p sourcefile="tutorial/bot/oscova/nlp-components.md" sourcestartlinenumber="25" sourceendlinenumber="25">There are currently 2 types of Filters</p>
+<ul sourcefile="tutorial/bot/oscova/nlp-components.md" sourcestartlinenumber="27" sourceendlinenumber="28">
+<li sourcefile="tutorial/bot/oscova/nlp-components.md" sourcestartlinenumber="27" sourceendlinenumber="27">Word</li>
+<li sourcefile="tutorial/bot/oscova/nlp-components.md" sourcestartlinenumber="28" sourceendlinenumber="28">Text</li>
+</ul>
+<p sourcefile="tutorial/bot/oscova/nlp-components.md" sourcestartlinenumber="30" sourceendlinenumber="30">To add a filter use the <code>AddFilter</code> method in the <code>Language</code> property of the bot. Any deriving class may add filters in its constructor. We recommend keeping number of filters to their optimal minimum as large filtration set impacts the performance of the normalization process.</p>
+<h2 id="normalization" sourcefile="tutorial/bot/oscova/nlp-components.md" sourcestartlinenumber="32" sourceendlinenumber="32">Normalization</h2>
+<p sourcefile="tutorial/bot/oscova/nlp-components.md" sourcestartlinenumber="34" sourceendlinenumber="34">During the <em>normalization</em> process all added <em>filters</em> are applied by replacing matched words or texts with their replacement values and once the aforementioned process has completed punctuation marks are removed from the end of sentences.</p>
+<p sourcefile="tutorial/bot/oscova/nlp-components.md" sourcestartlinenumber="36" sourceendlinenumber="36">Oscova applies normalization prior to any other textual manipulation. By adding filters and applying normalizations developers can ensure common abbreviations and acronyms are addressed, junk words or texts are removed or converted into forms that help better entity recognition.</p>
+<p sourcefile="tutorial/bot/oscova/nlp-components.md" sourcestartlinenumber="39" sourceendlinenumber="39"><strong>Note:</strong> Normalization doesn&#39;t remove <em>stop-words</em>.</p>
+<h2 id="punctuations" sourcefile="tutorial/bot/oscova/nlp-components.md" sourcestartlinenumber="41" sourceendlinenumber="41">Punctuations</h2>
+<p sourcefile="tutorial/bot/oscova/nlp-components.md" sourcestartlinenumber="43" sourceendlinenumber="43">An array of common punctuation characters.</p>
+<p sourcefile="tutorial/bot/oscova/nlp-components.md" sourcestartlinenumber="45" sourceendlinenumber="45">Though punctuation marks may aid in interpretation, Oscova in V1 doesn&#39;t make use of punctuation marks during word sense disambiguation and hence punctuations at the end of sentences are truncated during the <em>normalization</em> process.</p>
+<h2 id="stop-words" sourcefile="tutorial/bot/oscova/nlp-components.md" sourcestartlinenumber="48" sourceendlinenumber="48">Stop-Words</h2>
+<p sourcefile="tutorial/bot/oscova/nlp-components.md" sourcestartlinenumber="50" sourceendlinenumber="50"><em>Stop-Words</em> are commonly used words that do not contribute much to the meaning of the user input. Oscova doesn&#39;t directly disregard <em>stop-words</em>. The internal scoring system for intents considers both Expression and User input match score. The existence of stop words only influence the user input match score.</p>
+<p sourcefile="tutorial/bot/oscova/nlp-components.md" sourcestartlinenumber="52" sourceendlinenumber="52">The default <code>EnglishLanguage</code> class already adds a list of most common stop words in the English language to the <code>StopWords</code> property. When adding new words to the list we recommend not being too agreesive as adding large sets of stop words may impact semantic similarity scoring.</p>
+<h2 id="tokenizer" sourcefile="tutorial/bot/oscova/nlp-components.md" sourcestartlinenumber="54" sourceendlinenumber="54">Tokenizer</h2>
+<p sourcefile="tutorial/bot/oscova/nlp-components.md" sourcestartlinenumber="56" sourceendlinenumber="56">The default <em>EnglishTokenizer</em> splits the user input based on space character. Contractions like (<em>they&#39;re</em>, <em>I&#39;ll</em>) are considered as single tokens. Values within <em>curly braces</em> are treated as single tokens as the <em>Expressions</em> rely on tokenization for creating internal expression tokens.</p>
+<h2 id="detokenizer" sourcefile="tutorial/bot/oscova/nlp-components.md" sourcestartlinenumber="58" sourceendlinenumber="58">Detokenizer</h2>
+<p sourcefile="tutorial/bot/oscova/nlp-components.md" sourcestartlinenumber="60" sourceendlinenumber="60">The default <code>EnglishDetokenizer</code> simply merges a given set of tokens to their detokenized form. Due to the nature of tokenization not all detokenized forms will represent their initial forms. Detokenization is also used internally by Oscova to generate <em>interpretation</em> of matched intent results.</p>
+<h2 id="stemmer" sourcefile="tutorial/bot/oscova/nlp-components.md" sourcestartlinenumber="62" sourceendlinenumber="62">Stemmer</h2>
+<p sourcefile="tutorial/bot/oscova/nlp-components.md" sourcestartlinenumber="64" sourceendlinenumber="64">A <em>stemmer</em> reduces words to the their root forms. The default <code>EnglishStemmer</code> is partially a <em>lemmatizer</em> that reduces words to their lemma. For example, the word <em>jumped</em> is reduced to <em>jump</em> and the word <em>having</em> is reduced to <em>have</em>. Despite the lemmatization behaviour of the <em>stemmer</em> we recommend still treating it as a normal stemmer.</p>
+<h2 id="lexical-database" sourcefile="tutorial/bot/oscova/nlp-components.md" sourcestartlinenumber="66" sourceendlinenumber="66">Lexical Database</h2>
+<p sourcefile="tutorial/bot/oscova/nlp-components.md" sourcestartlinenumber="68" sourceendlinenumber="68">Especially for Oscova we have released <code>Syn.WordNet</code> library to help connect Oscova with  WordNet (a freely available lexical database). Connecting WordNet to Oscova greatly increases the scoring accuracy and NLP capabilities. If an external <em>lexical database</em> is added Oscova calls the <code>GetWordSimilarity</code> method found in the <code>ILexicalDatabase</code> interface.</p>
+<p sourcefile="tutorial/bot/oscova/nlp-components.md" sourcestartlinenumber="70" sourceendlinenumber="70"><strong>Note:</strong> We highly recommend integrating <code>Syn.WordNet</code> with Oscova if your Bot is remotely deployed.</p>
+<h2 id="deep-learning-in-v2" sourcefile="tutorial/bot/oscova/nlp-components.md" sourcestartlinenumber="72" sourceendlinenumber="72">Deep Learning (in V2)</h2>
+<p sourcefile="tutorial/bot/oscova/nlp-components.md" sourcestartlinenumber="74" sourceendlinenumber="74">In V1 the <code>ProcessingMode</code> option in <em>bot configuration</em> has been intentionally kept read-only. We are currently experimenting with a Deep Neural Network (DNN) design that has the fastest learning capabilities and extracts maximum number of relevant features from training samples. Once the architecture has been designed <code>DeepLearning</code> option will be enabled in V2.</p>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2016 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

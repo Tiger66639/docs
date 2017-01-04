@@ -88,7 +88,7 @@
               
               <h1 id="Syn_Bot_Oscova_BotConfiguration" data-uid="Syn.Bot.Oscova.BotConfiguration">Class BotConfiguration
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="api/Syn.Bot.Oscova.BotConfiguration.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Represents the Bot configuration to be used by various components.</p>
+              <div class="markdown level0 summary"><p sourcefile="api/Syn.Bot.Oscova.BotConfiguration.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Represents the Bot configuration used by various components.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -165,13 +165,13 @@
               <h5 id="Syn_Bot_Oscova_BotConfiguration_ContextLifespan_remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p sourcefile="api/Syn.Bot.Oscova.BotConfiguration.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A <a class="xref" href="Syn.Bot.Oscova.ContextItem.html#Syn_Bot_Oscova_ContextItem">ContextItem</a> is removed after being idle for the specified lifespan.</p>
 </div>
-              <h4 id="Syn_Bot_Oscova_BotConfiguration_MatchMode" data-uid="Syn.Bot.Oscova.BotConfiguration.MatchMode">MatchMode</h4>
-              <div class="markdown level1 summary"><p sourcefile="api/Syn.Bot.Oscova.BotConfiguration.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Gets or sets the match mode.</p>
+              <h4 id="Syn_Bot_Oscova_BotConfiguration_MachineLearningRate" data-uid="Syn.Bot.Oscova.BotConfiguration.MachineLearningRate">MachineLearningRate</h4>
+              <div class="markdown level1 summary"><p sourcefile="api/Syn.Bot.Oscova.BotConfiguration.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Gets or sets the machine learning rate.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public MatchMode MatchMode { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">public double MachineLearningRate { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -183,14 +183,14 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Syn.Bot.Oscova.MatchMode.html#Syn_Bot_Oscova_MatchMode">MatchMode</a></td>
-                    <td><p sourcefile="api/Syn.Bot.Oscova.BotConfiguration.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The match mode.</p>
+                    <td><span class="xref">System.Double</span></td>
+                    <td><p sourcefile="api/Syn.Bot.Oscova.BotConfiguration.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The machine learning rate.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h5 id="Syn_Bot_Oscova_BotConfiguration_MatchMode_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p sourcefile="api/Syn.Bot.Oscova.BotConfiguration.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Default is <a class="xref" href="Syn.Bot.Oscova.MatchMode.html#Syn_Bot_Oscova_MatchMode_Rule">Rule</a></p>
+              <h5 id="Syn_Bot_Oscova_BotConfiguration_MachineLearningRate_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p sourcefile="api/Syn.Bot.Oscova.BotConfiguration.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Default is <code>0.25</code></p>
 </div>
               <h4 id="Syn_Bot_Oscova_BotConfiguration_MaxIntentCount" data-uid="Syn.Bot.Oscova.BotConfiguration.MaxIntentCount">MaxIntentCount</h4>
               <div class="markdown level1 summary"><p sourcefile="api/Syn.Bot.Oscova.BotConfiguration.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Gets or sets the maximum number of intents to return after evaluation.</p>
@@ -219,13 +219,13 @@
               <h5 id="Syn_Bot_Oscova_BotConfiguration_MaxIntentCount_remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p sourcefile="api/Syn.Bot.Oscova.BotConfiguration.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Default is <code>5</code></p>
 </div>
-              <h4 id="Syn_Bot_Oscova_BotConfiguration_MinimumScore" data-uid="Syn.Bot.Oscova.BotConfiguration.MinimumScore">MinimumScore</h4>
-              <div class="markdown level1 summary"><p sourcefile="api/Syn.Bot.Oscova.BotConfiguration.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Gets or sets the absolute minimum intent score.</p>
+              <h4 id="Syn_Bot_Oscova_BotConfiguration_ProcessingMode" data-uid="Syn.Bot.Oscova.BotConfiguration.ProcessingMode">ProcessingMode</h4>
+              <div class="markdown level1 summary"><p sourcefile="api/Syn.Bot.Oscova.BotConfiguration.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Gets or sets the processing mode.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public double MinimumScore { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">public ProcessingMode ProcessingMode { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -237,14 +237,14 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Double</span></td>
-                    <td><p sourcefile="api/Syn.Bot.Oscova.BotConfiguration.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The minimum intent score.</p>
+                    <td><a class="xref" href="Syn.Bot.Oscova.ProcessingMode.html#Syn_Bot_Oscova_ProcessingMode">ProcessingMode</a></td>
+                    <td><p sourcefile="api/Syn.Bot.Oscova.BotConfiguration.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The processing mode.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h5 id="Syn_Bot_Oscova_BotConfiguration_MinimumScore_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p sourcefile="api/Syn.Bot.Oscova.BotConfiguration.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Default is <code>0.05</code></p>
+              <h5 id="Syn_Bot_Oscova_BotConfiguration_ProcessingMode_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p sourcefile="api/Syn.Bot.Oscova.BotConfiguration.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Default is <code>NLP</code></p>
 </div>
               <h4 id="Syn_Bot_Oscova_BotConfiguration_RequiredRecognizersOnly" data-uid="Syn.Bot.Oscova.BotConfiguration.RequiredRecognizersOnly">RequiredRecognizersOnly</h4>
               <div class="markdown level1 summary"><p sourcefile="api/Syn.Bot.Oscova.BotConfiguration.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Gets or sets a value indicating whether <a class="xref" href="Syn.Bot.Oscova.OscovaBot.html#Syn_Bot_Oscova_OscovaBot">OscovaBot</a> should load only required entity recognizers.</p>
@@ -273,13 +273,13 @@
               <h5 id="Syn_Bot_Oscova_BotConfiguration_RequiredRecognizersOnly_remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p sourcefile="api/Syn.Bot.Oscova.BotConfiguration.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Default is <code>false</code></p>
 </div>
-              <h4 id="Syn_Bot_Oscova_BotConfiguration_RuleScoreDependency" data-uid="Syn.Bot.Oscova.BotConfiguration.RuleScoreDependency">RuleScoreDependency</h4>
-              <div class="markdown level1 summary"><p sourcefile="api/Syn.Bot.Oscova.BotConfiguration.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Gets or sets the rule score dependency percentage.</p>
+              <h4 id="Syn_Bot_Oscova_BotConfiguration_Scoring" data-uid="Syn.Bot.Oscova.BotConfiguration.Scoring">Scoring</h4>
+              <div class="markdown level1 summary"><p sourcefile="api/Syn.Bot.Oscova.BotConfiguration.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Gets the scoring configuration.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public double RuleScoreDependency { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">public ScoreConfiguration Scoring { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -291,14 +291,66 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Double</span></td>
-                    <td><p sourcefile="api/Syn.Bot.Oscova.BotConfiguration.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The rule score dependency percentage.</p>
+                    <td><a class="xref" href="Syn.Bot.Oscova.ScoreConfiguration.html#Syn_Bot_Oscova_ScoreConfiguration">ScoreConfiguration</a></td>
+                    <td><p sourcefile="api/Syn.Bot.Oscova.BotConfiguration.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The scoring configuration</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h5 id="Syn_Bot_Oscova_BotConfiguration_RuleScoreDependency_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p sourcefile="api/Syn.Bot.Oscova.BotConfiguration.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Default is <code>0.6</code></p>
+              <h4 id="Syn_Bot_Oscova_BotConfiguration_ShowIntentInterpretation" data-uid="Syn.Bot.Oscova.BotConfiguration.ShowIntentInterpretation">ShowIntentInterpretation</h4>
+              <div class="markdown level1 summary"><p sourcefile="api/Syn.Bot.Oscova.BotConfiguration.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Gets or sets a value indicating whether intent interpretation must be serialized.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool ShowIntentInterpretation { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td><p sourcefile="api/Syn.Bot.Oscova.BotConfiguration.yml" sourcestartlinenumber="2" sourceendlinenumber="2"><code>true</code> if intent interpretation must be serialized; otherwise, <code>false</code>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Syn_Bot_Oscova_BotConfiguration_ShowIntentInterpretation_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p sourcefile="api/Syn.Bot.Oscova.BotConfiguration.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Defautl is <code>false</code></p>
+</div>
+              <h4 id="Syn_Bot_Oscova_BotConfiguration_UseFullIntentName" data-uid="Syn.Bot.Oscova.BotConfiguration.UseFullIntentName">UseFullIntentName</h4>
+              <div class="markdown level1 summary"><p sourcefile="api/Syn.Bot.Oscova.BotConfiguration.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Gets or sets a value indicating whether to use full intent name.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool UseFullIntentName { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td><p sourcefile="api/Syn.Bot.Oscova.BotConfiguration.yml" sourcestartlinenumber="2" sourceendlinenumber="2"><code>true</code> if use full intent name; otherwise, <code>false</code>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Syn_Bot_Oscova_BotConfiguration_UseFullIntentName_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p sourcefile="api/Syn.Bot.Oscova.BotConfiguration.yml" sourcestartlinenumber="2" sourceendlinenumber="3">A full intent name combines the dialog class name and intent method name.
+Default is <code>true</code></p>
 </div>
             </article>
           </div>

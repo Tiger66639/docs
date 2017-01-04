@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Serialization  - Syn Developer Network</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Serialization ">
+    <meta name="generator" content="docfx 2.6.1.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    <meta property="docfx:rel" content="../../../">
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+    ga('create', 'UA-39941606-1', 'auto');
+    ga('send', 'pageview');
+  
+  </script>
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="serialization" sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="1" sourceendlinenumber="1">Serialization</h1>
+              
+<p sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="3" sourceendlinenumber="3">Oscova comes with in-built support for serialization of evaluation results and bot responses. The internal serialization option ensures that all essential details are available and also that the size foot-print is the least. For example, empty resolutions, parametric and array values are not included.</p>
+<p sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="5" sourceendlinenumber="5">Using the serialization option developers can connect the Oscova evaluation results to execute actions or display prompts in custom applications that may not be running Oscova Bot locally.</p>
+<h2 id="evaluation-result" sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="7" sourceendlinenumber="7">Evaluation Result</h2>
+<p sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="9" sourceendlinenumber="9">When an <code>EvaluationResult</code> is returned after evaluation. Calling the <code>Serialize()</code> method yields the result in JSON in the following format.</p>
+<p sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="11" sourceendlinenumber="11"><strong>Example</strong></p>
+<pre sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="13" sourceendlinenumber="39"><code class="lang-json">{
+  &quot;query&quot;: &quot;large pizza with pepperoni&quot;,
+  &quot;sessionId&quot;: &quot;489746c0-1a4f-4572-947b-0f5680cfc28a&quot;,
+  &quot;intents&quot;: [
+    {
+      &quot;intent&quot;: &quot;PizzaDialog.PizzaWithToppings&quot;,
+      &quot;score&quot;: 0.85733333333333326
+    },
+    {
+      &quot;intent&quot;: &quot;PizzaDialog.PizzaOrder&quot;,
+      &quot;score&quot;: 0.41666666666666663
+    }
+  ],
+  &quot;entities&quot;: [
+    {
+      &quot;entity&quot;: &quot;large&quot;,
+      &quot;type&quot;: &quot;size&quot;
+    },
+    {
+      &quot;entity&quot;: &quot;pepperoni&quot;,
+      &quot;type&quot;: &quot;toppings&quot;
+    }
+  ],
+  &quot;contexts&quot;: [ ]
+}
+</code></pre><p sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="41" sourceendlinenumber="41">A typical <em>result</em> object has the following properties.</p>
+<table sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="43" sourceendlinenumber="49">
+<thead>
+<tr>
+<th style="text-align:left">Property</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>query</code></td>
+<td style="text-align:left">The original user message.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>sessionId</code></td>
+<td style="text-align:left">The user&#39;s session ID.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>intents</code></td>
+<td style="text-align:left">List of all matched intents.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>entities</code></td>
+<td style="text-align:left">List of all the extracted entities.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>contexts</code></td>
+<td style="text-align:left">List of all currently active context items.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="intents" sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="51" sourceendlinenumber="51">Intents</h3>
+<p sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="53" sourceendlinenumber="53"><strong>Example Intent</strong></p>
+<pre sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="55" sourceendlinenumber="60"><code class="lang-json">{
+  &quot;intent&quot;: &quot;PizzaDialog.PizzaWithToppings&quot;,
+  &quot;score&quot;: 0.81532331423326
+}
+</code></pre><p sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="62" sourceendlinenumber="62"><strong>Example Intent with Prompt</strong></p>
+<pre sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="64" sourceendlinenumber="70"><code class="lang-json">{
+  &quot;intent&quot;: &quot;RestaurantDialog.FindRestaurant&quot;,
+  &quot;score&quot;: 0.715634952,
+  &quot;prompt&quot;: &quot;Please specify a location.&quot;
+}
+</code></pre><p sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="72" sourceendlinenumber="72">An <em>intent</em> object has 3 properties.</p>
+<table sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="74" sourceendlinenumber="78">
+<thead>
+<tr>
+<th style="text-align:left">Property</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>intent</code></td>
+<td style="text-align:left">The full name of the intent or the value of the <code>Name</code> attribute added.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>score</code></td>
+<td style="text-align:left">The calibrated intent match score.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>prompt</code></td>
+<td style="text-align:left">Prompt message attached to the intent when a required entity type is missing.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="entities" sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="80" sourceendlinenumber="80">Entities</h3>
+<p sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="82" sourceendlinenumber="82"><strong>Example Entity</strong></p>
+<pre sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="84" sourceendlinenumber="89"><code class="lang-json">{
+  &quot;entity&quot;: &quot;pepperoni&quot;,
+  &quot;type&quot;: &quot;toppings&quot;
+}
+</code></pre><p sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="91" sourceendlinenumber="91"><strong>Example Entity with Resolution</strong></p>
+<pre sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="93" sourceendlinenumber="101"><code class="lang-json">{
+  &quot;entity&quot;: &quot;tomorrow&quot;,
+  &quot;type&quot;: &quot;sys.date&quot;,
+  &quot;resolution&quot;: {
+    &quot;date&quot;: &quot;2017-01-05&quot;
+  }
+}
+</code></pre><p sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="103" sourceendlinenumber="103">An <em>entity</em> object has 3 properties.</p>
+<table sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="105" sourceendlinenumber="109">
+<thead>
+<tr>
+<th style="text-align:left">Property</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>entity</code></td>
+<td style="text-align:left">The matched string value.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>type</code></td>
+<td style="text-align:left">The entity type.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>resolution</code></td>
+<td style="text-align:left">Resolutions for the matched entity type.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="contexts" sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="111" sourceendlinenumber="111">Contexts</h3>
+<p sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="113" sourceendlinenumber="113"><strong>Example Context</strong></p>
+<pre sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="115" sourceendlinenumber="120"><code class="lang-json">{
+  &quot;name&quot;: &quot;order_confirmation&quot;,
+  &quot;lifespan&quot;: 5
+}
+</code></pre><p sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="122" sourceendlinenumber="122"><strong>Example Context with Parameter</strong></p>
+<pre sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="124" sourceendlinenumber="133"><code class="lang-json">{
+  &quot;name&quot;: &quot;video_playback&quot;,
+  &quot;lifespan&quot;: 5,
+  &quot;parameters&quot;: {
+    &quot;name&quot;: &quot;movie_name&quot;,
+    &quot;value&quot;: &quot;Life_is_Beautiful&quot;
+  }
+}
+</code></pre><p sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="135" sourceendlinenumber="135">A <em>Context</em> object has 3 properties.</p>
+<table sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="137" sourceendlinenumber="141">
+<thead>
+<tr>
+<th style="text-align:left">Property</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>name</code></td>
+<td style="text-align:left">The name of the context item.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>lifespan</code></td>
+<td style="text-align:left">The lifespan of the context item. If the context name belongs to a conditionally existing context this property must be ignored.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>parameters</code></td>
+<td style="text-align:left">Additional parameters attached with the context.</td>
+</tr>
+</tbody>
+</table>
+<p sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="143" sourceendlinenumber="143">A <em>Parameter</em> object has 2 properties.</p>
+<table sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="145" sourceendlinenumber="148">
+<thead>
+<tr>
+<th style="text-align:left">Property</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>name</code></td>
+<td style="text-align:left">The name of the parameter.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>value</code></td>
+<td style="text-align:left">The value of the parameter.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="response" sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="150" sourceendlinenumber="150">Response</h2>
+<p sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="152" sourceendlinenumber="152">A instance of the <code>Response</code> class can also be serialized using the <code>Serialize()</code> method.</p>
+<p sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="154" sourceendlinenumber="154"><strong>Example Response</strong></p>
+<pre sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="156" sourceendlinenumber="162"><code class="lang-json">{
+  &quot;text&quot;: &quot;App opened&quot;,
+  &quot;type&quot;: &quot;message&quot;,
+  &quot;format&quot;: &quot;plain&quot;,
+}
+</code></pre><p sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="164" sourceendlinenumber="164"><strong>Example Response with Hint</strong></p>
+<pre sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="166" sourceendlinenumber="173"><code class="lang-json">{
+  &quot;text&quot;: &quot;Are you sure?&quot;,
+  &quot;type&quot;: &quot;message&quot;,
+  &quot;format&quot;: &quot;plain&quot;,
+  &quot;hint&quot;: &quot;Yes|No&quot;
+}
+</code></pre><p sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="175" sourceendlinenumber="175">A typical <em>response</em> object has the following propperties.</p>
+<table sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="177" sourceendlinenumber="182">
+<thead>
+<tr>
+<th style="text-align:left">Property</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>text</code></td>
+<td style="text-align:left">The value associated with the response.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>type</code></td>
+<td style="text-align:left">The type of the response generated.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>format</code></td>
+<td style="text-align:left">The format of the response.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>hint</code></td>
+<td style="text-align:left">A hint to the next user input expected by the Bot.</td>
+</tr>
+</tbody>
+</table>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2016 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

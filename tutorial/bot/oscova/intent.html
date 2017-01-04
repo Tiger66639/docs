@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Intents  - Syn Developer Network</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Intents ">
+    <meta name="generator" content="docfx 2.6.1.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    <meta property="docfx:rel" content="../../../">
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+    ga('create', 'UA-39941606-1', 'auto');
+    ga('send', 'pageview');
+  
+  </script>
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="intents" sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="1" sourceendlinenumber="1">Intents</h1>
+              
+<p sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="3" sourceendlinenumber="3">In Oscova an intent is any action that the bot is supposed to execute when they user message matches an expression. An intent is a <code>void</code> method with a <code>public</code> modifier. The name of the intent is taken directly from the method name.</p>
+<h2 id="declaration" sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="5" sourceendlinenumber="5">Declaration</h2>
+<pre sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="7" sourceendlinenumber="13"><code class="lang-csharp">[Expression(&quot;How is the weather?&quot;)]
+public void Weather(Context context, Result result)
+{
+    //Do something.
+}
+</code></pre><p sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="15" sourceendlinenumber="15">An <em>intent</em> method must always be a member of a class that derives from the <code>Dialog</code> class and must have atleast 1 <em><a href="expression.html" sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="15" sourceendlinenumber="15">Expression</a></em> attribute attached to it. By convention an Intent must take 2 parameters. The first being <code>Context</code> and the second being the <code>Result</code>.</p>
+<table sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="17" sourceendlinenumber="20">
+<thead>
+<tr>
+<th style="text-align:left">Parameter</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Context</td>
+<td style="text-align:left">The <code>Context</code> provides information regarding the current user conversation context and also enables adding and removing <em>context</em> and relative <em>parameters</em>. Apart from that the <code>Context</code> instance also has a <code>SharedData</code> property for the developer to store and retrieve shared objects throughout a user session.</td>
+</tr>
+<tr>
+<td style="text-align:left">Result</td>
+<td style="text-align:left">The <code>Result</code> is the evaluated result that Oscova generated for this particular user message. Its <code>Entities</code> property contains all the recognized global and parametric entities. Its <code>CurrentIntent</code>property represents the current intent that is being invoked.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="parameter-sequence" sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="22" sourceendlinenumber="22">Parameter Sequence</h2>
+<p sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="24" sourceendlinenumber="24">Developers are not restricted to specifying 2 parameters in all intents. All of the following method signature are valid intents. During invocation, Oscova will pass the right parameters to the intent.</p>
+<pre sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="26" sourceendlinenumber="29"><code class="lang-csharp">[Expression(&quot;How is the weather?&quot;)]
+public void Weather()
+</code></pre><pre sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="31" sourceendlinenumber="34"><code class="lang-csharp">[Expression(&quot;How is the weather?&quot;)]
+public void Weather(Context context)
+</code></pre><pre sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="36" sourceendlinenumber="39"><code class="lang-csharp">[Expression(&quot;How is the weather?&quot;)]
+public void Weather(Result result)
+</code></pre><pre sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="41" sourceendlinenumber="44"><code class="lang-csharp">[Expression(&quot;How is the weather?&quot;)]
+public void Weather(Context context, Result result)
+</code></pre><h2 id="name" sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="46" sourceendlinenumber="46">Name</h2>
+<p sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="48" sourceendlinenumber="48">By default the name of an <em>Intent</em> is the combination of the name of the dialog and the method name. For example, the name of an intent with the method name <em>FindHotel</em> present within the <em>HotelDialog</em> class will be <em>HotelDialog.FindHotel</em>. If you do not wish to include the <em>dialog</em> name in intent names, you may set the value of <code>UseFullIntentName</code> to <code>false</code> in bot configuration.</p>
+<p sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="50" sourceendlinenumber="50">Moreover, if you wish to add a custom name to an intent you may use the <code>Name</code> attribute as shown below.</p>
+<pre sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="52" sourceendlinenumber="56"><code class="lang-csharp">[Expression(&quot;Find a hotel nearby&quot;)]
+[Name(&quot;nearestHotel&quot;)]
+public void FindHotel(Context context, Result result)
+</code></pre><p sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="58" sourceendlinenumber="58">As a <code>Name</code> attribute has been used, the name of the above intent during serialization will <code>nearestHotel</code>.</p>
+<p sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="60" sourceendlinenumber="60"><strong>Note:</strong> Value of the <code>UseFullIntentName</code> property in bot configuration gets ignored if a developer explicitly specifies an intent name using the <code>Name</code> attribute.</p>
+<h2 id="default-intent" sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="63" sourceendlinenumber="63">Default Intent</h2>
+<p sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="65" sourceendlinenumber="65">A <code>Default</code> intent is an intent that is invoked if the user input doesn&#39;t match any existing regular intent. If none of the added <em>Dialogs</em> have a default Intent, Oscova adds an internal <em>default</em> intent with no action.</p>
+<p sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="67" sourceendlinenumber="67">To create a <em>Default</em> intent for a Dialog. Create an Intent and decorate it with an <em>empty</em> Expression as shown below.</p>
+<pre sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="69" sourceendlinenumber="75"><code class="lang-csharp">[Expression]
+public void Default(Context context, Result result)
+{
+    result.Send(&quot;Can you please rephrase that for me?&quot;);
+}
+</code></pre>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2016 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Entity Recognizers  - Syn Developer Network</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Entity Recognizers ">
+    <meta name="generator" content="docfx 2.6.1.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    <meta property="docfx:rel" content="../../../">
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+    ga('create', 'UA-39941606-1', 'auto');
+    ga('send', 'pageview');
+  
+  </script>
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="entity-recognizers" sourcefile="tutorial/bot/oscova/entity-recognizer.md" sourcestartlinenumber="1" sourceendlinenumber="1">Entity Recognizers</h1>
+              
+<p sourcefile="tutorial/bot/oscova/entity-recognizer.md" sourcestartlinenumber="3" sourceendlinenumber="3">Oscova supports multiple ways of rapidly creating entity recognizers. Developers can create entity recognizers for known words, patterns via regular expressions or even by providing methods that extract entities from request.</p>
+<h2 id="entries-recognizer" sourcefile="tutorial/bot/oscova/entity-recognizer.md" sourcestartlinenumber="5" sourceendlinenumber="5">Entries Recognizer</h2>
+<p sourcefile="tutorial/bot/oscova/entity-recognizer.md" sourcestartlinenumber="7" sourceendlinenumber="7">For list of known words (entries) developer can easily create an <em>Entity Recognizer</em> by calling the <code>CreateRecognizer</code> method, specifying the <code>EntityType</code> parsed by the entity recognizer and an array of known entry values.</p>
+<pre sourcefile="tutorial/bot/oscova/entity-recognizer.md" sourcestartlinenumber="10" sourceendlinenumber="13"><code class="lang-csharp">var bot = new OscovaBot();
+bot.CreateRecognizer(&quot;employee&quot;, new[] { &quot;Sean&quot;, &quot;Ali&quot;, &quot;Patel&quot; });
+</code></pre><p sourcefile="tutorial/bot/oscova/entity-recognizer.md" sourcestartlinenumber="15" sourceendlinenumber="15">The above code creates an <em>Entity Recognizer</em> for the type <code>employee</code>. If any of specified entry is found in user request and <code>Entity</code> of type <code>employee</code> will get added to the result.</p>
+<blockquote sourcefile="tutorial/bot/oscova/entity-recognizer.md" sourcestartlinenumber="17" sourceendlinenumber="17"><p sourcefile="tutorial/bot/oscova/entity-recognizer.md" sourcestartlinenumber="17" sourceendlinenumber="17">Note: Any <em>entity recognizer</em> created by calling the <code>CreateRecognizer</code> gets added to the Bot&#39;s <code>Recognizers</code> collection.</p>
+</blockquote>
+<p sourcefile="tutorial/bot/oscova/entity-recognizer.md" sourcestartlinenumber="19" sourceendlinenumber="19">You can also create an Entries Recognizer by creating an empty entries recognizer and later adding entry values as shown value.</p>
+<pre sourcefile="tutorial/bot/oscova/entity-recognizer.md" sourcestartlinenumber="21" sourceendlinenumber="26"><code class="lang-csharp">var recognizer = bot.CreateRecognizer(&quot;employee&quot;);
+recognizer.Entries.Add(&quot;Sean&quot;);
+recognizer.Entries.Add(&quot;Ali&quot;);
+recognizer.Entries.Add(&quot;Patel&quot;);
+</code></pre><p sourcefile="tutorial/bot/oscova/entity-recognizer.md" sourcestartlinenumber="28" sourceendlinenumber="28">All <em>entry</em> based entity recognizers are greedy. For example, if you have an entry  <strong>gray</strong> and another entry <strong>dark gray</strong>. If the user message contains <strong><em>Dark Gray</em></strong> the entity recognizer will return one entity with value <strong>dark gray</strong>.</p>
+<h2 id="enumeration-recognizer" sourcefile="tutorial/bot/oscova/entity-recognizer.md" sourcestartlinenumber="30" sourceendlinenumber="30">Enumeration Recognizer</h2>
+<p sourcefile="tutorial/bot/oscova/entity-recognizer.md" sourcestartlinenumber="32" sourceendlinenumber="32">Developers can also create <em>Entity Recognizers</em> for <code>enum</code> types.</p>
+<pre sourcefile="tutorial/bot/oscova/entity-recognizer.md" sourcestartlinenumber="34" sourceendlinenumber="42"><code class="lang-csharp">enum PriorityTypes
+{
+    Low,
+    High,
+    Mininum,
+    Maxinum
+}
+</code></pre><pre sourcefile="tutorial/bot/oscova/entity-recognizer.md" sourcestartlinenumber="44" sourceendlinenumber="47"><code class="lang-csharp">var bot = new OscovaBot();
+bot.CreateRecognizer&lt;PriorityTypes&gt;(&quot;priority&quot;);
+</code></pre><p sourcefile="tutorial/bot/oscova/entity-recognizer.md" sourcestartlinenumber="49" sourceendlinenumber="49">In the above code we pass the type <code>PriorityTypes</code> and specify entity type name for the new entry based recognizer. All enum values <code>Low</code>, <code>High</code>, <code>Minimum</code> and <code>Maximum</code> will be treated as entry values.</p>
+<p sourcefile="tutorial/bot/oscova/entity-recognizer.md" sourcestartlinenumber="51" sourceendlinenumber="51">Developers can also specify entry <em>synonyms</em> by decorating an enum value with the <code>Synonyms</code> attribute as shown below.</p>
+<pre sourcefile="tutorial/bot/oscova/entity-recognizer.md" sourcestartlinenumber="53" sourceendlinenumber="65"><code class="lang-csharp">enum PriorityTypes
+{
+    Low,
+    High,
+
+    [Synonyms(&quot;Min&quot;)]
+    Minimum,
+
+    [Synonyms(&quot;Max&quot;)]
+    Maximum
+}
+</code></pre><p sourcefile="tutorial/bot/oscova/entity-recognizer.md" sourcestartlinenumber="67" sourceendlinenumber="67">As synonyms have been added the <em>entity recognizer</em> will now consider the words <code>Min</code> and <code>Max</code> when parsing a request. The <em>entity recognizer</em> will also link the enum value and synonyms during entity creation. This allows developers to fetch the value of the created entity as an enum type.</p>
+<pre sourcefile="tutorial/bot/oscova/entity-recognizer.md" sourcestartlinenumber="69" sourceendlinenumber="72"><code class="lang-csharp">var entity = result.Entities.OfType(&quot;priority&quot;);
+var priority = entity.ValueAs&lt;PriorityTypes&gt;();
+</code></pre><p sourcefile="tutorial/bot/oscova/entity-recognizer.md" sourcestartlinenumber="74" sourceendlinenumber="74">The value of the variable <code>priority</code> will be <code>PriorityTypes.Minimum</code> if <code>entity.Value</code> is <code>Min</code> or <code>Minimum</code>.</p>
+<h2 id="pattern-recognizer" sourcefile="tutorial/bot/oscova/entity-recognizer.md" sourcestartlinenumber="76" sourceendlinenumber="76">Pattern Recognizer</h2>
+<p sourcefile="tutorial/bot/oscova/entity-recognizer.md" sourcestartlinenumber="78" sourceendlinenumber="78">You can create a regular expression based entity recognizer by specifying the entity type and passing in the <code>Regex</code> instance.</p>
+<pre sourcefile="tutorial/bot/oscova/entity-recognizer.md" sourcestartlinenumber="80" sourceendlinenumber="83"><code class="lang-csharp">var regex = new Regex(&quot;[0-9a-fA-F]+[\r\n]*&quot;);
+bot.CreateRecognizer(&quot;hex&quot;, regex);
+</code></pre><p sourcefile="tutorial/bot/oscova/entity-recognizer.md" sourcestartlinenumber="85" sourceendlinenumber="85">In the above code we&#39;ve created an entity recognizer for hexadecimal numbers. Whenever the pattern is matched in user message an <code>Entity</code> of type <code>hex</code> gets created.</p>
+<h2 id="functional-recognizer" sourcefile="tutorial/bot/oscova/entity-recognizer.md" sourcestartlinenumber="87" sourceendlinenumber="87">Functional Recognizer</h2>
+<p sourcefile="tutorial/bot/oscova/entity-recognizer.md" sourcestartlinenumber="89" sourceendlinenumber="89">A functional recognizer can be created by specifying an entity type and a method that returns <code>EntityCollection</code> after parsing the user message.</p>
+<pre sourcefile="tutorial/bot/oscova/entity-recognizer.md" sourcestartlinenumber="91" sourceendlinenumber="109"><code class="lang-csharp">bot.CreateRecognizer(&quot;name&quot;, request =&gt;
+{
+    var entities = new EntityCollection();
+    var message = request.NormalizedText;
+    foreach (var item in SomeValues)
+    {
+        var index = message.IndexOf(item, StringComparison.OrdinalIgnoreCase);
+        if (index == -1) continue;
+        var entity = new Entity(&quot;name&quot;)
+        {
+            Value = item,
+            Index = index
+        };
+        entities.Add(entity);
+    }
+    return entities;
+});
+</code></pre><p sourcefile="tutorial/bot/oscova/entity-recognizer.md" sourcestartlinenumber="111" sourceendlinenumber="111">Recognizers created by this method are extremely handy in situations when the developer doesn&#39;t want the Bot to load known entries into memory. Functional Recognizer is recommended for recognizing entities from Database.</p>
+<h2 id="custom-recognizer" sourcefile="tutorial/bot/oscova/entity-recognizer.md" sourcestartlinenumber="113" sourceendlinenumber="113">Custom Recognizer</h2>
+<p sourcefile="tutorial/bot/oscova/entity-recognizer.md" sourcestartlinenumber="115" sourceendlinenumber="115">A custom entity recognizer can also be built from scratch by implementing the <code>IEntityRecognizer</code> interface available under the <code>Syn.Bot.Oscova.Interfaces</code> namespace.</p>
+<p sourcefile="tutorial/bot/oscova/entity-recognizer.md" sourcestartlinenumber="117" sourceendlinenumber="117">For example, in the code below we create an entity recognizer that recognizes <em>HTML</em> content in user input.</p>
+<p sourcefile="tutorial/bot/oscova/entity-recognizer.md" sourcestartlinenumber="119" sourceendlinenumber="119"><strong>Custom HTML entity</strong></p>
+<pre sourcefile="tutorial/bot/oscova/entity-recognizer.md" sourcestartlinenumber="121" sourceendlinenumber="129"><code class="lang-csharp">public class HtmlEntity : IEntity
+{
+    public HtmlEntity() { Type = &quot;html&quot;; }
+    public string Type { get; set; }
+    public string Value { get; set; }
+    public int Index { get; set; }
+}
+</code></pre><p sourcefile="tutorial/bot/oscova/entity-recognizer.md" sourcestartlinenumber="131" sourceendlinenumber="131"><strong>Custom IEntityRecognizer implementation</strong></p>
+<pre sourcefile="tutorial/bot/oscova/entity-recognizer.md" sourcestartlinenumber="133" sourceendlinenumber="153"><code class="lang-csharp">public class HtmlRecognizer : IEntityRecognizer
+{
+    public string Type =&gt; &quot;html&quot;;
+    public EntityCollection Parse(Request request)
+    {
+        var regex = new Regex(@&quot;&lt;(?&lt;tag&gt;\w*)&gt;(?&lt;text&gt;.*)&lt;/\k&lt;tag&gt;&gt;&quot;);
+        var entities = new EntityCollection();
+        foreach (Match match in regex.Matches(request.NormalizedText))
+        {
+            var entity = new HtmlEntity
+            {
+                Value = match.Value,
+                Index = match.Index
+            };
+            entities.Add(entity);
+        }
+        return entities;
+    }
+}
+</code></pre><p sourcefile="tutorial/bot/oscova/entity-recognizer.md" sourcestartlinenumber="155" sourceendlinenumber="155">The above HTML entity recognizer uses a regular expression to match <em>HTML</em> tags in user input. After a <em>match</em> is found the recognizer creates a new entity of type <code>html</code> using the class <code>HtmlEntity</code>.</p>
+<p sourcefile="tutorial/bot/oscova/entity-recognizer.md" sourcestartlinenumber="157" sourceendlinenumber="157"><strong>Important</strong>: All entities must specify an <code>Index</code> value. That denotes the starting index of the matched content in user input.</p>
+<p sourcefile="tutorial/bot/oscova/entity-recognizer.md" sourcestartlinenumber="159" sourceendlinenumber="159">After a custom <em>entity recognizer</em> is created add it to the <code>Recognizers</code> collection before training is initiated.</p>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2016 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

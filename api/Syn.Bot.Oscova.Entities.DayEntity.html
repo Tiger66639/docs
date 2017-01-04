@@ -93,22 +93,25 @@
               <div class="inheritance">
                 <h5>Inheritance</h5>
                   <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><a class="xref" href="Syn.Bot.Oscova.Entities.BaseStringEntity.html#Syn_Bot_Oscova_Entities_BaseStringEntity">BaseStringEntity</a></div>
+                  <div class="level1"><a class="xref" href="Syn.Bot.Oscova.Entities.Entity.html#Syn_Bot_Oscova_Entities_Entity">Entity</a></div>
                   <div class="level2"><span class="xref">DayEntity</span></div>
               </div>
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
                 <div>
-                  <a class="xref" href="Syn.Bot.Oscova.Entities.BaseStringEntity.html#Syn_Bot_Oscova_Entities_BaseStringEntity_Value">BaseStringEntity.Value</a>
+                  <a class="xref" href="Syn.Bot.Oscova.Entities.Entity.html#Syn_Bot_Oscova_Entities_Entity_Value">Entity.Value</a>
                 </div>
                 <div>
-                  <a class="xref" href="Syn.Bot.Oscova.Entities.BaseStringEntity.html#Syn_Bot_Oscova_Entities_BaseStringEntity_Type">BaseStringEntity.Type</a>
+                  <a class="xref" href="Syn.Bot.Oscova.Entities.Entity.html#Syn_Bot_Oscova_Entities_Entity_Type">Entity.Type</a>
                 </div>
                 <div>
-                  <a class="xref" href="Syn.Bot.Oscova.Entities.BaseStringEntity.html#Syn_Bot_Oscova_Entities_BaseStringEntity_Index">BaseStringEntity.Index</a>
+                  <a class="xref" href="Syn.Bot.Oscova.Entities.Entity.html#Syn_Bot_Oscova_Entities_Entity_Index">Entity.Index</a>
                 </div>
                 <div>
-                  <a class="xref" href="Syn.Bot.Oscova.Entities.BaseStringEntity.html#Syn_Bot_Oscova_Entities_BaseStringEntity_ToString">BaseStringEntity.ToString()</a>
+                  <a class="xref" href="Syn.Bot.Oscova.Entities.Entity.html#Syn_Bot_Oscova_Entities_Entity_ValueAs__1">Entity.ValueAs&lt;T&gt;()</a>
+                </div>
+                <div>
+                  <a class="xref" href="Syn.Bot.Oscova.Entities.Entity.html#Syn_Bot_Oscova_Entities_Entity_ToString">Entity.ToString()</a>
                 </div>
                 <div>
                   <span class="xref">System.Object.Equals(System.Object)</span>
@@ -133,7 +136,7 @@
               <h6><strong>Assembly</strong>:Syn.Bot.dll</h6>
               <h5 id="Syn_Bot_Oscova_Entities_DayEntity_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class DayEntity : BaseStringEntity, IStringEntity, IEntity</code></pre>
+                <pre><code class="lang-csharp hljs">public class DayEntity : Entity, IEntity</code></pre>
               </div>
               <h3 id="constructors">Constructors
               </h3>
@@ -173,7 +176,8 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string Date { get; }</code></pre>
+                <pre><code class="lang-csharp hljs">[Resolution(&quot;date&quot;)]
+public string Date { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">

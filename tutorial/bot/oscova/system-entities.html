@@ -87,11 +87,12 @@
 <p sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="3" sourceendlinenumber="3">Oscova comes with many pre-built system entities to ease the Bot development process. By default all <em>Entity Recognizers</em> for the following entity types are pre-loaded during Bot training.</p>
 <p sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="5" sourceendlinenumber="5">To force the Bot to load <em>Entity Recognizers</em> only for required entity types, that are declared using <code>EntityAttribute</code>, set the value of <code>RequiredRecognizersOnly</code> to <code>true</code> in <code>BotConfiguration</code>.</p>
 <p sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="7" sourceendlinenumber="7">To load an additional <em>Entity Recognizer</em> for an entity type that is not mentioned using <code>EntityAttribute</code> you may register the entity recognizer using the following method.</p>
-<pre sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="10" sourceendlinenumber="12"><code class="lang-csharp">Bot.Recognizers.RegisterType&lt;Recognizer-Class&gt;(Entity-Type);
-</code></pre><blockquote sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="14" sourceendlinenumber="14"><p sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="14" sourceendlinenumber="14">Note: All required entity recognizers must be registered before calling the <code>Train</code> method.</p>
+<pre sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="9" sourceendlinenumber="11"><code class="lang-csharp">Bot.Recognizers.RegisterType&lt;Recognizer-Class&gt;(Entity-Type);
+</code></pre><blockquote sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="13" sourceendlinenumber="13"><p sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="13" sourceendlinenumber="13">Note: All required entity recognizers must be registered before calling the <code>Train</code> method.</p>
 </blockquote>
-<h3 id="generic" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="16" sourceendlinenumber="16">Generic</h3>
-<table sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="18" sourceendlinenumber="20">
+<h2 id="pre-built-entities" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="15" sourceendlinenumber="15">Pre-Built Entities</h2>
+<h3 id="generic" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="17" sourceendlinenumber="17">Generic</h3>
+<table sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="19" sourceendlinenumber="22">
 <thead>
 <tr>
 <th style="text-align:left">Entity Name</th>
@@ -102,15 +103,21 @@
 </thead>
 <tbody>
 <tr>
+<td style="text-align:left"><code>@sys.text</code></td>
+<td style="text-align:left">Matches non-empty text</td>
+<td style="text-align:left">Tell John @sys.text</td>
+<td style="text-align:left">Returns matched part of user input <code>I am on my way</code></td>
+</tr>
+<tr>
 <td style="text-align:left"><code>@sys.url</code></td>
 <td style="text-align:left">Matches a url</td>
-<td style="text-align:left">www.oscova.com <br> <a href="http://oscova.com" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="20" sourceendlinenumber="20">http://oscova.com</a></td>
+<td style="text-align:left">www.oscova.com <br> <a href="http://oscova.com" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="22" sourceendlinenumber="22">http://oscova.com</a></td>
 <td style="text-align:left">Returns a valid URL</td>
 </tr>
 </tbody>
 </table>
-<h3 id="date-and-time" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="22" sourceendlinenumber="22">Date and Time</h3>
-<table sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="24" sourceendlinenumber="29">
+<h3 id="date-and-time" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="24" sourceendlinenumber="24">Date and Time</h3>
+<table sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="26" sourceendlinenumber="31">
 <thead>
 <tr>
 <th style="text-align:left">Entity Name</th>
@@ -146,8 +153,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="numbers" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="32" sourceendlinenumber="32">Numbers</h3>
-<table sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="34" sourceendlinenumber="39">
+<h3 id="numbers" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="34" sourceendlinenumber="34">Numbers</h3>
+<table sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="36" sourceendlinenumber="41">
 <thead>
 <tr>
 <th style="text-align:left">Entity Name</th>
@@ -183,8 +190,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="value-and-units" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="42" sourceendlinenumber="42">Value and Units</h3>
-<table sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="44" sourceendlinenumber="54">
+<h3 id="value-and-units" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="44" sourceendlinenumber="44">Value and Units</h3>
+<table sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="46" sourceendlinenumber="56">
 <thead>
 <tr>
 <th style="text-align:left">Entity Name</th>
@@ -250,8 +257,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="unit-names" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="58" sourceendlinenumber="58">Unit Names</h3>
-<table sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="60" sourceendlinenumber="68">
+<h3 id="unit-names" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="60" sourceendlinenumber="60">Unit Names</h3>
+<table sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="62" sourceendlinenumber="70">
 <thead>
 <tr>
 <th style="text-align:left">Entity Name</th>
@@ -263,7 +270,7 @@
 <tbody>
 <tr>
 <td style="text-align:left"><code>@sys.currency.name</code></td>
-<td style="text-align:left">Currencies. [Requires Configuration]()</td>
+<td style="text-align:left">Currencies. <a href="#currency" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="64" sourceendlinenumber="64">Requires Configuration</a></td>
 <td style="text-align:left">US dollar <br> INR</td>
 <td style="text-align:left">Returns string, such as <code>USD</code></td>
 </tr>
@@ -305,8 +312,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="geography" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="72" sourceendlinenumber="72">Geography</h3>
-<table sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="74" sourceendlinenumber="82">
+<h3 id="geography" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="74" sourceendlinenumber="74">Geography</h3>
+<table sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="76" sourceendlinenumber="84">
 <thead>
 <tr>
 <th style="text-align:left">Entity Name</th>
@@ -320,13 +327,13 @@
 <td style="text-align:left"><code>@sys.geo.country</code></td>
 <td style="text-align:left">Names of countries</td>
 <td style="text-align:left">United States <br> Australia</td>
-<td style="text-align:left">Returns short country name string as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="76" sourceendlinenumber="76">ISO 3166-1</a>, such as <code>United States of America</code></td>
+<td style="text-align:left">Returns short country name string as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="78" sourceendlinenumber="78">ISO 3166-1</a>, such as <code>United States of America</code></td>
 </tr>
 <tr>
 <td style="text-align:left"><code>@sys.geo.state.us</code></td>
 <td style="text-align:left">US States</td>
 <td style="text-align:left">Arizona <br> Minnesota</td>
-<td style="text-align:left">Returns short state name string as per <a href="https://en.wikipedia.org/wiki/ISO_3166-2:US" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="77" sourceendlinenumber="77">ISO-3166-2</a>, such as <code>Ohio</code></td>
+<td style="text-align:left">Returns short state name string as per <a href="https://en.wikipedia.org/wiki/ISO_3166-2:US" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="79" sourceendlinenumber="79">ISO-3166-2</a>, such as <code>Ohio</code></td>
 </tr>
 <tr>
 <td style="text-align:left"><code>@sys.geo.state.ind</code></td>
@@ -360,8 +367,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="language" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="85" sourceendlinenumber="85">Language</h3>
-<table sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="87" sourceendlinenumber="89">
+<h3 id="language" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="87" sourceendlinenumber="87">Language</h3>
+<table sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="89" sourceendlinenumber="91">
 <thead>
 <tr>
 <th style="text-align:left">Entity Name</th>
@@ -379,8 +386,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="contacts" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="91" sourceendlinenumber="91">Contacts</h3>
-<table sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="93" sourceendlinenumber="97">
+<h3 id="contacts" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="93" sourceendlinenumber="93">Contacts</h3>
+<table sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="95" sourceendlinenumber="99">
 <thead>
 <tr>
 <th style="text-align:left">Entity Name</th>
@@ -410,8 +417,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="color" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="99" sourceendlinenumber="99">Color</h3>
-<table sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="101" sourceendlinenumber="103">
+<h3 id="color" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="101" sourceendlinenumber="101">Color</h3>
+<table sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="103" sourceendlinenumber="105">
 <thead>
 <tr>
 <th style="text-align:left">Entity Name</th>
@@ -429,8 +436,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="music" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="105" sourceendlinenumber="105">Music</h3>
-<table sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="107" sourceendlinenumber="109">
+<h3 id="music" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="107" sourceendlinenumber="107">Music</h3>
+<table sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="109" sourceendlinenumber="111">
 <thead>
 <tr>
 <th style="text-align:left">Entity Name</th>
@@ -448,9 +455,9 @@
 </tr>
 </tbody>
 </table>
-<h3 id="polar-question" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="111" sourceendlinenumber="111">Polar Question</h3>
-<p sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="113" sourceendlinenumber="113"><em>Because users can respond in any manner to </em>polar questions* some user responses may lead to some false-positives. Hence, developers are encouraged to build custom recognizers for positive and negative sentences. However, by using the following entity types the developer is solely responsible for any action executed by the Bot.*</p>
-<table sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="115" sourceendlinenumber="118">
+<h3 id="polar-question" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="113" sourceendlinenumber="113">Polar Question</h3>
+<p sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="115" sourceendlinenumber="115"><em>Because users can respond in any manner to </em>polar questions* some user responses may lead to some false-positives. Hence, developers are encouraged to build custom recognizers for positive and negative sentences. However, by using the following entity types the developer is solely responsible for any action executed by the Bot.*</p>
+<table sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="117" sourceendlinenumber="120">
 <thead>
 <tr>
 <th style="text-align:left">Entity Name</th>
@@ -474,10 +481,10 @@
 </tr>
 </tbody>
 </table>
-<h2 id="manual-configuration" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="120" sourceendlinenumber="120">Manual Configuration</h2>
-<h3 id="currency" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="122" sourceendlinenumber="122">Currency</h3>
-<p sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="124" sourceendlinenumber="124">As the word <em>dollar</em> may be used to refer to <em>United States Dollar</em> in <em>US</em> and <em>Australian Dollar</em> in <em>Australia</em>. The developer must manually extend the <code>@sys.currency.name</code> entries by adding synonyms for currency codes based on the location of the user the bot is interacting with.</p>
-<pre sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="126" sourceendlinenumber="128"><code class="lang-csharp">Bot.Recognizers[EntityTypes.CurrencyName].Entries.AddSynonyms(&quot;USD&quot;, new [] {&quot;dollar&quot;, &quot;us dollar&quot;,&quot;dollars&quot;})
+<h2 id="manual-configuration" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="122" sourceendlinenumber="122">Manual Configuration</h2>
+<h3 id="currency" sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="124" sourceendlinenumber="124">Currency</h3>
+<p sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="126" sourceendlinenumber="126">As the word <em>dollar</em> may be used to refer to <em>United States Dollar</em> in <em>US</em> and <em>Australian Dollar</em> in <em>Australia</em>. The developer must manually extend the <code>@sys.currency.name</code> entries by adding synonyms for currency codes based on the location of the user the bot is interacting with.</p>
+<pre sourcefile="tutorial/bot/oscova/system-entities.md" sourcestartlinenumber="128" sourceendlinenumber="130"><code class="lang-csharp">Bot.Recognizers[EntityTypes.CurrencyName].Entries.AddSynonyms(&quot;USD&quot;, new [] {&quot;dollar&quot;, &quot;us dollar&quot;,&quot;dollars&quot;})
 </code></pre>
             </article>
           </div>
