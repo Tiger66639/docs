@@ -88,8 +88,8 @@
 <h2 id="adding-a-prompt" sourcefile="tutorial/bot/oscova/prompt.md" sourcestartlinenumber="5" sourceendlinenumber="5">Adding a Prompt</h2>
 <p sourcefile="tutorial/bot/oscova/prompt.md" sourcestartlinenumber="7" sourceendlinenumber="7">Suppose we have an intent that play music by genre. We could add a prompt message that is received by the user if the user message doesn&#39;t contain an music genre.</p>
 <pre sourcefile="tutorial/bot/oscova/prompt.md" sourcestartlinenumber="9" sourceendlinenumber="17"><code class="lang-csharp">[Expression(&quot;play {rock} music&quot;)]
-[Entity(EntityTypes.MusicGenre)]
-[Prompt(EntityTypes.MusicGenre, &quot;Please specify a genre.&quot;)]
+[Entity(Sys.MusicGenre)]
+[Prompt(Sys.MusicGenre, &quot;Please specify a genre.&quot;)]
 public void OpenApp(Context context, Result result)
 {
     //Do Something.
@@ -118,7 +118,7 @@ public void OpenApp(Context context, Result result)
               <a href="#top">Back to top</a>
             </span>
             
-            <span>Copyright © 2011-2016 <strong>Synthetic Intelligence Network</strong></span>
+            <span>Copyright © 2011-2017 <strong>Synthetic Intelligence Network</strong></span>
           </div>
         </div>
       </footer>
