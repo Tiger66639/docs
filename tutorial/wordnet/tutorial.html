@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>WordNet Tutorial  - Syn Developer Network</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="WordNet Tutorial ">
+    <meta name="generator" content="docfx 2.6.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:rel" content="../../">
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+    ga('create', 'UA-39941606-1', 'auto');
+    ga('send', 'pageview');
+  
+  </script>
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="wordnet-tutorial" sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="1" sourceendlinenumber="1">WordNet Tutorial</h1>
+              
+<p sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="3" sourceendlinenumber="3">In order to enable better semantic analysis of tokens in user input it is highly recommended that Oscova is connected to a lexical database such as WordNet that provides an interface for scoring similarities between words.</p>
+<h2 id="creating-a-console-application" sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="5" sourceendlinenumber="5">Creating a Console application</h2>
+<p sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="7" sourceendlinenumber="7">We&#39;ll create a new C# Console project. To do so:</p>
+<ul sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="9" sourceendlinenumber="11">
+<li sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="9" sourceendlinenumber="9">Launch <strong>Visual Studio</strong> (2015 or above)</li>
+<li sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="10" sourceendlinenumber="10">Click on <em>File</em>, select <em>New</em> and then choose <em>Project...</em></li>
+<li sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="11" sourceendlinenumber="11">Then select <em>Console Application</em> and name the project <strong>WordNetConsole</strong>.</li>
+</ul>
+<h2 id="importing-wordnet" sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="13" sourceendlinenumber="13">Importing WordNet</h2>
+<p sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="15" sourceendlinenumber="15">Especially for Oscova we released <code>Syn.WordNet</code> and made it available in NuGet. To import <code>Syn.WordNet</code> to your Bot project:</p>
+<ul sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="17" sourceendlinenumber="19">
+<li sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="17" sourceendlinenumber="17">In Visual Studio, click on <strong>Tools</strong>, point to <strong>NuGet Package Manager</strong></li>
+<li sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="18" sourceendlinenumber="18">Select <strong>Package Manager Console</strong></li>
+<li sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="19" sourceendlinenumber="19">Type <code>Install-Package Syn.WordNet</code></li>
+</ul>
+<p sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="21" sourceendlinenumber="21"><code>Syn.WordNet</code> library is a standalone library and has no external dependencies.</p>
+<h2 id="loading-data" sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="23" sourceendlinenumber="23">Loading Data</h2>
+<p sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="25" sourceendlinenumber="25">Once <code>Syn.WordNet</code> library is successfully referenced in your project. You&#39;ll need to load WordNet database files for each <em>part of speech</em>. There are 4 main parts of speech for which we&#39;ll need to load data.</p>
+<ul sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="27" sourceendlinenumber="30">
+<li sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="27" sourceendlinenumber="27">Adjective</li>
+<li sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="28" sourceendlinenumber="28">Adverb</li>
+<li sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="29" sourceendlinenumber="29">Noun</li>
+<li sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="30" sourceendlinenumber="30">Verb</li>
+</ul>
+<p sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="32" sourceendlinenumber="32">To download WordNet source files please visit the official <a href="https://wordnet.princeton.edu/wordnet/download/current-version/#win" sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="32" sourceendlinenumber="32">WordNet download page</a></p>
+<p sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="34" sourceendlinenumber="34">Once download, extract all the files in the <code>bin/debug/wordnet</code> of your project. For <code>Syn.WordNet</code> we just need the following files.</p>
+<p sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="36" sourceendlinenumber="36"><strong>Data</strong></p>
+<ul sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="38" sourceendlinenumber="41">
+<li sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="38" sourceendlinenumber="38"><em>data.adj</em></li>
+<li sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="39" sourceendlinenumber="39"><em>data.adv</em></li>
+<li sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="40" sourceendlinenumber="40"><em>data.noun</em></li>
+<li sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="41" sourceendlinenumber="41"><em>data.verb</em></li>
+</ul>
+<p sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="43" sourceendlinenumber="43"><strong>Index</strong></p>
+<ul sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="45" sourceendlinenumber="48">
+<li sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="45" sourceendlinenumber="45"><em>index.adj</em></li>
+<li sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="46" sourceendlinenumber="46"><em>index.adv</em></li>
+<li sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="47" sourceendlinenumber="47"><em>index.noun</em></li>
+<li sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="48" sourceendlinenumber="48"><em>index.verb</em></li>
+</ul>
+<p sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="50" sourceendlinenumber="50">As <code>Syn.WordNet</code> is a portable class library the mechanism of loading WordNet files doesn&#39;t use traditional approach instead we use <em>StreamReader</em> to load the specific files into the <code>WordNetEngine</code>.</p>
+<h2 id="creating-list-of-data-and-index-streamreaders" sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="52" sourceendlinenumber="52">Creating List of Data and Index StreamReaders</h2>
+<p sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="54" sourceendlinenumber="54">Within the <code>static void Main(string[] args)</code> method add the following code. The code assumes that you&#39;ve already copied the aforementioned WordNet files in the <code>bin/debug/wordnet</code> folder.</p>
+<pre sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="56" sourceendlinenumber="74"><code class="lang-csharp">var directory = Path.Combine(Directory.GetCurrentDirectory(), &quot;wordnet&quot;);
+
+var dataAdj = new ReaderInfo(new StreamReader(Path.Combine(directory, &quot;data.adj&quot;)), PartOfSpeech.Adjective);
+var dataAdv = new ReaderInfo(new StreamReader(Path.Combine(directory, &quot;data.adv&quot;)), PartOfSpeech.Adverb);
+var dataNoun = new ReaderInfo(new StreamReader(Path.Combine(directory, &quot;data.noun&quot;)), PartOfSpeech.Noun);
+var dataVerb = new ReaderInfo(new StreamReader(Path.Combine(directory, &quot;data.verb&quot;)), PartOfSpeech.Verb);
+
+var indexAdj = new ReaderInfo(new StreamReader(Path.Combine(directory, &quot;index.adj&quot;)), PartOfSpeech.Adjective);
+var indexAdv = new ReaderInfo(new StreamReader(Path.Combine(directory, &quot;index.adv&quot;)), PartOfSpeech.Adverb);
+var indexNoun = new ReaderInfo(new StreamReader(Path.Combine(directory, &quot;index.noun&quot;)), PartOfSpeech.Noun);
+var indexVerb = new ReaderInfo(new StreamReader(Path.Combine(directory, &quot;index.verb&quot;)), PartOfSpeech.Verb);
+
+var dataList = new List&lt;ReaderInfo&gt; { dataAdj, dataAdv, dataNoun, dataVerb };
+var indexList = new List&lt;ReaderInfo&gt; { indexAdj, indexAdv, indexNoun, indexVerb };
+
+var wordNetEngine = new WordNetEngine();
+wordNetEngine.Load(dataList,indexList);
+</code></pre><p sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="76" sourceendlinenumber="76">And that&#39;s it you have now successfully instantiated <code>WordNetEngine</code>.</p>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2017 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

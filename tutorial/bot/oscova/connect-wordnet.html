@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Connecting WordNet to Oscova  - Syn Developer Network</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Connecting WordNet to Oscova ">
+    <meta name="generator" content="docfx 2.6.1.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    <meta property="docfx:rel" content="../../../">
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+    ga('create', 'UA-39941606-1', 'auto');
+    ga('send', 'pageview');
+  
+  </script>
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="connecting-wordnet-to-oscova" sourcefile="tutorial/bot/oscova/connect-wordnet.md" sourcestartlinenumber="1" sourceendlinenumber="1">Connecting WordNet to Oscova</h1>
+              
+<p sourcefile="tutorial/bot/oscova/connect-wordnet.md" sourcestartlinenumber="3" sourceendlinenumber="3">In order to enable better semantic analysis of tokens in user input it is highly recommended that Oscova is connected to a lexical database such as WordNet that provides an interface for scoring similarities between words.</p>
+<h2 id="importing-wordnet" sourcefile="tutorial/bot/oscova/connect-wordnet.md" sourcestartlinenumber="5" sourceendlinenumber="5">Importing WordNet</h2>
+<p sourcefile="tutorial/bot/oscova/connect-wordnet.md" sourcestartlinenumber="7" sourceendlinenumber="7">Especially for Oscova we released <code>Syn.WordNet</code> and made it available in NuGet. To import <code>Syn.WordNet</code> to your Bot project:</p>
+<ul sourcefile="tutorial/bot/oscova/connect-wordnet.md" sourcestartlinenumber="9" sourceendlinenumber="11">
+<li sourcefile="tutorial/bot/oscova/connect-wordnet.md" sourcestartlinenumber="9" sourceendlinenumber="9">In Visual Studio, click on <strong>Tools</strong>, point to <strong>NuGet Package Manager</strong></li>
+<li sourcefile="tutorial/bot/oscova/connect-wordnet.md" sourcestartlinenumber="10" sourceendlinenumber="10">Select <strong>Package Manager Console</strong></li>
+<li sourcefile="tutorial/bot/oscova/connect-wordnet.md" sourcestartlinenumber="11" sourceendlinenumber="11">Type <code>Install-Package Syn.WordNet</code></li>
+</ul>
+<p sourcefile="tutorial/bot/oscova/connect-wordnet.md" sourcestartlinenumber="13" sourceendlinenumber="13">More details on loading WordNet source files can be found <a href="../../wordnet/tutorial.html" sourcefile="tutorial/bot/oscova/connect-wordnet.md" sourcestartlinenumber="13" sourceendlinenumber="13">here</a></p>
+<h2 id="implementing-ilexicaldatabase" sourcefile="tutorial/bot/oscova/connect-wordnet.md" sourcestartlinenumber="15" sourceendlinenumber="15">Implementing ILexicalDatabase</h2>
+<ul sourcefile="tutorial/bot/oscova/connect-wordnet.md" sourcestartlinenumber="17" sourceendlinenumber="19">
+<li sourcefile="tutorial/bot/oscova/connect-wordnet.md" sourcestartlinenumber="17" sourceendlinenumber="17">In <em>Visual Studio</em> right click the project name in <em>Solution Explorer</em></li>
+<li sourcefile="tutorial/bot/oscova/connect-wordnet.md" sourcestartlinenumber="18" sourceendlinenumber="18">Choose <strong>Add</strong> and then select <strong>Class...</strong></li>
+<li sourcefile="tutorial/bot/oscova/connect-wordnet.md" sourcestartlinenumber="19" sourceendlinenumber="19">Name the class <code>LexicalDatabase</code>.</li>
+</ul>
+<p sourcefile="tutorial/bot/oscova/connect-wordnet.md" sourcestartlinenumber="21" sourceendlinenumber="21">Replace the content of the class with the following code.</p>
+<pre sourcefile="tutorial/bot/oscova/connect-wordnet.md" sourcestartlinenumber="23" sourceendlinenumber="55"><code class="lang-csharp">class LexicalDatabase : ILexicalDatabase
+{
+    public LexicalDatabase()
+    {
+        var directory = Path.Combine(Directory.GetCurrentDirectory(), &quot;WordNet&quot;);
+
+        var dataAdj = new ReaderInfo(new StreamReader(Path.Combine(directory, &quot;data.adj&quot;)), PartOfSpeech.Adjective);
+        var dataAdv = new ReaderInfo(new StreamReader(Path.Combine(directory, &quot;data.adv&quot;)), PartOfSpeech.Adverb);
+        var dataNoun = new ReaderInfo(new StreamReader(Path.Combine(directory, &quot;data.noun&quot;)), PartOfSpeech.Noun);
+        var dataVerb = new ReaderInfo(new StreamReader(Path.Combine(directory, &quot;data.verb&quot;)), PartOfSpeech.Verb);
+
+        var indexAdj = new ReaderInfo(new StreamReader(Path.Combine(directory, &quot;index.adj&quot;)), PartOfSpeech.Adjective);
+        var indexAdv = new ReaderInfo(new StreamReader(Path.Combine(directory, &quot;index.adv&quot;)), PartOfSpeech.Adverb);
+        var indexNoun = new ReaderInfo(new StreamReader(Path.Combine(directory, &quot;index.noun&quot;)), PartOfSpeech.Noun);
+        var indexVerb = new ReaderInfo(new StreamReader(Path.Combine(directory, &quot;index.verb&quot;)), PartOfSpeech.Verb);
+
+        var dataList = new List&lt;ReaderInfo&gt; { dataAdj, dataAdv, dataNoun, dataVerb };
+        var indexList = new List&lt;ReaderInfo&gt; { indexAdj, indexAdv, indexNoun, indexVerb };
+
+        WordNetEngine = new WordNetEngine();
+        WordNetEngine.Load(dataList,indexList);
+    }
+
+    WordNetEngine WordNetEngine { get; }
+
+    public double GetWordSimilarity(string sourceWord, string targetWord)
+    {
+        var semanticSimilarity = new SemanticSimilarity(WordNetEngine);
+        return semanticSimilarity.GetWordSimilarity(sourceWord, targetWord);
+    }
+}
+</code></pre><p sourcefile="tutorial/bot/oscova/connect-wordnet.md" sourcestartlinenumber="57" sourceendlinenumber="57">After the above <code>LexicalDatabase</code> class is ready set it to the <code>Language.LexicalDatabase</code> property as shown below.</p>
+<pre sourcefile="tutorial/bot/oscova/connect-wordnet.md" sourcestartlinenumber="59" sourceendlinenumber="61"><code class="lang-csharp">OscovaBot.Language.LexicalDatabase = new LexicalDatabase();
+</code></pre>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2017 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>
