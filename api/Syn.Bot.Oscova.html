@@ -29,6 +29,22 @@
     ga('send', 'pageview');
   
   </script>
+  
+  <script>
+    ((window.gitter = {}).chat = {}).options = {
+      room: 'SynCommunity/Lobby'
+    };
+  </script>
+  <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async="" defer=""></script>
+  <script type="text/javascript">
+  document.addEventListener('gitter-sidecar-instance-started', function(e) {
+    var chat = e.detail.chat;
+    chat.options.activationElement.forEach(function(activationElement) {
+      activationElement.innerHTML = 'Developer Lobby'
+    });
+  });
+  </script>
+  
   </head>
   <body data-spy="scroll" data-target="#affix">
     <div id="wrapper">
@@ -119,7 +135,7 @@
                   <section><p sourcefile="api/Syn.Bot.Oscova.IntentResult.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Represents the returned value of intent evaluation.</p>
 </section>
                   <h4><a class="xref" href="Syn.Bot.Oscova.Language.html#Syn_Bot_Oscova_Language">Language</a></h4>
-                  <section><p sourcefile="api/Syn.Bot.Oscova.Language.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Represents the Human Language information to be used by <a class="xref" href="Syn.Bot.Oscova.OscovaBot.html#Syn_Bot_Oscova_OscovaBot">OscovaBot</a>.</p>
+                  <section><p sourcefile="api/Syn.Bot.Oscova.Language.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Represents the Human Language Model used for Natural Language Processing by <a class="xref" href="Syn.Bot.Oscova.OscovaBot.html#Syn_Bot_Oscova_OscovaBot">OscovaBot</a>.</p>
 </section>
                   <h4><a class="xref" href="Syn.Bot.Oscova.MatchItem.html#Syn_Bot_Oscova_MatchItem">MatchItem</a></h4>
                   <section></section>
@@ -127,7 +143,8 @@
                   <section><p sourcefile="api/Syn.Bot.Oscova.OscovaBot.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Represents the Oscova Bot system.</p>
 </section>
                   <h4><a class="xref" href="Syn.Bot.Oscova.Request.html#Syn_Bot_Oscova_Request">Request</a></h4>
-                  <section></section>
+                  <section><p sourcefile="api/Syn.Bot.Oscova.Request.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Represents a user query.</p>
+</section>
                   <h4><a class="xref" href="Syn.Bot.Oscova.Response.html#Syn_Bot_Oscova_Response">Response</a></h4>
                   <section><p sourcefile="api/Syn.Bot.Oscova.Response.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Represents a Bot response.</p>
 </section>
@@ -148,6 +165,8 @@
 </section>
                 <h3 id="enums">Enums
               </h3>
+                  <h4><a class="xref" href="Syn.Bot.Oscova.FileFormat.html#Syn_Bot_Oscova_FileFormat">FileFormat</a></h4>
+                  <section></section>
                   <h4><a class="xref" href="Syn.Bot.Oscova.FilterType.html#Syn_Bot_Oscova_FilterType">FilterType</a></h4>
                   <section></section>
                   <h4><a class="xref" href="Syn.Bot.Oscova.ProcessingMode.html#Syn_Bot_Oscova_ProcessingMode">ProcessingMode</a></h4>

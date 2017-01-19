@@ -29,6 +29,22 @@
     ga('send', 'pageview');
   
   </script>
+  
+  <script>
+    ((window.gitter = {}).chat = {}).options = {
+      room: 'SynCommunity/Lobby'
+    };
+  </script>
+  <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async="" defer=""></script>
+  <script type="text/javascript">
+  document.addEventListener('gitter-sidecar-instance-started', function(e) {
+    var chat = e.detail.chat;
+    chat.options.activationElement.forEach(function(activationElement) {
+      activationElement.innerHTML = 'Developer Lobby'
+    });
+  });
+  </script>
+  
   </head>
   <body data-spy="scroll" data-target="#affix">
     <div id="wrapper">
@@ -88,7 +104,7 @@
               
               <h1 id="Syn_Bot_Oscova_Language" data-uid="Syn.Bot.Oscova.Language">Class Language
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="api/Syn.Bot.Oscova.Language.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Represents the Human Language information to be used by <a class="xref" href="Syn.Bot.Oscova.OscovaBot.html#Syn_Bot_Oscova_OscovaBot">OscovaBot</a>.</p>
+              <div class="markdown level0 summary"><p sourcefile="api/Syn.Bot.Oscova.Language.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Represents the Human Language Model used for Natural Language Processing by <a class="xref" href="Syn.Bot.Oscova.OscovaBot.html#Syn_Bot_Oscova_OscovaBot">OscovaBot</a>.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -128,13 +144,13 @@
               </div>
               <h3 id="constructors">Constructors
               </h3>
-              <h4 id="Syn_Bot_Oscova_Language__ctor_Syn_Bot_Oscova_OscovaBot_System_Globalization_CultureInfo_" data-uid="Syn.Bot.Oscova.Language.#ctor(Syn.Bot.Oscova.OscovaBot,System.Globalization.CultureInfo)">Language(OscovaBot, CultureInfo)</h4>
+              <h4 id="Syn_Bot_Oscova_Language__ctor_System_Globalization_CultureInfo_" data-uid="Syn.Bot.Oscova.Language.#ctor(System.Globalization.CultureInfo)">Language(CultureInfo)</h4>
               <div class="markdown level1 summary"><p sourcefile="api/Syn.Bot.Oscova.Language.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Initializes a new instance of the <a class="xref" href="Syn.Bot.Oscova.Language.html#Syn_Bot_Oscova_Language">Language</a> class.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">protected Language(OscovaBot bot, CultureInfo cultureInfo)</code></pre>
+                <pre><code class="lang-csharp hljs">protected Language(CultureInfo cultureInfo)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -147,12 +163,6 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Syn.Bot.Oscova.OscovaBot.html#Syn_Bot_Oscova_OscovaBot">OscovaBot</a></td>
-                    <td><em>bot</em></td>
-                    <td><p sourcefile="api/Syn.Bot.Oscova.Language.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The bot.</p>
-</td>
-                  </tr>
-                  <tr>
                     <td><span class="xref">System.Globalization.CultureInfo</span></td>
                     <td><em>cultureInfo</em></td>
                     <td><p sourcefile="api/Syn.Bot.Oscova.Language.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The culture information.</p>
@@ -162,30 +172,6 @@
               </table>
               <h3 id="properties">Properties
               </h3>
-              <h4 id="Syn_Bot_Oscova_Language_Bot" data-uid="Syn.Bot.Oscova.Language.Bot">Bot</h4>
-              <div class="markdown level1 summary"><p sourcefile="api/Syn.Bot.Oscova.Language.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Gets the bot.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public OscovaBot Bot { get; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Syn.Bot.Oscova.OscovaBot.html#Syn_Bot_Oscova_OscovaBot">OscovaBot</a></td>
-                    <td><p sourcefile="api/Syn.Bot.Oscova.Language.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The bot.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
               <h4 id="Syn_Bot_Oscova_Language_Culture" data-uid="Syn.Bot.Oscova.Language.Culture">Culture</h4>
               <div class="markdown level1 summary"><p sourcefile="api/Syn.Bot.Oscova.Language.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Gets the culture.</p>
 </div>
@@ -254,30 +240,6 @@
                   <tr>
                     <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="Syn.Bot.Oscova.FilterItem.html#Syn_Bot_Oscova_FilterItem">FilterItem</a>&gt;</td>
                     <td><p sourcefile="api/Syn.Bot.Oscova.Language.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The filters.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Syn_Bot_Oscova_Language_LexicalDatabase" data-uid="Syn.Bot.Oscova.Language.LexicalDatabase">LexicalDatabase</h4>
-              <div class="markdown level1 summary"><p sourcefile="api/Syn.Bot.Oscova.Language.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Gets or sets the lexical database.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public ILexicalDatabase LexicalDatabase { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Syn.Bot.Oscova.Interfaces.ILexicalDatabase.html#Syn_Bot_Oscova_Interfaces_ILexicalDatabase">ILexicalDatabase</a></td>
-                    <td><p sourcefile="api/Syn.Bot.Oscova.Language.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The lexical database.</p>
 </td>
                   </tr>
                 </tbody>
@@ -387,6 +349,30 @@
               <h5 id="Syn_Bot_Oscova_Language_Tokenizer_remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p sourcefile="api/Syn.Bot.Oscova.Language.yml" sourcestartlinenumber="1" sourceendlinenumber="1">External implementations must consider curly braces as single tokens.</p>
 </div>
+              <h4 id="Syn_Bot_Oscova_Language_WordNet" data-uid="Syn.Bot.Oscova.Language.WordNet">WordNet</h4>
+              <div class="markdown level1 summary"><p sourcefile="api/Syn.Bot.Oscova.Language.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Gets the WordNet engine.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public WordNetEngine WordNet { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Syn.WordNet.WordNetEngine</span></td>
+                    <td><p sourcefile="api/Syn.Bot.Oscova.Language.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The WordNet engine.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
               <h4 id="Syn_Bot_Oscova_Language_WordSpacing" data-uid="Syn.Bot.Oscova.Language.WordSpacing">WordSpacing</h4>
               <div class="markdown level1 summary"><p sourcefile="api/Syn.Bot.Oscova.Language.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Gets or sets the word spacing.</p>
 </div>
@@ -411,10 +397,14 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 id="Syn_Bot_Oscova_Language_WordSpacing_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p sourcefile="api/Syn.Bot.Oscova.Language.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Number of characters separating each word.</p>
+</div>
               <h3 id="methods">Methods
               </h3>
               <h4 id="Syn_Bot_Oscova_Language_AddFilter_Syn_Bot_Oscova_FilterType_System_String_System_String_" data-uid="Syn.Bot.Oscova.Language.AddFilter(Syn.Bot.Oscova.FilterType,System.String,System.String)">AddFilter(FilterType, String, String)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p sourcefile="api/Syn.Bot.Oscova.Language.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Adds the filter.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -433,22 +423,57 @@
                   <tr>
                     <td><a class="xref" href="Syn.Bot.Oscova.FilterType.html#Syn_Bot_Oscova_FilterType">FilterType</a></td>
                     <td><em>type</em></td>
-                    <td></td>
+                    <td><p sourcefile="api/Syn.Bot.Oscova.Language.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The filter type.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>input</em></td>
-                    <td></td>
+                    <td><p sourcefile="api/Syn.Bot.Oscova.Language.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The input.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>output</em></td>
-                    <td></td>
+                    <td><p sourcefile="api/Syn.Bot.Oscova.Language.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The output.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Syn_Bot_Oscova_Language_LoadWordVectors_System_IO_Stream_Syn_Bot_Oscova_FileFormat_" data-uid="Syn.Bot.Oscova.Language.LoadWordVectors(System.IO.Stream,Syn.Bot.Oscova.FileFormat)">LoadWordVectors(Stream, FileFormat)</h4>
+              <div class="markdown level1 summary"><p sourcefile="api/Syn.Bot.Oscova.Language.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Loads word vectors from stream of binary of text file.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void LoadWordVectors(Stream stream, FileFormat fileFormat)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.IO.Stream</span></td>
+                    <td><em>stream</em></td>
+                    <td><p sourcefile="api/Syn.Bot.Oscova.Language.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The stream.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Syn.Bot.Oscova.FileFormat.html#Syn_Bot_Oscova_FileFormat">FileFormat</a></td>
+                    <td><em>fileFormat</em></td>
+                    <td><p sourcefile="api/Syn.Bot.Oscova.Language.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The file format.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Syn_Bot_Oscova_Language_Normalize_System_String_" data-uid="Syn.Bot.Oscova.Language.Normalize(System.String)">Normalize(String)</h4>
-              <div class="markdown level1 summary"><p sourcefile="api/Syn.Bot.Oscova.Language.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Normalizes the specified input. By applying filters and removing punctuations.</p>
+              <div class="markdown level1 summary"><p sourcefile="api/Syn.Bot.Oscova.Language.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Normalizes the specified input by applying filters and removing punctuations.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>

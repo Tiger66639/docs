@@ -29,6 +29,22 @@
     ga('send', 'pageview');
   
   </script>
+  
+  <script>
+    ((window.gitter = {}).chat = {}).options = {
+      room: 'SynCommunity/Lobby'
+    };
+  </script>
+  <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async="" defer=""></script>
+  <script type="text/javascript">
+  document.addEventListener('gitter-sidecar-instance-started', function(e) {
+    var chat = e.detail.chat;
+    chat.options.activationElement.forEach(function(activationElement) {
+      activationElement.innerHTML = 'Developer Lobby'
+    });
+  });
+  </script>
+  
   </head>
   <body data-spy="scroll" data-target="#affix">
     <div id="wrapper">
@@ -225,7 +241,7 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public ProcessingMode ProcessingMode { get; }</code></pre>
+                <pre><code class="lang-csharp hljs">public ProcessingMode ProcessingMode { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -244,7 +260,7 @@
                 </tbody>
               </table>
               <h5 id="Syn_Bot_Oscova_BotConfiguration_ProcessingMode_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p sourcefile="api/Syn.Bot.Oscova.BotConfiguration.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Default is <code>NLP</code></p>
+              <div class="markdown level1 remarks"><p sourcefile="api/Syn.Bot.Oscova.BotConfiguration.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Default is <code>Rule</code></p>
 </div>
               <h4 id="Syn_Bot_Oscova_BotConfiguration_RequiredRecognizersOnly" data-uid="Syn.Bot.Oscova.BotConfiguration.RequiredRecognizersOnly">RequiredRecognizersOnly</h4>
               <div class="markdown level1 summary"><p sourcefile="api/Syn.Bot.Oscova.BotConfiguration.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Gets or sets a value indicating whether <a class="xref" href="Syn.Bot.Oscova.OscovaBot.html#Syn_Bot_Oscova_OscovaBot">OscovaBot</a> should load only required entity recognizers.</p>

@@ -29,6 +29,22 @@
     ga('send', 'pageview');
   
   </script>
+  
+  <script>
+    ((window.gitter = {}).chat = {}).options = {
+      room: 'SynCommunity/Lobby'
+    };
+  </script>
+  <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async="" defer=""></script>
+  <script type="text/javascript">
+  document.addEventListener('gitter-sidecar-instance-started', function(e) {
+    var chat = e.detail.chat;
+    chat.options.activationElement.forEach(function(activationElement) {
+      activationElement.innerHTML = 'Developer Lobby'
+    });
+  });
+  </script>
+  
   </head>
   <body data-spy="scroll" data-target="#affix">
     <div id="wrapper">
@@ -99,7 +115,10 @@
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
                 <div>
-                  <a class="xref" href="Syn.Bot.Oscova.Language.html#Syn_Bot_Oscova_Language_Bot">Language.Bot</a>
+                  <a class="xref" href="Syn.Bot.Oscova.Language.html#Syn_Bot_Oscova_Language_LoadWordVectors_System_IO_Stream_Syn_Bot_Oscova_FileFormat_">Language.LoadWordVectors(Stream, FileFormat)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Syn.Bot.Oscova.Language.html#Syn_Bot_Oscova_Language_WordNet">Language.WordNet</a>
                 </div>
                 <div>
                   <a class="xref" href="Syn.Bot.Oscova.Language.html#Syn_Bot_Oscova_Language_WordSpacing">Language.WordSpacing</a>
@@ -112,9 +131,6 @@
                 </div>
                 <div>
                   <a class="xref" href="Syn.Bot.Oscova.Language.html#Syn_Bot_Oscova_Language_Filters">Language.Filters</a>
-                </div>
-                <div>
-                  <a class="xref" href="Syn.Bot.Oscova.Language.html#Syn_Bot_Oscova_Language_LexicalDatabase">Language.LexicalDatabase</a>
                 </div>
                 <div>
                   <a class="xref" href="Syn.Bot.Oscova.Language.html#Syn_Bot_Oscova_Language_Tokenizer">Language.Tokenizer</a>

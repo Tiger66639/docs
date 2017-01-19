@@ -27,6 +27,22 @@
     ga('send', 'pageview');
   
   </script>
+  
+  <script>
+    ((window.gitter = {}).chat = {}).options = {
+      room: 'SynCommunity/Lobby'
+    };
+  </script>
+  <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async="" defer=""></script>
+  <script type="text/javascript">
+  document.addEventListener('gitter-sidecar-instance-started', function(e) {
+    var chat = e.detail.chat;
+    chat.options.activationElement.forEach(function(activationElement) {
+      activationElement.innerHTML = 'Developer Lobby'
+    });
+  });
+  </script>
+  
   </head>
   <body data-spy="scroll" data-target="#affix">
     <div id="wrapper">
@@ -459,6 +475,9 @@
                             </li>
                             <li>
                               <a href="bot/oscova/serialization.html" name="" title="Result Serialization">Result Serialization</a>
+                            </li>
+                            <li>
+                              <a href="bot/oscova/load-word-vectors.html" name="" title="Loading Word Vectors">Loading Word Vectors</a>
                             </li>
                             <li>
                               <a href="bot/oscova/connect-wordnet.html" name="" title="Connecting WordNet">Connecting WordNet</a>
@@ -1033,6 +1052,9 @@
                         </li>
                         <li>
                           <a href="bot/oscova/serialization.html" name="" title="Result Serialization">Result Serialization</a>
+                        </li>
+                        <li>
+                          <a href="bot/oscova/load-word-vectors.html" name="" title="Loading Word Vectors">Loading Word Vectors</a>
                         </li>
                         <li>
                           <a href="bot/oscova/connect-wordnet.html" name="" title="Connecting WordNet">Connecting WordNet</a>

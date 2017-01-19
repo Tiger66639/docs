@@ -29,6 +29,22 @@
     ga('send', 'pageview');
   
   </script>
+  
+  <script>
+    ((window.gitter = {}).chat = {}).options = {
+      room: 'SynCommunity/Lobby'
+    };
+  </script>
+  <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async="" defer=""></script>
+  <script type="text/javascript">
+  document.addEventListener('gitter-sidecar-instance-started', function(e) {
+    var chat = e.detail.chat;
+    chat.options.activationElement.forEach(function(activationElement) {
+      activationElement.innerHTML = 'Developer Lobby'
+    });
+  });
+  </script>
+  
   </head>
   <body data-spy="scroll" data-target="#affix">
     <div id="wrapper">
@@ -216,7 +232,7 @@
                 </tbody>
               </table>
               <h4 id="Syn_Bot_Oscova_OscovaBot_Language" data-uid="Syn.Bot.Oscova.OscovaBot.Language">Language</h4>
-              <div class="markdown level1 summary"><p sourcefile="api/Syn.Bot.Oscova.OscovaBot.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Gets or sets the Bot Language.</p>
+              <div class="markdown level1 summary"><p sourcefile="api/Syn.Bot.Oscova.OscovaBot.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Gets or sets the language model</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -234,7 +250,7 @@
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Syn.Bot.Oscova.Language.html#Syn_Bot_Oscova_Language">Language</a></td>
-                    <td><p sourcefile="api/Syn.Bot.Oscova.OscovaBot.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The Language.</p>
+                    <td><p sourcefile="api/Syn.Bot.Oscova.OscovaBot.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The Language model.</p>
 </td>
                   </tr>
                 </tbody>

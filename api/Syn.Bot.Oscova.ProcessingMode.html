@@ -29,6 +29,22 @@
     ga('send', 'pageview');
   
   </script>
+  
+  <script>
+    ((window.gitter = {}).chat = {}).options = {
+      room: 'SynCommunity/Lobby'
+    };
+  </script>
+  <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async="" defer=""></script>
+  <script type="text/javascript">
+  document.addEventListener('gitter-sidecar-instance-started', function(e) {
+    var chat = e.detail.chat;
+    chat.options.activationElement.forEach(function(activationElement) {
+      activationElement.innerHTML = 'Developer Lobby'
+    });
+  });
+  </script>
+  
   </head>
   <body data-spy="scroll" data-target="#affix">
     <div id="wrapper">
@@ -108,13 +124,13 @@
                 <thead>
                 <tbody>
                   <tr>
-                    <td id="Syn_Bot_Oscova_ProcessingMode_DeepLearning">DeepLearning</td>
-                    <td><p sourcefile="api/Syn.Bot.Oscova.ProcessingMode.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Use in-built NLP engine and Deep Learning algorithm.</p>
+                    <td id="Syn_Bot_Oscova_ProcessingMode_Rule">Rule</td>
+                    <td><p sourcefile="api/Syn.Bot.Oscova.ProcessingMode.yml" sourcestartlinenumber="2" sourceendlinenumber="2">(Default) Use in-built NLP engine.</p>
 </td>
                   </tr>
                   <tr>
-                    <td id="Syn_Bot_Oscova_ProcessingMode_NLP">NLP</td>
-                    <td><p sourcefile="api/Syn.Bot.Oscova.ProcessingMode.yml" sourcestartlinenumber="2" sourceendlinenumber="2">(Default) Use in-built NLP engine.</p>
+                    <td id="Syn_Bot_Oscova_ProcessingMode_RuleAndML">RuleAndML</td>
+                    <td><p sourcefile="api/Syn.Bot.Oscova.ProcessingMode.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Use in-built NLP engine and Machine Learning algorithm.</p>
 </td>
                   </tr>
                 </tbody>
