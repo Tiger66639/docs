@@ -27,6 +27,22 @@
     ga('send', 'pageview');
   
   </script>
+  
+  <script>
+    ((window.gitter = {}).chat = {}).options = {
+      room: 'SynCommunity/Lobby'
+    };
+  </script>
+  <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async="" defer=""></script>
+  <script type="text/javascript">
+  document.addEventListener('gitter-sidecar-instance-started', function(e) {
+    var chat = e.detail.chat;
+    chat.options.activationElement.forEach(function(activationElement) {
+      activationElement.innerHTML = 'Developer Lobby'
+    });
+  });
+  </script>
+  
   </head>
   <body data-spy="scroll" data-target="#affix">
     <div id="wrapper">
@@ -62,9 +78,6 @@
                       <li>
                         <a href="http://forum.syn.co.in/" name="" title="Developer Forum">Developer Forum</a>
                       </li>
-                      <li>
-                        <a href="http://lobby.syn.co.in/" name="" title="Developer Lobby (New!)">Developer Lobby (New!)</a>
-                      </li>
                     </ul>                </div>
               </div>
             </div>
@@ -89,9 +102,6 @@
                   </li>
                   <li>
                     <a href="http://forum.syn.co.in/" name="" title="Developer Forum">Developer Forum</a>
-                  </li>
-                  <li>
-                    <a href="http://lobby.syn.co.in/" name="" title="Developer Lobby (New!)">Developer Lobby (New!)</a>
                   </li>
                 </ul>          </div>
         </div>
