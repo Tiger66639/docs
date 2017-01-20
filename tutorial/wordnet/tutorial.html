@@ -100,7 +100,7 @@
             <article class="content wrap" id="_content" data-uid="">
               <h1 id="wordnet-tutorial" sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="1" sourceendlinenumber="1">WordNet Tutorial</h1>
               
-<p sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="3" sourceendlinenumber="3">In order to enable better semantic analysis of tokens in user input it is highly recommended that Oscova is connected to a lexical database such as WordNet that provides an interface for scoring similarities between words.</p>
+<p sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="3" sourceendlinenumber="3">In this tutorial we will learn how to use the <code>WordNetEngine</code> available in <code>Syn.WordNet</code> library to import <em>WordNet</em>&#39;s lexical database files and work with <em>SynSets</em>.</p>
 <h2 id="creating-a-console-application" sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="5" sourceendlinenumber="5">Creating a Console application</h2>
 <p sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="7" sourceendlinenumber="7">We&#39;ll create a new C# Console project. To do so:</p>
 <ul sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="9" sourceendlinenumber="11">
@@ -109,7 +109,7 @@
 <li sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="11" sourceendlinenumber="11">Then select <em>Console Application</em> and name the project <strong>WordNetConsole</strong>.</li>
 </ul>
 <h2 id="importing-wordnet" sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="13" sourceendlinenumber="13">Importing WordNet</h2>
-<p sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="15" sourceendlinenumber="15">Especially for Oscova we released <code>Syn.WordNet</code> and made it available in NuGet. To import <code>Syn.WordNet</code> to your Bot project:</p>
+<p sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="15" sourceendlinenumber="15">Especially for Oscova, we released <code>Syn.WordNet</code> and made it available in NuGet. To import <code>Syn.WordNet</code> to your project follow the steps below:</p>
 <ul sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="17" sourceendlinenumber="19">
 <li sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="17" sourceendlinenumber="17">In Visual Studio, click on <strong>Tools</strong>, point to <strong>NuGet Package Manager</strong></li>
 <li sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="18" sourceendlinenumber="18">Select <strong>Package Manager Console</strong></li>
@@ -141,26 +141,47 @@
 <li sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="48" sourceendlinenumber="48"><em>index.verb</em></li>
 </ul>
 <p sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="50" sourceendlinenumber="50">As <code>Syn.WordNet</code> is a portable class library the mechanism of loading WordNet files doesn&#39;t use traditional approach instead we use <em>StreamReader</em> to load the specific files into the <code>WordNetEngine</code>.</p>
-<h2 id="creating-list-of-data-and-index-streamreaders" sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="52" sourceendlinenumber="52">Creating List of Data and Index StreamReaders</h2>
+<h2 id="loading-data-and-index-files" sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="52" sourceendlinenumber="52">Loading Data and Index files</h2>
 <p sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="54" sourceendlinenumber="54">Within the <code>static void Main(string[] args)</code> method add the following code. The code assumes that you&#39;ve already copied the aforementioned WordNet files in the <code>bin/debug/wordnet</code> folder.</p>
-<pre sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="56" sourceendlinenumber="74"><code class="lang-csharp">var directory = Path.Combine(Directory.GetCurrentDirectory(), &quot;wordnet&quot;);
+<pre sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="56" sourceendlinenumber="74"><code class="lang-csharp">var directory =  Directory.GetCurrentDirectory();
 
-var dataAdj = new ReaderInfo(new StreamReader(Path.Combine(directory, &quot;data.adj&quot;)), PartOfSpeech.Adjective);
-var dataAdv = new ReaderInfo(new StreamReader(Path.Combine(directory, &quot;data.adv&quot;)), PartOfSpeech.Adverb);
-var dataNoun = new ReaderInfo(new StreamReader(Path.Combine(directory, &quot;data.noun&quot;)), PartOfSpeech.Noun);
-var dataVerb = new ReaderInfo(new StreamReader(Path.Combine(directory, &quot;data.verb&quot;)), PartOfSpeech.Verb);
+var wordNet = new WordNetEngine();
 
-var indexAdj = new ReaderInfo(new StreamReader(Path.Combine(directory, &quot;index.adj&quot;)), PartOfSpeech.Adjective);
-var indexAdv = new ReaderInfo(new StreamReader(Path.Combine(directory, &quot;index.adv&quot;)), PartOfSpeech.Adverb);
-var indexNoun = new ReaderInfo(new StreamReader(Path.Combine(directory, &quot;index.noun&quot;)), PartOfSpeech.Noun);
-var indexVerb = new ReaderInfo(new StreamReader(Path.Combine(directory, &quot;index.verb&quot;)), PartOfSpeech.Verb);
+wordNet.AddDataSource(new StreamReader(Path.Combine(directory, &quot;data.adj&quot;)), PartOfSpeech.Adjective);
+wordNet.AddDataSource(new StreamReader(Path.Combine(directory, &quot;data.adv&quot;)), PartOfSpeech.Adverb);
+wordNet.AddDataSource(new StreamReader(Path.Combine(directory, &quot;data.noun&quot;)), PartOfSpeech.Noun);
+wordNet.AddDataSource(new StreamReader(Path.Combine(directory, &quot;data.verb&quot;)), PartOfSpeech.Verb);
 
-var dataList = new List&lt;ReaderInfo&gt; { dataAdj, dataAdv, dataNoun, dataVerb };
-var indexList = new List&lt;ReaderInfo&gt; { indexAdj, indexAdv, indexNoun, indexVerb };
+wordNet.AddIndexSource(new StreamReader(Path.Combine(directory, &quot;index.adj&quot;)), PartOfSpeech.Adjective);
+wordNet.AddIndexSource(new StreamReader(Path.Combine(directory, &quot;index.adv&quot;)), PartOfSpeech.Adverb);
+wordNet.AddIndexSource(new StreamReader(Path.Combine(directory, &quot;index.noun&quot;)), PartOfSpeech.Noun);
+wordNet.AddIndexSource(new StreamReader(Path.Combine(directory, &quot;index.verb&quot;)), PartOfSpeech.Verb);
 
-var wordNetEngine = new WordNetEngine();
-wordNetEngine.Load(dataList,indexList);
+Console.WriteLine(&quot;Loading database...&quot;);
+wordNet.Load();
+Console.WriteLine(&quot;Load completed.&quot;);
 </code></pre><p sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="76" sourceendlinenumber="76">And that&#39;s it you have now successfully instantiated <code>WordNetEngine</code>.</p>
+<h2 id="getting-synsets" sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="78" sourceendlinenumber="78">Getting SynSets</h2>
+<p sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="80" sourceendlinenumber="80">After the <code>WordNetEngine.Load()</code> method has finished generating <em>SynSets</em> you can retrieve synsets of known words in just a few lines of code. In the aforementioned code append the following lines of code.</p>
+<pre sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="82" sourceendlinenumber="101"><code class="lang-csharp">while (true)
+{
+    Console.WriteLine(&quot;\nType first word&quot;);
+
+    var word = Console.ReadLine();
+    var synSetList = wordNet.GetSynSets(word);
+
+    if (synSetList.Count == 0) Console.WriteLine($&quot;No SynSet found for &#39;{word}&#39;&quot;);
+
+    foreach (var synSet in synSetList)
+    {
+        var words = string.Join(&quot;, &quot;, synSet.Words);
+
+        Console.WriteLine($&quot;\nWords: {words}&quot;);
+        Console.WriteLine($&quot;POS: {synSet.PartOfSpeech}&quot;);
+        Console.WriteLine($&quot;Gloss: {synSet.Gloss}&quot;);
+    }
+}
+</code></pre><p sourcefile="tutorial/wordnet/tutorial.md" sourcestartlinenumber="103" sourceendlinenumber="103">You may now run the application by clicking on the <em>Start</em> button or by pressing <em>F5</em> in Visual Studio. After the <em>Load completed</em> message type <strong><em>Car</em></strong>. You will now be presented with all the <em>SynSets</em> of the word <strong><em>Car</em></strong> along with their definitions and parts of speech.</p>
 
             </article>
           </div>

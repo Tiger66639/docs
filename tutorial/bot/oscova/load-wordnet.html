@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Loading WordNet Database  - Syn Developer Network</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Loading WordNet Database ">
+    <meta name="generator" content="docfx 2.6.1.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    <meta property="docfx:rel" content="../../../">
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+    ga('create', 'UA-39941606-1', 'auto');
+    ga('send', 'pageview');
+  
+  </script>
+  
+  <script>
+    ((window.gitter = {}).chat = {}).options = {
+      room: 'SynCommunity/Lobby'
+    };
+  </script>
+  <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async="" defer=""></script>
+  <script type="text/javascript">
+  document.addEventListener('gitter-sidecar-instance-started', function(e) {
+    var chat = e.detail.chat;
+    chat.options.activationElement.forEach(function(activationElement) {
+      activationElement.innerHTML = 'Developer Lobby'
+    });
+  });
+  </script>
+  
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper" style="z-index:1">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="loading-wordnet-database" sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="1" sourceendlinenumber="1">Loading WordNet Database</h1>
+              
+<p sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="3" sourceendlinenumber="3">In order to enable better semantic analysis of tokens in user input it is highly recommended that <em>WordNet</em> source files are loaded into Oscova before training. <em>WordNet</em> being a lexical database enchances Oscova&#39;s capability of find semantic relatedness between words.</p>
+<p sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="5" sourceendlinenumber="5"><em>WordNet® is a registered trademark of Princeton University.</em></p>
+<h2 id="loading-files" sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="7" sourceendlinenumber="7">Loading Files</h2>
+<p sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="9" sourceendlinenumber="9">To load <em>WordNet</em> lexical database files into Oscova you can make use of the <code>AddDataSource</code> and <code>AddIndexSource</code> methods available on the <code>WordNet</code> property. Each file must be passed in via a <code>StreamReader</code> and the appropriate <code>PartOfSpeech</code> addressed by the files must be specified.</p>
+<p sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="11" sourceendlinenumber="11">There are 4 main parts of speech for which we&#39;ll need to load data.</p>
+<ul sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="13" sourceendlinenumber="16">
+<li sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="13" sourceendlinenumber="13">Adjective</li>
+<li sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="14" sourceendlinenumber="14">Adverb</li>
+<li sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="15" sourceendlinenumber="15">Noun</li>
+<li sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="16" sourceendlinenumber="16">Verb</li>
+</ul>
+<p sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="18" sourceendlinenumber="18">The following are the names of database files that need to be loaded into the WordNet engine.</p>
+<p sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="20" sourceendlinenumber="20"><strong>Data:</strong> Added via <code>AddDataSource</code> method.</p>
+<ul sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="22" sourceendlinenumber="25">
+<li sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="22" sourceendlinenumber="22"><em>data.adj</em></li>
+<li sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="23" sourceendlinenumber="23"><em>data.adv</em></li>
+<li sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="24" sourceendlinenumber="24"><em>data.noun</em></li>
+<li sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="25" sourceendlinenumber="25"><em>data.verb</em></li>
+</ul>
+<p sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="27" sourceendlinenumber="27"><strong>Index:</strong> Added via <code>AddIndexSource</code> method.</p>
+<ul sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="29" sourceendlinenumber="32">
+<li sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="29" sourceendlinenumber="29"><em>index.adj</em></li>
+<li sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="30" sourceendlinenumber="30"><em>index.adv</em></li>
+<li sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="31" sourceendlinenumber="31"><em>index.noun</em></li>
+<li sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="32" sourceendlinenumber="32"><em>index.verb</em></li>
+</ul>
+<p sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="35" sourceendlinenumber="35"><strong>Example</strong></p>
+<pre sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="36" sourceendlinenumber="59"><code class="lang-csharp">var bot = new OscovaBot();
+var wordNet = bot.Language.WordNet;
+const string directory = @&quot;D:\WordNet\dict&quot;;
+
+//Data
+wordNet.AddDataSource(new StreamReader(Path.Combine(directory, &quot;data.adj&quot;)), PartOfSpeech.Adjective);
+wordNet.AddDataSource(new StreamReader(Path.Combine(directory, &quot;data.adv&quot;)), PartOfSpeech.Adverb);
+wordNet.AddDataSource(new StreamReader(Path.Combine(directory, &quot;data.noun&quot;)), PartOfSpeech.Noun);
+wordNet.AddDataSource(new StreamReader(Path.Combine(directory, &quot;data.verb&quot;)), PartOfSpeech.Verb);
+
+//Indices
+wordNet.AddIndexSource(new StreamReader(Path.Combine(directory, &quot;index.adj&quot;)), PartOfSpeech.Adjective);
+wordNet.AddIndexSource(new StreamReader(Path.Combine(directory, &quot;index.adv&quot;)), PartOfSpeech.Adverb);
+wordNet.AddIndexSource(new StreamReader(Path.Combine(directory, &quot;index.noun&quot;)), PartOfSpeech.Noun);
+wordNet.AddIndexSource(new StreamReader(Path.Combine(directory, &quot;index.verb&quot;)), PartOfSpeech.Verb);
+
+//Important
+wordNet.Load();
+
+...
+
+bot.Train();
+</code></pre><p sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="61" sourceendlinenumber="61"><em>*Note: </em>* Loading of <em>WordNet</em> files may take a couple of seconds.</p>
+<p sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="63" sourceendlinenumber="63">After adding the source files, you <em>must</em> call the <code>WordNet.Load()</code> method. Once the load completes, Oscova will automatically detect the change and will start using <em>WordNet</em> to find lexical relations between words and their senses while scoring intents.</p>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2017 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>
