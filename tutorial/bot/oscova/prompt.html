@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>Prompt  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Prompt ">
-    <meta name="generator" content="docfx 2.6.1.0">
+    <meta name="generator" content="docfx 2.10.2.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -98,20 +98,20 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="prompt" sourcefile="tutorial/bot/oscova/prompt.md" sourcestartlinenumber="1" sourceendlinenumber="1">Prompt</h1>
+              <h1 id="prompt">Prompt</h1>
               
-<p sourcefile="tutorial/bot/oscova/prompt.md" sourcestartlinenumber="3" sourceendlinenumber="3">In Oscova prompts can be added to intents for missing entity types. The user will receive the prompt message if an intent is invoked and the specified prompt entity type is missing.</p>
-<h2 id="adding-a-prompt" sourcefile="tutorial/bot/oscova/prompt.md" sourcestartlinenumber="5" sourceendlinenumber="5">Adding a Prompt</h2>
-<p sourcefile="tutorial/bot/oscova/prompt.md" sourcestartlinenumber="7" sourceendlinenumber="7">Suppose we have an intent that play music by genre. We could add a prompt message that is received by the user if the user message doesn&#39;t contain an music genre.</p>
-<pre sourcefile="tutorial/bot/oscova/prompt.md" sourcestartlinenumber="9" sourceendlinenumber="17"><code class="lang-csharp">[Expression(&quot;play {rock} music&quot;)]
+<p>In Oscova prompts can be added to intents for missing entity types. The user will receive the prompt message if an intent is invoked and the specified prompt entity type is missing.</p>
+<h2 id="adding-a-prompt">Adding a Prompt</h2>
+<p>Suppose we have an intent that play music by genre. We could add a prompt message that is received by the user if the user message doesn&#39;t contain an music genre.</p>
+<pre><code class="lang-csharp">[Expression(&quot;play {rock} music&quot;)]
 [Entity(Sys.MusicGenre)]
 [Prompt(Sys.MusicGenre, &quot;Please specify a genre.&quot;)]
 public void OpenApp(Context context, Result result)
 {
     //Do Something.
 }
-</code></pre><p sourcefile="tutorial/bot/oscova/prompt.md" sourcestartlinenumber="19" sourceendlinenumber="19">If the user just says <strong><em>Play Music</em></strong> the bot will respond <strong><em>Please specify a genre</em></strong>.</p>
-<p sourcefile="tutorial/bot/oscova/prompt.md" sourcestartlinenumber="21" sourceendlinenumber="21">Prompts for multiple entity types are supported. Until all the specified entity types are found the user will keep receiving respective prompt message.</p>
+</code></pre><p>If the user just says <strong><em>Play Music</em></strong> the bot will respond <strong><em>Please specify a genre</em></strong>.</p>
+<p>Prompts for multiple entity types are supported. Until all the specified entity types are found the user will keep receiving respective prompt message.</p>
 
             </article>
           </div>

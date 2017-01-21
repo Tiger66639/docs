@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>PreviousMatch  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="PreviousMatch ">
-    <meta name="generator" content="docfx 2.6.1.0">
+    <meta name="generator" content="docfx 2.10.2.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -98,9 +98,9 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="previousmatch" sourcefile="tutorial/siml/elements/previousmatch.md" sourcestartlinenumber="1" sourceendlinenumber="1">PreviousMatch</h1>
+              <h1 id="previousmatch">PreviousMatch</h1>
               
-<table sourcefile="tutorial/siml/elements/previousmatch.md" sourcestartlinenumber="3" sourceendlinenumber="7">
+<table>
 <thead>
 <tr>
 <th><strong>Annotation</strong></th>
@@ -122,10 +122,10 @@
 </tr>
 </tbody>
 </table>
-<p sourcefile="tutorial/siml/elements/previousmatch.md" sourcestartlinenumber="9" sourceendlinenumber="9">This is a type of <code>Match</code> element that returns a text fragment matching the nth pattern <code>*</code> contained in a in <code>&lt;Previous&gt;</code> element.</p>
-<p sourcefile="tutorial/siml/elements/previousmatch.md" sourcestartlinenumber="11" sourceendlinenumber="11"><em>Example</em></p>
-<p sourcefile="tutorial/siml/elements/previousmatch.md" sourcestartlinenumber="13" sourceendlinenumber="13"><strong>SIML</strong></p>
-<pre sourcefile="tutorial/siml/elements/previousmatch.md" sourcestartlinenumber="15" sourceendlinenumber="26"><code class="lang-xml">&lt;Model&gt;
+<p>This is a type of <code>Match</code> element that returns a text fragment matching the nth pattern <code>*</code> contained in a in <code>&lt;Previous&gt;</code> element.</p>
+<p><em>Example</em></p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
   &lt;Pattern&gt;ASK ME SOMETHING&lt;/Pattern&gt;
   &lt;Response&gt;what is your favourite sport?&lt;/Response&gt;
 &lt;/Model&gt;
@@ -135,20 +135,20 @@
   &lt;Previous&gt;WHAT IS YOUR FAVOURITE *&lt;/Previous&gt;
   &lt;Response&gt;I see, so your favourite &lt;PreviousMatch /&gt; is &lt;Match /&gt;.&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p sourcefile="tutorial/siml/elements/previousmatch.md" sourcestartlinenumber="28" sourceendlinenumber="28"><strong>User Input</strong></p>
-<ol sourcefile="tutorial/siml/elements/previousmatch.md" sourcestartlinenumber="30" sourceendlinenumber="31">
-<li sourcefile="tutorial/siml/elements/previousmatch.md" sourcestartlinenumber="30" sourceendlinenumber="30"><em>Ask me something.</em></li>
-<li sourcefile="tutorial/siml/elements/previousmatch.md" sourcestartlinenumber="31" sourceendlinenumber="31"><em>Nascar</em></li>
+</code></pre><p><strong>User Input</strong></p>
+<ol>
+<li><em>Ask me something.</em></li>
+<li><em>Nascar</em></li>
 </ol>
-<p sourcefile="tutorial/siml/elements/previousmatch.md" sourcestartlinenumber="33" sourceendlinenumber="33"><strong>Bot Output</strong></p>
-<ol sourcefile="tutorial/siml/elements/previousmatch.md" sourcestartlinenumber="35" sourceendlinenumber="36">
-<li sourcefile="tutorial/siml/elements/previousmatch.md" sourcestartlinenumber="35" sourceendlinenumber="35"><em>What is your favourite sport?</em></li>
-<li sourcefile="tutorial/siml/elements/previousmatch.md" sourcestartlinenumber="36" sourceendlinenumber="36"><em>I see, so your favourite sport is Nascar.</em></li>
+<p><strong>Bot Output</strong></p>
+<ol>
+<li><em>What is your favourite sport?</em></li>
+<li><em>I see, so your favourite sport is Nascar.</em></li>
 </ol>
-<p sourcefile="tutorial/siml/elements/previousmatch.md" sourcestartlinenumber="38" sourceendlinenumber="38"><strong>Explanation</strong></p>
-<blockquote sourcefile="tutorial/siml/elements/previousmatch.md" sourcestartlinenumber="40" sourceendlinenumber="40"><p sourcefile="tutorial/siml/elements/previousmatch.md" sourcestartlinenumber="40" sourceendlinenumber="40">The <code>PreviousMatch</code> returns the fragment of text that matches the Previous bot utterance. <code>PreviousMatch</code> element helps in reducing the responses to single declarative sentence.</p>
+<p><strong>Explanation</strong></p>
+<blockquote><p>The <code>PreviousMatch</code> returns the fragment of text that matches the Previous bot utterance. <code>PreviousMatch</code> element helps in reducing the responses to single declarative sentence.</p>
 </blockquote>
-<p sourcefile="tutorial/siml/elements/previousmatch.md" sourcestartlinenumber="42" sourceendlinenumber="42">Just like the <code>Match</code> element you can also use the <code>Index=&quot;n&quot;</code> attribute to get the text fragment matching the <em>nth</em> pattern.</p>
+<p>Just like the <code>Match</code> element you can also use the <code>Index=&quot;n&quot;</code> attribute to get the text fragment matching the <em>nth</em> pattern.</p>
 
             </article>
           </div>

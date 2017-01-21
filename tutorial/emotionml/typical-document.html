@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>Typical EmotionML Document with Emotions  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Typical EmotionML Document with Emotions ">
-    <meta name="generator" content="docfx 2.6.1.0">
+    <meta name="generator" content="docfx 2.10.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -98,9 +98,9 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="typical-emotionml-document-with-emotions" sourcefile="tutorial/emotionml/typical-document.md" sourcestartlinenumber="1" sourceendlinenumber="1">Typical EmotionML Document with Emotions</h1>
+              <h1 id="typical-emotionml-document-with-emotions">Typical EmotionML Document with Emotions</h1>
               
-<p sourcefile="tutorial/emotionml/typical-document.md" sourcestartlinenumber="3" sourceendlinenumber="3"><em>A typical EmotionML document consisting of a few emotion elements</em></p>
+<p><em>A typical EmotionML document consisting of a few emotion elements</em></p>
 <pre><code class="lang-xml" name="Main">&lt;emotionml version=&quot;1.0&quot; xmlns=&quot;http://www.w3.org/2009/10/emotionml&quot; xmlns:Siml=&quot;http://syn.co.in/2014/siml&quot; dimension-set=&quot;http://www.w3.org/TR/emotion-voc/xml#pad-dimensions&quot;&gt;
   &lt;emotion id=&quot;pleased&quot; category-set=&quot;http://www.w3.org/TR/emotion-voc/xml#everyday-categories&quot;&gt;
     &lt;info&gt;
@@ -181,8 +181,8 @@
     &lt;dimension name=&quot;dominance&quot; value=&quot;1.0&quot; /&gt;
   &lt;/emotion&gt;
 &lt;/emotionml&gt;
-</code></pre><p sourcefile="tutorial/emotionml/typical-document.md" sourcestartlinenumber="7" sourceendlinenumber="7">To get the first emotion and its ID from the above document an index value on the Emotions list would suffice as shown below.</p>
-<pre sourcefile="tutorial/emotionml/typical-document.md" sourcestartlinenumber="9" sourceendlinenumber="12"><code class="lang-csharp">var firstEmotion = emotionDoc.Emotions[0];
+</code></pre><p>To get the first emotion and its ID from the above document an index value on the Emotions list would suffice as shown below.</p>
+<pre><code class="lang-csharp">var firstEmotion = emotionDoc.Emotions[0];
 var emotionID = firstEmotion.ID;
 </code></pre>
             </article>

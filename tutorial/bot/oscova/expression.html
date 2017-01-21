@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>Expression  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Expression ">
-    <meta name="generator" content="docfx 2.6.1.0">
+    <meta name="generator" content="docfx 2.10.2.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -98,12 +98,12 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="expression" sourcefile="tutorial/bot/oscova/expression.md" sourcestartlinenumber="1" sourceendlinenumber="1">Expression</h1>
+              <h1 id="expression">Expression</h1>
               
-<p sourcefile="tutorial/bot/oscova/expression.md" sourcestartlinenumber="3" sourceendlinenumber="3">An <em>Expression</em> is a pattern that defines user input. The <code>Expression</code> Attribute is used to decorate an intent method with triggering user input expressions. Multiple <em>Expressions</em> on single intent method is supported.</p>
-<h2 id="declaring-an-expression" sourcefile="tutorial/bot/oscova/expression.md" sourcestartlinenumber="5" sourceendlinenumber="5">Declaring an Expression</h2>
-<p sourcefile="tutorial/bot/oscova/expression.md" sourcestartlinenumber="7" sourceendlinenumber="7">The following symbols are allowed in an expression. Any other symbol found in an expression gets truncated after normalization.</p>
-<table sourcefile="tutorial/bot/oscova/expression.md" sourcestartlinenumber="9" sourceendlinenumber="15">
+<p>An <em>Expression</em> is a pattern that defines user input. The <code>Expression</code> Attribute is used to decorate an intent method with triggering user input expressions. Multiple <em>Expressions</em> on single intent method is supported.</p>
+<h2 id="declaring-an-expression">Declaring an Expression</h2>
+<p>The following symbols are allowed in an expression. Any other symbol found in an expression gets truncated after normalization.</p>
+<table>
 <thead>
 <tr>
 <th style="text-align:left">Type</th>
@@ -133,30 +133,30 @@
 </tr>
 </tbody>
 </table>
-<h2 id="types-of-expressions" sourcefile="tutorial/bot/oscova/expression.md" sourcestartlinenumber="17" sourceendlinenumber="17">Types of Expressions</h2>
-<p sourcefile="tutorial/bot/oscova/expression.md" sourcestartlinenumber="19" sourceendlinenumber="19">There are 2 types of <em>Expressions</em> in Oscova.</p>
-<h3 id="1-example" sourcefile="tutorial/bot/oscova/expression.md" sourcestartlinenumber="21" sourceendlinenumber="21">1. Example</h3>
-<p sourcefile="tutorial/bot/oscova/expression.md" sourcestartlinenumber="23" sourceendlinenumber="23">In example mode an expression is created by annotating <em>entity values</em> with curly braces. Annotation links words or phrases to specific entity types.</p>
-<pre sourcefile="tutorial/bot/oscova/expression.md" sourcestartlinenumber="25" sourceendlinenumber="29"><code class="lang-csharp">[Expression(&quot;{open} the garage door&quot;)]
+<h2 id="types-of-expressions">Types of Expressions</h2>
+<p>There are 2 types of <em>Expressions</em> in Oscova.</p>
+<h3 id="1-example">1. Example</h3>
+<p>In example mode an expression is created by annotating <em>entity values</em> with curly braces. Annotation links words or phrases to specific entity types.</p>
+<pre><code class="lang-csharp">[Expression(&quot;{open} the garage door&quot;)]
 [Expression(&quot;{close} the garage door&quot;)]
 [Entity(&quot;command&quot;)]
-</code></pre><p sourcefile="tutorial/bot/oscova/expression.md" sourcestartlinenumber="31" sourceendlinenumber="31">Immediately after an example expression the developer must use the <code>Entity</code> attribute to specify the entity type of the annotated value. If the entity type is not a <em>system entity</em> an internal entity recognizer gets created that recognizes the annotated value.</p>
-<p sourcefile="tutorial/bot/oscova/expression.md" sourcestartlinenumber="33" sourceendlinenumber="33">The order of the following <code>Entity</code> attributes is used to determine the type of the annotated value. Wrong ordering will lead to ambiguity.</p>
-<h3 id="2-template" sourcefile="tutorial/bot/oscova/expression.md" sourcestartlinenumber="35" sourceendlinenumber="35">2. Template</h3>
-<p sourcefile="tutorial/bot/oscova/expression.md" sourcestartlinenumber="37" sourceendlinenumber="37">In template mode an expression is created by using <em>entity type names</em> instead of annotation of <em>entity values</em>. Entity type name must be prefixed with an ampersand <strong>@</strong> symbol.</p>
-<pre sourcefile="tutorial/bot/oscova/expression.md" sourcestartlinenumber="39" sourceendlinenumber="41"><code class="lang-csharp">[Expression(&quot;@command the garage door&quot;)]
-</code></pre><p sourcefile="tutorial/bot/oscova/expression.md" sourcestartlinenumber="43" sourceendlinenumber="43">As <code>@command</code> denotes a new entity type we&#39;ll need to add a recognizer for this type.</p>
-<pre sourcefile="tutorial/bot/oscova/expression.md" sourcestartlinenumber="45" sourceendlinenumber="47"><code class="lang-csharp">bot.CreateRecognizer(&quot;command&quot;, new[] {&quot;open&quot;, &quot;close&quot;});
-</code></pre><blockquote sourcefile="tutorial/bot/oscova/expression.md" sourcestartlinenumber="49" sourceendlinenumber="49"><p sourcefile="tutorial/bot/oscova/expression.md" sourcestartlinenumber="49" sourceendlinenumber="49">The above expression captures:</p>
-<blockquote sourcefile="tutorial/bot/oscova/expression.md" sourcestartlinenumber="50" sourceendlinenumber="50"><p sourcefile="tutorial/bot/oscova/expression.md" sourcestartlinenumber="50" sourceendlinenumber="50"><em>Open the garage door.</em></p>
-<p sourcefile="tutorial/bot/oscova/expression.md" sourcestartlinenumber="53" sourceendlinenumber="53"><em>Close the garage door.</em></p>
+</code></pre><p>Immediately after an example expression the developer must use the <code>Entity</code> attribute to specify the entity type of the annotated value. If the entity type is not a <em>system entity</em> an internal entity recognizer gets created that recognizes the annotated value.</p>
+<p>The order of the following <code>Entity</code> attributes is used to determine the type of the annotated value. Wrong ordering will lead to ambiguity.</p>
+<h3 id="2-template">2. Template</h3>
+<p>In template mode an expression is created by using <em>entity type names</em> instead of annotation of <em>entity values</em>. Entity type name must be prefixed with an ampersand <strong>@</strong> symbol.</p>
+<pre><code class="lang-csharp">[Expression(&quot;@command the garage door&quot;)]
+</code></pre><p>As <code>@command</code> denotes a new entity type we&#39;ll need to add a recognizer for this type.</p>
+<pre><code class="lang-csharp">bot.CreateRecognizer(&quot;command&quot;, new[] {&quot;open&quot;, &quot;close&quot;});
+</code></pre><blockquote><p>The above expression captures:</p>
+<blockquote><p><em>Open the garage door.</em></p>
+<p><em>Close the garage door.</em></p>
 </blockquote>
 </blockquote>
-<p sourcefile="tutorial/bot/oscova/expression.md" sourcestartlinenumber="55" sourceendlinenumber="55">Entity types name must contain only alphanumeric characters separated by dot(<strong>.</strong>) or Hypen(<strong>-</strong>). Any other character type is invalid.</p>
-<h2 id="using-system-entities" sourcefile="tutorial/bot/oscova/expression.md" sourcestartlinenumber="57" sourceendlinenumber="57">Using System Entities</h2>
-<p sourcefile="tutorial/bot/oscova/expression.md" sourcestartlinenumber="59" sourceendlinenumber="59">As Oscova comes with dozens of pre-built <a href="system-entities.html" sourcefile="tutorial/bot/oscova/expression.md" sourcestartlinenumber="59" sourceendlinenumber="59">system entities</a>. It is convenient to use them in <em>Expressions</em> instead of creating one from scratch. All system entity type names are available as constant members of the <code>Sys</code> class.</p>
-<p sourcefile="tutorial/bot/oscova/expression.md" sourcestartlinenumber="61" sourceendlinenumber="61">For example you can specify the <code>Sys.Date</code> type as shown below.</p>
-<pre sourcefile="tutorial/bot/oscova/expression.md" sourcestartlinenumber="63" sourceendlinenumber="70"><code class="lang-csharp">[Expression(&quot;Book an appointment for {tomorrow}&quot;)]
+<p>Entity types name must contain only alphanumeric characters separated by dot(<strong>.</strong>) or Hypen(<strong>-</strong>). Any other character type is invalid.</p>
+<h2 id="using-system-entities">Using System Entities</h2>
+<p>As Oscova comes with dozens of pre-built <a href="system-entities.html">system entities</a>. It is convenient to use them in <em>Expressions</em> instead of creating one from scratch. All system entity type names are available as constant members of the <code>Sys</code> class.</p>
+<p>For example you can specify the <code>Sys.Date</code> type as shown below.</p>
+<pre><code class="lang-csharp">[Expression(&quot;Book an appointment for {tomorrow}&quot;)]
 [Entity(Sys.Date)]
 public void Appointment(Context context, Result result)
 {

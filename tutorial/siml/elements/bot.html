@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>Bot  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Bot ">
-    <meta name="generator" content="docfx 2.6.1.0">
+    <meta name="generator" content="docfx 2.10.2.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -98,9 +98,9 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="bot" sourcefile="tutorial/siml/elements/bot.md" sourcestartlinenumber="1" sourceendlinenumber="1">Bot</h1>
+              <h1 id="bot">Bot</h1>
               
-<table sourcefile="tutorial/siml/elements/bot.md" sourcestartlinenumber="3" sourceendlinenumber="9">
+<table>
 <thead>
 <tr>
 <th><strong>Annotation</strong></th>
@@ -121,17 +121,17 @@
 <td style="text-align:left">One or more <bot> elements MAY occur as children of</bot></td>
 </tr>
 <tr>
-<td><code>&lt;Pattern&gt;</code> element or its children elements i.e. <code>&lt;Item&gt;</code></td>
-<td style="text-align:left"></td>
+<td></td>
+<td style="text-align:left"><code>&lt;Pattern&gt;</code> element or its children elements i.e. <code>&lt;Item&gt;</code></td>
 </tr>
 <tr>
-<td><code>&lt;Response&gt;</code> element or its children elements.</td>
-<td style="text-align:left"></td>
+<td></td>
+<td style="text-align:left"><code>&lt;Response&gt;</code> element or its children elements.</td>
 </tr>
 </tbody>
 </table>
-<p sourcefile="tutorial/siml/elements/bot.md" sourcestartlinenumber="11" sourceendlinenumber="11">The Bot tag is used to get or set bot related variables at run-time. The values of these variables can be fetched or set during a chat session using the Get or Set attribute respectively.</p>
-<pre sourcefile="tutorial/siml/elements/bot.md" sourcestartlinenumber="13" sourceendlinenumber="23"><code class="lang-xml">&lt;Model&gt;
+<p>The Bot tag is used to get or set bot related variables at run-time. The values of these variables can be fetched or set during a chat session using the Get or Set attribute respectively.</p>
+<pre><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;WHAT IS YOUR FULL NAME&lt;/Pattern&gt;
  &lt;Response&gt;My full name is &lt;Bot Get=&quot;fullname&quot;/&gt;&lt;/Response&gt;
 &lt;/Model&gt;
@@ -140,8 +140,8 @@
  &lt;Pattern&gt;IS YOUR [Bot:Name]&lt;/Pattern&gt;
  &lt;Response&gt;Yes&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p sourcefile="tutorial/siml/elements/bot.md" sourcestartlinenumber="25" sourceendlinenumber="25">In the above example whenever the user says <em>what is your full name?</em> the Bot will respond My name is followed by the full name of the bot.</p>
-<p sourcefile="tutorial/siml/elements/bot.md" sourcestartlinenumber="27" sourceendlinenumber="27">To define a Bot predicate use a <strong>BotSettings</strong> element and add a new element called <em>Variable</em> to it.</p>
+</code></pre><p>In the above example whenever the user says <em>what is your full name?</em> the Bot will respond My name is followed by the full name of the bot.</p>
+<p>To define a Bot predicate use a <strong>BotSettings</strong> element and add a new element called <em>Variable</em> to it.</p>
 
             </article>
           </div>

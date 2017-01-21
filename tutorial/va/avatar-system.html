@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>Avatar System  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Avatar System ">
-    <meta name="generator" content="docfx 2.6.1.0">
+    <meta name="generator" content="docfx 2.10.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -98,14 +98,14 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="avatar-system" sourcefile="tutorial/va/avatar-system.md" sourcestartlinenumber="1" sourceendlinenumber="1">Avatar System</h1>
+              <h1 id="avatar-system">Avatar System</h1>
               
-<p sourcefile="tutorial/va/avatar-system.md" sourcestartlinenumber="3" sourceendlinenumber="3">It took a major portion of development time to create a new <em>Graphic Engine</em> from scratch for <em>Syn Virtual Assistant Prototype 8.5</em>. The goal was to have better <em>lighting</em> and support for true <em>morph targets</em>. Though these features have now been implemented in-turn the Graphic Requirements has increased and support for 2D Avatar has been retired.</p>
-<h2 id="virtual-file-system" sourcefile="tutorial/va/avatar-system.md" sourcestartlinenumber="5" sourceendlinenumber="5">Virtual File System</h2>
-<p sourcefile="tutorial/va/avatar-system.md" sourcestartlinenumber="7" sourceendlinenumber="7">All avatars are saved within the <code>Content.zip</code> file and use the <code>.xnb</code> file format supported by the MonoGame 3D engine. However, the 3D Avatar configuration files are placed outside the <code>zip</code> files under the directory <code>Syn/Avatars</code>.</p>
-<h2 id="avatar-configuration-file" sourcefile="tutorial/va/avatar-system.md" sourcestartlinenumber="9" sourceendlinenumber="9">Avatar Configuration File</h2>
-<p sourcefile="tutorial/va/avatar-system.md" sourcestartlinenumber="11" sourceendlinenumber="11">3D Avatar configuration files are used by the Graphic Engine to initialize important variables and set properties. A typical configuration file looks like the following.</p>
-<pre sourcefile="tutorial/va/avatar-system.md" sourcestartlinenumber="13" sourceendlinenumber="32"><code class="lang-xml">&lt;Avatar Name=&quot;Madonna&quot; Gender=&quot;Female&quot;&gt;
+<p>It took a major portion of development time to create a new <em>Graphic Engine</em> from scratch for <em>Syn Virtual Assistant Prototype 8.5</em>. The goal was to have better <em>lighting</em> and support for true <em>morph targets</em>. Though these features have now been implemented in-turn the Graphic Requirements has increased and support for 2D Avatar has been retired.</p>
+<h2 id="virtual-file-system">Virtual File System</h2>
+<p>All avatars are saved within the <code>Content.zip</code> file and use the <code>.xnb</code> file format supported by the MonoGame 3D engine. However, the 3D Avatar configuration files are placed outside the <code>zip</code> files under the directory <code>Syn/Avatars</code>.</p>
+<h2 id="avatar-configuration-file">Avatar Configuration File</h2>
+<p>3D Avatar configuration files are used by the Graphic Engine to initialize important variables and set properties. A typical configuration file looks like the following.</p>
+<pre><code class="lang-xml">&lt;Avatar Name=&quot;Madonna&quot; Gender=&quot;Female&quot;&gt;
   &lt;CameraPosition Value=&quot;0, 0.5, 4.5&quot; /&gt;
   &lt;CanBlink Value=&quot;True&quot;/&gt;
   &lt;CanRotate Value=&quot;True&quot;/&gt;
@@ -123,39 +123,39 @@
   &lt;Expression ID=&quot;6&quot; Morph=&quot;FV&quot; /&gt;
 ....
 &lt;/Avatar&gt;
-</code></pre><h4 id="avatar" sourcefile="tutorial/va/avatar-system.md" sourcestartlinenumber="34" sourceendlinenumber="34">Avatar</h4>
-<p sourcefile="tutorial/va/avatar-system.md" sourcestartlinenumber="36" sourceendlinenumber="36">The root <em>Avatar</em> element has 2 attributes, <code>Name</code> and <code>Gender</code>. The value of the <code>Name</code> attribute can be any desired name for the 3D avatar. This name will be displayed under the drop-down list of the Avatar settings panel. The <code>Gender</code> attribute can have the values <code>Male</code>, <code>Female</code>, <code>Neutral</code> or <code>NotSet</code>. This value is also used by the <em>Speech Synthesis</em> engine to determine and select the Gender of the <em>Speech Synthesizer</em> if the <em>VoiceName</em>  specified is unavailable.</p>
-<h4 id="cameraposition" sourcefile="tutorial/va/avatar-system.md" sourcestartlinenumber="38" sourceendlinenumber="38">CameraPosition</h4>
-<p sourcefile="tutorial/va/avatar-system.md" sourcestartlinenumber="40" sourceendlinenumber="40">The default camera placed in the 3D environment always faces the 3D Avatar placed within this 3D environment. The position attributes <code>X</code>, <code>Y</code> and <code>Z</code> can be set using comma separted values.</p>
-<h4 id="canblink" sourcefile="tutorial/va/avatar-system.md" sourcestartlinenumber="42" sourceendlinenumber="42">CanBlink</h4>
-<p sourcefile="tutorial/va/avatar-system.md" sourcestartlinenumber="44" sourceendlinenumber="44">This element determines if the 3D Avatar can blink. The Blink morph sequence is triggered randomly by the Avatar Engine. Possible values are <code>True</code> and <code>False</code>.</p>
-<h4 id="canrotate" sourcefile="tutorial/va/avatar-system.md" sourcestartlinenumber="46" sourceendlinenumber="46">CanRotate</h4>
-<p sourcefile="tutorial/va/avatar-system.md" sourcestartlinenumber="48" sourceendlinenumber="48">This element determines if the default camera placed in the 3D environment should make rotations around the 3D Avatar. This has been a traditional animation for the camera used since <em>Prototype 6.0</em> to give a hint to the user if the <em>3D Virtual Assistant&#39;s Window</em> is responsive.</p>
-<h4 id="expression" sourcefile="tutorial/va/avatar-system.md" sourcestartlinenumber="50" sourceendlinenumber="50">Expression</h4>
-<p sourcefile="tutorial/va/avatar-system.md" sourcestartlinenumber="52" sourceendlinenumber="52">The <em>Expression</em> element has 2 attributes, <code>ID</code> and <code>Morph</code>. The <code>ID</code> part is usually the viseme ID used the <em>Speech Synthesis</em> engine and the <code>Morph</code> value determines what <em>morph target</em> is to be used when the specified viseme <code>ID</code> is reached by the <em>Speech Synthesis</em> engine. The reached viseme ID is mapped to one-or-many Phonemes. By default there are 21 viseme IDs.</p>
-<ul sourcefile="tutorial/va/avatar-system.md" sourcestartlinenumber="54" sourceendlinenumber="75">
-<li sourcefile="tutorial/va/avatar-system.md" sourcestartlinenumber="54" sourceendlinenumber="54">0 = silence</li>
-<li sourcefile="tutorial/va/avatar-system.md" sourcestartlinenumber="55" sourceendlinenumber="55">1 = ae, ax , ah</li>
-<li sourcefile="tutorial/va/avatar-system.md" sourcestartlinenumber="56" sourceendlinenumber="56">2 = aa</li>
-<li sourcefile="tutorial/va/avatar-system.md" sourcestartlinenumber="57" sourceendlinenumber="57">3 = ao</li>
-<li sourcefile="tutorial/va/avatar-system.md" sourcestartlinenumber="58" sourceendlinenumber="58">4 = ey, eh , uh</li>
-<li sourcefile="tutorial/va/avatar-system.md" sourcestartlinenumber="59" sourceendlinenumber="59">5 = er</li>
-<li sourcefile="tutorial/va/avatar-system.md" sourcestartlinenumber="60" sourceendlinenumber="60">6 = y, iy, ih, ix</li>
-<li sourcefile="tutorial/va/avatar-system.md" sourcestartlinenumber="61" sourceendlinenumber="61">7 = w, uw</li>
-<li sourcefile="tutorial/va/avatar-system.md" sourcestartlinenumber="62" sourceendlinenumber="62">8 = ow</li>
-<li sourcefile="tutorial/va/avatar-system.md" sourcestartlinenumber="63" sourceendlinenumber="63">9 = aw</li>
-<li sourcefile="tutorial/va/avatar-system.md" sourcestartlinenumber="64" sourceendlinenumber="64">10 = oy</li>
-<li sourcefile="tutorial/va/avatar-system.md" sourcestartlinenumber="65" sourceendlinenumber="65">11 = ay</li>
-<li sourcefile="tutorial/va/avatar-system.md" sourcestartlinenumber="66" sourceendlinenumber="66">12 = h</li>
-<li sourcefile="tutorial/va/avatar-system.md" sourcestartlinenumber="67" sourceendlinenumber="67">13 = r</li>
-<li sourcefile="tutorial/va/avatar-system.md" sourcestartlinenumber="68" sourceendlinenumber="68">14 = l</li>
-<li sourcefile="tutorial/va/avatar-system.md" sourcestartlinenumber="69" sourceendlinenumber="69">15 = s, z</li>
-<li sourcefile="tutorial/va/avatar-system.md" sourcestartlinenumber="70" sourceendlinenumber="70">16 = sh, ch, jh, zh</li>
-<li sourcefile="tutorial/va/avatar-system.md" sourcestartlinenumber="71" sourceendlinenumber="71">17 = th, dh</li>
-<li sourcefile="tutorial/va/avatar-system.md" sourcestartlinenumber="72" sourceendlinenumber="72">18 = f, v</li>
-<li sourcefile="tutorial/va/avatar-system.md" sourcestartlinenumber="73" sourceendlinenumber="73">19 = d, t, n</li>
-<li sourcefile="tutorial/va/avatar-system.md" sourcestartlinenumber="74" sourceendlinenumber="74">20 = k, g, ng</li>
-<li sourcefile="tutorial/va/avatar-system.md" sourcestartlinenumber="75" sourceendlinenumber="75">21 = p, b, m</li>
+</code></pre><h4 id="avatar">Avatar</h4>
+<p>The root <em>Avatar</em> element has 2 attributes, <code>Name</code> and <code>Gender</code>. The value of the <code>Name</code> attribute can be any desired name for the 3D avatar. This name will be displayed under the drop-down list of the Avatar settings panel. The <code>Gender</code> attribute can have the values <code>Male</code>, <code>Female</code>, <code>Neutral</code> or <code>NotSet</code>. This value is also used by the <em>Speech Synthesis</em> engine to determine and select the Gender of the <em>Speech Synthesizer</em> if the <em>VoiceName</em>  specified is unavailable.</p>
+<h4 id="cameraposition">CameraPosition</h4>
+<p>The default camera placed in the 3D environment always faces the 3D Avatar placed within this 3D environment. The position attributes <code>X</code>, <code>Y</code> and <code>Z</code> can be set using comma separted values.</p>
+<h4 id="canblink">CanBlink</h4>
+<p>This element determines if the 3D Avatar can blink. The Blink morph sequence is triggered randomly by the Avatar Engine. Possible values are <code>True</code> and <code>False</code>.</p>
+<h4 id="canrotate">CanRotate</h4>
+<p>This element determines if the default camera placed in the 3D environment should make rotations around the 3D Avatar. This has been a traditional animation for the camera used since <em>Prototype 6.0</em> to give a hint to the user if the <em>3D Virtual Assistant&#39;s Window</em> is responsive.</p>
+<h4 id="expression">Expression</h4>
+<p>The <em>Expression</em> element has 2 attributes, <code>ID</code> and <code>Morph</code>. The <code>ID</code> part is usually the viseme ID used the <em>Speech Synthesis</em> engine and the <code>Morph</code> value determines what <em>morph target</em> is to be used when the specified viseme <code>ID</code> is reached by the <em>Speech Synthesis</em> engine. The reached viseme ID is mapped to one-or-many Phonemes. By default there are 21 viseme IDs.</p>
+<ul>
+<li>0 = silence</li>
+<li>1 = ae, ax , ah</li>
+<li>2 = aa</li>
+<li>3 = ao</li>
+<li>4 = ey, eh , uh</li>
+<li>5 = er</li>
+<li>6 = y, iy, ih, ix</li>
+<li>7 = w, uw</li>
+<li>8 = ow</li>
+<li>9 = aw</li>
+<li>10 = oy</li>
+<li>11 = ay</li>
+<li>12 = h</li>
+<li>13 = r</li>
+<li>14 = l</li>
+<li>15 = s, z</li>
+<li>16 = sh, ch, jh, zh</li>
+<li>17 = th, dh</li>
+<li>18 = f, v</li>
+<li>19 = d, t, n</li>
+<li>20 = k, g, ng</li>
+<li>21 = p, b, m</li>
 </ul>
 
             </article>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>While  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="While ">
-    <meta name="generator" content="docfx 2.6.1.0">
+    <meta name="generator" content="docfx 2.10.2.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -98,9 +98,9 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="while" sourcefile="tutorial/siml/elements/while.md" sourcestartlinenumber="1" sourceendlinenumber="1">While</h1>
+              <h1 id="while">While</h1>
               
-<table sourcefile="tutorial/siml/elements/while.md" sourcestartlinenumber="3" sourceendlinenumber="9">
+<table>
 <thead>
 <tr>
 <th><strong>Annotation</strong></th>
@@ -130,11 +130,11 @@
 </tr>
 </tbody>
 </table>
-<p sourcefile="tutorial/siml/elements/while.md" sourcestartlinenumber="11" sourceendlinenumber="11">The While element loops through a block of SIML code as long as a condition returns <code>True</code>. This element is a fail-proof recursion element as the developer can protect the Bot from entering infinite loops by setting the Bot variable <code>while-limit</code> for the Bot.</p>
-<p sourcefile="tutorial/siml/elements/while.md" sourcestartlinenumber="13" sourceendlinenumber="13">Though we encourage usage of JavaScript for complex looping the following code should give you an idea as to how the <code>While</code> element works.</p>
-<p sourcefile="tutorial/siml/elements/while.md" sourcestartlinenumber="15" sourceendlinenumber="15"><em>Example</em></p>
-<p sourcefile="tutorial/siml/elements/while.md" sourcestartlinenumber="17" sourceendlinenumber="17"><strong>SIML</strong></p>
-<pre sourcefile="tutorial/siml/elements/while.md" sourcestartlinenumber="19" sourceendlinenumber="28"><code class="lang-xml">&lt;Model&gt;
+<p>The While element loops through a block of SIML code as long as a condition returns <code>True</code>. This element is a fail-proof recursion element as the developer can protect the Bot from entering infinite loops by setting the Bot variable <code>while-limit</code> for the Bot.</p>
+<p>Though we encourage usage of JavaScript for complex looping the following code should give you an idea as to how the <code>While</code> element works.</p>
+<p><em>Example</em></p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;COUNT TO *&lt;/Pattern&gt;
  &lt;Response&gt;
   &lt;Var Set=&quot;count&quot;&gt;0&lt;/Var&gt;
@@ -142,12 +142,12 @@
   &lt;While Var=&quot;count&quot; Not=&quot;{0}&quot; xml:space=&quot;preserve&quot;&gt; &lt;Var Set=&quot;count&quot;&gt;&lt;Math Get=&quot;increment&quot;&gt;&lt;Var Get=&quot;count&quot; /&gt;&lt;/Math&gt;&lt;/Var&gt;&lt;/While&gt;
 &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p sourcefile="tutorial/siml/elements/while.md" sourcestartlinenumber="30" sourceendlinenumber="30"><strong>User Input</strong></p>
-<p sourcefile="tutorial/siml/elements/while.md" sourcestartlinenumber="32" sourceendlinenumber="32"><em>Count to 5</em></p>
-<p sourcefile="tutorial/siml/elements/while.md" sourcestartlinenumber="34" sourceendlinenumber="34"><strong>Bot Output</strong></p>
-<p sourcefile="tutorial/siml/elements/while.md" sourcestartlinenumber="36" sourceendlinenumber="36"><em>0 1 2 3 4 5</em></p>
-<p sourcefile="tutorial/siml/elements/while.md" sourcestartlinenumber="38" sourceendlinenumber="38"><strong>Explanation</strong></p>
-<blockquote sourcefile="tutorial/siml/elements/while.md" sourcestartlinenumber="40" sourceendlinenumber="40"><p sourcefile="tutorial/siml/elements/while.md" sourcestartlinenumber="40" sourceendlinenumber="40">The SIML code in the <code>While</code> element runs, over and over again, as long as the variable count is not equal to 5.</p>
+</code></pre><p><strong>User Input</strong></p>
+<p><em>Count to 5</em></p>
+<p><strong>Bot Output</strong></p>
+<p><em>0 1 2 3 4 5</em></p>
+<p><strong>Explanation</strong></p>
+<blockquote><p>The SIML code in the <code>While</code> element runs, over and over again, as long as the variable count is not equal to 5.</p>
 </blockquote>
 
             </article>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>Creating a custom VA Plugin  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Creating a custom VA Plugin ">
-    <meta name="generator" content="docfx 2.6.1.0">
+    <meta name="generator" content="docfx 2.10.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -98,67 +98,67 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="creating-a-custom-va-plugin" sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="1" sourceendlinenumber="1">Creating a custom VA Plugin</h1>
+              <h1 id="creating-a-custom-va-plugin">Creating a custom VA Plugin</h1>
               
-<p sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="3" sourceendlinenumber="3">Creation of a Plugin for VA Framework gets a lot easier due to the availability of in-built classes and utilities. For the creation of a VA Plugin, we&#39;ll assume that you are using <em>Visual Studio Community 2015</em> and have good knowledge of C# coding.</p>
-<h2 id="requirements" sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="5" sourceendlinenumber="5">Requirements</h2>
-<p sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="7" sourceendlinenumber="7">You&#39;ll need to ensure that the following requirements are met in their entirety before you start developing your custom VA Plugin.</p>
-<ul sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="9" sourceendlinenumber="11">
-<li sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="9" sourceendlinenumber="9"><a href="http://syn.co.in" sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="9" sourceendlinenumber="9">Syn Virtual Assistant 8.5</a> or above.</li>
-<li sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="10" sourceendlinenumber="10"><a href="http://simlbot.com" sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="10" sourceendlinenumber="10">Syn Bot Studio</a></li>
-<li sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="11" sourceendlinenumber="11"><a href="https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx" sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="11" sourceendlinenumber="11">Visual Studio Community 2015</a> or above.</li>
+<p>Creation of a Plugin for VA Framework gets a lot easier due to the availability of in-built classes and utilities. For the creation of a VA Plugin, we&#39;ll assume that you are using <em>Visual Studio Community 2015</em> and have good knowledge of C# coding.</p>
+<h2 id="requirements">Requirements</h2>
+<p>You&#39;ll need to ensure that the following requirements are met in their entirety before you start developing your custom VA Plugin.</p>
+<ul>
+<li><a href="http://syn.co.in">Syn Virtual Assistant 8.5</a> or above.</li>
+<li><a href="http://simlbot.com">Syn Bot Studio</a></li>
+<li><a href="https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx">Visual Studio Community 2015</a> or above.</li>
 </ul>
-<h2 id="custom-plugin" sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="13" sourceendlinenumber="13">Custom Plugin</h2>
-<h3 id="creating-a-class-library-project" sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="15" sourceendlinenumber="15">Creating a <em>Class Library</em> project</h3>
-<p sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="17" sourceendlinenumber="17">All VA Plugins are <em>Class Libraries</em> that are loaded by the <code>Loader</code> plugin during VA initialization.</p>
-<p sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="19" sourceendlinenumber="19">To create a <em>Class Library</em> project, start <em>Visual Studio</em></p>
-<ul sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="21" sourceendlinenumber="23">
-<li sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="21" sourceendlinenumber="21">On the menu bar choose <strong>File</strong>, <strong>New</strong>, <strong>Project</strong>.</li>
-<li sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="22" sourceendlinenumber="22">Expand <strong>Installed</strong>, expand <strong>Templates</strong>, expand <strong>Visual C#</strong> and then choose <strong>Class Library</strong>.</li>
-<li sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="23" sourceendlinenumber="23">In the <strong>Name</strong> box, type <em><strong>Syn.VA.Plugins.HelloPlugin</strong></em> and choose <strong>OK</strong>.</li>
+<h2 id="custom-plugin">Custom Plugin</h2>
+<h3 id="creating-a-class-library-project">Creating a <em>Class Library</em> project</h3>
+<p>All VA Plugins are <em>Class Libraries</em> that are loaded by the <code>Loader</code> plugin during VA initialization.</p>
+<p>To create a <em>Class Library</em> project, start <em>Visual Studio</em></p>
+<ul>
+<li>On the menu bar choose <strong>File</strong>, <strong>New</strong>, <strong>Project</strong>.</li>
+<li>Expand <strong>Installed</strong>, expand <strong>Templates</strong>, expand <strong>Visual C#</strong> and then choose <strong>Class Library</strong>.</li>
+<li>In the <strong>Name</strong> box, type <em><strong>Syn.VA.Plugins.HelloPlugin</strong></em> and choose <strong>OK</strong>.</li>
 </ul>
-<p sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="25" sourceendlinenumber="25"><img src="images/va-plugin-project.png" alt="hello Plugin Image" sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="25" sourceendlinenumber="25"></p>
-<h3 id="referencing-the-va-libraries" sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="27" sourceendlinenumber="27">Referencing the VA Libraries</h3>
-<p sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="29" sourceendlinenumber="29">Once the project is created, you&#39;ll need to reference a few class libraries.</p>
-<p sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="31" sourceendlinenumber="31">You can find these libraries in <code>Syn\Dependencies</code> folder in the installation directory of Syn Virtual Assistant or you can visit the online <a href="https://github.com/SynHub/syn-va-components" sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="31" sourceendlinenumber="31">Syn-VA-Components</a> repository and download the <code>References</code> folder.</p>
-<p sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="33" sourceendlinenumber="33">After the you have downloaded the <em>References</em> folder, switch to <em>Visual Studio</em>,</p>
-<ul sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="35" sourceendlinenumber="38">
-<li sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="35" sourceendlinenumber="35">In <strong>Solution Explorer</strong>, right-click on the References node and choose <strong>Add Reference</strong>.</li>
-<li sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="36" sourceendlinenumber="37">Click on <strong>Browse</strong>, browse to the <code>References</code> folder, select <code>Syn.VA.dll</code>, <code>Syn.Bot.dll</code> and <code>Syn.Log.dll</code>.
-<img src="images/va-plugin-reference.png" alt="VA Reference Folder Image" sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="37" sourceendlinenumber="37"></li>
-<li sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="38" sourceendlinenumber="38">Click on <strong>Add</strong> and then hoose <strong>OK</strong>.</li>
+<p><img src="images/va-plugin-project.png" alt="hello Plugin Image"></p>
+<h3 id="referencing-the-va-libraries">Referencing the VA Libraries</h3>
+<p>Once the project is created, you&#39;ll need to reference a few class libraries.</p>
+<p>You can find these libraries in <code>Syn\Dependencies</code> folder in the installation directory of Syn Virtual Assistant or you can visit the online <a href="https://github.com/SynHub/syn-va-components">Syn-VA-Components</a> repository and download the <code>References</code> folder.</p>
+<p>After the you have downloaded the <em>References</em> folder, switch to <em>Visual Studio</em>,</p>
+<ul>
+<li>In <strong>Solution Explorer</strong>, right-click on the References node and choose <strong>Add Reference</strong>.</li>
+<li>Click on <strong>Browse</strong>, browse to the <code>References</code> folder, select <code>Syn.VA.dll</code>, <code>Syn.Bot.dll</code> and <code>Syn.Log.dll</code>.
+<img src="images/va-plugin-reference.png" alt="VA Reference Folder Image"></li>
+<li>Click on <strong>Add</strong> and then hoose <strong>OK</strong>.</li>
 </ul>
-<p sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="40" sourceendlinenumber="40">You now have all the libraries referenced to create your first plugin.</p>
-<h3 id="helloplugin-class" sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="42" sourceendlinenumber="42"><code>HelloPlugin</code> class</h3>
-<p sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="44" sourceendlinenumber="44">To create a class that is loaded as a <em>Plugin</em> type it is important to derive the class from either the <code>Plugin</code> class or implement the <code>IPlugin</code> interface.</p>
-<ul sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="46" sourceendlinenumber="47">
-<li sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="46" sourceendlinenumber="46">Rename <code>Class1</code> to <code>HelloPlugin</code>.</li>
-<li sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="47" sourceendlinenumber="47">Inherit from <code>Plugin</code></li>
+<p>You now have all the libraries referenced to create your first plugin.</p>
+<h3 id="helloplugin-class"><code>HelloPlugin</code> class</h3>
+<p>To create a class that is loaded as a <em>Plugin</em> type it is important to derive the class from either the <code>Plugin</code> class or implement the <code>IPlugin</code> interface.</p>
+<ul>
+<li>Rename <code>Class1</code> to <code>HelloPlugin</code>.</li>
+<li>Inherit from <code>Plugin</code></li>
 </ul>
-<pre sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="49" sourceendlinenumber="57"><code class="lang-csharp">namespace Syn.VA.Plugins.HelloPlugin
+<pre><code class="lang-csharp">namespace Syn.VA.Plugins.HelloPlugin
 {
     public class HelloPlugin : Plugin
     {
 
     }
 }
-</code></pre><blockquote sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="59" sourceendlinenumber="59"><p sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="59" sourceendlinenumber="59">Only <code>public</code> classes that inherit the <code>Plugin</code> class from <code>Syn.VA</code> library are loaded by the <code>Loader</code> plugin.</p>
+</code></pre><blockquote><p>Only <code>public</code> classes that inherit the <code>Plugin</code> class from <code>Syn.VA</code> library are loaded by the <code>Loader</code> plugin.</p>
 </blockquote>
-<h3 id="creating-an-siml-adapter" sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="61" sourceendlinenumber="61">Creating an SIML Adapter</h3>
-<p sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="63" sourceendlinenumber="63">To know what an SIML Adapter is please refer <a href="../bot/custom-adapter.md" sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="63" sourceendlinenumber="63">Creating a custom Adapter</a> in <em>Syn Bot</em> tutorials section.</p>
-<ul sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="65" sourceendlinenumber="68">
-<li sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="65" sourceendlinenumber="65">Right click the project name in <strong>Solution Explorer</strong>, point to <strong>Add</strong> and then click <strong>New Folder</strong>.</li>
-<li sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="66" sourceendlinenumber="66">Rename the <em>New Folder</em> to <em>Adapter</em>.</li>
-<li sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="67" sourceendlinenumber="67">Right clicck the folder, point to <strong>Add</strong> and then choose <strong>Class</strong>.</li>
-<li sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="68" sourceendlinenumber="68">Name the class <em>HelloAdapter</em>.</li>
+<h3 id="creating-an-siml-adapter">Creating an SIML Adapter</h3>
+<p>To know what an SIML Adapter is please refer <a href="../bot/custom-adapter.md">Creating a custom Adapter</a> in <em>Syn Bot</em> tutorials section.</p>
+<ul>
+<li>Right click the project name in <strong>Solution Explorer</strong>, point to <strong>Add</strong> and then click <strong>New Folder</strong>.</li>
+<li>Rename the <em>New Folder</em> to <em>Adapter</em>.</li>
+<li>Right clicck the folder, point to <strong>Add</strong> and then choose <strong>Class</strong>.</li>
+<li>Name the class <em>HelloAdapter</em>.</li>
 </ul>
-<p sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="70" sourceendlinenumber="70">Once the <code>HelloAdapter</code> class has been created we&#39;ll need to implement the <code>IAdapter</code> interface present in the <code>Syn.Bot</code> library.</p>
-<pre sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="72" sourceendlinenumber="77"><code class="lang-csharp">class HelloAdapter : IAdapter
+<p>Once the <code>HelloAdapter</code> class has been created we&#39;ll need to implement the <code>IAdapter</code> interface present in the <code>Syn.Bot</code> library.</p>
+<pre><code class="lang-csharp">class HelloAdapter : IAdapter
 {
 
 }
-</code></pre><p sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="79" sourceendlinenumber="79">Next we&#39;ll implement the <em>Properties</em> and <em>Methods</em> of the <code>IAdapter</code> interface as shown below.</p>
-<pre sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="81" sourceendlinenumber="91"><code class="lang-csharp">class HelloAdapter : IAdapter
+</code></pre><p>Next we&#39;ll implement the <em>Properties</em> and <em>Methods</em> of the <code>IAdapter</code> interface as shown below.</p>
+<pre><code class="lang-csharp">class HelloAdapter : IAdapter
 {
     public XName TagName =&gt; SimlSpecification.Namespace.X + &quot;Hello&quot;;
     public bool IsRecursive =&gt; true;
@@ -167,11 +167,11 @@
         return &quot;Hello Plugin says Hello!&quot;;
     }
 }
-</code></pre><p sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="93" sourceendlinenumber="93">In the above code the <code>TagName</code> is the SIML tag that will later be used in an SIML Knowledge base. The above adapter just returns the string <em>&quot;Hello Plugin says Hello&quot;</em>.</p>
-<p sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="95" sourceendlinenumber="95">Now that the adapter is ready switch to <code>HelloPlugin</code> class and add the following code in the class constructor.</p>
-<pre sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="97" sourceendlinenumber="99"><code class="lang-csharp">SimlBot.Instance.Adapters.Add(new HelloAdapter());
-</code></pre><p sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="101" sourceendlinenumber="101">The overall code for the <code>HelloPlugin</code> class should look like the following.</p>
-<pre sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="103" sourceendlinenumber="117"><code class="lang-csharp">using Syn.Bot.Siml;
+</code></pre><p>In the above code the <code>TagName</code> is the SIML tag that will later be used in an SIML Knowledge base. The above adapter just returns the string <em>&quot;Hello Plugin says Hello&quot;</em>.</p>
+<p>Now that the adapter is ready switch to <code>HelloPlugin</code> class and add the following code in the class constructor.</p>
+<pre><code class="lang-csharp">SimlBot.Instance.Adapters.Add(new HelloAdapter());
+</code></pre><p>The overall code for the <code>HelloPlugin</code> class should look like the following.</p>
+<pre><code class="lang-csharp">using Syn.Bot.Siml;
 using Syn.VA.Plugins.HelloPlugin.Adapter;
 
 namespace Syn.VA.Plugins.HelloPlugin
@@ -184,36 +184,36 @@ namespace Syn.VA.Plugins.HelloPlugin
         }
     }
 }
-</code></pre><blockquote sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="119" sourceendlinenumber="119"><p sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="119" sourceendlinenumber="119">The <code>SimlBot.Instance</code> is the main <code>SimlBot</code> instance that is used by all plugins.</p>
+</code></pre><blockquote><p>The <code>SimlBot.Instance</code> is the main <code>SimlBot</code> instance that is used by all plugins.</p>
 </blockquote>
-<h3 id="placing-the-plugin" sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="122" sourceendlinenumber="122">Placing the Plugin</h3>
-<ul sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="124" sourceendlinenumber="126">
-<li sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="124" sourceendlinenumber="124">In <strong>Solution Explorer</strong>, right click the project name and <strong>Properties</strong>.</li>
-<li sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="125" sourceendlinenumber="125">Under <strong>Build</strong> option, scroll down to <strong>Output Path</strong> and choose <strong>Browse</strong>.</li>
-<li sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="126" sourceendlinenumber="126">Browse to <code>Syn/Plugins</code> folder found in the root directory of Syn Virtual Assistant installation and then choose <strong>Select Folder</strong>.</li>
+<h3 id="placing-the-plugin">Placing the Plugin</h3>
+<ul>
+<li>In <strong>Solution Explorer</strong>, right click the project name and <strong>Properties</strong>.</li>
+<li>Under <strong>Build</strong> option, scroll down to <strong>Output Path</strong> and choose <strong>Browse</strong>.</li>
+<li>Browse to <code>Syn/Plugins</code> folder found in the root directory of Syn Virtual Assistant installation and then choose <strong>Select Folder</strong>.</li>
 </ul>
-<p sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="128" sourceendlinenumber="128"><img src="images/va-plugin-output-path.png" alt="VA Reference Folder Image" sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="128" sourceendlinenumber="128"></p>
-<ul sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="130" sourceendlinenumber="130">
-<li sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="130" sourceendlinenumber="130">On the menu bar, choose <strong>Build</strong> and then choose <strong>Build Solution</strong>.</li>
+<p><img src="images/va-plugin-output-path.png" alt="VA Reference Folder Image"></p>
+<ul>
+<li>On the menu bar, choose <strong>Build</strong> and then choose <strong>Build Solution</strong>.</li>
 </ul>
-<h3 id="add-command-to-knowledge-base" sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="132" sourceendlinenumber="132">Add command to Knowledge-Base</h3>
-<p sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="134" sourceendlinenumber="134">For the purpose of testing the newly created we&#39;ll need to a add atleast one command in the Bot&#39;s knowledge-base to trigger the evaluation of the <code>HelloAdapter</code>.</p>
-<ul sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="136" sourceendlinenumber="140">
-<li sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="136" sourceendlinenumber="136">Open Syn Bot Studio, choose <strong>Open</strong> and choose <strong>Project</strong>.</li>
-<li sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="137" sourceendlinenumber="137">Browse to <code>Syn/Bot</code> directory under the directory where Syn Virtual Assistant is installed.</li>
-<li sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="138" sourceendlinenumber="138">Select <code>Commands.simlproj</code> and choose <strong>Open</strong>.</li>
-<li sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="139" sourceendlinenumber="139">On the right <em>File Explorer</em>, right click and choose <strong>Add New File</strong>.</li>
-<li sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="140" sourceendlinenumber="140">Enter <code>HelloPlugin</code> as the file name and choose <strong>OK</strong>.</li>
+<h3 id="add-command-to-knowledge-base">Add command to Knowledge-Base</h3>
+<p>For the purpose of testing the newly created we&#39;ll need to a add atleast one command in the Bot&#39;s knowledge-base to trigger the evaluation of the <code>HelloAdapter</code>.</p>
+<ul>
+<li>Open Syn Bot Studio, choose <strong>Open</strong> and choose <strong>Project</strong>.</li>
+<li>Browse to <code>Syn/Bot</code> directory under the directory where Syn Virtual Assistant is installed.</li>
+<li>Select <code>Commands.simlproj</code> and choose <strong>Open</strong>.</li>
+<li>On the right <em>File Explorer</em>, right click and choose <strong>Add New File</strong>.</li>
+<li>Enter <code>HelloPlugin</code> as the file name and choose <strong>OK</strong>.</li>
 </ul>
-<p sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="142" sourceendlinenumber="142">Under the newly created SIML _Concept add the following SIML Model and also add <code>xmlns:x=&quot;http://syn.co.in/2014/siml#external&quot;</code> to the root <code>Siml</code> element.</p>
-<pre sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="144" sourceendlinenumber="151"><code class="lang-xml">&lt;Model&gt;
+<p>Under the newly created SIML _Concept add the following SIML Model and also add <code>xmlns:x=&quot;http://syn.co.in/2014/siml#external&quot;</code> to the root <code>Siml</code> element.</p>
+<pre><code class="lang-xml">&lt;Model&gt;
   &lt;Pattern&gt;Hello Plugin&lt;/Pattern&gt;
   &lt;Response&gt;
     &lt;x:Hello /&gt;
   &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="153" sourceendlinenumber="153">The over SIML code should look like the following.</p>
-<pre sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="155" sourceendlinenumber="168"><code class="lang-xml">&lt;Siml xmlns:x=&quot;http://syn.co.in/2014/siml#external&quot;&gt;
+</code></pre><p>The over SIML code should look like the following.</p>
+<pre><code class="lang-xml">&lt;Siml xmlns:x=&quot;http://syn.co.in/2014/siml#external&quot;&gt;
   &lt;Concept Name=&quot;HelloPlugin&quot;&gt;
 
     &lt;Model&gt;
@@ -225,45 +225,45 @@ namespace Syn.VA.Plugins.HelloPlugin
 
   &lt;/Concept&gt;
 &lt;/Siml&gt;
-</code></pre><p sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="170" sourceendlinenumber="170">Press <strong>Ctrl+S</strong> to save the code to file and close <em>Bot Studio</em>.</p>
-<h3 id="testing-the-custom-helloplugin" sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="172" sourceendlinenumber="172">Testing the custom <code>HelloPlugin</code></h3>
-<p sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="174" sourceendlinenumber="174">Launch <strong>Syn Virtual Assistant</strong> and in the <em>Input Box</em> type <em>&quot;Hello Plugin&quot;</em>. The VA should respond <em>&quot;Hello Plugin says Hello!&quot;</em>.</p>
-<p sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="176" sourceendlinenumber="176">You have now successfully created your first plugin for Syn Virtual Assistant.</p>
-<h2 id="plugin-settings-file" sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="178" sourceendlinenumber="178">Plugin Settings File</h2>
-<p sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="180" sourceendlinenumber="180">The <code>Loader</code> plugin during Virtual Assistant initialization checks if a plugin <em>class</em> has an embedded XML file as resource with a name that matches the <em>Name</em> property of the plugin itself.</p>
-<h3 id="creating-an-embedded-xml-file" sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="182" sourceendlinenumber="182">Creating an Embedded XML File</h3>
-<ul sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="184" sourceendlinenumber="186">
-<li sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="184" sourceendlinenumber="184">In <strong>Solution Explorer</strong>, right click the project name, point to <strong>Add</strong> and click <strong>New Item</strong>.</li>
-<li sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="185" sourceendlinenumber="185">Scroll down and select <strong>XML File</strong>.</li>
-<li sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="186" sourceendlinenumber="186">Name the file <code>HelloPluginSettings.xml</code> and choose <strong>Add</strong>.</li>
+</code></pre><p>Press <strong>Ctrl+S</strong> to save the code to file and close <em>Bot Studio</em>.</p>
+<h3 id="testing-the-custom-helloplugin">Testing the custom <code>HelloPlugin</code></h3>
+<p>Launch <strong>Syn Virtual Assistant</strong> and in the <em>Input Box</em> type <em>&quot;Hello Plugin&quot;</em>. The VA should respond <em>&quot;Hello Plugin says Hello!&quot;</em>.</p>
+<p>You have now successfully created your first plugin for Syn Virtual Assistant.</p>
+<h2 id="plugin-settings-file">Plugin Settings File</h2>
+<p>The <code>Loader</code> plugin during Virtual Assistant initialization checks if a plugin <em>class</em> has an embedded XML file as resource with a name that matches the <em>Name</em> property of the plugin itself.</p>
+<h3 id="creating-an-embedded-xml-file">Creating an Embedded XML File</h3>
+<ul>
+<li>In <strong>Solution Explorer</strong>, right click the project name, point to <strong>Add</strong> and click <strong>New Item</strong>.</li>
+<li>Scroll down and select <strong>XML File</strong>.</li>
+<li>Name the file <code>HelloPluginSettings.xml</code> and choose <strong>Add</strong>.</li>
 </ul>
-<p sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="188" sourceendlinenumber="188"><img src="images/va-plugin-settings.png" alt="VA Reference Folder Image" sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="188" sourceendlinenumber="188"></p>
-<ul sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="189" sourceendlinenumber="190">
-<li sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="189" sourceendlinenumber="189">In <strong>Solution Explorer</strong>, right click <code>HelloPluginSettings.xml</code> and choose <strong>Properties</strong>.</li>
-<li sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="190" sourceendlinenumber="190">In <strong>File Properties</strong>, under <strong>Build Action</strong> select <strong>Embedded Resource</strong></li>
+<p><img src="images/va-plugin-settings.png" alt="VA Reference Folder Image"></p>
+<ul>
+<li>In <strong>Solution Explorer</strong>, right click <code>HelloPluginSettings.xml</code> and choose <strong>Properties</strong>.</li>
+<li>In <strong>File Properties</strong>, under <strong>Build Action</strong> select <strong>Embedded Resource</strong></li>
 </ul>
-<p sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="192" sourceendlinenumber="192"><img src="images/va-plugin-settings-property.png" alt="VA Reference Folder Image" sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="192" sourceendlinenumber="192"></p>
-<ul sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="194" sourceendlinenumber="195">
-<li sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="194" sourceendlinenumber="194">In <strong>Solution Explorer</strong>, double-click <code>HelloPluginSettings.xml</code> to edit the new XML file.</li>
-<li sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="195" sourceendlinenumber="195">Replace the default xml template with the following code.</li>
+<p><img src="images/va-plugin-settings-property.png" alt="VA Reference Folder Image"></p>
+<ul>
+<li>In <strong>Solution Explorer</strong>, double-click <code>HelloPluginSettings.xml</code> to edit the new XML file.</li>
+<li>Replace the default xml template with the following code.</li>
 </ul>
-<pre sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="197" sourceendlinenumber="202"><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+<pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
 &lt;Settings&gt;
   &lt;Item Name=&quot;SomeName&quot; Value=&quot;SomeValue&quot; /&gt;
 &lt;/Settings&gt;
-</code></pre><ul sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="204" sourceendlinenumber="206">
-<li sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="204" sourceendlinenumber="204">On the menu bar, choose <strong>Build</strong> and then choose <strong>Build Solution</strong>.</li>
-<li sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="205" sourceendlinenumber="205">Launch <strong>Syn Virtual Assistant</strong> and browse to the <em>Plugins</em> folder in Syn Virtual Assistant installation directory.</li>
-<li sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="206" sourceendlinenumber="206">You&#39;ll see the new settings file present.</li>
+</code></pre><ul>
+<li>On the menu bar, choose <strong>Build</strong> and then choose <strong>Build Solution</strong>.</li>
+<li>Launch <strong>Syn Virtual Assistant</strong> and browse to the <em>Plugins</em> folder in Syn Virtual Assistant installation directory.</li>
+<li>You&#39;ll see the new settings file present.</li>
 </ul>
-<p sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="208" sourceendlinenumber="208"><img src="images/va-plugin-file.png" alt="VA Reference Folder Image" sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="208" sourceendlinenumber="208"></p>
-<p sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="210" sourceendlinenumber="210">The <code>Loader</code> during <em>plugin scan</em> checks if a plugin&#39;s <em>settings file</em> is present in the <code>Syn/Settings</code> directory. If the file is not present the <code>Loader</code> automatically copies the <em>Embedded Resource</em> file to the <em>Settings</em> directory.</p>
-<h3 id="setting-file-name" sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="212" sourceendlinenumber="212">Setting File name</h3>
-<p sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="214" sourceendlinenumber="214">In the above project the actual settings file name in the <strong>Solution Explorer</strong> was <code>HelloPluginSettings.xml</code>. However, the file copied to the <em>Settings</em> directory by the <code>Loader</code> is named <code>HelloPlugin.xml</code>. This is because the <code>Loader</code> only considers the <code>Plugin.Name</code> property to create the settings file.</p>
-<p sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="216" sourceendlinenumber="216">If the <code>Name</code> property of a <em>Plugin</em> class is overriden, the new value is used to create the <em>Settings File</em>.</p>
-<p sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="218" sourceendlinenumber="218"><em>For Example</em></p>
-<pre sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="220" sourceendlinenumber="222"><code class="lang-csharp">public override string Name =&gt; &quot;Hello&quot;;
-</code></pre><p sourcefile="tutorial/va/custom-plugin.md" sourcestartlinenumber="224" sourceendlinenumber="224">Then the new settings file name created by the <code>Loader</code> in the <code>Settings</code> directory would be <code>Hello.xml</code>.</p>
+<p><img src="images/va-plugin-file.png" alt="VA Reference Folder Image"></p>
+<p>The <code>Loader</code> during <em>plugin scan</em> checks if a plugin&#39;s <em>settings file</em> is present in the <code>Syn/Settings</code> directory. If the file is not present the <code>Loader</code> automatically copies the <em>Embedded Resource</em> file to the <em>Settings</em> directory.</p>
+<h3 id="setting-file-name">Setting File name</h3>
+<p>In the above project the actual settings file name in the <strong>Solution Explorer</strong> was <code>HelloPluginSettings.xml</code>. However, the file copied to the <em>Settings</em> directory by the <code>Loader</code> is named <code>HelloPlugin.xml</code>. This is because the <code>Loader</code> only considers the <code>Plugin.Name</code> property to create the settings file.</p>
+<p>If the <code>Name</code> property of a <em>Plugin</em> class is overriden, the new value is used to create the <em>Settings File</em>.</p>
+<p><em>For Example</em></p>
+<pre><code class="lang-csharp">public override string Name =&gt; &quot;Hello&quot;;
+</code></pre><p>Then the new settings file name created by the <code>Loader</code> in the <code>Settings</code> directory would be <code>Hello.xml</code>.</p>
 
             </article>
           </div>

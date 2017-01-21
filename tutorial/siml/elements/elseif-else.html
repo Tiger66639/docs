@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>ElseIf  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="ElseIf ">
-    <meta name="generator" content="docfx 2.6.1.0">
+    <meta name="generator" content="docfx 2.10.2.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -98,9 +98,9 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="elseif" sourcefile="tutorial/siml/elements/elseif-else.md" sourcestartlinenumber="1" sourceendlinenumber="1">ElseIf</h1>
+              <h1 id="elseif">ElseIf</h1>
               
-<table sourcefile="tutorial/siml/elements/elseif-else.md" sourcestartlinenumber="3" sourceendlinenumber="8">
+<table>
 <thead>
 <tr>
 <th><strong>Annotation</strong></th>
@@ -117,8 +117,8 @@
 <td style="text-align:left"><strong>Required</strong> <code>Bot</code>, <code>User</code> or <code>Var</code> attribute</td>
 </tr>
 <tr>
-<td><strong>Optional</strong> Variable Operators: Symbols that specify which operations to perform.</td>
-<td style="text-align:left"></td>
+<td></td>
+<td style="text-align:left"><strong>Optional</strong> Variable Operators: Symbols that specify which operations to perform.</td>
 </tr>
 <tr>
 <td><strong>Occurrence</strong></td>
@@ -126,8 +126,8 @@
 </tr>
 </tbody>
 </table>
-<h1 id="else" sourcefile="tutorial/siml/elements/elseif-else.md" sourcestartlinenumber="10" sourceendlinenumber="10">Else</h1>
-<table sourcefile="tutorial/siml/elements/elseif-else.md" sourcestartlinenumber="12" sourceendlinenumber="15">
+<h1 id="else">Else</h1>
+<table>
 <thead>
 <tr>
 <th><strong>Annotation</strong></th>
@@ -145,10 +145,10 @@
 </tr>
 </tbody>
 </table>
-<p sourcefile="tutorial/siml/elements/elseif-else.md" sourcestartlinenumber="17" sourceendlinenumber="17"><code>ElseIf</code> elements are evaluated if their ancestor If element’s condition is not satisfied and the <code>Else</code> element is evaluated if all of the above conditions are dismissed for <code>ElseIf</code> and <code>If</code>.</p>
-<p sourcefile="tutorial/siml/elements/elseif-else.md" sourcestartlinenumber="20" sourceendlinenumber="20"><em>Example</em></p>
-<p sourcefile="tutorial/siml/elements/elseif-else.md" sourcestartlinenumber="22" sourceendlinenumber="22"><strong>SIML</strong></p>
-<pre sourcefile="tutorial/siml/elements/elseif-else.md" sourcestartlinenumber="24" sourceendlinenumber="38"><code class="lang-xml">&lt;Model&gt;
+<p><code>ElseIf</code> elements are evaluated if their ancestor If element’s condition is not satisfied and the <code>Else</code> element is evaluated if all of the above conditions are dismissed for <code>ElseIf</code> and <code>If</code>.</p>
+<p><em>Example</em></p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
   &lt;Pattern&gt;I AM * YEARS OLD&lt;/Pattern&gt;
   &lt;Response&gt;Good to know. &lt;User Think:Set=&quot;Age&quot;&gt;&lt;Match /&gt;&lt;/User&gt;&lt;/Response&gt;
 &lt;/Model&gt;
@@ -161,18 +161,18 @@
     &lt;Else&gt;Nope, I don&#39;t think so.&lt;/Else&gt;
   &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p sourcefile="tutorial/siml/elements/elseif-else.md" sourcestartlinenumber="40" sourceendlinenumber="40"><strong>User Input</strong></p>
-<ol sourcefile="tutorial/siml/elements/elseif-else.md" sourcestartlinenumber="42" sourceendlinenumber="43">
-<li sourcefile="tutorial/siml/elements/elseif-else.md" sourcestartlinenumber="42" sourceendlinenumber="42"><em>I am 10 years old.</em></li>
-<li sourcefile="tutorial/siml/elements/elseif-else.md" sourcestartlinenumber="43" sourceendlinenumber="43"><em>Am I old enough for a driving license?</em></li>
+</code></pre><p><strong>User Input</strong></p>
+<ol>
+<li><em>I am 10 years old.</em></li>
+<li><em>Am I old enough for a driving license?</em></li>
 </ol>
-<p sourcefile="tutorial/siml/elements/elseif-else.md" sourcestartlinenumber="45" sourceendlinenumber="45"><strong>Bot Output</strong></p>
-<ol sourcefile="tutorial/siml/elements/elseif-else.md" sourcestartlinenumber="47" sourceendlinenumber="48">
-<li sourcefile="tutorial/siml/elements/elseif-else.md" sourcestartlinenumber="47" sourceendlinenumber="47"><em>Good to know.</em></li>
-<li sourcefile="tutorial/siml/elements/elseif-else.md" sourcestartlinenumber="48" sourceendlinenumber="48"><em>Nope, I don’t think so.</em></li>
+<p><strong>Bot Output</strong></p>
+<ol>
+<li><em>Good to know.</em></li>
+<li><em>Nope, I don’t think so.</em></li>
 </ol>
-<p sourcefile="tutorial/siml/elements/elseif-else.md" sourcestartlinenumber="50" sourceendlinenumber="50"><strong>Explanation</strong></p>
-<blockquote sourcefile="tutorial/siml/elements/elseif-else.md" sourcestartlinenumber="52" sourceendlinenumber="52"><p sourcefile="tutorial/siml/elements/elseif-else.md" sourcestartlinenumber="52" sourceendlinenumber="52">The Bot responds <strong><em>Nope, I don’t think so.</em></strong> if and only if the conditions specified by the <code>ElseIf</code> and <code>If</code> elements are not met.</p>
+<p><strong>Explanation</strong></p>
+<blockquote><p>The Bot responds <strong><em>Nope, I don’t think so.</em></strong> if and only if the conditions specified by the <code>ElseIf</code> and <code>If</code> elements are not met.</p>
 </blockquote>
 
             </article>

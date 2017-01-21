@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>Channel Plugin  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Channel Plugin ">
-    <meta name="generator" content="docfx 2.6.1.0">
+    <meta name="generator" content="docfx 2.10.2.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -98,17 +98,17 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="channel-plugin" sourcefile="tutorial/va/plugins/channel.md" sourcestartlinenumber="1" sourceendlinenumber="1">Channel Plugin</h1>
+              <h1 id="channel-plugin">Channel Plugin</h1>
               
-<p sourcefile="tutorial/va/plugins/channel.md" sourcestartlinenumber="3" sourceendlinenumber="3">This plugin enables calling of commands using a local url via Web API interface. All messages received are processed under the <code>Main</code> Virtual Assistant user&#39;s context.</p>
-<h2 id="example-reply" sourcefile="tutorial/va/plugins/channel.md" sourcestartlinenumber="5" sourceendlinenumber="5">Example Reply</h2>
-<p sourcefile="tutorial/va/plugins/channel.md" sourcestartlinenumber="7" sourceendlinenumber="7">Once a message is processed the reply can be serialzed to xml format or json format.</p>
-<pre sourcefile="tutorial/va/plugins/channel.md" sourcestartlinenumber="9" sourceendlinenumber="14"><code class="lang-xml">&lt;Result&gt;
+<p>This plugin enables calling of commands using a local url via Web API interface. All messages received are processed under the <code>Main</code> Virtual Assistant user&#39;s context.</p>
+<h2 id="example-reply">Example Reply</h2>
+<p>Once a message is processed the reply can be serialzed to xml format or json format.</p>
+<pre><code class="lang-xml">&lt;Result&gt;
   &lt;Message&gt;Thank you&lt;/Message&gt;
   &lt;Success&gt;true&lt;/Success&gt;
 &lt;/Result&gt;
-</code></pre><h2 id="settings" sourcefile="tutorial/va/plugins/channel.md" sourcestartlinenumber="16" sourceendlinenumber="16">Settings</h2>
-<table sourcefile="tutorial/va/plugins/channel.md" sourcestartlinenumber="18" sourceendlinenumber="21">
+</code></pre><h2 id="settings">Settings</h2>
+<table>
 <thead>
 <tr>
 <th style="text-align:left">Name</th>
@@ -126,9 +126,9 @@
 </tr>
 </tbody>
 </table>
-<h2 id="url-format" sourcefile="tutorial/va/plugins/channel.md" sourcestartlinenumber="23" sourceendlinenumber="23">Url Format</h2>
-<pre sourcefile="tutorial/va/plugins/channel.md" sourcestartlinenumber="25" sourceendlinenumber="27"><code>http://localhost:{PortNumber}/VA/command/send?message={Message}
-</code></pre><table sourcefile="tutorial/va/plugins/channel.md" sourcestartlinenumber="29" sourceendlinenumber="32">
+<h2 id="url-format">Url Format</h2>
+<pre><code>http://localhost:{PortNumber}/VA/command/send?message={Message}
+</code></pre><table>
 <thead>
 <tr>
 <th style="text-align:left">Argument</th>
@@ -146,9 +146,9 @@
 </tr>
 </tbody>
 </table>
-<h2 id="requirements" sourcefile="tutorial/va/plugins/channel.md" sourcestartlinenumber="35" sourceendlinenumber="35">Requirements</h2>
-<ul sourcefile="tutorial/va/plugins/channel.md" sourcestartlinenumber="37" sourceendlinenumber="37">
-<li sourcefile="tutorial/va/plugins/channel.md" sourcestartlinenumber="37" sourceendlinenumber="37">Administraive rights to start the internal server.</li>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>Administraive rights to start the internal server.</li>
 </ul>
 
             </article>

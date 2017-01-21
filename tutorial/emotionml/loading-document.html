@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>Loading an EmotionML Document  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Loading an EmotionML Document ">
-    <meta name="generator" content="docfx 2.6.1.0">
+    <meta name="generator" content="docfx 2.10.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -98,11 +98,11 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="loading-an-emotionml-document" sourcefile="tutorial/emotionml/loading-document.md" sourcestartlinenumber="1" sourceendlinenumber="1">Loading an EmotionML Document</h1>
+              <h1 id="loading-an-emotionml-document">Loading an EmotionML Document</h1>
               
-<p sourcefile="tutorial/emotionml/loading-document.md" sourcestartlinenumber="3" sourceendlinenumber="3">Since Syn EmotionML is a portable library it does not directly deal with files instead a developer is responsible for loading an EmotionML document. On a typical .Net Framework to load an EmotionML document say <code>emotionml.xml</code> you could write the following code.</p>
-<pre sourcefile="tutorial/emotionml/loading-document.md" sourcestartlinenumber="5" sourceendlinenumber="7"><code class="lang-csharp">var emotionDoc = EmotionMLDocument.Parse(XDocument.Load(&quot;emotionml.xml&quot;));
-</code></pre><p sourcefile="tutorial/emotionml/loading-document.md" sourcestartlinenumber="9" sourceendlinenumber="9">Once the document has been parsed the library will create all Emotion-related-state objects which can be fetched using properties available on the <code>EmotionMLDocument</code> class.</p>
+<p>Since Syn EmotionML is a portable library it does not directly deal with files instead a developer is responsible for loading an EmotionML document. On a typical .Net Framework to load an EmotionML document say <code>emotionml.xml</code> you could write the following code.</p>
+<pre><code class="lang-csharp">var emotionDoc = EmotionMLDocument.Parse(XDocument.Load(&quot;emotionml.xml&quot;));
+</code></pre><p>Once the document has been parsed the library will create all Emotion-related-state objects which can be fetched using properties available on the <code>EmotionMLDocument</code> class.</p>
 
             </article>
           </div>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>Filter  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Filter ">
-    <meta name="generator" content="docfx 2.6.1.0">
+    <meta name="generator" content="docfx 2.10.2.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -98,9 +98,9 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="filter" sourcefile="tutorial/siml/elements/filter.md" sourcestartlinenumber="1" sourceendlinenumber="1">Filter</h1>
+              <h1 id="filter">Filter</h1>
               
-<table sourcefile="tutorial/siml/elements/filter.md" sourcestartlinenumber="3" sourceendlinenumber="9">
+<table>
 <thead>
 <tr>
 <th><strong>Annotation</strong></th>
@@ -130,8 +130,8 @@
 </tr>
 </tbody>
 </table>
-<p sourcefile="tutorial/siml/elements/filter.md" sourcestartlinenumber="11" sourceendlinenumber="11">The Filter element has been introduced to help filter out words or fragments of text from user input and bot output. Filtration helps a lot in creation of Synonyms ( without having to create Sets), address internet/SMS slang and to fix some common typos.</p>
-<pre sourcefile="tutorial/siml/elements/filter.md" sourcestartlinenumber="13" sourceendlinenumber="40"><code class="lang-xml">&lt;Siml&gt;
+<p>The Filter element has been introduced to help filter out words or fragments of text from user input and bot output. Filtration helps a lot in creation of Synonyms ( without having to create Sets), address internet/SMS slang and to fix some common typos.</p>
+<pre><code class="lang-xml">&lt;Siml&gt;
 
 &lt;Filter Value=&quot;because&quot;&gt;
  &lt;Word&gt;becaus&lt;/Word&gt;
@@ -157,18 +157,18 @@
 &lt;Filter Text=&quot;.ac&quot; Value=&quot;dot ac&quot; /&gt;
 
 &lt;/Siml&gt;
-</code></pre><p sourcefile="tutorial/siml/elements/filter.md" sourcestartlinenumber="42" sourceendlinenumber="42">The <code>Filter</code> element accepts 3 special children elements that have different meaning when nested inside the Filter tag. The Word <em>tag/attribute</em>, Text <em>tag/attribute</em> and finally the Regex <em>tag/attribute</em>. If a filtration requires just 1 word to be filtered out we encourage you to use the Word attribute but if it requires more than one word to be filtered out you can then use <code>&lt;Word&gt;</code> elements .</p>
-<p sourcefile="tutorial/siml/elements/filter.md" sourcestartlinenumber="44" sourceendlinenumber="44">In the example above you can see that the Value attribute tells the bot what value of the text or word will have to be replaced. A Filter has just 1 Single replacement value (ofcourse).</p>
-<p sourcefile="tutorial/siml/elements/filter.md" sourcestartlinenumber="46" sourceendlinenumber="46">So using the above filtration if the user types iam it will be filtered out as I am and if the user ends a website address with .edu it will be filtered out as dot edu</p>
-<p sourcefile="tutorial/siml/elements/filter.md" sourcestartlinenumber="48" sourceendlinenumber="48">There are 3 types of Filters in SIML:</p>
-<ul sourcefile="tutorial/siml/elements/filter.md" sourcestartlinenumber="50" sourceendlinenumber="52">
-<li sourcefile="tutorial/siml/elements/filter.md" sourcestartlinenumber="50" sourceendlinenumber="50">Input – Filters the user message</li>
-<li sourcefile="tutorial/siml/elements/filter.md" sourcestartlinenumber="51" sourceendlinenumber="51">Output – Filters the output message that the Bot generates</li>
-<li sourcefile="tutorial/siml/elements/filter.md" sourcestartlinenumber="52" sourceendlinenumber="52">Both – Filters both User Input and Bot Output</li>
+</code></pre><p>The <code>Filter</code> element accepts 3 special children elements that have different meaning when nested inside the Filter tag. The Word <em>tag/attribute</em>, Text <em>tag/attribute</em> and finally the Regex <em>tag/attribute</em>. If a filtration requires just 1 word to be filtered out we encourage you to use the Word attribute but if it requires more than one word to be filtered out you can then use <code>&lt;Word&gt;</code> elements .</p>
+<p>In the example above you can see that the Value attribute tells the bot what value of the text or word will have to be replaced. A Filter has just 1 Single replacement value (ofcourse).</p>
+<p>So using the above filtration if the user types iam it will be filtered out as I am and if the user ends a website address with .edu it will be filtered out as dot edu</p>
+<p>There are 3 types of Filters in SIML:</p>
+<ul>
+<li>Input – Filters the user message</li>
+<li>Output – Filters the output message that the Bot generates</li>
+<li>Both – Filters both User Input and Bot Output</li>
 </ul>
-<p sourcefile="tutorial/siml/elements/filter.md" sourcestartlinenumber="54" sourceendlinenumber="54">This mechanism of filtration has been directly imported from <em>Syn Engine</em>.</p>
-<p sourcefile="tutorial/siml/elements/filter.md" sourcestartlinenumber="56" sourceendlinenumber="56">To target an input or output you should add the <code>Target</code> attribute to your Filter element. If no <code>Target</code> attribute is specified the SIML Bot will assume it as an <em>Input</em> Filter.</p>
-<pre sourcefile="tutorial/siml/elements/filter.md" sourcestartlinenumber="58" sourceendlinenumber="83"><code class="lang-xml">&lt;Siml&gt;
+<p>This mechanism of filtration has been directly imported from <em>Syn Engine</em>.</p>
+<p>To target an input or output you should add the <code>Target</code> attribute to your Filter element. If no <code>Target</code> attribute is specified the SIML Bot will assume it as an <em>Input</em> Filter.</p>
+<pre><code class="lang-xml">&lt;Siml&gt;
 
 &lt;Filter Value=&quot;okay&quot; Target=&quot;output&quot;&gt;
  &lt;Word&gt;ok&lt;/Word&gt;
@@ -192,7 +192,7 @@
 &lt;/Filter&gt;
 
 &lt;/Siml&gt;
-</code></pre><p sourcefile="tutorial/siml/elements/filter.md" sourcestartlinenumber="85" sourceendlinenumber="85">It’s important to note that the Input filters do play a role in Bot messages as well ( internally ). When a bot output is generated a filtered version of the output is stored as the value for the <code>Previous</code> elemen</p>
+</code></pre><p>It’s important to note that the Input filters do play a role in Bot messages as well ( internally ). When a bot output is generated a filtered version of the output is stored as the value for the <code>Previous</code> elemen</p>
 
             </article>
           </div>

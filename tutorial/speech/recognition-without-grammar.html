@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>Speech Recognition without Grammar  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Speech Recognition without Grammar ">
-    <meta name="generator" content="docfx 2.6.1.0">
+    <meta name="generator" content="docfx 2.10.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -98,20 +98,20 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="speech-recognition-without-grammar" sourcefile="tutorial/speech/recognition-without-grammar.md" sourcestartlinenumber="1" sourceendlinenumber="1">Speech Recognition without Grammar</h1>
+              <h1 id="speech-recognition-without-grammar">Speech Recognition without Grammar</h1>
               
-<p sourcefile="tutorial/speech/recognition-without-grammar.md" sourcestartlinenumber="3" sourceendlinenumber="3">Launch Visual Studio, select <strong>FILE – &gt; New – &gt; Project – &gt; Console Application</strong> and name your project <code>Syn.Speech.Demo</code> and click OK. Now that you’ve created your project you will have to import the Syn.Speech library.</p>
-<h2 id="importing-synspeech-library" sourcefile="tutorial/speech/recognition-without-grammar.md" sourcestartlinenumber="5" sourceendlinenumber="5">Importing Syn.Speech Library</h2>
-<p sourcefile="tutorial/speech/recognition-without-grammar.md" sourcestartlinenumber="7" sourceendlinenumber="7">To use Syn Speech in your project you should first download the Syn Speech library from NuGet.org. To do so in Visual Studio click on <strong>Tools – &gt; NuGet Package Manager – &gt; Package Manager Console</strong> and type the following and press Enter.</p>
-<p sourcefile="tutorial/speech/recognition-without-grammar.md" sourcestartlinenumber="9" sourceendlinenumber="9"><code>PM&gt; Install-Package Syn.Speech</code></p>
-<h2 id="getting-the-model-files" sourcefile="tutorial/speech/recognition-without-grammar.md" sourcestartlinenumber="11" sourceendlinenumber="11">Getting the Model files</h2>
-<p sourcefile="tutorial/speech/recognition-without-grammar.md" sourcestartlinenumber="13" sourceendlinenumber="13">Once you have imported the Syn Speech library into you project you will need the Acoustic Models for Syn Speech library which is included in the Demo Application. To download the demo application visit <code>https://github.com/synhub</code></p>
-<p sourcefile="tutorial/speech/recognition-without-grammar.md" sourcestartlinenumber="15" sourceendlinenumber="15">In the Bin directory of the Demo application there is the <strong>Models</strong> folder which includes  everything from Acoustic &amp; Language Models, Phonetic Dictionary and optionally a Grammar file named <code>hello.gram</code>. Copy this folder to your project’s root directory it is usually the Debug/Release directory.</p>
-<h2 id="getting-the-audio-file-to-transcribe" sourcefile="tutorial/speech/recognition-without-grammar.md" sourcestartlinenumber="17" sourceendlinenumber="17">Getting the Audio File to Transcribe</h2>
-<p sourcefile="tutorial/speech/recognition-without-grammar.md" sourcestartlinenumber="19" sourceendlinenumber="19">In the Audio folder of the demo application there’s the <code>Test.wav</code> file. Place this Audio file within the <em>Debug/Release</em> directory of your Console application.</p>
-<h2 id="coding" sourcefile="tutorial/speech/recognition-without-grammar.md" sourcestartlinenumber="22" sourceendlinenumber="22">Coding</h2>
-<p sourcefile="tutorial/speech/recognition-without-grammar.md" sourcestartlinenumber="24" sourceendlinenumber="24">You current application C# console application should look something like the following.</p>
-<pre sourcefile="tutorial/speech/recognition-without-grammar.md" sourcestartlinenumber="26" sourceendlinenumber="36"><code class="lang-csharp">namespace Syn.Speech.Demo
+<p>Launch Visual Studio, select <strong>FILE – &gt; New – &gt; Project – &gt; Console Application</strong> and name your project <code>Syn.Speech.Demo</code> and click OK. Now that you’ve created your project you will have to import the Syn.Speech library.</p>
+<h2 id="importing-synspeech-library">Importing Syn.Speech Library</h2>
+<p>To use Syn Speech in your project you should first download the Syn Speech library from NuGet.org. To do so in Visual Studio click on <strong>Tools – &gt; NuGet Package Manager – &gt; Package Manager Console</strong> and type the following and press Enter.</p>
+<p><code>PM&gt; Install-Package Syn.Speech</code></p>
+<h2 id="getting-the-model-files">Getting the Model files</h2>
+<p>Once you have imported the Syn Speech library into you project you will need the Acoustic Models for Syn Speech library which is included in the Demo Application. To download the demo application visit <code>https://github.com/synhub</code></p>
+<p>In the Bin directory of the Demo application there is the <strong>Models</strong> folder which includes  everything from Acoustic &amp; Language Models, Phonetic Dictionary and optionally a Grammar file named <code>hello.gram</code>. Copy this folder to your project’s root directory it is usually the Debug/Release directory.</p>
+<h2 id="getting-the-audio-file-to-transcribe">Getting the Audio File to Transcribe</h2>
+<p>In the Audio folder of the demo application there’s the <code>Test.wav</code> file. Place this Audio file within the <em>Debug/Release</em> directory of your Console application.</p>
+<h2 id="coding">Coding</h2>
+<p>You current application C# console application should look something like the following.</p>
+<pre><code class="lang-csharp">namespace Syn.Speech.Demo
 {
     class Program
     {
@@ -120,28 +120,28 @@
         }
     }
 }
-</code></pre><p sourcefile="tutorial/speech/recognition-without-grammar.md" sourcestartlinenumber="38" sourceendlinenumber="38">Add the using <em>Syn.Speech.Api</em> statement and declare 2 private static variables as follows.</p>
-<pre sourcefile="tutorial/speech/recognition-without-grammar.md" sourcestartlinenumber="40" sourceendlinenumber="42"><code class="lang-csharp">using Syn.Speech.Api;
-</code></pre><pre sourcefile="tutorial/speech/recognition-without-grammar.md" sourcestartlinenumber="44" sourceendlinenumber="47"><code class="lang-csharp">private static Configuration _configuration;
+</code></pre><p>Add the using <em>Syn.Speech.Api</em> statement and declare 2 private static variables as follows.</p>
+<pre><code class="lang-csharp">using Syn.Speech.Api;
+</code></pre><pre><code class="lang-csharp">private static Configuration _configuration;
 private static StreamSpeechRecognizer _speechRecognizer;
-</code></pre><p sourcefile="tutorial/speech/recognition-without-grammar.md" sourcestartlinenumber="49" sourceendlinenumber="49">The <strong>Configuration</strong> class is used to specify some simple yet crucial settings for the speech Recognizer. Add the following C# code within your static void <code>Main(string[] args)</code> method.</p>
-<pre sourcefile="tutorial/speech/recognition-without-grammar.md" sourcestartlinenumber="51" sourceendlinenumber="59"><code class="lang-csharp">var modelsDirectory = Path.Combine(Directory.GetCurrentDirectory(), &quot;Models&quot;);
+</code></pre><p>The <strong>Configuration</strong> class is used to specify some simple yet crucial settings for the speech Recognizer. Add the following C# code within your static void <code>Main(string[] args)</code> method.</p>
+<pre><code class="lang-csharp">var modelsDirectory = Path.Combine(Directory.GetCurrentDirectory(), &quot;Models&quot;);
 _configuration = new Configuration
 {
     AcousticModelPath = modelsDirectory,
     DictionaryPath = Path.Combine(modelsDirectory, &quot;cmudict-en-us.dict&quot;),
     LanguageModelPath = Path.Combine(modelsDirectory, &quot;en-us.lm.dmp&quot;),
 };
-</code></pre><p sourcefile="tutorial/speech/recognition-without-grammar.md" sourcestartlinenumber="61" sourceendlinenumber="61">In the above we create a single variable called <code>modelsDirectory</code> and make sure that this variable points to the Models (previously copied) folder in the root directory of our application.</p>
-<p sourcefile="tutorial/speech/recognition-without-grammar.md" sourcestartlinenumber="63" sourceendlinenumber="63">Later the <code>AcousticModelPath</code> is set to point to the Models directory because many of the required Acoustics files are present within this directory and will automatically be fetched at run-time.</p>
-<p sourcefile="tutorial/speech/recognition-without-grammar.md" sourcestartlinenumber="65" sourceendlinenumber="65">Next the <code>DictionaryPath</code> property, this should point to the dictionary file (not folder) and finally the <code>LanguageModelPath</code> property is set to point to the Language Model file. As both the files are placed within the Models directory we’ve used <em>Path.Combine</em> method.</p>
-<h2 id="transcribing-the-audio-file" sourcefile="tutorial/speech/recognition-without-grammar.md" sourcestartlinenumber="67" sourceendlinenumber="67">Transcribing the Audio File</h2>
-<p sourcefile="tutorial/speech/recognition-without-grammar.md" sourcestartlinenumber="69" sourceendlinenumber="69">Once the configuration is complete we’ll instantiate a <code>StreamSpeechRecognizer</code> class which will use the settings we specified in the Configuration class. Speech recognition in Syn Speech, whether we use Grammar or not, almost always relies on the <code>StreamSpeechRecognizer</code> class.</p>
-<p sourcefile="tutorial/speech/recognition-without-grammar.md" sourcestartlinenumber="71" sourceendlinenumber="71">To start transcribing the Audio file we’ll then use the same <code>StreamSpeechRecognizer</code> class and submit the file as a FileStream. To do so paste the following code within the <em>Main</em> method.</p>
-<pre sourcefile="tutorial/speech/recognition-without-grammar.md" sourcestartlinenumber="73" sourceendlinenumber="76"><code class="lang-csharp">_speechRecognizer = new StreamSpeechRecognizer(_configuration);
+</code></pre><p>In the above we create a single variable called <code>modelsDirectory</code> and make sure that this variable points to the Models (previously copied) folder in the root directory of our application.</p>
+<p>Later the <code>AcousticModelPath</code> is set to point to the Models directory because many of the required Acoustics files are present within this directory and will automatically be fetched at run-time.</p>
+<p>Next the <code>DictionaryPath</code> property, this should point to the dictionary file (not folder) and finally the <code>LanguageModelPath</code> property is set to point to the Language Model file. As both the files are placed within the Models directory we’ve used <em>Path.Combine</em> method.</p>
+<h2 id="transcribing-the-audio-file">Transcribing the Audio File</h2>
+<p>Once the configuration is complete we’ll instantiate a <code>StreamSpeechRecognizer</code> class which will use the settings we specified in the Configuration class. Speech recognition in Syn Speech, whether we use Grammar or not, almost always relies on the <code>StreamSpeechRecognizer</code> class.</p>
+<p>To start transcribing the Audio file we’ll then use the same <code>StreamSpeechRecognizer</code> class and submit the file as a FileStream. To do so paste the following code within the <em>Main</em> method.</p>
+<pre><code class="lang-csharp">_speechRecognizer = new StreamSpeechRecognizer(_configuration);
 _speechRecognizer.StartRecognition(new FileStream(&quot;test.wav&quot;, FileMode.Open));
-</code></pre><p sourcefile="tutorial/speech/recognition-without-grammar.md" sourcestartlinenumber="78" sourceendlinenumber="78">Starting the Speech recognition is just half the part. The real computation begins after you call the <code>GetResult()</code> method on the <code>StreamSpeechRecognizer</code> class. If no result is generated a null value is returned otherwise it returns a SpeechResult class that contains a possible set of hypothesis. In the following code we call the <code>GetResult()</code> and then call <code>StopRecognition()</code>. Then we check if the result variable is null or not if not then we print the Hypothesis in the Console using the <code>GetHypothesis()</code> method.</p>
-<pre sourcefile="tutorial/speech/recognition-without-grammar.md" sourcestartlinenumber="80" sourceendlinenumber="90"><code class="lang-csharp">var result = _speechRecognizer.GetResult();
+</code></pre><p>Starting the Speech recognition is just half the part. The real computation begins after you call the <code>GetResult()</code> method on the <code>StreamSpeechRecognizer</code> class. If no result is generated a null value is returned otherwise it returns a SpeechResult class that contains a possible set of hypothesis. In the following code we call the <code>GetResult()</code> and then call <code>StopRecognition()</code>. Then we check if the result variable is null or not if not then we print the Hypothesis in the Console using the <code>GetHypothesis()</code> method.</p>
+<pre><code class="lang-csharp">var result = _speechRecognizer.GetResult();
 _speechRecognizer.StopRecognition();
 
 if (result != null)
@@ -150,15 +150,15 @@ if (result != null)
 }
 
 Console.ReadLine();
-</code></pre><h2 id="get-the-internal-log-information" sourcefile="tutorial/speech/recognition-without-grammar.md" sourcestartlinenumber="92" sourceendlinenumber="92">Get the internal Log information</h2>
-<p sourcefile="tutorial/speech/recognition-without-grammar.md" sourcestartlinenumber="94" sourceendlinenumber="94">It is always convenient to have some log information displayed while the speech recognition process is being carried out. To catch all the logs generated by the Engine we’ll add a handler to the Logger class’s <code>LogReceived</code> event. The following line should be added at the very beginning of the static Main function.</p>
-<pre sourcefile="tutorial/speech/recognition-without-grammar.md" sourcestartlinenumber="96" sourceendlinenumber="98"><code class="lang-csharp">Logger.LogReceived += Logger_LogReceived;
-</code></pre><p sourcefile="tutorial/speech/recognition-without-grammar.md" sourcestartlinenumber="100" sourceendlinenumber="100">Once you’ve added the above line create a new function with the right signature to print all the log information onto the Console.</p>
-<pre sourcefile="tutorial/speech/recognition-without-grammar.md" sourcestartlinenumber="102" sourceendlinenumber="107"><code class="lang-csharp">static void Logger_LogReceived(object sender, LogReceivedEventArgs e)
+</code></pre><h2 id="get-the-internal-log-information">Get the internal Log information</h2>
+<p>It is always convenient to have some log information displayed while the speech recognition process is being carried out. To catch all the logs generated by the Engine we’ll add a handler to the Logger class’s <code>LogReceived</code> event. The following line should be added at the very beginning of the static Main function.</p>
+<pre><code class="lang-csharp">Logger.LogReceived += Logger_LogReceived;
+</code></pre><p>Once you’ve added the above line create a new function with the right signature to print all the log information onto the Console.</p>
+<pre><code class="lang-csharp">static void Logger_LogReceived(object sender, LogReceivedEventArgs e)
 {
     Console.WriteLine(e.Message);
 }
-</code></pre><h2 id="the-overall-code" sourcefile="tutorial/speech/recognition-without-grammar.md" sourcestartlinenumber="109" sourceendlinenumber="109">The overall Code</h2>
+</code></pre><h2 id="the-overall-code">The overall Code</h2>
 <pre><code class="lang-csharp" name="Main">using System;
 using System.IO;
 using Syn.Logging;

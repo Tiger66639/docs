@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>File Explorer  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="File Explorer ">
-    <meta name="generator" content="docfx 2.6.1.0">
+    <meta name="generator" content="docfx 2.10.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -98,74 +98,74 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="file-explorer" sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="1" sourceendlinenumber="1">File Explorer</h1>
+              <h1 id="file-explorer">File Explorer</h1>
               
-<p sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="3" sourceendlinenumber="3">A Project is a collection of important SIML files. Their order is important for SIML Bot as the SIML Bot requires that the <code>Settings</code> files are loaded before SIML files with Concepts in them.</p>
-<h2 id="settings-folder" sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="5" sourceendlinenumber="5">Settings Folder</h2>
-<p sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="7" sourceendlinenumber="7">On the right hand-side under the <code>File Explorer</code> you will see the <code>Settings</code> Folder ( we call it Folder because of the project structure ). Click on the Settings folder to expand the list. Under it you will find the following files</p>
-<ul sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="9" sourceendlinenumber="20">
-<li sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="9" sourceendlinenumber="9">Bot-Settings</li>
-<li sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="10" sourceendlinenumber="10">EmotionML</li>
-<li sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="11" sourceendlinenumber="11">Filters</li>
-<li sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="12" sourceendlinenumber="12">Maps</li>
-<li sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="13" sourceendlinenumber="13">Repetition</li>
-<li sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="14" sourceendlinenumber="14">Pattern Reductions</li>
-<li sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="15" sourceendlinenumber="15">Random Responses</li>
-<li sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="16" sourceendlinenumber="16">Regular Expressions</li>
-<li sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="17" sourceendlinenumber="17">Scripts</li>
-<li sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="18" sourceendlinenumber="18">Sets</li>
-<li sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="19" sourceendlinenumber="19">Splitters</li>
-<li sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="20" sourceendlinenumber="20">User-Settings</li>
+<p>A Project is a collection of important SIML files. Their order is important for SIML Bot as the SIML Bot requires that the <code>Settings</code> files are loaded before SIML files with Concepts in them.</p>
+<h2 id="settings-folder">Settings Folder</h2>
+<p>On the right hand-side under the <code>File Explorer</code> you will see the <code>Settings</code> Folder ( we call it Folder because of the project structure ). Click on the Settings folder to expand the list. Under it you will find the following files</p>
+<ul>
+<li>Bot-Settings</li>
+<li>EmotionML</li>
+<li>Filters</li>
+<li>Maps</li>
+<li>Repetition</li>
+<li>Pattern Reductions</li>
+<li>Random Responses</li>
+<li>Regular Expressions</li>
+<li>Scripts</li>
+<li>Sets</li>
+<li>Splitters</li>
+<li>User-Settings</li>
 </ul>
-<p sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="22" sourceendlinenumber="22">All of the above files play an important structural role for SIML Bot creation. If you do not need any of the settings file <strong>DO NOT DELETE THE FILE</strong> instead replace the entire content of the file with <siml></siml> this will tell the SIML Interpretor to just ignore the file.</p>
-<h2 id="bot-settings" sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="24" sourceendlinenumber="24">Bot-Settings</h2>
-<p sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="26" sourceendlinenumber="26">This file holds all static information that will be used to configure the Bot. For simplicity we have removed the XML Comments in the files but whenever you create a new project you will see detailed XML comments giving you information about the File and important XML elements used within the file. In this case the Bot-Settings file shows us some key variables and their values stored with BotSettings element. The variables declared in this file should NOT be changed during runtime as they are meant to be static in nature which means that their values are considered only once.</p>
-<p sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="28" sourceendlinenumber="28"><img src="images/bot-settings.jpg" alt="Bot Settings Image" sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="28" sourceendlinenumber="28"></p>
-<p sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="30" sourceendlinenumber="30">To check how Bot variables are used click on ”’Hello Assistant”’ file and add in the following code.</p>
-<p sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="32" sourceendlinenumber="32"><strong>SIML</strong></p>
-<pre sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="33" sourceendlinenumber="38"><code class="lang-xml">&lt;Model&gt;
+<p>All of the above files play an important structural role for SIML Bot creation. If you do not need any of the settings file <strong>DO NOT DELETE THE FILE</strong> instead replace the entire content of the file with <siml></siml> this will tell the SIML Interpretor to just ignore the file.</p>
+<h2 id="bot-settings">Bot-Settings</h2>
+<p>This file holds all static information that will be used to configure the Bot. For simplicity we have removed the XML Comments in the files but whenever you create a new project you will see detailed XML comments giving you information about the File and important XML elements used within the file. In this case the Bot-Settings file shows us some key variables and their values stored with BotSettings element. The variables declared in this file should NOT be changed during runtime as they are meant to be static in nature which means that their values are considered only once.</p>
+<p><img src="images/bot-settings.jpg" alt="Bot Settings Image"></p>
+<p>To check how Bot variables are used click on ”’Hello Assistant”’ file and add in the following code.</p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
   &lt;Pattern&gt;WHAT IS YOUR NAME&lt;/Pattern&gt;
   &lt;Response&gt;My name is &lt;Bot Get=&quot;name&quot;/&gt;&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="40" sourceendlinenumber="40">Now press <code>Ctrl+R</code> to refresh the project. Everytime you make changes to any SIML file you should Refresh the project for the changes to take effect. Now click on the <code>Console</code> tab and type what is your Name ? the bot will respond <em>My name is Sarah</em>. The name Sarah was retrieved using the Bot variable defined in the Bot-Settings file</p>
-<h2 id="emotionml" sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="42" sourceendlinenumber="42">EmotionML</h2>
-<p sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="44" sourceendlinenumber="44">One of the many important features of SIML Bot is the internal EmotionML parser which can parse EmotionML elements and set values for developers to use. Unlike many of the existing Chatbot architectures that think emotions can be defined as a single state of mind EmotionML brings in the true essence of details required to simulate emotions. The EmotionML file consists of some predefined emotions with their values and dimensions.</p>
-<p sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="46" sourceendlinenumber="46">To set emotion for the Bot or the user you can use the BotEmotion and UserEmotion tags.</p>
-<h2 id="filter" sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="48" sourceendlinenumber="48">Filter</h2>
-<p sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="50" sourceendlinenumber="50">This file consists of Filters that are used to filter out or replace parts or words from user inputs and bot outputs. You will see <strong>Filter</strong> elements consisting of <em>Text, Word and Regex</em> tags each of which have a different normalization behaviour.</p>
-<p sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="52" sourceendlinenumber="52">To add your own filter, say you wish to replace the word <strong>coz</strong> with <strong>because</strong> the code may look like the following.</p>
-<pre sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="54" sourceendlinenumber="59"><code class="lang-xml">&lt;Filter Value=&quot;because&quot;&gt;
+</code></pre><p>Now press <code>Ctrl+R</code> to refresh the project. Everytime you make changes to any SIML file you should Refresh the project for the changes to take effect. Now click on the <code>Console</code> tab and type what is your Name ? the bot will respond <em>My name is Sarah</em>. The name Sarah was retrieved using the Bot variable defined in the Bot-Settings file</p>
+<h2 id="emotionml">EmotionML</h2>
+<p>One of the many important features of SIML Bot is the internal EmotionML parser which can parse EmotionML elements and set values for developers to use. Unlike many of the existing Chatbot architectures that think emotions can be defined as a single state of mind EmotionML brings in the true essence of details required to simulate emotions. The EmotionML file consists of some predefined emotions with their values and dimensions.</p>
+<p>To set emotion for the Bot or the user you can use the BotEmotion and UserEmotion tags.</p>
+<h2 id="filter">Filter</h2>
+<p>This file consists of Filters that are used to filter out or replace parts or words from user inputs and bot outputs. You will see <strong>Filter</strong> elements consisting of <em>Text, Word and Regex</em> tags each of which have a different normalization behaviour.</p>
+<p>To add your own filter, say you wish to replace the word <strong>coz</strong> with <strong>because</strong> the code may look like the following.</p>
+<pre><code class="lang-xml">&lt;Filter Value=&quot;because&quot;&gt;
   &lt;Word&gt;coz&lt;/Word&gt;
   &lt;Word&gt;bcoz&lt;/Word&gt;
 &lt;/Filter&gt;
-</code></pre><p sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="61" sourceendlinenumber="61">A typical <strong>Filter</strong> file may look like the following with lots of filters in it. Since filtration requires that individual words and characters are studied there can be a performance penalty if lots of filters are used. The best way to create a specific filter is by studying how your users actually interact with your Bot and then creating necessary filters.</p>
-<p sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="63" sourceendlinenumber="63"><img src="images/filter.jpg" alt="Filter Image" sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="63" sourceendlinenumber="63"></p>
-<h2 id="splitters" sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="65" sourceendlinenumber="65">Splitters</h2>
-<p sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="67" sourceendlinenumber="67">Splitting a user message into multiple inputs isn’t an easy task. The developer has to consider a lot of things before simply deciding to split the sentence using (Period) or (Comma) but whatever the idea of splitting be you should always keep them inside this file and, if possible, create an XML comment stating why you have decided to split the sentence using certain characters, words or regular expressions</p>
-<p sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="69" sourceendlinenumber="69"><img src="images/splitter.jpg" alt="Filter Image" sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="69" sourceendlinenumber="69"></p>
-<h2 id="maps" sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="71" sourceendlinenumber="71">Maps</h2>
-<p sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="73" sourceendlinenumber="73">The <strong>Maps</strong> file stores all sorts of mapping that will be required to transform a fragment of text from one set into an element of another. You will probably not need to change anything within file as Synthetic Intelligence Network will create them for you and upload them immediately as templates on our GitHub repository.</p>
-<h2 id="pattern-reductions" sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="75" sourceendlinenumber="75">Pattern Reductions</h2>
-<p sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="77" sourceendlinenumber="77">Under this SIML file you can store recurring patterns and given them a special name using the hashtag convention. For example you can define multiple patterns for the sentence <strong>what is your name?</strong> and give it a unique name <strong>#BotName</strong>. This simplifies pattern usage and avoids redundancy to a great extent.</p>
-<h2 id="random-responses" sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="79" sourceendlinenumber="79">Random Responses</h2>
-<p sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="81" sourceendlinenumber="81">Sometimes the developer spends hours in total writing the same response for different patterns. The <strong>Random Responses</strong> file is meant to store repetitive random responses and giving them a special id so whenever you are to repeat yourself with a random response you could just use the one previously saved within this file.</p>
-<h2 id="regular-expressions" sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="83" sourceendlinenumber="83">Regular Expressions</h2>
-<p sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="85" sourceendlinenumber="85">You will definitely come across a situation where SETS will no longer be enough to capture a particular word or sentence. SIML handles regular expressions flawlessly and as Regular Expressions are available globally the file <strong>Regular Expressions</strong> is used to contain them under the same shelter.</p>
-<h2 id="scripts" sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="87" sourceendlinenumber="87">Scripts</h2>
-<p sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="89" sourceendlinenumber="89">SIML Bot 1.0 supports JavaScript as its main scripting language ( discussions are already being made regarding more scripting engine integration ). The Scripts file contains Global scripts i.e. scripts that are available throughout the bot session. As more scripting engines are to be integrated its important that you define your scripts indicating what language the script is written in.</p>
-<p sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="91" sourceendlinenumber="91"><img src="images/script.jpg" alt="Filter Image" sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="91" sourceendlinenumber="91"></p>
-<p sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="93" sourceendlinenumber="93"><strong>Example</strong></p>
-<pre sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="95" sourceendlinenumber="101"><code class="lang-xml">&lt;Script Type=&quot;javascript&quot;&gt;
+</code></pre><p>A typical <strong>Filter</strong> file may look like the following with lots of filters in it. Since filtration requires that individual words and characters are studied there can be a performance penalty if lots of filters are used. The best way to create a specific filter is by studying how your users actually interact with your Bot and then creating necessary filters.</p>
+<p><img src="images/filter.jpg" alt="Filter Image"></p>
+<h2 id="splitters">Splitters</h2>
+<p>Splitting a user message into multiple inputs isn’t an easy task. The developer has to consider a lot of things before simply deciding to split the sentence using (Period) or (Comma) but whatever the idea of splitting be you should always keep them inside this file and, if possible, create an XML comment stating why you have decided to split the sentence using certain characters, words or regular expressions</p>
+<p><img src="images/splitter.jpg" alt="Filter Image"></p>
+<h2 id="maps">Maps</h2>
+<p>The <strong>Maps</strong> file stores all sorts of mapping that will be required to transform a fragment of text from one set into an element of another. You will probably not need to change anything within file as Synthetic Intelligence Network will create them for you and upload them immediately as templates on our GitHub repository.</p>
+<h2 id="pattern-reductions">Pattern Reductions</h2>
+<p>Under this SIML file you can store recurring patterns and given them a special name using the hashtag convention. For example you can define multiple patterns for the sentence <strong>what is your name?</strong> and give it a unique name <strong>#BotName</strong>. This simplifies pattern usage and avoids redundancy to a great extent.</p>
+<h2 id="random-responses">Random Responses</h2>
+<p>Sometimes the developer spends hours in total writing the same response for different patterns. The <strong>Random Responses</strong> file is meant to store repetitive random responses and giving them a special id so whenever you are to repeat yourself with a random response you could just use the one previously saved within this file.</p>
+<h2 id="regular-expressions">Regular Expressions</h2>
+<p>You will definitely come across a situation where SETS will no longer be enough to capture a particular word or sentence. SIML handles regular expressions flawlessly and as Regular Expressions are available globally the file <strong>Regular Expressions</strong> is used to contain them under the same shelter.</p>
+<h2 id="scripts">Scripts</h2>
+<p>SIML Bot 1.0 supports JavaScript as its main scripting language ( discussions are already being made regarding more scripting engine integration ). The Scripts file contains Global scripts i.e. scripts that are available throughout the bot session. As more scripting engines are to be integrated its important that you define your scripts indicating what language the script is written in.</p>
+<p><img src="images/script.jpg" alt="Filter Image"></p>
+<p><strong>Example</strong></p>
+<pre><code class="lang-xml">&lt;Script Type=&quot;javascript&quot;&gt;
 function square(num){
 return num*num;
 }
 &lt;/Script&gt;
-</code></pre><h2 id="sets" sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="103" sourceendlinenumber="103">Sets</h2>
-<p sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="105" sourceendlinenumber="105">A Set is a powerful entity it consists of words and phrases that are addressed using a unique name much like a color can have values like Red, Green, Blue and so on. Sets in SIML are fast and greedy. By greedy what is meant is that Sets will try to match maximum number of words/tokens possible. Example: if your set has 2 values say <em>United States</em> and <em>United States of America</em> the set will match the latter.</p>
-<p sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="107" sourceendlinenumber="107">Take a look at the image below to get an idea as to how to declare Sets.</p>
-<p sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="109" sourceendlinenumber="109"><img src="images/sets.jpg" alt="Filter Image" sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="109" sourceendlinenumber="109"></p>
-<h2 id="user-settings" sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="111" sourceendlinenumber="111">User-Settings</h2>
-<p sourcefile="tutorial/bot-studio/file-explorer.md" sourcestartlinenumber="113" sourceendlinenumber="113">The <code>User-Settings</code> file stores values for variable names that will be used to initialize variables for every new user that interacts with the Bot. Once the default variables and their values are loaded for a user any changes made to the variable will affect that particular user as every user is given their own instance of variables.</p>
+</code></pre><h2 id="sets">Sets</h2>
+<p>A Set is a powerful entity it consists of words and phrases that are addressed using a unique name much like a color can have values like Red, Green, Blue and so on. Sets in SIML are fast and greedy. By greedy what is meant is that Sets will try to match maximum number of words/tokens possible. Example: if your set has 2 values say <em>United States</em> and <em>United States of America</em> the set will match the latter.</p>
+<p>Take a look at the image below to get an idea as to how to declare Sets.</p>
+<p><img src="images/sets.jpg" alt="Filter Image"></p>
+<h2 id="user-settings">User-Settings</h2>
+<p>The <code>User-Settings</code> file stores values for variable names that will be used to initialize variables for every new user that interacts with the Bot. Once the default variables and their values are loaded for a user any changes made to the variable will affect that particular user as every user is given their own instance of variables.</p>
 
             </article>
           </div>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>Response  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Response ">
-    <meta name="generator" content="docfx 2.6.1.0">
+    <meta name="generator" content="docfx 2.10.2.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -98,10 +98,10 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="response" sourcefile="tutorial/siml/elements/response.md" sourcestartlinenumber="1" sourceendlinenumber="1">Response</h1>
+              <h1 id="response">Response</h1>
               
-<p sourcefile="tutorial/siml/elements/response.md" sourcestartlinenumber="3" sourceendlinenumber="3">A Response element is used to generate a data that is returned to the user upon activation of the underlying SIML pattern. This response contains the evaluated values of all the inner descendant elements. A Response may or may not contain a textual data.</p>
-<table sourcefile="tutorial/siml/elements/response.md" sourcestartlinenumber="5" sourceendlinenumber="9">
+<p>A Response element is used to generate a data that is returned to the user upon activation of the underlying SIML pattern. This response contains the evaluated values of all the inner descendant elements. A Response may or may not contain a textual data.</p>
+<table>
 <thead>
 <tr>
 <th><strong>Annotation</strong></th>
@@ -123,20 +123,20 @@
 </tr>
 </tbody>
 </table>
-<p sourcefile="tutorial/siml/elements/response.md" sourcestartlinenumber="11" sourceendlinenumber="11"><em>Example</em></p>
-<pre sourcefile="tutorial/siml/elements/response.md" sourcestartlinenumber="13" sourceendlinenumber="18"><code class="lang-xml">&lt;Model&gt;
+<p><em>Example</em></p>
+<pre><code class="lang-xml">&lt;Model&gt;
   &lt;Pattern&gt;HOW ARE YOU&lt;/Pattern&gt;
   &lt;Response&gt;I am fine.&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p sourcefile="tutorial/siml/elements/response.md" sourcestartlinenumber="20" sourceendlinenumber="20">Every SIML response has a rank associated with it. If a Rank attribute is not specified then a rank of “Normal” is assumed by the interpreter.</p>
-<p sourcefile="tutorial/siml/elements/response.md" sourcestartlinenumber="22" sourceendlinenumber="22">There are 3 possible values for the Rank attribute</p>
-<ul sourcefile="tutorial/siml/elements/response.md" sourcestartlinenumber="24" sourceendlinenumber="26">
-<li sourcefile="tutorial/siml/elements/response.md" sourcestartlinenumber="24" sourceendlinenumber="24">Low</li>
-<li sourcefile="tutorial/siml/elements/response.md" sourcestartlinenumber="25" sourceendlinenumber="25">Normal – The default rank of any SIML response.</li>
-<li sourcefile="tutorial/siml/elements/response.md" sourcestartlinenumber="26" sourceendlinenumber="26">High</li>
+</code></pre><p>Every SIML response has a rank associated with it. If a Rank attribute is not specified then a rank of “Normal” is assumed by the interpreter.</p>
+<p>There are 3 possible values for the Rank attribute</p>
+<ul>
+<li>Low</li>
+<li>Normal – The default rank of any SIML response.</li>
+<li>High</li>
 </ul>
-<p sourcefile="tutorial/siml/elements/response.md" sourcestartlinenumber="28" sourceendlinenumber="28"><em>Example</em></p>
-<pre sourcefile="tutorial/siml/elements/response.md" sourcestartlinenumber="30" sourceendlinenumber="35"><code class="lang-xml">&lt;Model&gt;
+<p><em>Example</em></p>
+<pre><code class="lang-xml">&lt;Model&gt;
   &lt;Pattern&gt;START THE CAR&lt;/Pattern&gt;
   &lt;Response Rank=&quot;Low&quot;&gt;Car started. &lt;Car Task=&quot;Start&quot; /&gt;&lt;/Response&gt;
 &lt;/Model&gt;

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>Bind  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Bind ">
-    <meta name="generator" content="docfx 2.6.1.0">
+    <meta name="generator" content="docfx 2.10.2.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -98,9 +98,9 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="bind" sourcefile="tutorial/siml/elements/bind.md" sourcestartlinenumber="1" sourceendlinenumber="1">Bind</h1>
+              <h1 id="bind">Bind</h1>
               
-<table sourcefile="tutorial/siml/elements/bind.md" sourcestartlinenumber="3" sourceendlinenumber="8">
+<table>
 <thead>
 <tr>
 <th><strong>Annotation</strong></th>
@@ -126,40 +126,40 @@
 </tr>
 </tbody>
 </table>
-<p sourcefile="tutorial/siml/elements/bind.md" sourcestartlinenumber="10" sourceendlinenumber="10">This element is used to easily replace texts or attributes inside of elements. The <code>Bind</code> element takes 1 Key value and the inner value of this element is used as the replacement value. Wherever the key name is found it is replaced with the inner value of the <code>Bind</code> element.</p>
-<p sourcefile="tutorial/siml/elements/bind.md" sourcestartlinenumber="12" sourceendlinenumber="12"><em>Example</em></p>
-<p sourcefile="tutorial/siml/elements/bind.md" sourcestartlinenumber="14" sourceendlinenumber="14"><strong>SIML</strong></p>
-<pre sourcefile="tutorial/siml/elements/bind.md" sourcestartlinenumber="16" sourceendlinenumber="24"><code class="lang-xml">&lt;Model&gt;
+<p>This element is used to easily replace texts or attributes inside of elements. The <code>Bind</code> element takes 1 Key value and the inner value of this element is used as the replacement value. Wherever the key name is found it is replaced with the inner value of the <code>Bind</code> element.</p>
+<p><em>Example</em></p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;CONVERT * TO *&lt;/Pattern&gt;
  &lt;Response&gt;
   &lt;Bind Key=&quot;{0}&quot;&gt;&lt;Match Index=&quot;2&quot; /&gt;&lt;/Bind&gt;
   &lt;Text Get=&quot;{0}&quot;&gt;&lt;Match /&gt;&lt;/Text&gt;
  &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p sourcefile="tutorial/siml/elements/bind.md" sourcestartlinenumber="26" sourceendlinenumber="26"><strong>User Input</strong></p>
-<p sourcefile="tutorial/siml/elements/bind.md" sourcestartlinenumber="28" sourceendlinenumber="28"><em>Convert rock to uppercase</em></p>
-<p sourcefile="tutorial/siml/elements/bind.md" sourcestartlinenumber="30" sourceendlinenumber="30"><strong>Bot Output</strong></p>
-<p sourcefile="tutorial/siml/elements/bind.md" sourcestartlinenumber="32" sourceendlinenumber="32"><em>ROCK</em></p>
-<p sourcefile="tutorial/siml/elements/bind.md" sourcestartlinenumber="34" sourceendlinenumber="34"><strong>Explanation</strong></p>
-<blockquote sourcefile="tutorial/siml/elements/bind.md" sourcestartlinenumber="36" sourceendlinenumber="36"><p sourcefile="tutorial/siml/elements/bind.md" sourcestartlinenumber="36" sourceendlinenumber="36">The <code>Bind</code> element takes the key value of {0} and wherever it finds the <code>Key</code> it replaces the value of the <code>Key</code> with its inner value.</p>
+</code></pre><p><strong>User Input</strong></p>
+<p><em>Convert rock to uppercase</em></p>
+<p><strong>Bot Output</strong></p>
+<p><em>ROCK</em></p>
+<p><strong>Explanation</strong></p>
+<blockquote><p>The <code>Bind</code> element takes the key value of {0} and wherever it finds the <code>Key</code> it replaces the value of the <code>Key</code> with its inner value.</p>
 </blockquote>
-<p sourcefile="tutorial/siml/elements/bind.md" sourcestartlinenumber="38" sourceendlinenumber="38"><code>Bind</code> element should only be used when absolutely necessary and is not meant to be used as a shortcut substitution for element functions. It’s important to note that the scope of replacement by the Bind element is limited to its parent element i.e. all descendants of the its parent element that are declared after the Bind element will be affected if their attributes or arbitrary text contains the Key. The Key part of a Bind element is case-sensitive.</p>
-<h2 id="global-attribute-bindings" sourcefile="tutorial/siml/elements/bind.md" sourcestartlinenumber="40" sourceendlinenumber="40">Global Attribute Bindings</h2>
-<p sourcefile="tutorial/siml/elements/bind.md" sourcestartlinenumber="42" sourceendlinenumber="42">To simplify the task of replacing values of attributes with the processed value of known and frequently used elements. Bind comes with global bindings that can be used at run-time without having to create a separate bind key.</p>
-<p sourcefile="tutorial/siml/elements/bind.md" sourcestartlinenumber="44" sourceendlinenumber="44"><em>Example</em></p>
-<p sourcefile="tutorial/siml/elements/bind.md" sourcestartlinenumber="46" sourceendlinenumber="46"><strong>SIML</strong></p>
-<pre sourcefile="tutorial/siml/elements/bind.md" sourcestartlinenumber="48" sourceendlinenumber="55"><code class="lang-xml">&lt;Model&gt;
+<p><code>Bind</code> element should only be used when absolutely necessary and is not meant to be used as a shortcut substitution for element functions. It’s important to note that the scope of replacement by the Bind element is limited to its parent element i.e. all descendants of the its parent element that are declared after the Bind element will be affected if their attributes or arbitrary text contains the Key. The Key part of a Bind element is case-sensitive.</p>
+<h2 id="global-attribute-bindings">Global Attribute Bindings</h2>
+<p>To simplify the task of replacing values of attributes with the processed value of known and frequently used elements. Bind comes with global bindings that can be used at run-time without having to create a separate bind key.</p>
+<p><em>Example</em></p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;CONVERT * TO *&lt;/Pattern&gt;
  &lt;Response&gt;
   &lt;Text Get=&quot;{Bind Match:2}&quot;&gt;&lt;Match /&gt;&lt;/Text&gt;
  &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p sourcefile="tutorial/siml/elements/bind.md" sourcestartlinenumber="57" sourceendlinenumber="57"><strong>User Input</strong></p>
-<p sourcefile="tutorial/siml/elements/bind.md" sourcestartlinenumber="59" sourceendlinenumber="59"><em>Convert rock to uppercase</em></p>
-<p sourcefile="tutorial/siml/elements/bind.md" sourcestartlinenumber="61" sourceendlinenumber="61"><strong>Bot Output</strong></p>
-<p sourcefile="tutorial/siml/elements/bind.md" sourcestartlinenumber="63" sourceendlinenumber="63"><em>ROCK</em></p>
-<p sourcefile="tutorial/siml/elements/bind.md" sourcestartlinenumber="65" sourceendlinenumber="65"><strong>Explanation</strong></p>
-<blockquote sourcefile="tutorial/siml/elements/bind.md" sourcestartlinenumber="67" sourceendlinenumber="67"><p sourcefile="tutorial/siml/elements/bind.md" sourcestartlinenumber="67" sourceendlinenumber="67"><strong>Global bindings</strong> require that the word Bind is within curly brackets and the name of the addressed element is written after the Bind word. If a parameter is to be passed to the element then the parameter value is specified after a colon. <code>{Bind Match:2}</code> calls the Match element and specifies 2 as the Index value.</p>
+</code></pre><p><strong>User Input</strong></p>
+<p><em>Convert rock to uppercase</em></p>
+<p><strong>Bot Output</strong></p>
+<p><em>ROCK</em></p>
+<p><strong>Explanation</strong></p>
+<blockquote><p><strong>Global bindings</strong> require that the word Bind is within curly brackets and the name of the addressed element is written after the Bind word. If a parameter is to be passed to the element then the parameter value is specified after a colon. <code>{Bind Match:2}</code> calls the Match element and specifies 2 as the Index value.</p>
 </blockquote>
 
             </article>

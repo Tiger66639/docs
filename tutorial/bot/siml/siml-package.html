@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>SIML Knowledge-Base Package  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="SIML Knowledge-Base Package ">
-    <meta name="generator" content="docfx 2.6.1.0">
+    <meta name="generator" content="docfx 2.10.2.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -98,21 +98,21 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="siml-knowledge-base-package" sourcefile="tutorial/bot/siml/siml-package.md" sourcestartlinenumber="1" sourceendlinenumber="1">SIML Knowledge-Base Package</h1>
+              <h1 id="siml-knowledge-base-package">SIML Knowledge-Base Package</h1>
               
-<p sourcefile="tutorial/bot/siml/siml-package.md" sourcestartlinenumber="3" sourceendlinenumber="3">The SIML Package system has been developed to carefully arrange SIML Document elements before being loaded into <code>SimlBot</code> instance. SIML Packages are the recommended way of loading a knowledge-base project in to <code>SimlBot</code>.</p>
-<h2 id="why-an-siml-package" sourcefile="tutorial/bot/siml/siml-package.md" sourcestartlinenumber="5" sourceendlinenumber="5">Why an SIML Package?</h2>
-<ul sourcefile="tutorial/bot/siml/siml-package.md" sourcestartlinenumber="7" sourceendlinenumber="12">
-<li sourcefile="tutorial/bot/siml/siml-package.md" sourcestartlinenumber="7" sourceendlinenumber="7">Arranges SIML elements in their recommended order of evaluation.</li>
-<li sourcefile="tutorial/bot/siml/siml-package.md" sourcestartlinenumber="8" sourceendlinenumber="8">Ensures that <em>critical</em> <strong>bot</strong> and <strong>user</strong> settings are loaded first into the interpreter.</li>
-<li sourcefile="tutorial/bot/siml/siml-package.md" sourcestartlinenumber="9" sourceendlinenumber="9">Ensures <strong>Bot</strong> configurations are <em>applied</em> before parsing of SIML Concepts takes place.</li>
-<li sourcefile="tutorial/bot/siml/siml-package.md" sourcestartlinenumber="10" sourceendlinenumber="10">Performs SIML Document clean up by removing unnecessary characters and whitespaces.</li>
-<li sourcefile="tutorial/bot/siml/siml-package.md" sourcestartlinenumber="11" sourceendlinenumber="11">Highly compresses large SIML Projects to their optimum size.</li>
-<li sourcefile="tutorial/bot/siml/siml-package.md" sourcestartlinenumber="12" sourceendlinenumber="12">Decreases the loading time of an SIML Knowledge-Base.</li>
+<p>The SIML Package system has been developed to carefully arrange SIML Document elements before being loaded into <code>SimlBot</code> instance. SIML Packages are the recommended way of loading a knowledge-base project in to <code>SimlBot</code>.</p>
+<h2 id="why-an-siml-package">Why an SIML Package?</h2>
+<ul>
+<li>Arranges SIML elements in their recommended order of evaluation.</li>
+<li>Ensures that <em>critical</em> <strong>bot</strong> and <strong>user</strong> settings are loaded first into the interpreter.</li>
+<li>Ensures <strong>Bot</strong> configurations are <em>applied</em> before parsing of SIML Concepts takes place.</li>
+<li>Performs SIML Document clean up by removing unnecessary characters and whitespaces.</li>
+<li>Highly compresses large SIML Projects to their optimum size.</li>
+<li>Decreases the loading time of an SIML Knowledge-Base.</li>
 </ul>
-<h2 id="creating-a-package-using-code" sourcefile="tutorial/bot/siml/siml-package.md" sourcestartlinenumber="15" sourceendlinenumber="15">Creating a Package using code</h2>
-<p sourcefile="tutorial/bot/siml/siml-package.md" sourcestartlinenumber="17" sourceendlinenumber="17">An SIML Package is a collection of properly arranged SIML elements in their compressed format. To create an SIML package its important that you load SIML files as XElements and then use the <strong>PackageManager</strong> to convert the elements into an SIML package string.</p>
-<pre sourcefile="tutorial/bot/siml/siml-package.md" sourcestartlinenumber="19" sourceendlinenumber="29"><code class="lang-csharp">var elementList = new List();
+<h2 id="creating-a-package-using-code">Creating a Package using code</h2>
+<p>An SIML Package is a collection of properly arranged SIML elements in their compressed format. To create an SIML package its important that you load SIML files as XElements and then use the <strong>PackageManager</strong> to convert the elements into an SIML package string.</p>
+<pre><code class="lang-csharp">var elementList = new List();
 foreach (var simlFile in Directory.GetFiles(@&quot;C:\Bot&quot;, &quot;*.siml&quot;))
 {
 var simlElement = XElement.Load(simlFile);
@@ -121,13 +121,13 @@ elementList.Add(simlElement);
 
 var packageString = simlBot.PackageManager.ConvertToPackage(elementList);
 File.WriteAllText(@&quot;C:\BotMySimlPackage.simlpk&quot;, packageString);
-</code></pre><blockquote sourcefile="tutorial/bot/siml/siml-package.md" sourcestartlinenumber="31" sourceendlinenumber="31"><p sourcefile="tutorial/bot/siml/siml-package.md" sourcestartlinenumber="31" sourceendlinenumber="31">This is exactly the function that is called by Syn Bot Studio to create an SIML Package file.</p>
+</code></pre><blockquote><p>This is exactly the function that is called by Syn Bot Studio to create an SIML Package file.</p>
 </blockquote>
-<p sourcefile="tutorial/bot/siml/siml-package.md" sourcestartlinenumber="33" sourceendlinenumber="33"><em>Example using Linq</em></p>
-<pre sourcefile="tutorial/bot/siml/siml-package.md" sourcestartlinenumber="35" sourceendlinenumber="39"><code class="lang-csharp">var elementList = Directory.GetFiles(@&quot;C:\Bot&quot;, &quot;*.siml&quot;).Select(XElement.Load).ToList();
+<p><em>Example using Linq</em></p>
+<pre><code class="lang-csharp">var elementList = Directory.GetFiles(@&quot;C:\Bot&quot;, &quot;*.siml&quot;).Select(XElement.Load).ToList();
 var packageString = simlBot.PackageManager.ConvertToPackage(elementList);
 File.WriteAllText(@&quot;C:\BotMySimlPackage.simlpk&quot;, packageString);
-</code></pre><blockquote sourcefile="tutorial/bot/siml/siml-package.md" sourcestartlinenumber="41" sourceendlinenumber="41"><p sourcefile="tutorial/bot/siml/siml-package.md" sourcestartlinenumber="41" sourceendlinenumber="41">You should always save an SIML Package string into a file that has the extension <code>.SimlPk</code>.</p>
+</code></pre><blockquote><p>You should always save an SIML Package string into a file that has the extension <code>.SimlPk</code>.</p>
 </blockquote>
 
             </article>

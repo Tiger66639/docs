@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>Basic Tutorial  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Basic Tutorial ">
-    <meta name="generator" content="docfx 2.6.1.0">
+    <meta name="generator" content="docfx 2.10.2.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -98,47 +98,47 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="basic-tutorial" sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="1" sourceendlinenumber="1">Basic Tutorial</h1>
+              <h1 id="basic-tutorial">Basic Tutorial</h1>
               
-<p sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="3" sourceendlinenumber="3">In this tutorial we will create a simple bot that opens an application by taking commands from the user. As <code>Oscova</code> is part of the <code>Syn.Bot</code> framework please ensure that you are always using the <code>Syn.Bot.Oscova</code> namespace and not <code>Syn.Bot.Siml</code>.</p>
-<h2 id="creating-a-console-project" sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="5" sourceendlinenumber="5">Creating a Console Project</h2>
-<p sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="7" sourceendlinenumber="7">We&#39;ll create a new C# Console project. To do so:</p>
-<ul sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="9" sourceendlinenumber="11">
-<li sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="9" sourceendlinenumber="9">Launch <strong>Visual Studio</strong> (2015 or above)</li>
-<li sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="10" sourceendlinenumber="10">Click on <em>File</em>, select <em>New</em> and then choose <em>Project...</em></li>
-<li sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="11" sourceendlinenumber="11">Then select <em>Console Application</em> and name the project <strong>OscovaConsoleBot</strong>.</li>
+<p>In this tutorial we will create a simple bot that opens an application by taking commands from the user. As <code>Oscova</code> is part of the <code>Syn.Bot</code> framework please ensure that you are always using the <code>Syn.Bot.Oscova</code> namespace and not <code>Syn.Bot.Siml</code>.</p>
+<h2 id="creating-a-console-project">Creating a Console Project</h2>
+<p>We&#39;ll create a new C# Console project. To do so:</p>
+<ul>
+<li>Launch <strong>Visual Studio</strong> (2015 or above)</li>
+<li>Click on <em>File</em>, select <em>New</em> and then choose <em>Project...</em></li>
+<li>Then select <em>Console Application</em> and name the project <strong>OscovaConsoleBot</strong>.</li>
 </ul>
-<p sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="13" sourceendlinenumber="13">Now we&#39;ll add a new class to the project. To do so:</p>
-<ul sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="15" sourceendlinenumber="17">
-<li sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="15" sourceendlinenumber="15">Right click the project in <em>Solution Explorer</em></li>
-<li sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="16" sourceendlinenumber="16">Select <em>Add</em> and then choose <em>Class...</em></li>
-<li sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="17" sourceendlinenumber="17">Name the class <strong>AppDialog</strong></li>
+<p>Now we&#39;ll add a new class to the project. To do so:</p>
+<ul>
+<li>Right click the project in <em>Solution Explorer</em></li>
+<li>Select <em>Add</em> and then choose <em>Class...</em></li>
+<li>Name the class <strong>AppDialog</strong></li>
 </ul>
-<h2 id="creating-a-dialog" sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="19" sourceendlinenumber="19">Creating a Dialog</h2>
-<p sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="21" sourceendlinenumber="21">To create an Oscova <code>Dialog</code> create a class that is derived from the <code>Dialog</code> class.</p>
-<p sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="23" sourceendlinenumber="23">In this tutorial our Dialog is designed to assist in opening Apps. Thus we&#39;ll use the name <code>AppDialog</code>.</p>
-<pre sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="25" sourceendlinenumber="30"><code class="lang-csharp">class AppDialog: Dialog
+<h2 id="creating-a-dialog">Creating a Dialog</h2>
+<p>To create an Oscova <code>Dialog</code> create a class that is derived from the <code>Dialog</code> class.</p>
+<p>In this tutorial our Dialog is designed to assist in opening Apps. Thus we&#39;ll use the name <code>AppDialog</code>.</p>
+<pre><code class="lang-csharp">class AppDialog: Dialog
 {
 
 }
-</code></pre><blockquote sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="31" sourceendlinenumber="31"><p sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="31" sourceendlinenumber="31">By convention dialog class names should end with the word <code>Dialog</code>.</p>
-</blockquote>
-<h2 id="creating-an-intent" sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="33" sourceendlinenumber="33">Creating an Intent</h2>
-<p sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="35" sourceendlinenumber="35">In <em>Oscova</em> an <em>Intent</em> is declared by creating a void method and then decorating the method with <em>Expression</em> and <em>Entity</em> attributes. Our first intent will assist in opening applications. All intent methods must have <code>public</code> modifier and must be of type <code>void</code>.</p>
-<p sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="37" sourceendlinenumber="37">In the <em>AppDialog</em> class add the following method.</p>
-<h3 id="openapp-intent" sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="39" sourceendlinenumber="39">OpenApp (Intent)</h3>
-<pre sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="41" sourceendlinenumber="49"><code class="lang-csharp">[Expression(&quot;open {calc}&quot;)]
+</code></pre><div class="NOTE"><h5>Note</h5><p>By convention dialog class names should end with the word <code>Dialog</code>.</p>
+</div>
+<h2 id="creating-an-intent">Creating an Intent</h2>
+<p>In <em>Oscova</em> an <em>Intent</em> is declared by creating a void method and then decorating the method with <em>Expression</em> and <em>Entity</em> attributes. Our first intent will assist in opening applications. All intent methods must have <code>public</code> modifier and must be of type <code>void</code>.</p>
+<p>In the <em>AppDialog</em> class add the following method.</p>
+<h3 id="openapp-intent">OpenApp (Intent)</h3>
+<pre><code class="lang-csharp">[Expression(&quot;open {calc}&quot;)]
 [Entity(&quot;app&quot;)]
 public void OpenApp(Context context, Result result)
 {
     var appEntity = result.Entities.OfType(&quot;app&quot;);
     Process.Start(appEntity.Value);
 }
-</code></pre><p sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="51" sourceendlinenumber="51">In the above intent we created an <em>example</em> intent. By annotating the word <strong><em>calc</em></strong> and adding an <em>Entity</em> attribute below the expression we&#39;ve specified that <em>calc</em> is of the entity type <em>App</em>. The <code>result.Entities</code> property contains all the global and parametric entities parsed by known <em>entity recognizers</em>.</p>
-<blockquote sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="53" sourceendlinenumber="53"><p sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="53" sourceendlinenumber="53">Note: All Oscova attributes are available under the namespace <code>Syn.Bot.Oscova.Attributes</code></p>
+</code></pre><p>In the above intent we created an <em>example</em> intent. By annotating the word <strong><em>calc</em></strong> and adding an <em>Entity</em> attribute below the expression we&#39;ve specified that <em>calc</em> is of the entity type <em>App</em>. The <code>result.Entities</code> property contains all the global and parametric entities parsed by known <em>entity recognizers</em>.</p>
+<blockquote><p>Note: All Oscova attributes are available under the namespace <code>Syn.Bot.Oscova.Attributes</code></p>
 </blockquote>
-<p sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="55" sourceendlinenumber="55">Your entire dialog class should look similar to the following.</p>
-<pre sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="57" sourceendlinenumber="75"><code class="lang-csharp">using System.Diagnostics;
+<p>Your entire dialog class should look similar to the following.</p>
+<pre><code class="lang-csharp">using System.Diagnostics;
 using Syn.Bot.Oscova;
 using Syn.Bot.Oscova.Attributes;
 
@@ -155,27 +155,27 @@ namespace OscovaConsoleBot
         }
     }
 }
-</code></pre><h2 id="adding-dialogs-and-training" sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="77" sourceendlinenumber="77">Adding Dialogs and Training</h2>
-<p sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="79" sourceendlinenumber="79">Once all the created dialogs are added to Oscova, it is required that the Bot is trained. Click on <code>Program.cs</code> in <em>Solution Explorer</em> and add the following code within the static <em>Main</em> method.</p>
-<pre sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="81" sourceendlinenumber="85"><code class="lang-csharp">var bot = new OscovaBot();
+</code></pre><h2 id="adding-dialogs-and-training">Adding Dialogs and Training</h2>
+<p>Once all the created dialogs are added to Oscova, it is required that the Bot is trained. Click on <code>Program.cs</code> in <em>Solution Explorer</em> and add the following code within the static <em>Main</em> method.</p>
+<pre><code class="lang-csharp">var bot = new OscovaBot();
 bot.Dialogs.Add(new AppDialog());
 bot.Train();
-</code></pre><blockquote sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="87" sourceendlinenumber="87"><p sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="87" sourceendlinenumber="87">Note: Oscova Bot must be trained after new <em>Dialogs</em> or <em>Entity Recognizers</em> are added.</p>
-</blockquote>
-<h2 id="evaluating-a-request" sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="89" sourceendlinenumber="89">Evaluating a Request</h2>
-<p sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="91" sourceendlinenumber="91">Now that we&#39;ve added the <em>AppDialog</em> and trained the Bot we can send chat requests to the Bot for evaluation. Add the following just after the above.</p>
-<pre sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="93" sourceendlinenumber="100"><code class="lang-csharp">while (true)
+</code></pre><div class="NOTE"><h5>Note</h5><p>Oscova Bot must be trained after new <em>Dialogs</em> or <em>Entity Recognizers</em> are added.</p>
+</div>
+<h2 id="evaluating-a-request">Evaluating a Request</h2>
+<p>Now that we&#39;ve added the <em>AppDialog</em> and trained the Bot we can send chat requests to the Bot for evaluation. Add the following just after the above.</p>
+<pre><code class="lang-csharp">while (true)
 {
     var request = Console.ReadLine();
     var evaluationResult = bot.Evaluate(request);
     evaluationResult.Invoke();
 }
-</code></pre><p sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="102" sourceendlinenumber="102">The <code>Bot.Evaluate</code> method takes <code>Request</code> as parameter. In the above code as we&#39;ve passed a <code>string</code> value, Oscova will evaluate the message under the <code>MainUser</code> context.</p>
-<p sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="104" sourceendlinenumber="104">After the evaluation is completed, Oscova returns an evaluation result consisting of all the high scoring <em>Intents</em> along with recognized <em>Entities</em> and the conversation <em>Context</em>. All intents are ordered by descending intent scores.</p>
-<p sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="106" sourceendlinenumber="106">In the above code we call <code>evaluationResult.Invoke</code> method after evaluating the use message. This method invokes the best <em>Contextual Intent</em>. It is important to note that for Oscova the best contextual intent is not always the highest scoring intent. This is because Oscova considers the context of conversation when searching for the best intent.</p>
-<h2 id="running-the-bot" sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="108" sourceendlinenumber="108">Running the Bot</h2>
-<p sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="110" sourceendlinenumber="110">Your overall code in <code>Program.cs</code> should look the following.</p>
-<pre sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="112" sourceendlinenumber="135"><code class="lang-csharp">using System;
+</code></pre><p>The <code>Bot.Evaluate</code> method takes <code>Request</code> as parameter. In the above code as we&#39;ve passed a <code>string</code> value, Oscova will evaluate the message under the <code>MainUser</code> context.</p>
+<p>After the evaluation is completed, Oscova returns an evaluation result consisting of all the high scoring <em>Intents</em> along with recognized <em>Entities</em> and the conversation <em>Context</em>. All intents are ordered by descending intent scores.</p>
+<p>In the above code we call <code>evaluationResult.Invoke</code> method after evaluating the use message. This method invokes the best <em>Contextual Intent</em>. It is important to note that for Oscova the best contextual intent is not always the highest scoring intent. This is because Oscova considers the context of conversation when searching for the best intent.</p>
+<h2 id="running-the-bot">Running the Bot</h2>
+<p>Your overall code in <code>Program.cs</code> should look the following.</p>
+<pre><code class="lang-csharp">using System;
 using Syn.Bot.Oscova;
 
 namespace OscovaConsoleBot
@@ -197,8 +197,8 @@ namespace OscovaConsoleBot
         }
     }
 }
-</code></pre><p sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="137" sourceendlinenumber="137">To run the Console bot application press <strong>F5</strong>. Type <strong><em>open calc</em></strong>. The bot will now launch the <em>Calculator</em> app in Windows.</p>
-<p sourcefile="tutorial/bot/oscova/tutorial.md" sourcestartlinenumber="139" sourceendlinenumber="139">Congrats! You&#39;ve successfully created your first Oscova bot.</p>
+</code></pre><p>To run the Console bot application press <strong>F5</strong>. Type <strong><em>open calc</em></strong>. The bot will now launch the <em>Calculator</em> app in Windows.</p>
+<p>Congrats! You&#39;ve successfully created your first Oscova bot.</p>
 
             </article>
           </div>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>Late  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Late ">
-    <meta name="generator" content="docfx 2.6.1.0">
+    <meta name="generator" content="docfx 2.10.2.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -98,9 +98,9 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="late" sourcefile="tutorial/siml/elements/late.md" sourcestartlinenumber="1" sourceendlinenumber="1">Late</h1>
+              <h1 id="late">Late</h1>
               
-<table sourcefile="tutorial/siml/elements/late.md" sourcestartlinenumber="3" sourceendlinenumber="7">
+<table>
 <thead>
 <tr>
 <th><strong>Annotation</strong></th>
@@ -122,13 +122,13 @@
 </tr>
 </tbody>
 </table>
-<p sourcefile="tutorial/siml/elements/late.md" sourcestartlinenumber="9" sourceendlinenumber="9">The <code>Late</code> tag is used to delay the evaluation of its inner elements or arbitrary value by a specified interval. The value of the interval is usually specified in seconds.</p>
-<blockquote sourcefile="tutorial/siml/elements/late.md" sourcestartlinenumber="11" sourceendlinenumber="12"><p sourcefile="tutorial/siml/elements/late.md" sourcestartlinenumber="11" sourceendlinenumber="12">The <code>Late</code> tag returns an empty string in its parent <code>Model</code>.
+<p>The <code>Late</code> tag is used to delay the evaluation of its inner elements or arbitrary value by a specified interval. The value of the interval is usually specified in seconds.</p>
+<blockquote><p>The <code>Late</code> tag returns an empty string in its parent <code>Model</code>.
 A <code>Timer</code> may be required by the interpreter to control the timing of evaluation.</p>
 </blockquote>
-<p sourcefile="tutorial/siml/elements/late.md" sourcestartlinenumber="14" sourceendlinenumber="14"><em>Example</em></p>
-<p sourcefile="tutorial/siml/elements/late.md" sourcestartlinenumber="16" sourceendlinenumber="16"><strong>SIML</strong></p>
-<pre sourcefile="tutorial/siml/elements/late.md" sourcestartlinenumber="18" sourceendlinenumber="28"><code class="lang-xml">&lt;Model&gt;
+<p><em>Example</em></p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
   &lt;Pattern&gt;Run App after &lt;Match /&gt; seconds&lt;/Pattern&gt;
   &lt;Response&gt;
     App will be opened after &lt;Match /&gt; seconds.
@@ -137,13 +137,13 @@ A <code>Timer</code> may be required by the interpreter to control the timing of
     &lt;/Late&gt;
   &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p sourcefile="tutorial/siml/elements/late.md" sourcestartlinenumber="30" sourceendlinenumber="30"><strong>User Input</strong></p>
-<p sourcefile="tutorial/siml/elements/late.md" sourcestartlinenumber="32" sourceendlinenumber="32"><em>Run app after 10 seconds</em></p>
-<p sourcefile="tutorial/siml/elements/late.md" sourcestartlinenumber="34" sourceendlinenumber="34"><strong>Bot Output</strong></p>
-<p sourcefile="tutorial/siml/elements/late.md" sourcestartlinenumber="36" sourceendlinenumber="36"><em>App will be opened after 10 seconds.</em></p>
-<p sourcefile="tutorial/siml/elements/late.md" sourcestartlinenumber="38" sourceendlinenumber="38"><strong>Explanation</strong></p>
-<blockquote sourcefile="tutorial/siml/elements/late.md" sourcestartlinenumber="40" sourceendlinenumber="40"><p sourcefile="tutorial/siml/elements/late.md" sourcestartlinenumber="40" sourceendlinenumber="40">The Late tag will evaluate its inner elements after 10 seconds and the generated response will be send back as an event response.</p>
-<p sourcefile="tutorial/siml/elements/late.md" sourcestartlinenumber="42" sourceendlinenumber="42">The <code>Second</code> attribute is used to set the delay interval in seconds.</p>
+</code></pre><p><strong>User Input</strong></p>
+<p><em>Run app after 10 seconds</em></p>
+<p><strong>Bot Output</strong></p>
+<p><em>App will be opened after 10 seconds.</em></p>
+<p><strong>Explanation</strong></p>
+<blockquote><p>The Late tag will evaluate its inner elements after 10 seconds and the generated response will be send back as an event response.</p>
+<p>The <code>Second</code> attribute is used to set the delay interval in seconds.</p>
 </blockquote>
 
             </article>

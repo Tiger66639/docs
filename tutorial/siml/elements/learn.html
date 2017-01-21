@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>Learn  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Learn ">
-    <meta name="generator" content="docfx 2.6.1.0">
+    <meta name="generator" content="docfx 2.10.2.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -98,9 +98,9 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="learn" sourcefile="tutorial/siml/elements/learn.md" sourcestartlinenumber="1" sourceendlinenumber="1">Learn</h1>
+              <h1 id="learn">Learn</h1>
               
-<table sourcefile="tutorial/siml/elements/learn.md" sourcestartlinenumber="3" sourceendlinenumber="7">
+<table>
 <thead>
 <tr>
 <th><strong>Annotation</strong></th>
@@ -122,11 +122,11 @@
 </tr>
 </tbody>
 </table>
-<p sourcefile="tutorial/siml/elements/learn.md" sourcestartlinenumber="10" sourceendlinenumber="10">Learning for a bot in its simplest form is saving of some of information ( a fact ) that was projected to the Bot. Now in SIML the Learn tag is used to save a Model into the Bot’s Knowledge Base ( Graph ) and this unit of knowledge will then be available to all users.</p>
-<p sourcefile="tutorial/siml/elements/learn.md" sourcestartlinenumber="12" sourceendlinenumber="12">Suppose you wish to teach your Bot that <strong><em>An Apple is a fruit</em></strong></p>
-<p sourcefile="tutorial/siml/elements/learn.md" sourcestartlinenumber="14" sourceendlinenumber="14"><em>Example</em></p>
-<p sourcefile="tutorial/siml/elements/learn.md" sourcestartlinenumber="16" sourceendlinenumber="16"><strong>SIML</strong></p>
-<pre sourcefile="tutorial/siml/elements/learn.md" sourcestartlinenumber="18" sourceendlinenumber="35"><code class="lang-xml">&lt;Model&gt;
+<p>Learning for a bot in its simplest form is saving of some of information ( a fact ) that was projected to the Bot. Now in SIML the Learn tag is used to save a Model into the Bot’s Knowledge Base ( Graph ) and this unit of knowledge will then be available to all users.</p>
+<p>Suppose you wish to teach your Bot that <strong><em>An Apple is a fruit</em></strong></p>
+<p><em>Example</em></p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;* IS A *&lt;/Pattern&gt;
  &lt;Response&gt;
   Alright I will keep that in mind.
@@ -142,17 +142,17 @@
   &lt;/Learn&gt;
  &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p sourcefile="tutorial/siml/elements/learn.md" sourcestartlinenumber="37" sourceendlinenumber="37"><strong>User Input</strong></p>
-<p sourcefile="tutorial/siml/elements/learn.md" sourcestartlinenumber="39" sourceendlinenumber="39"><em>An apple is a fruit</em></p>
-<p sourcefile="tutorial/siml/elements/learn.md" sourcestartlinenumber="41" sourceendlinenumber="41"><strong>Bot Output</strong></p>
-<p sourcefile="tutorial/siml/elements/learn.md" sourcestartlinenumber="43" sourceendlinenumber="43"><em>Alright I will keep that in mind.</em></p>
-<p sourcefile="tutorial/siml/elements/learn.md" sourcestartlinenumber="45" sourceendlinenumber="45"><strong>Explanation</strong></p>
-<blockquote sourcefile="tutorial/siml/elements/learn.md" sourcestartlinenumber="47" sourceendlinenumber="47"><p sourcefile="tutorial/siml/elements/learn.md" sourcestartlinenumber="47" sourceendlinenumber="47">The information within the <code>Learn</code> element tells the Bot that it should now save the Model within its Knowledge Base. The <code>Process</code> tag in this example is used to ensure that the element <code>Match</code> is evaluated and is not saved as such.</p>
+</code></pre><p><strong>User Input</strong></p>
+<p><em>An apple is a fruit</em></p>
+<p><strong>Bot Output</strong></p>
+<p><em>Alright I will keep that in mind.</em></p>
+<p><strong>Explanation</strong></p>
+<blockquote><p>The information within the <code>Learn</code> element tells the Bot that it should now save the Model within its Knowledge Base. The <code>Process</code> tag in this example is used to ensure that the element <code>Match</code> is evaluated and is not saved as such.</p>
 </blockquote>
-<p sourcefile="tutorial/siml/elements/learn.md" sourcestartlinenumber="49" sourceendlinenumber="49">In the above example the Model within the Learn element has not been enclosed within a Concept but as every Model in SIML should belong to a Concept the Concept for the new Model will be the same Concept under which the main Model for the above example resides.</p>
-<p sourcefile="tutorial/siml/elements/learn.md" sourcestartlinenumber="51" sourceendlinenumber="51">If you wish to specify a Concept you may do so by first adding the Model within a Concept and then using the Learn element as its parent.</p>
-<p sourcefile="tutorial/siml/elements/learn.md" sourcestartlinenumber="53" sourceendlinenumber="53"><em>Example</em></p>
-<pre sourcefile="tutorial/siml/elements/learn.md" sourcestartlinenumber="55" sourceendlinenumber="70"><code class="lang-xml">&lt;Model&gt;
+<p>In the above example the Model within the Learn element has not been enclosed within a Concept but as every Model in SIML should belong to a Concept the Concept for the new Model will be the same Concept under which the main Model for the above example resides.</p>
+<p>If you wish to specify a Concept you may do so by first adding the Model within a Concept and then using the Learn element as its parent.</p>
+<p><em>Example</em></p>
+<pre><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;* IS A *&lt;/Pattern&gt;
  &lt;Response&gt;
    Alright I will keep that in mind.

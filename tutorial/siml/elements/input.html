@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>Input  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Input ">
-    <meta name="generator" content="docfx 2.6.1.0">
+    <meta name="generator" content="docfx 2.10.2.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -98,9 +98,9 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="input" sourcefile="tutorial/siml/elements/input.md" sourcestartlinenumber="1" sourceendlinenumber="1">Input</h1>
+              <h1 id="input">Input</h1>
               
-<table sourcefile="tutorial/siml/elements/input.md" sourcestartlinenumber="3" sourceendlinenumber="7">
+<table>
 <thead>
 <tr>
 <th><strong>Annotation</strong></th>
@@ -122,15 +122,15 @@
 </tr>
 </tbody>
 </table>
-<p sourcefile="tutorial/siml/elements/input.md" sourcestartlinenumber="9" sourceendlinenumber="9">The Input tag is used to fetch the last sentence of the last chat request made by the user.</p>
-<p sourcefile="tutorial/siml/elements/input.md" sourcestartlinenumber="11" sourceendlinenumber="11">Lets assume that the user said <strong><em>Hi, How are you today?</em></strong>. SIML handle this sentence by firstly splitting the sentence using the comma , thereby generating 2 Inputs for 1 Request.</p>
-<p sourcefile="tutorial/siml/elements/input.md" sourcestartlinenumber="13" sourceendlinenumber="13">So the message that the Bot is going to receive is <strong>Hi</strong> and <strong>How are you today?</strong></p>
-<blockquote sourcefile="tutorial/siml/elements/input.md" sourcestartlinenumber="14" sourceendlinenumber="14"><p sourcefile="tutorial/siml/elements/input.md" sourcestartlinenumber="14" sourceendlinenumber="14">There was just 1 Request which resulted in 2 Inputs.</p>
+<p>The Input tag is used to fetch the last sentence of the last chat request made by the user.</p>
+<p>Lets assume that the user said <strong><em>Hi, How are you today?</em></strong>. SIML handle this sentence by firstly splitting the sentence using the comma , thereby generating 2 Inputs for 1 Request.</p>
+<p>So the message that the Bot is going to receive is <strong>Hi</strong> and <strong>How are you today?</strong></p>
+<blockquote><p>There was just 1 Request which resulted in 2 Inputs.</p>
 </blockquote>
-<p sourcefile="tutorial/siml/elements/input.md" sourcestartlinenumber="16" sourceendlinenumber="16">The <strong>Input</strong> tag is all about getting the previous query.</p>
-<p sourcefile="tutorial/siml/elements/input.md" sourcestartlinenumber="18" sourceendlinenumber="18"><em>Example</em></p>
-<p sourcefile="tutorial/siml/elements/input.md" sourcestartlinenumber="20" sourceendlinenumber="20"><strong>SIML</strong></p>
-<pre sourcefile="tutorial/siml/elements/input.md" sourcestartlinenumber="22" sourceendlinenumber="37"><code class="lang-xml">&lt;Model&gt;
+<p>The <strong>Input</strong> tag is all about getting the previous query.</p>
+<p><em>Example</em></p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;HI _&lt;/Pattern&gt;
  &lt;Response&gt;&lt;Goto&gt;&lt;Match /&gt;&lt;/Goto&gt;&lt;/Response&gt;
 &lt;/Model&gt;
@@ -144,22 +144,22 @@
  &lt;Pattern&gt;WHAT DID I JUST SAY&lt;/Pattern&gt;
  &lt;Response&gt;You said &quot;&lt;Input/&gt;&quot;&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p sourcefile="tutorial/siml/elements/input.md" sourcestartlinenumber="39" sourceendlinenumber="39"><strong>User Input</strong></p>
-<ol sourcefile="tutorial/siml/elements/input.md" sourcestartlinenumber="41" sourceendlinenumber="42">
-<li sourcefile="tutorial/siml/elements/input.md" sourcestartlinenumber="41" sourceendlinenumber="41"><em>Hi, how are you?</em></li>
-<li sourcefile="tutorial/siml/elements/input.md" sourcestartlinenumber="42" sourceendlinenumber="42"><em>What did I just say?</em></li>
+</code></pre><p><strong>User Input</strong></p>
+<ol>
+<li><em>Hi, how are you?</em></li>
+<li><em>What did I just say?</em></li>
 </ol>
-<p sourcefile="tutorial/siml/elements/input.md" sourcestartlinenumber="44" sourceendlinenumber="44"><strong>Bot Output</strong></p>
-<ol sourcefile="tutorial/siml/elements/input.md" sourcestartlinenumber="46" sourceendlinenumber="47">
-<li sourcefile="tutorial/siml/elements/input.md" sourcestartlinenumber="46" sourceendlinenumber="46"><em>I am fine</em></li>
-<li sourcefile="tutorial/siml/elements/input.md" sourcestartlinenumber="47" sourceendlinenumber="47"><em>You said “How are you?”</em></li>
+<p><strong>Bot Output</strong></p>
+<ol>
+<li><em>I am fine</em></li>
+<li><em>You said “How are you?”</em></li>
 </ol>
-<p sourcefile="tutorial/siml/elements/input.md" sourcestartlinenumber="49" sourceendlinenumber="49"><strong>Explanation</strong></p>
-<blockquote sourcefile="tutorial/siml/elements/input.md" sourcestartlinenumber="51" sourceendlinenumber="51"><p sourcefile="tutorial/siml/elements/input.md" sourcestartlinenumber="51" sourceendlinenumber="51">The Input element gets the last sentence of the user message.</p>
+<p><strong>Explanation</strong></p>
+<blockquote><p>The Input element gets the last sentence of the user message.</p>
 </blockquote>
-<p sourcefile="tutorial/siml/elements/input.md" sourcestartlinenumber="54" sourceendlinenumber="54">By default the Index is set to 1 if no Index attribute is provided/used.</p>
-<p sourcefile="tutorial/siml/elements/input.md" sourcestartlinenumber="56" sourceendlinenumber="56">The Index attribute allows deeper search through user message history. For example in the Code above if we wanted to get the word <strong>HI</strong> we would use <code>&lt;Input Index=”2″/&gt;</code></p>
-<blockquote sourcefile="tutorial/siml/elements/input.md" sourcestartlinenumber="58" sourceendlinenumber="58"><p sourcefile="tutorial/siml/elements/input.md" sourcestartlinenumber="58" sourceendlinenumber="58">Index 0 returns the current input of the user.</p>
+<p>By default the Index is set to 1 if no Index attribute is provided/used.</p>
+<p>The Index attribute allows deeper search through user message history. For example in the Code above if we wanted to get the word <strong>HI</strong> we would use <code>&lt;Input Index=”2″/&gt;</code></p>
+<blockquote><p>Index 0 returns the current input of the user.</p>
 </blockquote>
 
             </article>

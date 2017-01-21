@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>Remember  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Remember ">
-    <meta name="generator" content="docfx 2.6.1.0">
+    <meta name="generator" content="docfx 2.10.2.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -98,9 +98,9 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="remember" sourcefile="tutorial/siml/elements/remember.md" sourcestartlinenumber="1" sourceendlinenumber="1">Remember</h1>
+              <h1 id="remember">Remember</h1>
               
-<table sourcefile="tutorial/siml/elements/remember.md" sourcestartlinenumber="3" sourceendlinenumber="7">
+<table>
 <thead>
 <tr>
 <th><strong>Annotation</strong></th>
@@ -122,10 +122,10 @@
 </tr>
 </tbody>
 </table>
-<p sourcefile="tutorial/siml/elements/remember.md" sourcestartlinenumber="9" sourceendlinenumber="9">Sometimes some user-specific information has to be stored and it has to be ensured that certain interactions are done only with a particular user and no-one else. For this one can use the <code>Remember</code> element which ensures that the information within it will be stored only for the current user.</p>
-<p sourcefile="tutorial/siml/elements/remember.md" sourcestartlinenumber="11" sourceendlinenumber="11"><em>Example</em></p>
-<p sourcefile="tutorial/siml/elements/remember.md" sourcestartlinenumber="13" sourceendlinenumber="13"><strong>SIML</strong></p>
-<pre sourcefile="tutorial/siml/elements/remember.md" sourcestartlinenumber="15" sourceendlinenumber="30"><code class="lang-xml">&lt;Model&gt;
+<p>Sometimes some user-specific information has to be stored and it has to be ensured that certain interactions are done only with a particular user and no-one else. For this one can use the <code>Remember</code> element which ensures that the information within it will be stored only for the current user.</p>
+<p><em>Example</em></p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;Always remember I like *&lt;/Pattern&gt;
  &lt;Response&gt;
   Alright I will keep that in mind.
@@ -139,16 +139,16 @@
   &lt;/Remember&gt;
  &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p sourcefile="tutorial/siml/elements/remember.md" sourcestartlinenumber="32" sourceendlinenumber="32"><strong>User Input</strong></p>
-<p sourcefile="tutorial/siml/elements/remember.md" sourcestartlinenumber="34" sourceendlinenumber="34"><em>Always remember that I like bacon</em></p>
-<p sourcefile="tutorial/siml/elements/remember.md" sourcestartlinenumber="36" sourceendlinenumber="36"><strong>Bot Output</strong></p>
-<p sourcefile="tutorial/siml/elements/remember.md" sourcestartlinenumber="38" sourceendlinenumber="38"><em>Alright I will keep that in mind.</em></p>
-<p sourcefile="tutorial/siml/elements/remember.md" sourcestartlinenumber="40" sourceendlinenumber="40"><strong>Explanation</strong></p>
-<blockquote sourcefile="tutorial/siml/elements/remember.md" sourcestartlinenumber="42" sourceendlinenumber="42"><p sourcefile="tutorial/siml/elements/remember.md" sourcestartlinenumber="42" sourceendlinenumber="42">The information within the <code>Remember</code> element tells the Bot that it should save the Model for the current user. This also means that if some other user asks the question <strong><em>what do I like?</em></strong> the answer will be different.</p>
+</code></pre><p><strong>User Input</strong></p>
+<p><em>Always remember that I like bacon</em></p>
+<p><strong>Bot Output</strong></p>
+<p><em>Alright I will keep that in mind.</em></p>
+<p><strong>Explanation</strong></p>
+<blockquote><p>The information within the <code>Remember</code> element tells the Bot that it should save the Model for the current user. This also means that if some other user asks the question <strong><em>what do I like?</em></strong> the answer will be different.</p>
 </blockquote>
-<p sourcefile="tutorial/siml/elements/remember.md" sourcestartlinenumber="44" sourceendlinenumber="44">A <code>Concept</code> element can also be specified for a Model.</p>
-<p sourcefile="tutorial/siml/elements/remember.md" sourcestartlinenumber="46" sourceendlinenumber="46"><em>Example</em></p>
-<pre sourcefile="tutorial/siml/elements/remember.md" sourcestartlinenumber="48" sourceendlinenumber="65"><code class="lang-xml">&lt;Model&gt;
+<p>A <code>Concept</code> element can also be specified for a Model.</p>
+<p><em>Example</em></p>
+<pre><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;Always remember I like *&lt;/Pattern&gt;
  &lt;Response&gt;
   Alright I will keep that in mind.

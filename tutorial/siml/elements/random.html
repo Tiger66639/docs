@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>Random  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Random ">
-    <meta name="generator" content="docfx 2.6.1.0">
+    <meta name="generator" content="docfx 2.10.2.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -98,9 +98,9 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="random" sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="1" sourceendlinenumber="1">Random</h1>
+              <h1 id="random">Random</h1>
               
-<table sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="3" sourceendlinenumber="8">
+<table>
 <thead>
 <tr>
 <th><strong>Annotation</strong></th>
@@ -126,10 +126,10 @@
 </tr>
 </tbody>
 </table>
-<p sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="10" sourceendlinenumber="10">Randomness is important as it avoids users from guessing the Bot’s response for a particular entry and keeps the interaction alive and interesting. To add random answers for a pattern the <code>Random</code> element should be used with two or more <code>Item</code> element that hold a value.</p>
-<p sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="12" sourceendlinenumber="12"><em>Example</em></p>
-<p sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="14" sourceendlinenumber="14"><strong>SIML</strong></p>
-<pre sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="16" sourceendlinenumber="28"><code class="lang-xml">&lt;Model&gt;
+<p>Randomness is important as it avoids users from guessing the Bot’s response for a particular entry and keeps the interaction alive and interesting. To add random answers for a pattern the <code>Random</code> element should be used with two or more <code>Item</code> element that hold a value.</p>
+<p><em>Example</em></p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;Hi&lt;/Pattern&gt;
  &lt;Response&gt;
   &lt;Random&gt;
@@ -140,23 +140,23 @@
   &lt;/Random&gt;
  &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="30" sourceendlinenumber="30"><strong>User Input</strong></p>
-<ol sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="32" sourceendlinenumber="33">
-<li sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="32" sourceendlinenumber="32"><em>Hi</em></li>
-<li sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="33" sourceendlinenumber="33"><em>Hi</em></li>
+</code></pre><p><strong>User Input</strong></p>
+<ol>
+<li><em>Hi</em></li>
+<li><em>Hi</em></li>
 </ol>
-<p sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="35" sourceendlinenumber="35"><strong>Bot Output</strong></p>
-<ol sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="37" sourceendlinenumber="38">
-<li sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="37" sourceendlinenumber="37"><em>Hello there.</em></li>
-<li sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="38" sourceendlinenumber="38"><em>Well, Hi there!</em></li>
+<p><strong>Bot Output</strong></p>
+<ol>
+<li><em>Hello there.</em></li>
+<li><em>Well, Hi there!</em></li>
 </ol>
-<p sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="40" sourceendlinenumber="40"><strong>Explanation</strong></p>
-<blockquote sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="42" sourceendlinenumber="42"><p sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="42" sourceendlinenumber="42">The <code>Random</code> element scans it children <code>Item</code> elements and randomly returns anyone of them.</p>
+<p><strong>Explanation</strong></p>
+<blockquote><p>The <code>Random</code> element scans it children <code>Item</code> elements and randomly returns anyone of them.</p>
 </blockquote>
-<p sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="45" sourceendlinenumber="45">The above highlights pure randomness but SIML Bot offers casting of Random values to user input which in layman’s term means that the bot will choose the output most like the user’s input.</p>
-<p sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="47" sourceendlinenumber="47">Each <code>&lt;Item&gt;</code> element within a Random element can be assigned a Weight to control the probability of occurrence at run-time. The sum of these weights may or may not be equal to 1.</p>
-<p sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="49" sourceendlinenumber="49"><em>Example</em></p>
-<pre sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="51" sourceendlinenumber="63"><code class="lang-xml">&lt;Model&gt;
+<p>The above highlights pure randomness but SIML Bot offers casting of Random values to user input which in layman’s term means that the bot will choose the output most like the user’s input.</p>
+<p>Each <code>&lt;Item&gt;</code> element within a Random element can be assigned a Weight to control the probability of occurrence at run-time. The sum of these weights may or may not be equal to 1.</p>
+<p><em>Example</em></p>
+<pre><code class="lang-xml">&lt;Model&gt;
   &lt;Pattern&gt;HI&lt;/Pattern&gt;
   &lt;Response&gt;
     &lt;Random&gt;
@@ -167,10 +167,10 @@
     &lt;/Random&gt;
   &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="65" sourceendlinenumber="65">In the above SIML code every Item element has been assigned a unique probability. In this way a develop can control the occurrence of the Item at run-time. The above code ensures that most of the time the word Hola! will used as response whenever the user says <strong><em>hi</em></strong>.</p>
-<p sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="67" sourceendlinenumber="67">It’s not mandatory that to change the probability of occurrence of one item every other item has to be assigned a weight. If 1 or more items are assigned a weight then the rest of the existing items receive an equally distributed probability.</p>
-<p sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="69" sourceendlinenumber="69">The above SIML code can also be written as:</p>
-<pre sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="71" sourceendlinenumber="83"><code class="lang-xml">&lt;Model&gt;
+</code></pre><p>In the above SIML code every Item element has been assigned a unique probability. In this way a develop can control the occurrence of the Item at run-time. The above code ensures that most of the time the word Hola! will used as response whenever the user says <strong><em>hi</em></strong>.</p>
+<p>It’s not mandatory that to change the probability of occurrence of one item every other item has to be assigned a weight. If 1 or more items are assigned a weight then the rest of the existing items receive an equally distributed probability.</p>
+<p>The above SIML code can also be written as:</p>
+<pre><code class="lang-xml">&lt;Model&gt;
   &lt;Pattern&gt;HI&lt;/Pattern&gt;
   &lt;Response&gt;
     &lt;Random&gt;
@@ -181,44 +181,44 @@
     &lt;/Random&gt;
   &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="85" sourceendlinenumber="85">In the above the 2 Item elements <code>&lt;Item&gt;Hello there.&lt;/Item&gt;</code> and <code>&lt;Item&gt;Hi there!&lt;/Item&gt;</code> will automatically receive a probability of 0.125.</p>
-<h2 id="chaining" sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="87" sourceendlinenumber="87">Chaining</h2>
-<p sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="89" sourceendlinenumber="89">The Chain syntax allows developers to chain random response using a single text value. Words or sentence can be separated using a vertical bar as shown below. The entire text MUST be enclosed within a single <code>&lt;Random&gt;</code> tag instead of multiple <code>&lt;Item&gt;</code> tags.</p>
-<p sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="91" sourceendlinenumber="91"><em>Example</em></p>
-<pre sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="93" sourceendlinenumber="100"><code class="lang-xml">&lt;Model&gt;
+</code></pre><p>In the above the 2 Item elements <code>&lt;Item&gt;Hello there.&lt;/Item&gt;</code> and <code>&lt;Item&gt;Hi there!&lt;/Item&gt;</code> will automatically receive a probability of 0.125.</p>
+<h2 id="chaining">Chaining</h2>
+<p>The Chain syntax allows developers to chain random response using a single text value. Words or sentence can be separated using a vertical bar as shown below. The entire text MUST be enclosed within a single <code>&lt;Random&gt;</code> tag instead of multiple <code>&lt;Item&gt;</code> tags.</p>
+<p><em>Example</em></p>
+<pre><code class="lang-xml">&lt;Model&gt;
   &lt;Pattern&gt;HOW DO YOU FEEL&lt;/Pattern&gt;
   &lt;Response&gt;
     &lt;Random&gt;I feel great|I feel awesome!|I feel metallic&lt;/Random&gt;
   &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="102" sourceendlinenumber="102"><em>Example</em></p>
-<pre sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="104" sourceendlinenumber="111"><code class="lang-xml">&lt;Model&gt;
+</code></pre><p><em>Example</em></p>
+<pre><code class="lang-xml">&lt;Model&gt;
   &lt;Pattern&gt;HOW DO YOU FEEL&lt;/Pattern&gt;
   &lt;Response&gt;
     &lt;Random&gt;I feel (great|awesome!|metallic)&lt;/Random&gt;
   &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="113" sourceendlinenumber="113">The output of both the examples above will be similar.</p>
-<p sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="115" sourceendlinenumber="115"><em>Example</em></p>
-<p sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="117" sourceendlinenumber="117"><strong>SIML</strong></p>
-<pre sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="119" sourceendlinenumber="126"><code class="lang-xml">&lt;Model&gt;
+</code></pre><p>The output of both the examples above will be similar.</p>
+<p><em>Example</em></p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
   &lt;Pattern&gt;HOW DO YOU FEEL&lt;/Pattern&gt;
   &lt;Response&gt;
     &lt;Random&gt;I feel (great|awesome!|metallic)&lt;/Random&gt;
   &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="128" sourceendlinenumber="128"><strong>User Input</strong></p>
-<ol sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="130" sourceendlinenumber="131">
-<li sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="130" sourceendlinenumber="130"><em>How do you feel?</em></li>
-<li sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="131" sourceendlinenumber="131"><em>How do you feel?</em></li>
+</code></pre><p><strong>User Input</strong></p>
+<ol>
+<li><em>How do you feel?</em></li>
+<li><em>How do you feel?</em></li>
 </ol>
-<p sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="133" sourceendlinenumber="133"><strong>Bot Output</strong></p>
-<ol sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="135" sourceendlinenumber="136">
-<li sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="135" sourceendlinenumber="135"><em>I feel great</em></li>
-<li sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="136" sourceendlinenumber="136"><em>I feel awesome!</em></li>
+<p><strong>Bot Output</strong></p>
+<ol>
+<li><em>I feel great</em></li>
+<li><em>I feel awesome!</em></li>
 </ol>
-<p sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="138" sourceendlinenumber="138"><strong>Explanation</strong></p>
-<blockquote sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="140" sourceendlinenumber="140"><p sourcefile="tutorial/siml/elements/random.md" sourcestartlinenumber="140" sourceendlinenumber="140">Chained syntax within the Random tag automatically parses separate words and sentences and generates a single random text value.</p>
+<p><strong>Explanation</strong></p>
+<blockquote><p>Chained syntax within the Random tag automatically parses separate words and sentences and generates a single random text value.</p>
 </blockquote>
 
             </article>

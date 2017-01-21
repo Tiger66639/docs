@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>Raise  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Raise ">
-    <meta name="generator" content="docfx 2.6.1.0">
+    <meta name="generator" content="docfx 2.10.2.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -98,9 +98,9 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="raise" sourcefile="tutorial/siml/elements/raise.md" sourcestartlinenumber="1" sourceendlinenumber="1">Raise</h1>
+              <h1 id="raise">Raise</h1>
               
-<table sourcefile="tutorial/siml/elements/raise.md" sourcestartlinenumber="3" sourceendlinenumber="7">
+<table>
 <thead>
 <tr>
 <th><strong>Annotation</strong></th>
@@ -122,12 +122,12 @@
 </tr>
 </tbody>
 </table>
-<p sourcefile="tutorial/siml/elements/raise.md" sourcestartlinenumber="9" sourceendlinenumber="9">The <code>Raise</code> element triggers the specified <code>Event</code> using its arbitrary text value an returns and empty string. The triggered <code>Event</code> may however return a value as an event response to the bot user. This tag has been specifically designed for handling responses in multi-threaded environments.</p>
-<blockquote sourcefile="tutorial/siml/elements/raise.md" sourcestartlinenumber="11" sourceendlinenumber="11"><p sourcefile="tutorial/siml/elements/raise.md" sourcestartlinenumber="11" sourceendlinenumber="11">In <em>Syn.Bot</em> Framework, the <code>ResponseReceived</code> event of <code>BotUser</code> class is used to handle event responses.</p>
+<p>The <code>Raise</code> element triggers the specified <code>Event</code> using its arbitrary text value an returns and empty string. The triggered <code>Event</code> may however return a value as an event response to the bot user. This tag has been specifically designed for handling responses in multi-threaded environments.</p>
+<blockquote><p>In <em>Syn.Bot</em> Framework, the <code>ResponseReceived</code> event of <code>BotUser</code> class is used to handle event responses.</p>
 </blockquote>
-<p sourcefile="tutorial/siml/elements/raise.md" sourcestartlinenumber="13" sourceendlinenumber="13"><em>Example</em></p>
-<p sourcefile="tutorial/siml/elements/raise.md" sourcestartlinenumber="15" sourceendlinenumber="15"><strong>SIML</strong></p>
-<pre sourcefile="tutorial/siml/elements/raise.md" sourcestartlinenumber="17" sourceendlinenumber="32"><code class="lang-xml">&lt;Model&gt;
+<p><em>Example</em></p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
   &lt;Pattern&gt;CLOSE GARAGE DOOR&lt;/Pattern&gt;
   &lt;Response&gt;
     &lt;Raise&gt;Garage-Door-Closed&lt;/Raise&gt;
@@ -141,14 +141,14 @@
     &lt;x:Garage Task=&quot;Close&quot; /&gt;
   &lt;/Response&gt;
 &lt;/Event&gt;
-</code></pre><p sourcefile="tutorial/siml/elements/raise.md" sourcestartlinenumber="34" sourceendlinenumber="34"><strong>User Input</strong></p>
-<p sourcefile="tutorial/siml/elements/raise.md" sourcestartlinenumber="36" sourceendlinenumber="36"><em>Close garage door.</em></p>
-<p sourcefile="tutorial/siml/elements/raise.md" sourcestartlinenumber="38" sourceendlinenumber="38"><strong>Bot Output</strong></p>
-<p sourcefile="tutorial/siml/elements/raise.md" sourcestartlinenumber="40" sourceendlinenumber="40"><em>Garage door closed.</em></p>
-<blockquote sourcefile="tutorial/siml/elements/raise.md" sourcestartlinenumber="42" sourceendlinenumber="42"><p sourcefile="tutorial/siml/elements/raise.md" sourcestartlinenumber="42" sourceendlinenumber="42"><code>&lt;x:Garage Task=&quot;Close&quot;/&gt;</code> may be an SIML adapter that controls the garage door.</p>
+</code></pre><p><strong>User Input</strong></p>
+<p><em>Close garage door.</em></p>
+<p><strong>Bot Output</strong></p>
+<p><em>Garage door closed.</em></p>
+<blockquote><p><code>&lt;x:Garage Task=&quot;Close&quot;/&gt;</code> may be an SIML adapter that controls the garage door.</p>
 </blockquote>
-<p sourcefile="tutorial/siml/elements/raise.md" sourcestartlinenumber="45" sourceendlinenumber="45"><strong>Explanation</strong></p>
-<blockquote sourcefile="tutorial/siml/elements/raise.md" sourcestartlinenumber="47" sourceendlinenumber="47"><p sourcefile="tutorial/siml/elements/raise.md" sourcestartlinenumber="47" sourceendlinenumber="47">After the user says <strong><em>close garage door</em></strong> the event <code>Garage-Door-Closed</code> is raised and an empty string is retured. The <code>Garage-Door-Closed</code> event may later generate the response <strong><em>Garage door closed</em></strong> for the user after the event has successfully completed its task.</p>
+<p><strong>Explanation</strong></p>
+<blockquote><p>After the user says <strong><em>close garage door</em></strong> the event <code>Garage-Door-Closed</code> is raised and an empty string is retured. The <code>Garage-Door-Closed</code> event may later generate the response <strong><em>Garage door closed</em></strong> for the user after the event has successfully completed its task.</p>
 </blockquote>
 
             </article>

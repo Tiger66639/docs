@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SqlCacheManager
    ">
-    <meta name="generator" content="docfx 2.6.1.0">
+    <meta name="generator" content="docfx 2.10.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -104,7 +104,7 @@
               
               <h1 id="Syn_Bot_Utility_Cache_SqlCacheManager" data-uid="Syn.Bot.Utility.Cache.SqlCacheManager">Class SqlCacheManager
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="api/Syn.Bot.Utility.Cache.SqlCacheManager.yml" sourcestartlinenumber="2" sourceendlinenumber="4">Caches all JSON serializable objects to an SQL Database.
+              <div class="markdown level0 summary"><p>Caches all JSON serializable objects to an SQL Database.
 Duplicate entries are negligible because Database size is not a consideration.
 Only read-only entries that do not get modified are run-time must be cached. Variables MUST NOT be cached.</p>
 </div>
@@ -146,6 +146,7 @@ Only read-only entries that do not get modified are run-time must be cached. Var
               </div>
               <h3 id="constructors">Constructors
               </h3>
+              <a id="Syn_Bot_Utility_Cache_SqlCacheManager__ctor_" data-uid="Syn.Bot.Utility.Cache.SqlCacheManager.#ctor*"></a>
               <h4 id="Syn_Bot_Utility_Cache_SqlCacheManager__ctor_System_String_" data-uid="Syn.Bot.Utility.Cache.SqlCacheManager.#ctor(System.String)">SqlCacheManager(String)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -165,13 +166,14 @@ Only read-only entries that do not get modified are run-time must be cached. Var
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>cacheFilePath</em></td>
+                    <td><span class="parametername">cacheFilePath</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h3 id="properties">Properties
               </h3>
+              <a id="Syn_Bot_Utility_Cache_SqlCacheManager_Command_" data-uid="Syn.Bot.Utility.Cache.SqlCacheManager.Command*"></a>
               <h4 id="Syn_Bot_Utility_Cache_SqlCacheManager_Command" data-uid="Syn.Bot.Utility.Cache.SqlCacheManager.Command">Command</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -194,6 +196,7 @@ Only read-only entries that do not get modified are run-time must be cached. Var
                   </tr>
                 </tbody>
               </table>
+              <a id="Syn_Bot_Utility_Cache_SqlCacheManager_Connection_" data-uid="Syn.Bot.Utility.Cache.SqlCacheManager.Connection*"></a>
               <h4 id="Syn_Bot_Utility_Cache_SqlCacheManager_Connection" data-uid="Syn.Bot.Utility.Cache.SqlCacheManager.Connection">Connection</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -216,6 +219,7 @@ Only read-only entries that do not get modified are run-time must be cached. Var
                   </tr>
                 </tbody>
               </table>
+              <a id="Syn_Bot_Utility_Cache_SqlCacheManager_IsEmpty_" data-uid="Syn.Bot.Utility.Cache.SqlCacheManager.IsEmpty*"></a>
               <h4 id="Syn_Bot_Utility_Cache_SqlCacheManager_IsEmpty" data-uid="Syn.Bot.Utility.Cache.SqlCacheManager.IsEmpty">IsEmpty</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -240,6 +244,7 @@ Only read-only entries that do not get modified are run-time must be cached. Var
               </table>
               <h5 class="implements">Implements</h5>
                   <div><a class="xref" href="Syn.Bot.Siml.Interfaces.ICacheManager.html#Syn_Bot_Siml_Interfaces_ICacheManager_IsEmpty">ICacheManager.IsEmpty</a></div>
+              <a id="Syn_Bot_Utility_Cache_SqlCacheManager_Size_" data-uid="Syn.Bot.Utility.Cache.SqlCacheManager.Size*"></a>
               <h4 id="Syn_Bot_Utility_Cache_SqlCacheManager_Size" data-uid="Syn.Bot.Utility.Cache.SqlCacheManager.Size">Size</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -266,6 +271,7 @@ Only read-only entries that do not get modified are run-time must be cached. Var
                   <div><a class="xref" href="Syn.Bot.Siml.Interfaces.ICacheManager.html#Syn_Bot_Siml_Interfaces_ICacheManager_Size">ICacheManager.Size</a></div>
               <h3 id="methods">Methods
               </h3>
+              <a id="Syn_Bot_Utility_Cache_SqlCacheManager_Add_" data-uid="Syn.Bot.Utility.Cache.SqlCacheManager.Add*"></a>
               <h4 id="Syn_Bot_Utility_Cache_SqlCacheManager_Add_System_Object_" data-uid="Syn.Bot.Utility.Cache.SqlCacheManager.Add(System.Object)">Add(Object)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -285,7 +291,7 @@ Only read-only entries that do not get modified are run-time must be cached. Var
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Object</span></td>
-                    <td><em>value</em></td>
+                    <td><span class="parametername">value</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -307,6 +313,7 @@ Only read-only entries that do not get modified are run-time must be cached. Var
               </table>
               <h5 class="implements">Implements</h5>
                   <div><a class="xref" href="Syn.Bot.Siml.Interfaces.ICacheManager.html#Syn_Bot_Siml_Interfaces_ICacheManager_Add_System_Object_">ICacheManager.Add(Object)</a></div>
+              <a id="Syn_Bot_Utility_Cache_SqlCacheManager_Clear_" data-uid="Syn.Bot.Utility.Cache.SqlCacheManager.Clear*"></a>
               <h4 id="Syn_Bot_Utility_Cache_SqlCacheManager_Clear" data-uid="Syn.Bot.Utility.Cache.SqlCacheManager.Clear">Clear()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -316,6 +323,7 @@ Only read-only entries that do not get modified are run-time must be cached. Var
               </div>
               <h5 class="implements">Implements</h5>
                   <div><a class="xref" href="Syn.Bot.Siml.Interfaces.ICacheManager.html#Syn_Bot_Siml_Interfaces_ICacheManager_Clear">ICacheManager.Clear()</a></div>
+              <a id="Syn_Bot_Utility_Cache_SqlCacheManager_GetValue_" data-uid="Syn.Bot.Utility.Cache.SqlCacheManager.GetValue*"></a>
               <h4 id="Syn_Bot_Utility_Cache_SqlCacheManager_GetValue__1_System_Int32_" data-uid="Syn.Bot.Utility.Cache.SqlCacheManager.GetValue``1(System.Int32)">GetValue&lt;T&gt;(Int32)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -335,7 +343,7 @@ Only read-only entries that do not get modified are run-time must be cached. Var
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Int32</span></td>
-                    <td><em>key</em></td>
+                    <td><span class="parametername">key</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -365,13 +373,14 @@ Only read-only entries that do not get modified are run-time must be cached. Var
                 </thead>
                 <tbody>
                   <tr>
-                    <td><em>T</em></td>
+                    <td><span class="parametername">T</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
                   <div><a class="xref" href="Syn.Bot.Siml.Interfaces.ICacheManager.html#Syn_Bot_Siml_Interfaces_ICacheManager_GetValue__1_System_Int32_">ICacheManager.GetValue&lt;T&gt;(Int32)</a></div>
+              <a id="Syn_Bot_Utility_Cache_SqlCacheManager_Remove_" data-uid="Syn.Bot.Utility.Cache.SqlCacheManager.Remove*"></a>
               <h4 id="Syn_Bot_Utility_Cache_SqlCacheManager_Remove_System_Int32_" data-uid="Syn.Bot.Utility.Cache.SqlCacheManager.Remove(System.Int32)">Remove(Int32)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -391,7 +400,7 @@ Only read-only entries that do not get modified are run-time must be cached. Var
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Int32</span></td>
-                    <td><em>key</em></td>
+                    <td><span class="parametername">key</span></td>
                     <td></td>
                   </tr>
                 </tbody>

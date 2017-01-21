@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>BotSettings  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="BotSettings ">
-    <meta name="generator" content="docfx 2.6.1.0">
+    <meta name="generator" content="docfx 2.10.2.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -98,9 +98,9 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="botsettings" sourcefile="tutorial/siml/elements/botsettings.md" sourcestartlinenumber="1" sourceendlinenumber="1">BotSettings</h1>
+              <h1 id="botsettings">BotSettings</h1>
               
-<table sourcefile="tutorial/siml/elements/botsettings.md" sourcestartlinenumber="3" sourceendlinenumber="7">
+<table>
 <thead>
 <tr>
 <th><strong>Annotation</strong></th>
@@ -122,9 +122,9 @@
 </tr>
 </tbody>
 </table>
-<p sourcefile="tutorial/siml/elements/botsettings.md" sourcestartlinenumber="9" sourceendlinenumber="9">This element stores internal values for the <em>Bot</em>. Many of the values are used during Bot initialization and tells the Bot in what environment its supposed to run. In <em>Syn Bot Framework</em> We have optimized retrieval of stored values to great extent ensuring that a large collection of Bot settings will not affect the Bot’s performance.</p>
-<p sourcefile="tutorial/siml/elements/botsettings.md" sourcestartlinenumber="11" sourceendlinenumber="11"><code>BotSettings</code> element takes one or more <code>Variable</code> element as its children and every child element stores single or multiple values.</p>
-<pre sourcefile="tutorial/siml/elements/botsettings.md" sourcestartlinenumber="13" sourceendlinenumber="29"><code class="lang-xml">&lt;Siml Version=&quot;1.0&quot;&gt;
+<p>This element stores internal values for the <em>Bot</em>. Many of the values are used during Bot initialization and tells the Bot in what environment its supposed to run. In <em>Syn Bot Framework</em> We have optimized retrieval of stored values to great extent ensuring that a large collection of Bot settings will not affect the Bot’s performance.</p>
+<p><code>BotSettings</code> element takes one or more <code>Variable</code> element as its children and every child element stores single or multiple values.</p>
+<pre><code class="lang-xml">&lt;Siml Version=&quot;1.0&quot;&gt;
  &lt;BotSettings&gt;
   &lt;Variable Name=&quot;Favorite_Movies&quot;&gt;
    &lt;Value&gt;Contact&lt;/Value&gt;
@@ -139,24 +139,24 @@
   &lt;Variable Name=&quot;Culture&quot; Value=&quot;en-US&quot; /&gt;
  &lt;/BotSettings&gt;
 &lt;/Siml&gt;
-</code></pre><p sourcefile="tutorial/siml/elements/botsettings.md" sourcestartlinenumber="31" sourceendlinenumber="31"><em>Example</em></p>
-<p sourcefile="tutorial/siml/elements/botsettings.md" sourcestartlinenumber="33" sourceendlinenumber="33"><strong>SIML</strong></p>
-<pre sourcefile="tutorial/siml/elements/botsettings.md" sourcestartlinenumber="35" sourceendlinenumber="42"><code class="lang-xml">&lt;Model&gt;
+</code></pre><p><em>Example</em></p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;What version are you&lt;/Pattern&gt;
  &lt;Response&gt;
   I am version &lt;Bot Get=&quot;version&quot;/&gt;
  &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p sourcefile="tutorial/siml/elements/botsettings.md" sourcestartlinenumber="44" sourceendlinenumber="44"><strong>User Input</strong></p>
-<p sourcefile="tutorial/siml/elements/botsettings.md" sourcestartlinenumber="46" sourceendlinenumber="46"><em>What version are you?</em></p>
-<p sourcefile="tutorial/siml/elements/botsettings.md" sourcestartlinenumber="48" sourceendlinenumber="48"><strong>Bot Output</strong></p>
-<p sourcefile="tutorial/siml/elements/botsettings.md" sourcestartlinenumber="50" sourceendlinenumber="50"><em>I am version 1.0</em></p>
-<p sourcefile="tutorial/siml/elements/botsettings.md" sourcestartlinenumber="52" sourceendlinenumber="52"><strong>Explanation</strong></p>
-<blockquote sourcefile="tutorial/siml/elements/botsettings.md" sourcestartlinenumber="54" sourceendlinenumber="54"><p sourcefile="tutorial/siml/elements/botsettings.md" sourcestartlinenumber="54" sourceendlinenumber="54">The <code>Bot</code> element is used to retrieve bot related settings/predicates and their values. The value of the Getattribute represents the Settings name.</p>
+</code></pre><p><strong>User Input</strong></p>
+<p><em>What version are you?</em></p>
+<p><strong>Bot Output</strong></p>
+<p><em>I am version 1.0</em></p>
+<p><strong>Explanation</strong></p>
+<blockquote><p>The <code>Bot</code> element is used to retrieve bot related settings/predicates and their values. The value of the Getattribute represents the Settings name.</p>
 </blockquote>
-<h2 id="reserved-bot-variables" sourcefile="tutorial/siml/elements/botsettings.md" sourcestartlinenumber="56" sourceendlinenumber="56">Reserved Bot Variables</h2>
-<p sourcefile="tutorial/siml/elements/botsettings.md" sourcestartlinenumber="58" sourceendlinenumber="58">Certain Bot Variables are reserved to help the developer customize the behavior of the interpreter without having to hard-code them in a .Net Application.</p>
-<table sourcefile="tutorial/siml/elements/botsettings.md" sourcestartlinenumber="60" sourceendlinenumber="73">
+<h2 id="reserved-bot-variables">Reserved Bot Variables</h2>
+<p>Certain Bot Variables are reserved to help the developer customize the behavior of the interpreter without having to hard-code them in a .Net Application.</p>
+<table>
 <thead>
 <tr>
 <th>Variable Name</th>

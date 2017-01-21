@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>Script  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Script ">
-    <meta name="generator" content="docfx 2.6.1.0">
+    <meta name="generator" content="docfx 2.10.2.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -98,9 +98,9 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="script" sourcefile="tutorial/siml/elements/script.md" sourcestartlinenumber="1" sourceendlinenumber="1">Script</h1>
+              <h1 id="script">Script</h1>
               
-<table sourcefile="tutorial/siml/elements/script.md" sourcestartlinenumber="3" sourceendlinenumber="7">
+<table>
 <thead>
 <tr>
 <th><strong>Annotation</strong></th>
@@ -122,9 +122,9 @@
 </tr>
 </tbody>
 </table>
-<p sourcefile="tutorial/siml/elements/script.md" sourcestartlinenumber="9" sourceendlinenumber="9">Allows developers to declare global scripts ( scripts that are available throughout user session ) in their respective scripting language.</p>
-<p sourcefile="tutorial/siml/elements/script.md" sourcestartlinenumber="11" sourceendlinenumber="11"><em>Example</em></p>
-<pre sourcefile="tutorial/siml/elements/script.md" sourcestartlinenumber="13" sourceendlinenumber="23"><code class="lang-xml">&lt;Siml&gt;
+<p>Allows developers to declare global scripts ( scripts that are available throughout user session ) in their respective scripting language.</p>
+<p><em>Example</em></p>
+<pre><code class="lang-xml">&lt;Siml&gt;
 
 &lt;Script Type=&quot;javascript&quot;&gt;
  function square(num){
@@ -133,23 +133,23 @@
 &lt;/Script&gt;
 
 &lt;/Siml&gt;
-</code></pre><p sourcefile="tutorial/siml/elements/script.md" sourcestartlinenumber="25" sourceendlinenumber="25"><em>Example</em></p>
-<p sourcefile="tutorial/siml/elements/script.md" sourcestartlinenumber="27" sourceendlinenumber="27">Once declared the script and its functions can be used throughout your bot project.</p>
-<p sourcefile="tutorial/siml/elements/script.md" sourcestartlinenumber="30" sourceendlinenumber="30"><strong>SIML</strong></p>
-<pre sourcefile="tutorial/siml/elements/script.md" sourcestartlinenumber="32" sourceendlinenumber="39"><code class="lang-xml">&lt;Model&gt;
+</code></pre><p><em>Example</em></p>
+<p>Once declared the script and its functions can be used throughout your bot project.</p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;WHAT IS THE SQUARE OF *&lt;/Pattern&gt;
  &lt;Response&gt;
   &lt;Js&gt;square(&lt;Match /&gt;);&lt;/Js&gt;
  &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p sourcefile="tutorial/siml/elements/script.md" sourcestartlinenumber="41" sourceendlinenumber="41"><strong>User Input</strong></p>
-<p sourcefile="tutorial/siml/elements/script.md" sourcestartlinenumber="43" sourceendlinenumber="43"><em>What is the Square of 4?</em></p>
-<p sourcefile="tutorial/siml/elements/script.md" sourcestartlinenumber="45" sourceendlinenumber="45"><strong>Bot Output</strong></p>
-<p sourcefile="tutorial/siml/elements/script.md" sourcestartlinenumber="47" sourceendlinenumber="47"><em>16</em></p>
-<p sourcefile="tutorial/siml/elements/script.md" sourcestartlinenumber="49" sourceendlinenumber="49"><strong>Explanation</strong></p>
-<blockquote sourcefile="tutorial/siml/elements/script.md" sourcestartlinenumber="51" sourceendlinenumber="51"><p sourcefile="tutorial/siml/elements/script.md" sourcestartlinenumber="51" sourceendlinenumber="51">The <code>Js</code> element represents a JavaScript element. The inner content of the element is replaced with <em>square(4)</em> where the number 4 is the result from the Match element. Once the inner content have been processed the Script Engine executes the JavaScript and returns the value.</p>
+</code></pre><p><strong>User Input</strong></p>
+<p><em>What is the Square of 4?</em></p>
+<p><strong>Bot Output</strong></p>
+<p><em>16</em></p>
+<p><strong>Explanation</strong></p>
+<blockquote><p>The <code>Js</code> element represents a JavaScript element. The inner content of the element is replaced with <em>square(4)</em> where the number 4 is the result from the Match element. Once the inner content have been processed the Script Engine executes the JavaScript and returns the value.</p>
 </blockquote>
-<p sourcefile="tutorial/siml/elements/script.md" sourcestartlinenumber="53" sourceendlinenumber="53">To test your script before deployment you can always use the Script Evaluator available in Syn Bot Studio.</p>
+<p>To test your script before deployment you can always use the Script Evaluator available in Syn Bot Studio.</p>
 
             </article>
           </div>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class CommonSettings
    ">
-    <meta name="generator" content="docfx 2.6.1.0">
+    <meta name="generator" content="docfx 2.10.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -109,8 +109,11 @@
               <div class="inheritance">
                 <h5>Inheritance</h5>
                   <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><a class="xref" href="Syn.VA.Settings.html#Syn_VA_Settings">Settings</a></div>
+                  <div class="level1"><a class="xref" href="Syn.VA.Settings.html">Settings</a></div>
                   <div class="level2"><span class="xref">CommonSettings</span></div>
+                  <div class="level3"><a class="xref" href="Syn.Bot.Siml.BotSettings.html">BotSettings</a></div>
+                  <div class="level3"><a class="xref" href="Syn.Bot.Siml.UserSettings.html">UserSettings</a></div>
+                  <div class="level3"><a class="xref" href="Syn.Bot.Siml.VarSettings.html">VarSettings</a></div>
               </div>
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
@@ -204,8 +207,9 @@
               </div>
               <h3 id="properties">Properties
               </h3>
+              <a id="Syn_Bot_Siml_CommonSettings_DefaultValue_" data-uid="Syn.Bot.Siml.CommonSettings.DefaultValue*"></a>
               <h4 id="Syn_Bot_Siml_CommonSettings_DefaultValue" data-uid="Syn.Bot.Siml.CommonSettings.DefaultValue">DefaultValue</h4>
-              <div class="markdown level1 summary"><p sourcefile="api/Syn.Bot.Siml.CommonSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Gets or Sets the Default Value to return when a Settings Item is not found.</p>
+              <div class="markdown level1 summary"><p>Gets or Sets the Default Value to return when a Settings Item is not found.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -227,8 +231,9 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Syn_Bot_Siml_CommonSettings_UndefinedValue_" data-uid="Syn.Bot.Siml.CommonSettings.UndefinedValue*"></a>
               <h4 id="Syn_Bot_Siml_CommonSettings_UndefinedValue" data-uid="Syn.Bot.Siml.CommonSettings.UndefinedValue">UndefinedValue</h4>
-              <div class="markdown level1 summary"><p sourcefile="api/Syn.Bot.Siml.CommonSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Gets the value that is used to render a Variable as undefined.</p>
+              <div class="markdown level1 summary"><p>Gets the value that is used to render a Variable as undefined.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -252,8 +257,9 @@
               </table>
               <h3 id="methods">Methods
               </h3>
+              <a id="Syn_Bot_Siml_CommonSettings_GetDocument_" data-uid="Syn.Bot.Siml.CommonSettings.GetDocument*"></a>
               <h4 id="Syn_Bot_Siml_CommonSettings_GetDocument" data-uid="Syn.Bot.Siml.CommonSettings.GetDocument">GetDocument()</h4>
-              <div class="markdown level1 summary"><p sourcefile="api/Syn.Bot.Siml.CommonSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Gets this <a class="xref" href="Syn.VA.Settings.html#Syn_VA_Settings">Settings</a> instance as an SIML <span class="xref">XDocument</span>.</p>
+              <div class="markdown level1 summary"><p>Gets this <a class="xref" href="Syn.VA.Settings.html">Settings</a> instance as an SIML <span class="xref">System.Xml.Linq.XDocument</span>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -275,8 +281,9 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Syn_Bot_Siml_CommonSettings_GetValue_" data-uid="Syn.Bot.Siml.CommonSettings.GetValue*"></a>
               <h4 id="Syn_Bot_Siml_CommonSettings_GetValue_System_String_" data-uid="Syn.Bot.Siml.CommonSettings.GetValue(System.String)">GetValue(String)</h4>
-              <div class="markdown level1 summary"><p sourcefile="api/Syn.Bot.Siml.CommonSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Gets the main value of the specified variable.</p>
+              <div class="markdown level1 summary"><p>Gets the main value of the specified variable.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -295,8 +302,8 @@
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>variableName</em></td>
-                    <td><p sourcefile="api/Syn.Bot.Siml.CommonSettings.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Name of the variable.</p>
+                    <td><span class="parametername">variableName</span></td>
+                    <td><p>Name of the variable.</p>
 </td>
                   </tr>
                 </tbody>
@@ -312,15 +319,16 @@
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><p sourcefile="api/Syn.Bot.Siml.CommonSettings.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Value of the variable if it exists otherwise returns the default value.</p>
+                    <td><p>Value of the variable if it exists otherwise returns the default value.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Syn.VA.Settings.html#Syn_VA_Settings_GetValue_System_String_">Settings.GetValue(String)</a></div>
+              <a id="Syn_Bot_Siml_CommonSettings_Load_" data-uid="Syn.Bot.Siml.CommonSettings.Load*"></a>
               <h4 id="Syn_Bot_Siml_CommonSettings_Load_System_Xml_Linq_XDocument_" data-uid="Syn.Bot.Siml.CommonSettings.Load(System.Xml.Linq.XDocument)">Load(XDocument)</h4>
-              <div class="markdown level1 summary"><p sourcefile="api/Syn.Bot.Siml.CommonSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Loads the specified settings from an SIML Document.</p>
+              <div class="markdown level1 summary"><p>Loads the specified settings from an SIML Document.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -339,14 +347,15 @@
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Xml.Linq.XDocument</span></td>
-                    <td><em>simlDocument</em></td>
-                    <td><p sourcefile="api/Syn.Bot.Siml.CommonSettings.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The SIML Document.</p>
+                    <td><span class="parametername">simlDocument</span></td>
+                    <td><p>The SIML Document.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Syn_Bot_Siml_CommonSettings_Load_" data-uid="Syn.Bot.Siml.CommonSettings.Load*"></a>
               <h4 id="Syn_Bot_Siml_CommonSettings_Load_System_Xml_Linq_XElement_" data-uid="Syn.Bot.Siml.CommonSettings.Load(System.Xml.Linq.XElement)">Load(XElement)</h4>
-              <div class="markdown level1 summary"><p sourcefile="api/Syn.Bot.Siml.CommonSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Loads the specified settings element.</p>
+              <div class="markdown level1 summary"><p>Loads the specified settings element.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -365,18 +374,18 @@
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Xml.Linq.XElement</span></td>
-                    <td><em>settingsElement</em></td>
-                    <td><p sourcefile="api/Syn.Bot.Siml.CommonSettings.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The settings element.</p>
+                    <td><span class="parametername">settingsElement</span></td>
+                    <td><p>The settings element.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h3 id="extensionmethods">Extension Methods</h3>
               <div>
-                  <a class="xref" href="Syn.VA.Utility.Extensions.SettingsExtensions.html#Syn_VA_Utility_Extensions_SettingsExtensions_ApplyToProperties_Syn_VA_Settings_System_Object_System_String___">SettingsExtensions.ApplyToProperties(Object, String[])</a>
+                  <a class="xref" href="Syn.VA.Utility.Extensions.SettingsExtensions.html#Syn_VA_Utility_Extensions_SettingsExtensions_ApplyToProperties_Syn_VA_Settings_System_Object_System_String___">SettingsExtensions.ApplyToProperties(Settings, Object, String[])</a>
               </div>
               <div>
-                  <a class="xref" href="Syn.VA.Utility.Extensions.SettingsExtensions.html#Syn_VA_Utility_Extensions_SettingsExtensions_GetDocument_Syn_VA_Settings_">SettingsExtensions.GetDocument()</a>
+                  <a class="xref" href="Syn.VA.Utility.Extensions.SettingsExtensions.html#Syn_VA_Utility_Extensions_SettingsExtensions_GetDocument_Syn_VA_Settings_">SettingsExtensions.GetDocument(Settings)</a>
               </div>
             </article>
           </div>

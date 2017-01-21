@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Reference
    ">
-    <meta name="generator" content="docfx 2.6.1.0">
+    <meta name="generator" content="docfx 2.10.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -104,7 +104,7 @@
               
               <h1 id="Syn_EmotionML_Reference" data-uid="Syn.EmotionML.Reference">Class Reference
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="api/Syn.EmotionML.Reference.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Reference used to relate the emotion annotation to the &quot;rest of the world&quot;, more specifically to the emotional expression, the experiencing subject, the trigger, and the target of the emotion.</p>
+              <div class="markdown level0 summary"><p>Reference used to relate the emotion annotation to the &quot;rest of the world&quot;, more specifically to the emotional expression, the experiencing subject, the trigger, and the target of the emotion.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -144,8 +144,9 @@
               </div>
               <h3 id="constructors">Constructors
               </h3>
+              <a id="Syn_EmotionML_Reference__ctor_" data-uid="Syn.EmotionML.Reference.#ctor*"></a>
               <h4 id="Syn_EmotionML_Reference__ctor_System_Uri_" data-uid="Syn.EmotionML.Reference.#ctor(System.Uri)">Reference(Uri)</h4>
-              <div class="markdown level1 summary"><p sourcefile="api/Syn.EmotionML.Reference.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Initializes a new instance of the <a class="xref" href="Syn.EmotionML.Reference.html#Syn_EmotionML_Reference">Reference</a> class.</p>
+              <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Syn.EmotionML.Reference.html">Reference</a> class.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -164,16 +165,17 @@
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Uri</span></td>
-                    <td><em>uri</em></td>
-                    <td><p sourcefile="api/Syn.EmotionML.Reference.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The URI identifying the actual reference target.</p>
+                    <td><span class="parametername">uri</span></td>
+                    <td><p>The URI identifying the actual reference target.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h3 id="properties">Properties
               </h3>
+              <a id="Syn_EmotionML_Reference_ExperiencedBy_" data-uid="Syn.EmotionML.Reference.ExperiencedBy*"></a>
               <h4 id="Syn_EmotionML_Reference_ExperiencedBy" data-uid="Syn.EmotionML.Reference.ExperiencedBy">ExperiencedBy</h4>
-              <div class="markdown level1 summary"><p sourcefile="api/Syn.EmotionML.Reference.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Gets a value that indicates that the reference points to the subject experiencing the emotion.</p>
+              <div class="markdown level1 summary"><p>Gets a value that indicates that the reference points to the subject experiencing the emotion.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -195,8 +197,9 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Syn_EmotionML_Reference_ExpressedBy_" data-uid="Syn.EmotionML.Reference.ExpressedBy*"></a>
               <h4 id="Syn_EmotionML_Reference_ExpressedBy" data-uid="Syn.EmotionML.Reference.ExpressedBy">ExpressedBy</h4>
-              <div class="markdown level1 summary"><p sourcefile="api/Syn.EmotionML.Reference.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Gets a value that indicates that the reference points to observable behavior expressing the emotion.</p>
+              <div class="markdown level1 summary"><p>Gets a value that indicates that the reference points to observable behavior expressing the emotion.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -218,8 +221,9 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Syn_EmotionML_Reference_MediaType_" data-uid="Syn.EmotionML.Reference.MediaType*"></a>
               <h4 id="Syn_EmotionML_Reference_MediaType" data-uid="Syn.EmotionML.Reference.MediaType">MediaType</h4>
-              <div class="markdown level1 summary"><p sourcefile="api/Syn.EmotionML.Reference.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Gets or sets a value of type xsd:string holding the MIME type of the data that the <a class="xref" href="Syn.EmotionML.Reference.html#Syn_EmotionML_Reference_Uri">Uri</a> attribute points to.</p>
+              <div class="markdown level1 summary"><p>Gets or sets a value of type xsd:string holding the MIME type of the data that the <a class="xref" href="Syn.EmotionML.Reference.html#Syn_EmotionML_Reference_Uri">Uri</a> attribute points to.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -241,8 +245,9 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Syn_EmotionML_Reference_Role_" data-uid="Syn.EmotionML.Reference.Role*"></a>
               <h4 id="Syn_EmotionML_Reference_Role" data-uid="Syn.EmotionML.Reference.Role">Role</h4>
-              <div class="markdown level1 summary"><p sourcefile="api/Syn.EmotionML.Reference.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Gets or sets the type of relation between the emotion and the external item referred to. The value must be one of <a class="xref" href="Syn.EmotionML.Reference.html#Syn_EmotionML_Reference_ExpressedBy">ExpressedBy</a> (default), <a class="xref" href="Syn.EmotionML.Reference.html#Syn_EmotionML_Reference_ExperiencedBy">ExperiencedBy</a>, <a class="xref" href="Syn.EmotionML.Reference.html#Syn_EmotionML_Reference_TriggeredBy">TriggeredBy</a>, <a class="xref" href="Syn.EmotionML.Reference.html#Syn_EmotionML_Reference_TargetedAt">TargetedAt</a>.</p>
+              <div class="markdown level1 summary"><p>Gets or sets the type of relation between the emotion and the external item referred to. The value must be one of <a class="xref" href="Syn.EmotionML.Reference.html#Syn_EmotionML_Reference_ExpressedBy">ExpressedBy</a> (default), <a class="xref" href="Syn.EmotionML.Reference.html#Syn_EmotionML_Reference_ExperiencedBy">ExperiencedBy</a>, <a class="xref" href="Syn.EmotionML.Reference.html#Syn_EmotionML_Reference_TriggeredBy">TriggeredBy</a>, <a class="xref" href="Syn.EmotionML.Reference.html#Syn_EmotionML_Reference_TargetedAt">TargetedAt</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -264,8 +269,9 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Syn_EmotionML_Reference_TargetedAt_" data-uid="Syn.EmotionML.Reference.TargetedAt*"></a>
               <h4 id="Syn_EmotionML_Reference_TargetedAt" data-uid="Syn.EmotionML.Reference.TargetedAt">TargetedAt</h4>
-              <div class="markdown level1 summary"><p sourcefile="api/Syn.EmotionML.Reference.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Gets a value that indicates that the reference points to an object towards which an emotion-related action, or action tendency, is directed.</p>
+              <div class="markdown level1 summary"><p>Gets a value that indicates that the reference points to an object towards which an emotion-related action, or action tendency, is directed.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -283,13 +289,14 @@
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><p sourcefile="api/Syn.EmotionML.Reference.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The targeted by.</p>
+                    <td><p>The targeted by.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Syn_EmotionML_Reference_TriggeredBy_" data-uid="Syn.EmotionML.Reference.TriggeredBy*"></a>
               <h4 id="Syn_EmotionML_Reference_TriggeredBy" data-uid="Syn.EmotionML.Reference.TriggeredBy">TriggeredBy</h4>
-              <div class="markdown level1 summary"><p sourcefile="api/Syn.EmotionML.Reference.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Gets a value that indicates that the reference points to an emotion-eliciting event that caused an emotion and/or related appraisals.</p>
+              <div class="markdown level1 summary"><p>Gets a value that indicates that the reference points to an emotion-eliciting event that caused an emotion and/or related appraisals.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -311,8 +318,9 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Syn_EmotionML_Reference_Uri_" data-uid="Syn.EmotionML.Reference.Uri*"></a>
               <h4 id="Syn_EmotionML_Reference_Uri" data-uid="Syn.EmotionML.Reference.Uri">Uri</h4>
-              <div class="markdown level1 summary"><p sourcefile="api/Syn.EmotionML.Reference.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Gets or sets the URI identifying the actual reference target.</p>
+              <div class="markdown level1 summary"><p>Gets or sets the URI identifying the actual reference target.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -336,8 +344,9 @@
               </table>
               <h3 id="methods">Methods
               </h3>
+              <a id="Syn_EmotionML_Reference_GetElement_" data-uid="Syn.EmotionML.Reference.GetElement*"></a>
               <h4 id="Syn_EmotionML_Reference_GetElement" data-uid="Syn.EmotionML.Reference.GetElement">GetElement()</h4>
-              <div class="markdown level1 summary"><p sourcefile="api/Syn.EmotionML.Reference.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Gets an <span class="xref">XElement</span> that represent this <a class="xref" href="Syn.EmotionML.Reference.html#Syn_EmotionML_Reference">Reference</a>.</p>
+              <div class="markdown level1 summary"><p>Gets an <span class="xref">System.Xml.Linq.XElement</span> that represent this <a class="xref" href="Syn.EmotionML.Reference.html">Reference</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -359,8 +368,9 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Syn_EmotionML_Reference_Parse_" data-uid="Syn.EmotionML.Reference.Parse*"></a>
               <h4 id="Syn_EmotionML_Reference_Parse_System_Xml_Linq_XElement_" data-uid="Syn.EmotionML.Reference.Parse(System.Xml.Linq.XElement)">Parse(XElement)</h4>
-              <div class="markdown level1 summary"><p sourcefile="api/Syn.EmotionML.Reference.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Loads a <a class="xref" href="Syn.EmotionML.Reference.html#Syn_EmotionML_Reference">Reference</a> from the specified <span class="xref">XElement</span>.</p>
+              <div class="markdown level1 summary"><p>Loads a <a class="xref" href="Syn.EmotionML.Reference.html">Reference</a> from the specified <span class="xref">System.Xml.Linq.XElement</span>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -379,7 +389,7 @@
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Xml.Linq.XElement</span></td>
-                    <td><em>element</em></td>
+                    <td><span class="parametername">element</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -394,7 +404,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Syn.EmotionML.Reference.html#Syn_EmotionML_Reference">Reference</a></td>
+                    <td><a class="xref" href="Syn.EmotionML.Reference.html">Reference</a></td>
                     <td></td>
                   </tr>
                 </tbody>

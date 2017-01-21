@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>Launcher Plugin  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Launcher Plugin ">
-    <meta name="generator" content="docfx 2.6.1.0">
+    <meta name="generator" content="docfx 2.10.2.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -98,12 +98,12 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="launcher-plugin" sourcefile="tutorial/va/plugins/launcher.md" sourcestartlinenumber="1" sourceendlinenumber="1">Launcher Plugin</h1>
+              <h1 id="launcher-plugin">Launcher Plugin</h1>
               
-<p sourcefile="tutorial/va/plugins/launcher.md" sourcestartlinenumber="3" sourceendlinenumber="3">Helps launching of applications, known folders, websites and to perform searches on saved search engines.</p>
-<h2 id="siml-adapters" sourcefile="tutorial/va/plugins/launcher.md" sourcestartlinenumber="5" sourceendlinenumber="5">SIML Adapters</h2>
-<h3 id="1-app" sourcefile="tutorial/va/plugins/launcher.md" sourcestartlinenumber="7" sourceendlinenumber="7">1. App</h3>
-<table sourcefile="tutorial/va/plugins/launcher.md" sourcestartlinenumber="9" sourceendlinenumber="12">
+<p>Helps launching of applications, known folders, websites and to perform searches on saved search engines.</p>
+<h2 id="siml-adapters">SIML Adapters</h2>
+<h3 id="1-app">1. App</h3>
+<table>
 <thead>
 <tr>
 <th style="text-align:left"><strong>Annotation</strong></th>
@@ -121,15 +121,15 @@
 </tr>
 </tbody>
 </table>
-<h4 id="usage" sourcefile="tutorial/va/plugins/launcher.md" sourcestartlinenumber="15" sourceendlinenumber="15">Usage</h4>
-<pre sourcefile="tutorial/va/plugins/launcher.md" sourcestartlinenumber="17" sourceendlinenumber="19"><code class="lang-xml">&lt;o:App&gt;Notepad&lt;/o:App&gt;
-</code></pre><blockquote sourcefile="tutorial/va/plugins/launcher.md" sourcestartlinenumber="21" sourceendlinenumber="21"><p sourcefile="tutorial/va/plugins/launcher.md" sourcestartlinenumber="21" sourceendlinenumber="21">Opens the application named <em>Notepad</em></p>
+<h4 id="usage">Usage</h4>
+<pre><code class="lang-xml">&lt;o:App&gt;Notepad&lt;/o:App&gt;
+</code></pre><blockquote><p>Opens the application named <em>Notepad</em></p>
 </blockquote>
-<pre sourcefile="tutorial/va/plugins/launcher.md" sourcestartlinenumber="23" sourceendlinenumber="25"><code class="lang-xml">&lt;o:App Task=&quot;Close&quot;&gt;Notepad&lt;/o:App&gt;
-</code></pre><blockquote sourcefile="tutorial/va/plugins/launcher.md" sourcestartlinenumber="27" sourceendlinenumber="27"><p sourcefile="tutorial/va/plugins/launcher.md" sourcestartlinenumber="27" sourceendlinenumber="27">Closes the application named <em>Notepad</em></p>
+<pre><code class="lang-xml">&lt;o:App Task=&quot;Close&quot;&gt;Notepad&lt;/o:App&gt;
+</code></pre><blockquote><p>Closes the application named <em>Notepad</em></p>
 </blockquote>
-<h3 id="2-folder" sourcefile="tutorial/va/plugins/launcher.md" sourcestartlinenumber="29" sourceendlinenumber="29">2. Folder</h3>
-<table sourcefile="tutorial/va/plugins/launcher.md" sourcestartlinenumber="31" sourceendlinenumber="34">
+<h3 id="2-folder">2. Folder</h3>
+<table>
 <thead>
 <tr>
 <th style="text-align:left"><strong>Annotation</strong></th>
@@ -147,12 +147,12 @@
 </tr>
 </tbody>
 </table>
-<h4 id="usage-1" sourcefile="tutorial/va/plugins/launcher.md" sourcestartlinenumber="36" sourceendlinenumber="36">Usage</h4>
-<pre sourcefile="tutorial/va/plugins/launcher.md" sourcestartlinenumber="38" sourceendlinenumber="40"><code class="lang-xml">&lt;o:Folder&gt;Documents&lt;/o:Folder&gt;
-</code></pre><blockquote sourcefile="tutorial/va/plugins/launcher.md" sourcestartlinenumber="42" sourceendlinenumber="42"><p sourcefile="tutorial/va/plugins/launcher.md" sourcestartlinenumber="42" sourceendlinenumber="42">Opens the user&#39;s documents folder.</p>
+<h4 id="usage-1">Usage</h4>
+<pre><code class="lang-xml">&lt;o:Folder&gt;Documents&lt;/o:Folder&gt;
+</code></pre><blockquote><p>Opens the user&#39;s documents folder.</p>
 </blockquote>
-<h3 id="3-website" sourcefile="tutorial/va/plugins/launcher.md" sourcestartlinenumber="44" sourceendlinenumber="44">3. Website</h3>
-<table sourcefile="tutorial/va/plugins/launcher.md" sourcestartlinenumber="46" sourceendlinenumber="49">
+<h3 id="3-website">3. Website</h3>
+<table>
 <thead>
 <tr>
 <th style="text-align:left"><strong>Annotation</strong></th>
@@ -170,12 +170,12 @@
 </tr>
 </tbody>
 </table>
-<h4 id="usage-2" sourcefile="tutorial/va/plugins/launcher.md" sourcestartlinenumber="51" sourceendlinenumber="51">Usage</h4>
-<pre sourcefile="tutorial/va/plugins/launcher.md" sourcestartlinenumber="53" sourceendlinenumber="55"><code class="lang-xml">&lt;o:Website&gt;Google&lt;/o:Website&gt;
-</code></pre><blockquote sourcefile="tutorial/va/plugins/launcher.md" sourcestartlinenumber="57" sourceendlinenumber="57"><p sourcefile="tutorial/va/plugins/launcher.md" sourcestartlinenumber="57" sourceendlinenumber="57">Launches the url <code>http://www.google.com</code></p>
+<h4 id="usage-2">Usage</h4>
+<pre><code class="lang-xml">&lt;o:Website&gt;Google&lt;/o:Website&gt;
+</code></pre><blockquote><p>Launches the url <code>http://www.google.com</code></p>
 </blockquote>
-<h3 id="4-searchsite" sourcefile="tutorial/va/plugins/launcher.md" sourcestartlinenumber="59" sourceendlinenumber="59">4. SearchSite</h3>
-<table sourcefile="tutorial/va/plugins/launcher.md" sourcestartlinenumber="61" sourceendlinenumber="64">
+<h3 id="4-searchsite">4. SearchSite</h3>
+<table>
 <thead>
 <tr>
 <th style="text-align:left"><strong>Annotation</strong></th>
@@ -193,13 +193,13 @@
 </tr>
 </tbody>
 </table>
-<h4 id="usage-3" sourcefile="tutorial/va/plugins/launcher.md" sourcestartlinenumber="66" sourceendlinenumber="66">Usage</h4>
-<pre sourcefile="tutorial/va/plugins/launcher.md" sourcestartlinenumber="68" sourceendlinenumber="70"><code class="lang-xml">&lt;o:SearchSite Link=&quot;Google&quot;&gt;Syn Virtual Assistant&lt;/o:SearchSite&gt;
-</code></pre><blockquote sourcefile="tutorial/va/plugins/launcher.md" sourcestartlinenumber="72" sourceendlinenumber="72"><p sourcefile="tutorial/va/plugins/launcher.md" sourcestartlinenumber="72" sourceendlinenumber="72">Launches the url <code>https://www.google.com/search?q=Syn Virtual Assistant</code></p>
+<h4 id="usage-3">Usage</h4>
+<pre><code class="lang-xml">&lt;o:SearchSite Link=&quot;Google&quot;&gt;Syn Virtual Assistant&lt;/o:SearchSite&gt;
+</code></pre><blockquote><p>Launches the url <code>https://www.google.com/search?q=Syn Virtual Assistant</code></p>
 </blockquote>
-<h2 id="maps" sourcefile="tutorial/va/plugins/launcher.md" sourcestartlinenumber="74" sourceendlinenumber="74">Maps</h2>
-<p sourcefile="tutorial/va/plugins/launcher.md" sourcestartlinenumber="76" sourceendlinenumber="76">This plugin creates multiple SIML <em>Maps</em> during initialization by using the values set in the plugin&#39;s settings.</p>
-<table sourcefile="tutorial/va/plugins/launcher.md" sourcestartlinenumber="79" sourceendlinenumber="84">
+<h2 id="maps">Maps</h2>
+<p>This plugin creates multiple SIML <em>Maps</em> during initialization by using the values set in the plugin&#39;s settings.</p>
+<table>
 <thead>
 <tr>
 <th style="text-align:left">Map Name</th>

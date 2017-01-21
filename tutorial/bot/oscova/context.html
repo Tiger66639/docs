@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>Context  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Context ">
-    <meta name="generator" content="docfx 2.6.1.0">
+    <meta name="generator" content="docfx 2.10.2.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -98,11 +98,11 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="context" sourcefile="tutorial/bot/oscova/context.md" sourcestartlinenumber="1" sourceendlinenumber="1">Context</h1>
+              <h1 id="context">Context</h1>
               
-<p sourcefile="tutorial/bot/oscova/context.md" sourcestartlinenumber="3" sourceendlinenumber="3">A context represents the conversation state of user sessions. Intents decorated with <code>Context</code> attributes only get evaluated during the match process if the specified context name exists in user session. Contexts greatly help in removing ambiguities from conversations.</p>
-<p sourcefile="tutorial/bot/oscova/context.md" sourcestartlinenumber="5" sourceendlinenumber="5">A context is composed of 2 parts.</p>
-<table sourcefile="tutorial/bot/oscova/context.md" sourcestartlinenumber="7" sourceendlinenumber="10">
+<p>A context represents the conversation state of user sessions. Intents decorated with <code>Context</code> attributes only get evaluated during the match process if the specified context name exists in user session. Contexts greatly help in removing ambiguities from conversations.</p>
+<p>A context is composed of 2 parts.</p>
+<table>
 <thead>
 <tr>
 <th style="text-align:left">Property</th>
@@ -120,10 +120,10 @@
 </tr>
 </tbody>
 </table>
-<p sourcefile="tutorial/bot/oscova/context.md" sourcestartlinenumber="12" sourceendlinenumber="12">Additionally contexts also have an internal time span that measures their existence. By default a context stays active for 10 minutes. If either the lifespan (request count) or time span has been exceeded the context is removed from user session.</p>
-<h2 id="usage" sourcefile="tutorial/bot/oscova/context.md" sourcestartlinenumber="14" sourceendlinenumber="14">Usage</h2>
-<p sourcefile="tutorial/bot/oscova/context.md" sourcestartlinenumber="16" sourceendlinenumber="16">Lets assume that your application has a <em>shutdown</em> command but you wish to confirm with the user that he really wishes to shutdown the application.</p>
-<pre sourcefile="tutorial/bot/oscova/context.md" sourcestartlinenumber="18" sourceendlinenumber="28"><code class="lang-csharp">[Expression(&quot;shutdown&quot;)]
+<p>Additionally contexts also have an internal time span that measures their existence. By default a context stays active for 10 minutes. If either the lifespan (request count) or time span has been exceeded the context is removed from user session.</p>
+<h2 id="usage">Usage</h2>
+<p>Lets assume that your application has a <em>shutdown</em> command but you wish to confirm with the user that he really wishes to shutdown the application.</p>
+<pre><code class="lang-csharp">[Expression(&quot;shutdown&quot;)]
 public void Shutdown(Context context, Result result)
 {
     //Add a new &quot;shutdown_confirmation&quot; context.
@@ -132,8 +132,8 @@ public void Shutdown(Context context, Result result)
     result.SendResponse(&quot;Are you sure?&quot;);
     //Do something.
 }
-</code></pre><p sourcefile="tutorial/bot/oscova/context.md" sourcestartlinenumber="30" sourceendlinenumber="30">In the above code we created a new <code>shutdown_confirmation</code> context with a lifespan of 2 requests. This newly created context will last for the next 2 requests.</p>
-<pre sourcefile="tutorial/bot/oscova/context.md" sourcestartlinenumber="32" sourceendlinenumber="48"><code class="lang-csharp">[Expression(&quot;{yes}&quot;)]
+</code></pre><p>In the above code we created a new <code>shutdown_confirmation</code> context with a lifespan of 2 requests. This newly created context will last for the next 2 requests.</p>
+<pre><code class="lang-csharp">[Expression(&quot;{yes}&quot;)]
 [Entity(Sys.Positive)]
 [Context(&quot;shutdown_confirmation&quot;)]
 public void ShutdownConfirmed(Context context, Result result)
@@ -148,24 +148,24 @@ public void ShutdownCanceled(Context context, Result result)
 {
     //Do something.
 }
-</code></pre><p sourcefile="tutorial/bot/oscova/context.md" sourcestartlinenumber="50" sourceendlinenumber="50">When the user says <strong><em>Shutdown</em></strong> the bot will respond <strong><em>Are you sure?</em></strong>. If the user says <strong><em>yes</em></strong> the intent <code>ShutdownConfirmed</code> will get invoked.</p>
-<p sourcefile="tutorial/bot/oscova/context.md" sourcestartlinenumber="52" sourceendlinenumber="52">As we specified the lifespan of the context to be <strong>2</strong>. The context becomes inactive after 2 user requests. Context can also be manually removed as shown in the code below.</p>
-<pre sourcefile="tutorial/bot/oscova/context.md" sourcestartlinenumber="54" sourceendlinenumber="56"><code class="lang-csharp">context.Remove(&quot;shutdown_confirmation&quot;);
-</code></pre><h2 id="parameters" sourcefile="tutorial/bot/oscova/context.md" sourcestartlinenumber="58" sourceendlinenumber="58">Parameters</h2>
-<p sourcefile="tutorial/bot/oscova/context.md" sourcestartlinenumber="60" sourceendlinenumber="60">An added context can carry multiple unique parameters during the course of its existence. These parameters can be used provide additional information regarding the underlying context.</p>
-<p sourcefile="tutorial/bot/oscova/context.md" sourcestartlinenumber="62" sourceendlinenumber="62"><strong>Example</strong></p>
-<pre sourcefile="tutorial/bot/oscova/context.md" sourcestartlinenumber="63" sourceendlinenumber="71"><code class="lang-csharp">[Expression(&quot;turn on the air conditioner&quot;)]
+</code></pre><p>When the user says <strong><em>Shutdown</em></strong> the bot will respond <strong><em>Are you sure?</em></strong>. If the user says <strong><em>yes</em></strong> the intent <code>ShutdownConfirmed</code> will get invoked.</p>
+<p>As we specified the lifespan of the context to be <strong>2</strong>. The context becomes inactive after 2 user requests. Context can also be manually removed as shown in the code below.</p>
+<pre><code class="lang-csharp">context.Remove(&quot;shutdown_confirmation&quot;);
+</code></pre><h2 id="parameters">Parameters</h2>
+<p>An added context can carry multiple unique parameters during the course of its existence. These parameters can be used provide additional information regarding the underlying context.</p>
+<p><strong>Example</strong></p>
+<pre><code class="lang-csharp">[Expression(&quot;turn on the air conditioner&quot;)]
 public void TurnOnAC(Context context, Result result)
 {
     context.Add(&quot;air-con&quot;);
     var acContext = context[&quot;air-con&quot;];
     acContext.Parameters.Add(&quot;temp&quot;, &quot;medium&quot;);
 }
-</code></pre><h2 id="conditonal-existence" sourcefile="tutorial/bot/oscova/context.md" sourcestartlinenumber="73" sourceendlinenumber="73">Conditonal Existence</h2>
-<p sourcefile="tutorial/bot/oscova/context.md" sourcestartlinenumber="75" sourceendlinenumber="75">After from counting the number of requests made to determine the lifespan of a <em>context item</em>. Developers may also pass a function while adding a new context item that determines for how long the context should stay active.</p>
-<p sourcefile="tutorial/bot/oscova/context.md" sourcestartlinenumber="77" sourceendlinenumber="77">For example, when your user is watching a movie. You would want the commands <em>pause</em> and <em>resume</em> available until the <em>movie</em> is being played.</p>
-<p sourcefile="tutorial/bot/oscova/context.md" sourcestartlinenumber="79" sourceendlinenumber="79"><strong>Example</strong></p>
-<pre sourcefile="tutorial/bot/oscova/context.md" sourcestartlinenumber="80" sourceendlinenumber="91"><code class="lang-csharp">[Expression(&quot;Play @movie-name&quot;)]
+</code></pre><h2 id="conditonal-existence">Conditonal Existence</h2>
+<p>After from counting the number of requests made to determine the lifespan of a <em>context item</em>. Developers may also pass a function while adding a new context item that determines for how long the context should stay active.</p>
+<p>For example, when your user is watching a movie. You would want the commands <em>pause</em> and <em>resume</em> available until the <em>movie</em> is being played.</p>
+<p><strong>Example</strong></p>
+<pre><code class="lang-csharp">[Expression(&quot;Play @movie-name&quot;)]
 public void PlayMovie(Context context, Result result)
 {
     //Keep context active until movie is playing.
@@ -175,7 +175,7 @@ public void PlayMovie(Context context, Result result)
     });
     //Do something.
 }
-</code></pre><p sourcefile="tutorial/bot/oscova/context.md" sourcestartlinenumber="93" sourceendlinenumber="93"><strong>Note:</strong> Once a function is provided the value of the <code>Lifespan</code> property is ignored. Also, once a context item goes <em>inactive</em> it is removed from the user session.</p>
+</code></pre><p><strong>Note:</strong> Once a function is provided the value of the <code>Lifespan</code> property is ignored. Also, once a context item goes <em>inactive</em> it is removed from the user session.</p>
 
             </article>
           </div>

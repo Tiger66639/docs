@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>Label  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Label ">
-    <meta name="generator" content="docfx 2.6.1.0">
+    <meta name="generator" content="docfx 2.10.2.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -98,9 +98,9 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="label" sourcefile="tutorial/siml/elements/label.md" sourcestartlinenumber="1" sourceendlinenumber="1">Label</h1>
+              <h1 id="label">Label</h1>
               
-<table sourcefile="tutorial/siml/elements/label.md" sourcestartlinenumber="3" sourceendlinenumber="6">
+<table>
 <thead>
 <tr>
 <th><strong>Annotation</strong></th>
@@ -118,9 +118,9 @@
 </tr>
 </tbody>
 </table>
-<p sourcefile="tutorial/siml/elements/label.md" sourcestartlinenumber="8" sourceendlinenumber="8">A Label gives a response a unique ID which can later be used by other SIML Models. The value of this Label replaces the value of the Previous bot utterance which is useful when a lot of random responses are present in a Model and the developer has no intention of creating multiple Models addressing every response in the main Model.</p>
-<p sourcefile="tutorial/siml/elements/label.md" sourcestartlinenumber="10" sourceendlinenumber="10"><em>Example</em></p>
-<pre sourcefile="tutorial/siml/elements/label.md" sourcestartlinenumber="12" sourceendlinenumber="29"><code class="lang-xml">&lt;Model&gt;
+<p>A Label gives a response a unique ID which can later be used by other SIML Models. The value of this Label replaces the value of the Previous bot utterance which is useful when a lot of random responses are present in a Model and the developer has no intention of creating multiple Models addressing every response in the main Model.</p>
+<p><em>Example</em></p>
+<pre><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;OPEN A NEW TEXT FILE&lt;/Pattern&gt;
  &lt;Response&gt;&lt;Label&gt;:Note-Word&lt;/Label&gt;In Notepad or WordPad?&lt;/Response&gt;
 &lt;/Model&gt;
@@ -136,9 +136,9 @@
  &lt;Previous&gt;:Note-Word&lt;/Previous&gt;
  &lt;Response&gt;Opening WordPad...&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p sourcefile="tutorial/siml/elements/label.md" sourcestartlinenumber="31" sourceendlinenumber="31">The <strong>Label</strong> above gives the response a unique ID called Note-Word which is later used by the other Models as a reference to the response <em>In Notepad or WordPad</em>.</p>
-<blockquote sourcefile="tutorial/siml/elements/label.md" sourcestartlinenumber="33" sourceendlinenumber="33"><p sourcefile="tutorial/siml/elements/label.md" sourcestartlinenumber="33" sourceendlinenumber="33">By convention begin a label with a colon (:) and use (-) hyphens to separate words and avoid any other symbol. Moreover, a label must contain at least 2 words.</p>
-<p sourcefile="tutorial/siml/elements/label.md" sourcestartlinenumber="35" sourceendlinenumber="35">Labels must not be used in nested Model structures as the nested Model internally creates a unique label that overrides any existing label in parent Model.</p>
+</code></pre><p>The <strong>Label</strong> above gives the response a unique ID called Note-Word which is later used by the other Models as a reference to the response <em>In Notepad or WordPad</em>.</p>
+<blockquote><p>By convention begin a label with a colon (:) and use (-) hyphens to separate words and avoid any other symbol. Moreover, a label must contain at least 2 words.</p>
+<p>Labels must not be used in nested Model structures as the nested Model internally creates a unique label that overrides any existing label in parent Model.</p>
 </blockquote>
 
             </article>

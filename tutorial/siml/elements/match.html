@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>Match  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Match ">
-    <meta name="generator" content="docfx 2.6.1.0">
+    <meta name="generator" content="docfx 2.10.2.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -98,9 +98,9 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="match" sourcefile="tutorial/siml/elements/match.md" sourcestartlinenumber="1" sourceendlinenumber="1">Match</h1>
+              <h1 id="match">Match</h1>
               
-<table sourcefile="tutorial/siml/elements/match.md" sourcestartlinenumber="3" sourceendlinenumber="7">
+<table>
 <thead>
 <tr>
 <th><strong>Annotation</strong></th>
@@ -122,35 +122,35 @@
 </tr>
 </tbody>
 </table>
-<p sourcefile="tutorial/siml/elements/match.md" sourcestartlinenumber="9" sourceendlinenumber="9">The Match tag is used to retrieve words or sentences that are stored by SIML pattern symbols.</p>
-<blockquote sourcefile="tutorial/siml/elements/match.md" sourcestartlinenumber="11" sourceendlinenumber="11"><p sourcefile="tutorial/siml/elements/match.md" sourcestartlinenumber="11" sourceendlinenumber="11">Wildcards are not stored for Priority words, Individual words and Keywords pattern defined using Curly Brackets.</p>
+<p>The Match tag is used to retrieve words or sentences that are stored by SIML pattern symbols.</p>
+<blockquote><p>Wildcards are not stored for Priority words, Individual words and Keywords pattern defined using Curly Brackets.</p>
 </blockquote>
-<p sourcefile="tutorial/siml/elements/match.md" sourcestartlinenumber="13" sourceendlinenumber="13"><em>Example 1</em></p>
-<p sourcefile="tutorial/siml/elements/match.md" sourcestartlinenumber="15" sourceendlinenumber="15"><strong>SIML</strong></p>
-<pre sourcefile="tutorial/siml/elements/match.md" sourcestartlinenumber="17" sourceendlinenumber="22"><code class="lang-xml">&lt;Model&gt;
+<p><em>Example 1</em></p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;YOU ARE %&lt;/Pattern&gt;
  &lt;Response&gt;What makes you think that I am &lt;Match/&gt;?&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p sourcefile="tutorial/siml/elements/match.md" sourcestartlinenumber="24" sourceendlinenumber="24"><strong>User Input</strong></p>
-<p sourcefile="tutorial/siml/elements/match.md" sourcestartlinenumber="26" sourceendlinenumber="26"><em>Are you a chatbot?</em></p>
-<p sourcefile="tutorial/siml/elements/match.md" sourcestartlinenumber="28" sourceendlinenumber="28"><strong>Bot Output</strong></p>
-<p sourcefile="tutorial/siml/elements/match.md" sourcestartlinenumber="30" sourceendlinenumber="30"><em>What makes you think that I am a chatbot?</em></p>
-<p sourcefile="tutorial/siml/elements/match.md" sourcestartlinenumber="32" sourceendlinenumber="32"><strong>Explanation</strong></p>
-<blockquote sourcefile="tutorial/siml/elements/match.md" sourcestartlinenumber="34" sourceendlinenumber="34"><p sourcefile="tutorial/siml/elements/match.md" sourcestartlinenumber="34" sourceendlinenumber="34">Once a wildcard is matched the <code>&lt;Match/&gt;</code> tag can used to retrieve the captured fragment of text.</p>
+</code></pre><p><strong>User Input</strong></p>
+<p><em>Are you a chatbot?</em></p>
+<p><strong>Bot Output</strong></p>
+<p><em>What makes you think that I am a chatbot?</em></p>
+<p><strong>Explanation</strong></p>
+<blockquote><p>Once a wildcard is matched the <code>&lt;Match/&gt;</code> tag can used to retrieve the captured fragment of text.</p>
 </blockquote>
-<p sourcefile="tutorial/siml/elements/match.md" sourcestartlinenumber="36" sourceendlinenumber="36">The <code>Index</code> attribute is used to retrieve a keyword at a particular index. Indices are stored in ascending order.</p>
-<p sourcefile="tutorial/siml/elements/match.md" sourcestartlinenumber="38" sourceendlinenumber="38"><em>Example 2</em></p>
-<p sourcefile="tutorial/siml/elements/match.md" sourcestartlinenumber="40" sourceendlinenumber="40"><strong>SIML</strong></p>
-<pre sourcefile="tutorial/siml/elements/match.md" sourcestartlinenumber="42" sourceendlinenumber="47"><code class="lang-xml">&lt;Model&gt;
+<p>The <code>Index</code> attribute is used to retrieve a keyword at a particular index. Indices are stored in ascending order.</p>
+<p><em>Example 2</em></p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;* LIKES *&lt;/Pattern&gt;
  &lt;Response&gt;I see so &lt;Match/&gt; likes &lt;Match Index=&quot;2&quot;/&gt;&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p sourcefile="tutorial/siml/elements/match.md" sourcestartlinenumber="49" sourceendlinenumber="49"><strong>User Input</strong></p>
-<p sourcefile="tutorial/siml/elements/match.md" sourcestartlinenumber="51" sourceendlinenumber="51"><em>Leslie likes cupcakes</em></p>
-<p sourcefile="tutorial/siml/elements/match.md" sourcestartlinenumber="53" sourceendlinenumber="53"><strong>Bot Output</strong></p>
-<p sourcefile="tutorial/siml/elements/match.md" sourcestartlinenumber="55" sourceendlinenumber="55"><em>I see so Leslie likes cupcakes.</em></p>
-<p sourcefile="tutorial/siml/elements/match.md" sourcestartlinenumber="57" sourceendlinenumber="57"><strong>Explanation</strong></p>
-<blockquote sourcefile="tutorial/siml/elements/match.md" sourcestartlinenumber="59" sourceendlinenumber="59"><p sourcefile="tutorial/siml/elements/match.md" sourcestartlinenumber="59" sourceendlinenumber="59">The first Match tag ( by default ) uses the Index 1 and matches Leslie however the second Match tag has an index of 2 and will return the second fragment of text that was stored by the second wildcard symbol giving us the value <em>cupcakes</em>.</p>
+</code></pre><p><strong>User Input</strong></p>
+<p><em>Leslie likes cupcakes</em></p>
+<p><strong>Bot Output</strong></p>
+<p><em>I see so Leslie likes cupcakes.</em></p>
+<p><strong>Explanation</strong></p>
+<blockquote><p>The first Match tag ( by default ) uses the Index 1 and matches Leslie however the second Match tag has an index of 2 and will return the second fragment of text that was stored by the second wildcard symbol giving us the value <em>cupcakes</em>.</p>
 </blockquote>
 
             </article>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>Relaxed Models and Suggestion System  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Relaxed Models and Suggestion System ">
-    <meta name="generator" content="docfx 2.6.1.0">
+    <meta name="generator" content="docfx 2.10.2.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -98,13 +98,13 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="relaxed-models-and-suggestion-system" sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="1" sourceendlinenumber="1">Relaxed Models and Suggestion System</h1>
+              <h1 id="relaxed-models-and-suggestion-system">Relaxed Models and Suggestion System</h1>
               
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="3" sourceendlinenumber="3">SIML now enables bot developers to use <em>Best Match</em> scheme in small SIML projects instead of strict pattern based triggers. This has been made possible due to the arrival of an in-built <strong>Search Engine</strong> interface made available in <code>Syn.Bot</code> framework version 1.2.5 and above.</p>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="5" sourceendlinenumber="5">Instead of <code>&lt;Pattern&gt;</code> elements inside SIML Models, developers can now just add <em>Example</em> user inputs that will be processed as part of <em>Search Results</em> by the in-built <strong>Search Engine</strong>. For this <code>Syn.Bot</code> framework implements an intelligent <strong>Fuzzy Keyword Search</strong> algorithm that even permits usage of SIML Sets and Regular Expressions within <code>Example</code> items.</p>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="7" sourceendlinenumber="7">Bot developers can also combine <code>Pattern</code> and <code>Example</code> items to create a <em>hybrid</em> SIML Model structure that can used to trigger responses when <em>patterns</em> are matched and to generate suggestions when high scoring <code>Example</code> items are found.</p>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="9" sourceendlinenumber="9"><strong>Strict Model (based on Pattern)</strong></p>
-<pre sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="10" sourceendlinenumber="19"><code class="lang-xml">&lt;Model&gt;
+<p>SIML now enables bot developers to use <em>Best Match</em> scheme in small SIML projects instead of strict pattern based triggers. This has been made possible due to the arrival of an in-built <strong>Search Engine</strong> interface made available in <code>Syn.Bot</code> framework version 1.2.5 and above.</p>
+<p>Instead of <code>&lt;Pattern&gt;</code> elements inside SIML Models, developers can now just add <em>Example</em> user inputs that will be processed as part of <em>Search Results</em> by the in-built <strong>Search Engine</strong>. For this <code>Syn.Bot</code> framework implements an intelligent <strong>Fuzzy Keyword Search</strong> algorithm that even permits usage of SIML Sets and Regular Expressions within <code>Example</code> items.</p>
+<p>Bot developers can also combine <code>Pattern</code> and <code>Example</code> items to create a <em>hybrid</em> SIML Model structure that can used to trigger responses when <em>patterns</em> are matched and to generate suggestions when high scoring <code>Example</code> items are found.</p>
+<p><strong>Strict Model (based on Pattern)</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
   &lt;Pattern&gt;
     &lt;Item&gt;HOW ARE YOU&lt;/Item&gt;
     &lt;Item&gt;HOW IS LIFE&lt;/Item&gt;
@@ -112,8 +112,8 @@
   &lt;/Pattern&gt;
   &lt;Response&gt;I am doing great!&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="21" sourceendlinenumber="21"><strong>Relaxed Model (based on Example)</strong></p>
-<pre sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="22" sourceendlinenumber="31"><code class="lang-xml">&lt;Model&gt;
+</code></pre><p><strong>Relaxed Model (based on Example)</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
   &lt;Example&gt;
     &lt;Item&gt;How are you?&lt;/Item&gt;
     &lt;Item&gt;How is life?&lt;/Item&gt;
@@ -121,8 +121,8 @@
   &lt;/Example&gt;
   &lt;Response&gt;I am doing great!&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="33" sourceendlinenumber="33"><strong>Hybrid Model (based on both Pattern and Example)</strong></p>
-<pre sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="34" sourceendlinenumber="48"><code class="lang-xml">&lt;Model&gt;
+</code></pre><p><strong>Hybrid Model (based on both Pattern and Example)</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
   &lt;Pattern&gt;
     &lt;Item&gt;HOW * YOU&lt;/Item&gt;
     &lt;Item&gt;HOW * LIFE&lt;/Item&gt;
@@ -135,14 +135,14 @@
   &lt;/Example&gt;
   &lt;Response&gt;I am fine.&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><blockquote sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="49" sourceendlinenumber="49"><p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="49" sourceendlinenumber="49">Based on Bot project requirements, developer must carefully choose between these configurations of writing SIML Models.</p>
+</code></pre><blockquote><p>Based on Bot project requirements, developer must carefully choose between these configurations of writing SIML Models.</p>
 </blockquote>
-<h2 id="auto-stripping-of-invalid-symbols" sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="51" sourceendlinenumber="51">Auto stripping of invalid symbols</h2>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="53" sourceendlinenumber="53">If the SIML interpreter detects a symbol in an <code>Example</code> item that is not valid or allowed in the context, the symbol is automatically removed. However, when <code>Suggestion</code> values are being regenerated the interpreter properly assembles all the symbols back into the example.</p>
-<h2 id="suggestion" sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="55" sourceendlinenumber="55">Suggestion</h2>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="57" sourceendlinenumber="57">The <code>Suggestion</code> adapter is a new experimental feature added to the draft SIML Specification. This adapter enables the Bot to use a custom or in-built <strong>Search Engine</strong> interface to find a list of best possible matches for user inputs using the value of <code>Example</code> tags.</p>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="59" sourceendlinenumber="59">When necessary, developers can also replace the current <code>SearchEngine</code> instance used by <em>SimlBot</em> by a custom implementation of <code>ISearchEngine</code> interface.</p>
-<table sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="61" sourceendlinenumber="66">
+<h2 id="auto-stripping-of-invalid-symbols">Auto stripping of invalid symbols</h2>
+<p>If the SIML interpreter detects a symbol in an <code>Example</code> item that is not valid or allowed in the context, the symbol is automatically removed. However, when <code>Suggestion</code> values are being regenerated the interpreter properly assembles all the symbols back into the example.</p>
+<h2 id="suggestion">Suggestion</h2>
+<p>The <code>Suggestion</code> adapter is a new experimental feature added to the draft SIML Specification. This adapter enables the Bot to use a custom or in-built <strong>Search Engine</strong> interface to find a list of best possible matches for user inputs using the value of <code>Example</code> tags.</p>
+<p>When necessary, developers can also replace the current <code>SearchEngine</code> instance used by <em>SimlBot</em> by a custom implementation of <code>ISearchEngine</code> interface.</p>
+<table>
 <thead>
 <tr>
 <th style="text-align:left"><strong>Annotation</strong></th>
@@ -168,9 +168,9 @@
 </tr>
 </tbody>
 </table>
-<h2 id="pattern-symbols-in-example" sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="68" sourceendlinenumber="68">Pattern Symbols in <code>Example</code></h2>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="70" sourceendlinenumber="70">The following entities are part of a search query that the <em>Search Engine</em> processes.</p>
-<table sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="72" sourceendlinenumber="77">
+<h2 id="pattern-symbols-in-example">Pattern Symbols in <code>Example</code></h2>
+<p>The following entities are part of a search query that the <em>Search Engine</em> processes.</p>
+<table>
 <thead>
 <tr>
 <th style="text-align:left">Entity</th>
@@ -196,39 +196,39 @@
 </tr>
 </tbody>
 </table>
-<blockquote sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="79" sourceendlinenumber="79"><p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="79" sourceendlinenumber="79">[Set] and @Regex are part of wildcard capture process and their values can be acquired using the <code>Match</code> tag.</p>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="81" sourceendlinenumber="81">All attributes and behaviours of Sets and Regular expressions within Pattern tag stay intact when used within Example tag.</p>
+<blockquote><p>[Set] and @Regex are part of wildcard capture process and their values can be acquired using the <code>Match</code> tag.</p>
+<p>All attributes and behaviours of Sets and Regular expressions within Pattern tag stay intact when used within Example tag.</p>
 </blockquote>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="83" sourceendlinenumber="83">Other <em>symbols</em>  like  _, *, %, $, {}, () used in <code>Pattern</code> tag are invalid within the <code>Example</code> tag.</p>
-<h2 id="search-engine-algorithm" sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="85" sourceendlinenumber="85">Search Engine Algorithm</h2>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="87" sourceendlinenumber="87">The default implementation of <code>ISearchEngine</code> interface (<code>SearchEngine</code>) in <em>Syn.Bot</em> uses a <strong>Fuzzy Keyword Search</strong> algorithm that takes the following into consideration.</p>
-<ul sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="89" sourceendlinenumber="94">
-<li sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="89" sourceendlinenumber="89">If a word exists</li>
-<li sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="90" sourceendlinenumber="90">Order of words</li>
-<li sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="91" sourceendlinenumber="91">Existence of keywords, sets and regular expressions</li>
-<li sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="92" sourceendlinenumber="92">Number of unmatched words</li>
-<li sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="93" sourceendlinenumber="93">Tolerance - if a word is not found in user input but is part of <code>Common-Words</code> variable.</li>
-<li sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="94" sourceendlinenumber="94">Minimum score required for a <em>search result</em> to be accepted.</li>
+<p>Other <em>symbols</em>  like  _, *, %, $, {}, () used in <code>Pattern</code> tag are invalid within the <code>Example</code> tag.</p>
+<h2 id="search-engine-algorithm">Search Engine Algorithm</h2>
+<p>The default implementation of <code>ISearchEngine</code> interface (<code>SearchEngine</code>) in <em>Syn.Bot</em> uses a <strong>Fuzzy Keyword Search</strong> algorithm that takes the following into consideration.</p>
+<ul>
+<li>If a word exists</li>
+<li>Order of words</li>
+<li>Existence of keywords, sets and regular expressions</li>
+<li>Number of unmatched words</li>
+<li>Tolerance - if a word is not found in user input but is part of <code>Common-Words</code> variable.</li>
+<li>Minimum score required for a <em>search result</em> to be accepted.</li>
 </ul>
-<h2 id="modes" sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="97" sourceendlinenumber="97">Modes</h2>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="99" sourceendlinenumber="99">On top of that, the default search engine also has 2 modes of operation.</p>
-<h3 id="soft-mode-default-search-mode" sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="101" sourceendlinenumber="101">Soft Mode (Default Search Mode)</h3>
-<ul sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="103" sourceendlinenumber="106">
-<li sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="103" sourceendlinenumber="103">The minimum search result score is equal to 60% of the actual <em>base</em> value set.</li>
-<li sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="104" sourceendlinenumber="104">Words may or may not exist in <em>query</em>. However, existence of words do increase the <em>Score</em>.</li>
-<li sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="105" sourceendlinenumber="105">Order of words may or may not match the order of words in <em>query</em>. However, proper order increase the search result <em>Score</em>.</li>
-<li sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="106" sourceendlinenumber="106"><strong>Sets</strong> and <strong>Regular Expressions</strong> must exist in user <em>query</em>.</li>
+<h2 id="modes">Modes</h2>
+<p>On top of that, the default search engine also has 2 modes of operation.</p>
+<h3 id="soft-mode-default-search-mode">Soft Mode (Default Search Mode)</h3>
+<ul>
+<li>The minimum search result score is equal to 60% of the actual <em>base</em> value set.</li>
+<li>Words may or may not exist in <em>query</em>. However, existence of words do increase the <em>Score</em>.</li>
+<li>Order of words may or may not match the order of words in <em>query</em>. However, proper order increase the search result <em>Score</em>.</li>
+<li><strong>Sets</strong> and <strong>Regular Expressions</strong> must exist in user <em>query</em>.</li>
 </ul>
-<h3 id="hard-mode" sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="108" sourceendlinenumber="108">Hard Mode</h3>
-<ul sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="110" sourceendlinenumber="113">
-<li sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="110" sourceendlinenumber="110">The minimum search result score is equal to the <em>base</em> score value.</li>
-<li sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="111" sourceendlinenumber="111">All words except the list of words in <em>Common-Words</em> variable must exist.</li>
-<li sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="112" sourceendlinenumber="112">Order of words must match in user <em>query</em>. Any additional word in query is neglected.</li>
-<li sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="113" sourceendlinenumber="113"><strong>Sets</strong> and <strong>Regular Expressions</strong> must exist in user <em>query</em>.</li>
+<h3 id="hard-mode">Hard Mode</h3>
+<ul>
+<li>The minimum search result score is equal to the <em>base</em> score value.</li>
+<li>All words except the list of words in <em>Common-Words</em> variable must exist.</li>
+<li>Order of words must match in user <em>query</em>. Any additional word in query is neglected.</li>
+<li><strong>Sets</strong> and <strong>Regular Expressions</strong> must exist in user <em>query</em>.</li>
 </ul>
-<h2 id="reserved-variables" sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="116" sourceendlinenumber="116">Reserved Variables</h2>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="118" sourceendlinenumber="118">The default <code>SearchEngine</code> uses the following <em>reserved</em> Bot variables to process a search result.</p>
-<table sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="120" sourceendlinenumber="125">
+<h2 id="reserved-variables">Reserved Variables</h2>
+<p>The default <code>SearchEngine</code> uses the following <em>reserved</em> Bot variables to process a search result.</p>
+<table>
 <thead>
 <tr>
 <th style="text-align:left">Variable Name</th>
@@ -254,14 +254,14 @@
 </tr>
 </tbody>
 </table>
-<blockquote sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="127" sourceendlinenumber="127"><p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="127" sourceendlinenumber="127">If any of the above variable is not <em>explicitly</em> specified within an SIML Knowledge-Base, the default <em>search engine</em> automatically assumes their default values.</p>
+<blockquote><p>If any of the above variable is not <em>explicitly</em> specified within an SIML Knowledge-Base, the default <em>search engine</em> automatically assumes their default values.</p>
 </blockquote>
-<h2 id="creating-a-suggestion-system" sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="129" sourceendlinenumber="129">Creating a Suggestion system</h2>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="131" sourceendlinenumber="131">If <em>Relaxed Models</em> ared used in an SIML knowledge-base it is mandatory that a <strong>Suggestion</strong> system is explicitly implemented by the Bot developer.</p>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="133" sourceendlinenumber="134"><em>What is a Suggestion system?</em>
+<h2 id="creating-a-suggestion-system">Creating a Suggestion system</h2>
+<p>If <em>Relaxed Models</em> ared used in an SIML knowledge-base it is mandatory that a <strong>Suggestion</strong> system is explicitly implemented by the Bot developer.</p>
+<p><em>What is a Suggestion system?</em>
 A Suggestion system is a mechanism by which the <em>Search Engine</em> of the interpreter is able to evaluate the <code>Example</code> items and return a list of results that closely match the user input.</p>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="137" sourceendlinenumber="137"><strong>Simple implementation of Suggestion system</strong></p>
-<pre sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="139" sourceendlinenumber="152"><code class="lang-xml">&lt;Model&gt;
+<p><strong>Simple implementation of Suggestion system</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
   &lt;Pattern&gt;*&lt;/Pattern&gt;
   &lt;Response&gt;
     &lt;Var Think:Set=&quot;Count&quot;&gt;
@@ -273,21 +273,21 @@ A Suggestion system is a mechanism by which the <em>Search Engine</em> of the in
     &lt;/Else&gt;
   &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="154" sourceendlinenumber="154">The above code first stores the number of suggestions found. If no suggestion is available the code returns <strong><em>Please rephrase that for me</em></strong> otherwise it gets the response from the highest scoring result.</p>
-<h2 id="suggestion-formatting" sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="156" sourceendlinenumber="156">Suggestion Formatting</h2>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="158" sourceendlinenumber="158">In order to allow developers to format the suggestion string. The <code>Examples</code> property which is a instance of <code>ExampleCollection</code> uses <code>ISuggestionFormatter</code> interface that can be implemented to override the format of the suggestion string returned by the <code>Suggestion</code> adapter.</p>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="160" sourceendlinenumber="160">The default implementation of <code>ISuggestionFormatter</code> provides results in the following format.</p>
-<ul sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="162" sourceendlinenumber="163">
-<li sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="162" sourceendlinenumber="162">If the suggestion contains just 1 result then the value of the result is returned as such.</li>
-<li sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="163" sourceendlinenumber="163">If 2 or more results exist in the suggestion the a index number is prefixed to each result.</li>
+</code></pre><p>The above code first stores the number of suggestions found. If no suggestion is available the code returns <strong><em>Please rephrase that for me</em></strong> otherwise it gets the response from the highest scoring result.</p>
+<h2 id="suggestion-formatting">Suggestion Formatting</h2>
+<p>In order to allow developers to format the suggestion string. The <code>Examples</code> property which is a instance of <code>ExampleCollection</code> uses <code>ISuggestionFormatter</code> interface that can be implemented to override the format of the suggestion string returned by the <code>Suggestion</code> adapter.</p>
+<p>The default implementation of <code>ISuggestionFormatter</code> provides results in the following format.</p>
+<ul>
+<li>If the suggestion contains just 1 result then the value of the result is returned as such.</li>
+<li>If 2 or more results exist in the suggestion the a index number is prefixed to each result.</li>
 </ul>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="165" sourceendlinenumber="165"><em>Example</em></p>
-<ol sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="167" sourceendlinenumber="168">
-<li sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="167" sourceendlinenumber="167">How are you?</li>
-<li sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="168" sourceendlinenumber="168">How is life?</li>
+<p><em>Example</em></p>
+<ol>
+<li>How are you?</li>
+<li>How is life?</li>
 </ol>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="170" sourceendlinenumber="170"><strong>Example <code>ISuggestionFormmater</code> Implementation</strong></p>
-<pre sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="172" sourceendlinenumber="198"><code class="lang-csharp">class SuggestionFormatter : ISuggestionFormatter
+<p><strong>Example <code>ISuggestionFormmater</code> Implementation</strong></p>
+<pre><code class="lang-csharp">class SuggestionFormatter : ISuggestionFormatter
 {
     public string Format(Suggestion suggestion)
     {
@@ -312,8 +312,8 @@ A Suggestion system is a mechanism by which the <em>Search Engine</em> of the in
         return toReturn.Trim();
     }
 }
-</code></pre><h2 id="simple-suggestion" sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="200" sourceendlinenumber="200">Simple Suggestion</h2>
-<pre sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="202" sourceendlinenumber="222"><code class="lang-xml">&lt;Model&gt;
+</code></pre><h2 id="simple-suggestion">Simple Suggestion</h2>
+<pre><code class="lang-xml">&lt;Model&gt;
   &lt;Pattern&gt;
     &lt;Item&gt;HOW * YOU&lt;/Item&gt;
     &lt;Item&gt;HOW * LIFE&lt;/Item&gt;
@@ -332,7 +332,7 @@ A Suggestion system is a mechanism by which the <em>Search Engine</em> of the in
     &lt;/Phrase&gt;
   &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><pre sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="224" sourceendlinenumber="245"><code class="lang-xml">&lt;Model&gt;
+</code></pre><pre><code class="lang-xml">&lt;Model&gt;
   &lt;Pattern&gt;*&lt;/Pattern&gt;
   &lt;Response&gt;
     &lt;Var Think:Set=&quot;Count&quot;&gt;
@@ -352,26 +352,26 @@ A Suggestion system is a mechanism by which the <em>Search Engine</em> of the in
 &lt;Suggestion /&gt;&lt;/Else&gt;
   &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><h3 id="example-1" sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="247" sourceendlinenumber="247">Example 1</h3>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="249" sourceendlinenumber="249"><strong>User Input</strong></p>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="251" sourceendlinenumber="251"><em>How is life mate?</em></p>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="253" sourceendlinenumber="253"><strong>Bot Output</strong></p>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="255" sourceendlinenumber="257"><em>Perhaps you meant:...</em>
+</code></pre><h3 id="example-1">Example 1</h3>
+<p><strong>User Input</strong></p>
+<p><em>How is life mate?</em></p>
+<p><strong>Bot Output</strong></p>
+<p><em>Perhaps you meant:...</em>
 <em>1. How is life?</em>
 <em>2. How is it going?</em></p>
-<h3 id="example-2" sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="259" sourceendlinenumber="259">Example 2</h3>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="261" sourceendlinenumber="261"><strong>User Input</strong></p>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="263" sourceendlinenumber="263"><em>Hows going?</em></p>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="265" sourceendlinenumber="265"><strong>Bot Output</strong></p>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="267" sourceendlinenumber="267"><em>Did you mean:..&quot;How is it going?&quot;</em></p>
-<h3 id="example-3" sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="269" sourceendlinenumber="269">Example 3</h3>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="271" sourceendlinenumber="271"><strong>User Input</strong></p>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="273" sourceendlinenumber="273"><em>bla bla</em></p>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="275" sourceendlinenumber="275"><strong>Bot Output</strong></p>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="277" sourceendlinenumber="277"><em>Please rephrase that for me.</em></p>
-<h2 id="complex-suggestion" sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="279" sourceendlinenumber="279">Complex Suggestion</h2>
-<pre sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="281" sourceendlinenumber="283"><code class="lang-xml">&lt;Set Name=&quot;Family&quot;&gt;Peter, Ali, Ramesh&lt;/Set&gt;
-</code></pre><pre sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="285" sourceendlinenumber="300"><code class="lang-xml">&lt;Model&gt;
+<h3 id="example-2">Example 2</h3>
+<p><strong>User Input</strong></p>
+<p><em>Hows going?</em></p>
+<p><strong>Bot Output</strong></p>
+<p><em>Did you mean:..&quot;How is it going?&quot;</em></p>
+<h3 id="example-3">Example 3</h3>
+<p><strong>User Input</strong></p>
+<p><em>bla bla</em></p>
+<p><strong>Bot Output</strong></p>
+<p><em>Please rephrase that for me.</em></p>
+<h2 id="complex-suggestion">Complex Suggestion</h2>
+<pre><code class="lang-xml">&lt;Set Name=&quot;Family&quot;&gt;Peter, Ali, Ramesh&lt;/Set&gt;
+</code></pre><pre><code class="lang-xml">&lt;Model&gt;
   &lt;Pattern&gt;
     &lt;Item&gt;HOW IS [FAMILY]&lt;/Item&gt;
     &lt;Item&gt;WHAT IS UP WITH [FAMILY]&lt;/Item&gt;
@@ -385,7 +385,7 @@ A Suggestion system is a mechanism by which the <em>Search Engine</em> of the in
   &lt;Response&gt;
     &lt;Match /&gt; is fine.&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><pre sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="302" sourceendlinenumber="323"><code class="lang-xml">&lt;Model&gt;
+</code></pre><pre><code class="lang-xml">&lt;Model&gt;
   &lt;Pattern&gt;*&lt;/Pattern&gt;
   &lt;Response&gt;
     &lt;Var Think:Set=&quot;Count&quot;&gt;
@@ -405,19 +405,19 @@ A Suggestion system is a mechanism by which the <em>Search Engine</em> of the in
 &lt;Suggestion /&gt;&lt;/Else&gt;
   &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><h3 id="example" sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="325" sourceendlinenumber="325">Example</h3>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="327" sourceendlinenumber="327"><strong>User Input</strong></p>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="329" sourceendlinenumber="329"><em>Is Peter fine?</em></p>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="331" sourceendlinenumber="331"><strong>Bot Output</strong></p>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="333" sourceendlinenumber="335"><em>Perhaps you meant:...</em>
+</code></pre><h3 id="example">Example</h3>
+<p><strong>User Input</strong></p>
+<p><em>Is Peter fine?</em></p>
+<p><strong>Bot Output</strong></p>
+<p><em>Perhaps you meant:...</em>
 <em>1. How is Peter?</em>
 <em>2. What is up with Peter?</em></p>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="337" sourceendlinenumber="337"><strong>Explanation</strong></p>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="339" sourceendlinenumber="339">As the set <code>Family</code> is specified within an <code>Example</code> item, The value <strong>Peter</strong> of the set <code>Family</code> is evaluated during example generation. Thereby creating a generated example that transforms <strong><em>How is [Family]?</em></strong> to <strong><em>How is Peter?</em></strong> and <strong><em>What is up with [Family]?</em></strong> to <strong><em>What is up with Peter?</em></strong></p>
-<h2 id="response-from-suggestion" sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="341" sourceendlinenumber="341">Response from Suggestion</h2>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="343" sourceendlinenumber="343">The <code>Suggestion</code> adapter can be used to evaluate the <code>&lt;Response&gt;</code> element for the highest scoring <code>Example</code> item or search result. This is done by adding a <code>Get</code> attribute and settings its value to <code>Response</code>.</p>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="346" sourceendlinenumber="346"><strong>Relaxed Model</strong></p>
-<pre sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="347" sourceendlinenumber="356"><code class="lang-xml">&lt;Model&gt;
+<p><strong>Explanation</strong></p>
+<p>As the set <code>Family</code> is specified within an <code>Example</code> item, The value <strong>Peter</strong> of the set <code>Family</code> is evaluated during example generation. Thereby creating a generated example that transforms <strong><em>How is [Family]?</em></strong> to <strong><em>How is Peter?</em></strong> and <strong><em>What is up with [Family]?</em></strong> to <strong><em>What is up with Peter?</em></strong></p>
+<h2 id="response-from-suggestion">Response from Suggestion</h2>
+<p>The <code>Suggestion</code> adapter can be used to evaluate the <code>&lt;Response&gt;</code> element for the highest scoring <code>Example</code> item or search result. This is done by adding a <code>Get</code> attribute and settings its value to <code>Response</code>.</p>
+<p><strong>Relaxed Model</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
   &lt;Example&gt;
     &lt;Item&gt;How are you?&lt;/Item&gt;
     &lt;Item&gt;How is life?&lt;/Item&gt;
@@ -425,8 +425,8 @@ A Suggestion system is a mechanism by which the <em>Search Engine</em> of the in
   &lt;/Example&gt;
   &lt;Response&gt;I am doing great!&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="358" sourceendlinenumber="358"><strong>Suggestion System</strong></p>
-<pre sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="359" sourceendlinenumber="380"><code class="lang-xml">&lt;Model&gt;
+</code></pre><p><strong>Suggestion System</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
   &lt;Pattern&gt;*&lt;/Pattern&gt;
   &lt;Response&gt;
     &lt;Var Think:Set=&quot;Count&quot;&gt;
@@ -446,13 +446,13 @@ A Suggestion system is a mechanism by which the <em>Search Engine</em> of the in
     &lt;/Else&gt;
   &lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="382" sourceendlinenumber="382"><strong>User Input</strong></p>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="384" sourceendlinenumber="384"><em>How are you mate?</em></p>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="386" sourceendlinenumber="386"><strong>Bot Output</strong></p>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="388" sourceendlinenumber="388"><em>I am doing great!</em></p>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="390" sourceendlinenumber="390"><strong>Explanation</strong></p>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="392" sourceendlinenumber="392">When the user says <em>How are you mate?</em> the <code>Example</code> item <code>How are you?</code> is internally returned as a search result item with an approximate score of <code>0.875</code> making it the highest scoring search result.</p>
-<p sourcefile="tutorial/bot/siml/relaxed-model-suggestion.md" sourcestartlinenumber="394" sourceendlinenumber="394">As the <code>Get</code> attribute with value <code>Response</code> is used in the <code>Suggestion</code> adapter, the <code>Response</code> element of the <code>Model</code> to which the <code>Example</code> item <code>How are you?</code> belonged to is evaluated and the generated response is returned by the adapter.</p>
+</code></pre><p><strong>User Input</strong></p>
+<p><em>How are you mate?</em></p>
+<p><strong>Bot Output</strong></p>
+<p><em>I am doing great!</em></p>
+<p><strong>Explanation</strong></p>
+<p>When the user says <em>How are you mate?</em> the <code>Example</code> item <code>How are you?</code> is internally returned as a search result item with an approximate score of <code>0.875</code> making it the highest scoring search result.</p>
+<p>As the <code>Get</code> attribute with value <code>Response</code> is used in the <code>Suggestion</code> adapter, the <code>Response</code> element of the <code>Model</code> to which the <code>Example</code> item <code>How are you?</code> belonged to is evaluated and the generated response is returned by the adapter.</p>
 
             </article>
           </div>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>Intents  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Intents ">
-    <meta name="generator" content="docfx 2.6.1.0">
+    <meta name="generator" content="docfx 2.10.2.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -98,17 +98,17 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="intents" sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="1" sourceendlinenumber="1">Intents</h1>
+              <h1 id="intents">Intents</h1>
               
-<p sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="3" sourceendlinenumber="3">In Oscova an intent is any action that the bot is supposed to execute when they user message matches an expression. An intent is a <code>void</code> method with a <code>public</code> modifier. The name of the intent is taken directly from the method name.</p>
-<h2 id="declaration" sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="5" sourceendlinenumber="5">Declaration</h2>
-<pre sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="7" sourceendlinenumber="13"><code class="lang-csharp">[Expression(&quot;How is the weather?&quot;)]
+<p>In Oscova an intent is any action that the bot is supposed to execute when they user message matches an expression. An intent is a <code>void</code> method with a <code>public</code> modifier. The name of the intent is taken directly from the method name.</p>
+<h2 id="declaration">Declaration</h2>
+<pre><code class="lang-csharp">[Expression(&quot;How is the weather?&quot;)]
 public void Weather(Context context, Result result)
 {
     //Do something.
 }
-</code></pre><p sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="15" sourceendlinenumber="15">An <em>intent</em> method must always be a member of a class that derives from the <code>Dialog</code> class and must have atleast 1 <em><a href="expression.html" sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="15" sourceendlinenumber="15">Expression</a></em> attribute attached to it. By convention an Intent must take 2 parameters. The first being <code>Context</code> and the second being the <code>Result</code>.</p>
-<table sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="17" sourceendlinenumber="20">
+</code></pre><p>An <em>intent</em> method must always be a member of a class that derives from the <code>Dialog</code> class and must have atleast 1 <em><a href="expression.html">Expression</a></em> attribute attached to it. By convention an Intent must take 2 parameters. The first being <code>Context</code> and the second being the <code>Result</code>.</p>
+<table>
 <thead>
 <tr>
 <th style="text-align:left">Parameter</th>
@@ -126,28 +126,28 @@ public void Weather(Context context, Result result)
 </tr>
 </tbody>
 </table>
-<h2 id="parameter-sequence" sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="22" sourceendlinenumber="22">Parameter Sequence</h2>
-<p sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="24" sourceendlinenumber="24">Developers are not restricted to specifying 2 parameters in all intents. All of the following method signature are valid intents. During invocation, Oscova will pass the right parameters to the intent.</p>
-<pre sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="26" sourceendlinenumber="29"><code class="lang-csharp">[Expression(&quot;How is the weather?&quot;)]
+<h2 id="parameter-sequence">Parameter Sequence</h2>
+<p>Developers are not restricted to specifying 2 parameters in all intents. All of the following method signature are valid intents. During invocation, Oscova will pass the right parameters to the intent.</p>
+<pre><code class="lang-csharp">[Expression(&quot;How is the weather?&quot;)]
 public void Weather()
-</code></pre><pre sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="31" sourceendlinenumber="34"><code class="lang-csharp">[Expression(&quot;How is the weather?&quot;)]
+</code></pre><pre><code class="lang-csharp">[Expression(&quot;How is the weather?&quot;)]
 public void Weather(Context context)
-</code></pre><pre sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="36" sourceendlinenumber="39"><code class="lang-csharp">[Expression(&quot;How is the weather?&quot;)]
+</code></pre><pre><code class="lang-csharp">[Expression(&quot;How is the weather?&quot;)]
 public void Weather(Result result)
-</code></pre><pre sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="41" sourceendlinenumber="44"><code class="lang-csharp">[Expression(&quot;How is the weather?&quot;)]
+</code></pre><pre><code class="lang-csharp">[Expression(&quot;How is the weather?&quot;)]
 public void Weather(Context context, Result result)
-</code></pre><h2 id="name" sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="46" sourceendlinenumber="46">Name</h2>
-<p sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="48" sourceendlinenumber="48">By default the name of an <em>Intent</em> is the combination of the name of the dialog and the method name. For example, the name of an intent with the method name <em>FindHotel</em> present within the <em>HotelDialog</em> class will be <em>HotelDialog.FindHotel</em>. If you do not wish to include the <em>dialog</em> name in intent names, you may set the value of <code>UseFullIntentName</code> to <code>false</code> in bot configuration.</p>
-<p sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="50" sourceendlinenumber="50">Moreover, if you wish to add a custom name to an intent you may use the <code>Name</code> attribute as shown below.</p>
-<pre sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="52" sourceendlinenumber="56"><code class="lang-csharp">[Expression(&quot;Find a hotel nearby&quot;)]
+</code></pre><h2 id="name">Name</h2>
+<p>By default the name of an <em>Intent</em> is the combination of the name of the dialog and the method name. For example, the name of an intent with the method name <em>FindHotel</em> present within the <em>HotelDialog</em> class will be <em>HotelDialog.FindHotel</em>. If you do not wish to include the <em>dialog</em> name in intent names, you may set the value of <code>UseFullIntentName</code> to <code>false</code> in bot configuration.</p>
+<p>Moreover, if you wish to add a custom name to an intent you may use the <code>Name</code> attribute as shown below.</p>
+<pre><code class="lang-csharp">[Expression(&quot;Find a hotel nearby&quot;)]
 [Name(&quot;nearestHotel&quot;)]
 public void FindHotel(Context context, Result result)
-</code></pre><p sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="58" sourceendlinenumber="58">As a <code>Name</code> attribute has been used, the name of the above intent during serialization will <code>nearestHotel</code>.</p>
-<p sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="60" sourceendlinenumber="60"><strong>Note:</strong> Value of the <code>UseFullIntentName</code> property in bot configuration gets ignored if a developer explicitly specifies an intent name using the <code>Name</code> attribute.</p>
-<h2 id="default-intent" sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="63" sourceendlinenumber="63">Default Intent</h2>
-<p sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="65" sourceendlinenumber="65">A <code>Default</code> intent is an intent that is invoked if the user input doesn&#39;t match any existing regular intent. If none of the added <em>Dialogs</em> have a default Intent, Oscova adds an internal <em>default</em> intent with no action.</p>
-<p sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="67" sourceendlinenumber="67">To create a <em>Default</em> intent for a Dialog. Create an Intent and decorate it with an <em>empty</em> Expression as shown below.</p>
-<pre sourcefile="tutorial/bot/oscova/intent.md" sourcestartlinenumber="69" sourceendlinenumber="75"><code class="lang-csharp">[Expression]
+</code></pre><p>As a <code>Name</code> attribute has been used, the name of the above intent during serialization will <code>nearestHotel</code>.</p>
+<p><strong>Note:</strong> Value of the <code>UseFullIntentName</code> property in bot configuration gets ignored if a developer explicitly specifies an intent name using the <code>Name</code> attribute.</p>
+<h2 id="default-intent">Default Intent</h2>
+<p>A <code>Default</code> intent is an intent that is invoked if the user input doesn&#39;t match any existing regular intent. If none of the added <em>Dialogs</em> have a default Intent, Oscova adds an internal <em>default</em> intent with no action.</p>
+<p>To create a <em>Default</em> intent for a Dialog. Create an Intent and decorate it with an <em>empty</em> Expression as shown below.</p>
+<pre><code class="lang-csharp">[Expression]
 public void Default(Context context, Result result)
 {
     result.Send(&quot;Can you please rephrase that for me?&quot;);

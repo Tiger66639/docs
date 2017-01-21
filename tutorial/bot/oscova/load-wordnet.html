@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>Loading WordNet Database  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Loading WordNet Database ">
-    <meta name="generator" content="docfx 2.6.1.0">
+    <meta name="generator" content="docfx 2.10.2.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -98,36 +98,36 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="loading-wordnet-database" sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="1" sourceendlinenumber="1">Loading WordNet Database</h1>
+              <h1 id="loading-wordnet-database">Loading WordNet Database</h1>
               
-<p sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="3" sourceendlinenumber="3">In order to enable better semantic analysis of tokens in user input it is highly recommended that <em>WordNet</em> source files are loaded into Oscova before training. <em>WordNet</em> being a lexical database enchances Oscova&#39;s capability of find semantic relatedness between words.</p>
-<p sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="5" sourceendlinenumber="5"><em>WordNet® is a registered trademark of Princeton University.</em></p>
-<h2 id="loading-files" sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="7" sourceendlinenumber="7">Loading Files</h2>
-<p sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="9" sourceendlinenumber="9">To load <em>WordNet</em> lexical database files into Oscova you can make use of the <code>AddDataSource</code> and <code>AddIndexSource</code> methods available on the <code>WordNet</code> property. Each file must be passed in via a <code>StreamReader</code> and the appropriate <code>PartOfSpeech</code> addressed by the files must be specified.</p>
-<p sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="11" sourceendlinenumber="11">There are 4 main parts of speech for which we&#39;ll need to load data.</p>
-<ul sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="13" sourceendlinenumber="16">
-<li sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="13" sourceendlinenumber="13">Adjective</li>
-<li sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="14" sourceendlinenumber="14">Adverb</li>
-<li sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="15" sourceendlinenumber="15">Noun</li>
-<li sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="16" sourceendlinenumber="16">Verb</li>
+<p>In order to enable better semantic analysis of tokens in user input it is highly recommended that <em>WordNet</em> source files are loaded into Oscova before training. <em>WordNet</em> being a lexical database enchances Oscova&#39;s capability of find semantic relatedness between words.</p>
+<p><em>WordNet® is a registered trademark of Princeton University.</em></p>
+<h2 id="loading-files">Loading Files</h2>
+<p>To load <em>WordNet</em> lexical database files into Oscova you can make use of the <code>AddDataSource</code> and <code>AddIndexSource</code> methods available on the <code>WordNet</code> property. Each file must be passed in via a <code>StreamReader</code> and the appropriate <code>PartOfSpeech</code> addressed by the files must be specified.</p>
+<p>There are 4 main parts of speech for which we&#39;ll need to load data.</p>
+<ul>
+<li>Adjective</li>
+<li>Adverb</li>
+<li>Noun</li>
+<li>Verb</li>
 </ul>
-<p sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="18" sourceendlinenumber="18">The following are the names of database files that need to be loaded into the WordNet engine.</p>
-<p sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="20" sourceendlinenumber="20"><strong>Data:</strong> Added via <code>AddDataSource</code> method.</p>
-<ul sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="22" sourceendlinenumber="25">
-<li sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="22" sourceendlinenumber="22"><em>data.adj</em></li>
-<li sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="23" sourceendlinenumber="23"><em>data.adv</em></li>
-<li sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="24" sourceendlinenumber="24"><em>data.noun</em></li>
-<li sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="25" sourceendlinenumber="25"><em>data.verb</em></li>
+<p>The following are the names of database files that need to be loaded into the WordNet engine.</p>
+<p><strong>Data:</strong> Added via <code>AddDataSource</code> method.</p>
+<ul>
+<li><em>data.adj</em></li>
+<li><em>data.adv</em></li>
+<li><em>data.noun</em></li>
+<li><em>data.verb</em></li>
 </ul>
-<p sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="27" sourceendlinenumber="27"><strong>Index:</strong> Added via <code>AddIndexSource</code> method.</p>
-<ul sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="29" sourceendlinenumber="32">
-<li sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="29" sourceendlinenumber="29"><em>index.adj</em></li>
-<li sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="30" sourceendlinenumber="30"><em>index.adv</em></li>
-<li sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="31" sourceendlinenumber="31"><em>index.noun</em></li>
-<li sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="32" sourceendlinenumber="32"><em>index.verb</em></li>
+<p><strong>Index:</strong> Added via <code>AddIndexSource</code> method.</p>
+<ul>
+<li><em>index.adj</em></li>
+<li><em>index.adv</em></li>
+<li><em>index.noun</em></li>
+<li><em>index.verb</em></li>
 </ul>
-<p sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="35" sourceendlinenumber="35"><strong>Example</strong></p>
-<pre sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="36" sourceendlinenumber="59"><code class="lang-csharp">var bot = new OscovaBot();
+<p><strong>Example</strong></p>
+<pre><code class="lang-csharp">var bot = new OscovaBot();
 var wordNet = bot.Language.WordNet;
 const string directory = @&quot;D:\WordNet\dict&quot;;
 
@@ -149,8 +149,8 @@ wordNet.Load();
 ...
 
 bot.Train();
-</code></pre><p sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="61" sourceendlinenumber="61"><em>*Note: </em>* Loading of <em>WordNet</em> files may take a couple of seconds.</p>
-<p sourcefile="tutorial/bot/oscova/load-wordnet.md" sourcestartlinenumber="63" sourceendlinenumber="63">After adding the source files, you <em>must</em> call the <code>WordNet.Load()</code> method. Once the load completes, Oscova will automatically detect the change and will start using <em>WordNet</em> to find lexical relations between words and their senses while scoring intents.</p>
+</code></pre><p><em>*Note: ** Loading of *WordNet</em> files may take a couple of seconds.</p>
+<p>After adding the source files, you <em>must</em> call the <code>WordNet.Load()</code> method. Once the load completes, Oscova will automatically detect the change and will start using <em>WordNet</em> to find lexical relations between words and their senses while scoring intents.</p>
 
             </article>
           </div>

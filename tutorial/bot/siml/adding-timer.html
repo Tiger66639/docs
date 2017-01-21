@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>Adding a Timer  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Adding a Timer ">
-    <meta name="generator" content="docfx 2.6.1.0">
+    <meta name="generator" content="docfx 2.10.2.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -98,18 +98,18 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="adding-a-timer" sourcefile="tutorial/bot/siml/adding-timer.md" sourcestartlinenumber="2" sourceendlinenumber="2">Adding a Timer</h1>
+              <h1 id="adding-a-timer">Adding a Timer</h1>
               
-<p sourcefile="tutorial/bot/siml/adding-timer.md" sourcestartlinenumber="4" sourceendlinenumber="4">SIML has some adapters that will need a <strong>Timer</strong> to function properly. It is upto the developer to create a Timer that calls the <code>PerformTick</code> method at regular intervals to provide a timing mechanism.</p>
-<p sourcefile="tutorial/bot/siml/adding-timer.md" sourcestartlinenumber="6" sourceendlinenumber="6">In the example code below we create a new <code>System.Timers.Timer</code> that calls the <code>PerformTick</code> method on bot timer.</p>
-<pre sourcefile="tutorial/bot/siml/adding-timer.md" sourcestartlinenumber="8" sourceendlinenumber="16"><code class="lang-csharp">var simlBot = new SimlBot();
+<p>SIML has some adapters that will need a <strong>Timer</strong> to function properly. It is upto the developer to create a Timer that calls the <code>PerformTick</code> method at regular intervals to provide a timing mechanism.</p>
+<p>In the example code below we create a new <code>System.Timers.Timer</code> that calls the <code>PerformTick</code> method on bot timer.</p>
+<pre><code class="lang-csharp">var simlBot = new SimlBot();
 ServiceTimer = new Timer { Interval = TimeSpan.FromSeconds(1).TotalMilliseconds };
 ServiceTimer.Elapsed += (sender, args) =&gt;
 {
     simlBot.Timer.PerformTick();
 };
 ServiceTimer.Start();
-</code></pre><blockquote sourcefile="tutorial/bot/siml/adding-timer.md" sourcestartlinenumber="18" sourceendlinenumber="18"><p sourcefile="tutorial/bot/siml/adding-timer.md" sourcestartlinenumber="18" sourceendlinenumber="18">The <code>Late</code> adapter needs a <strong>Timer</strong> to work.</p>
+</code></pre><blockquote><p>The <code>Late</code> adapter needs a <strong>Timer</strong> to work.</p>
 </blockquote>
 
             </article>

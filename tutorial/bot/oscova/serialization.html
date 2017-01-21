@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>Serialization  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Serialization ">
-    <meta name="generator" content="docfx 2.6.1.0">
+    <meta name="generator" content="docfx 2.10.2.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -98,14 +98,14 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="serialization" sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="1" sourceendlinenumber="1">Serialization</h1>
+              <h1 id="serialization">Serialization</h1>
               
-<p sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="3" sourceendlinenumber="3">Oscova comes with in-built support for serialization of evaluation results and bot responses. The internal serialization option ensures that all essential details are available and also that the size foot-print is the least. For example, empty resolutions, parametric and array values are not included.</p>
-<p sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="5" sourceendlinenumber="5">Using the serialization option developers can connect the Oscova evaluation results to execute actions or display prompts in custom applications that may not be running Oscova Bot locally.</p>
-<h2 id="evaluation-result" sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="7" sourceendlinenumber="7">Evaluation Result</h2>
-<p sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="9" sourceendlinenumber="9">When an <code>EvaluationResult</code> is returned after evaluation. Calling the <code>Serialize()</code> method yields the result in JSON in the following format.</p>
-<p sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="11" sourceendlinenumber="11"><strong>Example</strong></p>
-<pre sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="13" sourceendlinenumber="39"><code class="lang-json">{
+<p>Oscova comes with in-built support for serialization of evaluation results and bot responses. The internal serialization option ensures that all essential details are available and also that the size foot-print is the least. For example, empty resolutions, parametric and array values are not included.</p>
+<p>Using the serialization option developers can connect the Oscova evaluation results to execute actions or display prompts in custom applications that may not be running Oscova Bot locally.</p>
+<h2 id="evaluation-result">Evaluation Result</h2>
+<p>When an <code>EvaluationResult</code> is returned after evaluation. Calling the <code>Serialize()</code> method yields the result in JSON in the following format.</p>
+<p><strong>Example</strong></p>
+<pre><code class="lang-json">{
   &quot;query&quot;: &quot;large pizza with pepperoni&quot;,
   &quot;sessionId&quot;: &quot;489746c0-1a4f-4572-947b-0f5680cfc28a&quot;,
   &quot;intents&quot;: [
@@ -130,8 +130,8 @@
   ],
   &quot;contexts&quot;: [ ]
 }
-</code></pre><p sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="41" sourceendlinenumber="41">A typical <em>result</em> object has the following properties.</p>
-<table sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="43" sourceendlinenumber="49">
+</code></pre><p>A typical <em>result</em> object has the following properties.</p>
+<table>
 <thead>
 <tr>
 <th style="text-align:left">Property</th>
@@ -161,20 +161,20 @@
 </tr>
 </tbody>
 </table>
-<h3 id="intents" sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="51" sourceendlinenumber="51">Intents</h3>
-<p sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="53" sourceendlinenumber="53"><strong>Example Intent</strong></p>
-<pre sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="55" sourceendlinenumber="60"><code class="lang-json">{
+<h3 id="intents">Intents</h3>
+<p><strong>Example Intent</strong></p>
+<pre><code class="lang-json">{
   &quot;intent&quot;: &quot;PizzaDialog.PizzaWithToppings&quot;,
   &quot;score&quot;: 0.81532331423326
 }
-</code></pre><p sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="62" sourceendlinenumber="62"><strong>Example Intent with Prompt</strong></p>
-<pre sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="64" sourceendlinenumber="70"><code class="lang-json">{
+</code></pre><p><strong>Example Intent with Prompt</strong></p>
+<pre><code class="lang-json">{
   &quot;intent&quot;: &quot;RestaurantDialog.FindRestaurant&quot;,
   &quot;score&quot;: 0.715634952,
   &quot;prompt&quot;: &quot;Please specify a location.&quot;
 }
-</code></pre><p sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="72" sourceendlinenumber="72">An <em>intent</em> object has 3 properties.</p>
-<table sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="74" sourceendlinenumber="78">
+</code></pre><p>An <em>intent</em> object has 3 properties.</p>
+<table>
 <thead>
 <tr>
 <th style="text-align:left">Property</th>
@@ -196,22 +196,22 @@
 </tr>
 </tbody>
 </table>
-<h3 id="entities" sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="80" sourceendlinenumber="80">Entities</h3>
-<p sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="82" sourceendlinenumber="82"><strong>Example Entity</strong></p>
-<pre sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="84" sourceendlinenumber="89"><code class="lang-json">{
+<h3 id="entities">Entities</h3>
+<p><strong>Example Entity</strong></p>
+<pre><code class="lang-json">{
   &quot;entity&quot;: &quot;pepperoni&quot;,
   &quot;type&quot;: &quot;toppings&quot;
 }
-</code></pre><p sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="91" sourceendlinenumber="91"><strong>Example Entity with Resolution</strong></p>
-<pre sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="93" sourceendlinenumber="101"><code class="lang-json">{
+</code></pre><p><strong>Example Entity with Resolution</strong></p>
+<pre><code class="lang-json">{
   &quot;entity&quot;: &quot;tomorrow&quot;,
   &quot;type&quot;: &quot;sys.date&quot;,
   &quot;resolution&quot;: {
     &quot;date&quot;: &quot;2017-01-05&quot;
   }
 }
-</code></pre><p sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="103" sourceendlinenumber="103">An <em>entity</em> object has 3 properties.</p>
-<table sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="105" sourceendlinenumber="109">
+</code></pre><p>An <em>entity</em> object has 3 properties.</p>
+<table>
 <thead>
 <tr>
 <th style="text-align:left">Property</th>
@@ -233,14 +233,14 @@
 </tr>
 </tbody>
 </table>
-<h3 id="contexts" sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="111" sourceendlinenumber="111">Contexts</h3>
-<p sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="113" sourceendlinenumber="113"><strong>Example Context</strong></p>
-<pre sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="115" sourceendlinenumber="120"><code class="lang-json">{
+<h3 id="contexts">Contexts</h3>
+<p><strong>Example Context</strong></p>
+<pre><code class="lang-json">{
   &quot;name&quot;: &quot;order_confirmation&quot;,
   &quot;lifespan&quot;: 5
 }
-</code></pre><p sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="122" sourceendlinenumber="122"><strong>Example Context with Parameter</strong></p>
-<pre sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="124" sourceendlinenumber="133"><code class="lang-json">{
+</code></pre><p><strong>Example Context with Parameter</strong></p>
+<pre><code class="lang-json">{
   &quot;name&quot;: &quot;video_playback&quot;,
   &quot;lifespan&quot;: 5,
   &quot;parameters&quot;: {
@@ -248,8 +248,8 @@
     &quot;value&quot;: &quot;Life_is_Beautiful&quot;
   }
 }
-</code></pre><p sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="135" sourceendlinenumber="135">A <em>Context</em> object has 3 properties.</p>
-<table sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="137" sourceendlinenumber="141">
+</code></pre><p>A <em>Context</em> object has 3 properties.</p>
+<table>
 <thead>
 <tr>
 <th style="text-align:left">Property</th>
@@ -271,8 +271,8 @@
 </tr>
 </tbody>
 </table>
-<p sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="143" sourceendlinenumber="143">A <em>Parameter</em> object has 2 properties.</p>
-<table sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="145" sourceendlinenumber="148">
+<p>A <em>Parameter</em> object has 2 properties.</p>
+<table>
 <thead>
 <tr>
 <th style="text-align:left">Property</th>
@@ -290,23 +290,23 @@
 </tr>
 </tbody>
 </table>
-<h2 id="response" sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="150" sourceendlinenumber="150">Response</h2>
-<p sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="152" sourceendlinenumber="152">A instance of the <code>Response</code> class can also be serialized using the <code>Serialize()</code> method.</p>
-<p sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="154" sourceendlinenumber="154"><strong>Example Response</strong></p>
-<pre sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="156" sourceendlinenumber="162"><code class="lang-json">{
+<h2 id="response">Response</h2>
+<p>A instance of the <code>Response</code> class can also be serialized using the <code>Serialize()</code> method.</p>
+<p><strong>Example Response</strong></p>
+<pre><code class="lang-json">{
   &quot;text&quot;: &quot;App opened&quot;,
   &quot;type&quot;: &quot;message&quot;,
   &quot;format&quot;: &quot;plain&quot;,
 }
-</code></pre><p sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="164" sourceendlinenumber="164"><strong>Example Response with Hint</strong></p>
-<pre sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="166" sourceendlinenumber="173"><code class="lang-json">{
+</code></pre><p><strong>Example Response with Hint</strong></p>
+<pre><code class="lang-json">{
   &quot;text&quot;: &quot;Are you sure?&quot;,
   &quot;type&quot;: &quot;message&quot;,
   &quot;format&quot;: &quot;plain&quot;,
   &quot;hint&quot;: &quot;Yes|No&quot;
 }
-</code></pre><p sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="175" sourceendlinenumber="175">A typical <em>response</em> object has the following propperties.</p>
-<table sourcefile="tutorial/bot/oscova/serialization.md" sourcestartlinenumber="177" sourceendlinenumber="182">
+</code></pre><p>A typical <em>response</em> object has the following propperties.</p>
+<table>
 <thead>
 <tr>
 <th style="text-align:left">Property</th>

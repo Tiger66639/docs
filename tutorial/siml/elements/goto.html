@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>Goto  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Goto ">
-    <meta name="generator" content="docfx 2.6.1.0">
+    <meta name="generator" content="docfx 2.10.2.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -98,9 +98,9 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="goto" sourcefile="tutorial/siml/elements/goto.md" sourcestartlinenumber="1" sourceendlinenumber="1">Goto</h1>
+              <h1 id="goto">Goto</h1>
               
-<table sourcefile="tutorial/siml/elements/goto.md" sourcestartlinenumber="3" sourceendlinenumber="7">
+<table>
 <thead>
 <tr>
 <th><strong>Annotation</strong></th>
@@ -122,10 +122,10 @@
 </tr>
 </tbody>
 </table>
-<p sourcefile="tutorial/siml/elements/goto.md" sourcestartlinenumber="9" sourceendlinenumber="9">Once you have caught a pattern at some point you may want to redirect the pattern-search to a different value. The value of the <code>Goto</code> element tells the Bot that it should recursively use the pattern defined within it and search for a response. <code>Goto</code> element plays a major role in breaking down complex sentences into simpler ones.</p>
-<p sourcefile="tutorial/siml/elements/goto.md" sourcestartlinenumber="11" sourceendlinenumber="11"><em>Example</em></p>
-<p sourcefile="tutorial/siml/elements/goto.md" sourcestartlinenumber="13" sourceendlinenumber="13"><strong>SIML</strong></p>
-<pre sourcefile="tutorial/siml/elements/goto.md" sourcestartlinenumber="15" sourceendlinenumber="33"><code class="lang-xml">&lt;Model&gt;
+<p>Once you have caught a pattern at some point you may want to redirect the pattern-search to a different value. The value of the <code>Goto</code> element tells the Bot that it should recursively use the pattern defined within it and search for a response. <code>Goto</code> element plays a major role in breaking down complex sentences into simpler ones.</p>
+<p><em>Example</em></p>
+<p><strong>SIML</strong></p>
+<pre><code class="lang-xml">&lt;Model&gt;
  &lt;Pattern&gt;WHAT DO YOU THINK OF SIML&lt;/Pattern&gt;
  &lt;Response&gt;I think it&#39;s awesome.&lt;/Response&gt;
 &lt;/Model&gt;
@@ -142,18 +142,18 @@
  &lt;Pattern&gt;I AGREE&lt;/Pattern&gt;
  &lt;Response&gt;Fantastic!&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><p sourcefile="tutorial/siml/elements/goto.md" sourcestartlinenumber="35" sourceendlinenumber="35"><strong>User Input</strong></p>
-<ol sourcefile="tutorial/siml/elements/goto.md" sourcestartlinenumber="37" sourceendlinenumber="38">
-<li sourcefile="tutorial/siml/elements/goto.md" sourcestartlinenumber="37" sourceendlinenumber="37"><em>What do you think of SIML?</em></li>
-<li sourcefile="tutorial/siml/elements/goto.md" sourcestartlinenumber="38" sourceendlinenumber="38"><em>I Totally Agree</em></li>
+</code></pre><p><strong>User Input</strong></p>
+<ol>
+<li><em>What do you think of SIML?</em></li>
+<li><em>I Totally Agree</em></li>
 </ol>
-<p sourcefile="tutorial/siml/elements/goto.md" sourcestartlinenumber="40" sourceendlinenumber="40"><strong>Bot Output</strong></p>
-<ol sourcefile="tutorial/siml/elements/goto.md" sourcestartlinenumber="42" sourceendlinenumber="43">
-<li sourcefile="tutorial/siml/elements/goto.md" sourcestartlinenumber="42" sourceendlinenumber="42"><em>I think it’s awesome</em></li>
-<li sourcefile="tutorial/siml/elements/goto.md" sourcestartlinenumber="43" sourceendlinenumber="43"><em>Fantastic!</em></li>
+<p><strong>Bot Output</strong></p>
+<ol>
+<li><em>I think it’s awesome</em></li>
+<li><em>Fantastic!</em></li>
 </ol>
-<p sourcefile="tutorial/siml/elements/goto.md" sourcestartlinenumber="45" sourceendlinenumber="45"><strong>Explanation</strong></p>
-<blockquote sourcefile="tutorial/siml/elements/goto.md" sourcestartlinenumber="47" sourceendlinenumber="47"><p sourcefile="tutorial/siml/elements/goto.md" sourcestartlinenumber="47" sourceendlinenumber="47">When the user says <strong><em>I totally agree</em></strong>. It matches the second Model’s pattern which in-turn tells the Bot that it should redirect the pattern search to <strong><em>I Agree</em></strong>.</p>
+<p><strong>Explanation</strong></p>
+<blockquote><p>When the user says <strong><em>I totally agree</em></strong>. It matches the second Model’s pattern which in-turn tells the Bot that it should redirect the pattern search to <strong><em>I Agree</em></strong>.</p>
 </blockquote>
 
             </article>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>Bot Configuration  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Bot Configuration ">
-    <meta name="generator" content="docfx 2.6.1.0">
+    <meta name="generator" content="docfx 2.10.2.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -98,39 +98,39 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="bot-configuration" sourcefile="tutorial/bot/oscova/configuration.md" sourcestartlinenumber="1" sourceendlinenumber="1">Bot Configuration</h1>
+              <h1 id="bot-configuration">Bot Configuration</h1>
               
-<p sourcefile="tutorial/bot/oscova/configuration.md" sourcestartlinenumber="3" sourceendlinenumber="3">In V1 we have added the most essential configuration options to the <code>BotConfiguration</code> class. Developers can fiddle around these settings to customize their Bot.</p>
-<h2 id="requiredrecognizersonly" sourcefile="tutorial/bot/oscova/configuration.md" sourcestartlinenumber="5" sourceendlinenumber="5"><code>RequiredRecognizersOnly</code></h2>
-<p sourcefile="tutorial/bot/oscova/configuration.md" sourcestartlinenumber="7" sourceendlinenumber="7">Gets or sets a value indicating if the Bot should only load required parsers based on the <em>entity types</em> used in declared Expressions.</p>
-<p sourcefile="tutorial/bot/oscova/configuration.md" sourcestartlinenumber="9" sourceendlinenumber="9"><strong>Default:</strong> <em>false</em></p>
-<h2 id="minimumscore" sourcefile="tutorial/bot/oscova/configuration.md" sourcestartlinenumber="11" sourceendlinenumber="11"><code>MinimumScore</code></h2>
-<p sourcefile="tutorial/bot/oscova/configuration.md" sourcestartlinenumber="13" sourceendlinenumber="13">The <em>absolute</em> minimum score an intent must have to be added to the <code>EvaluationResult</code>.</p>
-<p sourcefile="tutorial/bot/oscova/configuration.md" sourcestartlinenumber="15" sourceendlinenumber="15"><strong>Default:</strong> <em>0.05</em></p>
-<h2 id="maxintentcount" sourcefile="tutorial/bot/oscova/configuration.md" sourcestartlinenumber="17" sourceendlinenumber="17"><code>MaxIntentCount</code></h2>
-<p sourcefile="tutorial/bot/oscova/configuration.md" sourcestartlinenumber="19" sourceendlinenumber="19">The maximum number of high scoring intents to collect during request evaluation. Increasing or decreasing the value has no impact on the number of expressions evaluated by the Bot.</p>
-<p sourcefile="tutorial/bot/oscova/configuration.md" sourcestartlinenumber="21" sourceendlinenumber="21"><strong>Default:</strong> <em>5</em></p>
-<h2 id="matchmode" sourcefile="tutorial/bot/oscova/configuration.md" sourcestartlinenumber="23" sourceendlinenumber="23"><code>MatchMode</code></h2>
-<p sourcefile="tutorial/bot/oscova/configuration.md" sourcestartlinenumber="25" sourceendlinenumber="25">The mode to use for matching expressions to user input.</p>
-<p sourcefile="tutorial/bot/oscova/configuration.md" sourcestartlinenumber="27" sourceendlinenumber="27"><strong>Note:</strong> <em>DeepLearning</em> mode greatly increases the training time and must only be used in server-client configurations.</p>
-<p sourcefile="tutorial/bot/oscova/configuration.md" sourcestartlinenumber="29" sourceendlinenumber="29"><strong>Default:</strong> <em>ProcessingMode.NLP</em></p>
-<h2 id="rulescoredependency" sourcefile="tutorial/bot/oscova/configuration.md" sourcestartlinenumber="31" sourceendlinenumber="31"><code>RuleScoreDependency</code></h2>
-<p sourcefile="tutorial/bot/oscova/configuration.md" sourcestartlinenumber="33" sourceendlinenumber="33">When machine learning is enabled the Bot uses the value of this variable to determine how much of the Rule based score (in percentage) is to be taken into consideration during score calibration.</p>
-<p sourcefile="tutorial/bot/oscova/configuration.md" sourcestartlinenumber="35" sourceendlinenumber="35"><strong>Default:</strong> <em>0.6</em> (i.e. 60 percent)</p>
-<h2 id="contextlifespan" sourcefile="tutorial/bot/oscova/configuration.md" sourcestartlinenumber="37" sourceendlinenumber="37"><code>ContextLifespan</code></h2>
-<p sourcefile="tutorial/bot/oscova/configuration.md" sourcestartlinenumber="39" sourceendlinenumber="39">The default lifespan of any context item that gets added to the user&#39;s context during a user session.</p>
-<p sourcefile="tutorial/bot/oscova/configuration.md" sourcestartlinenumber="41" sourceendlinenumber="41"><em>*Default: </em>* <em>5</em></p>
-<h2 id="machinelearningrate" sourcefile="tutorial/bot/oscova/configuration.md" sourcestartlinenumber="43" sourceendlinenumber="43"><code>MachineLearningRate</code></h2>
-<p sourcefile="tutorial/bot/oscova/configuration.md" sourcestartlinenumber="45" sourceendlinenumber="45">The machine learning rate to use when the Bot is being trained in <code>RuleAndML</code> match mode. Lower value increase the time to train the Bot but <em>may</em> lead to better results.</p>
-<p sourcefile="tutorial/bot/oscova/configuration.md" sourcestartlinenumber="47" sourceendlinenumber="47"><strong>Default:</strong> <em>0.25</em></p>
-<h2 id="showintentinterpretation" sourcefile="tutorial/bot/oscova/configuration.md" sourcestartlinenumber="49" sourceendlinenumber="49"><code>ShowIntentInterpretation</code></h2>
-<p sourcefile="tutorial/bot/oscova/configuration.md" sourcestartlinenumber="51" sourceendlinenumber="51">During serialization of evaluation result the Bot uses the value of this variable to determine if intent <em>interpretation</em> value is to be included.</p>
-<p sourcefile="tutorial/bot/oscova/configuration.md" sourcestartlinenumber="53" sourceendlinenumber="53"><strong>Default:</strong> <em>false</em></p>
-<h2 id="usefullintentname" sourcefile="tutorial/bot/oscova/configuration.md" sourcestartlinenumber="55" sourceendlinenumber="55"><code>UseFullIntentName</code></h2>
-<p sourcefile="tutorial/bot/oscova/configuration.md" sourcestartlinenumber="57" sourceendlinenumber="57">The value of this property indicates if the <em>name</em> of an intent must be a combination of the name of <em>dialog</em> class and the <em>intent method</em> name.</p>
-<p sourcefile="tutorial/bot/oscova/configuration.md" sourcestartlinenumber="59" sourceendlinenumber="59">For example if you have an intent <em>WeatherByLocation</em> in a dialog named <em>WeatherDialog</em> the name of the intent becaomes <em>WeatherDialog.WeatherByLocation</em>.</p>
-<p sourcefile="tutorial/bot/oscova/configuration.md" sourcestartlinenumber="61" sourceendlinenumber="61">It is recommended that the value of this property is set to <code>true</code> to avoid conflicts between similar intent names in different dialogs.</p>
-<p sourcefile="tutorial/bot/oscova/configuration.md" sourcestartlinenumber="63" sourceendlinenumber="63"><strong>Default:</strong> <em>true</em></p>
+<p>In V1 we have added the most essential configuration options to the <code>BotConfiguration</code> class. Developers can fiddle around these settings to customize their Bot.</p>
+<h2 id="requiredrecognizersonly"><code>RequiredRecognizersOnly</code></h2>
+<p>Gets or sets a value indicating if the Bot should only load required parsers based on the <em>entity types</em> used in declared Expressions.</p>
+<p><strong>Default:</strong> <em>false</em></p>
+<h2 id="minimumscore"><code>MinimumScore</code></h2>
+<p>The <em>absolute</em> minimum score an intent must have to be added to the <code>EvaluationResult</code>.</p>
+<p><strong>Default:</strong> <em>0.05</em></p>
+<h2 id="maxintentcount"><code>MaxIntentCount</code></h2>
+<p>The maximum number of high scoring intents to collect during request evaluation. Increasing or decreasing the value has no impact on the number of expressions evaluated by the Bot.</p>
+<p><strong>Default:</strong> <em>5</em></p>
+<h2 id="matchmode"><code>MatchMode</code></h2>
+<p>The mode to use for matching expressions to user input.</p>
+<p><strong>Note:</strong> <em>DeepLearning</em> mode greatly increases the training time and must only be used in server-client configurations.</p>
+<p><strong>Default:</strong> <em>ProcessingMode.NLP</em></p>
+<h2 id="rulescoredependency"><code>RuleScoreDependency</code></h2>
+<p>When machine learning is enabled the Bot uses the value of this variable to determine how much of the Rule based score (in percentage) is to be taken into consideration during score calibration.</p>
+<p><strong>Default:</strong> <em>0.6</em> (i.e. 60 percent)</p>
+<h2 id="contextlifespan"><code>ContextLifespan</code></h2>
+<p>The default lifespan of any context item that gets added to the user&#39;s context during a user session.</p>
+<p><em>*Default: ** *5</em></p>
+<h2 id="machinelearningrate"><code>MachineLearningRate</code></h2>
+<p>The machine learning rate to use when the Bot is being trained in <code>RuleAndML</code> match mode. Lower value increase the time to train the Bot but <em>may</em> lead to better results.</p>
+<p><strong>Default:</strong> <em>0.25</em></p>
+<h2 id="showintentinterpretation"><code>ShowIntentInterpretation</code></h2>
+<p>During serialization of evaluation result the Bot uses the value of this variable to determine if intent <em>interpretation</em> value is to be included.</p>
+<p><strong>Default:</strong> <em>false</em></p>
+<h2 id="usefullintentname"><code>UseFullIntentName</code></h2>
+<p>The value of this property indicates if the <em>name</em> of an intent must be a combination of the name of <em>dialog</em> class and the <em>intent method</em> name.</p>
+<p>For example if you have an intent <em>WeatherByLocation</em> in a dialog named <em>WeatherDialog</em> the name of the intent becaomes <em>WeatherDialog.WeatherByLocation</em>.</p>
+<p>It is recommended that the value of this property is set to <code>true</code> to avoid conflicts between similar intent names in different dialogs.</p>
+<p><strong>Default:</strong> <em>true</em></p>
 
             </article>
           </div>
