@@ -38,7 +38,7 @@
   document.addEventListener('gitter-sidecar-instance-started', function(e) {
     var chat = e.detail.chat;
     chat.options.activationElement.forEach(function(activationElement) {
-      activationElement.innerHTML = 'Developer Lobby'
+      activationElement.innerHTML = 'Community Lobby'
     });
   });
   </script>
@@ -138,8 +138,8 @@ simlBot.Learning += SimlBot_Learning;
     &lt;/Model&gt;
   &lt;/Concept&gt;
 &lt;/Siml&gt;
-</code></pre><blockquote><p>Because in our Learn element we didn’t explicitly specify a Concept the Concept part gets derived from the Concept to which the Learn element belonged to.</p>
-</blockquote>
+</code></pre><div class="NOTE"><h5>Note</h5><p>Because in our Learn element we didn’t explicitly specify a Concept the Concept part gets derived from the Concept to which the Learn element belonged to.</p>
+</div>
 <p>Now, Once you’ve saved the document to a disk file you can any time load the saved document back into the Bot’s graph (If you restart the Bot later on) by using the following code. All the code does is creates a filePath variable that points to the SIML file to be loaded and then creates an XDocument by using the XDocument.Load method and later adds the document to the Bot using the AddSiml method, the overload of which accepts an XElement. The XElement MUST be the root Siml element</p>
 <pre><code class="lang-csharp">var simlBot = new SimlBot();
 var filePath = Path.Combine(Directory.GetCurrentDirectory(), &quot;Learned.siml&quot;);

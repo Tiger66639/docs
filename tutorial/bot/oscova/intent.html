@@ -38,7 +38,7 @@
   document.addEventListener('gitter-sidecar-instance-started', function(e) {
     var chat = e.detail.chat;
     chat.options.activationElement.forEach(function(activationElement) {
-      activationElement.innerHTML = 'Developer Lobby'
+      activationElement.innerHTML = 'Community Lobby'
     });
   });
   </script>
@@ -143,7 +143,8 @@ public void Weather(Context context, Result result)
 [Name(&quot;nearestHotel&quot;)]
 public void FindHotel(Context context, Result result)
 </code></pre><p>As a <code>Name</code> attribute has been used, the name of the above intent during serialization will <code>nearestHotel</code>.</p>
-<p><strong>Note:</strong> Value of the <code>UseFullIntentName</code> property in bot configuration gets ignored if a developer explicitly specifies an intent name using the <code>Name</code> attribute.</p>
+<div class="NOTE"><h5>Note</h5><p>Value of the <code>UseFullIntentName</code> property in bot configuration gets ignored if a developer explicitly specifies an intent name using the <code>Name</code> attribute.</p>
+</div>
 <h2 id="default-intent">Default Intent</h2>
 <p>A <code>Default</code> intent is an intent that is invoked if the user input doesn&#39;t match any existing regular intent. If none of the added <em>Dialogs</em> have a default Intent, Oscova adds an internal <em>default</em> intent with no action.</p>
 <p>To create a <em>Default</em> intent for a Dialog. Create an Intent and decorate it with an <em>empty</em> Expression as shown below.</p>

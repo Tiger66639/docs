@@ -38,7 +38,7 @@
   document.addEventListener('gitter-sidecar-instance-started', function(e) {
     var chat = e.detail.chat;
     chat.options.activationElement.forEach(function(activationElement) {
-      activationElement.innerHTML = 'Developer Lobby'
+      activationElement.innerHTML = 'Community Lobby'
     });
   });
   </script>
@@ -106,8 +106,8 @@
 <pre><code class="lang-csharp">var bot = new OscovaBot();
 bot.CreateRecognizer(&quot;employee&quot;, new[] { &quot;Sean&quot;, &quot;Ali&quot;, &quot;Patel&quot; });
 </code></pre><p>The above code creates an <em>Entity Recognizer</em> for the type <code>employee</code>. If any of specified entry is found in user request and <code>Entity</code> of type <code>employee</code> will get added to the result.</p>
-<blockquote><p>Note: Any <em>entity recognizer</em> created by calling the <code>CreateRecognizer</code> gets added to the Bot&#39;s <code>Recognizers</code> collection.</p>
-</blockquote>
+<div class="NOTE"><h5>Note</h5><p>Any <em>entity recognizer</em> created by calling the <code>CreateRecognizer</code> gets added to the Bot&#39;s <code>Recognizers</code> collection.</p>
+</div>
 <p>You can also create an Entries Recognizer by creating an empty entries recognizer and later adding entry values as shown value.</p>
 <pre><code class="lang-csharp">var recognizer = bot.CreateRecognizer(&quot;employee&quot;);
 recognizer.Entries.Add(&quot;Sean&quot;);

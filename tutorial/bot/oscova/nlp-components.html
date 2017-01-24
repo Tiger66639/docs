@@ -38,7 +38,7 @@
   document.addEventListener('gitter-sidecar-instance-started', function(e) {
     var chat = e.detail.chat;
     chat.options.activationElement.forEach(function(activationElement) {
-      activationElement.innerHTML = 'Developer Lobby'
+      activationElement.innerHTML = 'Community Lobby'
     });
   });
   </script>
@@ -128,7 +128,8 @@
 <h2 id="normalization">Normalization</h2>
 <p>During the <em>normalization</em> process all added <em>filters</em> are applied by replacing matched words or texts with their replacement values and once the aforementioned process has completed punctuation marks are removed from the end of sentences.</p>
 <p>Oscova applies normalization prior to any other textual manipulation. By adding filters and applying normalizations developers can ensure common abbreviations and acronyms are addressed, junk words or texts are removed or converted into forms that help better entity recognition.</p>
-<p><strong>Note:</strong> Normalization doesn&#39;t remove <em>stop-words</em>.</p>
+<div class="NOTE"><h5>Note</h5><p>Normalization doesn&#39;t remove <em>stop-words</em>.</p>
+</div>
 <h2 id="punctuations">Punctuations</h2>
 <p>An array of common punctuation characters.</p>
 <p>Though punctuation marks may aid in interpretation, Oscova in V1 doesn&#39;t make use of punctuation marks during word sense disambiguation and hence punctuations at the end of sentences are truncated during the <em>normalization</em> process.</p>
@@ -143,7 +144,8 @@
 <p>A <em>stemmer</em> reduces words to the their root forms. The default <code>EnglishStemmer</code> is partially a <em>lemmatizer</em> that reduces words to their lemma. For example, the word <em>jumped</em> is reduced to <em>jump</em> and the word <em>having</em> is reduced to <em>have</em>. Despite the lemmatization behaviour of the <em>stemmer</em> we recommend still treating it as a normal stemmer.</p>
 <h2 id="lexical-database">Lexical Database</h2>
 <p>Especially for Oscova we have released <code>Syn.WordNet</code> library to help connect Oscova with  WordNet (a freely available lexical database). Connecting WordNet to Oscova greatly increases the scoring accuracy and NLP capabilities. If an external <em>lexical database</em> is added Oscova calls the <code>GetWordSimilarity</code> method found in the <code>ILexicalDatabase</code> interface.</p>
-<p><strong>Note:</strong> We highly recommend integrating <code>Syn.WordNet</code> with Oscova if your Bot is remotely deployed.</p>
+<div class="TIP"><h5>Tip</h5><p>We highly recommend integrating <code>Syn.WordNet</code> with Oscova if your Bot is remotely deployed.</p>
+</div>
 <h2 id="deep-learning-in-v2">Deep Learning (in V2)</h2>
 <p>In V1 the <code>ProcessingMode</code> option in <em>bot configuration</em> has been intentionally kept read-only. We are currently experimenting with a Deep Neural Network (DNN) design that has the fastest learning capabilities and extracts maximum number of relevant features from training samples. Once the architecture has been designed <code>DeepLearning</code> option will be enabled in V2.</p>
 

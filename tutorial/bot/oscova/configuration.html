@@ -38,7 +38,7 @@
   document.addEventListener('gitter-sidecar-instance-started', function(e) {
     var chat = e.detail.chat;
     chat.options.activationElement.forEach(function(activationElement) {
-      activationElement.innerHTML = 'Developer Lobby'
+      activationElement.innerHTML = 'Community Lobby'
     });
   });
   </script>
@@ -112,7 +112,8 @@
 <p><strong>Default:</strong> <em>5</em></p>
 <h2 id="matchmode"><code>MatchMode</code></h2>
 <p>The mode to use for matching expressions to user input.</p>
-<p><strong>Note:</strong> <em>DeepLearning</em> mode greatly increases the training time and must only be used in server-client configurations.</p>
+<div class="NOTE"><h5>Note</h5><p><em>DeepLearning</em> mode greatly increases the training time and must only be used in server-client configurations.</p>
+</div>
 <p><strong>Default:</strong> <em>ProcessingMode.NLP</em></p>
 <h2 id="rulescoredependency"><code>RuleScoreDependency</code></h2>
 <p>When machine learning is enabled the Bot uses the value of this variable to determine how much of the Rule based score (in percentage) is to be taken into consideration during score calibration.</p>

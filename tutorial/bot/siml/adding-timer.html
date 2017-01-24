@@ -38,7 +38,7 @@
   document.addEventListener('gitter-sidecar-instance-started', function(e) {
     var chat = e.detail.chat;
     chat.options.activationElement.forEach(function(activationElement) {
-      activationElement.innerHTML = 'Developer Lobby'
+      activationElement.innerHTML = 'Community Lobby'
     });
   });
   </script>
@@ -109,8 +109,8 @@ ServiceTimer.Elapsed += (sender, args) =&gt;
     simlBot.Timer.PerformTick();
 };
 ServiceTimer.Start();
-</code></pre><blockquote><p>The <code>Late</code> adapter needs a <strong>Timer</strong> to work.</p>
-</blockquote>
+</code></pre><div class="NOTE"><h5>Note</h5><p>The <code>Late</code> adapter needs a <strong>Timer</strong> to work.</p>
+</div>
 
             </article>
           </div>

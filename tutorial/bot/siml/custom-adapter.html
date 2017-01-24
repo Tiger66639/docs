@@ -38,7 +38,7 @@
   document.addEventListener('gitter-sidecar-instance-started', function(e) {
     var chat = e.detail.chat;
     chat.options.activationElement.forEach(function(activationElement) {
-      activationElement.innerHTML = 'Developer Lobby'
+      activationElement.innerHTML = 'Community Lobby'
     });
   });
   </script>
@@ -151,8 +151,8 @@
 </code></pre><h2 id="adding-an-adapter">Adding an Adapter</h2>
 <p>Once you’ve created an Adapter you should add it to the Adapters list of the Bot as shown below.</p>
 <pre><code class="lang-csharp">simlBot.Adapters.Add(new CustomAdapter());
-</code></pre><blockquote><p>You should add an Adapter once during initialization. Duplicate adapter entries are not allowed by the interpreter.</p>
-</blockquote>
+</code></pre><div class="NOTE"><h5>Note</h5><p>You should add an Adapter once during initialization. Duplicate adapter entries are not allowed by the interpreter.</p>
+</div>
 <h2 id="interacting-with-a-custom-adapter">Interacting with a Custom adapter</h2>
 <p>An added adapter can be used at run-time via SIML flawlessly. The output of the Adapter generated, after the Evaluate method is called, will get embedded within an SIML response.</p>
 <p><em>An example usage of the above <strong>Custom</strong> Adapter</em></p>

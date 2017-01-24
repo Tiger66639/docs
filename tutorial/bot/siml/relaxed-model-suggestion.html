@@ -38,7 +38,7 @@
   document.addEventListener('gitter-sidecar-instance-started', function(e) {
     var chat = e.detail.chat;
     chat.options.activationElement.forEach(function(activationElement) {
-      activationElement.innerHTML = 'Developer Lobby'
+      activationElement.innerHTML = 'Community Lobby'
     });
   });
   </script>
@@ -135,8 +135,8 @@
   &lt;/Example&gt;
   &lt;Response&gt;I am fine.&lt;/Response&gt;
 &lt;/Model&gt;
-</code></pre><blockquote><p>Based on Bot project requirements, developer must carefully choose between these configurations of writing SIML Models.</p>
-</blockquote>
+</code></pre><div class="TIP"><h5>Tip</h5><p>Based on Bot project requirements, developer must carefully choose between these configurations of writing SIML Models.</p>
+</div>
 <h2 id="auto-stripping-of-invalid-symbols">Auto stripping of invalid symbols</h2>
 <p>If the SIML interpreter detects a symbol in an <code>Example</code> item that is not valid or allowed in the context, the symbol is automatically removed. However, when <code>Suggestion</code> values are being regenerated the interpreter properly assembles all the symbols back into the example.</p>
 <h2 id="suggestion">Suggestion</h2>
@@ -196,9 +196,10 @@
 </tr>
 </tbody>
 </table>
-<blockquote><p>[Set] and @Regex are part of wildcard capture process and their values can be acquired using the <code>Match</code> tag.</p>
-<p>All attributes and behaviours of Sets and Regular expressions within Pattern tag stay intact when used within Example tag.</p>
-</blockquote>
+<div class="NOTE"><h5>Note</h5><p>[Set] and @Regex are part of wildcard capture process and their values can be acquired using the <code>Match</code> tag.</p>
+</div>
+<div class="NOTE"><h5>Note</h5><p>All attributes and behaviours of Sets and Regular expressions within Pattern tag stay intact when used within Example tag.</p>
+</div>
 <p>Other <em>symbols</em>  like  _, *, %, $, {}, () used in <code>Pattern</code> tag are invalid within the <code>Example</code> tag.</p>
 <h2 id="search-engine-algorithm">Search Engine Algorithm</h2>
 <p>The default implementation of <code>ISearchEngine</code> interface (<code>SearchEngine</code>) in <em>Syn.Bot</em> uses a <strong>Fuzzy Keyword Search</strong> algorithm that takes the following into consideration.</p>
@@ -254,8 +255,8 @@
 </tr>
 </tbody>
 </table>
-<blockquote><p>If any of the above variable is not <em>explicitly</em> specified within an SIML Knowledge-Base, the default <em>search engine</em> automatically assumes their default values.</p>
-</blockquote>
+<div class="NOTE"><h5>Note</h5><p>If any of the above variable is not <em>explicitly</em> specified within an SIML Knowledge-Base, the default <em>search engine</em> automatically assumes their default values.</p>
+</div>
 <h2 id="creating-a-suggestion-system">Creating a Suggestion system</h2>
 <p>If <em>Relaxed Models</em> ared used in an SIML knowledge-base it is mandatory that a <strong>Suggestion</strong> system is explicitly implemented by the Bot developer.</p>
 <p><em>What is a Suggestion system?</em>

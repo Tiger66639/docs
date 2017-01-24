@@ -38,7 +38,7 @@
   document.addEventListener('gitter-sidecar-instance-started', function(e) {
     var chat = e.detail.chat;
     chat.options.activationElement.forEach(function(activationElement) {
-      activationElement.innerHTML = 'Developer Lobby'
+      activationElement.innerHTML = 'Community Lobby'
     });
   });
   </script>
@@ -100,7 +100,7 @@
             <article class="content wrap" id="_content" data-uid="">
               <h1 id="saving-an-emotionml-document-to-file">Saving an EmotionML Document to File</h1>
               
-<p>Apart from reading EmotionML documents the EmotionMLDocument object can dynamically create an EmotionML XGocument using the information stored within the class object.</p>
+<p>Apart from reading EmotionML documents, the <em>EmotionMLDocument</em> object can dynamically create an EmotionML XDocument using the information stored within the class object.</p>
 <p>To create an <code>XDocument</code> from an <code>EmotionMLDocument</code> you can use the <code>GetDocument</code> method as shown below.</p>
 <pre><code class="lang-csharp">var changedDocument = emotionDoc.GetDocument();
 File.WriteAllText(&quot;emotionml.xml&quot;,changedDocument.ToString());

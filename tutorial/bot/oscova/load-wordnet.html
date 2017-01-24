@@ -38,7 +38,7 @@
   document.addEventListener('gitter-sidecar-instance-started', function(e) {
     var chat = e.detail.chat;
     chat.options.activationElement.forEach(function(activationElement) {
-      activationElement.innerHTML = 'Developer Lobby'
+      activationElement.innerHTML = 'Community Lobby'
     });
   });
   </script>
@@ -149,7 +149,8 @@ wordNet.Load();
 ...
 
 bot.Train();
-</code></pre><p><em>*Note: ** Loading of *WordNet</em> files may take a couple of seconds.</p>
+</code></pre><div class="NOTE"><h5>Note</h5><p>Loading of <em>WordNet</em> files may take a couple of seconds.</p>
+</div>
 <p>After adding the source files, you <em>must</em> call the <code>WordNet.Load()</code> method. Once the load completes, Oscova will automatically detect the change and will start using <em>WordNet</em> to find lexical relations between words and their senses while scoring intents.</p>
 
             </article>

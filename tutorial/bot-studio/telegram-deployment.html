@@ -38,7 +38,7 @@
   document.addEventListener('gitter-sidecar-instance-started', function(e) {
     var chat = e.detail.chat;
     chat.options.activationElement.forEach(function(activationElement) {
-      activationElement.innerHTML = 'Developer Lobby'
+      activationElement.innerHTML = 'Community Lobby'
     });
   });
   </script>
@@ -136,8 +136,8 @@
 <li>Enter the <em>Access Token</em> and press <strong>Connect</strong>.</li>
 </ul>
 <p>Everytime the developer <strong>Build</strong>s the SIML Project the Bot&#39;s knowledge-base will be updated on Telegram as well.</p>
-<blockquote><p>It is important to note that the SIML Project is hosted on Telegram using the <code>TelegramAssistant</code> class found in <code>Syn.Bot.Assistant</code> library. Hence, all interaction mechanism designed within the <code>TelegramAssistant</code> will reflect in your Telegram Bot.</p>
-</blockquote>
+<div class="NOTE"><h5>Note</h5><p>The SIML Project is hosted on Telegram using the <code>TelegramAssistant</code> class found in <code>Syn.Bot.Assistant</code> library. Hence, all interaction mechanism designed within the <code>TelegramAssistant</code> will reflect in your Telegram Bot.</p>
+</div>
 <h2 id="performance">Performance</h2>
 <p>It came to our notice that on low speed internet connections there was a delay in delivering the response to the Telegram Bot via <em>Syn Bot Studio</em>. Thus we conclude that the response time of your Bot in Telegram is directly proportional to your internet speed.</p>
 <p>We&#39;ve however tested the same feature in our Servers and have found no issues in the response time of the Bot. The average response time in our servers was &lt; 3 seconds. So developers can be certain that if their project is hosted on a better internet connection the responses would be delivered on time.</p>

@@ -38,7 +38,7 @@
   document.addEventListener('gitter-sidecar-instance-started', function(e) {
     var chat = e.detail.chat;
     chat.options.activationElement.forEach(function(activationElement) {
-      activationElement.innerHTML = 'Developer Lobby'
+      activationElement.innerHTML = 'Community Lobby'
     });
   });
   </script>
@@ -102,10 +102,11 @@
               
 <p>Oscova comes with many pre-built system entities to ease the Bot development process. By default all <em>Entity Recognizers</em> for the following entity types are pre-loaded during Bot training.</p>
 <p>To force the Bot to load <em>Entity Recognizers</em> only for required entity types, that are declared using <code>EntityAttribute</code>, set the value of <code>RequiredRecognizersOnly</code> to <code>true</code> in <code>BotConfiguration</code>.</p>
-<p>To load an additional <em>Entity Recognizer</em> for an entity type that is not mentioned using <code>EntityAttribute</code> you may register the entity recognizer using the following method.</p>
+<div class="TIP"><h5>Tip</h5><p>To load an additional <em>Entity Recognizer</em> for an entity type that is not mentioned using <code>EntityAttribute</code> you may register the entity recognizer using the following method.</p>
+</div>
 <pre><code class="lang-csharp">Bot.Recognizers.RegisterType&lt;Recognizer-Class&gt;(Entity-Type);
-</code></pre><blockquote><p>Note: All required entity recognizers must be registered before calling the <code>Train</code> method.</p>
-</blockquote>
+</code></pre><div class="NOTE"><h5>Note</h5><p>All required entity recognizers must be registered before calling the <code>Train</code> method.</p>
+</div>
 <h2 id="pre-built-entities">Pre-Built Entities</h2>
 <h3 id="generic">Generic</h3>
 <table>

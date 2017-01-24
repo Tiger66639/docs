@@ -38,7 +38,7 @@
   document.addEventListener('gitter-sidecar-instance-started', function(e) {
     var chat = e.detail.chat;
     chat.options.activationElement.forEach(function(activationElement) {
-      activationElement.innerHTML = 'Developer Lobby'
+      activationElement.innerHTML = 'Community Lobby'
     });
   });
   </script>
@@ -114,6 +114,8 @@
 <li>Select <em>Add</em> and then choose <em>Class...</em></li>
 <li>Name the class <strong>AppDialog</strong></li>
 </ul>
+<div class="TIP"><h5>Tip</h5><p>You may download a sample project relating to this tutorial by <a href="https://github.com/SynHub/oscova-console-bot/archive/master.zip">clicking here.</a></p>
+</div>
 <h2 id="creating-a-dialog">Creating a Dialog</h2>
 <p>To create an Oscova <code>Dialog</code> create a class that is derived from the <code>Dialog</code> class.</p>
 <p>In this tutorial our Dialog is designed to assist in opening Apps. Thus we&#39;ll use the name <code>AppDialog</code>.</p>
@@ -135,8 +137,8 @@ public void OpenApp(Context context, Result result)
     Process.Start(appEntity.Value);
 }
 </code></pre><p>In the above intent we created an <em>example</em> intent. By annotating the word <strong><em>calc</em></strong> and adding an <em>Entity</em> attribute below the expression we&#39;ve specified that <em>calc</em> is of the entity type <em>App</em>. The <code>result.Entities</code> property contains all the global and parametric entities parsed by known <em>entity recognizers</em>.</p>
-<blockquote><p>Note: All Oscova attributes are available under the namespace <code>Syn.Bot.Oscova.Attributes</code></p>
-</blockquote>
+<div class="NOTE"><h5>Note</h5><p>All Oscova attributes are available under the namespace <code>Syn.Bot.Oscova.Attributes</code></p>
+</div>
 <p>Your entire dialog class should look similar to the following.</p>
 <pre><code class="lang-csharp">using System.Diagnostics;
 using Syn.Bot.Oscova;

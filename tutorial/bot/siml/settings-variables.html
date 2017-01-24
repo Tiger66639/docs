@@ -38,7 +38,7 @@
   document.addEventListener('gitter-sidecar-instance-started', function(e) {
     var chat = e.detail.chat;
     chat.options.activationElement.forEach(function(activationElement) {
-      activationElement.innerHTML = 'Developer Lobby'
+      activationElement.innerHTML = 'Community Lobby'
     });
   });
   </script>
@@ -128,8 +128,8 @@
 }
 </code></pre><p>And add a new instance of the variable to the Bot settings at runtime or during bot initialization.</p>
 <pre><code class="lang-csharp">simlBot.Settings.Add(new CultureNameVariable());
-</code></pre><blockquote><p>Functional variables are not considered during serialization.</p>
-</blockquote>
+</code></pre><div class="NOTE"><h5>Note</h5><p>Functional variables are not considered during serialization.</p>
+</div>
 <h2 id="variable-value-as-tuples">Variable value as Tuples</h2>
 <p>SIML variables can contain arrays of values. Sometimes it’s very handy to be able to use the values as tuples. A simple example would be a list of countries along with their country codes. Though a Map may be suited at times for this scenario the following should serve as a good tuple example.</p>
 <pre><code class="lang-xml">&lt;Variable Name=&quot;countries-codes&quot;&gt;

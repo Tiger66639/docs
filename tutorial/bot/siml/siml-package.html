@@ -38,7 +38,7 @@
   document.addEventListener('gitter-sidecar-instance-started', function(e) {
     var chat = e.detail.chat;
     chat.options.activationElement.forEach(function(activationElement) {
-      activationElement.innerHTML = 'Developer Lobby'
+      activationElement.innerHTML = 'Community Lobby'
     });
   });
   </script>
@@ -121,14 +121,14 @@ elementList.Add(simlElement);
 
 var packageString = simlBot.PackageManager.ConvertToPackage(elementList);
 File.WriteAllText(@&quot;C:\BotMySimlPackage.simlpk&quot;, packageString);
-</code></pre><blockquote><p>This is exactly the function that is called by Syn Bot Studio to create an SIML Package file.</p>
-</blockquote>
+</code></pre><div class="NOTE"><h5>Note</h5><p>This is exactly the function that is called by Syn Bot Studio to create an SIML Package file.</p>
+</div>
 <p><em>Example using Linq</em></p>
 <pre><code class="lang-csharp">var elementList = Directory.GetFiles(@&quot;C:\Bot&quot;, &quot;*.siml&quot;).Select(XElement.Load).ToList();
 var packageString = simlBot.PackageManager.ConvertToPackage(elementList);
 File.WriteAllText(@&quot;C:\BotMySimlPackage.simlpk&quot;, packageString);
-</code></pre><blockquote><p>You should always save an SIML Package string into a file that has the extension <code>.SimlPk</code>.</p>
-</blockquote>
+</code></pre><div class="NOTE"><h5>Note</h5><p>You should always save an SIML Package string into a file that has the extension <code>.SimlPk</code>.</p>
+</div>
 
             </article>
           </div>

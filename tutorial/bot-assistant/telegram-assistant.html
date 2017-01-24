@@ -38,7 +38,7 @@
   document.addEventListener('gitter-sidecar-instance-started', function(e) {
     var chat = e.detail.chat;
     chat.options.activationElement.forEach(function(activationElement) {
-      activationElement.innerHTML = 'Developer Lobby'
+      activationElement.innerHTML = 'Community Lobby'
     });
   });
   </script>
@@ -140,8 +140,8 @@
 <li>Visual Studio 2015 Community Edition or above</li>
 <li>Syn Bot Studio 1.54 or above</li>
 </ul>
-<blockquote><p>As an alternative you may also download the <a href="https://github.com/SynHub/siml-telegrambot">Sample Telegram Console application</a> project from our GitHub repository.</p>
-</blockquote>
+<div class="TIP"><h5>Tip</h5><p>As an alternative you may also download the <a href="https://github.com/SynHub/siml-telegrambot">Sample Telegram Console application</a> project from our GitHub repository.</p>
+</div>
 <p>As the backend knowledge-base processing part of a Bot is usually held in a server environment, we will create a <strong>Console</strong> application to keep memory usage to its bare minimum.</p>
 <p>In this tutorial we&#39;ll use <em>Visual Studio 2015 Community Edition</em> to create a Console C# project that will allow us to create an SIML based server which would power a Telegram Bot.</p>
 <ul>

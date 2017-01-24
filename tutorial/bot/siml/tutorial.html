@@ -38,7 +38,7 @@
   document.addEventListener('gitter-sidecar-instance-started', function(e) {
     var chat = e.detail.chat;
     chat.options.activationElement.forEach(function(activationElement) {
-      activationElement.innerHTML = 'Developer Lobby'
+      activationElement.innerHTML = 'Community Lobby'
     });
   });
   </script>
@@ -143,8 +143,8 @@ simlBot.AddSiml(fileString);
 var simlDocument= XDocument.Load(simlFile);
 simlBot.AddSiml(simlDocument);
 }
-</code></pre><blockquote><p>If file editing is not required after your Bot has been deployed its highly recommended that you initialize your Bot using an SIML Package instead of SIML files.</p>
-</blockquote>
+</code></pre><div class="NOTE"><h5>Note</h5><p>If file editing is not required after your Bot has been deployed its highly recommended that you initialize your Bot using an SIML Package instead of SIML files.</p>
+</div>
 <h2 id="interacting-with-the-bot">Interacting with the Bot</h2>
 <p>Every interaction between the User and Bot is done by creating a <em>Chat Request</em>.</p>
 <p><em>Example code to create a Chat Request</em></p>
