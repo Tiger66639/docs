@@ -199,7 +199,8 @@ bot.CreateRecognizer(&quot;hex&quot;, regex);
     }
 }
 </code></pre><p>The above HTML entity recognizer uses a regular expression to match <em>HTML</em> tags in user input. After a <em>match</em> is found the recognizer creates a new entity of type <code>html</code> using the class <code>HtmlEntity</code>.</p>
-<p><strong>Important</strong>: All entities must specify an <code>Index</code> value. That denotes the starting index of the matched content in user input.</p>
+<div class="IMPORTANT"><h5>Important</h5><p>All entities must specify an <code>Index</code> value. That denotes the starting index of the matched content in user input.</p>
+</div>
 <p>After a custom <em>entity recognizer</em> is created add it to the <code>Recognizers</code> collection before training is initiated.</p>
 
             </article>
