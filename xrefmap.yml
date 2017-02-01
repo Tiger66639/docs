@@ -805,6 +805,18 @@ references:
   commentId: Overload:Syn.Bot.Oscova.BotConfiguration.MaxIntentCount
   fullName: Syn.Bot.Oscova.BotConfiguration.MaxIntentCount
   nameWithType: BotConfiguration.MaxIntentCount
+- uid: Syn.Bot.Oscova.BotConfiguration.MaxLoss
+  name: MaxLoss
+  href: api/Syn.Bot.Oscova.BotConfiguration.html#Syn_Bot_Oscova_BotConfiguration_MaxLoss
+  commentId: P:Syn.Bot.Oscova.BotConfiguration.MaxLoss
+  fullName: Syn.Bot.Oscova.BotConfiguration.MaxLoss
+  nameWithType: BotConfiguration.MaxLoss
+- uid: Syn.Bot.Oscova.BotConfiguration.MaxLoss*
+  name: MaxLoss
+  href: api/Syn.Bot.Oscova.BotConfiguration.html#Syn_Bot_Oscova_BotConfiguration_MaxLoss_
+  commentId: Overload:Syn.Bot.Oscova.BotConfiguration.MaxLoss
+  fullName: Syn.Bot.Oscova.BotConfiguration.MaxLoss
+  nameWithType: BotConfiguration.MaxLoss
 - uid: Syn.Bot.Oscova.BotConfiguration.ProcessingMode
   name: ProcessingMode
   href: api/Syn.Bot.Oscova.BotConfiguration.html#Syn_Bot_Oscova_BotConfiguration_ProcessingMode
@@ -4669,12 +4681,24 @@ references:
   commentId: Overload:Syn.Bot.Oscova.Events.ResponseReceivedEventArgs.Response
   fullName: Syn.Bot.Oscova.Events.ResponseReceivedEventArgs.Response
   nameWithType: ResponseReceivedEventArgs.Response
-- uid: Syn.Bot.Oscova.Events.TrainingRequiredEventArgs
-  name: TrainingRequiredEventArgs
-  href: api/Syn.Bot.Oscova.Events.TrainingRequiredEventArgs.html
-  commentId: T:Syn.Bot.Oscova.Events.TrainingRequiredEventArgs
-  fullName: Syn.Bot.Oscova.Events.TrainingRequiredEventArgs
-  nameWithType: TrainingRequiredEventArgs
+- uid: Syn.Bot.Oscova.Events.TrainingFinishedEventArgs
+  name: TrainingFinishedEventArgs
+  href: api/Syn.Bot.Oscova.Events.TrainingFinishedEventArgs.html
+  commentId: T:Syn.Bot.Oscova.Events.TrainingFinishedEventArgs
+  fullName: Syn.Bot.Oscova.Events.TrainingFinishedEventArgs
+  nameWithType: TrainingFinishedEventArgs
+- uid: Syn.Bot.Oscova.Events.TrainingFinishedEventArgs.TrainedModel
+  name: TrainedModel
+  href: api/Syn.Bot.Oscova.Events.TrainingFinishedEventArgs.html#Syn_Bot_Oscova_Events_TrainingFinishedEventArgs_TrainedModel
+  commentId: P:Syn.Bot.Oscova.Events.TrainingFinishedEventArgs.TrainedModel
+  fullName: Syn.Bot.Oscova.Events.TrainingFinishedEventArgs.TrainedModel
+  nameWithType: TrainingFinishedEventArgs.TrainedModel
+- uid: Syn.Bot.Oscova.Events.TrainingFinishedEventArgs.TrainedModel*
+  name: TrainedModel
+  href: api/Syn.Bot.Oscova.Events.TrainingFinishedEventArgs.html#Syn_Bot_Oscova_Events_TrainingFinishedEventArgs_TrainedModel_
+  commentId: Overload:Syn.Bot.Oscova.Events.TrainingFinishedEventArgs.TrainedModel
+  fullName: Syn.Bot.Oscova.Events.TrainingFinishedEventArgs.TrainedModel
+  nameWithType: TrainingFinishedEventArgs.TrainedModel
 - uid: Syn.Bot.Oscova.Extensions
   name: Syn.Bot.Oscova.Extensions
   href: api/Syn.Bot.Oscova.Extensions.html
@@ -6232,18 +6256,18 @@ references:
   commentId: Overload:Syn.Bot.Oscova.OscovaBot.Recognizers
   fullName: Syn.Bot.Oscova.OscovaBot.Recognizers
   nameWithType: OscovaBot.Recognizers
-- uid: Syn.Bot.Oscova.OscovaBot.Train
-  name: Train()
-  href: api/Syn.Bot.Oscova.OscovaBot.html#Syn_Bot_Oscova_OscovaBot_Train
-  commentId: M:Syn.Bot.Oscova.OscovaBot.Train
-  fullName: Syn.Bot.Oscova.OscovaBot.Train()
-  nameWithType: OscovaBot.Train()
-- uid: Syn.Bot.Oscova.OscovaBot.Train*
-  name: Train
-  href: api/Syn.Bot.Oscova.OscovaBot.html#Syn_Bot_Oscova_OscovaBot_Train_
-  commentId: Overload:Syn.Bot.Oscova.OscovaBot.Train
-  fullName: Syn.Bot.Oscova.OscovaBot.Train
-  nameWithType: OscovaBot.Train
+- uid: Syn.Bot.Oscova.OscovaBot.Trainer
+  name: Trainer
+  href: api/Syn.Bot.Oscova.OscovaBot.html#Syn_Bot_Oscova_OscovaBot_Trainer
+  commentId: P:Syn.Bot.Oscova.OscovaBot.Trainer
+  fullName: Syn.Bot.Oscova.OscovaBot.Trainer
+  nameWithType: OscovaBot.Trainer
+- uid: Syn.Bot.Oscova.OscovaBot.Trainer*
+  name: Trainer
+  href: api/Syn.Bot.Oscova.OscovaBot.html#Syn_Bot_Oscova_OscovaBot_Trainer_
+  commentId: Overload:Syn.Bot.Oscova.OscovaBot.Trainer
+  fullName: Syn.Bot.Oscova.OscovaBot.Trainer
+  nameWithType: OscovaBot.Trainer
 - uid: Syn.Bot.Oscova.OscovaBot.TrainingFinished
   name: TrainingFinished
   href: api/Syn.Bot.Oscova.OscovaBot.html#Syn_Bot_Oscova_OscovaBot_TrainingFinished
@@ -8266,6 +8290,18 @@ references:
   commentId: Overload:Syn.Bot.Oscova.ScoreConfiguration.MinimumScore
   fullName: Syn.Bot.Oscova.ScoreConfiguration.MinimumScore
   nameWithType: ScoreConfiguration.MinimumScore
+- uid: Syn.Bot.Oscova.ScoreConfiguration.MinWordVectorSimilarty
+  name: MinWordVectorSimilarty
+  href: api/Syn.Bot.Oscova.ScoreConfiguration.html#Syn_Bot_Oscova_ScoreConfiguration_MinWordVectorSimilarty
+  commentId: P:Syn.Bot.Oscova.ScoreConfiguration.MinWordVectorSimilarty
+  fullName: Syn.Bot.Oscova.ScoreConfiguration.MinWordVectorSimilarty
+  nameWithType: ScoreConfiguration.MinWordVectorSimilarty
+- uid: Syn.Bot.Oscova.ScoreConfiguration.MinWordVectorSimilarty*
+  name: MinWordVectorSimilarty
+  href: api/Syn.Bot.Oscova.ScoreConfiguration.html#Syn_Bot_Oscova_ScoreConfiguration_MinWordVectorSimilarty_
+  commentId: Overload:Syn.Bot.Oscova.ScoreConfiguration.MinWordVectorSimilarty
+  fullName: Syn.Bot.Oscova.ScoreConfiguration.MinWordVectorSimilarty
+  nameWithType: ScoreConfiguration.MinWordVectorSimilarty
 - uid: Syn.Bot.Oscova.ScoreConfiguration.PromptMissingEntityScore
   name: PromptMissingEntityScore
   href: api/Syn.Bot.Oscova.ScoreConfiguration.html#Syn_Bot_Oscova_ScoreConfiguration_PromptMissingEntityScore
@@ -8584,6 +8620,42 @@ references:
   commentId: F:Syn.Bot.Oscova.Sys.UsPostalCode
   fullName: Syn.Bot.Oscova.Sys.UsPostalCode
   nameWithType: Sys.UsPostalCode
+- uid: Syn.Bot.Oscova.Trainer
+  name: Trainer
+  href: api/Syn.Bot.Oscova.Trainer.html
+  commentId: T:Syn.Bot.Oscova.Trainer
+  fullName: Syn.Bot.Oscova.Trainer
+  nameWithType: Trainer
+- uid: Syn.Bot.Oscova.Trainer.GetTrainingData
+  name: GetTrainingData()
+  href: api/Syn.Bot.Oscova.Trainer.html#Syn_Bot_Oscova_Trainer_GetTrainingData
+  commentId: M:Syn.Bot.Oscova.Trainer.GetTrainingData
+  fullName: Syn.Bot.Oscova.Trainer.GetTrainingData()
+  nameWithType: Trainer.GetTrainingData()
+- uid: Syn.Bot.Oscova.Trainer.GetTrainingData*
+  name: GetTrainingData
+  href: api/Syn.Bot.Oscova.Trainer.html#Syn_Bot_Oscova_Trainer_GetTrainingData_
+  commentId: Overload:Syn.Bot.Oscova.Trainer.GetTrainingData
+  fullName: Syn.Bot.Oscova.Trainer.GetTrainingData
+  nameWithType: Trainer.GetTrainingData
+- uid: Syn.Bot.Oscova.Trainer.StartTraining
+  name: StartTraining()
+  href: api/Syn.Bot.Oscova.Trainer.html#Syn_Bot_Oscova_Trainer_StartTraining
+  commentId: M:Syn.Bot.Oscova.Trainer.StartTraining
+  fullName: Syn.Bot.Oscova.Trainer.StartTraining()
+  nameWithType: Trainer.StartTraining()
+- uid: Syn.Bot.Oscova.Trainer.StartTraining(System.Xml.Linq.XDocument)
+  name: StartTraining(XDocument)
+  href: api/Syn.Bot.Oscova.Trainer.html#Syn_Bot_Oscova_Trainer_StartTraining_System_Xml_Linq_XDocument_
+  commentId: M:Syn.Bot.Oscova.Trainer.StartTraining(System.Xml.Linq.XDocument)
+  fullName: Syn.Bot.Oscova.Trainer.StartTraining(System.Xml.Linq.XDocument)
+  nameWithType: Trainer.StartTraining(XDocument)
+- uid: Syn.Bot.Oscova.Trainer.StartTraining*
+  name: StartTraining
+  href: api/Syn.Bot.Oscova.Trainer.html#Syn_Bot_Oscova_Trainer_StartTraining_
+  commentId: Overload:Syn.Bot.Oscova.Trainer.StartTraining
+  fullName: Syn.Bot.Oscova.Trainer.StartTraining
+  nameWithType: Trainer.StartTraining
 - uid: Syn.Bot.Oscova.Utilities
   name: Syn.Bot.Oscova.Utilities
   href: api/Syn.Bot.Oscova.Utilities.html
@@ -25599,6 +25671,18 @@ references:
   commentId: Overload:Syn.Utility.Utilities.DirectoryUtility.GetSize
   fullName: Syn.Utility.Utilities.DirectoryUtility.GetSize
   nameWithType: DirectoryUtility.GetSize
+- uid: Syn.Utility.Utilities.DirectoryUtility.OpenAndSelect(System.String)
+  name: OpenAndSelect(String)
+  href: api/Syn.Utility.Utilities.DirectoryUtility.html#Syn_Utility_Utilities_DirectoryUtility_OpenAndSelect_System_String_
+  commentId: M:Syn.Utility.Utilities.DirectoryUtility.OpenAndSelect(System.String)
+  fullName: Syn.Utility.Utilities.DirectoryUtility.OpenAndSelect(System.String)
+  nameWithType: DirectoryUtility.OpenAndSelect(String)
+- uid: Syn.Utility.Utilities.DirectoryUtility.OpenAndSelect*
+  name: OpenAndSelect
+  href: api/Syn.Utility.Utilities.DirectoryUtility.html#Syn_Utility_Utilities_DirectoryUtility_OpenAndSelect_
+  commentId: Overload:Syn.Utility.Utilities.DirectoryUtility.OpenAndSelect
+  fullName: Syn.Utility.Utilities.DirectoryUtility.OpenAndSelect
+  nameWithType: DirectoryUtility.OpenAndSelect
 - uid: Syn.Utility.Utilities.DirectoryUtility.RandomFile(System.String,System.String,System.String,System.IO.SearchOption)
   name: RandomFile(String, String, String, SearchOption)
   href: api/Syn.Utility.Utilities.DirectoryUtility.html#Syn_Utility_Utilities_DirectoryUtility_RandomFile_System_String_System_String_System_String_System_IO_SearchOption_
