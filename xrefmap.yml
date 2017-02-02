@@ -805,18 +805,18 @@ references:
   commentId: Overload:Syn.Bot.Oscova.BotConfiguration.MaxIntentCount
   fullName: Syn.Bot.Oscova.BotConfiguration.MaxIntentCount
   nameWithType: BotConfiguration.MaxIntentCount
-- uid: Syn.Bot.Oscova.BotConfiguration.MaxLoss
-  name: MaxLoss
-  href: api/Syn.Bot.Oscova.BotConfiguration.html#Syn_Bot_Oscova_BotConfiguration_MaxLoss
-  commentId: P:Syn.Bot.Oscova.BotConfiguration.MaxLoss
-  fullName: Syn.Bot.Oscova.BotConfiguration.MaxLoss
-  nameWithType: BotConfiguration.MaxLoss
-- uid: Syn.Bot.Oscova.BotConfiguration.MaxLoss*
-  name: MaxLoss
-  href: api/Syn.Bot.Oscova.BotConfiguration.html#Syn_Bot_Oscova_BotConfiguration_MaxLoss_
-  commentId: Overload:Syn.Bot.Oscova.BotConfiguration.MaxLoss
-  fullName: Syn.Bot.Oscova.BotConfiguration.MaxLoss
-  nameWithType: BotConfiguration.MaxLoss
+- uid: Syn.Bot.Oscova.BotConfiguration.MaxMachineLearningLoss
+  name: MaxMachineLearningLoss
+  href: api/Syn.Bot.Oscova.BotConfiguration.html#Syn_Bot_Oscova_BotConfiguration_MaxMachineLearningLoss
+  commentId: P:Syn.Bot.Oscova.BotConfiguration.MaxMachineLearningLoss
+  fullName: Syn.Bot.Oscova.BotConfiguration.MaxMachineLearningLoss
+  nameWithType: BotConfiguration.MaxMachineLearningLoss
+- uid: Syn.Bot.Oscova.BotConfiguration.MaxMachineLearningLoss*
+  name: MaxMachineLearningLoss
+  href: api/Syn.Bot.Oscova.BotConfiguration.html#Syn_Bot_Oscova_BotConfiguration_MaxMachineLearningLoss_
+  commentId: Overload:Syn.Bot.Oscova.BotConfiguration.MaxMachineLearningLoss
+  fullName: Syn.Bot.Oscova.BotConfiguration.MaxMachineLearningLoss
+  nameWithType: BotConfiguration.MaxMachineLearningLoss
 - uid: Syn.Bot.Oscova.BotConfiguration.ProcessingMode
   name: ProcessingMode
   href: api/Syn.Bot.Oscova.BotConfiguration.html#Syn_Bot_Oscova_BotConfiguration_ProcessingMode
@@ -6202,6 +6202,18 @@ references:
   commentId: Overload:Syn.Bot.Oscova.OscovaBot.Evaluate
   fullName: Syn.Bot.Oscova.OscovaBot.Evaluate
   nameWithType: OscovaBot.Evaluate
+- uid: Syn.Bot.Oscova.OscovaBot.Instance
+  name: Instance
+  href: api/Syn.Bot.Oscova.OscovaBot.html#Syn_Bot_Oscova_OscovaBot_Instance
+  commentId: P:Syn.Bot.Oscova.OscovaBot.Instance
+  fullName: Syn.Bot.Oscova.OscovaBot.Instance
+  nameWithType: OscovaBot.Instance
+- uid: Syn.Bot.Oscova.OscovaBot.Instance*
+  name: Instance
+  href: api/Syn.Bot.Oscova.OscovaBot.html#Syn_Bot_Oscova_OscovaBot_Instance_
+  commentId: Overload:Syn.Bot.Oscova.OscovaBot.Instance
+  fullName: Syn.Bot.Oscova.OscovaBot.Instance
+  nameWithType: OscovaBot.Instance
 - uid: Syn.Bot.Oscova.OscovaBot.InvokingIntent
   name: InvokingIntent
   href: api/Syn.Bot.Oscova.OscovaBot.html#Syn_Bot_Oscova_OscovaBot_InvokingIntent
@@ -6292,6 +6304,18 @@ references:
   commentId: Overload:Syn.Bot.Oscova.OscovaBot.Users
   fullName: Syn.Bot.Oscova.OscovaBot.Users
   nameWithType: OscovaBot.Users
+- uid: Syn.Bot.Oscova.OscovaBot.Version
+  name: Version
+  href: api/Syn.Bot.Oscova.OscovaBot.html#Syn_Bot_Oscova_OscovaBot_Version
+  commentId: P:Syn.Bot.Oscova.OscovaBot.Version
+  fullName: Syn.Bot.Oscova.OscovaBot.Version
+  nameWithType: OscovaBot.Version
+- uid: Syn.Bot.Oscova.OscovaBot.Version*
+  name: Version
+  href: api/Syn.Bot.Oscova.OscovaBot.html#Syn_Bot_Oscova_OscovaBot_Version_
+  commentId: Overload:Syn.Bot.Oscova.OscovaBot.Version
+  fullName: Syn.Bot.Oscova.OscovaBot.Version
+  nameWithType: OscovaBot.Version
 - uid: Syn.Bot.Oscova.ProcessingMode
   name: ProcessingMode
   href: api/Syn.Bot.Oscova.ProcessingMode.html
