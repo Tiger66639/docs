@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Oscova Machine Learning  - Syn Developer Network</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Oscova Machine Learning ">
+    <meta name="generator" content="docfx 2.10.2.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    <meta property="docfx:rel" content="../../../">
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+    ga('create', 'UA-39941606-1', 'auto');
+    ga('send', 'pageview');
+  
+  </script>
+  
+  <script>
+    ((window.gitter = {}).chat = {}).options = {
+      room: 'SynCommunity/Lobby'
+    };
+  </script>
+  <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async="" defer=""></script>
+  <script type="text/javascript">
+  document.addEventListener('gitter-sidecar-instance-started', function(e) {
+    var chat = e.detail.chat;
+    chat.options.activationElement.forEach(function(activationElement) {
+      activationElement.innerHTML = 'Community Lobby'
+    });
+  });
+  </script>
+  
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper" style="z-index:1">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="oscova-machine-learning">Oscova Machine Learning</h1>
+              
+<p>Machine Learning in Oscova is powered by advanced <a href="https://en.wikipedia.org/wiki/Artificial_neural_network">neural network</a> system the core architecture of which is designed to train fastly and build intelligent models by extracting relevant features from expressions declared within <em>Dialogs</em>.</p>
+<div class="TIP"><h5>Tip</h5><p>Machine Learning works best when enough expressions are provided for intents.</p>
+</div>
+<h2 id="enabling-machine-learning-ml">Enabling Machine Learning (ML)</h2>
+<p>There are 2 expression <em>processing modes</em> in Oscova.</p>
+<ul>
+<li>Rule</li>
+<li>RuleAndML</li>
+</ul>
+<p>To enable Machine Learning in Oscova change the value of <code>ProcessingMode</code> in bot configuration to <code>RuleAndML</code>.</p>
+<p><strong>Example</strong></p>
+<pre><code class="lang-csharp">var bot = new OscovaBot();
+bot.Configuration.ProcessingMode = ProcessingMode.RuleAndML;
+bot.Dialogs.Add(new PizzaDialog());
+bot.Trainer.StartTraining(); May take several minutes to complete.
+</code></pre><p>When ML is enabled, Oscova automatically generates positive and negative training samples from expressions and feeds them to the neural network during the training process.</p>
+<p>Once the neural network training has completed, Oscova calibrates the score received by the neural network and the NLP engine.</p>
+<div class="TIP"><h5>Tip</h5><p>Machine Learning must only be enabled once the Bot dialog development has completed and the Bot is ready for deployment. Enabling Machine Learning in smaller projects may yield lower improvements in intent scoring.</p>
+</div>
+<h2 id="training-via-syn-bot-studio">Training via Syn Bot Studio</h2>
+<p>To train Oscova&#39;s Neural Network via <em>Syn Bot Studio</em> you will first need to extract the <em>TrainingData</em> from Oscova Bot. You can retrieve the training data as an XML Document by calling the <code>GetTrainingData()</code> method on the <code>Trainer</code> property.</p>
+<p><strong>Example</strong></p>
+<pre><code class="lang-csharp">var bot = new OscovaBot();
+bot.Configuration.ProcessingMode = ProcessingMode.RuleAndML;
+bot.Dialogs.Add(new PizzaDialog());
+var trainingDocument = bot.Trainer.GetTrainingData();
+trainingDocument.Save(&quot;TrainingData.xml&quot;); //Saves the training data to an XML file.
+</code></pre><p>After the training data is saved follow the steps below to generate a trained neural network model.</p>
+<ul>
+<li>Launch <strong>Syn Bot Studio</strong>, click on <strong>Tools</strong> select <strong>Oscova</strong> and then choose <strong>Neural Network Trainer</strong></li>
+<li>In <strong>Neural Network Trainer</strong> window, click on <strong>Browse...</strong> and select the <code>TrainingData.xml</code> file.</li>
+<li>To begin training, click on <strong>Start Training</strong>.</li>
+</ul>
+<p><img src="images/oscova-neural-network.png" alt="Oscova Neural Network Trainer"></p>
+<h3 id="selecting-minimum-loss">Selecting minimum Loss</h3>
+<p>The lower the <em>Loss</em> of the Neural Network the better trained is the model. After clicking on <em>Start Training</em> the Loss-Step chart will display the current <em>Loss</em> of the network.</p>
+<p>If the <em>Loss</em> is way above the specified <em>Minimum Loss</em> value and there is no significant change in the value for long, restart the training by clicking on <em>Stop Training</em> and then clicking on <em>Start Training</em> back again.</p>
+<p>If the <em>Loss</em> value is close to the specified <em>Minimum Loss</em> value and there is no significant change in the value for long, stop the training and you will be presented with the <em>Minimum Loss Achieved</em> value. Using this value as reference adjust the <em>Minimum Loss</em> and press <em>Start Training</em> again.</p>
+<div class="NOTE"><h5>Note</h5><p>It may take several minutes for the Neural Network to be trained depending on the number of internal samples generated for each expression.</p>
+</div>
+<h2 id="loading-trained-model">Loading trained model</h2>
+<p>Once the training is successful, the trained model will be saved in the same directory where the training data is placed. You may now load the trained model into Oscova using the overloaded <code>StartTraining()</code> method.</p>
+<p><strong>Example</strong></p>
+<pre><code class="lang-csharp">var bot = new OscovaBot();
+bot.Configuration.ProcessingMode = ProcessingMode.RuleAndML;
+bot.Dialogs.Add(new SomeDialog());
+bot.Trainer.StartTraining(XDocument.Load(&quot;Trained_Model.osml&quot;));
+</code></pre><h2 id="saving-trained-model-without-syn-bot-studio">Saving Trained Model without Syn Bot Studio</h2>
+<p>If for some reason you are not using <em>Syn Bot Studio</em>, you can still save the <em>Trained Model</em> by handling the <code>TrainingFinished</code> event.</p>
+<p><strong>Example</strong></p>
+<pre><code class="lang-csharp">var bot = new OscovaBot();
+bot.Configuration.ProcessingMode = ProcessingMode.RuleAndML;
+bot.Dialogs.Add(new SomeDialog());
+
+//When the training has finished, the model is saved within Trained_Model.osml file.
+bot.TrainingFinished += (sender, args) =&gt;
+{
+    args.TrainedModel.Save(&quot;Trained_Model.osml&quot;);
+};
+
+bot.Trainer.StartTraining();
+</code></pre>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!--<p><a class="back-to-top" href="#top">Back to top</a><p>-->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2011-2017 <strong>Synthetic Intelligence Network</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>
