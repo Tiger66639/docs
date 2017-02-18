@@ -8,7 +8,7 @@
     <title>NLP Components  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="NLP Components ">
-    <meta name="generator" content="docfx 2.10.2.0">
+    <meta name="generator" content="docfx 2.12.1.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -142,12 +142,14 @@
 <p>The default <code>EnglishDetokenizer</code> simply merges a given set of tokens to their detokenized form. Due to the nature of tokenization not all detokenized forms will represent their initial forms. Detokenization is also used internally by Oscova to generate <em>interpretation</em> of matched intent results.</p>
 <h2 id="stemmer">Stemmer</h2>
 <p>A <em>stemmer</em> reduces words to the their root forms. The default <code>EnglishStemmer</code> is partially a <em>lemmatizer</em> that reduces words to their lemma. For example, the word <em>jumped</em> is reduced to <em>jump</em> and the word <em>having</em> is reduced to <em>have</em>. Despite the lemmatization behaviour of the <em>stemmer</em> we recommend still treating it as a normal stemmer.</p>
-<h2 id="lexical-database">Lexical Database</h2>
-<p>Especially for Oscova we have released <code>Syn.WordNet</code> library to help connect Oscova with  WordNet (a freely available lexical database). Connecting WordNet to Oscova greatly increases the scoring accuracy and NLP capabilities. If an external <em>lexical database</em> is added Oscova calls the <code>GetWordSimilarity</code> method found in the <code>ILexicalDatabase</code> interface.</p>
-<div class="TIP"><h5>Tip</h5><p>We highly recommend integrating <code>Syn.WordNet</code> with Oscova if your Bot is remotely deployed.</p>
+<h2 id="wordnet">WordNet</h2>
+<p>Especially for Oscova we have released <code>Syn.WordNet</code> library to help connect Oscova with  WordNet (a freely available lexical database). Connecting WordNet to Oscova greatly increases the scoring accuracy and NLP capabilities.</p>
+<p>For more information on loading <em>WordNet</em> database please visit the <a href="load-wordnet.html">WordNet</a> section.</p>
+<div class="TIP"><h5>Tip</h5><p>We highly recommend integrating <em>WordNet</em> with Oscova if your Bot is remotely deployed.</p>
 </div>
-<h2 id="deep-learning-in-v2">Deep Learning (in V2)</h2>
-<p>In V1 the <code>ProcessingMode</code> option in <em>bot configuration</em> has been intentionally kept read-only. We are currently experimenting with a Deep Neural Network (DNN) design that has the fastest learning capabilities and extracts maximum number of relevant features from training samples. Once the architecture has been designed <code>DeepLearning</code> option will be enabled in V2.</p>
+<h2 id="machine-learning-neural-network">Machine Learning Neural Network</h2>
+<p>The <em>Machine Learning</em> Neural Network of Oscova is designed to extract maximum number of relevant features from automatically generated internal training samples in least number of training epochs. The trained model generated is portable and can be saved and loaded at run-time.</p>
+<p>For more information on training Oscova in Machine Learning mode, please visit the <a href="machine-learning.html">Machine Learning</a> section.</p>
 
             </article>
           </div>

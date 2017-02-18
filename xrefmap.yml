@@ -543,7 +543,7 @@ references:
   fullName: Syn.Bot.Oscova.Attributes.ExpressionAttribute.ExpressionAttribute(System.String, System.String[])
   fullName.vb: Syn.Bot.Oscova.Attributes.ExpressionAttribute.ExpressionAttribute(System.String, System.String())
   nameWithType: ExpressionAttribute.ExpressionAttribute(String, String[])
-  nameWithType.vb: ExpressionAttribute(String, String())
+  nameWithType.vb: ExpressionAttribute.ExpressionAttribute(String, String())
 - uid: Syn.Bot.Oscova.Attributes.ExpressionAttribute.#ctor*
   name: ExpressionAttribute
   href: api/Syn.Bot.Oscova.Attributes.ExpressionAttribute.html#Syn_Bot_Oscova_Attributes_ExpressionAttribute__ctor_
@@ -732,7 +732,7 @@ references:
   fullName: Syn.Bot.Oscova.Attributes.SynonymsAttribute.SynonymsAttribute(System.String[])
   fullName.vb: Syn.Bot.Oscova.Attributes.SynonymsAttribute.SynonymsAttribute(System.String())
   nameWithType: SynonymsAttribute.SynonymsAttribute(String[])
-  nameWithType.vb: SynonymsAttribute(String())
+  nameWithType.vb: SynonymsAttribute.SynonymsAttribute(String())
 - uid: Syn.Bot.Oscova.Attributes.SynonymsAttribute.#ctor*
   name: SynonymsAttribute
   href: api/Syn.Bot.Oscova.Attributes.SynonymsAttribute.html#Syn_Bot_Oscova_Attributes_SynonymsAttribute__ctor_
@@ -1017,7 +1017,7 @@ references:
   fullName: Syn.Bot.Oscova.Collection.BotUserCollection.CopyTo(Syn.Bot.Oscova.BotUser[], System.Int32)
   fullName.vb: Syn.Bot.Oscova.Collection.BotUserCollection.CopyTo(Syn.Bot.Oscova.BotUser(), System.Int32)
   nameWithType: BotUserCollection.CopyTo(BotUser[], Int32)
-  nameWithType.vb: CopyTo(BotUser(), Int32)
+  nameWithType.vb: BotUserCollection.CopyTo(BotUser(), Int32)
 - uid: Syn.Bot.Oscova.Collection.BotUserCollection.CopyTo*
   name: CopyTo
   href: api/Syn.Bot.Oscova.Collection.BotUserCollection.html#Syn_Bot_Oscova_Collection_BotUserCollection_CopyTo_
@@ -1068,7 +1068,7 @@ references:
   fullName: Syn.Bot.Oscova.Collection.BotUserCollection.Item[System.String]
   fullName.vb: Syn.Bot.Oscova.Collection.BotUserCollection.Item(System.String)
   nameWithType: BotUserCollection.Item[String]
-  nameWithType.vb: Item(String)
+  nameWithType.vb: BotUserCollection.Item(String)
 - uid: Syn.Bot.Oscova.Collection.BotUserCollection.Item*
   name: Item
   href: api/Syn.Bot.Oscova.Collection.BotUserCollection.html#Syn_Bot_Oscova_Collection_BotUserCollection_Item_
@@ -1094,7 +1094,7 @@ references:
   name.vb: System.Collections.IEnumerable.GetEnumerator()
   fullName: Syn.Bot.Oscova.Collection.BotUserCollection.System.Collections.IEnumerable.GetEnumerator()
   nameWithType: BotUserCollection.IEnumerable.GetEnumerator()
-  nameWithType.vb: System.Collections.IEnumerable.GetEnumerator()
+  nameWithType.vb: BotUserCollection.System.Collections.IEnumerable.GetEnumerator()
 - uid: Syn.Bot.Oscova.Collection.BotUserCollection.System#Collections#IEnumerable#GetEnumerator*
   name: IEnumerable.GetEnumerator
   href: api/Syn.Bot.Oscova.Collection.BotUserCollection.html#Syn_Bot_Oscova_Collection_BotUserCollection_System_Collections_IEnumerable_GetEnumerator_
@@ -1165,7 +1165,7 @@ references:
   fullName: Syn.Bot.Oscova.Collection.ContextParameterCollection.CopyTo(Syn.Bot.Oscova.ContextParameter[], System.Int32)
   fullName.vb: Syn.Bot.Oscova.Collection.ContextParameterCollection.CopyTo(Syn.Bot.Oscova.ContextParameter(), System.Int32)
   nameWithType: ContextParameterCollection.CopyTo(ContextParameter[], Int32)
-  nameWithType.vb: CopyTo(ContextParameter(), Int32)
+  nameWithType.vb: ContextParameterCollection.CopyTo(ContextParameter(), Int32)
 - uid: Syn.Bot.Oscova.Collection.ContextParameterCollection.CopyTo*
   name: CopyTo
   href: api/Syn.Bot.Oscova.Collection.ContextParameterCollection.html#Syn_Bot_Oscova_Collection_ContextParameterCollection_CopyTo_
@@ -1216,7 +1216,7 @@ references:
   fullName: Syn.Bot.Oscova.Collection.ContextParameterCollection.Item[System.String]
   fullName.vb: Syn.Bot.Oscova.Collection.ContextParameterCollection.Item(System.String)
   nameWithType: ContextParameterCollection.Item[String]
-  nameWithType.vb: Item(String)
+  nameWithType.vb: ContextParameterCollection.Item(String)
 - uid: Syn.Bot.Oscova.Collection.ContextParameterCollection.Item*
   name: Item
   href: api/Syn.Bot.Oscova.Collection.ContextParameterCollection.html#Syn_Bot_Oscova_Collection_ContextParameterCollection_Item_
@@ -1242,7 +1242,7 @@ references:
   name.vb: System.Collections.IEnumerable.GetEnumerator()
   fullName: Syn.Bot.Oscova.Collection.ContextParameterCollection.System.Collections.IEnumerable.GetEnumerator()
   nameWithType: ContextParameterCollection.IEnumerable.GetEnumerator()
-  nameWithType.vb: System.Collections.IEnumerable.GetEnumerator()
+  nameWithType.vb: ContextParameterCollection.System.Collections.IEnumerable.GetEnumerator()
 - uid: Syn.Bot.Oscova.Collection.ContextParameterCollection.System#Collections#IEnumerable#GetEnumerator*
   name: IEnumerable.GetEnumerator
   href: api/Syn.Bot.Oscova.Collection.ContextParameterCollection.html#Syn_Bot_Oscova_Collection_ContextParameterCollection_System_Collections_IEnumerable_GetEnumerator_
@@ -1301,7 +1301,7 @@ references:
   fullName: Syn.Bot.Oscova.Collection.DialogCollection.CopyTo(Syn.Bot.Oscova.Dialog[], System.Int32)
   fullName.vb: Syn.Bot.Oscova.Collection.DialogCollection.CopyTo(Syn.Bot.Oscova.Dialog(), System.Int32)
   nameWithType: DialogCollection.CopyTo(Dialog[], Int32)
-  nameWithType.vb: CopyTo(Dialog(), Int32)
+  nameWithType.vb: DialogCollection.CopyTo(Dialog(), Int32)
 - uid: Syn.Bot.Oscova.Collection.DialogCollection.CopyTo*
   name: CopyTo
   href: api/Syn.Bot.Oscova.Collection.DialogCollection.html#Syn_Bot_Oscova_Collection_DialogCollection_CopyTo_
@@ -1363,7 +1363,7 @@ references:
   name.vb: System.Collections.IEnumerable.GetEnumerator()
   fullName: Syn.Bot.Oscova.Collection.DialogCollection.System.Collections.IEnumerable.GetEnumerator()
   nameWithType: DialogCollection.IEnumerable.GetEnumerator()
-  nameWithType.vb: System.Collections.IEnumerable.GetEnumerator()
+  nameWithType.vb: DialogCollection.System.Collections.IEnumerable.GetEnumerator()
 - uid: Syn.Bot.Oscova.Collection.DialogCollection.System#Collections#IEnumerable#GetEnumerator*
   name: IEnumerable.GetEnumerator
   href: api/Syn.Bot.Oscova.Collection.DialogCollection.html#Syn_Bot_Oscova_Collection_DialogCollection_System_Collections_IEnumerable_GetEnumerator_
@@ -1392,7 +1392,7 @@ references:
   fullName: Syn.Bot.Oscova.Collection.EntityCollection.EntityCollection(System.Collections.Generic.IEnumerable<Syn.Bot.Oscova.Interfaces.IEntity>)
   fullName.vb: Syn.Bot.Oscova.Collection.EntityCollection.EntityCollection(System.Collections.Generic.IEnumerable(Of Syn.Bot.Oscova.Interfaces.IEntity))
   nameWithType: EntityCollection.EntityCollection(IEnumerable<IEntity>)
-  nameWithType.vb: EntityCollection(IEnumerable(Of IEntity))
+  nameWithType.vb: EntityCollection.EntityCollection(IEnumerable(Of IEntity))
 - uid: Syn.Bot.Oscova.Collection.EntityCollection.#ctor*
   name: EntityCollection
   href: api/Syn.Bot.Oscova.Collection.EntityCollection.html#Syn_Bot_Oscova_Collection_EntityCollection__ctor_
@@ -1419,7 +1419,7 @@ references:
   fullName: Syn.Bot.Oscova.Collection.EntityCollection.AddRange(System.Collections.Generic.IEnumerable<Syn.Bot.Oscova.Interfaces.IEntity>)
   fullName.vb: Syn.Bot.Oscova.Collection.EntityCollection.AddRange(System.Collections.Generic.IEnumerable(Of Syn.Bot.Oscova.Interfaces.IEntity))
   nameWithType: EntityCollection.AddRange(IEnumerable<IEntity>)
-  nameWithType.vb: AddRange(IEnumerable(Of IEntity))
+  nameWithType.vb: EntityCollection.AddRange(IEnumerable(Of IEntity))
 - uid: Syn.Bot.Oscova.Collection.EntityCollection.AddRange*
   name: AddRange
   href: api/Syn.Bot.Oscova.Collection.EntityCollection.html#Syn_Bot_Oscova_Collection_EntityCollection_AddRange_
@@ -1446,7 +1446,7 @@ references:
   fullName: Syn.Bot.Oscova.Collection.EntityCollection.AllOfType<T>()
   fullName.vb: Syn.Bot.Oscova.Collection.EntityCollection.AllOfType(Of T)()
   nameWithType: EntityCollection.AllOfType<T>()
-  nameWithType.vb: AllOfType(Of T)()
+  nameWithType.vb: EntityCollection.AllOfType(Of T)()
 - uid: Syn.Bot.Oscova.Collection.EntityCollection.AllOfType``1(System.String)
   name: AllOfType<T>(String)
   href: api/Syn.Bot.Oscova.Collection.EntityCollection.html#Syn_Bot_Oscova_Collection_EntityCollection_AllOfType__1_System_String_
@@ -1455,7 +1455,7 @@ references:
   fullName: Syn.Bot.Oscova.Collection.EntityCollection.AllOfType<T>(System.String)
   fullName.vb: Syn.Bot.Oscova.Collection.EntityCollection.AllOfType(Of T)(System.String)
   nameWithType: EntityCollection.AllOfType<T>(String)
-  nameWithType.vb: AllOfType(Of T)(String)
+  nameWithType.vb: EntityCollection.AllOfType(Of T)(String)
 - uid: Syn.Bot.Oscova.Collection.EntityCollection.Clear
   name: Clear()
   href: api/Syn.Bot.Oscova.Collection.EntityCollection.html#Syn_Bot_Oscova_Collection_EntityCollection_Clear
@@ -1506,7 +1506,7 @@ references:
   fullName: Syn.Bot.Oscova.Collection.EntityCollection.CopyTo(Syn.Bot.Oscova.Interfaces.IEntity[], System.Int32)
   fullName.vb: Syn.Bot.Oscova.Collection.EntityCollection.CopyTo(Syn.Bot.Oscova.Interfaces.IEntity(), System.Int32)
   nameWithType: EntityCollection.CopyTo(IEntity[], Int32)
-  nameWithType.vb: CopyTo(IEntity(), Int32)
+  nameWithType.vb: EntityCollection.CopyTo(IEntity(), Int32)
 - uid: Syn.Bot.Oscova.Collection.EntityCollection.CopyTo*
   name: CopyTo
   href: api/Syn.Bot.Oscova.Collection.EntityCollection.html#Syn_Bot_Oscova_Collection_EntityCollection_CopyTo_
@@ -1575,7 +1575,7 @@ references:
   fullName: Syn.Bot.Oscova.Collection.EntityCollection.Item[System.Int32]
   fullName.vb: Syn.Bot.Oscova.Collection.EntityCollection.Item(System.Int32)
   nameWithType: EntityCollection.Item[Int32]
-  nameWithType.vb: Item(Int32)
+  nameWithType.vb: EntityCollection.Item(Int32)
 - uid: Syn.Bot.Oscova.Collection.EntityCollection.Item*
   name: Item
   href: api/Syn.Bot.Oscova.Collection.EntityCollection.html#Syn_Bot_Oscova_Collection_EntityCollection_Item_
@@ -1614,7 +1614,7 @@ references:
   fullName: Syn.Bot.Oscova.Collection.EntityCollection.OfType<T>()
   fullName.vb: Syn.Bot.Oscova.Collection.EntityCollection.OfType(Of T)()
   nameWithType: EntityCollection.OfType<T>()
-  nameWithType.vb: OfType(Of T)()
+  nameWithType.vb: EntityCollection.OfType(Of T)()
 - uid: Syn.Bot.Oscova.Collection.EntityCollection.OfType``1(System.String)
   name: OfType<T>(String)
   href: api/Syn.Bot.Oscova.Collection.EntityCollection.html#Syn_Bot_Oscova_Collection_EntityCollection_OfType__1_System_String_
@@ -1623,7 +1623,7 @@ references:
   fullName: Syn.Bot.Oscova.Collection.EntityCollection.OfType<T>(System.String)
   fullName.vb: Syn.Bot.Oscova.Collection.EntityCollection.OfType(Of T)(System.String)
   nameWithType: EntityCollection.OfType<T>(String)
-  nameWithType.vb: OfType(Of T)(String)
+  nameWithType.vb: EntityCollection.OfType(Of T)(String)
 - uid: Syn.Bot.Oscova.Collection.EntityCollection.Remove(Syn.Bot.Oscova.Interfaces.IEntity)
   name: Remove(IEntity)
   href: api/Syn.Bot.Oscova.Collection.EntityCollection.html#Syn_Bot_Oscova_Collection_EntityCollection_Remove_Syn_Bot_Oscova_Interfaces_IEntity_
@@ -1649,7 +1649,7 @@ references:
   name.vb: System.Collections.IEnumerable.GetEnumerator()
   fullName: Syn.Bot.Oscova.Collection.EntityCollection.System.Collections.IEnumerable.GetEnumerator()
   nameWithType: EntityCollection.IEnumerable.GetEnumerator()
-  nameWithType.vb: System.Collections.IEnumerable.GetEnumerator()
+  nameWithType.vb: EntityCollection.System.Collections.IEnumerable.GetEnumerator()
 - uid: Syn.Bot.Oscova.Collection.EntityCollection.System#Collections#IEnumerable#GetEnumerator*
   name: IEnumerable.GetEnumerator
   href: api/Syn.Bot.Oscova.Collection.EntityCollection.html#Syn_Bot_Oscova_Collection_EntityCollection_System_Collections_IEnumerable_GetEnumerator_
@@ -1720,7 +1720,7 @@ references:
   fullName: Syn.Bot.Oscova.Collection.EntryCollection.EntryCollection(System.Collections.Generic.IEnumerable<Syn.Bot.Oscova.Collection.Entry>)
   fullName.vb: Syn.Bot.Oscova.Collection.EntryCollection.EntryCollection(System.Collections.Generic.IEnumerable(Of Syn.Bot.Oscova.Collection.Entry))
   nameWithType: EntryCollection.EntryCollection(IEnumerable<Entry>)
-  nameWithType.vb: EntryCollection(IEnumerable(Of Entry))
+  nameWithType.vb: EntryCollection.EntryCollection(IEnumerable(Of Entry))
 - uid: Syn.Bot.Oscova.Collection.EntryCollection.#ctor*
   name: EntryCollection
   href: api/Syn.Bot.Oscova.Collection.EntryCollection.html#Syn_Bot_Oscova_Collection_EntryCollection__ctor_
@@ -1747,7 +1747,7 @@ references:
   fullName: Syn.Bot.Oscova.Collection.EntryCollection.Add(System.String, System.String[])
   fullName.vb: Syn.Bot.Oscova.Collection.EntryCollection.Add(System.String, System.String())
   nameWithType: EntryCollection.Add(String, String[])
-  nameWithType.vb: Add(String, String())
+  nameWithType.vb: EntryCollection.Add(String, String())
 - uid: Syn.Bot.Oscova.Collection.EntryCollection.Add*
   name: Add
   href: api/Syn.Bot.Oscova.Collection.EntryCollection.html#Syn_Bot_Oscova_Collection_EntryCollection_Add_
@@ -1762,7 +1762,7 @@ references:
   fullName: Syn.Bot.Oscova.Collection.EntryCollection.AddRange(System.Collections.Generic.IEnumerable<Syn.Bot.Oscova.Collection.Entry>)
   fullName.vb: Syn.Bot.Oscova.Collection.EntryCollection.AddRange(System.Collections.Generic.IEnumerable(Of Syn.Bot.Oscova.Collection.Entry))
   nameWithType: EntryCollection.AddRange(IEnumerable<Entry>)
-  nameWithType.vb: AddRange(IEnumerable(Of Entry))
+  nameWithType.vb: EntryCollection.AddRange(IEnumerable(Of Entry))
 - uid: Syn.Bot.Oscova.Collection.EntryCollection.AddRange*
   name: AddRange
   href: api/Syn.Bot.Oscova.Collection.EntryCollection.html#Syn_Bot_Oscova_Collection_EntryCollection_AddRange_
@@ -1777,7 +1777,7 @@ references:
   fullName: Syn.Bot.Oscova.Collection.EntryCollection.AddSynonyms(System.String, System.String[])
   fullName.vb: Syn.Bot.Oscova.Collection.EntryCollection.AddSynonyms(System.String, System.String())
   nameWithType: EntryCollection.AddSynonyms(String, String[])
-  nameWithType.vb: AddSynonyms(String, String())
+  nameWithType.vb: EntryCollection.AddSynonyms(String, String())
 - uid: Syn.Bot.Oscova.Collection.EntryCollection.AddSynonyms*
   name: AddSynonyms
   href: api/Syn.Bot.Oscova.Collection.EntryCollection.html#Syn_Bot_Oscova_Collection_EntryCollection_AddSynonyms_
@@ -1822,7 +1822,7 @@ references:
   fullName: Syn.Bot.Oscova.Collection.EntryCollection.CopyTo(Syn.Bot.Oscova.Collection.Entry[], System.Int32)
   fullName.vb: Syn.Bot.Oscova.Collection.EntryCollection.CopyTo(Syn.Bot.Oscova.Collection.Entry(), System.Int32)
   nameWithType: EntryCollection.CopyTo(Entry[], Int32)
-  nameWithType.vb: CopyTo(Entry(), Int32)
+  nameWithType.vb: EntryCollection.CopyTo(Entry(), Int32)
 - uid: Syn.Bot.Oscova.Collection.EntryCollection.CopyTo*
   name: CopyTo
   href: api/Syn.Bot.Oscova.Collection.EntryCollection.html#Syn_Bot_Oscova_Collection_EntryCollection_CopyTo_
@@ -1885,7 +1885,7 @@ references:
   fullName: Syn.Bot.Oscova.Collection.EntryCollection.Item[System.Int32]
   fullName.vb: Syn.Bot.Oscova.Collection.EntryCollection.Item(System.Int32)
   nameWithType: EntryCollection.Item[Int32]
-  nameWithType.vb: Item(Int32)
+  nameWithType.vb: EntryCollection.Item(Int32)
 - uid: Syn.Bot.Oscova.Collection.EntryCollection.Item(System.String)
   name: Item[String]
   href: api/Syn.Bot.Oscova.Collection.EntryCollection.html#Syn_Bot_Oscova_Collection_EntryCollection_Item_System_String_
@@ -1894,7 +1894,7 @@ references:
   fullName: Syn.Bot.Oscova.Collection.EntryCollection.Item[System.String]
   fullName.vb: Syn.Bot.Oscova.Collection.EntryCollection.Item(System.String)
   nameWithType: EntryCollection.Item[String]
-  nameWithType.vb: Item(String)
+  nameWithType.vb: EntryCollection.Item(String)
 - uid: Syn.Bot.Oscova.Collection.EntryCollection.Item*
   name: Item
   href: api/Syn.Bot.Oscova.Collection.EntryCollection.html#Syn_Bot_Oscova_Collection_EntryCollection_Item_
@@ -1944,7 +1944,7 @@ references:
   name.vb: System.Collections.IEnumerable.GetEnumerator()
   fullName: Syn.Bot.Oscova.Collection.EntryCollection.System.Collections.IEnumerable.GetEnumerator()
   nameWithType: EntryCollection.IEnumerable.GetEnumerator()
-  nameWithType.vb: System.Collections.IEnumerable.GetEnumerator()
+  nameWithType.vb: EntryCollection.System.Collections.IEnumerable.GetEnumerator()
 - uid: Syn.Bot.Oscova.Collection.EntryCollection.System#Collections#IEnumerable#GetEnumerator*
   name: IEnumerable.GetEnumerator
   href: api/Syn.Bot.Oscova.Collection.EntryCollection.html#Syn_Bot_Oscova_Collection_EntryCollection_System_Collections_IEnumerable_GetEnumerator_
@@ -1969,12 +1969,15 @@ references:
   fullName: Syn.Bot.Oscova.Collection.GenericCollection<T>.GenericCollection()
   fullName.vb: Syn.Bot.Oscova.Collection.GenericCollection(Of T).GenericCollection()
   nameWithType: GenericCollection<T>.GenericCollection()
+  nameWithType.vb: GenericCollection(Of T).GenericCollection()
 - uid: Syn.Bot.Oscova.Collection.GenericCollection`1.#ctor*
   name: GenericCollection
   href: api/Syn.Bot.Oscova.Collection.GenericCollection-1.html#Syn_Bot_Oscova_Collection_GenericCollection_1__ctor_
   commentId: Overload:Syn.Bot.Oscova.Collection.GenericCollection`1.#ctor
-  fullName: Syn.Bot.Oscova.Collection.GenericCollection.GenericCollection
-  nameWithType: GenericCollection.GenericCollection
+  fullName: Syn.Bot.Oscova.Collection.GenericCollection<T>.GenericCollection
+  fullName.vb: Syn.Bot.Oscova.Collection.GenericCollection(Of T).GenericCollection
+  nameWithType: GenericCollection<T>.GenericCollection
+  nameWithType.vb: GenericCollection(Of T).GenericCollection
 - uid: Syn.Bot.Oscova.Collection.GenericCollection`1.Add(`0)
   name: Add(T)
   href: api/Syn.Bot.Oscova.Collection.GenericCollection-1.html#Syn_Bot_Oscova_Collection_GenericCollection_1_Add__0_
@@ -1982,12 +1985,15 @@ references:
   fullName: Syn.Bot.Oscova.Collection.GenericCollection<T>.Add(T)
   fullName.vb: Syn.Bot.Oscova.Collection.GenericCollection(Of T).Add(T)
   nameWithType: GenericCollection<T>.Add(T)
+  nameWithType.vb: GenericCollection(Of T).Add(T)
 - uid: Syn.Bot.Oscova.Collection.GenericCollection`1.Add*
   name: Add
   href: api/Syn.Bot.Oscova.Collection.GenericCollection-1.html#Syn_Bot_Oscova_Collection_GenericCollection_1_Add_
   commentId: Overload:Syn.Bot.Oscova.Collection.GenericCollection`1.Add
-  fullName: Syn.Bot.Oscova.Collection.GenericCollection.Add
-  nameWithType: GenericCollection.Add
+  fullName: Syn.Bot.Oscova.Collection.GenericCollection<T>.Add
+  fullName.vb: Syn.Bot.Oscova.Collection.GenericCollection(Of T).Add
+  nameWithType: GenericCollection<T>.Add
+  nameWithType.vb: GenericCollection(Of T).Add
 - uid: Syn.Bot.Oscova.Collection.GenericCollection`1.AddRange(System.Collections.Generic.IEnumerable{`0})
   name: AddRange(IEnumerable<T>)
   href: api/Syn.Bot.Oscova.Collection.GenericCollection-1.html#Syn_Bot_Oscova_Collection_GenericCollection_1_AddRange_System_Collections_Generic_IEnumerable__0__
@@ -1996,22 +2002,23 @@ references:
   fullName: Syn.Bot.Oscova.Collection.GenericCollection<T>.AddRange(System.Collections.Generic.IEnumerable<T>)
   fullName.vb: Syn.Bot.Oscova.Collection.GenericCollection(Of T).AddRange(System.Collections.Generic.IEnumerable(Of T))
   nameWithType: GenericCollection<T>.AddRange(IEnumerable<T>)
-  nameWithType.vb: AddRange(IEnumerable(Of T))
+  nameWithType.vb: GenericCollection(Of T).AddRange(IEnumerable(Of T))
 - uid: Syn.Bot.Oscova.Collection.GenericCollection`1.AddRange*
   name: AddRange
   href: api/Syn.Bot.Oscova.Collection.GenericCollection-1.html#Syn_Bot_Oscova_Collection_GenericCollection_1_AddRange_
   commentId: Overload:Syn.Bot.Oscova.Collection.GenericCollection`1.AddRange
-  fullName: Syn.Bot.Oscova.Collection.GenericCollection.AddRange
-  nameWithType: GenericCollection.AddRange
+  fullName: Syn.Bot.Oscova.Collection.GenericCollection<T>.AddRange
+  fullName.vb: Syn.Bot.Oscova.Collection.GenericCollection(Of T).AddRange
+  nameWithType: GenericCollection<T>.AddRange
+  nameWithType.vb: GenericCollection(Of T).AddRange
 - uid: Syn.Bot.Oscova.Collection.GenericCollection`1.AllOfType*
-  name: AllOfType<TR>
+  name: AllOfType
   href: api/Syn.Bot.Oscova.Collection.GenericCollection-1.html#Syn_Bot_Oscova_Collection_GenericCollection_1_AllOfType_
   commentId: Overload:Syn.Bot.Oscova.Collection.GenericCollection`1.AllOfType
-  name.vb: AllOfType(Of TR)
-  fullName: Syn.Bot.Oscova.Collection.GenericCollection.AllOfType<TR>
-  fullName.vb: Syn.Bot.Oscova.Collection.GenericCollection.AllOfType(Of TR)
-  nameWithType: GenericCollection.AllOfType<TR>
-  nameWithType.vb: GenericCollection.AllOfType(Of TR)
+  fullName: Syn.Bot.Oscova.Collection.GenericCollection<T>.AllOfType
+  fullName.vb: Syn.Bot.Oscova.Collection.GenericCollection(Of T).AllOfType
+  nameWithType: GenericCollection<T>.AllOfType
+  nameWithType.vb: GenericCollection(Of T).AllOfType
 - uid: Syn.Bot.Oscova.Collection.GenericCollection`1.AllOfType``1
   name: AllOfType<TR>()
   href: api/Syn.Bot.Oscova.Collection.GenericCollection-1.html#Syn_Bot_Oscova_Collection_GenericCollection_1_AllOfType__1
@@ -2020,7 +2027,7 @@ references:
   fullName: Syn.Bot.Oscova.Collection.GenericCollection<T>.AllOfType<TR>()
   fullName.vb: Syn.Bot.Oscova.Collection.GenericCollection(Of T).AllOfType(Of TR)()
   nameWithType: GenericCollection<T>.AllOfType<TR>()
-  nameWithType.vb: AllOfType(Of TR)()
+  nameWithType.vb: GenericCollection(Of T).AllOfType(Of TR)()
 - uid: Syn.Bot.Oscova.Collection.GenericCollection`1.Clear
   name: Clear()
   href: api/Syn.Bot.Oscova.Collection.GenericCollection-1.html#Syn_Bot_Oscova_Collection_GenericCollection_1_Clear
@@ -2028,12 +2035,15 @@ references:
   fullName: Syn.Bot.Oscova.Collection.GenericCollection<T>.Clear()
   fullName.vb: Syn.Bot.Oscova.Collection.GenericCollection(Of T).Clear()
   nameWithType: GenericCollection<T>.Clear()
+  nameWithType.vb: GenericCollection(Of T).Clear()
 - uid: Syn.Bot.Oscova.Collection.GenericCollection`1.Clear*
   name: Clear
   href: api/Syn.Bot.Oscova.Collection.GenericCollection-1.html#Syn_Bot_Oscova_Collection_GenericCollection_1_Clear_
   commentId: Overload:Syn.Bot.Oscova.Collection.GenericCollection`1.Clear
-  fullName: Syn.Bot.Oscova.Collection.GenericCollection.Clear
-  nameWithType: GenericCollection.Clear
+  fullName: Syn.Bot.Oscova.Collection.GenericCollection<T>.Clear
+  fullName.vb: Syn.Bot.Oscova.Collection.GenericCollection(Of T).Clear
+  nameWithType: GenericCollection<T>.Clear
+  nameWithType.vb: GenericCollection(Of T).Clear
 - uid: Syn.Bot.Oscova.Collection.GenericCollection`1.Contains(`0)
   name: Contains(T)
   href: api/Syn.Bot.Oscova.Collection.GenericCollection-1.html#Syn_Bot_Oscova_Collection_GenericCollection_1_Contains__0_
@@ -2041,12 +2051,15 @@ references:
   fullName: Syn.Bot.Oscova.Collection.GenericCollection<T>.Contains(T)
   fullName.vb: Syn.Bot.Oscova.Collection.GenericCollection(Of T).Contains(T)
   nameWithType: GenericCollection<T>.Contains(T)
+  nameWithType.vb: GenericCollection(Of T).Contains(T)
 - uid: Syn.Bot.Oscova.Collection.GenericCollection`1.Contains*
   name: Contains
   href: api/Syn.Bot.Oscova.Collection.GenericCollection-1.html#Syn_Bot_Oscova_Collection_GenericCollection_1_Contains_
   commentId: Overload:Syn.Bot.Oscova.Collection.GenericCollection`1.Contains
-  fullName: Syn.Bot.Oscova.Collection.GenericCollection.Contains
-  nameWithType: GenericCollection.Contains
+  fullName: Syn.Bot.Oscova.Collection.GenericCollection<T>.Contains
+  fullName.vb: Syn.Bot.Oscova.Collection.GenericCollection(Of T).Contains
+  nameWithType: GenericCollection<T>.Contains
+  nameWithType.vb: GenericCollection(Of T).Contains
 - uid: Syn.Bot.Oscova.Collection.GenericCollection`1.Contains``1
   name: Contains<TR>()
   href: api/Syn.Bot.Oscova.Collection.GenericCollection-1.html#Syn_Bot_Oscova_Collection_GenericCollection_1_Contains__1
@@ -2055,7 +2068,7 @@ references:
   fullName: Syn.Bot.Oscova.Collection.GenericCollection<T>.Contains<TR>()
   fullName.vb: Syn.Bot.Oscova.Collection.GenericCollection(Of T).Contains(Of TR)()
   nameWithType: GenericCollection<T>.Contains<TR>()
-  nameWithType.vb: Contains(Of TR)()
+  nameWithType.vb: GenericCollection(Of T).Contains(Of TR)()
 - uid: Syn.Bot.Oscova.Collection.GenericCollection`1.CopyTo(`0[],System.Int32)
   name: CopyTo(T[], Int32)
   href: api/Syn.Bot.Oscova.Collection.GenericCollection-1.html#Syn_Bot_Oscova_Collection_GenericCollection_1_CopyTo__0___System_Int32_
@@ -2064,13 +2077,15 @@ references:
   fullName: Syn.Bot.Oscova.Collection.GenericCollection<T>.CopyTo(T[], System.Int32)
   fullName.vb: Syn.Bot.Oscova.Collection.GenericCollection(Of T).CopyTo(T(), System.Int32)
   nameWithType: GenericCollection<T>.CopyTo(T[], Int32)
-  nameWithType.vb: CopyTo(T(), Int32)
+  nameWithType.vb: GenericCollection(Of T).CopyTo(T(), Int32)
 - uid: Syn.Bot.Oscova.Collection.GenericCollection`1.CopyTo*
   name: CopyTo
   href: api/Syn.Bot.Oscova.Collection.GenericCollection-1.html#Syn_Bot_Oscova_Collection_GenericCollection_1_CopyTo_
   commentId: Overload:Syn.Bot.Oscova.Collection.GenericCollection`1.CopyTo
-  fullName: Syn.Bot.Oscova.Collection.GenericCollection.CopyTo
-  nameWithType: GenericCollection.CopyTo
+  fullName: Syn.Bot.Oscova.Collection.GenericCollection<T>.CopyTo
+  fullName.vb: Syn.Bot.Oscova.Collection.GenericCollection(Of T).CopyTo
+  nameWithType: GenericCollection<T>.CopyTo
+  nameWithType.vb: GenericCollection(Of T).CopyTo
 - uid: Syn.Bot.Oscova.Collection.GenericCollection`1.Count
   name: Count
   href: api/Syn.Bot.Oscova.Collection.GenericCollection-1.html#Syn_Bot_Oscova_Collection_GenericCollection_1_Count
@@ -2078,6 +2093,7 @@ references:
   fullName: Syn.Bot.Oscova.Collection.GenericCollection<T>.Count
   fullName.vb: Syn.Bot.Oscova.Collection.GenericCollection(Of T).Count
   nameWithType: GenericCollection<T>.Count
+  nameWithType.vb: GenericCollection(Of T).Count
 - uid: Syn.Bot.Oscova.Collection.GenericCollection`1.Count*
   name: Count
   href: api/Syn.Bot.Oscova.Collection.GenericCollection-1.html#Syn_Bot_Oscova_Collection_GenericCollection_1_Count_
@@ -2093,6 +2109,7 @@ references:
   fullName: Syn.Bot.Oscova.Collection.GenericCollection<T>.DataList
   fullName.vb: Syn.Bot.Oscova.Collection.GenericCollection(Of T).DataList
   nameWithType: GenericCollection<T>.DataList
+  nameWithType.vb: GenericCollection(Of T).DataList
 - uid: Syn.Bot.Oscova.Collection.GenericCollection`1.DataList*
   name: DataList
   href: api/Syn.Bot.Oscova.Collection.GenericCollection-1.html#Syn_Bot_Oscova_Collection_GenericCollection_1_DataList_
@@ -2108,12 +2125,15 @@ references:
   fullName: Syn.Bot.Oscova.Collection.GenericCollection<T>.GetEnumerator()
   fullName.vb: Syn.Bot.Oscova.Collection.GenericCollection(Of T).GetEnumerator()
   nameWithType: GenericCollection<T>.GetEnumerator()
+  nameWithType.vb: GenericCollection(Of T).GetEnumerator()
 - uid: Syn.Bot.Oscova.Collection.GenericCollection`1.GetEnumerator*
   name: GetEnumerator
   href: api/Syn.Bot.Oscova.Collection.GenericCollection-1.html#Syn_Bot_Oscova_Collection_GenericCollection_1_GetEnumerator_
   commentId: Overload:Syn.Bot.Oscova.Collection.GenericCollection`1.GetEnumerator
-  fullName: Syn.Bot.Oscova.Collection.GenericCollection.GetEnumerator
-  nameWithType: GenericCollection.GetEnumerator
+  fullName: Syn.Bot.Oscova.Collection.GenericCollection<T>.GetEnumerator
+  fullName.vb: Syn.Bot.Oscova.Collection.GenericCollection(Of T).GetEnumerator
+  nameWithType: GenericCollection<T>.GetEnumerator
+  nameWithType.vb: GenericCollection(Of T).GetEnumerator
 - uid: Syn.Bot.Oscova.Collection.GenericCollection`1.IsReadOnly
   name: IsReadOnly
   href: api/Syn.Bot.Oscova.Collection.GenericCollection-1.html#Syn_Bot_Oscova_Collection_GenericCollection_1_IsReadOnly
@@ -2121,6 +2141,7 @@ references:
   fullName: Syn.Bot.Oscova.Collection.GenericCollection<T>.IsReadOnly
   fullName.vb: Syn.Bot.Oscova.Collection.GenericCollection(Of T).IsReadOnly
   nameWithType: GenericCollection<T>.IsReadOnly
+  nameWithType.vb: GenericCollection(Of T).IsReadOnly
 - uid: Syn.Bot.Oscova.Collection.GenericCollection`1.IsReadOnly*
   name: IsReadOnly
   href: api/Syn.Bot.Oscova.Collection.GenericCollection-1.html#Syn_Bot_Oscova_Collection_GenericCollection_1_IsReadOnly_
@@ -2137,7 +2158,7 @@ references:
   fullName: Syn.Bot.Oscova.Collection.GenericCollection<T>.Item[System.Int32]
   fullName.vb: Syn.Bot.Oscova.Collection.GenericCollection(Of T).Item(System.Int32)
   nameWithType: GenericCollection<T>.Item[Int32]
-  nameWithType.vb: Item(Int32)
+  nameWithType.vb: GenericCollection(Of T).Item(Int32)
 - uid: Syn.Bot.Oscova.Collection.GenericCollection`1.Item*
   name: Item
   href: api/Syn.Bot.Oscova.Collection.GenericCollection-1.html#Syn_Bot_Oscova_Collection_GenericCollection_1_Item_
@@ -2147,14 +2168,13 @@ references:
   nameWithType: GenericCollection<T>.Item
   nameWithType.vb: GenericCollection(Of T).Item
 - uid: Syn.Bot.Oscova.Collection.GenericCollection`1.OfType*
-  name: OfType<TR>
+  name: OfType
   href: api/Syn.Bot.Oscova.Collection.GenericCollection-1.html#Syn_Bot_Oscova_Collection_GenericCollection_1_OfType_
   commentId: Overload:Syn.Bot.Oscova.Collection.GenericCollection`1.OfType
-  name.vb: OfType(Of TR)
-  fullName: Syn.Bot.Oscova.Collection.GenericCollection.OfType<TR>
-  fullName.vb: Syn.Bot.Oscova.Collection.GenericCollection.OfType(Of TR)
-  nameWithType: GenericCollection.OfType<TR>
-  nameWithType.vb: GenericCollection.OfType(Of TR)
+  fullName: Syn.Bot.Oscova.Collection.GenericCollection<T>.OfType
+  fullName.vb: Syn.Bot.Oscova.Collection.GenericCollection(Of T).OfType
+  nameWithType: GenericCollection<T>.OfType
+  nameWithType.vb: GenericCollection(Of T).OfType
 - uid: Syn.Bot.Oscova.Collection.GenericCollection`1.OfType``1
   name: OfType<TR>()
   href: api/Syn.Bot.Oscova.Collection.GenericCollection-1.html#Syn_Bot_Oscova_Collection_GenericCollection_1_OfType__1
@@ -2163,7 +2183,7 @@ references:
   fullName: Syn.Bot.Oscova.Collection.GenericCollection<T>.OfType<TR>()
   fullName.vb: Syn.Bot.Oscova.Collection.GenericCollection(Of T).OfType(Of TR)()
   nameWithType: GenericCollection<T>.OfType<TR>()
-  nameWithType.vb: OfType(Of TR)()
+  nameWithType.vb: GenericCollection(Of T).OfType(Of TR)()
 - uid: Syn.Bot.Oscova.Collection.GenericCollection`1.Remove(`0)
   name: Remove(T)
   href: api/Syn.Bot.Oscova.Collection.GenericCollection-1.html#Syn_Bot_Oscova_Collection_GenericCollection_1_Remove__0_
@@ -2171,12 +2191,15 @@ references:
   fullName: Syn.Bot.Oscova.Collection.GenericCollection<T>.Remove(T)
   fullName.vb: Syn.Bot.Oscova.Collection.GenericCollection(Of T).Remove(T)
   nameWithType: GenericCollection<T>.Remove(T)
+  nameWithType.vb: GenericCollection(Of T).Remove(T)
 - uid: Syn.Bot.Oscova.Collection.GenericCollection`1.Remove*
   name: Remove
   href: api/Syn.Bot.Oscova.Collection.GenericCollection-1.html#Syn_Bot_Oscova_Collection_GenericCollection_1_Remove_
   commentId: Overload:Syn.Bot.Oscova.Collection.GenericCollection`1.Remove
-  fullName: Syn.Bot.Oscova.Collection.GenericCollection.Remove
-  nameWithType: GenericCollection.Remove
+  fullName: Syn.Bot.Oscova.Collection.GenericCollection<T>.Remove
+  fullName.vb: Syn.Bot.Oscova.Collection.GenericCollection(Of T).Remove
+  nameWithType: GenericCollection<T>.Remove
+  nameWithType.vb: GenericCollection(Of T).Remove
 - uid: Syn.Bot.Oscova.Collection.GenericCollection`1.System#Collections#IEnumerable#GetEnumerator
   name: IEnumerable.GetEnumerator()
   href: api/Syn.Bot.Oscova.Collection.GenericCollection-1.html#Syn_Bot_Oscova_Collection_GenericCollection_1_System_Collections_IEnumerable_GetEnumerator
@@ -2185,15 +2208,16 @@ references:
   fullName: Syn.Bot.Oscova.Collection.GenericCollection<T>.System.Collections.IEnumerable.GetEnumerator()
   fullName.vb: Syn.Bot.Oscova.Collection.GenericCollection(Of T).System.Collections.IEnumerable.GetEnumerator()
   nameWithType: GenericCollection<T>.IEnumerable.GetEnumerator()
-  nameWithType.vb: System.Collections.IEnumerable.GetEnumerator()
+  nameWithType.vb: GenericCollection(Of T).System.Collections.IEnumerable.GetEnumerator()
 - uid: Syn.Bot.Oscova.Collection.GenericCollection`1.System#Collections#IEnumerable#GetEnumerator*
   name: IEnumerable.GetEnumerator
   href: api/Syn.Bot.Oscova.Collection.GenericCollection-1.html#Syn_Bot_Oscova_Collection_GenericCollection_1_System_Collections_IEnumerable_GetEnumerator_
   commentId: Overload:Syn.Bot.Oscova.Collection.GenericCollection`1.System#Collections#IEnumerable#GetEnumerator
   name.vb: System.Collections.IEnumerable.GetEnumerator
-  fullName: Syn.Bot.Oscova.Collection.GenericCollection.System.Collections.IEnumerable.GetEnumerator
-  nameWithType: GenericCollection.IEnumerable.GetEnumerator
-  nameWithType.vb: GenericCollection.System.Collections.IEnumerable.GetEnumerator
+  fullName: Syn.Bot.Oscova.Collection.GenericCollection<T>.System.Collections.IEnumerable.GetEnumerator
+  fullName.vb: Syn.Bot.Oscova.Collection.GenericCollection(Of T).System.Collections.IEnumerable.GetEnumerator
+  nameWithType: GenericCollection<T>.IEnumerable.GetEnumerator
+  nameWithType.vb: GenericCollection(Of T).System.Collections.IEnumerable.GetEnumerator
 - uid: Syn.Bot.Oscova.Collection.IntentCollection
   name: IntentCollection
   href: api/Syn.Bot.Oscova.Collection.IntentCollection.html
@@ -2244,7 +2268,7 @@ references:
   fullName: Syn.Bot.Oscova.Collection.IntentCollection.CopyTo(Syn.Bot.Oscova.IntentResult[], System.Int32)
   fullName.vb: Syn.Bot.Oscova.Collection.IntentCollection.CopyTo(Syn.Bot.Oscova.IntentResult(), System.Int32)
   nameWithType: IntentCollection.CopyTo(IntentResult[], Int32)
-  nameWithType.vb: CopyTo(IntentResult(), Int32)
+  nameWithType.vb: IntentCollection.CopyTo(IntentResult(), Int32)
 - uid: Syn.Bot.Oscova.Collection.IntentCollection.CopyTo*
   name: CopyTo
   href: api/Syn.Bot.Oscova.Collection.IntentCollection.html#Syn_Bot_Oscova_Collection_IntentCollection_CopyTo_
@@ -2295,7 +2319,7 @@ references:
   fullName: Syn.Bot.Oscova.Collection.IntentCollection.Item[System.Int32]
   fullName.vb: Syn.Bot.Oscova.Collection.IntentCollection.Item(System.Int32)
   nameWithType: IntentCollection.Item[Int32]
-  nameWithType.vb: Item(Int32)
+  nameWithType.vb: IntentCollection.Item(Int32)
 - uid: Syn.Bot.Oscova.Collection.IntentCollection.Item*
   name: Item
   href: api/Syn.Bot.Oscova.Collection.IntentCollection.html#Syn_Bot_Oscova_Collection_IntentCollection_Item_
@@ -2321,7 +2345,7 @@ references:
   name.vb: System.Collections.IEnumerable.GetEnumerator()
   fullName: Syn.Bot.Oscova.Collection.IntentCollection.System.Collections.IEnumerable.GetEnumerator()
   nameWithType: IntentCollection.IEnumerable.GetEnumerator()
-  nameWithType.vb: System.Collections.IEnumerable.GetEnumerator()
+  nameWithType.vb: IntentCollection.System.Collections.IEnumerable.GetEnumerator()
 - uid: Syn.Bot.Oscova.Collection.IntentCollection.System#Collections#IEnumerable#GetEnumerator*
   name: IEnumerable.GetEnumerator
   href: api/Syn.Bot.Oscova.Collection.IntentCollection.html#Syn_Bot_Oscova_Collection_IntentCollection_System_Collections_IEnumerable_GetEnumerator_
@@ -2404,7 +2428,7 @@ references:
   fullName: Syn.Bot.Oscova.Collection.RecognizerCollection.CopyTo(Syn.Bot.Oscova.Interfaces.IEntityRecognizer[], System.Int32)
   fullName.vb: Syn.Bot.Oscova.Collection.RecognizerCollection.CopyTo(Syn.Bot.Oscova.Interfaces.IEntityRecognizer(), System.Int32)
   nameWithType: RecognizerCollection.CopyTo(IEntityRecognizer[], Int32)
-  nameWithType.vb: CopyTo(IEntityRecognizer(), Int32)
+  nameWithType.vb: RecognizerCollection.CopyTo(IEntityRecognizer(), Int32)
 - uid: Syn.Bot.Oscova.Collection.RecognizerCollection.CopyTo*
   name: CopyTo
   href: api/Syn.Bot.Oscova.Collection.RecognizerCollection.html#Syn_Bot_Oscova_Collection_RecognizerCollection_CopyTo_
@@ -2485,7 +2509,7 @@ references:
   fullName: Syn.Bot.Oscova.Collection.RecognizerCollection.Item[System.String]
   fullName.vb: Syn.Bot.Oscova.Collection.RecognizerCollection.Item(System.String)
   nameWithType: RecognizerCollection.Item[String]
-  nameWithType.vb: Item(String)
+  nameWithType.vb: RecognizerCollection.Item(String)
 - uid: Syn.Bot.Oscova.Collection.RecognizerCollection.Item*
   name: Item
   href: api/Syn.Bot.Oscova.Collection.RecognizerCollection.html#Syn_Bot_Oscova_Collection_RecognizerCollection_Item_
@@ -2505,14 +2529,11 @@ references:
   fullName: Syn.Bot.Oscova.Collection.RecognizerCollection.LoadType
   nameWithType: RecognizerCollection.LoadType
 - uid: Syn.Bot.Oscova.Collection.RecognizerCollection.RegisterType*
-  name: RegisterType<T>
+  name: RegisterType
   href: api/Syn.Bot.Oscova.Collection.RecognizerCollection.html#Syn_Bot_Oscova_Collection_RecognizerCollection_RegisterType_
   commentId: Overload:Syn.Bot.Oscova.Collection.RecognizerCollection.RegisterType
-  name.vb: RegisterType(Of T)
-  fullName: Syn.Bot.Oscova.Collection.RecognizerCollection.RegisterType<T>
-  fullName.vb: Syn.Bot.Oscova.Collection.RecognizerCollection.RegisterType(Of T)
-  nameWithType: RecognizerCollection.RegisterType<T>
-  nameWithType.vb: RecognizerCollection.RegisterType(Of T)
+  fullName: Syn.Bot.Oscova.Collection.RecognizerCollection.RegisterType
+  nameWithType: RecognizerCollection.RegisterType
 - uid: Syn.Bot.Oscova.Collection.RecognizerCollection.RegisterType``1(System.String)
   name: RegisterType<T>(String)
   href: api/Syn.Bot.Oscova.Collection.RecognizerCollection.html#Syn_Bot_Oscova_Collection_RecognizerCollection_RegisterType__1_System_String_
@@ -2521,7 +2542,7 @@ references:
   fullName: Syn.Bot.Oscova.Collection.RecognizerCollection.RegisterType<T>(System.String)
   fullName.vb: Syn.Bot.Oscova.Collection.RecognizerCollection.RegisterType(Of T)(System.String)
   nameWithType: RecognizerCollection.RegisterType<T>(String)
-  nameWithType.vb: RegisterType(Of T)(String)
+  nameWithType.vb: RecognizerCollection.RegisterType(Of T)(String)
 - uid: Syn.Bot.Oscova.Collection.RecognizerCollection.Remove(Syn.Bot.Oscova.Interfaces.IEntityRecognizer)
   name: Remove(IEntityRecognizer)
   href: api/Syn.Bot.Oscova.Collection.RecognizerCollection.html#Syn_Bot_Oscova_Collection_RecognizerCollection_Remove_Syn_Bot_Oscova_Interfaces_IEntityRecognizer_
@@ -2553,7 +2574,7 @@ references:
   name.vb: System.Collections.IEnumerable.GetEnumerator()
   fullName: Syn.Bot.Oscova.Collection.RecognizerCollection.System.Collections.IEnumerable.GetEnumerator()
   nameWithType: RecognizerCollection.IEnumerable.GetEnumerator()
-  nameWithType.vb: System.Collections.IEnumerable.GetEnumerator()
+  nameWithType.vb: RecognizerCollection.System.Collections.IEnumerable.GetEnumerator()
 - uid: Syn.Bot.Oscova.Collection.RecognizerCollection.System#Collections#IEnumerable#GetEnumerator*
   name: IEnumerable.GetEnumerator
   href: api/Syn.Bot.Oscova.Collection.RecognizerCollection.html#Syn_Bot_Oscova_Collection_RecognizerCollection_System_Collections_IEnumerable_GetEnumerator_
@@ -2762,7 +2783,7 @@ references:
   fullName: Syn.Bot.Oscova.Context.CopyTo(Syn.Bot.Oscova.ContextItem[], System.Int32)
   fullName.vb: Syn.Bot.Oscova.Context.CopyTo(Syn.Bot.Oscova.ContextItem(), System.Int32)
   nameWithType: Context.CopyTo(ContextItem[], Int32)
-  nameWithType.vb: CopyTo(ContextItem(), Int32)
+  nameWithType.vb: Context.CopyTo(ContextItem(), Int32)
 - uid: Syn.Bot.Oscova.Context.CopyTo*
   name: CopyTo
   href: api/Syn.Bot.Oscova.Context.html#Syn_Bot_Oscova_Context_CopyTo_
@@ -2813,7 +2834,7 @@ references:
   fullName: Syn.Bot.Oscova.Context.Item[System.Enum]
   fullName.vb: Syn.Bot.Oscova.Context.Item(System.Enum)
   nameWithType: Context.Item[Enum]
-  nameWithType.vb: Item(Enum)
+  nameWithType.vb: Context.Item(Enum)
 - uid: Syn.Bot.Oscova.Context.Item(System.String)
   name: Item[String]
   href: api/Syn.Bot.Oscova.Context.html#Syn_Bot_Oscova_Context_Item_System_String_
@@ -2822,7 +2843,7 @@ references:
   fullName: Syn.Bot.Oscova.Context.Item[System.String]
   fullName.vb: Syn.Bot.Oscova.Context.Item(System.String)
   nameWithType: Context.Item[String]
-  nameWithType.vb: Item(String)
+  nameWithType.vb: Context.Item(String)
 - uid: Syn.Bot.Oscova.Context.Item*
   name: Item
   href: api/Syn.Bot.Oscova.Context.html#Syn_Bot_Oscova_Context_Item_
@@ -2878,7 +2899,7 @@ references:
   name.vb: System.Collections.IEnumerable.GetEnumerator()
   fullName: Syn.Bot.Oscova.Context.System.Collections.IEnumerable.GetEnumerator()
   nameWithType: Context.IEnumerable.GetEnumerator()
-  nameWithType.vb: System.Collections.IEnumerable.GetEnumerator()
+  nameWithType.vb: Context.System.Collections.IEnumerable.GetEnumerator()
 - uid: Syn.Bot.Oscova.Context.System#Collections#IEnumerable#GetEnumerator*
   name: IEnumerable.GetEnumerator
   href: api/Syn.Bot.Oscova.Context.html#Syn_Bot_Oscova_Context_System_Collections_IEnumerable_GetEnumerator_
@@ -3554,14 +3575,11 @@ references:
   fullName: Syn.Bot.Oscova.Entities.Entity.Value
   nameWithType: Entity.Value
 - uid: Syn.Bot.Oscova.Entities.Entity.ValueAs*
-  name: ValueAs<T>
+  name: ValueAs
   href: api/Syn.Bot.Oscova.Entities.Entity.html#Syn_Bot_Oscova_Entities_Entity_ValueAs_
   commentId: Overload:Syn.Bot.Oscova.Entities.Entity.ValueAs
-  name.vb: ValueAs(Of T)
-  fullName: Syn.Bot.Oscova.Entities.Entity.ValueAs<T>
-  fullName.vb: Syn.Bot.Oscova.Entities.Entity.ValueAs(Of T)
-  nameWithType: Entity.ValueAs<T>
-  nameWithType.vb: Entity.ValueAs(Of T)
+  fullName: Syn.Bot.Oscova.Entities.Entity.ValueAs
+  nameWithType: Entity.ValueAs
 - uid: Syn.Bot.Oscova.Entities.Entity.ValueAs``1
   name: ValueAs<T>()
   href: api/Syn.Bot.Oscova.Entities.Entity.html#Syn_Bot_Oscova_Entities_Entity_ValueAs__1
@@ -3570,7 +3588,7 @@ references:
   fullName: Syn.Bot.Oscova.Entities.Entity.ValueAs<T>()
   fullName.vb: Syn.Bot.Oscova.Entities.Entity.ValueAs(Of T)()
   nameWithType: Entity.ValueAs<T>()
-  nameWithType.vb: ValueAs(Of T)()
+  nameWithType.vb: Entity.ValueAs(Of T)()
 - uid: Syn.Bot.Oscova.Entities.IntegerEntity
   name: IntegerEntity
   href: api/Syn.Bot.Oscova.Entities.IntegerEntity.html
@@ -5049,7 +5067,7 @@ references:
   fullName: Syn.Bot.Oscova.Interfaces.IDetokenizer.Detokenize(System.Collections.Generic.IEnumerable<System.String>)
   fullName.vb: Syn.Bot.Oscova.Interfaces.IDetokenizer.Detokenize(System.Collections.Generic.IEnumerable(Of System.String))
   nameWithType: IDetokenizer.Detokenize(IEnumerable<String>)
-  nameWithType.vb: Detokenize(IEnumerable(Of String))
+  nameWithType.vb: IDetokenizer.Detokenize(IEnumerable(Of String))
 - uid: Syn.Bot.Oscova.Interfaces.IDetokenizer.Detokenize*
   name: Detokenize
   href: api/Syn.Bot.Oscova.Interfaces.IDetokenizer.html#Syn_Bot_Oscova_Interfaces_IDetokenizer_Detokenize_
@@ -5472,7 +5490,7 @@ references:
   fullName: Syn.Bot.Oscova.Languages.English.EnglishDetokenizer.Detokenize(System.Collections.Generic.IEnumerable<System.String>)
   fullName.vb: Syn.Bot.Oscova.Languages.English.EnglishDetokenizer.Detokenize(System.Collections.Generic.IEnumerable(Of System.String))
   nameWithType: EnglishDetokenizer.Detokenize(IEnumerable<String>)
-  nameWithType.vb: Detokenize(IEnumerable(Of String))
+  nameWithType.vb: EnglishDetokenizer.Detokenize(IEnumerable(Of String))
 - uid: Syn.Bot.Oscova.Languages.English.EnglishDetokenizer.Detokenize*
   name: Detokenize
   href: api/Syn.Bot.Oscova.Languages.English.EnglishDetokenizer.html#Syn_Bot_Oscova_Languages_English_EnglishDetokenizer_Detokenize_
@@ -5703,7 +5721,7 @@ references:
   fullName: Syn.Bot.Oscova.Languages.English.Stemmer.StemmerOperations.in_grouping(System.Char[], System.Int32, System.Int32)
   fullName.vb: Syn.Bot.Oscova.Languages.English.Stemmer.StemmerOperations.in_grouping(System.Char(), System.Int32, System.Int32)
   nameWithType: StemmerOperations.in_grouping(Char[], Int32, Int32)
-  nameWithType.vb: in_grouping(Char(), Int32, Int32)
+  nameWithType.vb: StemmerOperations.in_grouping(Char(), Int32, Int32)
 - uid: Syn.Bot.Oscova.Languages.English.Stemmer.StemmerOperations.in_grouping*
   name: in_grouping
   href: api/Syn.Bot.Oscova.Languages.English.Stemmer.StemmerOperations.html#Syn_Bot_Oscova_Languages_English_Stemmer_StemmerOperations_in_grouping_
@@ -5718,7 +5736,7 @@ references:
   fullName: Syn.Bot.Oscova.Languages.English.Stemmer.StemmerOperations.in_grouping_b(System.Char[], System.Int32, System.Int32)
   fullName.vb: Syn.Bot.Oscova.Languages.English.Stemmer.StemmerOperations.in_grouping_b(System.Char(), System.Int32, System.Int32)
   nameWithType: StemmerOperations.in_grouping_b(Char[], Int32, Int32)
-  nameWithType.vb: in_grouping_b(Char(), Int32, Int32)
+  nameWithType.vb: StemmerOperations.in_grouping_b(Char(), Int32, Int32)
 - uid: Syn.Bot.Oscova.Languages.English.Stemmer.StemmerOperations.in_grouping_b*
   name: in_grouping_b
   href: api/Syn.Bot.Oscova.Languages.English.Stemmer.StemmerOperations.html#Syn_Bot_Oscova_Languages_English_Stemmer_StemmerOperations_in_grouping_b_
@@ -5793,7 +5811,7 @@ references:
   fullName: Syn.Bot.Oscova.Languages.English.Stemmer.StemmerOperations.out_grouping(System.Char[], System.Int32, System.Int32)
   fullName.vb: Syn.Bot.Oscova.Languages.English.Stemmer.StemmerOperations.out_grouping(System.Char(), System.Int32, System.Int32)
   nameWithType: StemmerOperations.out_grouping(Char[], Int32, Int32)
-  nameWithType.vb: out_grouping(Char(), Int32, Int32)
+  nameWithType.vb: StemmerOperations.out_grouping(Char(), Int32, Int32)
 - uid: Syn.Bot.Oscova.Languages.English.Stemmer.StemmerOperations.out_grouping*
   name: out_grouping
   href: api/Syn.Bot.Oscova.Languages.English.Stemmer.StemmerOperations.html#Syn_Bot_Oscova_Languages_English_Stemmer_StemmerOperations_out_grouping_
@@ -5808,7 +5826,7 @@ references:
   fullName: Syn.Bot.Oscova.Languages.English.Stemmer.StemmerOperations.out_grouping_b(System.Char[], System.Int32, System.Int32)
   fullName.vb: Syn.Bot.Oscova.Languages.English.Stemmer.StemmerOperations.out_grouping_b(System.Char(), System.Int32, System.Int32)
   nameWithType: StemmerOperations.out_grouping_b(Char[], Int32, Int32)
-  nameWithType.vb: out_grouping_b(Char(), Int32, Int32)
+  nameWithType.vb: StemmerOperations.out_grouping_b(Char(), Int32, Int32)
 - uid: Syn.Bot.Oscova.Languages.English.Stemmer.StemmerOperations.out_grouping_b*
   name: out_grouping_b
   href: api/Syn.Bot.Oscova.Languages.English.Stemmer.StemmerOperations.html#Syn_Bot_Oscova_Languages_English_Stemmer_StemmerOperations_out_grouping_b_
@@ -6085,6 +6103,18 @@ references:
   commentId: Overload:Syn.Bot.Oscova.OscovaBot.#ctor
   fullName: Syn.Bot.Oscova.OscovaBot.OscovaBot
   nameWithType: OscovaBot.OscovaBot
+- uid: Syn.Bot.Oscova.OscovaBot.Activate(System.String,System.String,System.String)
+  name: Activate(String, String, String)
+  href: api/Syn.Bot.Oscova.OscovaBot.html#Syn_Bot_Oscova_OscovaBot_Activate_System_String_System_String_System_String_
+  commentId: M:Syn.Bot.Oscova.OscovaBot.Activate(System.String,System.String,System.String)
+  fullName: Syn.Bot.Oscova.OscovaBot.Activate(System.String, System.String, System.String)
+  nameWithType: OscovaBot.Activate(String, String, String)
+- uid: Syn.Bot.Oscova.OscovaBot.Activate*
+  name: Activate
+  href: api/Syn.Bot.Oscova.OscovaBot.html#Syn_Bot_Oscova_OscovaBot_Activate_
+  commentId: Overload:Syn.Bot.Oscova.OscovaBot.Activate
+  fullName: Syn.Bot.Oscova.OscovaBot.Activate
+  nameWithType: OscovaBot.Activate
 - uid: Syn.Bot.Oscova.OscovaBot.Configuration
   name: Configuration
   href: api/Syn.Bot.Oscova.OscovaBot.html#Syn_Bot_Oscova_OscovaBot_Configuration
@@ -6105,7 +6135,7 @@ references:
   fullName: Syn.Bot.Oscova.OscovaBot.CreateCompositeType(System.String, System.String[])
   fullName.vb: Syn.Bot.Oscova.OscovaBot.CreateCompositeType(System.String, System.String())
   nameWithType: OscovaBot.CreateCompositeType(String, String[])
-  nameWithType.vb: CreateCompositeType(String, String())
+  nameWithType.vb: OscovaBot.CreateCompositeType(String, String())
 - uid: Syn.Bot.Oscova.OscovaBot.CreateCompositeType*
   name: CreateCompositeType
   href: api/Syn.Bot.Oscova.OscovaBot.html#Syn_Bot_Oscova_OscovaBot_CreateCompositeType_
@@ -6132,7 +6162,7 @@ references:
   fullName: Syn.Bot.Oscova.OscovaBot.CreateRecognizer(System.String, System.Collections.Generic.IEnumerable<System.String>)
   fullName.vb: Syn.Bot.Oscova.OscovaBot.CreateRecognizer(System.String, System.Collections.Generic.IEnumerable(Of System.String))
   nameWithType: OscovaBot.CreateRecognizer(String, IEnumerable<String>)
-  nameWithType.vb: CreateRecognizer(String, IEnumerable(Of String))
+  nameWithType.vb: OscovaBot.CreateRecognizer(String, IEnumerable(Of String))
 - uid: Syn.Bot.Oscova.OscovaBot.CreateRecognizer(System.String,System.Text.RegularExpressions.Regex)
   name: CreateRecognizer(String, Regex)
   href: api/Syn.Bot.Oscova.OscovaBot.html#Syn_Bot_Oscova_OscovaBot_CreateRecognizer_System_String_System_Text_RegularExpressions_Regex_
@@ -6153,7 +6183,7 @@ references:
   fullName: Syn.Bot.Oscova.OscovaBot.CreateRecognizer<T>(System.String)
   fullName.vb: Syn.Bot.Oscova.OscovaBot.CreateRecognizer(Of T)(System.String)
   nameWithType: OscovaBot.CreateRecognizer<T>(String)
-  nameWithType.vb: CreateRecognizer(Of T)(String)
+  nameWithType.vb: OscovaBot.CreateRecognizer(Of T)(String)
 - uid: Syn.Bot.Oscova.OscovaBot.CreateUser
   name: CreateUser()
   href: api/Syn.Bot.Oscova.OscovaBot.html#Syn_Bot_Oscova_OscovaBot_CreateUser
@@ -10736,12 +10766,15 @@ references:
   fullName: Syn.Bot.Siml.Classes.ShuffleBag<T>.ShuffleBag(System.Int32)
   fullName.vb: Syn.Bot.Siml.Classes.ShuffleBag(Of T).ShuffleBag(System.Int32)
   nameWithType: ShuffleBag<T>.ShuffleBag(Int32)
+  nameWithType.vb: ShuffleBag(Of T).ShuffleBag(Int32)
 - uid: Syn.Bot.Siml.Classes.ShuffleBag`1.#ctor*
   name: ShuffleBag
   href: api/Syn.Bot.Siml.Classes.ShuffleBag-1.html#Syn_Bot_Siml_Classes_ShuffleBag_1__ctor_
   commentId: Overload:Syn.Bot.Siml.Classes.ShuffleBag`1.#ctor
-  fullName: Syn.Bot.Siml.Classes.ShuffleBag.ShuffleBag
-  nameWithType: ShuffleBag.ShuffleBag
+  fullName: Syn.Bot.Siml.Classes.ShuffleBag<T>.ShuffleBag
+  fullName.vb: Syn.Bot.Siml.Classes.ShuffleBag(Of T).ShuffleBag
+  nameWithType: ShuffleBag<T>.ShuffleBag
+  nameWithType.vb: ShuffleBag(Of T).ShuffleBag
 - uid: Syn.Bot.Siml.Classes.ShuffleBag`1.Add(Syn.Bot.Siml.Extensions.WeightedItem{`0})
   name: Add(WeightedItem<T>)
   href: api/Syn.Bot.Siml.Classes.ShuffleBag-1.html#Syn_Bot_Siml_Classes_ShuffleBag_1_Add_Syn_Bot_Siml_Extensions_WeightedItem__0__
@@ -10750,13 +10783,15 @@ references:
   fullName: Syn.Bot.Siml.Classes.ShuffleBag<T>.Add(Syn.Bot.Siml.Extensions.WeightedItem<T>)
   fullName.vb: Syn.Bot.Siml.Classes.ShuffleBag(Of T).Add(Syn.Bot.Siml.Extensions.WeightedItem(Of T))
   nameWithType: ShuffleBag<T>.Add(WeightedItem<T>)
-  nameWithType.vb: Add(WeightedItem(Of T))
+  nameWithType.vb: ShuffleBag(Of T).Add(WeightedItem(Of T))
 - uid: Syn.Bot.Siml.Classes.ShuffleBag`1.Add*
   name: Add
   href: api/Syn.Bot.Siml.Classes.ShuffleBag-1.html#Syn_Bot_Siml_Classes_ShuffleBag_1_Add_
   commentId: Overload:Syn.Bot.Siml.Classes.ShuffleBag`1.Add
-  fullName: Syn.Bot.Siml.Classes.ShuffleBag.Add
-  nameWithType: ShuffleBag.Add
+  fullName: Syn.Bot.Siml.Classes.ShuffleBag<T>.Add
+  fullName.vb: Syn.Bot.Siml.Classes.ShuffleBag(Of T).Add
+  nameWithType: ShuffleBag<T>.Add
+  nameWithType.vb: ShuffleBag(Of T).Add
 - uid: Syn.Bot.Siml.Classes.ShuffleBag`1.AddRange(System.Collections.Generic.IEnumerable{Syn.Bot.Siml.Extensions.WeightedItem{`0}})
   name: AddRange(IEnumerable<WeightedItem<T>>)
   href: api/Syn.Bot.Siml.Classes.ShuffleBag-1.html#Syn_Bot_Siml_Classes_ShuffleBag_1_AddRange_System_Collections_Generic_IEnumerable_Syn_Bot_Siml_Extensions_WeightedItem__0___
@@ -10765,13 +10800,15 @@ references:
   fullName: Syn.Bot.Siml.Classes.ShuffleBag<T>.AddRange(System.Collections.Generic.IEnumerable<Syn.Bot.Siml.Extensions.WeightedItem<T>>)
   fullName.vb: Syn.Bot.Siml.Classes.ShuffleBag(Of T).AddRange(System.Collections.Generic.IEnumerable(Of Syn.Bot.Siml.Extensions.WeightedItem(Of T)))
   nameWithType: ShuffleBag<T>.AddRange(IEnumerable<WeightedItem<T>>)
-  nameWithType.vb: AddRange(IEnumerable(Of WeightedItem(Of T)))
+  nameWithType.vb: ShuffleBag(Of T).AddRange(IEnumerable(Of WeightedItem(Of T)))
 - uid: Syn.Bot.Siml.Classes.ShuffleBag`1.AddRange*
   name: AddRange
   href: api/Syn.Bot.Siml.Classes.ShuffleBag-1.html#Syn_Bot_Siml_Classes_ShuffleBag_1_AddRange_
   commentId: Overload:Syn.Bot.Siml.Classes.ShuffleBag`1.AddRange
-  fullName: Syn.Bot.Siml.Classes.ShuffleBag.AddRange
-  nameWithType: ShuffleBag.AddRange
+  fullName: Syn.Bot.Siml.Classes.ShuffleBag<T>.AddRange
+  fullName.vb: Syn.Bot.Siml.Classes.ShuffleBag(Of T).AddRange
+  nameWithType: ShuffleBag<T>.AddRange
+  nameWithType.vb: ShuffleBag(Of T).AddRange
 - uid: Syn.Bot.Siml.Classes.ShuffleBag`1.Next
   name: Next()
   href: api/Syn.Bot.Siml.Classes.ShuffleBag-1.html#Syn_Bot_Siml_Classes_ShuffleBag_1_Next
@@ -10779,12 +10816,15 @@ references:
   fullName: Syn.Bot.Siml.Classes.ShuffleBag<T>.Next()
   fullName.vb: Syn.Bot.Siml.Classes.ShuffleBag(Of T).Next()
   nameWithType: ShuffleBag<T>.Next()
+  nameWithType.vb: ShuffleBag(Of T).Next()
 - uid: Syn.Bot.Siml.Classes.ShuffleBag`1.Next*
   name: Next
   href: api/Syn.Bot.Siml.Classes.ShuffleBag-1.html#Syn_Bot_Siml_Classes_ShuffleBag_1_Next_
   commentId: Overload:Syn.Bot.Siml.Classes.ShuffleBag`1.Next
-  fullName: Syn.Bot.Siml.Classes.ShuffleBag.Next
-  nameWithType: ShuffleBag.Next
+  fullName: Syn.Bot.Siml.Classes.ShuffleBag<T>.Next
+  fullName.vb: Syn.Bot.Siml.Classes.ShuffleBag(Of T).Next
+  nameWithType: ShuffleBag<T>.Next
+  nameWithType.vb: ShuffleBag(Of T).Next
 - uid: Syn.Bot.Siml.Classes.ShuffleBag`1.Size
   name: Size
   href: api/Syn.Bot.Siml.Classes.ShuffleBag-1.html#Syn_Bot_Siml_Classes_ShuffleBag_1_Size
@@ -10792,6 +10832,7 @@ references:
   fullName: Syn.Bot.Siml.Classes.ShuffleBag<T>.Size
   fullName.vb: Syn.Bot.Siml.Classes.ShuffleBag(Of T).Size
   nameWithType: ShuffleBag<T>.Size
+  nameWithType.vb: ShuffleBag(Of T).Size
 - uid: Syn.Bot.Siml.Classes.ShuffleBag`1.Size*
   name: Size
   href: api/Syn.Bot.Siml.Classes.ShuffleBag-1.html#Syn_Bot_Siml_Classes_ShuffleBag_1_Size_
@@ -10892,7 +10933,7 @@ references:
   fullName: Syn.Bot.Siml.Collections.AdapterCollection.AddRange(Syn.Bot.Siml.Interfaces.IAdapter[])
   fullName.vb: Syn.Bot.Siml.Collections.AdapterCollection.AddRange(Syn.Bot.Siml.Interfaces.IAdapter())
   nameWithType: AdapterCollection.AddRange(IAdapter[])
-  nameWithType.vb: AddRange(IAdapter())
+  nameWithType.vb: AdapterCollection.AddRange(IAdapter())
 - uid: Syn.Bot.Siml.Collections.AdapterCollection.AddRange*
   name: AddRange
   href: api/Syn.Bot.Siml.Collections.AdapterCollection.html#Syn_Bot_Siml_Collections_AdapterCollection_AddRange_
@@ -10937,7 +10978,7 @@ references:
   fullName: Syn.Bot.Siml.Collections.AdapterCollection.CopyTo(Syn.Bot.Siml.Interfaces.IAdapter[], System.Int32)
   fullName.vb: Syn.Bot.Siml.Collections.AdapterCollection.CopyTo(Syn.Bot.Siml.Interfaces.IAdapter(), System.Int32)
   nameWithType: AdapterCollection.CopyTo(IAdapter[], Int32)
-  nameWithType.vb: CopyTo(IAdapter(), Int32)
+  nameWithType.vb: AdapterCollection.CopyTo(IAdapter(), Int32)
 - uid: Syn.Bot.Siml.Collections.AdapterCollection.CopyTo*
   name: CopyTo
   href: api/Syn.Bot.Siml.Collections.AdapterCollection.html#Syn_Bot_Siml_Collections_AdapterCollection_CopyTo_
@@ -10988,7 +11029,7 @@ references:
   fullName: Syn.Bot.Siml.Collections.AdapterCollection.Item[System.Xml.Linq.XName]
   fullName.vb: Syn.Bot.Siml.Collections.AdapterCollection.Item(System.Xml.Linq.XName)
   nameWithType: AdapterCollection.Item[XName]
-  nameWithType.vb: Item(XName)
+  nameWithType.vb: AdapterCollection.Item(XName)
 - uid: Syn.Bot.Siml.Collections.AdapterCollection.Item*
   name: Item
   href: api/Syn.Bot.Siml.Collections.AdapterCollection.html#Syn_Bot_Siml_Collections_AdapterCollection_Item_
@@ -11014,7 +11055,7 @@ references:
   name.vb: System.Collections.IEnumerable.GetEnumerator()
   fullName: Syn.Bot.Siml.Collections.AdapterCollection.System.Collections.IEnumerable.GetEnumerator()
   nameWithType: AdapterCollection.IEnumerable.GetEnumerator()
-  nameWithType.vb: System.Collections.IEnumerable.GetEnumerator()
+  nameWithType.vb: AdapterCollection.System.Collections.IEnumerable.GetEnumerator()
 - uid: Syn.Bot.Siml.Collections.AdapterCollection.System#Collections#IEnumerable#GetEnumerator*
   name: IEnumerable.GetEnumerator
   href: api/Syn.Bot.Siml.Collections.AdapterCollection.html#Syn_Bot_Siml_Collections_AdapterCollection_System_Collections_IEnumerable_GetEnumerator_
@@ -11054,14 +11095,11 @@ references:
   fullName: Syn.Bot.Siml.Collections.DataCollection.Current
   nameWithType: DataCollection.Current
 - uid: Syn.Bot.Siml.Collections.DataCollection.Get*
-  name: Get<T>
+  name: Get
   href: api/Syn.Bot.Siml.Collections.DataCollection.html#Syn_Bot_Siml_Collections_DataCollection_Get_
   commentId: Overload:Syn.Bot.Siml.Collections.DataCollection.Get
-  name.vb: Get(Of T)
-  fullName: Syn.Bot.Siml.Collections.DataCollection.Get<T>
-  fullName.vb: Syn.Bot.Siml.Collections.DataCollection.Get(Of T)
-  nameWithType: DataCollection.Get<T>
-  nameWithType.vb: DataCollection.Get(Of T)
+  fullName: Syn.Bot.Siml.Collections.DataCollection.Get
+  nameWithType: DataCollection.Get
 - uid: Syn.Bot.Siml.Collections.DataCollection.Get``1
   name: Get<T>()
   href: api/Syn.Bot.Siml.Collections.DataCollection.html#Syn_Bot_Siml_Collections_DataCollection_Get__1
@@ -11070,7 +11108,7 @@ references:
   fullName: Syn.Bot.Siml.Collections.DataCollection.Get<T>()
   fullName.vb: Syn.Bot.Siml.Collections.DataCollection.Get(Of T)()
   nameWithType: DataCollection.Get<T>()
-  nameWithType.vb: Get(Of T)()
+  nameWithType.vb: DataCollection.Get(Of T)()
 - uid: Syn.Bot.Siml.Collections.ExampleCollection
   name: ExampleCollection
   href: api/Syn.Bot.Siml.Collections.ExampleCollection.html
@@ -11145,7 +11183,7 @@ references:
   fullName: Syn.Bot.Siml.Collections.ExampleCollection.CopyTo(Syn.Bot.Siml.Collections.ExampleItem[], System.Int32)
   fullName.vb: Syn.Bot.Siml.Collections.ExampleCollection.CopyTo(Syn.Bot.Siml.Collections.ExampleItem(), System.Int32)
   nameWithType: ExampleCollection.CopyTo(ExampleItem[], Int32)
-  nameWithType.vb: CopyTo(ExampleItem(), Int32)
+  nameWithType.vb: ExampleCollection.CopyTo(ExampleItem(), Int32)
 - uid: Syn.Bot.Siml.Collections.ExampleCollection.CopyTo*
   name: CopyTo
   href: api/Syn.Bot.Siml.Collections.ExampleCollection.html#Syn_Bot_Siml_Collections_ExampleCollection_CopyTo_
@@ -11237,7 +11275,7 @@ references:
   name.vb: System.Collections.IEnumerable.GetEnumerator()
   fullName: Syn.Bot.Siml.Collections.ExampleCollection.System.Collections.IEnumerable.GetEnumerator()
   nameWithType: ExampleCollection.IEnumerable.GetEnumerator()
-  nameWithType.vb: System.Collections.IEnumerable.GetEnumerator()
+  nameWithType.vb: ExampleCollection.System.Collections.IEnumerable.GetEnumerator()
 - uid: Syn.Bot.Siml.Collections.ExampleCollection.System#Collections#IEnumerable#GetEnumerator*
   name: IEnumerable.GetEnumerator
   href: api/Syn.Bot.Siml.Collections.ExampleCollection.html#Syn_Bot_Siml_Collections_ExampleCollection_System_Collections_IEnumerable_GetEnumerator_
@@ -11416,7 +11454,7 @@ references:
   fullName: Syn.Bot.Siml.Collections.InteractionCollection.CopyTo(Syn.Bot.Siml.Collections.InteractionItem[], System.Int32)
   fullName.vb: Syn.Bot.Siml.Collections.InteractionCollection.CopyTo(Syn.Bot.Siml.Collections.InteractionItem(), System.Int32)
   nameWithType: InteractionCollection.CopyTo(InteractionItem[], Int32)
-  nameWithType.vb: CopyTo(InteractionItem(), Int32)
+  nameWithType.vb: InteractionCollection.CopyTo(InteractionItem(), Int32)
 - uid: Syn.Bot.Siml.Collections.InteractionCollection.CopyTo*
   name: CopyTo
   href: api/Syn.Bot.Siml.Collections.InteractionCollection.html#Syn_Bot_Siml_Collections_InteractionCollection_CopyTo_
@@ -11502,7 +11540,7 @@ references:
   name.vb: System.Collections.IEnumerable.GetEnumerator()
   fullName: Syn.Bot.Siml.Collections.InteractionCollection.System.Collections.IEnumerable.GetEnumerator()
   nameWithType: InteractionCollection.IEnumerable.GetEnumerator()
-  nameWithType.vb: System.Collections.IEnumerable.GetEnumerator()
+  nameWithType.vb: InteractionCollection.System.Collections.IEnumerable.GetEnumerator()
 - uid: Syn.Bot.Siml.Collections.InteractionCollection.System#Collections#IEnumerable#GetEnumerator*
   name: IEnumerable.GetEnumerator
   href: api/Syn.Bot.Siml.Collections.InteractionCollection.html#Syn_Bot_Siml_Collections_InteractionCollection_System_Collections_IEnumerable_GetEnumerator_
@@ -11645,7 +11683,7 @@ references:
   fullName: Syn.Bot.Siml.Collections.Map.CopyTo(Syn.Bot.Siml.Interfaces.IMapItem[], System.Int32)
   fullName.vb: Syn.Bot.Siml.Collections.Map.CopyTo(Syn.Bot.Siml.Interfaces.IMapItem(), System.Int32)
   nameWithType: Map.CopyTo(IMapItem[], Int32)
-  nameWithType.vb: CopyTo(IMapItem(), Int32)
+  nameWithType.vb: Map.CopyTo(IMapItem(), Int32)
 - uid: Syn.Bot.Siml.Collections.Map.CopyTo*
   name: CopyTo
   href: api/Syn.Bot.Siml.Collections.Map.html#Syn_Bot_Siml_Collections_Map_CopyTo_
@@ -11696,7 +11734,7 @@ references:
   fullName: Syn.Bot.Siml.Collections.Map.Item[System.String]
   fullName.vb: Syn.Bot.Siml.Collections.Map.Item(System.String)
   nameWithType: Map.Item[String]
-  nameWithType.vb: Item(String)
+  nameWithType.vb: Map.Item(String)
 - uid: Syn.Bot.Siml.Collections.Map.Item*
   name: Item
   href: api/Syn.Bot.Siml.Collections.Map.html#Syn_Bot_Siml_Collections_Map_Item_
@@ -11740,7 +11778,7 @@ references:
   name.vb: System.Collections.IEnumerable.GetEnumerator()
   fullName: Syn.Bot.Siml.Collections.Map.System.Collections.IEnumerable.GetEnumerator()
   nameWithType: Map.IEnumerable.GetEnumerator()
-  nameWithType.vb: System.Collections.IEnumerable.GetEnumerator()
+  nameWithType.vb: Map.System.Collections.IEnumerable.GetEnumerator()
 - uid: Syn.Bot.Siml.Collections.Map.System#Collections#IEnumerable#GetEnumerator*
   name: IEnumerable.GetEnumerator
   href: api/Syn.Bot.Siml.Collections.Map.html#Syn_Bot_Siml_Collections_Map_System_Collections_IEnumerable_GetEnumerator_
@@ -11829,7 +11867,7 @@ references:
   fullName: Syn.Bot.Siml.Collections.MapCollection.CopyTo(Syn.Bot.Siml.Interfaces.IMap[], System.Int32)
   fullName.vb: Syn.Bot.Siml.Collections.MapCollection.CopyTo(Syn.Bot.Siml.Interfaces.IMap(), System.Int32)
   nameWithType: MapCollection.CopyTo(IMap[], Int32)
-  nameWithType.vb: CopyTo(IMap(), Int32)
+  nameWithType.vb: MapCollection.CopyTo(IMap(), Int32)
 - uid: Syn.Bot.Siml.Collections.MapCollection.CopyTo*
   name: CopyTo
   href: api/Syn.Bot.Siml.Collections.MapCollection.html#Syn_Bot_Siml_Collections_MapCollection_CopyTo_
@@ -11904,7 +11942,7 @@ references:
   fullName: Syn.Bot.Siml.Collections.MapCollection.Item[System.String]
   fullName.vb: Syn.Bot.Siml.Collections.MapCollection.Item(System.String)
   nameWithType: MapCollection.Item[String]
-  nameWithType.vb: Item(String)
+  nameWithType.vb: MapCollection.Item(String)
 - uid: Syn.Bot.Siml.Collections.MapCollection.Item*
   name: Item
   href: api/Syn.Bot.Siml.Collections.MapCollection.html#Syn_Bot_Siml_Collections_MapCollection_Item_
@@ -11930,7 +11968,7 @@ references:
   name.vb: System.Collections.IEnumerable.GetEnumerator()
   fullName: Syn.Bot.Siml.Collections.MapCollection.System.Collections.IEnumerable.GetEnumerator()
   nameWithType: MapCollection.IEnumerable.GetEnumerator()
-  nameWithType.vb: System.Collections.IEnumerable.GetEnumerator()
+  nameWithType.vb: MapCollection.System.Collections.IEnumerable.GetEnumerator()
 - uid: Syn.Bot.Siml.Collections.MapCollection.System#Collections#IEnumerable#GetEnumerator*
   name: IEnumerable.GetEnumerator
   href: api/Syn.Bot.Siml.Collections.MapCollection.html#Syn_Bot_Siml_Collections_MapCollection_System_Collections_IEnumerable_GetEnumerator_
@@ -12019,7 +12057,7 @@ references:
   fullName: Syn.Bot.Siml.Collections.ParserCollection.AddRange(Syn.Bot.Siml.Interfaces.IParser[])
   fullName.vb: Syn.Bot.Siml.Collections.ParserCollection.AddRange(Syn.Bot.Siml.Interfaces.IParser())
   nameWithType: ParserCollection.AddRange(IParser[])
-  nameWithType.vb: AddRange(IParser())
+  nameWithType.vb: ParserCollection.AddRange(IParser())
 - uid: Syn.Bot.Siml.Collections.ParserCollection.AddRange*
   name: AddRange
   href: api/Syn.Bot.Siml.Collections.ParserCollection.html#Syn_Bot_Siml_Collections_ParserCollection_AddRange_
@@ -12064,7 +12102,7 @@ references:
   fullName: Syn.Bot.Siml.Collections.ParserCollection.CopyTo(Syn.Bot.Siml.Interfaces.IParser[], System.Int32)
   fullName.vb: Syn.Bot.Siml.Collections.ParserCollection.CopyTo(Syn.Bot.Siml.Interfaces.IParser(), System.Int32)
   nameWithType: ParserCollection.CopyTo(IParser[], Int32)
-  nameWithType.vb: CopyTo(IParser(), Int32)
+  nameWithType.vb: ParserCollection.CopyTo(IParser(), Int32)
 - uid: Syn.Bot.Siml.Collections.ParserCollection.CopyTo*
   name: CopyTo
   href: api/Syn.Bot.Siml.Collections.ParserCollection.html#Syn_Bot_Siml_Collections_ParserCollection_CopyTo_
@@ -12115,7 +12153,7 @@ references:
   fullName: Syn.Bot.Siml.Collections.ParserCollection.Item[System.Xml.Linq.XName]
   fullName.vb: Syn.Bot.Siml.Collections.ParserCollection.Item(System.Xml.Linq.XName)
   nameWithType: ParserCollection.Item[XName]
-  nameWithType.vb: Item(XName)
+  nameWithType.vb: ParserCollection.Item(XName)
 - uid: Syn.Bot.Siml.Collections.ParserCollection.Item*
   name: Item
   href: api/Syn.Bot.Siml.Collections.ParserCollection.html#Syn_Bot_Siml_Collections_ParserCollection_Item_
@@ -12141,7 +12179,7 @@ references:
   name.vb: System.Collections.IEnumerable.GetEnumerator()
   fullName: Syn.Bot.Siml.Collections.ParserCollection.System.Collections.IEnumerable.GetEnumerator()
   nameWithType: ParserCollection.IEnumerable.GetEnumerator()
-  nameWithType.vb: System.Collections.IEnumerable.GetEnumerator()
+  nameWithType.vb: ParserCollection.System.Collections.IEnumerable.GetEnumerator()
 - uid: Syn.Bot.Siml.Collections.ParserCollection.System#Collections#IEnumerable#GetEnumerator*
   name: IEnumerable.GetEnumerator
   href: api/Syn.Bot.Siml.Collections.ParserCollection.html#Syn_Bot_Siml_Collections_ParserCollection_System_Collections_IEnumerable_GetEnumerator_
@@ -12332,7 +12370,7 @@ references:
   fullName: Syn.Bot.Siml.Collections.RegexCollection.CopyTo(Syn.Bot.Siml.Interfaces.IRegexItem[], System.Int32)
   fullName.vb: Syn.Bot.Siml.Collections.RegexCollection.CopyTo(Syn.Bot.Siml.Interfaces.IRegexItem(), System.Int32)
   nameWithType: RegexCollection.CopyTo(IRegexItem[], Int32)
-  nameWithType.vb: CopyTo(IRegexItem(), Int32)
+  nameWithType.vb: RegexCollection.CopyTo(IRegexItem(), Int32)
 - uid: Syn.Bot.Siml.Collections.RegexCollection.CopyTo*
   name: CopyTo
   href: api/Syn.Bot.Siml.Collections.RegexCollection.html#Syn_Bot_Siml_Collections_RegexCollection_CopyTo_
@@ -12419,7 +12457,7 @@ references:
   fullName: Syn.Bot.Siml.Collections.RegexCollection.Item[System.String]
   fullName.vb: Syn.Bot.Siml.Collections.RegexCollection.Item(System.String)
   nameWithType: RegexCollection.Item[String]
-  nameWithType.vb: Item(String)
+  nameWithType.vb: RegexCollection.Item(String)
 - uid: Syn.Bot.Siml.Collections.RegexCollection.Item*
   name: Item
   href: api/Syn.Bot.Siml.Collections.RegexCollection.html#Syn_Bot_Siml_Collections_RegexCollection_Item_
@@ -12457,7 +12495,7 @@ references:
   name.vb: System.Collections.IEnumerable.GetEnumerator()
   fullName: Syn.Bot.Siml.Collections.RegexCollection.System.Collections.IEnumerable.GetEnumerator()
   nameWithType: RegexCollection.IEnumerable.GetEnumerator()
-  nameWithType.vb: System.Collections.IEnumerable.GetEnumerator()
+  nameWithType.vb: RegexCollection.System.Collections.IEnumerable.GetEnumerator()
 - uid: Syn.Bot.Siml.Collections.RegexCollection.System#Collections#IEnumerable#GetEnumerator*
   name: IEnumerable.GetEnumerator
   href: api/Syn.Bot.Siml.Collections.RegexCollection.html#Syn_Bot_Siml_Collections_RegexCollection_System_Collections_IEnumerable_GetEnumerator_
@@ -12552,7 +12590,7 @@ references:
   fullName: Syn.Bot.Siml.Collections.SetCollection.Add(System.String, System.Collections.Generic.IEnumerable<System.String>)
   fullName.vb: Syn.Bot.Siml.Collections.SetCollection.Add(System.String, System.Collections.Generic.IEnumerable(Of System.String))
   nameWithType: SetCollection.Add(String, IEnumerable<String>)
-  nameWithType.vb: Add(String, IEnumerable(Of String))
+  nameWithType.vb: SetCollection.Add(String, IEnumerable(Of String))
 - uid: Syn.Bot.Siml.Collections.SetCollection.Add(System.Xml.Linq.XElement)
   name: Add(XElement)
   href: api/Syn.Bot.Siml.Collections.SetCollection.html#Syn_Bot_Siml_Collections_SetCollection_Add_System_Xml_Linq_XElement_
@@ -12573,7 +12611,7 @@ references:
   fullName: Syn.Bot.Siml.Collections.SetCollection.Add<T>(System.String)
   fullName.vb: Syn.Bot.Siml.Collections.SetCollection.Add(Of T)(System.String)
   nameWithType: SetCollection.Add<T>(String)
-  nameWithType.vb: Add(Of T)(String)
+  nameWithType.vb: SetCollection.Add(Of T)(String)
 - uid: Syn.Bot.Siml.Collections.SetCollection.Clear
   name: Clear()
   href: api/Syn.Bot.Siml.Collections.SetCollection.html#Syn_Bot_Siml_Collections_SetCollection_Clear
@@ -12618,7 +12656,7 @@ references:
   fullName: Syn.Bot.Siml.Collections.SetCollection.ContainsWord(System.String, out System.String)
   fullName.vb: Syn.Bot.Siml.Collections.SetCollection.ContainsWord(System.String, ByRef System.String)
   nameWithType: SetCollection.ContainsWord(String, out String)
-  nameWithType.vb: ContainsWord(String, ByRef String)
+  nameWithType.vb: SetCollection.ContainsWord(String, ByRef String)
 - uid: Syn.Bot.Siml.Collections.SetCollection.ContainsWord*
   name: ContainsWord
   href: api/Syn.Bot.Siml.Collections.SetCollection.html#Syn_Bot_Siml_Collections_SetCollection_ContainsWord_
@@ -12633,7 +12671,7 @@ references:
   fullName: Syn.Bot.Siml.Collections.SetCollection.CopyTo(Syn.Bot.Siml.Interfaces.ISet[], System.Int32)
   fullName.vb: Syn.Bot.Siml.Collections.SetCollection.CopyTo(Syn.Bot.Siml.Interfaces.ISet(), System.Int32)
   nameWithType: SetCollection.CopyTo(ISet[], Int32)
-  nameWithType.vb: CopyTo(ISet(), Int32)
+  nameWithType.vb: SetCollection.CopyTo(ISet(), Int32)
 - uid: Syn.Bot.Siml.Collections.SetCollection.CopyTo*
   name: CopyTo
   href: api/Syn.Bot.Siml.Collections.SetCollection.html#Syn_Bot_Siml_Collections_SetCollection_CopyTo_
@@ -12720,7 +12758,7 @@ references:
   fullName: Syn.Bot.Siml.Collections.SetCollection.Item[System.String]
   fullName.vb: Syn.Bot.Siml.Collections.SetCollection.Item(System.String)
   nameWithType: SetCollection.Item[String]
-  nameWithType.vb: Item(String)
+  nameWithType.vb: SetCollection.Item(String)
 - uid: Syn.Bot.Siml.Collections.SetCollection.Item*
   name: Item
   href: api/Syn.Bot.Siml.Collections.SetCollection.html#Syn_Bot_Siml_Collections_SetCollection_Item_
@@ -12752,7 +12790,7 @@ references:
   name.vb: System.Collections.IEnumerable.GetEnumerator()
   fullName: Syn.Bot.Siml.Collections.SetCollection.System.Collections.IEnumerable.GetEnumerator()
   nameWithType: SetCollection.IEnumerable.GetEnumerator()
-  nameWithType.vb: System.Collections.IEnumerable.GetEnumerator()
+  nameWithType.vb: SetCollection.System.Collections.IEnumerable.GetEnumerator()
 - uid: Syn.Bot.Siml.Collections.SetCollection.System#Collections#IEnumerable#GetEnumerator*
   name: IEnumerable.GetEnumerator
   href: api/Syn.Bot.Siml.Collections.SetCollection.html#Syn_Bot_Siml_Collections_SetCollection_System_Collections_IEnumerable_GetEnumerator_
@@ -12769,7 +12807,7 @@ references:
   fullName: Syn.Bot.Siml.Collections.SetCollection.TryGetValue(System.String, out Syn.Bot.Siml.Interfaces.ISet)
   fullName.vb: Syn.Bot.Siml.Collections.SetCollection.TryGetValue(System.String, ByRef Syn.Bot.Siml.Interfaces.ISet)
   nameWithType: SetCollection.TryGetValue(String, out ISet)
-  nameWithType.vb: TryGetValue(String, ByRef ISet)
+  nameWithType.vb: SetCollection.TryGetValue(String, ByRef ISet)
 - uid: Syn.Bot.Siml.Collections.SetCollection.TryGetValue*
   name: TryGetValue
   href: api/Syn.Bot.Siml.Collections.SetCollection.html#Syn_Bot_Siml_Collections_SetCollection_TryGetValue_
@@ -12802,7 +12840,7 @@ references:
   fullName: Syn.Bot.Siml.Collections.SetItem.Add(System.String[])
   fullName.vb: Syn.Bot.Siml.Collections.SetItem.Add(System.String())
   nameWithType: SetItem.Add(String[])
-  nameWithType.vb: Add(String())
+  nameWithType.vb: SetItem.Add(String())
 - uid: Syn.Bot.Siml.Collections.SetItem.Add*
   name: Add
   href: api/Syn.Bot.Siml.Collections.SetItem.html#Syn_Bot_Siml_Collections_SetItem_Add_
@@ -12817,7 +12855,7 @@ references:
   fullName: Syn.Bot.Siml.Collections.SetItem.AddRange(System.Collections.Generic.IEnumerable<System.String>)
   fullName.vb: Syn.Bot.Siml.Collections.SetItem.AddRange(System.Collections.Generic.IEnumerable(Of System.String))
   nameWithType: SetItem.AddRange(IEnumerable<String>)
-  nameWithType.vb: AddRange(IEnumerable(Of String))
+  nameWithType.vb: SetItem.AddRange(IEnumerable(Of String))
 - uid: Syn.Bot.Siml.Collections.SetItem.AddRange*
   name: AddRange
   href: api/Syn.Bot.Siml.Collections.SetItem.html#Syn_Bot_Siml_Collections_SetItem_AddRange_
@@ -12892,7 +12930,7 @@ references:
   fullName: Syn.Bot.Siml.Collections.Tokenizer.Tokenize(System.Collections.Generic.List<System.String>)
   fullName.vb: Syn.Bot.Siml.Collections.Tokenizer.Tokenize(System.Collections.Generic.List(Of System.String))
   nameWithType: Tokenizer.Tokenize(List<String>)
-  nameWithType.vb: Tokenize(List(Of String))
+  nameWithType.vb: Tokenizer.Tokenize(List(Of String))
 - uid: Syn.Bot.Siml.Collections.Tokenizer.Tokenize*
   name: Tokenize
   href: api/Syn.Bot.Siml.Collections.Tokenizer.html#Syn_Bot_Siml_Collections_Tokenizer_Tokenize_
@@ -12991,7 +13029,7 @@ references:
   fullName: Syn.Bot.Siml.Collections.TokenizerCollection.CopyTo(Syn.Bot.Siml.Interfaces.ITokenizer[], System.Int32)
   fullName.vb: Syn.Bot.Siml.Collections.TokenizerCollection.CopyTo(Syn.Bot.Siml.Interfaces.ITokenizer(), System.Int32)
   nameWithType: TokenizerCollection.CopyTo(ITokenizer[], Int32)
-  nameWithType.vb: CopyTo(ITokenizer(), Int32)
+  nameWithType.vb: TokenizerCollection.CopyTo(ITokenizer(), Int32)
 - uid: Syn.Bot.Siml.Collections.TokenizerCollection.CopyTo*
   name: CopyTo
   href: api/Syn.Bot.Siml.Collections.TokenizerCollection.html#Syn_Bot_Siml_Collections_TokenizerCollection_CopyTo_
@@ -13053,7 +13091,7 @@ references:
   name.vb: System.Collections.IEnumerable.GetEnumerator()
   fullName: Syn.Bot.Siml.Collections.TokenizerCollection.System.Collections.IEnumerable.GetEnumerator()
   nameWithType: TokenizerCollection.IEnumerable.GetEnumerator()
-  nameWithType.vb: System.Collections.IEnumerable.GetEnumerator()
+  nameWithType.vb: TokenizerCollection.System.Collections.IEnumerable.GetEnumerator()
 - uid: Syn.Bot.Siml.Collections.TokenizerCollection.System#Collections#IEnumerable#GetEnumerator*
   name: IEnumerable.GetEnumerator
   href: api/Syn.Bot.Siml.Collections.TokenizerCollection.html#Syn_Bot_Siml_Collections_TokenizerCollection_System_Collections_IEnumerable_GetEnumerator_
@@ -13154,7 +13192,7 @@ references:
   fullName: Syn.Bot.Siml.Collections.UsersCollection.CopyTo(Syn.Bot.Siml.BotUser[], System.Int32)
   fullName.vb: Syn.Bot.Siml.Collections.UsersCollection.CopyTo(Syn.Bot.Siml.BotUser(), System.Int32)
   nameWithType: UsersCollection.CopyTo(BotUser[], Int32)
-  nameWithType.vb: CopyTo(BotUser(), Int32)
+  nameWithType.vb: UsersCollection.CopyTo(BotUser(), Int32)
 - uid: Syn.Bot.Siml.Collections.UsersCollection.CopyTo*
   name: CopyTo
   href: api/Syn.Bot.Siml.Collections.UsersCollection.html#Syn_Bot_Siml_Collections_UsersCollection_CopyTo_
@@ -13205,7 +13243,7 @@ references:
   fullName: Syn.Bot.Siml.Collections.UsersCollection.Item[System.String]
   fullName.vb: Syn.Bot.Siml.Collections.UsersCollection.Item(System.String)
   nameWithType: UsersCollection.Item[String]
-  nameWithType.vb: Item(String)
+  nameWithType.vb: UsersCollection.Item(String)
 - uid: Syn.Bot.Siml.Collections.UsersCollection.Item*
   name: Item
   href: api/Syn.Bot.Siml.Collections.UsersCollection.html#Syn_Bot_Siml_Collections_UsersCollection_Item_
@@ -13237,7 +13275,7 @@ references:
   name.vb: System.Collections.IEnumerable.GetEnumerator()
   fullName: Syn.Bot.Siml.Collections.UsersCollection.System.Collections.IEnumerable.GetEnumerator()
   nameWithType: UsersCollection.IEnumerable.GetEnumerator()
-  nameWithType.vb: System.Collections.IEnumerable.GetEnumerator()
+  nameWithType.vb: UsersCollection.System.Collections.IEnumerable.GetEnumerator()
 - uid: Syn.Bot.Siml.Collections.UsersCollection.System#Collections#IEnumerable#GetEnumerator*
   name: IEnumerable.GetEnumerator
   href: api/Syn.Bot.Siml.Collections.UsersCollection.html#Syn_Bot_Siml_Collections_UsersCollection_System_Collections_IEnumerable_GetEnumerator_
@@ -13254,7 +13292,7 @@ references:
   fullName: Syn.Bot.Siml.Collections.UsersCollection.TryGetUser(System.String, out Syn.Bot.Siml.BotUser)
   fullName.vb: Syn.Bot.Siml.Collections.UsersCollection.TryGetUser(System.String, ByRef Syn.Bot.Siml.BotUser)
   nameWithType: UsersCollection.TryGetUser(String, out BotUser)
-  nameWithType.vb: TryGetUser(String, ByRef BotUser)
+  nameWithType.vb: UsersCollection.TryGetUser(String, ByRef BotUser)
 - uid: Syn.Bot.Siml.Collections.UsersCollection.TryGetUser*
   name: TryGetUser
   href: api/Syn.Bot.Siml.Collections.UsersCollection.html#Syn_Bot_Siml_Collections_UsersCollection_TryGetUser_
@@ -13329,7 +13367,7 @@ references:
   fullName: Syn.Bot.Siml.Collections.VocabularyCollection.CopyTo(Syn.Bot.Siml.Collections.VocabularyItem[], System.Int32)
   fullName.vb: Syn.Bot.Siml.Collections.VocabularyCollection.CopyTo(Syn.Bot.Siml.Collections.VocabularyItem(), System.Int32)
   nameWithType: VocabularyCollection.CopyTo(VocabularyItem[], Int32)
-  nameWithType.vb: CopyTo(VocabularyItem(), Int32)
+  nameWithType.vb: VocabularyCollection.CopyTo(VocabularyItem(), Int32)
 - uid: Syn.Bot.Siml.Collections.VocabularyCollection.CopyTo*
   name: CopyTo
   href: api/Syn.Bot.Siml.Collections.VocabularyCollection.html#Syn_Bot_Siml_Collections_VocabularyCollection_CopyTo_
@@ -13380,7 +13418,7 @@ references:
   fullName: Syn.Bot.Siml.Collections.VocabularyCollection.Item[System.String]
   fullName.vb: Syn.Bot.Siml.Collections.VocabularyCollection.Item(System.String)
   nameWithType: VocabularyCollection.Item[String]
-  nameWithType.vb: Item(String)
+  nameWithType.vb: VocabularyCollection.Item(String)
 - uid: Syn.Bot.Siml.Collections.VocabularyCollection.Item*
   name: Item
   href: api/Syn.Bot.Siml.Collections.VocabularyCollection.html#Syn_Bot_Siml_Collections_VocabularyCollection_Item_
@@ -13406,7 +13444,7 @@ references:
   name.vb: System.Collections.IEnumerable.GetEnumerator()
   fullName: Syn.Bot.Siml.Collections.VocabularyCollection.System.Collections.IEnumerable.GetEnumerator()
   nameWithType: VocabularyCollection.IEnumerable.GetEnumerator()
-  nameWithType.vb: System.Collections.IEnumerable.GetEnumerator()
+  nameWithType.vb: VocabularyCollection.System.Collections.IEnumerable.GetEnumerator()
 - uid: Syn.Bot.Siml.Collections.VocabularyCollection.System#Collections#IEnumerable#GetEnumerator*
   name: IEnumerable.GetEnumerator
   href: api/Syn.Bot.Siml.Collections.VocabularyCollection.html#Syn_Bot_Siml_Collections_VocabularyCollection_System_Collections_IEnumerable_GetEnumerator_
@@ -14274,14 +14312,11 @@ references:
   fullName: Syn.Bot.Siml.Extensions.RandomExtensions
   nameWithType: RandomExtensions
 - uid: Syn.Bot.Siml.Extensions.RandomExtensions.ChooseByProbability*
-  name: ChooseByProbability<T>
+  name: ChooseByProbability
   href: api/Syn.Bot.Siml.Extensions.RandomExtensions.html#Syn_Bot_Siml_Extensions_RandomExtensions_ChooseByProbability_
   commentId: Overload:Syn.Bot.Siml.Extensions.RandomExtensions.ChooseByProbability
-  name.vb: ChooseByProbability(Of T)
-  fullName: Syn.Bot.Siml.Extensions.RandomExtensions.ChooseByProbability<T>
-  fullName.vb: Syn.Bot.Siml.Extensions.RandomExtensions.ChooseByProbability(Of T)
-  nameWithType: RandomExtensions.ChooseByProbability<T>
-  nameWithType.vb: RandomExtensions.ChooseByProbability(Of T)
+  fullName: Syn.Bot.Siml.Extensions.RandomExtensions.ChooseByProbability
+  nameWithType: RandomExtensions.ChooseByProbability
 - uid: Syn.Bot.Siml.Extensions.RandomExtensions.ChooseByProbability``1(System.Collections.Generic.IList{Syn.Bot.Siml.Extensions.WeightedItem{``0}})
   name: ChooseByProbability<T>(IList<WeightedItem<T>>)
   href: api/Syn.Bot.Siml.Extensions.RandomExtensions.html#Syn_Bot_Siml_Extensions_RandomExtensions_ChooseByProbability__1_System_Collections_Generic_IList_Syn_Bot_Siml_Extensions_WeightedItem___0___
@@ -14290,16 +14325,13 @@ references:
   fullName: Syn.Bot.Siml.Extensions.RandomExtensions.ChooseByProbability<T>(System.Collections.Generic.IList<Syn.Bot.Siml.Extensions.WeightedItem<T>>)
   fullName.vb: Syn.Bot.Siml.Extensions.RandomExtensions.ChooseByProbability(Of T)(System.Collections.Generic.IList(Of Syn.Bot.Siml.Extensions.WeightedItem(Of T)))
   nameWithType: RandomExtensions.ChooseByProbability<T>(IList<WeightedItem<T>>)
-  nameWithType.vb: ChooseByProbability(Of T)(IList(Of WeightedItem(Of T)))
+  nameWithType.vb: RandomExtensions.ChooseByProbability(Of T)(IList(Of WeightedItem(Of T)))
 - uid: Syn.Bot.Siml.Extensions.RandomExtensions.ChooseByWeight*
-  name: ChooseByWeight<T>
+  name: ChooseByWeight
   href: api/Syn.Bot.Siml.Extensions.RandomExtensions.html#Syn_Bot_Siml_Extensions_RandomExtensions_ChooseByWeight_
   commentId: Overload:Syn.Bot.Siml.Extensions.RandomExtensions.ChooseByWeight
-  name.vb: ChooseByWeight(Of T)
-  fullName: Syn.Bot.Siml.Extensions.RandomExtensions.ChooseByWeight<T>
-  fullName.vb: Syn.Bot.Siml.Extensions.RandomExtensions.ChooseByWeight(Of T)
-  nameWithType: RandomExtensions.ChooseByWeight<T>
-  nameWithType.vb: RandomExtensions.ChooseByWeight(Of T)
+  fullName: Syn.Bot.Siml.Extensions.RandomExtensions.ChooseByWeight
+  nameWithType: RandomExtensions.ChooseByWeight
 - uid: Syn.Bot.Siml.Extensions.RandomExtensions.ChooseByWeight``1(System.Collections.Generic.IEnumerable{Syn.Bot.Siml.Extensions.WeightedItem{``0}})
   name: ChooseByWeight<T>(IEnumerable<WeightedItem<T>>)
   href: api/Syn.Bot.Siml.Extensions.RandomExtensions.html#Syn_Bot_Siml_Extensions_RandomExtensions_ChooseByWeight__1_System_Collections_Generic_IEnumerable_Syn_Bot_Siml_Extensions_WeightedItem___0___
@@ -14308,7 +14340,7 @@ references:
   fullName: Syn.Bot.Siml.Extensions.RandomExtensions.ChooseByWeight<T>(System.Collections.Generic.IEnumerable<Syn.Bot.Siml.Extensions.WeightedItem<T>>)
   fullName.vb: Syn.Bot.Siml.Extensions.RandomExtensions.ChooseByWeight(Of T)(System.Collections.Generic.IEnumerable(Of Syn.Bot.Siml.Extensions.WeightedItem(Of T)))
   nameWithType: RandomExtensions.ChooseByWeight<T>(IEnumerable<WeightedItem<T>>)
-  nameWithType.vb: ChooseByWeight(Of T)(IEnumerable(Of WeightedItem(Of T)))
+  nameWithType.vb: RandomExtensions.ChooseByWeight(Of T)(IEnumerable(Of WeightedItem(Of T)))
 - uid: Syn.Bot.Siml.Extensions.TokenExtensions
   name: TokenExtensions
   href: api/Syn.Bot.Siml.Extensions.TokenExtensions.html
@@ -14343,12 +14375,15 @@ references:
   fullName: Syn.Bot.Siml.Extensions.WeightedItem<T>.WeightedItem(T, System.Double)
   fullName.vb: Syn.Bot.Siml.Extensions.WeightedItem(Of T).WeightedItem(T, System.Double)
   nameWithType: WeightedItem<T>.WeightedItem(T, Double)
+  nameWithType.vb: WeightedItem(Of T).WeightedItem(T, Double)
 - uid: Syn.Bot.Siml.Extensions.WeightedItem`1.#ctor*
   name: WeightedItem
   href: api/Syn.Bot.Siml.Extensions.WeightedItem-1.html#Syn_Bot_Siml_Extensions_WeightedItem_1__ctor_
   commentId: Overload:Syn.Bot.Siml.Extensions.WeightedItem`1.#ctor
-  fullName: Syn.Bot.Siml.Extensions.WeightedItem.WeightedItem
-  nameWithType: WeightedItem.WeightedItem
+  fullName: Syn.Bot.Siml.Extensions.WeightedItem<T>.WeightedItem
+  fullName.vb: Syn.Bot.Siml.Extensions.WeightedItem(Of T).WeightedItem
+  nameWithType: WeightedItem<T>.WeightedItem
+  nameWithType.vb: WeightedItem(Of T).WeightedItem
 - uid: Syn.Bot.Siml.Extensions.WeightedItem`1.Value
   name: Value
   href: api/Syn.Bot.Siml.Extensions.WeightedItem-1.html#Syn_Bot_Siml_Extensions_WeightedItem_1_Value
@@ -14356,6 +14391,7 @@ references:
   fullName: Syn.Bot.Siml.Extensions.WeightedItem<T>.Value
   fullName.vb: Syn.Bot.Siml.Extensions.WeightedItem(Of T).Value
   nameWithType: WeightedItem<T>.Value
+  nameWithType.vb: WeightedItem(Of T).Value
 - uid: Syn.Bot.Siml.Extensions.WeightedItem`1.Value*
   name: Value
   href: api/Syn.Bot.Siml.Extensions.WeightedItem-1.html#Syn_Bot_Siml_Extensions_WeightedItem_1_Value_
@@ -14371,6 +14407,7 @@ references:
   fullName: Syn.Bot.Siml.Extensions.WeightedItem<T>.Weight
   fullName.vb: Syn.Bot.Siml.Extensions.WeightedItem(Of T).Weight
   nameWithType: WeightedItem<T>.Weight
+  nameWithType.vb: WeightedItem(Of T).Weight
 - uid: Syn.Bot.Siml.Extensions.WeightedItem`1.Weight*
   name: Weight
   href: api/Syn.Bot.Siml.Extensions.WeightedItem-1.html#Syn_Bot_Siml_Extensions_WeightedItem_1_Weight_
@@ -14777,7 +14814,7 @@ references:
   fullName: Syn.Bot.Siml.Graph.ResponseTree.ResponseTree(System.Collections.Generic.IEnumerable<Syn.Bot.Siml.Graph.Token>)
   fullName.vb: Syn.Bot.Siml.Graph.ResponseTree.ResponseTree(System.Collections.Generic.IEnumerable(Of Syn.Bot.Siml.Graph.Token))
   nameWithType: ResponseTree.ResponseTree(IEnumerable<Token>)
-  nameWithType.vb: ResponseTree(IEnumerable(Of Token))
+  nameWithType.vb: ResponseTree.ResponseTree(IEnumerable(Of Token))
 - uid: Syn.Bot.Siml.Graph.ResponseTree.#ctor*
   name: ResponseTree
   href: api/Syn.Bot.Siml.Graph.ResponseTree.html#Syn_Bot_Siml_Graph_ResponseTree__ctor_
@@ -15116,7 +15153,7 @@ references:
   fullName: Syn.Bot.Siml.Graph.Tree.AddRange(System.Collections.Generic.IEnumerable<Syn.Bot.Siml.Graph.Token>)
   fullName.vb: Syn.Bot.Siml.Graph.Tree.AddRange(System.Collections.Generic.IEnumerable(Of Syn.Bot.Siml.Graph.Token))
   nameWithType: Tree.AddRange(IEnumerable<Token>)
-  nameWithType.vb: AddRange(IEnumerable(Of Token))
+  nameWithType.vb: Tree.AddRange(IEnumerable(Of Token))
 - uid: Syn.Bot.Siml.Graph.Tree.AddRange*
   name: AddRange
   href: api/Syn.Bot.Siml.Graph.Tree.html#Syn_Bot_Siml_Graph_Tree_AddRange_
@@ -15352,14 +15389,11 @@ references:
   fullName: Syn.Bot.Siml.Helper.CacheManager.Clear
   nameWithType: CacheManager.Clear
 - uid: Syn.Bot.Siml.Helper.CacheManager.GetValue*
-  name: GetValue<T>
+  name: GetValue
   href: api/Syn.Bot.Siml.Helper.CacheManager.html#Syn_Bot_Siml_Helper_CacheManager_GetValue_
   commentId: Overload:Syn.Bot.Siml.Helper.CacheManager.GetValue
-  name.vb: GetValue(Of T)
-  fullName: Syn.Bot.Siml.Helper.CacheManager.GetValue<T>
-  fullName.vb: Syn.Bot.Siml.Helper.CacheManager.GetValue(Of T)
-  nameWithType: CacheManager.GetValue<T>
-  nameWithType.vb: CacheManager.GetValue(Of T)
+  fullName: Syn.Bot.Siml.Helper.CacheManager.GetValue
+  nameWithType: CacheManager.GetValue
 - uid: Syn.Bot.Siml.Helper.CacheManager.GetValue``1(System.Int32)
   name: GetValue<T>(Int32)
   href: api/Syn.Bot.Siml.Helper.CacheManager.html#Syn_Bot_Siml_Helper_CacheManager_GetValue__1_System_Int32_
@@ -15368,7 +15402,7 @@ references:
   fullName: Syn.Bot.Siml.Helper.CacheManager.GetValue<T>(System.Int32)
   fullName.vb: Syn.Bot.Siml.Helper.CacheManager.GetValue(Of T)(System.Int32)
   nameWithType: CacheManager.GetValue<T>(Int32)
-  nameWithType.vb: GetValue(Of T)(Int32)
+  nameWithType.vb: CacheManager.GetValue(Of T)(Int32)
 - uid: Syn.Bot.Siml.Helper.CacheManager.IsEmpty
   name: IsEmpty
   href: api/Syn.Bot.Siml.Helper.CacheManager.html#Syn_Bot_Siml_Helper_CacheManager_IsEmpty
@@ -15677,7 +15711,7 @@ references:
   fullName: Syn.Bot.Siml.Helper.StringUtility.GetBestWordDistance(System.String, System.Collections.Generic.IEnumerable<System.String>)
   fullName.vb: Syn.Bot.Siml.Helper.StringUtility.GetBestWordDistance(System.String, System.Collections.Generic.IEnumerable(Of System.String))
   nameWithType: StringUtility.GetBestWordDistance(String, IEnumerable<String>)
-  nameWithType.vb: GetBestWordDistance(String, IEnumerable(Of String))
+  nameWithType.vb: StringUtility.GetBestWordDistance(String, IEnumerable(Of String))
 - uid: Syn.Bot.Siml.Helper.StringUtility.GetBestWordDistance*
   name: GetBestWordDistance
   href: api/Syn.Bot.Siml.Helper.StringUtility.html#Syn_Bot_Siml_Helper_StringUtility_GetBestWordDistance_
@@ -15704,7 +15738,7 @@ references:
   fullName: Syn.Bot.Siml.Helper.StringUtility.GetSafeAlphaNumeric(System.String, System.Char[])
   fullName.vb: Syn.Bot.Siml.Helper.StringUtility.GetSafeAlphaNumeric(System.String, System.Char())
   nameWithType: StringUtility.GetSafeAlphaNumeric(String, Char[])
-  nameWithType.vb: GetSafeAlphaNumeric(String, Char())
+  nameWithType.vb: StringUtility.GetSafeAlphaNumeric(String, Char())
 - uid: Syn.Bot.Siml.Helper.StringUtility.GetSafeAlphaNumeric*
   name: GetSafeAlphaNumeric
   href: api/Syn.Bot.Siml.Helper.StringUtility.html#Syn_Bot_Siml_Helper_StringUtility_GetSafeAlphaNumeric_
@@ -16810,14 +16844,11 @@ references:
   fullName: Syn.Bot.Siml.Helper.Utility.CreateElement
   nameWithType: Utility.CreateElement
 - uid: Syn.Bot.Siml.Helper.Utility.DataContractToString*
-  name: DataContractToString<T>
+  name: DataContractToString
   href: api/Syn.Bot.Siml.Helper.Utility.html#Syn_Bot_Siml_Helper_Utility_DataContractToString_
   commentId: Overload:Syn.Bot.Siml.Helper.Utility.DataContractToString
-  name.vb: DataContractToString(Of T)
-  fullName: Syn.Bot.Siml.Helper.Utility.DataContractToString<T>
-  fullName.vb: Syn.Bot.Siml.Helper.Utility.DataContractToString(Of T)
-  nameWithType: Utility.DataContractToString<T>
-  nameWithType.vb: Utility.DataContractToString(Of T)
+  fullName: Syn.Bot.Siml.Helper.Utility.DataContractToString
+  nameWithType: Utility.DataContractToString
 - uid: Syn.Bot.Siml.Helper.Utility.DataContractToString``1(``0)
   name: DataContractToString<T>(T)
   href: api/Syn.Bot.Siml.Helper.Utility.html#Syn_Bot_Siml_Helper_Utility_DataContractToString__1___0_
@@ -16826,16 +16857,13 @@ references:
   fullName: Syn.Bot.Siml.Helper.Utility.DataContractToString<T>(T)
   fullName.vb: Syn.Bot.Siml.Helper.Utility.DataContractToString(Of T)(T)
   nameWithType: Utility.DataContractToString<T>(T)
-  nameWithType.vb: DataContractToString(Of T)(T)
+  nameWithType.vb: Utility.DataContractToString(Of T)(T)
 - uid: Syn.Bot.Siml.Helper.Utility.DataContractToXElement*
-  name: DataContractToXElement<T>
+  name: DataContractToXElement
   href: api/Syn.Bot.Siml.Helper.Utility.html#Syn_Bot_Siml_Helper_Utility_DataContractToXElement_
   commentId: Overload:Syn.Bot.Siml.Helper.Utility.DataContractToXElement
-  name.vb: DataContractToXElement(Of T)
-  fullName: Syn.Bot.Siml.Helper.Utility.DataContractToXElement<T>
-  fullName.vb: Syn.Bot.Siml.Helper.Utility.DataContractToXElement(Of T)
-  nameWithType: Utility.DataContractToXElement<T>
-  nameWithType.vb: Utility.DataContractToXElement(Of T)
+  fullName: Syn.Bot.Siml.Helper.Utility.DataContractToXElement
+  nameWithType: Utility.DataContractToXElement
 - uid: Syn.Bot.Siml.Helper.Utility.DataContractToXElement``1(``0)
   name: DataContractToXElement<T>(T)
   href: api/Syn.Bot.Siml.Helper.Utility.html#Syn_Bot_Siml_Helper_Utility_DataContractToXElement__1___0_
@@ -16844,7 +16872,7 @@ references:
   fullName: Syn.Bot.Siml.Helper.Utility.DataContractToXElement<T>(T)
   fullName.vb: Syn.Bot.Siml.Helper.Utility.DataContractToXElement(Of T)(T)
   nameWithType: Utility.DataContractToXElement<T>(T)
-  nameWithType.vb: DataContractToXElement(Of T)(T)
+  nameWithType.vb: Utility.DataContractToXElement(Of T)(T)
 - uid: Syn.Bot.Siml.Helper.Utility.DecompressString(System.String)
   name: DecompressString(String)
   href: api/Syn.Bot.Siml.Helper.Utility.html#Syn_Bot_Siml_Helper_Utility_DecompressString_System_String_
@@ -16955,7 +16983,7 @@ references:
   fullName: Syn.Bot.Siml.Helper.Utility.GetSequencedDocument(System.Collections.Generic.IEnumerable<System.Xml.Linq.XDocument>)
   fullName.vb: Syn.Bot.Siml.Helper.Utility.GetSequencedDocument(System.Collections.Generic.IEnumerable(Of System.Xml.Linq.XDocument))
   nameWithType: Utility.GetSequencedDocument(IEnumerable<XDocument>)
-  nameWithType.vb: GetSequencedDocument(IEnumerable(Of XDocument))
+  nameWithType.vb: Utility.GetSequencedDocument(IEnumerable(Of XDocument))
 - uid: Syn.Bot.Siml.Helper.Utility.GetSequencedDocument*
   name: GetSequencedDocument
   href: api/Syn.Bot.Siml.Helper.Utility.html#Syn_Bot_Siml_Helper_Utility_GetSequencedDocument_
@@ -16970,7 +16998,7 @@ references:
   fullName: Syn.Bot.Siml.Helper.Utility.GetSequencedElement(System.Collections.Generic.IEnumerable<System.Xml.Linq.XElement>)
   fullName.vb: Syn.Bot.Siml.Helper.Utility.GetSequencedElement(System.Collections.Generic.IEnumerable(Of System.Xml.Linq.XElement))
   nameWithType: Utility.GetSequencedElement(IEnumerable<XElement>)
-  nameWithType.vb: GetSequencedElement(IEnumerable(Of XElement))
+  nameWithType.vb: Utility.GetSequencedElement(IEnumerable(Of XElement))
 - uid: Syn.Bot.Siml.Helper.Utility.GetSequencedElement*
   name: GetSequencedElement
   href: api/Syn.Bot.Siml.Helper.Utility.html#Syn_Bot_Siml_Helper_Utility_GetSequencedElement_
@@ -17362,14 +17390,11 @@ references:
   fullName: Syn.Bot.Siml.Interfaces.ICacheManager.Clear
   nameWithType: ICacheManager.Clear
 - uid: Syn.Bot.Siml.Interfaces.ICacheManager.GetValue*
-  name: GetValue<T>
+  name: GetValue
   href: api/Syn.Bot.Siml.Interfaces.ICacheManager.html#Syn_Bot_Siml_Interfaces_ICacheManager_GetValue_
   commentId: Overload:Syn.Bot.Siml.Interfaces.ICacheManager.GetValue
-  name.vb: GetValue(Of T)
-  fullName: Syn.Bot.Siml.Interfaces.ICacheManager.GetValue<T>
-  fullName.vb: Syn.Bot.Siml.Interfaces.ICacheManager.GetValue(Of T)
-  nameWithType: ICacheManager.GetValue<T>
-  nameWithType.vb: ICacheManager.GetValue(Of T)
+  fullName: Syn.Bot.Siml.Interfaces.ICacheManager.GetValue
+  nameWithType: ICacheManager.GetValue
 - uid: Syn.Bot.Siml.Interfaces.ICacheManager.GetValue``1(System.Int32)
   name: GetValue<T>(Int32)
   href: api/Syn.Bot.Siml.Interfaces.ICacheManager.html#Syn_Bot_Siml_Interfaces_ICacheManager_GetValue__1_System_Int32_
@@ -17378,7 +17403,7 @@ references:
   fullName: Syn.Bot.Siml.Interfaces.ICacheManager.GetValue<T>(System.Int32)
   fullName.vb: Syn.Bot.Siml.Interfaces.ICacheManager.GetValue(Of T)(System.Int32)
   nameWithType: ICacheManager.GetValue<T>(Int32)
-  nameWithType.vb: GetValue(Of T)(Int32)
+  nameWithType.vb: ICacheManager.GetValue(Of T)(Int32)
 - uid: Syn.Bot.Siml.Interfaces.ICacheManager.IsEmpty
   name: IsEmpty
   href: api/Syn.Bot.Siml.Interfaces.ICacheManager.html#Syn_Bot_Siml_Interfaces_ICacheManager_IsEmpty
@@ -17525,7 +17550,7 @@ references:
   fullName: Syn.Bot.Siml.Interfaces.IMap.Item[System.String]
   fullName.vb: Syn.Bot.Siml.Interfaces.IMap.Item(System.String)
   nameWithType: IMap.Item[String]
-  nameWithType.vb: Item(String)
+  nameWithType.vb: IMap.Item(String)
 - uid: Syn.Bot.Siml.Interfaces.IMap.Item*
   name: Item
   href: api/Syn.Bot.Siml.Interfaces.IMap.html#Syn_Bot_Siml_Interfaces_IMap_Item_
@@ -17762,7 +17787,7 @@ references:
   fullName: Syn.Bot.Siml.Interfaces.ITokenizer.Tokenize(System.Collections.Generic.List<System.String>)
   fullName.vb: Syn.Bot.Siml.Interfaces.ITokenizer.Tokenize(System.Collections.Generic.List(Of System.String))
   nameWithType: ITokenizer.Tokenize(List<String>)
-  nameWithType.vb: Tokenize(List(Of String))
+  nameWithType.vb: ITokenizer.Tokenize(List(Of String))
 - uid: Syn.Bot.Siml.Interfaces.ITokenizer.Tokenize*
   name: Tokenize
   href: api/Syn.Bot.Siml.Interfaces.ITokenizer.html#Syn_Bot_Siml_Interfaces_ITokenizer_Tokenize_
@@ -17800,14 +17825,11 @@ references:
   fullName: Syn.Bot.Siml.Interfaces.IVariableFormatter
   nameWithType: IVariableFormatter
 - uid: Syn.Bot.Siml.Interfaces.IVariableFormatter.GetValue*
-  name: GetValue<T>
+  name: GetValue
   href: api/Syn.Bot.Siml.Interfaces.IVariableFormatter.html#Syn_Bot_Siml_Interfaces_IVariableFormatter_GetValue_
   commentId: Overload:Syn.Bot.Siml.Interfaces.IVariableFormatter.GetValue
-  name.vb: GetValue(Of T)
-  fullName: Syn.Bot.Siml.Interfaces.IVariableFormatter.GetValue<T>
-  fullName.vb: Syn.Bot.Siml.Interfaces.IVariableFormatter.GetValue(Of T)
-  nameWithType: IVariableFormatter.GetValue<T>
-  nameWithType.vb: IVariableFormatter.GetValue(Of T)
+  fullName: Syn.Bot.Siml.Interfaces.IVariableFormatter.GetValue
+  nameWithType: IVariableFormatter.GetValue
 - uid: Syn.Bot.Siml.Interfaces.IVariableFormatter.GetValue``1(Syn.VA.Interfaces.IVariable)
   name: GetValue<T>(IVariable)
   href: api/Syn.Bot.Siml.Interfaces.IVariableFormatter.html#Syn_Bot_Siml_Interfaces_IVariableFormatter_GetValue__1_Syn_VA_Interfaces_IVariable_
@@ -17816,16 +17838,13 @@ references:
   fullName: Syn.Bot.Siml.Interfaces.IVariableFormatter.GetValue<T>(Syn.VA.Interfaces.IVariable)
   fullName.vb: Syn.Bot.Siml.Interfaces.IVariableFormatter.GetValue(Of T)(Syn.VA.Interfaces.IVariable)
   nameWithType: IVariableFormatter.GetValue<T>(IVariable)
-  nameWithType.vb: GetValue(Of T)(IVariable)
+  nameWithType.vb: IVariableFormatter.GetValue(Of T)(IVariable)
 - uid: Syn.Bot.Siml.Interfaces.IVariableFormatter.GetValueList*
-  name: GetValueList<T>
+  name: GetValueList
   href: api/Syn.Bot.Siml.Interfaces.IVariableFormatter.html#Syn_Bot_Siml_Interfaces_IVariableFormatter_GetValueList_
   commentId: Overload:Syn.Bot.Siml.Interfaces.IVariableFormatter.GetValueList
-  name.vb: GetValueList(Of T)
-  fullName: Syn.Bot.Siml.Interfaces.IVariableFormatter.GetValueList<T>
-  fullName.vb: Syn.Bot.Siml.Interfaces.IVariableFormatter.GetValueList(Of T)
-  nameWithType: IVariableFormatter.GetValueList<T>
-  nameWithType.vb: IVariableFormatter.GetValueList(Of T)
+  fullName: Syn.Bot.Siml.Interfaces.IVariableFormatter.GetValueList
+  nameWithType: IVariableFormatter.GetValueList
 - uid: Syn.Bot.Siml.Interfaces.IVariableFormatter.GetValueList``1(Syn.VA.Interfaces.IVariable)
   name: GetValueList<T>(IVariable)
   href: api/Syn.Bot.Siml.Interfaces.IVariableFormatter.html#Syn_Bot_Siml_Interfaces_IVariableFormatter_GetValueList__1_Syn_VA_Interfaces_IVariable_
@@ -17834,7 +17853,7 @@ references:
   fullName: Syn.Bot.Siml.Interfaces.IVariableFormatter.GetValueList<T>(Syn.VA.Interfaces.IVariable)
   fullName.vb: Syn.Bot.Siml.Interfaces.IVariableFormatter.GetValueList(Of T)(Syn.VA.Interfaces.IVariable)
   nameWithType: IVariableFormatter.GetValueList<T>(IVariable)
-  nameWithType.vb: GetValueList(Of T)(IVariable)
+  nameWithType.vb: IVariableFormatter.GetValueList(Of T)(IVariable)
 - uid: Syn.Bot.Siml.Interfaces.IVolatile
   name: IVolatile
   href: api/Syn.Bot.Siml.Interfaces.IVolatile.html
@@ -17963,7 +17982,7 @@ references:
   fullName: Syn.Bot.Siml.PackageManager.ConvertToPackage(System.Collections.Generic.IEnumerable<System.Xml.Linq.XDocument>)
   fullName.vb: Syn.Bot.Siml.PackageManager.ConvertToPackage(System.Collections.Generic.IEnumerable(Of System.Xml.Linq.XDocument))
   nameWithType: PackageManager.ConvertToPackage(IEnumerable<XDocument>)
-  nameWithType.vb: ConvertToPackage(IEnumerable(Of XDocument))
+  nameWithType.vb: PackageManager.ConvertToPackage(IEnumerable(Of XDocument))
 - uid: Syn.Bot.Siml.PackageManager.ConvertToPackage*
   name: ConvertToPackage
   href: api/Syn.Bot.Siml.PackageManager.html#Syn_Bot_Siml_PackageManager_ConvertToPackage_
@@ -18810,6 +18829,18 @@ references:
   commentId: Overload:Syn.Bot.Siml.SimlBot.#ctor
   fullName: Syn.Bot.Siml.SimlBot.SimlBot
   nameWithType: SimlBot.SimlBot
+- uid: Syn.Bot.Siml.SimlBot.Activate(System.String,System.String,System.String)
+  name: Activate(String, String, String)
+  href: api/Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot_Activate_System_String_System_String_System_String_
+  commentId: M:Syn.Bot.Siml.SimlBot.Activate(System.String,System.String,System.String)
+  fullName: Syn.Bot.Siml.SimlBot.Activate(System.String, System.String, System.String)
+  nameWithType: SimlBot.Activate(String, String, String)
+- uid: Syn.Bot.Siml.SimlBot.Activate*
+  name: Activate
+  href: api/Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot_Activate_
+  commentId: Overload:Syn.Bot.Siml.SimlBot.Activate
+  fullName: Syn.Bot.Siml.SimlBot.Activate
+  nameWithType: SimlBot.Activate
 - uid: Syn.Bot.Siml.SimlBot.Adapters
   name: Adapters
   href: api/Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot_Adapters
@@ -18830,7 +18861,7 @@ references:
   fullName: Syn.Bot.Siml.SimlBot.AddSiml(System.Collections.Generic.IEnumerable<System.Xml.Linq.XDocument>)
   fullName.vb: Syn.Bot.Siml.SimlBot.AddSiml(System.Collections.Generic.IEnumerable(Of System.Xml.Linq.XDocument))
   nameWithType: SimlBot.AddSiml(IEnumerable<XDocument>)
-  nameWithType.vb: AddSiml(IEnumerable(Of XDocument))
+  nameWithType.vb: SimlBot.AddSiml(IEnumerable(Of XDocument))
 - uid: Syn.Bot.Siml.SimlBot.AddSiml(System.String)
   name: AddSiml(String)
   href: api/Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot_AddSiml_System_String_
@@ -18899,7 +18930,7 @@ references:
   fullName: Syn.Bot.Siml.SimlBot.Chat<T>(System.String)
   fullName.vb: Syn.Bot.Siml.SimlBot.Chat(Of T)(System.String)
   nameWithType: SimlBot.Chat<T>(String)
-  nameWithType.vb: Chat(Of T)(String)
+  nameWithType.vb: SimlBot.Chat(Of T)(String)
 - uid: Syn.Bot.Siml.SimlBot.Configuration
   name: Configuration
   href: api/Syn.Bot.Siml.SimlBot.html#Syn_Bot_Siml_SimlBot_Configuration
@@ -19657,14 +19688,11 @@ references:
   fullName: Syn.Bot.Utility.Cache.SqlCacheManager.Connection
   nameWithType: SqlCacheManager.Connection
 - uid: Syn.Bot.Utility.Cache.SqlCacheManager.GetValue*
-  name: GetValue<T>
+  name: GetValue
   href: api/Syn.Bot.Utility.Cache.SqlCacheManager.html#Syn_Bot_Utility_Cache_SqlCacheManager_GetValue_
   commentId: Overload:Syn.Bot.Utility.Cache.SqlCacheManager.GetValue
-  name.vb: GetValue(Of T)
-  fullName: Syn.Bot.Utility.Cache.SqlCacheManager.GetValue<T>
-  fullName.vb: Syn.Bot.Utility.Cache.SqlCacheManager.GetValue(Of T)
-  nameWithType: SqlCacheManager.GetValue<T>
-  nameWithType.vb: SqlCacheManager.GetValue(Of T)
+  fullName: Syn.Bot.Utility.Cache.SqlCacheManager.GetValue
+  nameWithType: SqlCacheManager.GetValue
 - uid: Syn.Bot.Utility.Cache.SqlCacheManager.GetValue``1(System.Int32)
   name: GetValue<T>(Int32)
   href: api/Syn.Bot.Utility.Cache.SqlCacheManager.html#Syn_Bot_Utility_Cache_SqlCacheManager_GetValue__1_System_Int32_
@@ -19673,7 +19701,7 @@ references:
   fullName: Syn.Bot.Utility.Cache.SqlCacheManager.GetValue<T>(System.Int32)
   fullName.vb: Syn.Bot.Utility.Cache.SqlCacheManager.GetValue(Of T)(System.Int32)
   nameWithType: SqlCacheManager.GetValue<T>(Int32)
-  nameWithType.vb: GetValue(Of T)(Int32)
+  nameWithType.vb: SqlCacheManager.GetValue(Of T)(Int32)
 - uid: Syn.Bot.Utility.Cache.SqlCacheManager.IsEmpty
   name: IsEmpty
   href: api/Syn.Bot.Utility.Cache.SqlCacheManager.html#Syn_Bot_Utility_Cache_SqlCacheManager_IsEmpty
@@ -21872,7 +21900,7 @@ references:
   fullName: Syn.EmotionML.ActionTendency.ActionTendency(System.String, System.Nullable<System.Double>)
   fullName.vb: Syn.EmotionML.ActionTendency.ActionTendency(System.String, System.Nullable(Of System.Double))
   nameWithType: ActionTendency.ActionTendency(String, Nullable<Double>)
-  nameWithType.vb: ActionTendency(String, Nullable(Of Double))
+  nameWithType.vb: ActionTendency.ActionTendency(String, Nullable(Of Double))
 - uid: Syn.EmotionML.ActionTendency.#ctor(System.String,System.Nullable{System.Double},System.Nullable{System.Double})
   name: ActionTendency(String, Nullable<Double>, Nullable<Double>)
   href: api/Syn.EmotionML.ActionTendency.html#Syn_EmotionML_ActionTendency__ctor_System_String_System_Nullable_System_Double__System_Nullable_System_Double__
@@ -21881,7 +21909,7 @@ references:
   fullName: Syn.EmotionML.ActionTendency.ActionTendency(System.String, System.Nullable<System.Double>, System.Nullable<System.Double>)
   fullName.vb: Syn.EmotionML.ActionTendency.ActionTendency(System.String, System.Nullable(Of System.Double), System.Nullable(Of System.Double))
   nameWithType: ActionTendency.ActionTendency(String, Nullable<Double>, Nullable<Double>)
-  nameWithType.vb: ActionTendency(String, Nullable(Of Double), Nullable(Of Double))
+  nameWithType.vb: ActionTendency.ActionTendency(String, Nullable(Of Double), Nullable(Of Double))
 - uid: Syn.EmotionML.ActionTendency.#ctor*
   name: ActionTendency
   href: api/Syn.EmotionML.ActionTendency.html#Syn_EmotionML_ActionTendency__ctor_
@@ -21920,7 +21948,7 @@ references:
   fullName: Syn.EmotionML.Appraisal.Appraisal(System.String, System.Nullable<System.Double>)
   fullName.vb: Syn.EmotionML.Appraisal.Appraisal(System.String, System.Nullable(Of System.Double))
   nameWithType: Appraisal.Appraisal(String, Nullable<Double>)
-  nameWithType.vb: Appraisal(String, Nullable(Of Double))
+  nameWithType.vb: Appraisal.Appraisal(String, Nullable(Of Double))
 - uid: Syn.EmotionML.Appraisal.#ctor(System.String,System.Nullable{System.Double},System.Nullable{System.Double})
   name: Appraisal(String, Nullable<Double>, Nullable<Double>)
   href: api/Syn.EmotionML.Appraisal.html#Syn_EmotionML_Appraisal__ctor_System_String_System_Nullable_System_Double__System_Nullable_System_Double__
@@ -21929,7 +21957,7 @@ references:
   fullName: Syn.EmotionML.Appraisal.Appraisal(System.String, System.Nullable<System.Double>, System.Nullable<System.Double>)
   fullName.vb: Syn.EmotionML.Appraisal.Appraisal(System.String, System.Nullable(Of System.Double), System.Nullable(Of System.Double))
   nameWithType: Appraisal.Appraisal(String, Nullable<Double>, Nullable<Double>)
-  nameWithType.vb: Appraisal(String, Nullable(Of Double), Nullable(Of Double))
+  nameWithType.vb: Appraisal.Appraisal(String, Nullable(Of Double), Nullable(Of Double))
 - uid: Syn.EmotionML.Appraisal.#ctor*
   name: Appraisal
   href: api/Syn.EmotionML.Appraisal.html#Syn_EmotionML_Appraisal__ctor_
@@ -21992,7 +22020,7 @@ references:
   fullName: Syn.EmotionML.Category.Category(System.String, System.Nullable<System.Double>)
   fullName.vb: Syn.EmotionML.Category.Category(System.String, System.Nullable(Of System.Double))
   nameWithType: Category.Category(String, Nullable<Double>)
-  nameWithType.vb: Category(String, Nullable(Of Double))
+  nameWithType.vb: Category.Category(String, Nullable(Of Double))
 - uid: Syn.EmotionML.Category.#ctor(System.String,System.Nullable{System.Double},System.Nullable{System.Double})
   name: Category(String, Nullable<Double>, Nullable<Double>)
   href: api/Syn.EmotionML.Category.html#Syn_EmotionML_Category__ctor_System_String_System_Nullable_System_Double__System_Nullable_System_Double__
@@ -22001,7 +22029,7 @@ references:
   fullName: Syn.EmotionML.Category.Category(System.String, System.Nullable<System.Double>, System.Nullable<System.Double>)
   fullName.vb: Syn.EmotionML.Category.Category(System.String, System.Nullable(Of System.Double), System.Nullable(Of System.Double))
   nameWithType: Category.Category(String, Nullable<Double>, Nullable<Double>)
-  nameWithType.vb: Category(String, Nullable(Of Double), Nullable(Of Double))
+  nameWithType.vb: Category.Category(String, Nullable(Of Double), Nullable(Of Double))
 - uid: Syn.EmotionML.Category.#ctor*
   name: Category
   href: api/Syn.EmotionML.Category.html#Syn_EmotionML_Category__ctor_
@@ -22088,7 +22116,7 @@ references:
   fullName: Syn.EmotionML.Dimension.Dimension(System.String, System.Nullable<System.Double>)
   fullName.vb: Syn.EmotionML.Dimension.Dimension(System.String, System.Nullable(Of System.Double))
   nameWithType: Dimension.Dimension(String, Nullable<Double>)
-  nameWithType.vb: Dimension(String, Nullable(Of Double))
+  nameWithType.vb: Dimension.Dimension(String, Nullable(Of Double))
 - uid: Syn.EmotionML.Dimension.#ctor(System.String,System.Nullable{System.Double},System.Nullable{System.Double})
   name: Dimension(String, Nullable<Double>, Nullable<Double>)
   href: api/Syn.EmotionML.Dimension.html#Syn_EmotionML_Dimension__ctor_System_String_System_Nullable_System_Double__System_Nullable_System_Double__
@@ -22097,7 +22125,7 @@ references:
   fullName: Syn.EmotionML.Dimension.Dimension(System.String, System.Nullable<System.Double>, System.Nullable<System.Double>)
   fullName.vb: Syn.EmotionML.Dimension.Dimension(System.String, System.Nullable(Of System.Double), System.Nullable(Of System.Double))
   nameWithType: Dimension.Dimension(String, Nullable<Double>, Nullable<Double>)
-  nameWithType.vb: Dimension(String, Nullable(Of Double), Nullable(Of Double))
+  nameWithType.vb: Dimension.Dimension(String, Nullable(Of Double), Nullable(Of Double))
 - uid: Syn.EmotionML.Dimension.#ctor*
   name: Dimension
   href: api/Syn.EmotionML.Dimension.html#Syn_EmotionML_Dimension__ctor_
@@ -23556,6 +23584,66 @@ references:
   commentId: Overload:Syn.EmotionML.Vocabulary.Type
   fullName: Syn.EmotionML.Vocabulary.Type
   nameWithType: Vocabulary.Type
+- uid: Syn.License
+  name: Syn.License
+  href: api/Syn.License.html
+  commentId: N:Syn.License
+  fullName: Syn.License
+  nameWithType: Syn.License
+- uid: Syn.License.LicenseActivationException
+  name: LicenseActivationException
+  href: api/Syn.License.LicenseActivationException.html
+  commentId: T:Syn.License.LicenseActivationException
+  fullName: Syn.License.LicenseActivationException
+  nameWithType: LicenseActivationException
+- uid: Syn.License.LicenseActivationException.#ctor
+  name: LicenseActivationException()
+  href: api/Syn.License.LicenseActivationException.html#Syn_License_LicenseActivationException__ctor
+  commentId: M:Syn.License.LicenseActivationException.#ctor
+  fullName: Syn.License.LicenseActivationException.LicenseActivationException()
+  nameWithType: LicenseActivationException.LicenseActivationException()
+- uid: Syn.License.LicenseActivationException.#ctor*
+  name: LicenseActivationException
+  href: api/Syn.License.LicenseActivationException.html#Syn_License_LicenseActivationException__ctor_
+  commentId: Overload:Syn.License.LicenseActivationException.#ctor
+  fullName: Syn.License.LicenseActivationException.LicenseActivationException
+  nameWithType: LicenseActivationException.LicenseActivationException
+- uid: Syn.License.LicenseDiscrepancyException
+  name: LicenseDiscrepancyException
+  href: api/Syn.License.LicenseDiscrepancyException.html
+  commentId: T:Syn.License.LicenseDiscrepancyException
+  fullName: Syn.License.LicenseDiscrepancyException
+  nameWithType: LicenseDiscrepancyException
+- uid: Syn.License.LicenseDiscrepancyException.#ctor
+  name: LicenseDiscrepancyException()
+  href: api/Syn.License.LicenseDiscrepancyException.html#Syn_License_LicenseDiscrepancyException__ctor
+  commentId: M:Syn.License.LicenseDiscrepancyException.#ctor
+  fullName: Syn.License.LicenseDiscrepancyException.LicenseDiscrepancyException()
+  nameWithType: LicenseDiscrepancyException.LicenseDiscrepancyException()
+- uid: Syn.License.LicenseDiscrepancyException.#ctor*
+  name: LicenseDiscrepancyException
+  href: api/Syn.License.LicenseDiscrepancyException.html#Syn_License_LicenseDiscrepancyException__ctor_
+  commentId: Overload:Syn.License.LicenseDiscrepancyException.#ctor
+  fullName: Syn.License.LicenseDiscrepancyException.LicenseDiscrepancyException
+  nameWithType: LicenseDiscrepancyException.LicenseDiscrepancyException
+- uid: Syn.License.LicenseTypeException
+  name: LicenseTypeException
+  href: api/Syn.License.LicenseTypeException.html
+  commentId: T:Syn.License.LicenseTypeException
+  fullName: Syn.License.LicenseTypeException
+  nameWithType: LicenseTypeException
+- uid: Syn.License.LicenseTypeException.#ctor
+  name: LicenseTypeException()
+  href: api/Syn.License.LicenseTypeException.html#Syn_License_LicenseTypeException__ctor
+  commentId: M:Syn.License.LicenseTypeException.#ctor
+  fullName: Syn.License.LicenseTypeException.LicenseTypeException()
+  nameWithType: LicenseTypeException.LicenseTypeException()
+- uid: Syn.License.LicenseTypeException.#ctor*
+  name: LicenseTypeException
+  href: api/Syn.License.LicenseTypeException.html#Syn_License_LicenseTypeException__ctor_
+  commentId: Overload:Syn.License.LicenseTypeException.#ctor
+  fullName: Syn.License.LicenseTypeException.LicenseTypeException
+  nameWithType: LicenseTypeException.LicenseTypeException
 - uid: Syn.Log
   name: Syn.Log
   href: api/Syn.Log.html
@@ -23708,16 +23796,13 @@ references:
   fullName: Syn.Log.SynLogger.Debug(System.String, System.Object[])
   fullName.vb: Syn.Log.SynLogger.Debug(System.String, System.Object())
   nameWithType: SynLogger.Debug(String, Object[])
-  nameWithType.vb: Debug(String, Object())
+  nameWithType.vb: SynLogger.Debug(String, Object())
 - uid: Syn.Log.SynLogger.Debug*
-  name: Debug<T>
+  name: Debug
   href: api/Syn.Log.SynLogger.html#Syn_Log_SynLogger_Debug_
   commentId: Overload:Syn.Log.SynLogger.Debug
-  name.vb: Debug(Of T)
-  fullName: Syn.Log.SynLogger.Debug<T>
-  fullName.vb: Syn.Log.SynLogger.Debug(Of T)
-  nameWithType: SynLogger.Debug<T>
-  nameWithType.vb: SynLogger.Debug(Of T)
+  fullName: Syn.Log.SynLogger.Debug
+  nameWithType: SynLogger.Debug
 - uid: Syn.Log.SynLogger.Debug``1(System.String,System.Object[])
   name: Debug<T>(String, Object[])
   href: api/Syn.Log.SynLogger.html#Syn_Log_SynLogger_Debug__1_System_String_System_Object___
@@ -23726,7 +23811,7 @@ references:
   fullName: Syn.Log.SynLogger.Debug<T>(System.String, System.Object[])
   fullName.vb: Syn.Log.SynLogger.Debug(Of T)(System.String, System.Object())
   nameWithType: SynLogger.Debug<T>(String, Object[])
-  nameWithType.vb: Debug(Of T)(String, Object())
+  nameWithType.vb: SynLogger.Debug(Of T)(String, Object())
 - uid: Syn.Log.SynLogger.Enabled
   name: Enabled
   href: api/Syn.Log.SynLogger.html#Syn_Log_SynLogger_Enabled
@@ -23753,16 +23838,13 @@ references:
   fullName: Syn.Log.SynLogger.Error(System.String, System.Object[])
   fullName.vb: Syn.Log.SynLogger.Error(System.String, System.Object())
   nameWithType: SynLogger.Error(String, Object[])
-  nameWithType.vb: Error(String, Object())
+  nameWithType.vb: SynLogger.Error(String, Object())
 - uid: Syn.Log.SynLogger.Error*
-  name: Error<T>
+  name: Error
   href: api/Syn.Log.SynLogger.html#Syn_Log_SynLogger_Error_
   commentId: Overload:Syn.Log.SynLogger.Error
-  name.vb: Error(Of T)
-  fullName: Syn.Log.SynLogger.Error<T>
-  fullName.vb: Syn.Log.SynLogger.Error(Of T)
-  nameWithType: SynLogger.Error<T>
-  nameWithType.vb: SynLogger.Error(Of T)
+  fullName: Syn.Log.SynLogger.Error
+  nameWithType: SynLogger.Error
 - uid: Syn.Log.SynLogger.Error``1(System.Exception)
   name: Error<T>(Exception)
   href: api/Syn.Log.SynLogger.html#Syn_Log_SynLogger_Error__1_System_Exception_
@@ -23771,7 +23853,7 @@ references:
   fullName: Syn.Log.SynLogger.Error<T>(System.Exception)
   fullName.vb: Syn.Log.SynLogger.Error(Of T)(System.Exception)
   nameWithType: SynLogger.Error<T>(Exception)
-  nameWithType.vb: Error(Of T)(Exception)
+  nameWithType.vb: SynLogger.Error(Of T)(Exception)
 - uid: Syn.Log.SynLogger.Error``1(System.String,System.Object[])
   name: Error<T>(String, Object[])
   href: api/Syn.Log.SynLogger.html#Syn_Log_SynLogger_Error__1_System_String_System_Object___
@@ -23780,7 +23862,7 @@ references:
   fullName: Syn.Log.SynLogger.Error<T>(System.String, System.Object[])
   fullName.vb: Syn.Log.SynLogger.Error(Of T)(System.String, System.Object())
   nameWithType: SynLogger.Error<T>(String, Object[])
-  nameWithType.vb: Error(Of T)(String, Object())
+  nameWithType.vb: SynLogger.Error(Of T)(String, Object())
 - uid: Syn.Log.SynLogger.Fatal(System.String,System.Object[])
   name: Fatal(String, Object[])
   href: api/Syn.Log.SynLogger.html#Syn_Log_SynLogger_Fatal_System_String_System_Object___
@@ -23789,16 +23871,13 @@ references:
   fullName: Syn.Log.SynLogger.Fatal(System.String, System.Object[])
   fullName.vb: Syn.Log.SynLogger.Fatal(System.String, System.Object())
   nameWithType: SynLogger.Fatal(String, Object[])
-  nameWithType.vb: Fatal(String, Object())
+  nameWithType.vb: SynLogger.Fatal(String, Object())
 - uid: Syn.Log.SynLogger.Fatal*
-  name: Fatal<T>
+  name: Fatal
   href: api/Syn.Log.SynLogger.html#Syn_Log_SynLogger_Fatal_
   commentId: Overload:Syn.Log.SynLogger.Fatal
-  name.vb: Fatal(Of T)
-  fullName: Syn.Log.SynLogger.Fatal<T>
-  fullName.vb: Syn.Log.SynLogger.Fatal(Of T)
-  nameWithType: SynLogger.Fatal<T>
-  nameWithType.vb: SynLogger.Fatal(Of T)
+  fullName: Syn.Log.SynLogger.Fatal
+  nameWithType: SynLogger.Fatal
 - uid: Syn.Log.SynLogger.Fatal``1(System.String,System.Object[])
   name: Fatal<T>(String, Object[])
   href: api/Syn.Log.SynLogger.html#Syn_Log_SynLogger_Fatal__1_System_String_System_Object___
@@ -23807,7 +23886,7 @@ references:
   fullName: Syn.Log.SynLogger.Fatal<T>(System.String, System.Object[])
   fullName.vb: Syn.Log.SynLogger.Fatal(Of T)(System.String, System.Object())
   nameWithType: SynLogger.Fatal<T>(String, Object[])
-  nameWithType.vb: Fatal(Of T)(String, Object())
+  nameWithType.vb: SynLogger.Fatal(Of T)(String, Object())
 - uid: Syn.Log.SynLogger.Info(System.String,System.Object[])
   name: Info(String, Object[])
   href: api/Syn.Log.SynLogger.html#Syn_Log_SynLogger_Info_System_String_System_Object___
@@ -23816,16 +23895,13 @@ references:
   fullName: Syn.Log.SynLogger.Info(System.String, System.Object[])
   fullName.vb: Syn.Log.SynLogger.Info(System.String, System.Object())
   nameWithType: SynLogger.Info(String, Object[])
-  nameWithType.vb: Info(String, Object())
+  nameWithType.vb: SynLogger.Info(String, Object())
 - uid: Syn.Log.SynLogger.Info*
-  name: Info<T>
+  name: Info
   href: api/Syn.Log.SynLogger.html#Syn_Log_SynLogger_Info_
   commentId: Overload:Syn.Log.SynLogger.Info
-  name.vb: Info(Of T)
-  fullName: Syn.Log.SynLogger.Info<T>
-  fullName.vb: Syn.Log.SynLogger.Info(Of T)
-  nameWithType: SynLogger.Info<T>
-  nameWithType.vb: SynLogger.Info(Of T)
+  fullName: Syn.Log.SynLogger.Info
+  nameWithType: SynLogger.Info
 - uid: Syn.Log.SynLogger.Info``1(System.String,System.Object[])
   name: Info<T>(String, Object[])
   href: api/Syn.Log.SynLogger.html#Syn_Log_SynLogger_Info__1_System_String_System_Object___
@@ -23834,7 +23910,7 @@ references:
   fullName: Syn.Log.SynLogger.Info<T>(System.String, System.Object[])
   fullName.vb: Syn.Log.SynLogger.Info(Of T)(System.String, System.Object())
   nameWithType: SynLogger.Info<T>(String, Object[])
-  nameWithType.vb: Info(Of T)(String, Object())
+  nameWithType.vb: SynLogger.Info(Of T)(String, Object())
 - uid: Syn.Log.SynLogger.Log(Syn.Log.LogLevel,System.String,System.Object[])
   name: Log(LogLevel, String, Object[])
   href: api/Syn.Log.SynLogger.html#Syn_Log_SynLogger_Log_Syn_Log_LogLevel_System_String_System_Object___
@@ -23843,16 +23919,13 @@ references:
   fullName: Syn.Log.SynLogger.Log(Syn.Log.LogLevel, System.String, System.Object[])
   fullName.vb: Syn.Log.SynLogger.Log(Syn.Log.LogLevel, System.String, System.Object())
   nameWithType: SynLogger.Log(LogLevel, String, Object[])
-  nameWithType.vb: Log(LogLevel, String, Object())
+  nameWithType.vb: SynLogger.Log(LogLevel, String, Object())
 - uid: Syn.Log.SynLogger.Log*
-  name: Log<T>
+  name: Log
   href: api/Syn.Log.SynLogger.html#Syn_Log_SynLogger_Log_
   commentId: Overload:Syn.Log.SynLogger.Log
-  name.vb: Log(Of T)
-  fullName: Syn.Log.SynLogger.Log<T>
-  fullName.vb: Syn.Log.SynLogger.Log(Of T)
-  nameWithType: SynLogger.Log<T>
-  nameWithType.vb: SynLogger.Log(Of T)
+  fullName: Syn.Log.SynLogger.Log
+  nameWithType: SynLogger.Log
 - uid: Syn.Log.SynLogger.Log``1(Syn.Log.LogLevel,System.String,System.Object[])
   name: Log<T>(LogLevel, String, Object[])
   href: api/Syn.Log.SynLogger.html#Syn_Log_SynLogger_Log__1_Syn_Log_LogLevel_System_String_System_Object___
@@ -23861,7 +23934,7 @@ references:
   fullName: Syn.Log.SynLogger.Log<T>(Syn.Log.LogLevel, System.String, System.Object[])
   fullName.vb: Syn.Log.SynLogger.Log(Of T)(Syn.Log.LogLevel, System.String, System.Object())
   nameWithType: SynLogger.Log<T>(LogLevel, String, Object[])
-  nameWithType.vb: Log(Of T)(LogLevel, String, Object())
+  nameWithType.vb: SynLogger.Log(Of T)(LogLevel, String, Object())
 - uid: Syn.Log.SynLogger.LogReceived
   name: LogReceived
   href: api/Syn.Log.SynLogger.html#Syn_Log_SynLogger_LogReceived
@@ -23876,16 +23949,13 @@ references:
   fullName: Syn.Log.SynLogger.Trace(System.String, System.Object[])
   fullName.vb: Syn.Log.SynLogger.Trace(System.String, System.Object())
   nameWithType: SynLogger.Trace(String, Object[])
-  nameWithType.vb: Trace(String, Object())
+  nameWithType.vb: SynLogger.Trace(String, Object())
 - uid: Syn.Log.SynLogger.Trace*
-  name: Trace<T>
+  name: Trace
   href: api/Syn.Log.SynLogger.html#Syn_Log_SynLogger_Trace_
   commentId: Overload:Syn.Log.SynLogger.Trace
-  name.vb: Trace(Of T)
-  fullName: Syn.Log.SynLogger.Trace<T>
-  fullName.vb: Syn.Log.SynLogger.Trace(Of T)
-  nameWithType: SynLogger.Trace<T>
-  nameWithType.vb: SynLogger.Trace(Of T)
+  fullName: Syn.Log.SynLogger.Trace
+  nameWithType: SynLogger.Trace
 - uid: Syn.Log.SynLogger.Trace``1(System.String,System.Object[])
   name: Trace<T>(String, Object[])
   href: api/Syn.Log.SynLogger.html#Syn_Log_SynLogger_Trace__1_System_String_System_Object___
@@ -23894,7 +23964,7 @@ references:
   fullName: Syn.Log.SynLogger.Trace<T>(System.String, System.Object[])
   fullName.vb: Syn.Log.SynLogger.Trace(Of T)(System.String, System.Object())
   nameWithType: SynLogger.Trace<T>(String, Object[])
-  nameWithType.vb: Trace(Of T)(String, Object())
+  nameWithType.vb: SynLogger.Trace(Of T)(String, Object())
 - uid: Syn.Log.SynLogger.Warn(System.String,System.Object[])
   name: Warn(String, Object[])
   href: api/Syn.Log.SynLogger.html#Syn_Log_SynLogger_Warn_System_String_System_Object___
@@ -23903,16 +23973,13 @@ references:
   fullName: Syn.Log.SynLogger.Warn(System.String, System.Object[])
   fullName.vb: Syn.Log.SynLogger.Warn(System.String, System.Object())
   nameWithType: SynLogger.Warn(String, Object[])
-  nameWithType.vb: Warn(String, Object())
+  nameWithType.vb: SynLogger.Warn(String, Object())
 - uid: Syn.Log.SynLogger.Warn*
-  name: Warn<T>
+  name: Warn
   href: api/Syn.Log.SynLogger.html#Syn_Log_SynLogger_Warn_
   commentId: Overload:Syn.Log.SynLogger.Warn
-  name.vb: Warn(Of T)
-  fullName: Syn.Log.SynLogger.Warn<T>
-  fullName.vb: Syn.Log.SynLogger.Warn(Of T)
-  nameWithType: SynLogger.Warn<T>
-  nameWithType.vb: SynLogger.Warn(Of T)
+  fullName: Syn.Log.SynLogger.Warn
+  nameWithType: SynLogger.Warn
 - uid: Syn.Log.SynLogger.Warn``1(System.String,System.Object[])
   name: Warn<T>(String, Object[])
   href: api/Syn.Log.SynLogger.html#Syn_Log_SynLogger_Warn__1_System_String_System_Object___
@@ -23921,7 +23988,7 @@ references:
   fullName: Syn.Log.SynLogger.Warn<T>(System.String, System.Object[])
   fullName.vb: Syn.Log.SynLogger.Warn(Of T)(System.String, System.Object())
   nameWithType: SynLogger.Warn<T>(String, Object[])
-  nameWithType.vb: Warn(Of T)(String, Object())
+  nameWithType.vb: SynLogger.Warn(Of T)(String, Object())
 - uid: Syn.Utility
   name: Syn.Utility
   href: api/Syn.Utility.html
@@ -24391,14 +24458,11 @@ references:
   fullName: Syn.Utility.Extensions.DictionaryExtensions
   nameWithType: DictionaryExtensions
 - uid: Syn.Utility.Extensions.DictionaryExtensions.Put*
-  name: Put<TKey, TValue>
+  name: Put
   href: api/Syn.Utility.Extensions.DictionaryExtensions.html#Syn_Utility_Extensions_DictionaryExtensions_Put_
   commentId: Overload:Syn.Utility.Extensions.DictionaryExtensions.Put
-  name.vb: Put(Of TKey, TValue)
-  fullName: Syn.Utility.Extensions.DictionaryExtensions.Put<TKey, TValue>
-  fullName.vb: Syn.Utility.Extensions.DictionaryExtensions.Put(Of TKey, TValue)
-  nameWithType: DictionaryExtensions.Put<TKey, TValue>
-  nameWithType.vb: DictionaryExtensions.Put(Of TKey, TValue)
+  fullName: Syn.Utility.Extensions.DictionaryExtensions.Put
+  nameWithType: DictionaryExtensions.Put
 - uid: Syn.Utility.Extensions.DictionaryExtensions.Put``2(System.Collections.Generic.IDictionary{``0,``1},``0,``1)
   name: Put<TKey, TValue>(IDictionary<TKey, TValue>, TKey, TValue)
   href: api/Syn.Utility.Extensions.DictionaryExtensions.html#Syn_Utility_Extensions_DictionaryExtensions_Put__2_System_Collections_Generic_IDictionary___0___1____0___1_
@@ -24407,7 +24471,7 @@ references:
   fullName: Syn.Utility.Extensions.DictionaryExtensions.Put<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, TKey, TValue)
   fullName.vb: Syn.Utility.Extensions.DictionaryExtensions.Put(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), TKey, TValue)
   nameWithType: DictionaryExtensions.Put<TKey, TValue>(IDictionary<TKey, TValue>, TKey, TValue)
-  nameWithType.vb: Put(Of TKey, TValue)(IDictionary(Of TKey, TValue), TKey, TValue)
+  nameWithType.vb: DictionaryExtensions.Put(Of TKey, TValue)(IDictionary(Of TKey, TValue), TKey, TValue)
 - uid: Syn.Utility.Extensions.DoubleExtensions
   name: DoubleExtensions
   href: api/Syn.Utility.Extensions.DoubleExtensions.html
@@ -24493,14 +24557,11 @@ references:
   fullName: Syn.Utility.Extensions.ObservableCollectionExtensions
   nameWithType: ObservableCollectionExtensions
 - uid: Syn.Utility.Extensions.ObservableCollectionExtensions.AddRange*
-  name: AddRange<T>
+  name: AddRange
   href: api/Syn.Utility.Extensions.ObservableCollectionExtensions.html#Syn_Utility_Extensions_ObservableCollectionExtensions_AddRange_
   commentId: Overload:Syn.Utility.Extensions.ObservableCollectionExtensions.AddRange
-  name.vb: AddRange(Of T)
-  fullName: Syn.Utility.Extensions.ObservableCollectionExtensions.AddRange<T>
-  fullName.vb: Syn.Utility.Extensions.ObservableCollectionExtensions.AddRange(Of T)
-  nameWithType: ObservableCollectionExtensions.AddRange<T>
-  nameWithType.vb: ObservableCollectionExtensions.AddRange(Of T)
+  fullName: Syn.Utility.Extensions.ObservableCollectionExtensions.AddRange
+  nameWithType: ObservableCollectionExtensions.AddRange
 - uid: Syn.Utility.Extensions.ObservableCollectionExtensions.AddRange``1(System.Collections.ObjectModel.ObservableCollection{``0},System.Collections.Generic.IEnumerable{``0})
   name: AddRange<T>(ObservableCollection<T>, IEnumerable<T>)
   href: api/Syn.Utility.Extensions.ObservableCollectionExtensions.html#Syn_Utility_Extensions_ObservableCollectionExtensions_AddRange__1_System_Collections_ObjectModel_ObservableCollection___0__System_Collections_Generic_IEnumerable___0__
@@ -24509,7 +24570,7 @@ references:
   fullName: Syn.Utility.Extensions.ObservableCollectionExtensions.AddRange<T>(System.Collections.ObjectModel.ObservableCollection<T>, System.Collections.Generic.IEnumerable<T>)
   fullName.vb: Syn.Utility.Extensions.ObservableCollectionExtensions.AddRange(Of T)(System.Collections.ObjectModel.ObservableCollection(Of T), System.Collections.Generic.IEnumerable(Of T))
   nameWithType: ObservableCollectionExtensions.AddRange<T>(ObservableCollection<T>, IEnumerable<T>)
-  nameWithType.vb: AddRange(Of T)(ObservableCollection(Of T), IEnumerable(Of T))
+  nameWithType.vb: ObservableCollectionExtensions.AddRange(Of T)(ObservableCollection(Of T), IEnumerable(Of T))
 - uid: Syn.Utility.Extensions.StringExtensions
   name: StringExtensions
   href: api/Syn.Utility.Extensions.StringExtensions.html
@@ -24554,7 +24615,7 @@ references:
   fullName: Syn.Utility.File.ShortcutFile.IPersist.GetClassID(out System.Guid)
   fullName.vb: Syn.Utility.File.ShortcutFile.IPersist.GetClassID(ByRef System.Guid)
   nameWithType: ShortcutFile.IPersist.GetClassID(out Guid)
-  nameWithType.vb: GetClassID(ByRef Guid)
+  nameWithType.vb: ShortcutFile.IPersist.GetClassID(ByRef Guid)
 - uid: Syn.Utility.File.ShortcutFile.IPersist.GetClassID*
   name: GetClassID
   href: api/Syn.Utility.File.ShortcutFile.IPersist.html#Syn_Utility_File_ShortcutFile_IPersist_GetClassID_
@@ -24575,7 +24636,7 @@ references:
   fullName: Syn.Utility.File.ShortcutFile.IPersistFile.GetClassID(out System.Guid)
   fullName.vb: Syn.Utility.File.ShortcutFile.IPersistFile.GetClassID(ByRef System.Guid)
   nameWithType: ShortcutFile.IPersistFile.GetClassID(out Guid)
-  nameWithType.vb: GetClassID(ByRef Guid)
+  nameWithType.vb: ShortcutFile.IPersistFile.GetClassID(ByRef Guid)
 - uid: Syn.Utility.File.ShortcutFile.IPersistFile.GetClassID*
   name: GetClassID
   href: api/Syn.Utility.File.ShortcutFile.IPersistFile.html#Syn_Utility_File_ShortcutFile_IPersistFile_GetClassID_
@@ -25226,7 +25287,7 @@ references:
   fullName: Syn.Utility.Utilities.AspUtility.IsValidPassword(System.String, out System.String)
   fullName.vb: Syn.Utility.Utilities.AspUtility.IsValidPassword(System.String, ByRef System.String)
   nameWithType: AspUtility.IsValidPassword(String, out String)
-  nameWithType.vb: IsValidPassword(String, ByRef String)
+  nameWithType.vb: AspUtility.IsValidPassword(String, ByRef String)
 - uid: Syn.Utility.Utilities.AspUtility.IsValidPassword*
   name: IsValidPassword
   href: api/Syn.Utility.Utilities.AspUtility.html#Syn_Utility_Utilities_AspUtility_IsValidPassword_
@@ -25852,14 +25913,11 @@ references:
   fullName: Syn.Utility.Utilities.ListUtility
   nameWithType: ListUtility
 - uid: Syn.Utility.Utilities.ListUtility.Arrange*
-  name: Arrange<T>
+  name: Arrange
   href: api/Syn.Utility.Utilities.ListUtility.html#Syn_Utility_Utilities_ListUtility_Arrange_
   commentId: Overload:Syn.Utility.Utilities.ListUtility.Arrange
-  name.vb: Arrange(Of T)
-  fullName: Syn.Utility.Utilities.ListUtility.Arrange<T>
-  fullName.vb: Syn.Utility.Utilities.ListUtility.Arrange(Of T)
-  nameWithType: ListUtility.Arrange<T>
-  nameWithType.vb: ListUtility.Arrange(Of T)
+  fullName: Syn.Utility.Utilities.ListUtility.Arrange
+  nameWithType: ListUtility.Arrange
 - uid: Syn.Utility.Utilities.ListUtility.Arrange``1(System.Collections.Generic.List{``0},System.Func{``0,System.String},System.Collections.Generic.IEnumerable{System.String})
   name: Arrange<T>(List<T>, Func<T, String>, IEnumerable<String>)
   href: api/Syn.Utility.Utilities.ListUtility.html#Syn_Utility_Utilities_ListUtility_Arrange__1_System_Collections_Generic_List___0__System_Func___0_System_String__System_Collections_Generic_IEnumerable_System_String__
@@ -25868,16 +25926,13 @@ references:
   fullName: Syn.Utility.Utilities.ListUtility.Arrange<T>(System.Collections.Generic.List<T>, System.Func<T, System.String>, System.Collections.Generic.IEnumerable<System.String>)
   fullName.vb: Syn.Utility.Utilities.ListUtility.Arrange(Of T)(System.Collections.Generic.List(Of T), System.Func(Of T, System.String), System.Collections.Generic.IEnumerable(Of System.String))
   nameWithType: ListUtility.Arrange<T>(List<T>, Func<T, String>, IEnumerable<String>)
-  nameWithType.vb: Arrange(Of T)(List(Of T), Func(Of T, String), IEnumerable(Of String))
+  nameWithType.vb: ListUtility.Arrange(Of T)(List(Of T), Func(Of T, String), IEnumerable(Of String))
 - uid: Syn.Utility.Utilities.ListUtility.Shuffle*
-  name: Shuffle<T>
+  name: Shuffle
   href: api/Syn.Utility.Utilities.ListUtility.html#Syn_Utility_Utilities_ListUtility_Shuffle_
   commentId: Overload:Syn.Utility.Utilities.ListUtility.Shuffle
-  name.vb: Shuffle(Of T)
-  fullName: Syn.Utility.Utilities.ListUtility.Shuffle<T>
-  fullName.vb: Syn.Utility.Utilities.ListUtility.Shuffle(Of T)
-  nameWithType: ListUtility.Shuffle<T>
-  nameWithType.vb: ListUtility.Shuffle(Of T)
+  fullName: Syn.Utility.Utilities.ListUtility.Shuffle
+  nameWithType: ListUtility.Shuffle
 - uid: Syn.Utility.Utilities.ListUtility.Shuffle``1(System.Collections.Generic.IList{``0})
   name: Shuffle<T>(IList<T>)
   href: api/Syn.Utility.Utilities.ListUtility.html#Syn_Utility_Utilities_ListUtility_Shuffle__1_System_Collections_Generic_IList___0__
@@ -25886,7 +25941,7 @@ references:
   fullName: Syn.Utility.Utilities.ListUtility.Shuffle<T>(System.Collections.Generic.IList<T>)
   fullName.vb: Syn.Utility.Utilities.ListUtility.Shuffle(Of T)(System.Collections.Generic.IList(Of T))
   nameWithType: ListUtility.Shuffle<T>(IList<T>)
-  nameWithType.vb: Shuffle(Of T)(IList(Of T))
+  nameWithType.vb: ListUtility.Shuffle(Of T)(IList(Of T))
 - uid: Syn.Utility.Utilities.MathUtility
   name: MathUtility
   href: api/Syn.Utility.Utilities.MathUtility.html
@@ -25991,7 +26046,7 @@ references:
   fullName: Syn.Utility.Utilities.PatternsUtility.AddPattern(System.String, System.Collections.Generic.List<System.String>)
   fullName.vb: Syn.Utility.Utilities.PatternsUtility.AddPattern(System.String, System.Collections.Generic.List(Of System.String))
   nameWithType: PatternsUtility.AddPattern(String, List<String>)
-  nameWithType.vb: AddPattern(String, List(Of String))
+  nameWithType.vb: PatternsUtility.AddPattern(String, List(Of String))
 - uid: Syn.Utility.Utilities.PatternsUtility.AddPattern(System.String,System.String)
   name: AddPattern(String, String)
   href: api/Syn.Utility.Utilities.PatternsUtility.html#Syn_Utility_Utilities_PatternsUtility_AddPattern_System_String_System_String_
@@ -26570,7 +26625,7 @@ references:
   fullName: Syn.Utility.Utilities.TextUtility.GetAllUnderDistance(System.String, System.Collections.Generic.IEnumerable<System.String>, System.Double)
   fullName.vb: Syn.Utility.Utilities.TextUtility.GetAllUnderDistance(System.String, System.Collections.Generic.IEnumerable(Of System.String), System.Double)
   nameWithType: TextUtility.GetAllUnderDistance(String, IEnumerable<String>, Double)
-  nameWithType.vb: GetAllUnderDistance(String, IEnumerable(Of String), Double)
+  nameWithType.vb: TextUtility.GetAllUnderDistance(String, IEnumerable(Of String), Double)
 - uid: Syn.Utility.Utilities.TextUtility.GetAllUnderDistance*
   name: GetAllUnderDistance
   href: api/Syn.Utility.Utilities.TextUtility.html#Syn_Utility_Utilities_TextUtility_GetAllUnderDistance_
@@ -26585,7 +26640,7 @@ references:
   fullName: Syn.Utility.Utilities.TextUtility.GetFormattedSentence(System.Collections.Generic.List<System.String>)
   fullName.vb: Syn.Utility.Utilities.TextUtility.GetFormattedSentence(System.Collections.Generic.List(Of System.String))
   nameWithType: TextUtility.GetFormattedSentence(List<String>)
-  nameWithType.vb: GetFormattedSentence(List(Of String))
+  nameWithType.vb: TextUtility.GetFormattedSentence(List(Of String))
 - uid: Syn.Utility.Utilities.TextUtility.GetFormattedSentence*
   name: GetFormattedSentence
   href: api/Syn.Utility.Utilities.TextUtility.html#Syn_Utility_Utilities_TextUtility_GetFormattedSentence_
@@ -26612,7 +26667,7 @@ references:
   fullName: Syn.Utility.Utilities.TextUtility.GetRandom(System.Collections.Generic.List<System.String>)
   fullName.vb: Syn.Utility.Utilities.TextUtility.GetRandom(System.Collections.Generic.List(Of System.String))
   nameWithType: TextUtility.GetRandom(List<String>)
-  nameWithType.vb: GetRandom(List(Of String))
+  nameWithType.vb: TextUtility.GetRandom(List(Of String))
 - uid: Syn.Utility.Utilities.TextUtility.GetRandom*
   name: GetRandom
   href: api/Syn.Utility.Utilities.TextUtility.html#Syn_Utility_Utilities_TextUtility_GetRandom_
@@ -26651,7 +26706,7 @@ references:
   fullName: Syn.Utility.Utilities.TextUtility.GetWordsPattern(System.Collections.Generic.List<System.String>, System.Boolean)
   fullName.vb: Syn.Utility.Utilities.TextUtility.GetWordsPattern(System.Collections.Generic.List(Of System.String), System.Boolean)
   nameWithType: TextUtility.GetWordsPattern(List<String>, Boolean)
-  nameWithType.vb: GetWordsPattern(List(Of String), Boolean)
+  nameWithType.vb: TextUtility.GetWordsPattern(List(Of String), Boolean)
 - uid: Syn.Utility.Utilities.TextUtility.GetWordsPattern*
   name: GetWordsPattern
   href: api/Syn.Utility.Utilities.TextUtility.html#Syn_Utility_Utilities_TextUtility_GetWordsPattern_
@@ -26696,7 +26751,7 @@ references:
   fullName: Syn.Utility.Utilities.TextUtility.Numbered(System.Collections.Generic.List<System.String>)
   fullName.vb: Syn.Utility.Utilities.TextUtility.Numbered(System.Collections.Generic.List(Of System.String))
   nameWithType: TextUtility.Numbered(List<String>)
-  nameWithType.vb: Numbered(List(Of String))
+  nameWithType.vb: TextUtility.Numbered(List(Of String))
 - uid: Syn.Utility.Utilities.TextUtility.Numbered*
   name: Numbered
   href: api/Syn.Utility.Utilities.TextUtility.html#Syn_Utility_Utilities_TextUtility_Numbered_
@@ -26944,14 +26999,11 @@ references:
   fullName: Syn.Utility.Utilities.TimingUtility.Encrypt
   nameWithType: TimingUtility.Encrypt
 - uid: Syn.Utility.Utilities.TimingUtility.GetEnum*
-  name: GetEnum<T>
+  name: GetEnum
   href: api/Syn.Utility.Utilities.TimingUtility.html#Syn_Utility_Utilities_TimingUtility_GetEnum_
   commentId: Overload:Syn.Utility.Utilities.TimingUtility.GetEnum
-  name.vb: GetEnum(Of T)
-  fullName: Syn.Utility.Utilities.TimingUtility.GetEnum<T>
-  fullName.vb: Syn.Utility.Utilities.TimingUtility.GetEnum(Of T)
-  nameWithType: TimingUtility.GetEnum<T>
-  nameWithType.vb: TimingUtility.GetEnum(Of T)
+  fullName: Syn.Utility.Utilities.TimingUtility.GetEnum
+  nameWithType: TimingUtility.GetEnum
 - uid: Syn.Utility.Utilities.TimingUtility.GetEnum``1(System.String,System.Boolean)
   name: GetEnum<T>(String, Boolean)
   href: api/Syn.Utility.Utilities.TimingUtility.html#Syn_Utility_Utilities_TimingUtility_GetEnum__1_System_String_System_Boolean_
@@ -26960,7 +27012,7 @@ references:
   fullName: Syn.Utility.Utilities.TimingUtility.GetEnum<T>(System.String, System.Boolean)
   fullName.vb: Syn.Utility.Utilities.TimingUtility.GetEnum(Of T)(System.String, System.Boolean)
   nameWithType: TimingUtility.GetEnum<T>(String, Boolean)
-  nameWithType.vb: GetEnum(Of T)(String, Boolean)
+  nameWithType.vb: TimingUtility.GetEnum(Of T)(String, Boolean)
 - uid: Syn.Utility.Utilities.TimingUtility.IsMatch(System.String,System.String)
   name: IsMatch(String, String)
   href: api/Syn.Utility.Utilities.TimingUtility.html#Syn_Utility_Utilities_TimingUtility_IsMatch_System_String_System_String_
@@ -27022,14 +27074,11 @@ references:
   fullName: Syn.Utility.Utilities.TimingUtility.Randomise
   nameWithType: TimingUtility.Randomise
 - uid: Syn.Utility.Utilities.TimingUtility.RandomItem*
-  name: RandomItem<T>
+  name: RandomItem
   href: api/Syn.Utility.Utilities.TimingUtility.html#Syn_Utility_Utilities_TimingUtility_RandomItem_
   commentId: Overload:Syn.Utility.Utilities.TimingUtility.RandomItem
-  name.vb: RandomItem(Of T)
-  fullName: Syn.Utility.Utilities.TimingUtility.RandomItem<T>
-  fullName.vb: Syn.Utility.Utilities.TimingUtility.RandomItem(Of T)
-  nameWithType: TimingUtility.RandomItem<T>
-  nameWithType.vb: TimingUtility.RandomItem(Of T)
+  fullName: Syn.Utility.Utilities.TimingUtility.RandomItem
+  nameWithType: TimingUtility.RandomItem
 - uid: Syn.Utility.Utilities.TimingUtility.RandomItem``1(System.Collections.Generic.List{``0})
   name: RandomItem<T>(List<T>)
   href: api/Syn.Utility.Utilities.TimingUtility.html#Syn_Utility_Utilities_TimingUtility_RandomItem__1_System_Collections_Generic_List___0__
@@ -27038,7 +27087,7 @@ references:
   fullName: Syn.Utility.Utilities.TimingUtility.RandomItem<T>(System.Collections.Generic.List<T>)
   fullName.vb: Syn.Utility.Utilities.TimingUtility.RandomItem(Of T)(System.Collections.Generic.List(Of T))
   nameWithType: TimingUtility.RandomItem<T>(List<T>)
-  nameWithType.vb: RandomItem(Of T)(List(Of T))
+  nameWithType.vb: TimingUtility.RandomItem(Of T)(List(Of T))
 - uid: Syn.Utility.Utilities.TimingUtility.Switcher(System.Guid,System.Boolean)
   name: Switcher(Guid, Boolean)
   href: api/Syn.Utility.Utilities.TimingUtility.html#Syn_Utility_Utilities_TimingUtility_Switcher_System_Guid_System_Boolean_
@@ -27892,14 +27941,11 @@ references:
   fullName: Syn.Utility.Utilities.XmlUtility
   nameWithType: XmlUtility
 - uid: Syn.Utility.Utilities.XmlUtility.Deserialize*
-  name: Deserialize<T>
+  name: Deserialize
   href: api/Syn.Utility.Utilities.XmlUtility.html#Syn_Utility_Utilities_XmlUtility_Deserialize_
   commentId: Overload:Syn.Utility.Utilities.XmlUtility.Deserialize
-  name.vb: Deserialize(Of T)
-  fullName: Syn.Utility.Utilities.XmlUtility.Deserialize<T>
-  fullName.vb: Syn.Utility.Utilities.XmlUtility.Deserialize(Of T)
-  nameWithType: XmlUtility.Deserialize<T>
-  nameWithType.vb: XmlUtility.Deserialize(Of T)
+  fullName: Syn.Utility.Utilities.XmlUtility.Deserialize
+  nameWithType: XmlUtility.Deserialize
 - uid: Syn.Utility.Utilities.XmlUtility.Deserialize``1(System.String)
   name: Deserialize<T>(String)
   href: api/Syn.Utility.Utilities.XmlUtility.html#Syn_Utility_Utilities_XmlUtility_Deserialize__1_System_String_
@@ -27908,7 +27954,7 @@ references:
   fullName: Syn.Utility.Utilities.XmlUtility.Deserialize<T>(System.String)
   fullName.vb: Syn.Utility.Utilities.XmlUtility.Deserialize(Of T)(System.String)
   nameWithType: XmlUtility.Deserialize<T>(String)
-  nameWithType.vb: Deserialize(Of T)(String)
+  nameWithType.vb: XmlUtility.Deserialize(Of T)(String)
 - uid: Syn.Utility.Utilities.XmlUtility.EndsWithCloseTag(System.String)
   name: EndsWithCloseTag(String)
   href: api/Syn.Utility.Utilities.XmlUtility.html#Syn_Utility_Utilities_XmlUtility_EndsWithCloseTag_System_String_
@@ -28187,7 +28233,7 @@ references:
   fullName: Syn.VA.Collections.ChoiceCollection.CopyTo(Syn.VA.Interfaces.IChoiceItem[], System.Int32)
   fullName.vb: Syn.VA.Collections.ChoiceCollection.CopyTo(Syn.VA.Interfaces.IChoiceItem(), System.Int32)
   nameWithType: ChoiceCollection.CopyTo(IChoiceItem[], Int32)
-  nameWithType.vb: CopyTo(IChoiceItem(), Int32)
+  nameWithType.vb: ChoiceCollection.CopyTo(IChoiceItem(), Int32)
 - uid: Syn.VA.Collections.ChoiceCollection.CopyTo*
   name: CopyTo
   href: api/Syn.VA.Collections.ChoiceCollection.html#Syn_VA_Collections_ChoiceCollection_CopyTo_
@@ -28249,7 +28295,7 @@ references:
   name.vb: System.Collections.IEnumerable.GetEnumerator()
   fullName: Syn.VA.Collections.ChoiceCollection.System.Collections.IEnumerable.GetEnumerator()
   nameWithType: ChoiceCollection.IEnumerable.GetEnumerator()
-  nameWithType.vb: System.Collections.IEnumerable.GetEnumerator()
+  nameWithType.vb: ChoiceCollection.System.Collections.IEnumerable.GetEnumerator()
 - uid: Syn.VA.Collections.ChoiceCollection.System#Collections#IEnumerable#GetEnumerator*
   name: IEnumerable.GetEnumerator
   href: api/Syn.VA.Collections.ChoiceCollection.html#Syn_VA_Collections_ChoiceCollection_System_Collections_IEnumerable_GetEnumerator_
@@ -28362,7 +28408,7 @@ references:
   fullName: Syn.VA.Collections.PluginCollection.CopyTo(Syn.VA.Interfaces.IPlugin[], System.Int32)
   fullName.vb: Syn.VA.Collections.PluginCollection.CopyTo(Syn.VA.Interfaces.IPlugin(), System.Int32)
   nameWithType: PluginCollection.CopyTo(IPlugin[], Int32)
-  nameWithType.vb: CopyTo(IPlugin(), Int32)
+  nameWithType.vb: PluginCollection.CopyTo(IPlugin(), Int32)
 - uid: Syn.VA.Collections.PluginCollection.CopyTo*
   name: CopyTo
   href: api/Syn.VA.Collections.PluginCollection.html#Syn_VA_Collections_PluginCollection_CopyTo_
@@ -28406,14 +28452,11 @@ references:
   fullName: Syn.VA.Collections.PluginCollection.GetPluginByName
   nameWithType: PluginCollection.GetPluginByName
 - uid: Syn.VA.Collections.PluginCollection.GetPluginByType*
-  name: GetPluginByType<T>
+  name: GetPluginByType
   href: api/Syn.VA.Collections.PluginCollection.html#Syn_VA_Collections_PluginCollection_GetPluginByType_
   commentId: Overload:Syn.VA.Collections.PluginCollection.GetPluginByType
-  name.vb: GetPluginByType(Of T)
-  fullName: Syn.VA.Collections.PluginCollection.GetPluginByType<T>
-  fullName.vb: Syn.VA.Collections.PluginCollection.GetPluginByType(Of T)
-  nameWithType: PluginCollection.GetPluginByType<T>
-  nameWithType.vb: PluginCollection.GetPluginByType(Of T)
+  fullName: Syn.VA.Collections.PluginCollection.GetPluginByType
+  nameWithType: PluginCollection.GetPluginByType
 - uid: Syn.VA.Collections.PluginCollection.GetPluginByType``1
   name: GetPluginByType<T>()
   href: api/Syn.VA.Collections.PluginCollection.html#Syn_VA_Collections_PluginCollection_GetPluginByType__1
@@ -28422,7 +28465,7 @@ references:
   fullName: Syn.VA.Collections.PluginCollection.GetPluginByType<T>()
   fullName.vb: Syn.VA.Collections.PluginCollection.GetPluginByType(Of T)()
   nameWithType: PluginCollection.GetPluginByType<T>()
-  nameWithType.vb: GetPluginByType(Of T)()
+  nameWithType.vb: PluginCollection.GetPluginByType(Of T)()
 - uid: Syn.VA.Collections.PluginCollection.IsReadOnly
   name: IsReadOnly
   href: api/Syn.VA.Collections.PluginCollection.html#Syn_VA_Collections_PluginCollection_IsReadOnly
@@ -28466,7 +28509,7 @@ references:
   name.vb: System.Collections.IEnumerable.GetEnumerator()
   fullName: Syn.VA.Collections.PluginCollection.System.Collections.IEnumerable.GetEnumerator()
   nameWithType: PluginCollection.IEnumerable.GetEnumerator()
-  nameWithType.vb: System.Collections.IEnumerable.GetEnumerator()
+  nameWithType.vb: PluginCollection.System.Collections.IEnumerable.GetEnumerator()
 - uid: Syn.VA.Collections.PluginCollection.System#Collections#IEnumerable#GetEnumerator*
   name: IEnumerable.GetEnumerator
   href: api/Syn.VA.Collections.PluginCollection.html#Syn_VA_Collections_PluginCollection_System_Collections_IEnumerable_GetEnumerator_
@@ -28531,7 +28574,7 @@ references:
   fullName: Syn.VA.Collections.ServiceCollection.CopyTo(Syn.VA.Service[], System.Int32)
   fullName.vb: Syn.VA.Collections.ServiceCollection.CopyTo(Syn.VA.Service(), System.Int32)
   nameWithType: ServiceCollection.CopyTo(Service[], Int32)
-  nameWithType.vb: CopyTo(Service(), Int32)
+  nameWithType.vb: ServiceCollection.CopyTo(Service(), Int32)
 - uid: Syn.VA.Collections.ServiceCollection.CopyTo*
   name: CopyTo
   href: api/Syn.VA.Collections.ServiceCollection.html#Syn_VA_Collections_ServiceCollection_CopyTo_
@@ -28611,7 +28654,7 @@ references:
   name.vb: System.Collections.IEnumerable.GetEnumerator()
   fullName: Syn.VA.Collections.ServiceCollection.System.Collections.IEnumerable.GetEnumerator()
   nameWithType: ServiceCollection.IEnumerable.GetEnumerator()
-  nameWithType.vb: System.Collections.IEnumerable.GetEnumerator()
+  nameWithType.vb: ServiceCollection.System.Collections.IEnumerable.GetEnumerator()
 - uid: Syn.VA.Collections.ServiceCollection.System#Collections#IEnumerable#GetEnumerator*
   name: IEnumerable.GetEnumerator
   href: api/Syn.VA.Collections.ServiceCollection.html#Syn_VA_Collections_ServiceCollection_System_Collections_IEnumerable_GetEnumerator_
@@ -28682,16 +28725,13 @@ references:
   fullName: Syn.VA.Component.ComponentManager.Contains<T>()
   fullName.vb: Syn.VA.Component.ComponentManager.Contains(Of T)()
   nameWithType: ComponentManager.Contains<T>()
-  nameWithType.vb: Contains(Of T)()
+  nameWithType.vb: ComponentManager.Contains(Of T)()
 - uid: Syn.VA.Component.ComponentManager.Get*
-  name: Get<T>
+  name: Get
   href: api/Syn.VA.Component.ComponentManager.html#Syn_VA_Component_ComponentManager_Get_
   commentId: Overload:Syn.VA.Component.ComponentManager.Get
-  name.vb: Get(Of T)
-  fullName: Syn.VA.Component.ComponentManager.Get<T>
-  fullName.vb: Syn.VA.Component.ComponentManager.Get(Of T)
-  nameWithType: ComponentManager.Get<T>
-  nameWithType.vb: ComponentManager.Get(Of T)
+  fullName: Syn.VA.Component.ComponentManager.Get
+  nameWithType: ComponentManager.Get
 - uid: Syn.VA.Component.ComponentManager.Get``1
   name: Get<T>()
   href: api/Syn.VA.Component.ComponentManager.html#Syn_VA_Component_ComponentManager_Get__1
@@ -28700,7 +28740,7 @@ references:
   fullName: Syn.VA.Component.ComponentManager.Get<T>()
   fullName.vb: Syn.VA.Component.ComponentManager.Get(Of T)()
   nameWithType: ComponentManager.Get<T>()
-  nameWithType.vb: Get(Of T)()
+  nameWithType.vb: ComponentManager.Get(Of T)()
 - uid: Syn.VA.Component.ComponentManager.Get``1(System.String)
   name: Get<T>(String)
   href: api/Syn.VA.Component.ComponentManager.html#Syn_VA_Component_ComponentManager_Get__1_System_String_
@@ -28709,7 +28749,7 @@ references:
   fullName: Syn.VA.Component.ComponentManager.Get<T>(System.String)
   fullName.vb: Syn.VA.Component.ComponentManager.Get(Of T)(System.String)
   nameWithType: ComponentManager.Get<T>(String)
-  nameWithType.vb: Get(Of T)(String)
+  nameWithType.vb: ComponentManager.Get(Of T)(String)
 - uid: Syn.VA.Component.ComponentManager.Remove(System.String)
   name: Remove(String)
   href: api/Syn.VA.Component.ComponentManager.html#Syn_VA_Component_ComponentManager_Remove_System_String_
@@ -28730,7 +28770,7 @@ references:
   fullName: Syn.VA.Component.ComponentManager.Remove<T>()
   fullName.vb: Syn.VA.Component.ComponentManager.Remove(Of T)()
   nameWithType: ComponentManager.Remove<T>()
-  nameWithType.vb: Remove(Of T)()
+  nameWithType.vb: ComponentManager.Remove(Of T)()
 - uid: Syn.VA.Events
   name: Syn.VA.Events
   href: api/Syn.VA.Events.html
@@ -29068,14 +29108,11 @@ references:
   fullName: Syn.VA.Extensions.DictionaryExtensions
   nameWithType: DictionaryExtensions
 - uid: Syn.VA.Extensions.DictionaryExtensions.Get*
-  name: Get<TKey, TValue>
+  name: Get
   href: api/Syn.VA.Extensions.DictionaryExtensions.html#Syn_VA_Extensions_DictionaryExtensions_Get_
   commentId: Overload:Syn.VA.Extensions.DictionaryExtensions.Get
-  name.vb: Get(Of TKey, TValue)
-  fullName: Syn.VA.Extensions.DictionaryExtensions.Get<TKey, TValue>
-  fullName.vb: Syn.VA.Extensions.DictionaryExtensions.Get(Of TKey, TValue)
-  nameWithType: DictionaryExtensions.Get<TKey, TValue>
-  nameWithType.vb: DictionaryExtensions.Get(Of TKey, TValue)
+  fullName: Syn.VA.Extensions.DictionaryExtensions.Get
+  nameWithType: DictionaryExtensions.Get
 - uid: Syn.VA.Extensions.DictionaryExtensions.Get``2(System.Collections.Generic.IDictionary{``0,``1},``0)
   name: Get<TKey, TValue>(IDictionary<TKey, TValue>, TKey)
   href: api/Syn.VA.Extensions.DictionaryExtensions.html#Syn_VA_Extensions_DictionaryExtensions_Get__2_System_Collections_Generic_IDictionary___0___1____0_
@@ -29084,16 +29121,13 @@ references:
   fullName: Syn.VA.Extensions.DictionaryExtensions.Get<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, TKey)
   fullName.vb: Syn.VA.Extensions.DictionaryExtensions.Get(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), TKey)
   nameWithType: DictionaryExtensions.Get<TKey, TValue>(IDictionary<TKey, TValue>, TKey)
-  nameWithType.vb: Get(Of TKey, TValue)(IDictionary(Of TKey, TValue), TKey)
+  nameWithType.vb: DictionaryExtensions.Get(Of TKey, TValue)(IDictionary(Of TKey, TValue), TKey)
 - uid: Syn.VA.Extensions.DictionaryExtensions.Put*
-  name: Put<TKey, TValue>
+  name: Put
   href: api/Syn.VA.Extensions.DictionaryExtensions.html#Syn_VA_Extensions_DictionaryExtensions_Put_
   commentId: Overload:Syn.VA.Extensions.DictionaryExtensions.Put
-  name.vb: Put(Of TKey, TValue)
-  fullName: Syn.VA.Extensions.DictionaryExtensions.Put<TKey, TValue>
-  fullName.vb: Syn.VA.Extensions.DictionaryExtensions.Put(Of TKey, TValue)
-  nameWithType: DictionaryExtensions.Put<TKey, TValue>
-  nameWithType.vb: DictionaryExtensions.Put(Of TKey, TValue)
+  fullName: Syn.VA.Extensions.DictionaryExtensions.Put
+  nameWithType: DictionaryExtensions.Put
 - uid: Syn.VA.Extensions.DictionaryExtensions.Put``2(System.Collections.Generic.IDictionary{``0,``1},``0,``1)
   name: Put<TKey, TValue>(IDictionary<TKey, TValue>, TKey, TValue)
   href: api/Syn.VA.Extensions.DictionaryExtensions.html#Syn_VA_Extensions_DictionaryExtensions_Put__2_System_Collections_Generic_IDictionary___0___1____0___1_
@@ -29102,16 +29136,13 @@ references:
   fullName: Syn.VA.Extensions.DictionaryExtensions.Put<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, TKey, TValue)
   fullName.vb: Syn.VA.Extensions.DictionaryExtensions.Put(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), TKey, TValue)
   nameWithType: DictionaryExtensions.Put<TKey, TValue>(IDictionary<TKey, TValue>, TKey, TValue)
-  nameWithType.vb: Put(Of TKey, TValue)(IDictionary(Of TKey, TValue), TKey, TValue)
+  nameWithType.vb: DictionaryExtensions.Put(Of TKey, TValue)(IDictionary(Of TKey, TValue), TKey, TValue)
 - uid: Syn.VA.Extensions.DictionaryExtensions.Remove*
-  name: Remove<TKey, TValue>
+  name: Remove
   href: api/Syn.VA.Extensions.DictionaryExtensions.html#Syn_VA_Extensions_DictionaryExtensions_Remove_
   commentId: Overload:Syn.VA.Extensions.DictionaryExtensions.Remove
-  name.vb: Remove(Of TKey, TValue)
-  fullName: Syn.VA.Extensions.DictionaryExtensions.Remove<TKey, TValue>
-  fullName.vb: Syn.VA.Extensions.DictionaryExtensions.Remove(Of TKey, TValue)
-  nameWithType: DictionaryExtensions.Remove<TKey, TValue>
-  nameWithType.vb: DictionaryExtensions.Remove(Of TKey, TValue)
+  fullName: Syn.VA.Extensions.DictionaryExtensions.Remove
+  nameWithType: DictionaryExtensions.Remove
 - uid: Syn.VA.Extensions.DictionaryExtensions.Remove``2(System.Collections.Generic.IDictionary{``0,``1},``1)
   name: Remove<TKey, TValue>(IDictionary<TKey, TValue>, TValue)
   href: api/Syn.VA.Extensions.DictionaryExtensions.html#Syn_VA_Extensions_DictionaryExtensions_Remove__2_System_Collections_Generic_IDictionary___0___1____1_
@@ -29120,7 +29151,7 @@ references:
   fullName: Syn.VA.Extensions.DictionaryExtensions.Remove<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, TValue)
   fullName.vb: Syn.VA.Extensions.DictionaryExtensions.Remove(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), TValue)
   nameWithType: DictionaryExtensions.Remove<TKey, TValue>(IDictionary<TKey, TValue>, TValue)
-  nameWithType.vb: Remove(Of TKey, TValue)(IDictionary(Of TKey, TValue), TValue)
+  nameWithType.vb: DictionaryExtensions.Remove(Of TKey, TValue)(IDictionary(Of TKey, TValue), TValue)
 - uid: Syn.VA.Extensions.StringExtensions
   name: StringExtensions
   href: api/Syn.VA.Extensions.StringExtensions.html
@@ -29158,14 +29189,11 @@ references:
   fullName: Syn.VA.Extensions.VariableExtensions
   nameWithType: VariableExtensions
 - uid: Syn.VA.Extensions.VariableExtensions.Add*
-  name: Add<T1, T2>
+  name: Add
   href: api/Syn.VA.Extensions.VariableExtensions.html#Syn_VA_Extensions_VariableExtensions_Add_
   commentId: Overload:Syn.VA.Extensions.VariableExtensions.Add
-  name.vb: Add(Of T1, T2)
-  fullName: Syn.VA.Extensions.VariableExtensions.Add<T1, T2>
-  fullName.vb: Syn.VA.Extensions.VariableExtensions.Add(Of T1, T2)
-  nameWithType: VariableExtensions.Add<T1, T2>
-  nameWithType.vb: VariableExtensions.Add(Of T1, T2)
+  fullName: Syn.VA.Extensions.VariableExtensions.Add
+  nameWithType: VariableExtensions.Add
 - uid: Syn.VA.Extensions.VariableExtensions.Add``2(Syn.VA.Interfaces.IVariable,System.Tuple{``0,``1})
   name: Add<T1, T2>(IVariable, Tuple<T1, T2>)
   href: api/Syn.VA.Extensions.VariableExtensions.html#Syn_VA_Extensions_VariableExtensions_Add__2_Syn_VA_Interfaces_IVariable_System_Tuple___0___1__
@@ -29174,7 +29202,7 @@ references:
   fullName: Syn.VA.Extensions.VariableExtensions.Add<T1, T2>(Syn.VA.Interfaces.IVariable, System.Tuple<T1, T2>)
   fullName.vb: Syn.VA.Extensions.VariableExtensions.Add(Of T1, T2)(Syn.VA.Interfaces.IVariable, System.Tuple(Of T1, T2))
   nameWithType: VariableExtensions.Add<T1, T2>(IVariable, Tuple<T1, T2>)
-  nameWithType.vb: Add(Of T1, T2)(IVariable, Tuple(Of T1, T2))
+  nameWithType.vb: VariableExtensions.Add(Of T1, T2)(IVariable, Tuple(Of T1, T2))
 - uid: Syn.VA.Extensions.VariableExtensions.Add``3(Syn.VA.Interfaces.IVariable,System.Tuple{``0,``1,``2})
   name: Add<T1, T2, T3>(IVariable, Tuple<T1, T2, T3>)
   href: api/Syn.VA.Extensions.VariableExtensions.html#Syn_VA_Extensions_VariableExtensions_Add__3_Syn_VA_Interfaces_IVariable_System_Tuple___0___1___2__
@@ -29183,7 +29211,7 @@ references:
   fullName: Syn.VA.Extensions.VariableExtensions.Add<T1, T2, T3>(Syn.VA.Interfaces.IVariable, System.Tuple<T1, T2, T3>)
   fullName.vb: Syn.VA.Extensions.VariableExtensions.Add(Of T1, T2, T3)(Syn.VA.Interfaces.IVariable, System.Tuple(Of T1, T2, T3))
   nameWithType: VariableExtensions.Add<T1, T2, T3>(IVariable, Tuple<T1, T2, T3>)
-  nameWithType.vb: Add(Of T1, T2, T3)(IVariable, Tuple(Of T1, T2, T3))
+  nameWithType.vb: VariableExtensions.Add(Of T1, T2, T3)(IVariable, Tuple(Of T1, T2, T3))
 - uid: Syn.VA.Extensions.VariableExtensions.Add``4(Syn.VA.Interfaces.IVariable,System.Tuple{``0,``1,``2,``3})
   name: Add<T1, T2, T3, T4>(IVariable, Tuple<T1, T2, T3, T4>)
   href: api/Syn.VA.Extensions.VariableExtensions.html#Syn_VA_Extensions_VariableExtensions_Add__4_Syn_VA_Interfaces_IVariable_System_Tuple___0___1___2___3__
@@ -29192,7 +29220,7 @@ references:
   fullName: Syn.VA.Extensions.VariableExtensions.Add<T1, T2, T3, T4>(Syn.VA.Interfaces.IVariable, System.Tuple<T1, T2, T3, T4>)
   fullName.vb: Syn.VA.Extensions.VariableExtensions.Add(Of T1, T2, T3, T4)(Syn.VA.Interfaces.IVariable, System.Tuple(Of T1, T2, T3, T4))
   nameWithType: VariableExtensions.Add<T1, T2, T3, T4>(IVariable, Tuple<T1, T2, T3, T4>)
-  nameWithType.vb: Add(Of T1, T2, T3, T4)(IVariable, Tuple(Of T1, T2, T3, T4))
+  nameWithType.vb: VariableExtensions.Add(Of T1, T2, T3, T4)(IVariable, Tuple(Of T1, T2, T3, T4))
 - uid: Syn.VA.Extensions.VariableExtensions.Add``5(Syn.VA.Interfaces.IVariable,System.Tuple{``0,``1,``2,``3,``4})
   name: Add<T1, T2, T3, T4, T5>(IVariable, Tuple<T1, T2, T3, T4, T5>)
   href: api/Syn.VA.Extensions.VariableExtensions.html#Syn_VA_Extensions_VariableExtensions_Add__5_Syn_VA_Interfaces_IVariable_System_Tuple___0___1___2___3___4__
@@ -29201,16 +29229,13 @@ references:
   fullName: Syn.VA.Extensions.VariableExtensions.Add<T1, T2, T3, T4, T5>(Syn.VA.Interfaces.IVariable, System.Tuple<T1, T2, T3, T4, T5>)
   fullName.vb: Syn.VA.Extensions.VariableExtensions.Add(Of T1, T2, T3, T4, T5)(Syn.VA.Interfaces.IVariable, System.Tuple(Of T1, T2, T3, T4, T5))
   nameWithType: VariableExtensions.Add<T1, T2, T3, T4, T5>(IVariable, Tuple<T1, T2, T3, T4, T5>)
-  nameWithType.vb: Add(Of T1, T2, T3, T4, T5)(IVariable, Tuple(Of T1, T2, T3, T4, T5))
+  nameWithType.vb: VariableExtensions.Add(Of T1, T2, T3, T4, T5)(IVariable, Tuple(Of T1, T2, T3, T4, T5))
 - uid: Syn.VA.Extensions.VariableExtensions.GetTuple*
-  name: GetTuple<T1, T2>
+  name: GetTuple
   href: api/Syn.VA.Extensions.VariableExtensions.html#Syn_VA_Extensions_VariableExtensions_GetTuple_
   commentId: Overload:Syn.VA.Extensions.VariableExtensions.GetTuple
-  name.vb: GetTuple(Of T1, T2)
-  fullName: Syn.VA.Extensions.VariableExtensions.GetTuple<T1, T2>
-  fullName.vb: Syn.VA.Extensions.VariableExtensions.GetTuple(Of T1, T2)
-  nameWithType: VariableExtensions.GetTuple<T1, T2>
-  nameWithType.vb: VariableExtensions.GetTuple(Of T1, T2)
+  fullName: Syn.VA.Extensions.VariableExtensions.GetTuple
+  nameWithType: VariableExtensions.GetTuple
 - uid: Syn.VA.Extensions.VariableExtensions.GetTuple``2(Syn.VA.Interfaces.IVariable)
   name: GetTuple<T1, T2>(IVariable)
   href: api/Syn.VA.Extensions.VariableExtensions.html#Syn_VA_Extensions_VariableExtensions_GetTuple__2_Syn_VA_Interfaces_IVariable_
@@ -29219,7 +29244,7 @@ references:
   fullName: Syn.VA.Extensions.VariableExtensions.GetTuple<T1, T2>(Syn.VA.Interfaces.IVariable)
   fullName.vb: Syn.VA.Extensions.VariableExtensions.GetTuple(Of T1, T2)(Syn.VA.Interfaces.IVariable)
   nameWithType: VariableExtensions.GetTuple<T1, T2>(IVariable)
-  nameWithType.vb: GetTuple(Of T1, T2)(IVariable)
+  nameWithType.vb: VariableExtensions.GetTuple(Of T1, T2)(IVariable)
 - uid: Syn.VA.Extensions.VariableExtensions.GetTuple``2(Syn.VA.Interfaces.IVariable,System.String)
   name: GetTuple<T1, T2>(IVariable, String)
   href: api/Syn.VA.Extensions.VariableExtensions.html#Syn_VA_Extensions_VariableExtensions_GetTuple__2_Syn_VA_Interfaces_IVariable_System_String_
@@ -29228,7 +29253,7 @@ references:
   fullName: Syn.VA.Extensions.VariableExtensions.GetTuple<T1, T2>(Syn.VA.Interfaces.IVariable, System.String)
   fullName.vb: Syn.VA.Extensions.VariableExtensions.GetTuple(Of T1, T2)(Syn.VA.Interfaces.IVariable, System.String)
   nameWithType: VariableExtensions.GetTuple<T1, T2>(IVariable, String)
-  nameWithType.vb: GetTuple(Of T1, T2)(IVariable, String)
+  nameWithType.vb: VariableExtensions.GetTuple(Of T1, T2)(IVariable, String)
 - uid: Syn.VA.Extensions.VariableExtensions.GetTuple``3(Syn.VA.Interfaces.IVariable)
   name: GetTuple<T1, T2, T3>(IVariable)
   href: api/Syn.VA.Extensions.VariableExtensions.html#Syn_VA_Extensions_VariableExtensions_GetTuple__3_Syn_VA_Interfaces_IVariable_
@@ -29237,7 +29262,7 @@ references:
   fullName: Syn.VA.Extensions.VariableExtensions.GetTuple<T1, T2, T3>(Syn.VA.Interfaces.IVariable)
   fullName.vb: Syn.VA.Extensions.VariableExtensions.GetTuple(Of T1, T2, T3)(Syn.VA.Interfaces.IVariable)
   nameWithType: VariableExtensions.GetTuple<T1, T2, T3>(IVariable)
-  nameWithType.vb: GetTuple(Of T1, T2, T3)(IVariable)
+  nameWithType.vb: VariableExtensions.GetTuple(Of T1, T2, T3)(IVariable)
 - uid: Syn.VA.Extensions.VariableExtensions.GetTuple``3(Syn.VA.Interfaces.IVariable,System.String)
   name: GetTuple<T1, T2, T3>(IVariable, String)
   href: api/Syn.VA.Extensions.VariableExtensions.html#Syn_VA_Extensions_VariableExtensions_GetTuple__3_Syn_VA_Interfaces_IVariable_System_String_
@@ -29246,7 +29271,7 @@ references:
   fullName: Syn.VA.Extensions.VariableExtensions.GetTuple<T1, T2, T3>(Syn.VA.Interfaces.IVariable, System.String)
   fullName.vb: Syn.VA.Extensions.VariableExtensions.GetTuple(Of T1, T2, T3)(Syn.VA.Interfaces.IVariable, System.String)
   nameWithType: VariableExtensions.GetTuple<T1, T2, T3>(IVariable, String)
-  nameWithType.vb: GetTuple(Of T1, T2, T3)(IVariable, String)
+  nameWithType.vb: VariableExtensions.GetTuple(Of T1, T2, T3)(IVariable, String)
 - uid: Syn.VA.Extensions.VariableExtensions.GetTuple``4(Syn.VA.Interfaces.IVariable)
   name: GetTuple<T1, T2, T3, T4>(IVariable)
   href: api/Syn.VA.Extensions.VariableExtensions.html#Syn_VA_Extensions_VariableExtensions_GetTuple__4_Syn_VA_Interfaces_IVariable_
@@ -29255,7 +29280,7 @@ references:
   fullName: Syn.VA.Extensions.VariableExtensions.GetTuple<T1, T2, T3, T4>(Syn.VA.Interfaces.IVariable)
   fullName.vb: Syn.VA.Extensions.VariableExtensions.GetTuple(Of T1, T2, T3, T4)(Syn.VA.Interfaces.IVariable)
   nameWithType: VariableExtensions.GetTuple<T1, T2, T3, T4>(IVariable)
-  nameWithType.vb: GetTuple(Of T1, T2, T3, T4)(IVariable)
+  nameWithType.vb: VariableExtensions.GetTuple(Of T1, T2, T3, T4)(IVariable)
 - uid: Syn.VA.Extensions.VariableExtensions.GetTuple``4(Syn.VA.Interfaces.IVariable,System.String)
   name: GetTuple<T1, T2, T3, T4>(IVariable, String)
   href: api/Syn.VA.Extensions.VariableExtensions.html#Syn_VA_Extensions_VariableExtensions_GetTuple__4_Syn_VA_Interfaces_IVariable_System_String_
@@ -29264,7 +29289,7 @@ references:
   fullName: Syn.VA.Extensions.VariableExtensions.GetTuple<T1, T2, T3, T4>(Syn.VA.Interfaces.IVariable, System.String)
   fullName.vb: Syn.VA.Extensions.VariableExtensions.GetTuple(Of T1, T2, T3, T4)(Syn.VA.Interfaces.IVariable, System.String)
   nameWithType: VariableExtensions.GetTuple<T1, T2, T3, T4>(IVariable, String)
-  nameWithType.vb: GetTuple(Of T1, T2, T3, T4)(IVariable, String)
+  nameWithType.vb: VariableExtensions.GetTuple(Of T1, T2, T3, T4)(IVariable, String)
 - uid: Syn.VA.Extensions.VariableExtensions.GetTuple``5(Syn.VA.Interfaces.IVariable)
   name: GetTuple<T1, T2, T3, T4, T5>(IVariable)
   href: api/Syn.VA.Extensions.VariableExtensions.html#Syn_VA_Extensions_VariableExtensions_GetTuple__5_Syn_VA_Interfaces_IVariable_
@@ -29273,7 +29298,7 @@ references:
   fullName: Syn.VA.Extensions.VariableExtensions.GetTuple<T1, T2, T3, T4, T5>(Syn.VA.Interfaces.IVariable)
   fullName.vb: Syn.VA.Extensions.VariableExtensions.GetTuple(Of T1, T2, T3, T4, T5)(Syn.VA.Interfaces.IVariable)
   nameWithType: VariableExtensions.GetTuple<T1, T2, T3, T4, T5>(IVariable)
-  nameWithType.vb: GetTuple(Of T1, T2, T3, T4, T5)(IVariable)
+  nameWithType.vb: VariableExtensions.GetTuple(Of T1, T2, T3, T4, T5)(IVariable)
 - uid: Syn.VA.Extensions.VariableExtensions.GetTuple``5(Syn.VA.Interfaces.IVariable,System.String)
   name: GetTuple<T1, T2, T3, T4, T5>(IVariable, String)
   href: api/Syn.VA.Extensions.VariableExtensions.html#Syn_VA_Extensions_VariableExtensions_GetTuple__5_Syn_VA_Interfaces_IVariable_System_String_
@@ -29282,16 +29307,13 @@ references:
   fullName: Syn.VA.Extensions.VariableExtensions.GetTuple<T1, T2, T3, T4, T5>(Syn.VA.Interfaces.IVariable, System.String)
   fullName.vb: Syn.VA.Extensions.VariableExtensions.GetTuple(Of T1, T2, T3, T4, T5)(Syn.VA.Interfaces.IVariable, System.String)
   nameWithType: VariableExtensions.GetTuple<T1, T2, T3, T4, T5>(IVariable, String)
-  nameWithType.vb: GetTuple(Of T1, T2, T3, T4, T5)(IVariable, String)
+  nameWithType.vb: VariableExtensions.GetTuple(Of T1, T2, T3, T4, T5)(IVariable, String)
 - uid: Syn.VA.Extensions.VariableExtensions.GetTuples*
-  name: GetTuples<T1, T2>
+  name: GetTuples
   href: api/Syn.VA.Extensions.VariableExtensions.html#Syn_VA_Extensions_VariableExtensions_GetTuples_
   commentId: Overload:Syn.VA.Extensions.VariableExtensions.GetTuples
-  name.vb: GetTuples(Of T1, T2)
-  fullName: Syn.VA.Extensions.VariableExtensions.GetTuples<T1, T2>
-  fullName.vb: Syn.VA.Extensions.VariableExtensions.GetTuples(Of T1, T2)
-  nameWithType: VariableExtensions.GetTuples<T1, T2>
-  nameWithType.vb: VariableExtensions.GetTuples(Of T1, T2)
+  fullName: Syn.VA.Extensions.VariableExtensions.GetTuples
+  nameWithType: VariableExtensions.GetTuples
 - uid: Syn.VA.Extensions.VariableExtensions.GetTuples``2(Syn.VA.Interfaces.IVariable)
   name: GetTuples<T1, T2>(IVariable)
   href: api/Syn.VA.Extensions.VariableExtensions.html#Syn_VA_Extensions_VariableExtensions_GetTuples__2_Syn_VA_Interfaces_IVariable_
@@ -29300,7 +29322,7 @@ references:
   fullName: Syn.VA.Extensions.VariableExtensions.GetTuples<T1, T2>(Syn.VA.Interfaces.IVariable)
   fullName.vb: Syn.VA.Extensions.VariableExtensions.GetTuples(Of T1, T2)(Syn.VA.Interfaces.IVariable)
   nameWithType: VariableExtensions.GetTuples<T1, T2>(IVariable)
-  nameWithType.vb: GetTuples(Of T1, T2)(IVariable)
+  nameWithType.vb: VariableExtensions.GetTuples(Of T1, T2)(IVariable)
 - uid: Syn.VA.Extensions.VariableExtensions.GetTuples``3(Syn.VA.Interfaces.IVariable)
   name: GetTuples<T1, T2, T3>(IVariable)
   href: api/Syn.VA.Extensions.VariableExtensions.html#Syn_VA_Extensions_VariableExtensions_GetTuples__3_Syn_VA_Interfaces_IVariable_
@@ -29309,7 +29331,7 @@ references:
   fullName: Syn.VA.Extensions.VariableExtensions.GetTuples<T1, T2, T3>(Syn.VA.Interfaces.IVariable)
   fullName.vb: Syn.VA.Extensions.VariableExtensions.GetTuples(Of T1, T2, T3)(Syn.VA.Interfaces.IVariable)
   nameWithType: VariableExtensions.GetTuples<T1, T2, T3>(IVariable)
-  nameWithType.vb: GetTuples(Of T1, T2, T3)(IVariable)
+  nameWithType.vb: VariableExtensions.GetTuples(Of T1, T2, T3)(IVariable)
 - uid: Syn.VA.Extensions.VariableExtensions.GetTuples``4(Syn.VA.Interfaces.IVariable)
   name: GetTuples<T1, T2, T3, T4>(IVariable)
   href: api/Syn.VA.Extensions.VariableExtensions.html#Syn_VA_Extensions_VariableExtensions_GetTuples__4_Syn_VA_Interfaces_IVariable_
@@ -29318,7 +29340,7 @@ references:
   fullName: Syn.VA.Extensions.VariableExtensions.GetTuples<T1, T2, T3, T4>(Syn.VA.Interfaces.IVariable)
   fullName.vb: Syn.VA.Extensions.VariableExtensions.GetTuples(Of T1, T2, T3, T4)(Syn.VA.Interfaces.IVariable)
   nameWithType: VariableExtensions.GetTuples<T1, T2, T3, T4>(IVariable)
-  nameWithType.vb: GetTuples(Of T1, T2, T3, T4)(IVariable)
+  nameWithType.vb: VariableExtensions.GetTuples(Of T1, T2, T3, T4)(IVariable)
 - uid: Syn.VA.Extensions.VariableExtensions.GetTuples``5(Syn.VA.Interfaces.IVariable)
   name: GetTuples<T1, T2, T3, T4, T5>(IVariable)
   href: api/Syn.VA.Extensions.VariableExtensions.html#Syn_VA_Extensions_VariableExtensions_GetTuples__5_Syn_VA_Interfaces_IVariable_
@@ -29327,16 +29349,13 @@ references:
   fullName: Syn.VA.Extensions.VariableExtensions.GetTuples<T1, T2, T3, T4, T5>(Syn.VA.Interfaces.IVariable)
   fullName.vb: Syn.VA.Extensions.VariableExtensions.GetTuples(Of T1, T2, T3, T4, T5)(Syn.VA.Interfaces.IVariable)
   nameWithType: VariableExtensions.GetTuples<T1, T2, T3, T4, T5>(IVariable)
-  nameWithType.vb: GetTuples(Of T1, T2, T3, T4, T5)(IVariable)
+  nameWithType.vb: VariableExtensions.GetTuples(Of T1, T2, T3, T4, T5)(IVariable)
 - uid: Syn.VA.Extensions.VariableExtensions.GetValue*
-  name: GetValue<T>
+  name: GetValue
   href: api/Syn.VA.Extensions.VariableExtensions.html#Syn_VA_Extensions_VariableExtensions_GetValue_
   commentId: Overload:Syn.VA.Extensions.VariableExtensions.GetValue
-  name.vb: GetValue(Of T)
-  fullName: Syn.VA.Extensions.VariableExtensions.GetValue<T>
-  fullName.vb: Syn.VA.Extensions.VariableExtensions.GetValue(Of T)
-  nameWithType: VariableExtensions.GetValue<T>
-  nameWithType.vb: VariableExtensions.GetValue(Of T)
+  fullName: Syn.VA.Extensions.VariableExtensions.GetValue
+  nameWithType: VariableExtensions.GetValue
 - uid: Syn.VA.Extensions.VariableExtensions.GetValue``1(Syn.VA.Interfaces.IVariable)
   name: GetValue<T>(IVariable)
   href: api/Syn.VA.Extensions.VariableExtensions.html#Syn_VA_Extensions_VariableExtensions_GetValue__1_Syn_VA_Interfaces_IVariable_
@@ -29345,7 +29364,7 @@ references:
   fullName: Syn.VA.Extensions.VariableExtensions.GetValue<T>(Syn.VA.Interfaces.IVariable)
   fullName.vb: Syn.VA.Extensions.VariableExtensions.GetValue(Of T)(Syn.VA.Interfaces.IVariable)
   nameWithType: VariableExtensions.GetValue<T>(IVariable)
-  nameWithType.vb: GetValue(Of T)(IVariable)
+  nameWithType.vb: VariableExtensions.GetValue(Of T)(IVariable)
 - uid: Syn.VA.Extensions.VariableExtensions.GetValue``1(Syn.VA.Interfaces.IVariable,``0)
   name: GetValue<T>(IVariable, T)
   href: api/Syn.VA.Extensions.VariableExtensions.html#Syn_VA_Extensions_VariableExtensions_GetValue__1_Syn_VA_Interfaces_IVariable___0_
@@ -29354,16 +29373,13 @@ references:
   fullName: Syn.VA.Extensions.VariableExtensions.GetValue<T>(Syn.VA.Interfaces.IVariable, T)
   fullName.vb: Syn.VA.Extensions.VariableExtensions.GetValue(Of T)(Syn.VA.Interfaces.IVariable, T)
   nameWithType: VariableExtensions.GetValue<T>(IVariable, T)
-  nameWithType.vb: GetValue(Of T)(IVariable, T)
+  nameWithType.vb: VariableExtensions.GetValue(Of T)(IVariable, T)
 - uid: Syn.VA.Extensions.VariableExtensions.GetValues*
-  name: GetValues<T>
+  name: GetValues
   href: api/Syn.VA.Extensions.VariableExtensions.html#Syn_VA_Extensions_VariableExtensions_GetValues_
   commentId: Overload:Syn.VA.Extensions.VariableExtensions.GetValues
-  name.vb: GetValues(Of T)
-  fullName: Syn.VA.Extensions.VariableExtensions.GetValues<T>
-  fullName.vb: Syn.VA.Extensions.VariableExtensions.GetValues(Of T)
-  nameWithType: VariableExtensions.GetValues<T>
-  nameWithType.vb: VariableExtensions.GetValues(Of T)
+  fullName: Syn.VA.Extensions.VariableExtensions.GetValues
+  nameWithType: VariableExtensions.GetValues
 - uid: Syn.VA.Extensions.VariableExtensions.GetValues``1(Syn.VA.Interfaces.IVariable)
   name: GetValues<T>(IVariable)
   href: api/Syn.VA.Extensions.VariableExtensions.html#Syn_VA_Extensions_VariableExtensions_GetValues__1_Syn_VA_Interfaces_IVariable_
@@ -29372,16 +29388,13 @@ references:
   fullName: Syn.VA.Extensions.VariableExtensions.GetValues<T>(Syn.VA.Interfaces.IVariable)
   fullName.vb: Syn.VA.Extensions.VariableExtensions.GetValues(Of T)(Syn.VA.Interfaces.IVariable)
   nameWithType: VariableExtensions.GetValues<T>(IVariable)
-  nameWithType.vb: GetValues(Of T)(IVariable)
+  nameWithType.vb: VariableExtensions.GetValues(Of T)(IVariable)
 - uid: Syn.VA.Extensions.VariableExtensions.Remove*
-  name: Remove<T1, T2>
+  name: Remove
   href: api/Syn.VA.Extensions.VariableExtensions.html#Syn_VA_Extensions_VariableExtensions_Remove_
   commentId: Overload:Syn.VA.Extensions.VariableExtensions.Remove
-  name.vb: Remove(Of T1, T2)
-  fullName: Syn.VA.Extensions.VariableExtensions.Remove<T1, T2>
-  fullName.vb: Syn.VA.Extensions.VariableExtensions.Remove(Of T1, T2)
-  nameWithType: VariableExtensions.Remove<T1, T2>
-  nameWithType.vb: VariableExtensions.Remove(Of T1, T2)
+  fullName: Syn.VA.Extensions.VariableExtensions.Remove
+  nameWithType: VariableExtensions.Remove
 - uid: Syn.VA.Extensions.VariableExtensions.Remove``2(Syn.VA.Interfaces.IVariable,System.Tuple{``0,``1})
   name: Remove<T1, T2>(IVariable, Tuple<T1, T2>)
   href: api/Syn.VA.Extensions.VariableExtensions.html#Syn_VA_Extensions_VariableExtensions_Remove__2_Syn_VA_Interfaces_IVariable_System_Tuple___0___1__
@@ -29390,7 +29403,7 @@ references:
   fullName: Syn.VA.Extensions.VariableExtensions.Remove<T1, T2>(Syn.VA.Interfaces.IVariable, System.Tuple<T1, T2>)
   fullName.vb: Syn.VA.Extensions.VariableExtensions.Remove(Of T1, T2)(Syn.VA.Interfaces.IVariable, System.Tuple(Of T1, T2))
   nameWithType: VariableExtensions.Remove<T1, T2>(IVariable, Tuple<T1, T2>)
-  nameWithType.vb: Remove(Of T1, T2)(IVariable, Tuple(Of T1, T2))
+  nameWithType.vb: VariableExtensions.Remove(Of T1, T2)(IVariable, Tuple(Of T1, T2))
 - uid: Syn.VA.Extensions.VariableExtensions.Remove``3(Syn.VA.Interfaces.IVariable,System.Tuple{``0,``1,``2})
   name: Remove<T1, T2, T3>(IVariable, Tuple<T1, T2, T3>)
   href: api/Syn.VA.Extensions.VariableExtensions.html#Syn_VA_Extensions_VariableExtensions_Remove__3_Syn_VA_Interfaces_IVariable_System_Tuple___0___1___2__
@@ -29399,7 +29412,7 @@ references:
   fullName: Syn.VA.Extensions.VariableExtensions.Remove<T1, T2, T3>(Syn.VA.Interfaces.IVariable, System.Tuple<T1, T2, T3>)
   fullName.vb: Syn.VA.Extensions.VariableExtensions.Remove(Of T1, T2, T3)(Syn.VA.Interfaces.IVariable, System.Tuple(Of T1, T2, T3))
   nameWithType: VariableExtensions.Remove<T1, T2, T3>(IVariable, Tuple<T1, T2, T3>)
-  nameWithType.vb: Remove(Of T1, T2, T3)(IVariable, Tuple(Of T1, T2, T3))
+  nameWithType.vb: VariableExtensions.Remove(Of T1, T2, T3)(IVariable, Tuple(Of T1, T2, T3))
 - uid: Syn.VA.Extensions.VariableExtensions.Remove``4(Syn.VA.Interfaces.IVariable,System.Tuple{``0,``1,``2,``3})
   name: Remove<T1, T2, T3, T4>(IVariable, Tuple<T1, T2, T3, T4>)
   href: api/Syn.VA.Extensions.VariableExtensions.html#Syn_VA_Extensions_VariableExtensions_Remove__4_Syn_VA_Interfaces_IVariable_System_Tuple___0___1___2___3__
@@ -29408,7 +29421,7 @@ references:
   fullName: Syn.VA.Extensions.VariableExtensions.Remove<T1, T2, T3, T4>(Syn.VA.Interfaces.IVariable, System.Tuple<T1, T2, T3, T4>)
   fullName.vb: Syn.VA.Extensions.VariableExtensions.Remove(Of T1, T2, T3, T4)(Syn.VA.Interfaces.IVariable, System.Tuple(Of T1, T2, T3, T4))
   nameWithType: VariableExtensions.Remove<T1, T2, T3, T4>(IVariable, Tuple<T1, T2, T3, T4>)
-  nameWithType.vb: Remove(Of T1, T2, T3, T4)(IVariable, Tuple(Of T1, T2, T3, T4))
+  nameWithType.vb: VariableExtensions.Remove(Of T1, T2, T3, T4)(IVariable, Tuple(Of T1, T2, T3, T4))
 - uid: Syn.VA.Extensions.VariableExtensions.Remove``5(Syn.VA.Interfaces.IVariable,System.Tuple{``0,``1,``2,``3,``4})
   name: Remove<T1, T2, T3, T4, T5>(IVariable, Tuple<T1, T2, T3, T4, T5>)
   href: api/Syn.VA.Extensions.VariableExtensions.html#Syn_VA_Extensions_VariableExtensions_Remove__5_Syn_VA_Interfaces_IVariable_System_Tuple___0___1___2___3___4__
@@ -29417,16 +29430,13 @@ references:
   fullName: Syn.VA.Extensions.VariableExtensions.Remove<T1, T2, T3, T4, T5>(Syn.VA.Interfaces.IVariable, System.Tuple<T1, T2, T3, T4, T5>)
   fullName.vb: Syn.VA.Extensions.VariableExtensions.Remove(Of T1, T2, T3, T4, T5)(Syn.VA.Interfaces.IVariable, System.Tuple(Of T1, T2, T3, T4, T5))
   nameWithType: VariableExtensions.Remove<T1, T2, T3, T4, T5>(IVariable, Tuple<T1, T2, T3, T4, T5>)
-  nameWithType.vb: Remove(Of T1, T2, T3, T4, T5)(IVariable, Tuple(Of T1, T2, T3, T4, T5))
+  nameWithType.vb: VariableExtensions.Remove(Of T1, T2, T3, T4, T5)(IVariable, Tuple(Of T1, T2, T3, T4, T5))
 - uid: Syn.VA.Extensions.VariableExtensions.SetValue*
-  name: SetValue<T>
+  name: SetValue
   href: api/Syn.VA.Extensions.VariableExtensions.html#Syn_VA_Extensions_VariableExtensions_SetValue_
   commentId: Overload:Syn.VA.Extensions.VariableExtensions.SetValue
-  name.vb: SetValue(Of T)
-  fullName: Syn.VA.Extensions.VariableExtensions.SetValue<T>
-  fullName.vb: Syn.VA.Extensions.VariableExtensions.SetValue(Of T)
-  nameWithType: VariableExtensions.SetValue<T>
-  nameWithType.vb: VariableExtensions.SetValue(Of T)
+  fullName: Syn.VA.Extensions.VariableExtensions.SetValue
+  nameWithType: VariableExtensions.SetValue
 - uid: Syn.VA.Extensions.VariableExtensions.SetValue``1(Syn.VA.Interfaces.IVariable,``0)
   name: SetValue<T>(IVariable, T)
   href: api/Syn.VA.Extensions.VariableExtensions.html#Syn_VA_Extensions_VariableExtensions_SetValue__1_Syn_VA_Interfaces_IVariable___0_
@@ -29435,16 +29445,13 @@ references:
   fullName: Syn.VA.Extensions.VariableExtensions.SetValue<T>(Syn.VA.Interfaces.IVariable, T)
   fullName.vb: Syn.VA.Extensions.VariableExtensions.SetValue(Of T)(Syn.VA.Interfaces.IVariable, T)
   nameWithType: VariableExtensions.SetValue<T>(IVariable, T)
-  nameWithType.vb: SetValue(Of T)(IVariable, T)
+  nameWithType.vb: VariableExtensions.SetValue(Of T)(IVariable, T)
 - uid: Syn.VA.Extensions.VariableExtensions.ValueAs*
-  name: ValueAs<T>
+  name: ValueAs
   href: api/Syn.VA.Extensions.VariableExtensions.html#Syn_VA_Extensions_VariableExtensions_ValueAs_
   commentId: Overload:Syn.VA.Extensions.VariableExtensions.ValueAs
-  name.vb: ValueAs(Of T)
-  fullName: Syn.VA.Extensions.VariableExtensions.ValueAs<T>
-  fullName.vb: Syn.VA.Extensions.VariableExtensions.ValueAs(Of T)
-  nameWithType: VariableExtensions.ValueAs<T>
-  nameWithType.vb: VariableExtensions.ValueAs(Of T)
+  fullName: Syn.VA.Extensions.VariableExtensions.ValueAs
+  nameWithType: VariableExtensions.ValueAs
 - uid: Syn.VA.Extensions.VariableExtensions.ValueAs``1(Syn.VA.Interfaces.IVariable)
   name: ValueAs<T>(IVariable)
   href: api/Syn.VA.Extensions.VariableExtensions.html#Syn_VA_Extensions_VariableExtensions_ValueAs__1_Syn_VA_Interfaces_IVariable_
@@ -29453,7 +29460,7 @@ references:
   fullName: Syn.VA.Extensions.VariableExtensions.ValueAs<T>(Syn.VA.Interfaces.IVariable)
   fullName.vb: Syn.VA.Extensions.VariableExtensions.ValueAs(Of T)(Syn.VA.Interfaces.IVariable)
   nameWithType: VariableExtensions.ValueAs<T>(IVariable)
-  nameWithType.vb: ValueAs(Of T)(IVariable)
+  nameWithType.vb: VariableExtensions.ValueAs(Of T)(IVariable)
 - uid: Syn.VA.Extensions.VariableExtensions.ValueAs``1(Syn.VA.Interfaces.IVariable,``0)
   name: ValueAs<T>(IVariable, T)
   href: api/Syn.VA.Extensions.VariableExtensions.html#Syn_VA_Extensions_VariableExtensions_ValueAs__1_Syn_VA_Interfaces_IVariable___0_
@@ -29462,7 +29469,7 @@ references:
   fullName: Syn.VA.Extensions.VariableExtensions.ValueAs<T>(Syn.VA.Interfaces.IVariable, T)
   fullName.vb: Syn.VA.Extensions.VariableExtensions.ValueAs(Of T)(Syn.VA.Interfaces.IVariable, T)
   nameWithType: VariableExtensions.ValueAs<T>(IVariable, T)
-  nameWithType.vb: ValueAs(Of T)(IVariable, T)
+  nameWithType.vb: VariableExtensions.ValueAs(Of T)(IVariable, T)
 - uid: Syn.VA.FunctionalVariable
   name: FunctionalVariable
   href: api/Syn.VA.FunctionalVariable.html
@@ -29477,7 +29484,7 @@ references:
   fullName: Syn.VA.FunctionalVariable.FunctionalVariable(System.String, System.Func<System.String>)
   fullName.vb: Syn.VA.FunctionalVariable.FunctionalVariable(System.String, System.Func(Of System.String))
   nameWithType: FunctionalVariable.FunctionalVariable(String, Func<String>)
-  nameWithType.vb: FunctionalVariable(String, Func(Of String))
+  nameWithType.vb: FunctionalVariable.FunctionalVariable(String, Func(Of String))
 - uid: Syn.VA.FunctionalVariable.#ctor*
   name: FunctionalVariable
   href: api/Syn.VA.FunctionalVariable.html#Syn_VA_FunctionalVariable__ctor_
@@ -29636,7 +29643,7 @@ references:
   fullName: Syn.VA.FunctionManager.AddAction(System.String, System.Action<System.Object, System.Object>)
   fullName.vb: Syn.VA.FunctionManager.AddAction(System.String, System.Action(Of System.Object, System.Object))
   nameWithType: FunctionManager.AddAction(String, Action<Object, Object>)
-  nameWithType.vb: AddAction(String, Action(Of Object, Object))
+  nameWithType.vb: FunctionManager.AddAction(String, Action(Of Object, Object))
 - uid: Syn.VA.FunctionManager.AddAction*
   name: AddAction
   href: api/Syn.VA.FunctionManager.html#Syn_VA_FunctionManager_AddAction_
@@ -30028,14 +30035,11 @@ references:
   fullName: Syn.VA.Interfaces.IPlugin.DisplayName
   nameWithType: IPlugin.DisplayName
 - uid: Syn.VA.Interfaces.IPlugin.GetPanel*
-  name: GetPanel<T>
+  name: GetPanel
   href: api/Syn.VA.Interfaces.IPlugin.html#Syn_VA_Interfaces_IPlugin_GetPanel_
   commentId: Overload:Syn.VA.Interfaces.IPlugin.GetPanel
-  name.vb: GetPanel(Of T)
-  fullName: Syn.VA.Interfaces.IPlugin.GetPanel<T>
-  fullName.vb: Syn.VA.Interfaces.IPlugin.GetPanel(Of T)
-  nameWithType: IPlugin.GetPanel<T>
-  nameWithType.vb: IPlugin.GetPanel(Of T)
+  fullName: Syn.VA.Interfaces.IPlugin.GetPanel
+  nameWithType: IPlugin.GetPanel
 - uid: Syn.VA.Interfaces.IPlugin.GetPanel``1(System.Object[])
   name: GetPanel<T>(Object[])
   href: api/Syn.VA.Interfaces.IPlugin.html#Syn_VA_Interfaces_IPlugin_GetPanel__1_System_Object___
@@ -30044,7 +30048,7 @@ references:
   fullName: Syn.VA.Interfaces.IPlugin.GetPanel<T>(System.Object[])
   fullName.vb: Syn.VA.Interfaces.IPlugin.GetPanel(Of T)(System.Object())
   nameWithType: IPlugin.GetPanel<T>(Object[])
-  nameWithType.vb: GetPanel(Of T)(Object())
+  nameWithType.vb: IPlugin.GetPanel(Of T)(Object())
 - uid: Syn.VA.Interfaces.IPlugin.Name
   name: Name
   href: api/Syn.VA.Interfaces.IPlugin.html#Syn_VA_Interfaces_IPlugin_Name
@@ -30226,14 +30230,11 @@ references:
   fullName: Syn.VA.Plugin.DisplayName
   nameWithType: Plugin.DisplayName
 - uid: Syn.VA.Plugin.GetPanel*
-  name: GetPanel<T>
+  name: GetPanel
   href: api/Syn.VA.Plugin.html#Syn_VA_Plugin_GetPanel_
   commentId: Overload:Syn.VA.Plugin.GetPanel
-  name.vb: GetPanel(Of T)
-  fullName: Syn.VA.Plugin.GetPanel<T>
-  fullName.vb: Syn.VA.Plugin.GetPanel(Of T)
-  nameWithType: Plugin.GetPanel<T>
-  nameWithType.vb: Plugin.GetPanel(Of T)
+  fullName: Syn.VA.Plugin.GetPanel
+  nameWithType: Plugin.GetPanel
 - uid: Syn.VA.Plugin.GetPanel``1(System.Object[])
   name: GetPanel<T>(Object[])
   href: api/Syn.VA.Plugin.html#Syn_VA_Plugin_GetPanel__1_System_Object___
@@ -30242,7 +30243,7 @@ references:
   fullName: Syn.VA.Plugin.GetPanel<T>(System.Object[])
   fullName.vb: Syn.VA.Plugin.GetPanel(Of T)(System.Object())
   nameWithType: Plugin.GetPanel<T>(Object[])
-  nameWithType.vb: GetPanel(Of T)(Object())
+  nameWithType.vb: Plugin.GetPanel(Of T)(Object())
 - uid: Syn.VA.Plugin.Name
   name: Name
   href: api/Syn.VA.Plugin.html#Syn_VA_Plugin_Name
@@ -30437,7 +30438,7 @@ references:
   fullName: Syn.VA.Settings.Add(System.String, System.Func<System.String>)
   fullName.vb: Syn.VA.Settings.Add(System.String, System.Func(Of System.String))
   nameWithType: Settings.Add(String, Func<String>)
-  nameWithType.vb: Add(String, Func(Of String))
+  nameWithType.vb: Settings.Add(String, Func(Of String))
 - uid: Syn.VA.Settings.Add*
   name: Add
   href: api/Syn.VA.Settings.html#Syn_VA_Settings_Add_
@@ -30494,7 +30495,7 @@ references:
   fullName: Syn.VA.Settings.CopyTo(Syn.VA.Interfaces.IVariable[], System.Int32)
   fullName.vb: Syn.VA.Settings.CopyTo(Syn.VA.Interfaces.IVariable(), System.Int32)
   nameWithType: Settings.CopyTo(IVariable[], Int32)
-  nameWithType.vb: CopyTo(IVariable(), Int32)
+  nameWithType.vb: Settings.CopyTo(IVariable(), Int32)
 - uid: Syn.VA.Settings.CopyTo*
   name: CopyTo
   href: api/Syn.VA.Settings.html#Syn_VA_Settings_CopyTo_
@@ -30557,7 +30558,7 @@ references:
   fullName: Syn.VA.Settings.Item[System.String]
   fullName.vb: Syn.VA.Settings.Item(System.String)
   nameWithType: Settings.Item[String]
-  nameWithType.vb: Item(String)
+  nameWithType.vb: Settings.Item(String)
 - uid: Syn.VA.Settings.Item*
   name: Item
   href: api/Syn.VA.Settings.html#Syn_VA_Settings_Item_
@@ -30631,7 +30632,7 @@ references:
   name.vb: System.Collections.IEnumerable.GetEnumerator()
   fullName: Syn.VA.Settings.System.Collections.IEnumerable.GetEnumerator()
   nameWithType: Settings.IEnumerable.GetEnumerator()
-  nameWithType.vb: System.Collections.IEnumerable.GetEnumerator()
+  nameWithType.vb: Settings.System.Collections.IEnumerable.GetEnumerator()
 - uid: Syn.VA.Settings.System#Collections#IEnumerable#GetEnumerator*
   name: IEnumerable.GetEnumerator
   href: api/Syn.VA.Settings.html#Syn_VA_Settings_System_Collections_IEnumerable_GetEnumerator_
@@ -30648,7 +30649,7 @@ references:
   fullName: Syn.VA.Settings.TryGetValue(System.String, out System.String)
   fullName.vb: Syn.VA.Settings.TryGetValue(System.String, ByRef System.String)
   nameWithType: Settings.TryGetValue(String, out String)
-  nameWithType.vb: TryGetValue(String, ByRef String)
+  nameWithType.vb: Settings.TryGetValue(String, ByRef String)
 - uid: Syn.VA.Settings.TryGetValue*
   name: TryGetValue
   href: api/Syn.VA.Settings.html#Syn_VA_Settings_TryGetValue_
@@ -30723,7 +30724,7 @@ references:
   fullName: Syn.VA.SettingsManager.Item[System.String]
   fullName.vb: Syn.VA.SettingsManager.Item(System.String)
   nameWithType: SettingsManager.Item[String]
-  nameWithType.vb: Item(String)
+  nameWithType.vb: SettingsManager.Item(String)
 - uid: Syn.VA.SettingsManager.Item*
   name: Item
   href: api/Syn.VA.SettingsManager.html#Syn_VA_SettingsManager_Item_
@@ -30756,7 +30757,7 @@ references:
   fullName: Syn.VA.Speech.ISpeechRecognizer.LoadChoices(System.Collections.Generic.IEnumerable<System.String>)
   fullName.vb: Syn.VA.Speech.ISpeechRecognizer.LoadChoices(System.Collections.Generic.IEnumerable(Of System.String))
   nameWithType: ISpeechRecognizer.LoadChoices(IEnumerable<String>)
-  nameWithType.vb: LoadChoices(IEnumerable(Of String))
+  nameWithType.vb: ISpeechRecognizer.LoadChoices(IEnumerable(Of String))
 - uid: Syn.VA.Speech.ISpeechRecognizer.LoadChoices*
   name: LoadChoices
   href: api/Syn.VA.Speech.ISpeechRecognizer.html#Syn_VA_Speech_ISpeechRecognizer_LoadChoices_
@@ -31113,7 +31114,7 @@ references:
   fullName: Syn.VA.Speech.SpeechRecognizerCollection.CopyTo(Syn.VA.Speech.ISpeechRecognizer[], System.Int32)
   fullName.vb: Syn.VA.Speech.SpeechRecognizerCollection.CopyTo(Syn.VA.Speech.ISpeechRecognizer(), System.Int32)
   nameWithType: SpeechRecognizerCollection.CopyTo(ISpeechRecognizer[], Int32)
-  nameWithType.vb: CopyTo(ISpeechRecognizer(), Int32)
+  nameWithType.vb: SpeechRecognizerCollection.CopyTo(ISpeechRecognizer(), Int32)
 - uid: Syn.VA.Speech.SpeechRecognizerCollection.CopyTo*
   name: CopyTo
   href: api/Syn.VA.Speech.SpeechRecognizerCollection.html#Syn_VA_Speech_SpeechRecognizerCollection_CopyTo_
@@ -31205,7 +31206,7 @@ references:
   name.vb: System.Collections.IEnumerable.GetEnumerator()
   fullName: Syn.VA.Speech.SpeechRecognizerCollection.System.Collections.IEnumerable.GetEnumerator()
   nameWithType: SpeechRecognizerCollection.IEnumerable.GetEnumerator()
-  nameWithType.vb: System.Collections.IEnumerable.GetEnumerator()
+  nameWithType.vb: SpeechRecognizerCollection.System.Collections.IEnumerable.GetEnumerator()
 - uid: Syn.VA.Speech.SpeechRecognizerCollection.System#Collections#IEnumerable#GetEnumerator*
   name: IEnumerable.GetEnumerator
   href: api/Syn.VA.Speech.SpeechRecognizerCollection.html#Syn_VA_Speech_SpeechRecognizerCollection_System_Collections_IEnumerable_GetEnumerator_
@@ -31276,7 +31277,7 @@ references:
   fullName: Syn.VA.Speech.SpeechSynthesizerCollection.CopyTo(Syn.VA.Speech.ISpeechSynthesizer[], System.Int32)
   fullName.vb: Syn.VA.Speech.SpeechSynthesizerCollection.CopyTo(Syn.VA.Speech.ISpeechSynthesizer(), System.Int32)
   nameWithType: SpeechSynthesizerCollection.CopyTo(ISpeechSynthesizer[], Int32)
-  nameWithType.vb: CopyTo(ISpeechSynthesizer(), Int32)
+  nameWithType.vb: SpeechSynthesizerCollection.CopyTo(ISpeechSynthesizer(), Int32)
 - uid: Syn.VA.Speech.SpeechSynthesizerCollection.CopyTo*
   name: CopyTo
   href: api/Syn.VA.Speech.SpeechSynthesizerCollection.html#Syn_VA_Speech_SpeechSynthesizerCollection_CopyTo_
@@ -31368,7 +31369,7 @@ references:
   name.vb: System.Collections.IEnumerable.GetEnumerator()
   fullName: Syn.VA.Speech.SpeechSynthesizerCollection.System.Collections.IEnumerable.GetEnumerator()
   nameWithType: SpeechSynthesizerCollection.IEnumerable.GetEnumerator()
-  nameWithType.vb: System.Collections.IEnumerable.GetEnumerator()
+  nameWithType.vb: SpeechSynthesizerCollection.System.Collections.IEnumerable.GetEnumerator()
 - uid: Syn.VA.Speech.SpeechSynthesizerCollection.System#Collections#IEnumerable#GetEnumerator*
   name: IEnumerable.GetEnumerator
   href: api/Syn.VA.Speech.SpeechSynthesizerCollection.html#Syn_VA_Speech_SpeechSynthesizerCollection_System_Collections_IEnumerable_GetEnumerator_
@@ -31547,7 +31548,7 @@ references:
   fullName: Syn.VA.Utility.Extensions.SettingsExtensions.ApplyToProperties(Syn.VA.Settings, System.Object, System.String[])
   fullName.vb: Syn.VA.Utility.Extensions.SettingsExtensions.ApplyToProperties(Syn.VA.Settings, System.Object, System.String())
   nameWithType: SettingsExtensions.ApplyToProperties(Settings, Object, String[])
-  nameWithType.vb: ApplyToProperties(Settings, Object, String())
+  nameWithType.vb: SettingsExtensions.ApplyToProperties(Settings, Object, String())
 - uid: Syn.VA.Utility.Extensions.SettingsExtensions.ApplyToProperties*
   name: ApplyToProperties
   href: api/Syn.VA.Utility.Extensions.SettingsExtensions.html#Syn_VA_Utility_Extensions_SettingsExtensions_ApplyToProperties_
