@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Adding License Information  - Syn Developer Network</title>
+    <title>Adding License Information (Syn Bot)  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Adding License Information ">
+    <meta name="title" content="Adding License Information (Syn Bot) ">
     <meta name="generator" content="docfx 2.12.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -95,7 +95,7 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="adding-license-information">Adding License Information</h1>
+              <h1 id="adding-license-information-syn-bot">Adding License Information (Syn Bot)</h1>
               
 <p>If you have acquired an <em>Enterprise</em>, <em>Individual Developer</em> or an <em>Open-Source</em> license, you will also receive a <em>License Key</em> which you can easily add to SIML Bot and Oscova to enable locked features.</p>
 <p>Essential features that are enabled:</p>
@@ -135,26 +135,26 @@
 </tr>
 </tbody>
 </table>
-<div class="NOTE"><h5>Note</h5><p>The License Key for <em>Syn Bot</em> framework works for both Oscova and SIML Bot.</p>
+<div class="NOTE"><h5>Note</h5><p>In the examples below the value of <code>LICENSE_NAMR_OR_EMAIL</code> depends on your license type. For <strong>Enterprise</strong> license the value is the <em>name of your company</em> and for <strong>Individual Developer</strong> or <strong>Open-Source</strong> license the value is <em>your email address</em> mentioned in the <em>License Key Document</em>.</p>
 </div>
 <h2 id="activating-license-in-oscova">Activating License in Oscova</h2>
 <p>In your bot application just before you create an instance of <code>OscovaBot</code> use the static <code>Activate()</code> method to add in your license key.</p>
 <p><strong>Enterprise License Example</strong></p>
-<pre><code class="lang-csharp">OscovaBot.Activate(&quot;Enterprise&quot;, &quot;LICENSEE_NAME&quot;, &quot;YOUR_LICENSE_KEY&quot;);
+<pre><code class="lang-csharp">OscovaBot.Activate(&quot;Enterprise&quot;, &quot;LICENSEE_NAME_OR_EMAIL&quot;, &quot;YOUR_LICENSE_KEY&quot;);
 var bot = new OscovaBot();
 ... // Rest of your code
 </code></pre><p><strong>Individual Developer License Example</strong></p>
-<pre><code class="lang-csharp">OscovaBot.Activate(&quot;Individual-Developer&quot;, &quot;LICENSEE_NAME&quot;, &quot;YOUR_LICENSE_KEY&quot;);
+<pre><code class="lang-csharp">OscovaBot.Activate(&quot;Individual-Developer&quot;, &quot;LICENSEE_NAME_OR_EMAIL&quot;, &quot;YOUR_LICENSE_KEY&quot;);
 var bot = new OscovaBot();
 ... // Rest of your code
 </code></pre><h2 id="activating-license-in-siml-bot">Activating License in SIML Bot</h2>
 <p>In your application just before you create an instance of <code>SimlBot</code> use the static <code>Activate()</code> method to add in your license key.</p>
 <p><strong>Enterprise License Example</strong></p>
-<pre><code class="lang-csharp">SimlBot.Activate(&quot;Enterprise&quot;, &quot;LICENSEE_NAME&quot;, &quot;YOUR_LICENSE_KEY&quot;);
+<pre><code class="lang-csharp">SimlBot.Activate(&quot;Enterprise&quot;, &quot;LICENSEE_NAME_OR_EMAIL&quot;, &quot;YOUR_LICENSE_KEY&quot;);
 var bot = new SimlBot();
 ... // Rest of your code
 </code></pre><p><strong>Individual Developer License Example</strong></p>
-<pre><code class="lang-csharp">SimlBot.Activate(&quot;Individual-Developer&quot;, &quot;LICENSEE_NAME&quot;, &quot;YOUR_LICENSE_KEY&quot;);
+<pre><code class="lang-csharp">SimlBot.Activate(&quot;Individual-Developer&quot;, &quot;LICENSEE_NAME_OR_EMAIL&quot;, &quot;YOUR_LICENSE_KEY&quot;);
 var bot = new SimlBot();
 ... // Rest of your code
 </code></pre>
