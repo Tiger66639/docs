@@ -105,6 +105,7 @@
               <h1 id="entity-recognizers">Entity Recognizers</h1>
               
 <p>Oscova supports multiple ways of rapidly creating entity recognizers. Developers can create entity recognizers for known words, patterns via regular expressions or even by providing methods that extract entities from request.</p>
+<p><img src="images/entity-recognizer-diagram.png" alt="Oscova Entity Recognizer Diagram"></p>
 <h2 id="entries-recognizer">Entries Recognizer</h2>
 <p>For list of known words (entries) developer can easily create an <em>Entity Recognizer</em> by calling the <code>CreateRecognizer</code> method, specifying the <code>EntityType</code> parsed by the entity recognizer and an array of known entry values.</p>
 <pre><code class="lang-csharp">var bot = new OscovaBot();
