@@ -105,6 +105,7 @@
               <h1 id="intents">Intents</h1>
               
 <p>In Oscova an intent is any action that the bot is supposed to execute when they user message matches an expression. An intent is a <code>void</code> method with a <code>public</code> modifier. The name of the intent is taken directly from the method name.</p>
+<p><img src="images/intent-diagram.png" alt="Oscova Intent Diagram"></p>
 <h2 id="declaration">Declaration</h2>
 <pre><code class="lang-csharp">[Expression(&quot;How is the weather?&quot;)]
 public void Weather(Context context, Result result)
