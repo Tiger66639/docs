@@ -781,6 +781,18 @@ references:
   commentId: Overload:Syn.Bot.Oscova.BotConfiguration.ContextLifespan
   fullName: Syn.Bot.Oscova.BotConfiguration.ContextLifespan
   nameWithType: BotConfiguration.ContextLifespan
+- uid: Syn.Bot.Oscova.BotConfiguration.IntentNameProvider
+  name: IntentNameProvider
+  href: api/Syn.Bot.Oscova.BotConfiguration.html#Syn_Bot_Oscova_BotConfiguration_IntentNameProvider
+  commentId: P:Syn.Bot.Oscova.BotConfiguration.IntentNameProvider
+  fullName: Syn.Bot.Oscova.BotConfiguration.IntentNameProvider
+  nameWithType: BotConfiguration.IntentNameProvider
+- uid: Syn.Bot.Oscova.BotConfiguration.IntentNameProvider*
+  name: IntentNameProvider
+  href: api/Syn.Bot.Oscova.BotConfiguration.html#Syn_Bot_Oscova_BotConfiguration_IntentNameProvider_
+  commentId: Overload:Syn.Bot.Oscova.BotConfiguration.IntentNameProvider
+  fullName: Syn.Bot.Oscova.BotConfiguration.IntentNameProvider
+  nameWithType: BotConfiguration.IntentNameProvider
 - uid: Syn.Bot.Oscova.BotConfiguration.MachineLearningRate
   name: MachineLearningRate
   href: api/Syn.Bot.Oscova.BotConfiguration.html#Syn_Bot_Oscova_BotConfiguration_MachineLearningRate
@@ -1953,6 +1965,48 @@ references:
   fullName: Syn.Bot.Oscova.Collection.EntryCollection.System.Collections.IEnumerable.GetEnumerator
   nameWithType: EntryCollection.IEnumerable.GetEnumerator
   nameWithType.vb: EntryCollection.System.Collections.IEnumerable.GetEnumerator
+- uid: Syn.Bot.Oscova.Collection.FilterCollection
+  name: FilterCollection
+  href: api/Syn.Bot.Oscova.Collection.FilterCollection.html
+  commentId: T:Syn.Bot.Oscova.Collection.FilterCollection
+  fullName: Syn.Bot.Oscova.Collection.FilterCollection
+  nameWithType: FilterCollection
+- uid: Syn.Bot.Oscova.Collection.FilterCollection.AddRegexFilter(System.Text.RegularExpressions.Regex,System.Text.RegularExpressions.MatchEvaluator)
+  name: AddRegexFilter(Regex, MatchEvaluator)
+  href: api/Syn.Bot.Oscova.Collection.FilterCollection.html#Syn_Bot_Oscova_Collection_FilterCollection_AddRegexFilter_System_Text_RegularExpressions_Regex_System_Text_RegularExpressions_MatchEvaluator_
+  commentId: M:Syn.Bot.Oscova.Collection.FilterCollection.AddRegexFilter(System.Text.RegularExpressions.Regex,System.Text.RegularExpressions.MatchEvaluator)
+  fullName: Syn.Bot.Oscova.Collection.FilterCollection.AddRegexFilter(System.Text.RegularExpressions.Regex, System.Text.RegularExpressions.MatchEvaluator)
+  nameWithType: FilterCollection.AddRegexFilter(Regex, MatchEvaluator)
+- uid: Syn.Bot.Oscova.Collection.FilterCollection.AddRegexFilter*
+  name: AddRegexFilter
+  href: api/Syn.Bot.Oscova.Collection.FilterCollection.html#Syn_Bot_Oscova_Collection_FilterCollection_AddRegexFilter_
+  commentId: Overload:Syn.Bot.Oscova.Collection.FilterCollection.AddRegexFilter
+  fullName: Syn.Bot.Oscova.Collection.FilterCollection.AddRegexFilter
+  nameWithType: FilterCollection.AddRegexFilter
+- uid: Syn.Bot.Oscova.Collection.FilterCollection.AddTextFilter(System.String,System.String)
+  name: AddTextFilter(String, String)
+  href: api/Syn.Bot.Oscova.Collection.FilterCollection.html#Syn_Bot_Oscova_Collection_FilterCollection_AddTextFilter_System_String_System_String_
+  commentId: M:Syn.Bot.Oscova.Collection.FilterCollection.AddTextFilter(System.String,System.String)
+  fullName: Syn.Bot.Oscova.Collection.FilterCollection.AddTextFilter(System.String, System.String)
+  nameWithType: FilterCollection.AddTextFilter(String, String)
+- uid: Syn.Bot.Oscova.Collection.FilterCollection.AddTextFilter*
+  name: AddTextFilter
+  href: api/Syn.Bot.Oscova.Collection.FilterCollection.html#Syn_Bot_Oscova_Collection_FilterCollection_AddTextFilter_
+  commentId: Overload:Syn.Bot.Oscova.Collection.FilterCollection.AddTextFilter
+  fullName: Syn.Bot.Oscova.Collection.FilterCollection.AddTextFilter
+  nameWithType: FilterCollection.AddTextFilter
+- uid: Syn.Bot.Oscova.Collection.FilterCollection.AddWordFilter(System.String,System.String)
+  name: AddWordFilter(String, String)
+  href: api/Syn.Bot.Oscova.Collection.FilterCollection.html#Syn_Bot_Oscova_Collection_FilterCollection_AddWordFilter_System_String_System_String_
+  commentId: M:Syn.Bot.Oscova.Collection.FilterCollection.AddWordFilter(System.String,System.String)
+  fullName: Syn.Bot.Oscova.Collection.FilterCollection.AddWordFilter(System.String, System.String)
+  nameWithType: FilterCollection.AddWordFilter(String, String)
+- uid: Syn.Bot.Oscova.Collection.FilterCollection.AddWordFilter*
+  name: AddWordFilter
+  href: api/Syn.Bot.Oscova.Collection.FilterCollection.html#Syn_Bot_Oscova_Collection_FilterCollection_AddWordFilter_
+  commentId: Overload:Syn.Bot.Oscova.Collection.FilterCollection.AddWordFilter
+  fullName: Syn.Bot.Oscova.Collection.FilterCollection.AddWordFilter
+  nameWithType: FilterCollection.AddWordFilter
 - uid: Syn.Bot.Oscova.Collection.GenericCollection`1
   name: GenericCollection<T>
   href: api/Syn.Bot.Oscova.Collection.GenericCollection-1.html
@@ -3058,6 +3112,12 @@ references:
   commentId: T:Syn.Bot.Oscova.Delegates.EntityExtractor
   fullName: Syn.Bot.Oscova.Delegates.EntityExtractor
   nameWithType: EntityExtractor
+- uid: Syn.Bot.Oscova.Delegates.IntentNameProvider
+  name: IntentNameProvider
+  href: api/Syn.Bot.Oscova.Delegates.IntentNameProvider.html
+  commentId: T:Syn.Bot.Oscova.Delegates.IntentNameProvider
+  fullName: Syn.Bot.Oscova.Delegates.IntentNameProvider
+  nameWithType: IntentNameProvider
 - uid: Syn.Bot.Oscova.Delegates.IsActiveProvider
   name: IsActiveProvider
   href: api/Syn.Bot.Oscova.Delegates.IsActiveProvider.html
@@ -4849,6 +4909,18 @@ references:
   commentId: T:Syn.Bot.Oscova.FilterItem
   fullName: Syn.Bot.Oscova.FilterItem
   nameWithType: FilterItem
+- uid: Syn.Bot.Oscova.FilterItem.Evaluator
+  name: Evaluator
+  href: api/Syn.Bot.Oscova.FilterItem.html#Syn_Bot_Oscova_FilterItem_Evaluator
+  commentId: P:Syn.Bot.Oscova.FilterItem.Evaluator
+  fullName: Syn.Bot.Oscova.FilterItem.Evaluator
+  nameWithType: FilterItem.Evaluator
+- uid: Syn.Bot.Oscova.FilterItem.Evaluator*
+  name: Evaluator
+  href: api/Syn.Bot.Oscova.FilterItem.html#Syn_Bot_Oscova_FilterItem_Evaluator_
+  commentId: Overload:Syn.Bot.Oscova.FilterItem.Evaluator
+  fullName: Syn.Bot.Oscova.FilterItem.Evaluator
+  nameWithType: FilterItem.Evaluator
 - uid: Syn.Bot.Oscova.FilterItem.Input
   name: Input
   href: api/Syn.Bot.Oscova.FilterItem.html#Syn_Bot_Oscova_FilterItem_Input
@@ -4873,6 +4945,18 @@ references:
   commentId: Overload:Syn.Bot.Oscova.FilterItem.Output
   fullName: Syn.Bot.Oscova.FilterItem.Output
   nameWithType: FilterItem.Output
+- uid: Syn.Bot.Oscova.FilterItem.Regex
+  name: Regex
+  href: api/Syn.Bot.Oscova.FilterItem.html#Syn_Bot_Oscova_FilterItem_Regex
+  commentId: P:Syn.Bot.Oscova.FilterItem.Regex
+  fullName: Syn.Bot.Oscova.FilterItem.Regex
+  nameWithType: FilterItem.Regex
+- uid: Syn.Bot.Oscova.FilterItem.Regex*
+  name: Regex
+  href: api/Syn.Bot.Oscova.FilterItem.html#Syn_Bot_Oscova_FilterItem_Regex_
+  commentId: Overload:Syn.Bot.Oscova.FilterItem.Regex
+  fullName: Syn.Bot.Oscova.FilterItem.Regex
+  nameWithType: FilterItem.Regex
 - uid: Syn.Bot.Oscova.FilterItem.Type
   name: Type
   href: api/Syn.Bot.Oscova.FilterItem.html#Syn_Bot_Oscova_FilterItem_Type
@@ -4891,6 +4975,12 @@ references:
   commentId: T:Syn.Bot.Oscova.FilterType
   fullName: Syn.Bot.Oscova.FilterType
   nameWithType: FilterType
+- uid: Syn.Bot.Oscova.FilterType.Regex
+  name: Regex
+  href: api/Syn.Bot.Oscova.FilterType.html#Syn_Bot_Oscova_FilterType_Regex
+  commentId: F:Syn.Bot.Oscova.FilterType.Regex
+  fullName: Syn.Bot.Oscova.FilterType.Regex
+  nameWithType: FilterType.Regex
 - uid: Syn.Bot.Oscova.FilterType.Text
   name: Text
   href: api/Syn.Bot.Oscova.FilterType.html#Syn_Bot_Oscova_FilterType_Text
@@ -5326,18 +5416,6 @@ references:
   commentId: Overload:Syn.Bot.Oscova.Language.#ctor
   fullName: Syn.Bot.Oscova.Language.Language
   nameWithType: Language.Language
-- uid: Syn.Bot.Oscova.Language.AddFilter(Syn.Bot.Oscova.FilterType,System.String,System.String)
-  name: AddFilter(FilterType, String, String)
-  href: api/Syn.Bot.Oscova.Language.html#Syn_Bot_Oscova_Language_AddFilter_Syn_Bot_Oscova_FilterType_System_String_System_String_
-  commentId: M:Syn.Bot.Oscova.Language.AddFilter(Syn.Bot.Oscova.FilterType,System.String,System.String)
-  fullName: Syn.Bot.Oscova.Language.AddFilter(Syn.Bot.Oscova.FilterType, System.String, System.String)
-  nameWithType: Language.AddFilter(FilterType, String, String)
-- uid: Syn.Bot.Oscova.Language.AddFilter*
-  name: AddFilter
-  href: api/Syn.Bot.Oscova.Language.html#Syn_Bot_Oscova_Language_AddFilter_
-  commentId: Overload:Syn.Bot.Oscova.Language.AddFilter
-  fullName: Syn.Bot.Oscova.Language.AddFilter
-  nameWithType: Language.AddFilter
 - uid: Syn.Bot.Oscova.Language.Culture
   name: Culture
   href: api/Syn.Bot.Oscova.Language.html#Syn_Bot_Oscova_Language_Culture
@@ -8320,6 +8398,18 @@ references:
   commentId: T:Syn.Bot.Oscova.ScoreConfiguration
   fullName: Syn.Bot.Oscova.ScoreConfiguration
   nameWithType: ScoreConfiguration
+- uid: Syn.Bot.Oscova.ScoreConfiguration.IsolatedTextEntityConfidence
+  name: IsolatedTextEntityConfidence
+  href: api/Syn.Bot.Oscova.ScoreConfiguration.html#Syn_Bot_Oscova_ScoreConfiguration_IsolatedTextEntityConfidence
+  commentId: P:Syn.Bot.Oscova.ScoreConfiguration.IsolatedTextEntityConfidence
+  fullName: Syn.Bot.Oscova.ScoreConfiguration.IsolatedTextEntityConfidence
+  nameWithType: ScoreConfiguration.IsolatedTextEntityConfidence
+- uid: Syn.Bot.Oscova.ScoreConfiguration.IsolatedTextEntityConfidence*
+  name: IsolatedTextEntityConfidence
+  href: api/Syn.Bot.Oscova.ScoreConfiguration.html#Syn_Bot_Oscova_ScoreConfiguration_IsolatedTextEntityConfidence_
+  commentId: Overload:Syn.Bot.Oscova.ScoreConfiguration.IsolatedTextEntityConfidence
+  fullName: Syn.Bot.Oscova.ScoreConfiguration.IsolatedTextEntityConfidence
+  nameWithType: ScoreConfiguration.IsolatedTextEntityConfidence
 - uid: Syn.Bot.Oscova.ScoreConfiguration.MaxIntentScore
   name: MaxIntentScore
   href: api/Syn.Bot.Oscova.ScoreConfiguration.html#Syn_Bot_Oscova_ScoreConfiguration_MaxIntentScore
@@ -23638,6 +23728,12 @@ references:
   commentId: M:Syn.License.LicenseTypeException.#ctor
   fullName: Syn.License.LicenseTypeException.LicenseTypeException()
   nameWithType: LicenseTypeException.LicenseTypeException()
+- uid: Syn.License.LicenseTypeException.#ctor(System.String)
+  name: LicenseTypeException(String)
+  href: api/Syn.License.LicenseTypeException.html#Syn_License_LicenseTypeException__ctor_System_String_
+  commentId: M:Syn.License.LicenseTypeException.#ctor(System.String)
+  fullName: Syn.License.LicenseTypeException.LicenseTypeException(System.String)
+  nameWithType: LicenseTypeException.LicenseTypeException(String)
 - uid: Syn.License.LicenseTypeException.#ctor*
   name: LicenseTypeException
   href: api/Syn.License.LicenseTypeException.html#Syn_License_LicenseTypeException__ctor_
