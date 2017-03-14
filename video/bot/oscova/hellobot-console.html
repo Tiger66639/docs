@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Intent Naming  - Syn Developer Network</title>
+    <title>  - Syn Developer Network</title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Intent Naming ">
+    <meta name="title" content=" ">
     <meta name="generator" content="docfx 2.12.1.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
@@ -104,89 +104,21 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="intent-naming">Intent Naming</h1>
               
-<p>Oscova offers a few ways to let developers control how <em>Intents</em> are named during serialization. By default the name of an <em>Intent</em> is the concatenation of the name of the <em>Dialog</em> and the <em>Intent Method</em> name.</p>
-<p>Intent name generation proccess involves:</p>
-<table>
+              <table>
 <thead>
 <tr>
-<th style="text-align:left">Step</th>
-<th style="text-align:left">Description</th>
+<th style="text-align:left">Oscova Console Hello-Bot Tutorial</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">1</td>
-<td style="text-align:left">Check if <code>NameAttribute</code> is specified. If <strong>Yes</strong> use the value specified. If <strong>No</strong> move to <em>Step 2</em>.</td>
-</tr>
-<tr>
-<td style="text-align:left">2</td>
-<td style="text-align:left">Check the value of <code>UseFullIntentName</code>. If <code>true</code> prefix the name of the <em>Dialog</em> to intent name. If <code>false</code> use the <em>method</em> name.</td>
-</tr>
-<tr>
-<td style="text-align:left">3</td>
-<td style="text-align:left">Invoke<code>IntentNameProvider</code> and apply the returned string value as the name of the intent.</td>
+<td style="text-align:left"><iframe width="560" height="315" src="https://www.youtube.com/embed/oB4J306QpXo?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe></td>
 </tr>
 </tbody>
 </table>
-<h2 id="default-naming-scheme">Default naming scheme</h2>
-<p>In the code below the name of the intent during serialization would be <strong>GarageDialog.OpenDoor</strong>.</p>
-<pre><code class="lang-csharp">class GarageDialog : Dialog
-{
-    [Expression(&quot;Open garage door&quot;)]
-    public void OpenDoor(Context context, Result result)
-    {
-        //Do something
-    }
-}
-</code></pre><h2 id="without-a-dialog-name">Without a Dialog name</h2>
-<p>In order to dismiss the <em>Dialoag</em> name from being added to <em>Intent</em> names set the value of <code>UseFullIntentName</code> in <code>Bot.Configuration</code> property to <code>false</code>.</p>
-<pre><code class="lang-csharp">var bot = new OscovaBot();
-bot.Configuration.UseFullIntentName = false;
-</code></pre><p>Once the value of <code>UseFullIntentName</code> is set to <code>false</code> the name of the <em>Intent</em> in the example code below would become <strong>MoveToDirection</strong>.</p>
-<pre><code class="lang-csharp">class RobotDialog : Dialog
-{
-    [Expression(&quot;Move @direction&quot;)]
-    public void MoveToDirection(Context context, Result result)
-    {
-        //Do something
-    }
-}
-</code></pre><h2 id="explicitly-specifying-an-intent-name">Explicitly specifying an Intent name</h2>
-<p>The <code>NameAttribute</code> allows developers to explicitly specify an Intent name that disregards whether or not the <code>UseFullIntentName</code> property is set to <code>true</code> or <code>false</code>.</p>
-<pre><code class="lang-csharp">class EmployeeDialog : Dialog
-{
-    [Expression(&quot;Find @employee&quot;)]
-    [Name(&quot;find.employee&quot;)]
-    public void FindEmployee(Context context, Result result)
-    {
-        //Do something
-    }
-}
-</code></pre><p>In the above example code as the <code>Name</code> attribute has been used the name of the intent will now become <strong>find.employee</strong>. The value of <code>UseFullIntentName</code> in <code>Bot.Configuration</code> has no effect if the name of an <em>Intent</em> is explicitly specified using the <code>NameAttribute</code>.</p>
-<h2 id="intentnameprovider-delegate"><code>IntentNameProvider</code> Delegate</h2>
-<p>The <code>IntentNameProvider</code> delegate of <code>Bot.Configuration</code> holds a reference method that performs the final transformation on every intent name.</p>
-<p><strong>Example</strong></p>
-<p>The example code below shows how you can override the default <code>IntentNameProvider</code> reference method to convert all intent names to their <em>lowercase</em> forms.</p>
-<pre><code class="lang-csharp">var bot = new OscovaBot();
-bot.Configuration.UseFullIntentName = false;
-bot.Configuration.IntentNameProvider = delegate(string name)
-{
-    //Change intent name to its lowercase and replace underscore with dot
-    return name.ToLower().Replace(&quot;_&quot;, &quot;.&quot;);
-};
-</code></pre><p>After the above implementation is added to <code>IntentNameProvider</code>, the name of the intent in the example code below would become <strong>confirm.order</strong>.</p>
-<pre><code class="lang-csharp">class OrderDialog : Dialog
-{
-    [Expression(&quot;{Yes}&quot;)]
-    [Entity(&quot;@sys.positive&quot;)]
-    public void Confirm_Order(Context context, Result result)
-    {
-        //Do something
-    }
-}
-</code></pre>
+<p>This video demostrate the very basics of creating a bot as a <em>Console</em> application using Oscova.</p>
+
             </article>
           </div>
           
