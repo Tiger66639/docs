@@ -3124,6 +3124,12 @@ references:
   commentId: T:Syn.Bot.Oscova.Delegates.IsActiveProvider
   fullName: Syn.Bot.Oscova.Delegates.IsActiveProvider
   nameWithType: IsActiveProvider
+- uid: Syn.Bot.Oscova.Delegates.NormalizedTextProvider
+  name: NormalizedTextProvider
+  href: api/Syn.Bot.Oscova.Delegates.NormalizedTextProvider.html
+  commentId: T:Syn.Bot.Oscova.Delegates.NormalizedTextProvider
+  fullName: Syn.Bot.Oscova.Delegates.NormalizedTextProvider
+  nameWithType: NormalizedTextProvider
 - uid: Syn.Bot.Oscova.Dialog
   name: Dialog
   href: api/Syn.Bot.Oscova.Dialog.html
