@@ -2408,6 +2408,30 @@ references:
   fullName: Syn.Bot.Oscova.Collection.IntentCollection.System.Collections.IEnumerable.GetEnumerator
   nameWithType: IntentCollection.IEnumerable.GetEnumerator
   nameWithType.vb: IntentCollection.System.Collections.IEnumerable.GetEnumerator
+- uid: Syn.Bot.Oscova.Collection.QuickReplyCollection
+  name: QuickReplyCollection
+  href: api/Syn.Bot.Oscova.Collection.QuickReplyCollection.html
+  commentId: T:Syn.Bot.Oscova.Collection.QuickReplyCollection
+  fullName: Syn.Bot.Oscova.Collection.QuickReplyCollection
+  nameWithType: QuickReplyCollection
+- uid: Syn.Bot.Oscova.Collection.QuickReplyCollection.Add(System.String,Syn.Bot.Oscova.Delegates.Responder)
+  name: Add(String, Responder)
+  href: api/Syn.Bot.Oscova.Collection.QuickReplyCollection.html#Syn_Bot_Oscova_Collection_QuickReplyCollection_Add_System_String_Syn_Bot_Oscova_Delegates_Responder_
+  commentId: M:Syn.Bot.Oscova.Collection.QuickReplyCollection.Add(System.String,Syn.Bot.Oscova.Delegates.Responder)
+  fullName: Syn.Bot.Oscova.Collection.QuickReplyCollection.Add(System.String, Syn.Bot.Oscova.Delegates.Responder)
+  nameWithType: QuickReplyCollection.Add(String, Responder)
+- uid: Syn.Bot.Oscova.Collection.QuickReplyCollection.Add(System.String,System.String)
+  name: Add(String, String)
+  href: api/Syn.Bot.Oscova.Collection.QuickReplyCollection.html#Syn_Bot_Oscova_Collection_QuickReplyCollection_Add_System_String_System_String_
+  commentId: M:Syn.Bot.Oscova.Collection.QuickReplyCollection.Add(System.String,System.String)
+  fullName: Syn.Bot.Oscova.Collection.QuickReplyCollection.Add(System.String, System.String)
+  nameWithType: QuickReplyCollection.Add(String, String)
+- uid: Syn.Bot.Oscova.Collection.QuickReplyCollection.Add*
+  name: Add
+  href: api/Syn.Bot.Oscova.Collection.QuickReplyCollection.html#Syn_Bot_Oscova_Collection_QuickReplyCollection_Add_
+  commentId: Overload:Syn.Bot.Oscova.Collection.QuickReplyCollection.Add
+  fullName: Syn.Bot.Oscova.Collection.QuickReplyCollection.Add
+  nameWithType: QuickReplyCollection.Add
 - uid: Syn.Bot.Oscova.Collection.RecognizerCollection
   name: RecognizerCollection
   href: api/Syn.Bot.Oscova.Collection.RecognizerCollection.html
@@ -2609,6 +2633,18 @@ references:
   commentId: Overload:Syn.Bot.Oscova.Collection.RecognizerCollection.Remove
   fullName: Syn.Bot.Oscova.Collection.RecognizerCollection.Remove
   nameWithType: RecognizerCollection.Remove
+- uid: Syn.Bot.Oscova.Collection.RecognizerCollection.RemoveOverriable(System.String,System.String)
+  name: RemoveOverriable(String, String)
+  href: api/Syn.Bot.Oscova.Collection.RecognizerCollection.html#Syn_Bot_Oscova_Collection_RecognizerCollection_RemoveOverriable_System_String_System_String_
+  commentId: M:Syn.Bot.Oscova.Collection.RecognizerCollection.RemoveOverriable(System.String,System.String)
+  fullName: Syn.Bot.Oscova.Collection.RecognizerCollection.RemoveOverriable(System.String, System.String)
+  nameWithType: RecognizerCollection.RemoveOverriable(String, String)
+- uid: Syn.Bot.Oscova.Collection.RecognizerCollection.RemoveOverriable*
+  name: RemoveOverriable
+  href: api/Syn.Bot.Oscova.Collection.RecognizerCollection.html#Syn_Bot_Oscova_Collection_RecognizerCollection_RemoveOverriable_
+  commentId: Overload:Syn.Bot.Oscova.Collection.RecognizerCollection.RemoveOverriable
+  fullName: Syn.Bot.Oscova.Collection.RecognizerCollection.RemoveOverriable
+  nameWithType: RecognizerCollection.RemoveOverriable
 - uid: Syn.Bot.Oscova.Collection.RecognizerCollection.SetOverridable(System.String,System.String)
   name: SetOverridable(String, String)
   href: api/Syn.Bot.Oscova.Collection.RecognizerCollection.html#Syn_Bot_Oscova_Collection_RecognizerCollection_SetOverridable_System_String_System_String_
@@ -3130,6 +3166,12 @@ references:
   commentId: T:Syn.Bot.Oscova.Delegates.NormalizedTextProvider
   fullName: Syn.Bot.Oscova.Delegates.NormalizedTextProvider
   nameWithType: NormalizedTextProvider
+- uid: Syn.Bot.Oscova.Delegates.Responder
+  name: Responder
+  href: api/Syn.Bot.Oscova.Delegates.Responder.html
+  commentId: T:Syn.Bot.Oscova.Delegates.Responder
+  fullName: Syn.Bot.Oscova.Delegates.Responder
+  nameWithType: Responder
 - uid: Syn.Bot.Oscova.Dialog
   name: Dialog
   href: api/Syn.Bot.Oscova.Dialog.html
@@ -3148,6 +3190,18 @@ references:
   commentId: Overload:Syn.Bot.Oscova.Dialog.#ctor
   fullName: Syn.Bot.Oscova.Dialog.Dialog
   nameWithType: Dialog.Dialog
+- uid: Syn.Bot.Oscova.Dialog.QuickReplies
+  name: QuickReplies
+  href: api/Syn.Bot.Oscova.Dialog.html#Syn_Bot_Oscova_Dialog_QuickReplies
+  commentId: P:Syn.Bot.Oscova.Dialog.QuickReplies
+  fullName: Syn.Bot.Oscova.Dialog.QuickReplies
+  nameWithType: Dialog.QuickReplies
+- uid: Syn.Bot.Oscova.Dialog.QuickReplies*
+  name: QuickReplies
+  href: api/Syn.Bot.Oscova.Dialog.html#Syn_Bot_Oscova_Dialog_QuickReplies_
+  commentId: Overload:Syn.Bot.Oscova.Dialog.QuickReplies
+  fullName: Syn.Bot.Oscova.Dialog.QuickReplies
+  nameWithType: Dialog.QuickReplies
 - uid: Syn.Bot.Oscova.Entities
   name: Syn.Bot.Oscova.Entities
   href: api/Syn.Bot.Oscova.Entities.html
@@ -4099,12 +4153,12 @@ references:
   commentId: T:Syn.Bot.Oscova.Entities.PostalCodeEntity
   fullName: Syn.Bot.Oscova.Entities.PostalCodeEntity
   nameWithType: PostalCodeEntity
-- uid: Syn.Bot.Oscova.Entities.PostalCodeEntity.#ctor(System.String)
-  name: PostalCodeEntity(String)
-  href: api/Syn.Bot.Oscova.Entities.PostalCodeEntity.html#Syn_Bot_Oscova_Entities_PostalCodeEntity__ctor_System_String_
-  commentId: M:Syn.Bot.Oscova.Entities.PostalCodeEntity.#ctor(System.String)
-  fullName: Syn.Bot.Oscova.Entities.PostalCodeEntity.PostalCodeEntity(System.String)
-  nameWithType: PostalCodeEntity.PostalCodeEntity(String)
+- uid: Syn.Bot.Oscova.Entities.PostalCodeEntity.#ctor(System.String,System.String)
+  name: PostalCodeEntity(String, String)
+  href: api/Syn.Bot.Oscova.Entities.PostalCodeEntity.html#Syn_Bot_Oscova_Entities_PostalCodeEntity__ctor_System_String_System_String_
+  commentId: M:Syn.Bot.Oscova.Entities.PostalCodeEntity.#ctor(System.String,System.String)
+  fullName: Syn.Bot.Oscova.Entities.PostalCodeEntity.PostalCodeEntity(System.String, System.String)
+  nameWithType: PostalCodeEntity.PostalCodeEntity(String, String)
 - uid: Syn.Bot.Oscova.Entities.PostalCodeEntity.#ctor*
   name: PostalCodeEntity
   href: api/Syn.Bot.Oscova.Entities.PostalCodeEntity.html#Syn_Bot_Oscova_Entities_PostalCodeEntity__ctor_
@@ -5470,18 +5524,6 @@ references:
   commentId: Overload:Syn.Bot.Oscova.Language.LoadWordVectors
   fullName: Syn.Bot.Oscova.Language.LoadWordVectors
   nameWithType: Language.LoadWordVectors
-- uid: Syn.Bot.Oscova.Language.Normalize(System.String)
-  name: Normalize(String)
-  href: api/Syn.Bot.Oscova.Language.html#Syn_Bot_Oscova_Language_Normalize_System_String_
-  commentId: M:Syn.Bot.Oscova.Language.Normalize(System.String)
-  fullName: Syn.Bot.Oscova.Language.Normalize(System.String)
-  nameWithType: Language.Normalize(String)
-- uid: Syn.Bot.Oscova.Language.Normalize*
-  name: Normalize
-  href: api/Syn.Bot.Oscova.Language.html#Syn_Bot_Oscova_Language_Normalize_
-  commentId: Overload:Syn.Bot.Oscova.Language.Normalize
-  fullName: Syn.Bot.Oscova.Language.Normalize
-  nameWithType: Language.Normalize
 - uid: Syn.Bot.Oscova.Language.Punctuations
   name: Punctuations
   href: api/Syn.Bot.Oscova.Language.html#Syn_Bot_Oscova_Language_Punctuations
@@ -5605,12 +5647,12 @@ references:
   commentId: T:Syn.Bot.Oscova.Languages.English.EnglishTokenizer
   fullName: Syn.Bot.Oscova.Languages.English.EnglishTokenizer
   nameWithType: EnglishTokenizer
-- uid: Syn.Bot.Oscova.Languages.English.EnglishTokenizer.#ctor
-  name: EnglishTokenizer()
-  href: api/Syn.Bot.Oscova.Languages.English.EnglishTokenizer.html#Syn_Bot_Oscova_Languages_English_EnglishTokenizer__ctor
-  commentId: M:Syn.Bot.Oscova.Languages.English.EnglishTokenizer.#ctor
-  fullName: Syn.Bot.Oscova.Languages.English.EnglishTokenizer.EnglishTokenizer()
-  nameWithType: EnglishTokenizer.EnglishTokenizer()
+- uid: Syn.Bot.Oscova.Languages.English.EnglishTokenizer.#ctor(Syn.Bot.Oscova.Language)
+  name: EnglishTokenizer(Language)
+  href: api/Syn.Bot.Oscova.Languages.English.EnglishTokenizer.html#Syn_Bot_Oscova_Languages_English_EnglishTokenizer__ctor_Syn_Bot_Oscova_Language_
+  commentId: M:Syn.Bot.Oscova.Languages.English.EnglishTokenizer.#ctor(Syn.Bot.Oscova.Language)
+  fullName: Syn.Bot.Oscova.Languages.English.EnglishTokenizer.EnglishTokenizer(Syn.Bot.Oscova.Language)
+  nameWithType: EnglishTokenizer.EnglishTokenizer(Language)
 - uid: Syn.Bot.Oscova.Languages.English.EnglishTokenizer.#ctor*
   name: EnglishTokenizer
   href: api/Syn.Bot.Oscova.Languages.English.EnglishTokenizer.html#Syn_Bot_Oscova_Languages_English_EnglishTokenizer__ctor_
@@ -5641,6 +5683,18 @@ references:
   commentId: Overload:Syn.Bot.Oscova.Languages.English.EnglishTokenizer.Tokenize
   fullName: Syn.Bot.Oscova.Languages.English.EnglishTokenizer.Tokenize
   nameWithType: EnglishTokenizer.Tokenize
+- uid: Syn.Bot.Oscova.Languages.English.EnglishTokenizer.TrimPunctuations
+  name: TrimPunctuations
+  href: api/Syn.Bot.Oscova.Languages.English.EnglishTokenizer.html#Syn_Bot_Oscova_Languages_English_EnglishTokenizer_TrimPunctuations
+  commentId: P:Syn.Bot.Oscova.Languages.English.EnglishTokenizer.TrimPunctuations
+  fullName: Syn.Bot.Oscova.Languages.English.EnglishTokenizer.TrimPunctuations
+  nameWithType: EnglishTokenizer.TrimPunctuations
+- uid: Syn.Bot.Oscova.Languages.English.EnglishTokenizer.TrimPunctuations*
+  name: TrimPunctuations
+  href: api/Syn.Bot.Oscova.Languages.English.EnglishTokenizer.html#Syn_Bot_Oscova_Languages_English_EnglishTokenizer_TrimPunctuations_
+  commentId: Overload:Syn.Bot.Oscova.Languages.English.EnglishTokenizer.TrimPunctuations
+  fullName: Syn.Bot.Oscova.Languages.English.EnglishTokenizer.TrimPunctuations
+  nameWithType: EnglishTokenizer.TrimPunctuations
 - uid: Syn.Bot.Oscova.Languages.English.Stemmer
   name: Syn.Bot.Oscova.Languages.English.Stemmer
   href: api/Syn.Bot.Oscova.Languages.English.Stemmer.html
@@ -6382,6 +6436,18 @@ references:
   commentId: Overload:Syn.Bot.Oscova.OscovaBot.Recognizers
   fullName: Syn.Bot.Oscova.OscovaBot.Recognizers
   nameWithType: OscovaBot.Recognizers
+- uid: Syn.Bot.Oscova.OscovaBot.Timer
+  name: Timer
+  href: api/Syn.Bot.Oscova.OscovaBot.html#Syn_Bot_Oscova_OscovaBot_Timer
+  commentId: P:Syn.Bot.Oscova.OscovaBot.Timer
+  fullName: Syn.Bot.Oscova.OscovaBot.Timer
+  nameWithType: OscovaBot.Timer
+- uid: Syn.Bot.Oscova.OscovaBot.Timer*
+  name: Timer
+  href: api/Syn.Bot.Oscova.OscovaBot.html#Syn_Bot_Oscova_OscovaBot_Timer_
+  commentId: Overload:Syn.Bot.Oscova.OscovaBot.Timer
+  fullName: Syn.Bot.Oscova.OscovaBot.Timer
+  nameWithType: OscovaBot.Timer
 - uid: Syn.Bot.Oscova.OscovaBot.Trainer
   name: Trainer
   href: api/Syn.Bot.Oscova.OscovaBot.html#Syn_Bot_Oscova_OscovaBot_Trainer
@@ -6448,6 +6514,66 @@ references:
   commentId: F:Syn.Bot.Oscova.ProcessingMode.RuleAndML
   fullName: Syn.Bot.Oscova.ProcessingMode.RuleAndML
   nameWithType: ProcessingMode.RuleAndML
+- uid: Syn.Bot.Oscova.QuickReply
+  name: QuickReply
+  href: api/Syn.Bot.Oscova.QuickReply.html
+  commentId: T:Syn.Bot.Oscova.QuickReply
+  fullName: Syn.Bot.Oscova.QuickReply
+  nameWithType: QuickReply
+- uid: Syn.Bot.Oscova.QuickReply.#ctor(System.String,Syn.Bot.Oscova.Delegates.Responder)
+  name: QuickReply(String, Responder)
+  href: api/Syn.Bot.Oscova.QuickReply.html#Syn_Bot_Oscova_QuickReply__ctor_System_String_Syn_Bot_Oscova_Delegates_Responder_
+  commentId: M:Syn.Bot.Oscova.QuickReply.#ctor(System.String,Syn.Bot.Oscova.Delegates.Responder)
+  fullName: Syn.Bot.Oscova.QuickReply.QuickReply(System.String, Syn.Bot.Oscova.Delegates.Responder)
+  nameWithType: QuickReply.QuickReply(String, Responder)
+- uid: Syn.Bot.Oscova.QuickReply.#ctor(System.String,System.String)
+  name: QuickReply(String, String)
+  href: api/Syn.Bot.Oscova.QuickReply.html#Syn_Bot_Oscova_QuickReply__ctor_System_String_System_String_
+  commentId: M:Syn.Bot.Oscova.QuickReply.#ctor(System.String,System.String)
+  fullName: Syn.Bot.Oscova.QuickReply.QuickReply(System.String, System.String)
+  nameWithType: QuickReply.QuickReply(String, String)
+- uid: Syn.Bot.Oscova.QuickReply.#ctor*
+  name: QuickReply
+  href: api/Syn.Bot.Oscova.QuickReply.html#Syn_Bot_Oscova_QuickReply__ctor_
+  commentId: Overload:Syn.Bot.Oscova.QuickReply.#ctor
+  fullName: Syn.Bot.Oscova.QuickReply.QuickReply
+  nameWithType: QuickReply.QuickReply
+- uid: Syn.Bot.Oscova.QuickReply.IntentName
+  name: IntentName
+  href: api/Syn.Bot.Oscova.QuickReply.html#Syn_Bot_Oscova_QuickReply_IntentName
+  commentId: P:Syn.Bot.Oscova.QuickReply.IntentName
+  fullName: Syn.Bot.Oscova.QuickReply.IntentName
+  nameWithType: QuickReply.IntentName
+- uid: Syn.Bot.Oscova.QuickReply.IntentName*
+  name: IntentName
+  href: api/Syn.Bot.Oscova.QuickReply.html#Syn_Bot_Oscova_QuickReply_IntentName_
+  commentId: Overload:Syn.Bot.Oscova.QuickReply.IntentName
+  fullName: Syn.Bot.Oscova.QuickReply.IntentName
+  nameWithType: QuickReply.IntentName
+- uid: Syn.Bot.Oscova.QuickReply.Responder
+  name: Responder
+  href: api/Syn.Bot.Oscova.QuickReply.html#Syn_Bot_Oscova_QuickReply_Responder
+  commentId: P:Syn.Bot.Oscova.QuickReply.Responder
+  fullName: Syn.Bot.Oscova.QuickReply.Responder
+  nameWithType: QuickReply.Responder
+- uid: Syn.Bot.Oscova.QuickReply.Responder*
+  name: Responder
+  href: api/Syn.Bot.Oscova.QuickReply.html#Syn_Bot_Oscova_QuickReply_Responder_
+  commentId: Overload:Syn.Bot.Oscova.QuickReply.Responder
+  fullName: Syn.Bot.Oscova.QuickReply.Responder
+  nameWithType: QuickReply.Responder
+- uid: Syn.Bot.Oscova.QuickReply.TemplateExpression
+  name: TemplateExpression
+  href: api/Syn.Bot.Oscova.QuickReply.html#Syn_Bot_Oscova_QuickReply_TemplateExpression
+  commentId: P:Syn.Bot.Oscova.QuickReply.TemplateExpression
+  fullName: Syn.Bot.Oscova.QuickReply.TemplateExpression
+  nameWithType: QuickReply.TemplateExpression
+- uid: Syn.Bot.Oscova.QuickReply.TemplateExpression*
+  name: TemplateExpression
+  href: api/Syn.Bot.Oscova.QuickReply.html#Syn_Bot_Oscova_QuickReply_TemplateExpression_
+  commentId: Overload:Syn.Bot.Oscova.QuickReply.TemplateExpression
+  fullName: Syn.Bot.Oscova.QuickReply.TemplateExpression
+  nameWithType: QuickReply.TemplateExpression
 - uid: Syn.Bot.Oscova.Recognizers
   name: Syn.Bot.Oscova.Recognizers
   href: api/Syn.Bot.Oscova.Recognizers.html
@@ -8374,12 +8500,24 @@ references:
   commentId: M:Syn.Bot.Oscova.Result.SendResponse(Syn.Bot.Oscova.Response)
   fullName: Syn.Bot.Oscova.Result.SendResponse(Syn.Bot.Oscova.Response)
   nameWithType: Result.SendResponse(Response)
+- uid: Syn.Bot.Oscova.Result.SendResponse(Syn.Bot.Oscova.Response,System.TimeSpan)
+  name: SendResponse(Response, TimeSpan)
+  href: api/Syn.Bot.Oscova.Result.html#Syn_Bot_Oscova_Result_SendResponse_Syn_Bot_Oscova_Response_System_TimeSpan_
+  commentId: M:Syn.Bot.Oscova.Result.SendResponse(Syn.Bot.Oscova.Response,System.TimeSpan)
+  fullName: Syn.Bot.Oscova.Result.SendResponse(Syn.Bot.Oscova.Response, System.TimeSpan)
+  nameWithType: Result.SendResponse(Response, TimeSpan)
 - uid: Syn.Bot.Oscova.Result.SendResponse(System.String)
   name: SendResponse(String)
   href: api/Syn.Bot.Oscova.Result.html#Syn_Bot_Oscova_Result_SendResponse_System_String_
   commentId: M:Syn.Bot.Oscova.Result.SendResponse(System.String)
   fullName: Syn.Bot.Oscova.Result.SendResponse(System.String)
   nameWithType: Result.SendResponse(String)
+- uid: Syn.Bot.Oscova.Result.SendResponse(System.String,System.TimeSpan)
+  name: SendResponse(String, TimeSpan)
+  href: api/Syn.Bot.Oscova.Result.html#Syn_Bot_Oscova_Result_SendResponse_System_String_System_TimeSpan_
+  commentId: M:Syn.Bot.Oscova.Result.SendResponse(System.String,System.TimeSpan)
+  fullName: Syn.Bot.Oscova.Result.SendResponse(System.String, System.TimeSpan)
+  nameWithType: Result.SendResponse(String, TimeSpan)
 - uid: Syn.Bot.Oscova.Result.SendResponse*
   name: SendResponse
   href: api/Syn.Bot.Oscova.Result.html#Syn_Bot_Oscova_Result_SendResponse_
